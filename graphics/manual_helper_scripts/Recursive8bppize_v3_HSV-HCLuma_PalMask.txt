@@ -1,0 +1,485 @@
+//Define the working palette
+r=newArray(0, 16, 32, 48, 64, 80, 100, 116, 132, 148, 168, 184, 200, 216, 232, 252, 52, 68, 88, 108, 132, 156, 176, 204, 48, 64, 80, 96, 120, 148, 176, 204, 72, 88, 104, 124, 152, 184, 212, 244, 64, 88, 112, 136, 160, 188, 204, 220, 236, 252, 252, 252, 252, 76, 96, 116, 136, 156, 176, 196, 68, 96, 128, 156, 184, 212, 232, 252, 252, 252, 32, 64, 84, 108, 128, 148, 168, 184, 196, 212, 8, 16, 32, 48, 64, 84, 104, 128, 28, 44, 60, 80, 104, 128, 152, 180, 16, 32, 56, 76, 96, 120, 152, 184, 32, 56, 72, 88, 104, 124, 140, 160, 76, 96, 116, 136, 164, 184, 204, 212, 224, 236, 80, 100, 120, 140, 160, 184, 36, 48, 64, 80, 100, 132, 172, 212, 40, 64, 88, 104, 120, 140, 160, 188, 0, 0, 0, 0, 0, 24, 56, 88, 128, 188, 16, 24, 40, 52, 80, 116, 156, 204, 172, 212, 252, 252, 252, 252, 252, 252, 72, 92, 112, 140, 168, 200, 208, 232, 60, 92, 128, 160, 196, 224, 252, 252, 252, 252, 252, 252, 252, 252, 204, 228, 252, 252, 252, 252, 8, 12, 20, 28, 40, 56, 72, 100, 92, 108, 124, 144, 224, 200, 180, 132, 88, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 76, 108, 144, 176, 210, 252, 252, 252, 252, 252, 252, 252, 64, 255, 48, 64, 80, 255, 32, 36, 40, 44, 48, 72, 100, 216, 96, 68, 255);
+g=newArray(0, 16, 32, 48, 64, 80, 100, 116, 132, 148, 168, 184, 200, 216, 232, 252, 60, 76, 96, 116, 140, 160, 184, 208, 44, 60, 76, 92, 120, 148, 176, 204, 44, 60, 80, 104, 132, 160, 188, 220, 0, 4, 16, 32, 56, 84, 104, 132, 156, 188, 208, 232, 252, 40, 60, 88, 116, 136, 156, 180, 24, 44, 68, 96, 120, 156, 184, 212, 248, 252, 4, 20, 28, 44, 56, 72, 92, 108, 128, 148, 52, 64, 80, 96, 112, 132, 148, 168, 52, 68, 88, 104, 124, 148, 176, 204, 52, 72, 96, 116, 136, 164, 192, 220, 24, 28, 40, 52, 64, 84, 108, 128, 40, 52, 68, 84, 96, 112, 128, 148, 168, 188, 28, 40, 56, 76, 100, 136, 40, 52, 64, 80, 100, 132, 172, 212, 20, 44, 64, 76, 88, 104, 136, 168, 24, 36, 52, 72, 96, 120, 144, 168, 196, 224, 64, 80, 96, 112, 140, 172, 204, 240, 52, 52, 52, 100, 144, 184, 216, 244, 20, 44, 68, 100, 136, 176, 184, 208, 0, 0, 0, 0, 0, 0, 0, 80, 108, 136, 164, 192, 220, 252, 136, 144, 156, 176, 196, 216, 24, 36, 52, 68, 92, 120, 152, 172, 156, 176, 200, 224, 244, 236, 220, 188, 152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 44, 72, 108, 146, 60, 84, 104, 124, 148, 172, 196, 0, 0, 48, 64, 80, 255, 68, 72, 76, 80, 84, 100, 132, 244, 128, 96, 255);
+b=newArray(255, 16, 32, 48, 64, 80, 100, 116, 132, 148, 168, 184, 200, 216, 232, 252, 72, 92, 112, 132, 152, 172, 196, 220, 4, 12, 20, 28, 64, 100, 132, 168, 4, 20, 44, 72, 92, 120, 148, 176, 4, 16, 32, 52, 76, 108, 124, 144, 164, 192, 0, 60, 128, 0, 8, 28, 56, 80, 108, 136, 0, 4, 8, 16, 24, 32, 16, 0, 128, 192, 0, 8, 16, 28, 40, 56, 76, 88, 108, 128, 0, 0, 4, 4, 12, 20, 28, 44, 24, 32, 48, 60, 76, 92, 108, 124, 24, 44, 72, 88, 108, 136, 168, 200, 0, 0, 4, 12, 24, 44, 64, 88, 16, 24, 40, 56, 64, 80, 96, 112, 128, 148, 4, 20, 40, 64, 96, 136, 68, 84, 100, 116, 136, 164, 192, 224, 112, 144, 172, 196, 224, 252, 252, 252, 108, 132, 160, 184, 212, 220, 232, 240, 252, 252, 96, 108, 120, 132, 160, 192, 220, 252, 52, 52, 52, 88, 124, 160, 200, 236, 112, 140, 168, 196, 224, 248, 255, 252, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 4, 0, 48, 100, 152, 88, 104, 124, 140, 164, 188, 216, 224, 52, 64, 76, 92, 252, 248, 236, 216, 172, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 8, 24, 52, 84, 126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 112, 116, 120, 124, 128, 144, 168, 252, 164, 140, 255);
+
+//Define additional parameters about how to treat different indices of the pallete
+//Palette indices not to use (i.e. these indices will never appear in the final image) 
+e=newArray(227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 254);
+e=newArray();
+//Palette indices to exclude from dithering (i.e. do not propogate errors through pixels which match these indices precisely)
+n=newArray(0, 255, 80, 81, 82, 83, 84, 85, 86, 87, 198, 199, 200, 201, 202, 203, 204, 205, 255);
+n=newArray(0, 255, 80, 81, 82, 83, 84, 85, 86, 87, 198, 199, 200, 201, 202, 203, 204, 205, 255, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 254);
+//Palette colour sets
+//Start indices
+gs=newArray(1, 16, 24, 32, 40, 50, 53, 60, 70, 80, 88, 96, 104, 112, 122, 128, 136, 144, 154, 162, 170, 178, 192, 198, 206);
+//Set length
+gl=newArray(15, 8, 8, 8, 10, 3, 7, 10, 10, 8, 8, 8, 8, 10, 6, 8, 8, 10, 8, 8, 8, 14, 6, 8, 4);
+
+/*
+newImage("Logical Palette", "8-bit white", 64, 16, 1);
+setLut(r, g, b);
+for (i=0; i<lengthOf(gs); i++) {
+	for (j=0; j<gl[i]; j++) {
+		setPixel(i, j, gs[i]+j);
+	}
+}
+run("Size...", "width=256 height=64 constrain average interpolation=None");
+exit();
+*/
+
+path=getDirectory("");
+processDirectory(path);
+
+function processDirectory(path) {
+	files=getFileList(path);
+	for (i=0; i<lengthOf(files); i++) {
+		if (File.isDirectory(path+files[i])==true) {
+			processDirectory(""+path+files[i]);
+		} else if(endsWith(files[i], "_32bpp.png")==true) {
+			name=substring(files[i], 0, lengthOf(files[i])-lengthOf("_32bpp.png"));
+			actionColours=false;
+			if (endsWith(name, "_ac")==true) {
+				name=substring(name, 0, lengthOf(name)-lengthOf("_ac"));
+				actionColours=true;
+			}
+			if (File.exists(path+name+"_8bpp.png")==false) { //Only process un-processed images
+				open(path+files[i]);
+				src=getImageID();
+				if (File.exists(path+name+"_palmask.png")==true) {
+					open(path+name+"_palmask.png");
+					pal=getImageID();
+				} else {
+					newImage("Untitled", "RGB color", getWidth(), getHeight(), 1);
+					setColor(0, 0, 255);
+					fill();
+					pal=getImageID();
+				}
+				if (actionColours==false) {
+					make8bpp(src, pal, r, g, b, e, n, 1);
+				} else {
+					make8bpp(src, pal, r, g, b, eac, nac, 1);
+				}
+				selectImage(src);
+				fixStrayWhite();
+				saveAs("PNG", ""+path+File.separator()+name+"_8bpp");
+				close();
+				selectImage(pal);
+				close();
+			}
+		}
+	}
+}
+
+//Primary dithering function
+//r, g, b, e, n are as defined above
+//ditherFactor is the additional multiplicative factor on error diffusion, use between 0 and 1
+//src and pal are the image to dither and an image defining palette restrictions
+function make8bpp(src, pal, r, g, b, e, n, ditherFactor) {
+	//Start by making sure the images are rgb colour
+	selectImage(src);
+	run("RGB Color");
+	selectImage(pal);
+	run("RGB Color");
+
+	//Reformat the e and n arrays for faster lookup
+	//Make an array the same length as the palette, and set to 1 if that index is present in n or e respectively
+	nn=newArray(lengthOf(r));
+	ne=newArray(lengthOf(r));
+	//Loop through n
+	for (j=0; j<lengthOf(n); j++)  {
+		nn[n[j]]=1;
+	}
+	//Loop through e
+	for (j=0; j<lengthOf(e); j++)  {
+		ne[e[j]]=1;
+	}
+
+	//Loop through image and identify pixels that should be excluded from dithering
+	//Do this analysis in rgb space to exclude the possibility of small rounding errors
+	//Record in an array ddither (don't dither!)
+	ddither=newArray(getWidth()*getHeight());
+	//Loop through pixels
+	selectImage(src);
+	showStatus("Identifying pixels not to dither...");
+	for (y=0; y<getHeight(); y++) {
+		showProgress(y/getHeight());
+		for (x=0; x<getWidth(); x++) {
+			//Get RGB value of current pixel
+			rgb=getRgb(x, y);
+			ddither[x+y*getWidth()]=-1;
+			//Loop through list of indices to exclude from dithering
+			for (j=0; j<lengthOf(n); j++)  {
+				//If the RGB value of the pixel matches the RGB value of an index then record that index in ddither for the appropriate pixel
+				if (rgb[0]==r[n[j]] && rgb[1]==g[n[j]] && rgb[2]==b[n[j]]) {
+					ddither[x+y*getWidth()]=n[j];
+				}
+			}
+		}
+	}
+	showProgress(1);
+
+	//Loop through image and identify pixels that fall into palette colour groups
+	//Do this analysis in rgb space to exclude the possibility of small rounding errors
+	selectImage(pal);
+	//Record in an array pgroup (palette group) based on s palette set
+	pgroup=newArray(getWidth()*getHeight());
+	showStatus("Identifying pixels in palette groups...");
+	//Loop through pixels
+	for (y=0; y<getHeight(); y++) {
+		showProgress(y/getHeight());
+		for (x=0; x<getWidth(); x++) {
+			//Get RGB value of current pixel
+			rgb=getRgb(x, y);
+			pgroup[x+y*getWidth()]=-1;
+			if (rgb[0]!=0 || rgb[1]!=0 || rgb[2]!=255) {
+				//Loop through the palette sets to see if it is an exact match to any group
+				for (i=0; i<lengthOf(gs); i++) {
+					for (j=0; j<gl[i]; j++) {
+						index=gs[i]+j;
+						if (rgb[0]==r[index] && rgb[1]==g[index] && rgb[2]==b[index]) {
+							//Record match
+							pgroup[x+y*getWidth()]=i;
+							setPixel(x, y, i);
+						}
+					}
+				}
+			}
+		}
+	}
+	showProgress(1);
+
+	//Pre-process palette entries to hsv values
+	//Record entries in hsv arrays, like the rgb palette specification
+	h=newArray(lengthOf(r));
+	s=newArray(lengthOf(r));
+	v=newArray(lengthOf(r));
+	for (i=0; i<lengthOf(r); i++) {
+		//Setup temporary array for processing
+		rgb=newArray(3);
+		rgb[0]=r[i];
+		rgb[1]=g[i];
+		rgb[2]=b[i];
+		//Do the conversion and set the values
+		hsv=rgb2Hsv(rgb);
+		h[i]=hsv[0];
+		s[i]=hsv[1];
+		v[i]=hsv[2];
+	}
+
+	//Do the dithering
+	selectImage(src);
+	//Loop through all image pixels
+	showStatus("Assigning to 8-bit palette");
+	for (y=0; y<getHeight(); y++) {
+		showProgress(y/getHeight());
+		for (x=0; x<getWidth(); x++) {
+			if (ddither[x+y*getWidth()]==-1) {
+				//If the pixel is not marked as do not dither and does not have a palette group
+				//Get the hsv and rgb value
+				hsv=getHsv(x, y);
+				rgb=getRgb(x, y);
+				if (pgroup[x+y*getWidth()]==-1) {
+					//Normal dithering
+					//Determine the most similar valid colour by weighted euclidian distance, ignoring excluded palette entries
+					index=nearestXyz(r, g, b, rgb, ne);
+				} else {
+					//Dithering in a specific palette group
+					//Determine the most similar valid colour by weighter euclidian distance, in the valid palette group
+					index=nearestXyzGroup(r, g, b, rgb, pgroup[x+y*getWidth], gs, gl);
+				}
+				//Set the pixel to an rgb value equal to the brightness of the selected palette index
+				setPixel(x, y, (index&0xff)<<16+(index&0xff)<<8+(index&0xff)<<0);
+				//Calculate error in value assigned
+				dhsv=newArray(3);
+				dhsv[0]=-h[index]+hsv[0];
+				dhsv[1]=-s[index]+hsv[1];
+				dhsv[2]=-v[index]+hsv[2];
+				dhsvd=abs(dhsv[0])+abs(dhsv[1])+abs(dhsv[2]);
+				//Diffuse errors according to the dithering matrix
+				//Only do if error propogation is actually needed
+				if (dhsvd!=0) {
+					propogateErrorHsv(x, y, dhsv);
+				}
+			} else {
+				//If the pixel was marked as do not dither then just set it to a brightness equivalent to the correct index
+				setPixel(x, y, (ddither[x+y*getWidth()]&0xff)<<16+(ddither[x+y*getWidth()]&0xff)<<8+(ddither[x+y*getWidth()]&0xff)<<0);
+			}
+			//Update display to show a visual display of progress
+			updateDisplay();
+		}
+	}
+	showProgress(1);
+	//Finish by setting the image to 8bit
+	//Takes the pixel brightnesses and sets the 8bpp pixel value to that brightness
+	run("8-bit");
+	//Apply the palette as a LUT to apply the correct final colours
+	setLut(r, g, b);
+}
+
+//Pixel check functions
+//Find the nearest palette index (where x, y, z encode the palette) of a particular x, y, z value
+//Weight according to the values in wxyz
+//Exclude indices with a value of 1 in the ne list
+function nearestXyz(x, y, z, xyz, ne) {
+	//Setup index variable
+	index=0;
+	//Loop through palette and identify nearest index
+	for (i=0; i<lengthOf(x); i++) {
+		//Calculate weighted manhattan distance
+		d=abs(x[i]-xyz[0])+abs(y[i]-xyz[1])+abs(z[i]-xyz[2]);
+		//On the first loop set mind to d;
+		if (i==0) {
+			index=i;
+			mind=d;
+		}
+		//Record the index and new mind if d<mind and ne[i] is 0
+		if (d<mind && ne[i]==0) {
+			index=i;
+			mind=d;
+		}
+		//If mind is 0 the best match has been found so set i to lengthOf(x) to break the loop
+		if (mind==0) {
+			i=lengthOf(x);
+		}
+	}
+	return index;
+}
+//Find the nearest palette index in a palette group of a particular x, y, z, value
+function nearestXyzGroup(x, y, z, xyz, pg, gs, gl) {
+	//Setup index variable
+	index=0;
+	//Loop through palette set to identify nearest index
+	for (i=gs[pg]; i<gs[pg]+gl[pg]; i++) {
+		//Calculate manhattan distance
+		d=abs(x[i]-xyz[0])+abs(y[i]-xyz[1])+abs(z[i]-xyz[2]);
+		//On the first loop set mind to d;
+		if (i==gs[pg]) {
+			index=i;
+			mind=d;
+		}
+		//Record the index and new mind if d<mind
+		if (d<mind) {
+			index=i;
+			mind=d;
+		}
+		//If mind is 0 the best match has been found so set i to lengthOf(x) to break the loop
+		if (mind==0) {
+			i=lengthOf(x);
+		}
+	}
+	return index;
+}
+
+//Dithering functions
+//Propogate error according to the encoded dithering array
+function propogateErrorHsv(x, y, dhsv) {
+	//Set up the dithering array reference
+	//dx and dy are the x/y size of the error propogation matrix
+	//dox and doy are the origin (i.e. the location of the pixel currently being analysed)
+	//da is the actual error propogation matrix, and df is the division factor for normalisation of the matrix
+
+	//Sierra dithering http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
+	//dx=5;
+	//dy=3;
+	//dox=2;
+	//doy=0;
+	//da=newArray
+	//   (-1, -1, -1,  5,  3,
+	//     2,  4,  5,  4,  2,
+	//     0,  2,  3,  2,  0);
+	//df=32;
+
+	//Sierra lite dithering http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
+	dx=3;
+	dy=2;
+	dox=1;
+	doy=0;
+	da=newArray
+	   (-1, -1, 2,
+	     1,  1,  0);
+	df=4;
+
+	//Weight the dithering to reduce sensitivity to colour deviation
+	//High hue bleeding causes colour fringing on object edges
+	//Low brightness bleeding causes posterised brightness
+	whsv=newArray(0.0, 0.8, 1.0);
+
+	//Loop through the pixels which are in the dithering matrix
+	for (tdy=0; tdy<dy; tdy++) {
+		for (tdx=0; tdx<dx; tdx++) {
+			//If the dithering matrix entry is defined (i.e is not -1)
+			if (da[tdx+tdy*dx]!=-1) {
+				//If the pixel is within the bounds of the image
+				if (x+tdx-dox>=0 && x+tdx-dox<getWidth() && y+tdy-doy>=0 && y+tdy-doy<getHeight()) {
+					//And if the pixel is not marked as do not dither
+					if (ddither[x+tdx-dox+(y+tdy-doy)*getWidth()]==-1) {
+						//Get the pixel value of the pixels to diffuse errors to
+						hsv=getHsv(x+tdx-dox, y+tdy-doy);
+						//Diffuse the errors to the pixel value according to the values in the da diffusion matrix and df
+						//Constrain sv values to between 0 and 1
+						//Loop hue values to keep value between 0 and 1
+						hsv[0]=hsv[0]+whsv[0]*ditherFactor*dhsv[0]*da[tdx+tdy*dx]/df;
+						hsv[1]=maxOf(minOf(hsv[1]+whsv[1]*ditherFactor*dhsv[1]*da[tdx+tdy*dx]/df, 1), 0);
+						hsv[2]=maxOf(minOf(hsv[2]+whsv[2]*ditherFactor*dhsv[2]*da[tdx+tdy*dx]/df, 1), 0);
+						//Reset the adjusted pixel value
+						setHsv(x+tdx-dox, y+tdy-doy, hsv);
+					}
+				}
+			}
+		}
+	}
+}
+
+//Useful functions
+//Get the rgb values of a pixel as an array
+function getRgb(x, y) {
+	//Set the output array
+	rgb=newArray(3);
+	//Derive the 24 million colour subvalues
+	v=getPixel(x, y);
+	rgb[0]=(v>>16)&0xff;
+	rgb[1]=(v>>8)&0xff;
+	rgb[2]=(v>>0)&0xff;
+	return rgb;
+}
+
+//Set the rgb value of a pixel from an array
+function setRgb(x, y, rgb) {
+	//Derive the 24 million colour subvalues
+	r=(rgb[0]&0xff)<<16;
+	g=(rgb[1]&0xff)<<8;
+	b=(rgb[2]&0xff)<<0;
+	//Set the pixel
+	setPixel(x, y, r+g+b);
+}
+
+//Get the hsv value of a pixel as an array
+//0<=hue<=1, 0<=sat<=1, 0<=val<=1
+//http://www.rapidtables.com/convert/color/rgb-to-hsl.htm
+function rgb2Hsv(rgb) {
+	//Set the output array
+	hsv=newArray(3);
+	//Normalise the rgb values to 0-1 range
+	//Derive the min and max values
+	min=1;
+	max=0;
+	//Derive the index in the rgb array of the maximum value
+	maxIndex=0;
+	for (i=0; i<3; i++) {
+		//Normalise
+		rgb[i]=rgb[i]/255;
+		//Calculate min
+		min=minOf(rgb[i], min);
+		//Determine maxIndex
+		if (rgb[i]>max) {
+			maxIndex=i;
+		}
+		//Calculate max
+		max=maxOf(rgb[i], max);
+	}
+	delta=max-min;
+	//Determine the hue
+	if (delta==0) {
+		hue=0;
+	} else if (maxIndex==0) {
+		hue=60*(((rgb[1]-rgb[2])/delta)%6);
+	} else if (maxIndex==1) {
+		hue=60*((rgb[2]-rgb[0])/delta+2);
+	} else {
+		hue=60*((rgb[0]-rgb[1])/delta+4);
+	}
+	//Determine the lightness
+	//lum=(max+min)/2;
+	lum=0.30*rgb[0]+0.59*rgb[1]+0.11*rgb[2];
+	//Determine the saturation
+	if (delta==0) {
+		sat=0;
+	} else {
+		sat=delta/(1-abs(2*lum-1));
+	}
+	//Set the hsv output values
+	//Reduce hue from a 0-360 to a 0-1 range
+	hsv[0]=hue/360;
+	hsv[1]=sat;
+	hsv[2]=lum;
+	return hsv;
+}
+function getHsv(x, y) {
+	rgb=getRgb(x, y);
+	hsv=rgb2Hsv(rgb);
+	return hsv;
+}
+
+//Set the hvs value of a pixel from an array
+//0<=hue<=1, 0<=sat<=1, 0<=val<=1
+//http://www.rapidtables.com/convert/color/hsl-to-rgb.htm
+function hsv2Rgb(hsv) {
+	//Set the rgb array
+	rgb=newArray(3);
+	//Return hue to 0-360 range
+	while (hsv[0]<0) {
+		hsv[0]=hsv[0]+1;
+	}
+	hsv[0]=hsv[0]*360;
+	//Determine variables
+	c=(1-abs(2*hsv[2]-1))*hsv[1];
+	hh=hsv[0]/60;
+	x=c*(1-abs(hh%2-1));
+	//Lookup base rgb values based on hue
+	if (hh<1) {
+		rgb[0]=c;
+		rgb[1]=x;
+	} else if (hh<2) {
+		rgb[0]=x;
+		rgb[1]=c;
+	} else if (hh<3) {
+		rgb[1]=c;
+		rgb[2]=x;
+	} else if (hh<4) {
+		rgb[1]=x;
+		rgb[2]=c;
+	} else if (hh<5) {
+		rgb[0]=x;
+		rgb[2]=c;
+	} else {
+		rgb[0]=c;
+		rgb[2]=x;
+	}
+	//m=hsv[2]-c/2;
+	m=hsv[2]-(0.30*rgb[0]+0.59*rgb[1]+0.11*rgb[2]);
+	//Correct brightness
+	for (i=0; i<3; i++) {
+		rgb[i]=(rgb[i]+m)*255;
+		rgb[i]=maxOf(minOf(floor(rgb[i]), 255), 0);
+	}
+	//Return the rgb array
+	return rgb;
+}
+function setHsv(x, y, hsv) {
+	rgb=hsv2Rgb(hsv);
+	setRgb(x, y, rgb);
+}
+
+function fixStrayWhite() {
+	for (y=0; y<getHeight(); y++) {
+		maxb=0;
+		for (x=0; x<getWidth(); x++) {
+			a=0;
+			b=0;
+			if (getPixel(x, y)!=255) {
+				while (getPixel(x+a, y)!=255 && x+a<getWidth()) {
+					a++;
+				}
+				while (getPixel(x, y+b)!=255 && y+b<getHeight()) {
+					b++;
+				}
+				makeRectangle(x, y, a, b);
+				changeValues(255, 255, 15);
+				maxb=maxOf(b, maxb);
+			}
+			x+=a;
+		}
+		y+=maxb;
+	}
+}

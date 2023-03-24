@@ -1,0 +1,5 @@
+Leaves and snow:
+Resize with diffusion scaler
+Trunk scale with XBR 2x <no blend>, followed by diffusion retexturing
+
+Shade 256 tile size with 0 degree emboss, blurred by 4px

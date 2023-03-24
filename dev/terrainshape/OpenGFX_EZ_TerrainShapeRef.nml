@@ -1,0 +1,63 @@
+//Define the NewGRF
+grf {
+	grfid: "OGZ\A";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	url:  string(STR_GRF_URL);
+	version: 1;
+	min_compatible_version: 1;
+}
+
+//Replace terrain tiles
+//Templates
+template template_groundtiles(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 399*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 479*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 559*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+
+	[ 639*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 719*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 799*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[ 879*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+
+	[ 959*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1039*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1119*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1197*z+x*z, 1*z+y*z, 64*z, 48*z-1, -31*z, -16*z ]
+
+	[1277*z+x*z, 1*z+y*z, 64*z, 16*z-1, -31*z,   0*z ]
+	[1357*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1437*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+}
+
+//Farmland
+replace terrain_farmland(4126, "../../graphics/terrain/64/blends/farm_gtdev_8bpp.png") {
+	template_groundtiles(0, 0, 1)
+	template_groundtiles(0, 0, 1)
+	template_groundtiles(0, 0, 1)
+	template_groundtiles(0, 0, 1)
+	template_groundtiles(0, 0, 1)
+	template_groundtiles(0, 0, 1)
+	template_groundtiles(0, 0, 1)
+	template_groundtiles(0, 0, 1)
+	template_groundtiles(0, 0, 1)
+}
+
+//Snowline texture reference
+replace terrain_snowline(4493, "../../graphics/terrain/64/blends/snow_gtdev_finalblend2_8bpp.png") {
+	template_groundtiles(0,  0, 1)
+	template_groundtiles(0, 48, 1)
+	template_groundtiles(0, 96, 1)
+	template_groundtiles(0,144, 1)
+}
+
+//Snowline texture reference
+replace terrain_desertslope(4550, "../../graphics/terrain/64/blends/desert_gtdev_duneslopes_8bpp.png") {
+	template_groundtiles(0,  0, 1)
+}

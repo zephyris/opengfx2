@@ -1,0 +1,22 @@
+# python optimised files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# generated images
+*_8bpp.png
+pygen/
+
+# nmlc intermediates and output
+.nmlcache/
+*.grf
+*.grf.cache
+*.grf.cacheindex
+grf/
+
+# working directories
+reference/
+previews/
+
+# blender backups
+*.blend1
