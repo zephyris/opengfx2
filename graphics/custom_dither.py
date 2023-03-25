@@ -6,7 +6,7 @@ from random import randint
 import numpy, blend_modes # For overlay blending
 import glob, os, sys
 
-from tools import openttd_palettise
+from tools import openttd_palettise, check_update_needed
 
 verbose = True
 
@@ -16,16 +16,16 @@ palette_g = [0, 16, 32, 48, 64, 80, 100, 116, 132, 148, 168, 184, 200, 216, 232,
 palette_b = [255, 16, 32, 48, 64, 80, 100, 116, 132, 148, 168, 184, 200, 216, 232, 252, 72, 92, 112, 132, 152, 172, 196, 220, 4, 12, 20, 28, 64, 100, 132, 168, 4, 20, 44, 72, 92, 120, 148, 176, 4, 16, 32, 52, 76, 108, 124, 144, 164, 192, 0, 60, 128, 0, 8, 28, 56, 80, 108, 136, 0, 4, 8, 16, 24, 32, 16, 0, 128, 192, 0, 8, 16, 28, 40, 56, 76, 88, 108, 128, 0, 0, 4, 4, 12, 20, 28, 44, 24, 32, 48, 60, 76, 92, 108, 124, 24, 44, 72, 88, 108, 136, 168, 200, 0, 0, 4, 12, 24, 44, 64, 88, 16, 24, 40, 56, 64, 80, 96, 112, 128, 148, 4, 20, 40, 64, 96, 136, 68, 84, 100, 116, 136, 164, 192, 224, 112, 144, 172, 196, 224, 252, 252, 252, 108, 132, 160, 184, 212, 220, 232, 240, 252, 252, 96, 108, 120, 132, 160, 192, 220, 252, 52, 52, 52, 88, 124, 160, 200, 236, 112, 140, 168, 196, 224, 248, 255, 252, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 4, 0, 48, 100, 152, 88, 104, 124, 140, 164, 188, 216, 224, 52, 64, 76, 92, 252, 248, 236, 216, 172, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 8, 24, 52, 84, 126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 112, 116, 120, 124, 128, 144, 168, 252, 164, 140, 255]
 # Setup palette image, used for applying palette quickly
 def palette_image(r, g, b):
-	palette = []
-	for i in range(len(r)):
-		palette.append(r[i])
-		palette.append(g[i])
-		palette.append(b[i])
-	palimage = Image.new('P', (256, 1))
-	for x in range(256):
-		palimage.putpixel((x, 0), x)
-	palimage.putpalette(palette)
-	return palimage
+  palette = []
+  for i in range(len(r)):
+    palette.append(r[i])
+    palette.append(g[i])
+    palette.append(b[i])
+  palimage = Image.new('P', (256, 1))
+  for x in range(256):
+    palimage.putpixel((x, 0), x)
+  palimage.putpalette(palette)
+  return palimage
 palimage=palette_image(palette_r, palette_g, palette_b)
 
 # Setup palette dict for quick lookup
@@ -49,164 +49,162 @@ color_set_length = [15, 8, 8, 8, 10, 3, 7, 10, 10, 8, 8, 8, 8, 10, 6, 8, 8, 10, 
 # dither_factor is the additional multiplicative factor on error diffusion, use between 0 and 1
 # src and pal are the image to dither and an image defining palette restrictions
 def make_8bpp(src, pal, dither_factor):
-	width, height = src.size
-	# Start by making sure the images are the correct mode
-	# Source must be RGB (no alpha)
-	src = src.convert("RGB")
-	# Palette must be 8-bit with OpenTTD palette
-	pal = openttd_palettise(pal)
-	
-	# Convert src to 8-bit with OpenTTD palette using custom dithering
-	# Dithers in HSV space, restricting colour sets when specified in pal
-	dithered = make_dithered(src, pal, dither_factor)
-	
-	# Overlay pixels in pal exactly matching indices in colors_action over dithered image
-	# Mask from indices
-	v = [0] * 255
-	for i in range(len(colors_action)):
-		v[colors_action[i]] = 255
-	mask_palimg = palette_image(v, v, v)
-	mask = pal.copy()
-	mask.putpalette(mask_palimg.getpalette())
-	mask = mask.convert("L")
-	# Paste using mask
-	dithered.paste(pal, (0, 0), mask)
-	
-	# Return result
-	return dithered
+  width, height = src.size
+  # Start by making sure the images are the correct mode
+  # Source must be RGB (no alpha)
+  src = src.convert("RGB")
+  # Palette must be 8-bit with OpenTTD palette
+  pal = openttd_palettise(pal)
+  
+  # Convert src to 8-bit with OpenTTD palette using custom dithering
+  # Dithers in HSV space, restricting colour sets when specified in pal
+  dithered = make_dithered(src, pal, dither_factor)
+  
+  # Overlay pixels in pal exactly matching indices in colors_action over dithered image
+  # Mask from indices
+  v = [0] * 255
+  for i in range(len(colors_action)):
+    v[colors_action[i]] = 255
+  mask_palimg = palette_image(v, v, v)
+  mask = pal.copy()
+  mask.putpalette(mask_palimg.getpalette())
+  mask = mask.convert("L")
+  # Paste using mask
+  dithered.paste(pal, (0, 0), mask)
+  
+  # Return result
+  return dithered
 
 def most_similar_in_palette(pr, pg, pb):
-	dist = 255 * 255 * 255
-	index = 0
-	for i in colors_normal:
-		cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
-		if cd < dist:
-			dist = cd
-			index = i
-	return index
+  dist = 255 * 255 * 255
+  index = 0
+  for i in colors_normal:
+    cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
+    if cd < dist:
+      dist = cd
+      index = i
+  return index
 
 def most_similar_in_color_set(pr, pg, pb, color_set):
-	dist = 255 * 255 * 255
-	index = 0
-	start_index = color_set_start[color_set]
-	end_index = start_index + color_set_length[color_set]
-	for i in range(start_index, end_index):
-		cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
-		if cd < dist:
-			dist = cd
-			index = i
-	return index
+  dist = 255 * 255 * 255
+  index = 0
+  start_index = color_set_start[color_set]
+  end_index = start_index + color_set_length[color_set]
+  for i in range(start_index, end_index):
+    cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
+    if cd < dist:
+      dist = cd
+      index = i
+  return index
 
 # Dither function
 # Do dithering in RGB space
 # Do not dither (propagate pixel value errors) to indices in colors_action or colors_special
 # If pal pixel index is in one of the color sets, restrict dithering to only indices in that set
 def make_dithered(src, pal, dither_factor):
-	# Find colour groups in pal image and make an image recording the color set per pixel
-	# If sets pixel is not 255 then dithering is restricted to indices in color_set[pixel value]
-	v = [255] * 256
-	for i in range(len(color_set_start)):
-		for j in range(color_set_length[i]):
-			v[color_set_start[i] + j] = i
-	sets_palimg = palette_image(v, v, v)
-	sets = pal.copy()
-	sets.putpalette(sets_palimg.getpalette())
-	sets = sets.convert("L")
-	
-	# Find pixels in src exactly matching colors_special and make an image with this mask
-	# Do not propagate pixel value errors through donotdither pixels with value 255
-	width, height = src.size
-	donotdither = Image.new("L", (width, height), 0)
-	for x in range(width):
-		for y in range(height):
-			pr, pg, pb = src.getpixel((x, y))
-			for i in range(len(colors_special)):
-				if palette_r[colors_special[i]] == pr and palette_g[colors_special[i]] == pg and palette_b[colors_special[i]] == pb:
-					donotdither.putpixel((x, y), 255)
-					break
-	
-	# Dither settings
-	# Sierra http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
-	#dox = 2
-	#doy = 0
-	#df = 32
-	#da = [
-	#	[-1, -1, -1,  5,  3],
-	#	[ 2,  4,  5,  4,  2],
-	#	[ 0,  2,  3,  2,  0]
-	#]
-	
-	# Sierra lite http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
-	dox = 1
-	doy = 0
-	df = 4
-	da = [
-		[-1, -1,  2],
-		[ 1,  1,  0]
-	]
-	
-	# Do dithering
-	# TODO: Change to dithering in HSV space, with error propogation factors of h, s, v = 0, 0.8, 1.0
-	res = Image.new("P", (src.size))
-	res.putpalette(palimage.getpalette())
-	for y in range(height):
-		for x in range(width):
-			pr, pg, pb = src.getpixel((x, y))
-			if donotdither.getpixel((x, y)) == 255:
-				# Do not dither this pixel, just set nearest value
-				res.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
-			else:
-				# Dither this pixel
-				if sets.getpixel((x, y)) != 255:
-					# Dither this pixel within a color set
-					res.putpixel((x, y), most_similar_in_color_set(pr, pg, pb, sets.getpixel((x, y))))
-				else:
-					# Dither this pixel to any color
-					res.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
-				# Diffuse errors according to the dithering matrix
-				error = [0, 0, 0]
-				error[0] = pr - palette_r[res.getpixel((x, y))]
-				error[1] = pg - palette_g[res.getpixel((x, y))]
-				error[2] = pb - palette_b[res.getpixel((x, y))]
-				# Do error propagation
-				for b in range(len(da)):
-					for a in range(len(da[0])):
-						# For each x and y offset a and b in dither array
-						if da[b][a] != -1 and x + a < width - 1 and y + b < height - 1:
-							# If a valid dither value and within image bounds
-							if donotdither.getpixel((x, y)) != 255:
-								# Do not propagate errors through pixels identified as donotdither
-								# Alter pixel value to propagate errors
-								pcr, pcg, pcb = src.getpixel((x + a - dox, y + b - doy))
-								pcr = int(pcr + error[0] * dither_factor * da[b][a] / df)
-								pcg = int(pcg + error[1] * dither_factor * da[b][a] / df)
-								pcb = int(pcb + error[2] * dither_factor * da[b][a] / df)
-								src.putpixel((x + a - dox, y + b - doy), (pcr, pcg, pcb))
+  # Find colour groups in pal image and make an image recording the color set per pixel
+  # If sets pixel is not 255 then dithering is restricted to indices in color_set[pixel value]
+  v = [255] * 256
+  for i in range(len(color_set_start)):
+    for j in range(color_set_length[i]):
+      v[color_set_start[i] + j] = i
+  sets_palimg = palette_image(v, v, v)
+  sets = pal.copy()
+  sets.putpalette(sets_palimg.getpalette())
+  sets = sets.convert("L")
+  
+  # Find pixels in src exactly matching colors_special and make an image with this mask
+  # Do not propagate pixel value errors through donotdither pixels with value 255
+  width, height = src.size
+  donotdither = Image.new("L", (width, height), 0)
+  for x in range(width):
+    for y in range(height):
+      pr, pg, pb = src.getpixel((x, y))
+      for i in range(len(colors_special)):
+        if palette_r[colors_special[i]] == pr and palette_g[colors_special[i]] == pg and palette_b[colors_special[i]] == pb:
+          donotdither.putpixel((x, y), 255)
+          break
+  
+  # Dither settings
+  # Sierra http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
+  #dox = 2
+  #doy = 0
+  #df = 32
+  #da = [
+  #  [-1, -1, -1,  5,  3],
+  #  [ 2,  4,  5,  4,  2],
+  #  [ 0,  2,  3,  2,  0]
+  #]
+  
+  # Sierra lite http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
+  dox = 1
+  doy = 0
+  df = 4
+  da = [
+    [-1, -1,  2],
+    [ 1,  1,  0]
+  ]
+  
+  # Do dithering
+  # TODO: Change to dithering in HSV space, with error propogation factors of h, s, v = 0, 0.8, 1.0
+  res = Image.new("P", (src.size))
+  res.putpalette(palimage.getpalette())
+  for y in range(height):
+    for x in range(width):
+      pr, pg, pb = src.getpixel((x, y))
+      if donotdither.getpixel((x, y)) == 255:
+        # Do not dither this pixel, just set nearest value
+        res.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
+      else:
+        # Dither this pixel
+        if sets.getpixel((x, y)) != 255:
+          # Dither this pixel within a color set
+          res.putpixel((x, y), most_similar_in_color_set(pr, pg, pb, sets.getpixel((x, y))))
+        else:
+          # Dither this pixel to any color
+          res.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
+        # Diffuse errors according to the dithering matrix
+        error = [0, 0, 0]
+        error[0] = pr - palette_r[res.getpixel((x, y))]
+        error[1] = pg - palette_g[res.getpixel((x, y))]
+        error[2] = pb - palette_b[res.getpixel((x, y))]
+        # Do error propagation
+        for b in range(len(da)):
+          for a in range(len(da[0])):
+            # For each x and y offset a and b in dither array
+            if da[b][a] != -1 and x + a < width - 1 and y + b < height - 1:
+              # If a valid dither value and within image bounds
+              if donotdither.getpixel((x, y)) != 255:
+                # Do not propagate errors through pixels identified as donotdither
+                # Alter pixel value to propagate errors
+                pcr, pcg, pcb = src.getpixel((x + a - dox, y + b - doy))
+                pcr = int(pcr + error[0] * dither_factor * da[b][a] / df)
+                pcg = int(pcg + error[1] * dither_factor * da[b][a] / df)
+                pcb = int(pcb + error[2] * dither_factor * da[b][a] / df)
+                src.putpixel((x + a - dox, y + b - doy), (pcr, pcg, pcb))
 
-	# Return result
-	return res
+  # Return result
+  return res
 
 suffix = "_32bpp.png";
 print("Converting to 8-bit")
 for input_file in glob.glob("*"+suffix):
-	# Only process images lacking a *_8bpp output _or_ modified more recently than the *_8bpp output
-	do_processing = True
-	name = input_file[:-len(suffix)]
-	if verbose == True:
-		print(" "+name)
-	if os.path.isfile(name+"_8bpp.png"):
-		if os.path.getmtime(name+"_8bpp.png") > os.path.getmtime(input_file):
-			do_processing = False
-	if do_processing:
-		with Image.open(input_file) as image:
-			name = input_file[:-len(suffix)]
-			width, height = image.size
-			if os.path.isfile(name+"_palmask.png"):
-				palmask = Image.open(name+"_palmask.png")
-			else:
-				palmask = Image.new("P", (width, height), 0)
-				palmask.putpalette(palimage.getpalette())
-			image_8bpp = make_8bpp(image, palmask, 1);
-			image_8bpp.save(name+"_8bpp.png", "PNG")
-	else:
-		print("  Skipped, output exists and is up-to-date")
+  # Only process images lacking a *_8bpp output _or_ modified more recently than the *_8bpp output
+  do_processing = True
+  name = input_file[:-len(suffix)]
+  if verbose == True:
+    print(" "+name)
+  do_processing = check_update_needed([input_file], name+"_8bpp.png")
+  if do_processing:
+    with Image.open(input_file) as image:
+      name = input_file[:-len(suffix)]
+      width, height = image.size
+      if os.path.isfile(name+"_palmask.png"):
+        palmask = Image.open(name+"_palmask.png")
+      else:
+        palmask = Image.new("P", (width, height), 0)
+        palmask.putpalette(palimage.getpalette())
+      image_8bpp = make_8bpp(image, palmask, 1);
+      image_8bpp.save(name+"_8bpp.png", "PNG")
+  else:
+    print("  Skipped, output exists and is up-to-date")

@@ -6,3 +6,6 @@ bash process_terrain.sh
 bash process_trees.sh
 bash process_effects.sh
 cd ..
+
+mv towns/OpenGFX_EZ_Towns.grf grf/
+mv landscape/OpenGFX_EZ_Landscape.grf grf/
