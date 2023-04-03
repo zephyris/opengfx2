@@ -10,7 +10,7 @@ Requires `git lfs` for large file handling.
 
 Run `make_all.sh` to build the output `.grf` files. This makes a bunch of intermediate files `*_8bpp.png` and things in `pygen` directories.
 
-Requires a system which can run `bash` shell scripts, `python3` with `PIL`, `numpy` and `nmlc`.
+Requires a system which can run `bash` shell scripts, `python3` with `PIL`, `blend-modes`, `numpy` and `nmlc`.
 
 Files used by `python` are `.png` files, but those may be derived from other sources. Raw raw sprites variously drawn\generated in Paint.NET, Aseprite, Blender and more.
 
