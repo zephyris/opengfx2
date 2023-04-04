@@ -1,4 +1,4 @@
-#opengfx2
+# OpenGFX2
 
 Work-in-progress / development repo for an "OpenGFX v2". Or maybe that should be OpenGFX director's edition, refactored OpenGFX, or perhaps OpenGFX extra zoom or OpenGFX 32bpp. Or some combination of all of them.
 
