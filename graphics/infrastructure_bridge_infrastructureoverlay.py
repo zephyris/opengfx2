@@ -19,7 +19,7 @@ if mode == "bridges":
   # Source tile positions in infrastructure
   tile_positions = [
     [1, 1, 64, 32],
-    [65, 1, 64, 32],
+    [66, 1, 64, 32],
   ]
   # vertical offset for infrastructure tiles
   v_offs = [81, 81]
@@ -45,8 +45,8 @@ elif mode == "railramps" or mode == "roadramps":
   # Source tile positions in infrastructure
   if mode == "railramps":
     tile_positions = [
-      [65, 1, 64, 32],
-      [65, 1, 64, 32],
+      [66, 1, 64, 32],
+      [66, 1, 64, 32],
       [1, 1, 64, 32],
       [1, 1, 64, 32],
       [1301, 1, 64, 39],
@@ -63,8 +63,8 @@ elif mode == "railramps" or mode == "roadramps":
   elif mode == "roadramps":
     # Tile poisitions
     tile_positions = [
-      [65, 1, 64, 32],
-      [65, 1, 64, 32],
+      [66, 1, 64, 32],
+      [66, 1, 64, 32],
       [1, 1, 64, 32],
       [1, 1, 64, 32],
       [976, 1, 64, 39],
@@ -77,7 +77,7 @@ elif mode == "railramps" or mode == "roadramps":
       "road": "road_general_bridge_32bpp.png"
     }
   # vertical offset for infrastructure tiles
-  v_offs = [16, 24, 16, 24, 14, 22, 14, 22]
+  v_offs = [16, 24, 16, 24, 16, 24, 16, 24]
   # Terrain sprites to use
   bridge_list = {
     "ramps_general": "bridgeramps_general_32bpp.png",

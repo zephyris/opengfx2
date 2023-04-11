@@ -2024,9 +2024,155 @@ alternative_sprites(maglev_overlay_base, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../g
 replacenew maglev_overlay_extra(SLOPED_RAILS, "../graphics/infrastructure/64/maglev_bits_8bpp.png", 8) {
 	template_railoverlay_extra(0, 0, 1)
 }
-//alternative_sprites(maglev_overlay_extra, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_bits_8bpp.png") {
+//alternative_sprites(maglev_overlay_extra, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/maglev_bits_8bpp.png") {
 //	template_railoverlay_extra(0, 0, 2)
 //}
 alternative_sprites(maglev_overlay_extra, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/maglev_bits_8bpp.png") {
 	template_railoverlay_extra(0, 0, 4)
 }
+
+//Bridges
+//Templates
+template template_bridgeramps_general(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 47*z-1, -31*z, -24*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 63*z-1, -31*z, -32*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 47*z-1, -31*z, -24*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 63*z-1, -31*z, -32*z ]
+
+	[ 261*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 456*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+}
+
+// Spritesheet layout as for general, but different order for replacement
+template template_bridgeramps_wood(x, y, z) {
+	[ 456*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+
+	[ 196*z+x*z, 1*z+y*z, 64*z, 63*z-1, -31*z, -32*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 63*z-1, -31*z, -32*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 47*z-1, -31*z, -24*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 47*z-1, -31*z, -24*z ]
+}
+
+template template_bridge_onespan_rear(x, y, z) {
+	[  66*z+x*z, 1*z+y*z, 64*z, 128*z-1, -31*z, -84*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 128*z-1, -31*z, -84*z ]
+}
+
+template template_bridge_onespan_front(x, y, z) {
+	[  66*z+x*z, 1*z+y*z, 64*z, 128*z-1, -55*z, -95*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 128*z-1,  -7*z, -95*z ]
+}
+
+
+//Road bridges
+//Bridge ramps, general
+replace road_bridgeramps_general(2445, "../graphics/bridges/64/pygen/ramps_general_road_8bpp.png") {
+	template_bridgeramps_general(0, 0, 1)
+}
+//alternative_sprites(road_bridgeramps_general, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/ramps_general_road_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 2)
+//}
+//alternative_sprites(road_bridgeramps_general, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_road_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 4)
+//}
+
+//Bridge ramps, wood
+replace road_bridgeramps_wood(2529, "../graphics/bridges/64/pygen/ramps_wood_road_8bpp.png") {
+	template_bridgeramps_wood(0, 0, 1)
+}
+//alternative_sprites(road_bridgeramps_wood, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/ramps_wood_road_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 2)
+//}
+//alternative_sprites(road_bridgeramps_wood, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_road_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 4)
+//}
+
+//Bridge slow steel, plus front sprites
+replace road_bridge_slowsteel(2501, "../graphics/bridges/64/pygen/steelslow_road_8bpp.png") {
+	template_bridge_onespan_rear(0, 0, 1)
+	template_bridge_onespan_front(0, 129, 1)
+}
+//alternative_sprites(road_bridge_slowsteel, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/steelslow_road_8bpp.png") {
+//	template_bridge_twoori(0, 0, 2)
+//	template_bridge_twoori(0, 129, 2)
+//}
+//alternative_sprites(road_bridge_slowsteel, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelslow_road_8bpp.png") {
+//	template_bridge_twoori(0, 0, 4)
+//	template_bridge_twoori(0, 129, 4)
+//}
+
+
+
+//Rail bridges
+//Bridge ramps, general
+replace rail_bridgeramps_general(2437, "../graphics/bridges/64/pygen/ramps_general_rail_8bpp.png") {
+	template_bridgeramps_general(0, 0, 1)
+}
+//alternative_sprites(rail_bridgeramps_general, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/ramps_general_rail_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 2)
+//}
+//alternative_sprites(rail_bridgeramps_general, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_rail_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 4)
+//}
+
+//Bridge ramps, wood
+replace rail_bridgeramps_wood(2537, "../graphics/bridges/64/pygen/ramps_wood_rail_8bpp.png") {
+	template_bridgeramps_wood(0, 0, 1)
+}
+//alternative_sprites(rail_bridgeramps_wood, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/ramps_wood_rail_8bpp.png") {
+//	template_bridgeramps_wood(0, 0, 2)
+//}
+//alternative_sprites(rail_bridgeramps_wood, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_rail_8bpp.png") {
+//	template_bridgeramps_wood(0, 0, 4)
+//}
+
+//Monorail bridges
+//Bridge ramps, general
+replace monorail_bridgeramps_general(4326, "../graphics/bridges/64/pygen/ramps_general_monorail_8bpp.png") {
+	template_bridgeramps_general(0, 0, 1)
+}
+//alternative_sprites(monorail_bridgeramps_general, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/ramps_general_monorail_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 2)
+//}
+//alternative_sprites(monorail_bridgeramps_general, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_monorail_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 4)
+//}
+
+//Bridge ramps, wood
+replace monorail_bridgeramps_wood(4352, "../graphics/bridges/64/pygen/ramps_wood_monorail_8bpp.png") {
+	template_bridgeramps_wood(0, 0, 1)
+}
+//alternative_sprites(monorail_bridgeramps_wood, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/ramps_wood_monorail_8bpp.png") {
+//	template_bridgeramps_wood(0, 0, 2)
+//}
+//alternative_sprites(monorail_bridgeramps_wood, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_monorail_8bpp.png") {
+//	template_bridgeramps_wood(0, 0, 4)
+//}
+
+//Maglev bridges
+//Bridge ramps, general
+replace maglev_bridgeramps_general(4366, "../graphics/bridges/64/pygen/ramps_general_maglev_8bpp.png") {
+	template_bridgeramps_general(0, 0, 1)
+}
+//alternative_sprites(maglev_bridgeramps_general, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/ramps_general_maglev_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 2)
+//}
+//alternative_sprites(maglev_bridgeramps_general, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_maglev_8bpp.png") {
+//	template_bridgeramps_general(0, 0, 4)
+//}
+
+//Bridge ramps, wood
+replace maglev_bridgeramps_wood(4392, "../graphics/bridges/64/pygen/ramps_wood_maglev_8bpp.png") {
+	template_bridgeramps_wood(0, 0, 1)
+}
+//alternative_sprites(maglev_bridgeramps_wood, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/ramps_wood_maglev_8bpp.png") {
+//	template_bridgeramps_wood(0, 0, 2)
+//}
+//alternative_sprites(maglev_bridgeramps_wood, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_maglev_8bpp.png") {
+//	template_bridgeramps_wood(0, 0, 4)
+//}
