@@ -32,6 +32,8 @@ if mode == "bridges":
   }
   # Terrain sprites to use
   bridge_list = {
+    "template": "bridge_template_32bpp.png",
+    "deckonly": "bridge_deckonly_32bpp.png",
     "steelfast": "bridge_steelfast_32bpp.png",
     "steelslow": "bridge_steelslow_32bpp.png",
     "wood": "bridge_wood_32bpp.png"
