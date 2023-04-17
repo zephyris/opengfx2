@@ -1,0 +1,233 @@
+start	end	description	climate-specific	redraw	64	256
+0	1	mouse cursors	n	n	n/a	n/a
+2	225	standard font	n	n	n/a	n/a
+226	450	small font	n	n	n/a	n/a
+450	673	large font	n	n	n/a	n/a
+674			n			
+675	678	company colour swatches	n	n	n/a	n/a
+679	751	toolbar icons	n	n	n/a	n/a
+752	770	tile select ui elements	n	y	y	y
+771	773		n			
+774		tile corner select ui element	n	y	y	y
+775	804		n			
+805	989	company manager faces	n	n	n/a	n/a
+990	1003	"foundations, flat tile"	1234	y	y	y
+1004		out-of-bounds tile	n	y	y	y
+1005	1010	"rail, junction overlay"	n	y	y	y
+1011	1036	"rail, ground tiles"	1234	y	y	y
+1037	1062	"rail, snow ground tiles"	23	y	y	y
+1063	1068	rail depots	n	y	n	n
+1069	1086	rail stations	n	y	n	n
+1087	1092	"monorail, junction overlay"	n	y	y	y
+1093	1118	"monorail, ground tiles"	1234	y	y	y
+1119	1144	"monorail, snow ground tiles"	23	y	y	y
+1145	1150	monorail depots	n	y	n	n
+1151	1168	monorail stations	n	y	n	n
+1169	1173	"maglev, junction overlay"	n	y	y	y
+1175	1200	"maglev, ground tiles"	1234	y	y	y
+1201	1226	"maglev, snow ground tiles"	23	y	y	y
+1227	1232	maglev depots	n	y	n	n
+1233	1250	maglev stations	n	y	n	n
+1251	1274	rail ui elements	n	n	n	n
+1275	1290	"signals, base"	y	y	n	n
+1291	1300	"rail ui elements, additional"	n	n	n	n
+1301	1308	rail fences	n	y	y	y
+1313	1331	"road, town"	123/4	y	y	y
+1332	1350	"road, grass"	1234	y	y	y
+1351	1369	"road, snow"	23	y	y	y
+1370	1405	level crossings	y	y	y	y
+1406	1407	street lights	y	y	y	y
+1408	1413	road depots	n	y	n	n
+1414	1415	"road reconstruction, ground"	n	y	n	n
+1416	1419	"road reconstruction, bulldozer"	n	y	n	n
+1420	1425	"town, temperate, offices"	n	y	y	n
+1426	1429	"town, temperate, flats"	n	y	y	n
+1430	1433	"town, temperate, small flats"	n	y	y	n
+1434	1437	"town, temperate, church"	n	y	y	n
+1438	1439	?				
+1440	1443	"town, temperate, offices with lift"	n	y	y	n
+1444	1447	"town, temperate, houses"	n	y	y	n
+1448	1453	"town, temperate, hotel"	n	y	y	n
+1454	1455	"town, temperate, statue and fountain"	n	y	y	n
+1456	1457	"town, temperate, parks"	n	y	y	n
+1458	1460	"town, temperate, offices"	n	y	y	n
+1461	1463	"town, temperate, old shops and offices"	n	y	y	n
+1464	1466	"town, temperate, old shops and offices"	n	y	y	n
+1467	1469	"town, temperate, old shops and offices"	n	y	y	n
+1470	1472	"town, temperate, modern tower"	n	y	y	n
+1473	1475	"town, temperate, modern warehouse"	n	y	y	n
+1476	1478	"town, temperate, modern warehouse"	n	y	y	n
+1479	1486	"town, temperate, stadium small"	n	y	y	n
+1487	1494	"town, temperate, old houses"	n	y	y	n
+1496	1500	"town, temperate, houses"	n	y	y	n
+1501	1518	"town, temperate, town houses"	n	y	y	n
+1519	1523	"town, temperate, flats"	n	y	y	n
+1524	1529	"town, temperate, flats"	n	y	y	n
+1530	1535	"town, modern office block"	n	y	y	n
+1536	1539	"town, temperate, old shops and offices"	n	y	y	n
+1540	1545	"town, office block"	n	y	y	n
+1546	1551	"town, tall office block"	n	y	y	n
+1552	1553	"town, temperate, theatre"	n	y	y	n
+1554	1561	"town, large stadium"	n	y	y	n
+1562	1565	"town, modern office block"	n	y	y	n
+1566	1569	"town, arctic, houses"	n	y	y	n
+1570	1575	"town, temperate, houses"	n	y	y	n
+1576	1709	"trees, temperate"	n	y	y	y
+1710	1764	"trees, arctic"	n	y	y	y
+1765	1820	"trees, arctic snow"	n	y	y	y
+1821	1946	"trees, tropic"	n	y	partial	partial
+1947	2009	"trees, toyland"	n	y	n	n
+2010		tree ui element	n	n		
+2011	2025	coal mine	n	y	y	n
+2026	2039	arctic iron ore mine	n	y	n	n
+2040	2044	iron ore mine smoke	n	y	y	n
+2045	2054	power station	n	y	y	n
+2055	2060	power station sparks	n	y	n	n
+2061	2071	saw mill	n	y	y	n
+2072	2077	forest	n	y	n	n
+2078	2095	oil refinery	n	y	n	n
+2096	2015	oil rig	n	y	y	n
+2106	2117	temperate farm	n	y	y	n
+2118	2145	steel mill	n	y	y	n
+2146	2172	factory	n	y	y	n
+2173	2179	oil well	n	y	n	n
+2180	2185	temperate bank	n	y	y	n
+2186	2187	arctic bank	n	y	y	n
+2188	2199	food processing plant	n	y	y	n
+2200	2214	paper mill	n	y	y	n
+2215	2262	diamond mine	n	y	y	n
+2263	2292	gold mine	n	y	y	n
+2293	2340	temperate iron ore mine	n	y	y	n
+2241	2343	fruit and rubber plantations	n	y	n	n
+2244	2346	water tower	n	y	n	n
+2347	2352	water source	n	y	n	n
+2353	2346	lumber mill	n	y	y	n
+2365	2372	"rail tunnel, grass"	1234	y	n	n
+2373	2380	"monorail tunnel, grass"	1234	y	n	n
+2381	2388	"maglev tunnel, grass"	1234	y	n	n
+2389	2396	"road tunnel, grass"	1234	y	n	n
+2397	2404	"rail tunnel, snow"	23	y	n	n
+2405	2412	"monorail tunnel, snow"	23	y	n	n
+2413	2420	"maglev tunnel, snow"	23	y	n	n
+2421	2428	"road tunnel, snow"	23	y	n	n
+2429	2436	tunnel ui elements	n			
+2437	2444	rail bridge slopes				
+2445	2452	road bridge slopes				
+2453	2498	"road, rail suspension bridge"				
+2499	2506	"road, rail steel bridge"				
+2507	2527	"road, rail girder bridge"				
+2529	2536	road wood bridge slopes				
+2537	2544	rail wood bridge slopes				
+2545	2552	"road, rail wood bridge"				
+2553	2558	"road, rail steel bridge"				
+2559	2592	all tube bridges				
+2593	2600	bridge ui elements				
+2601		transmitter				
+2602		lighthouse				
+2603	2631	company headquarters				
+2632		company statue				
+2633		heliport				
+2634	2664	modern airport				
+2665	2675	old airport				
+2676	2679	airport wind sock				
+2680	2691	airport radar				
+2692	2707	bus stops				
+2708	2723	lorry stops				
+2724		airport ui elements				
+2725	2726	road ui elements				
+2727	2732	docks				
+2733	2020	rail wagons				
+2021	2904	maglev/monorail wagons				
+2905	2984	temperate rail engines				
+2985	2992	monorail engines				
+2993	3016	maglev engines				
+3017	3072	arctic/tropical rail engines				
+3073	3078	diesel effect				
+3079	3083	steam effect				
+3084	3089	spark effect				
+3090	3091	stop go ui element				
+3092	2667	road vehicles				
+3668		dock ui element				
+3669	3700	ships				
+3709	3724	large explosion				
+3725	3736	small explosion				
+3737	3740	breakdown smoke				
+3741	3904	aircraft				
+3905	3923	disaster sprites				
+3924	3942	"ground tiles, bare earth"	123/4			
+3943	3961	"ground tiles, 1/3 grass"	1234			
+3962	3980	"ground tiles, 2/3 grass"	1234			
+3981	3999	"ground tiles, grass"	1234			
+4000	4022	"ground tiles, rough"	1234			
+4023	4041	"ground tiles, rock grass border"	1234			
+4042	4060	"ground tiles, rock"	123/4			
+4061		default water tile	123/4			
+4062	4069	"shore tiles, base"	1234			
+4070	4075	ship depot				
+4076		bouy	123/4			
+4077	4089	landscape ui elements				
+4090	4125	field fences				
+4126	4296	"ground tiles, fields"				
+4297	4323	cargo icon ui elements				
+4324	4325	monorail slow steel bridge underlay				
+4326	4333	monorail bridge slopes				
+4334	4345	monorail suspension bridge underlay				
+4352	4359	"monorail bridge slopes, wood"				
+4360	4361	monorail wood bridge underlay				
+4362	4363	monorail fast steel bridge underlay				
+4364	4365	maglev slow steel bridge underlay				
+4366	4373	maglev bridge slopes				
+4374	4385	maglev suspension bridge underlay				
+4392	4399	"maglev bridge slopes, wood"				
+4400	4401	maglev wood bridge underlay				
+4402	4403	maglev fast steel bridge underlay				
+4404	4405	"town, cinema"				
+4406	4419	"town, shopping centre"				
+4418	4423	"town, arctic, flats"				
+4424	4427	"town, arctic, flats"				
+4428	4433	"town, arctic, houses"				
+4434	4437	"town, arctic, office block"				
+4438	4441	"town, arctic, office block"				
+4442	4445	"town, arctic, office block"				
+4446	4451	"town, arctic, house"				
+4452	4452	"town, arctic, house"				
+4458	4461	"town, arctic, flats"				
+4463	4465	"town, arctic, church"				
+4466	4469	"town, arctic, house"				
+4470		"town, arctic, old shops and offices"				
+4471	4476	"town, arctic, hotel"				
+4477	4479	"town, arctic, shops"				
+4480	4484	"town, arctic, office block"				
+4485	4492	"town, arctic, hotel"				
+4493	4511	"ground tiles, snow 1/4"				
+4412	4530	"ground tiles, snow 2/4"				
+4531	4549	"ground tiles, snow 3/4"				
+4550	4568	"ground tiles, snow"				
+4569		"town, office block with lift, snow"				
+4570	4573	"town, arctic, houses"				
+4573	4587	"town, arctic, various building snow variants"				
+4588	4596	"town, tropical, houses"				
+4597	4600	"town, tropical, shanty houses"				
+4601	4603	"town, tropical, flats"				
+4604		"town, tropical, church"				
+4605	4607	"town, tropical, houses"				
+4609	4611	"town, tropical, flats"				
+4612	1613	"town, tropical, flats"				
+4614	4619	"town, tropical, 2x1 tower block"				
+4620	4622	"town, tropical, flats"				
+4623	4625	"town, tropical, office block"				
+4626		street tree				
+4627	4674	toyland houses				
+4675	4676	toyland concrete ground tiles				
+4677	4685	sweet factory				
+4686	4690	battery farm				
+4691	4693	cola wells				
+4694		toyland statue				
+4695	4698	toyland houses				
+4699	4707	toy shop				
+4708	4720	toy factory				
+4721	4736	plastic wells				
+4737	4762	fizzy drinks factory				
+4763	4767	toffee quarry				
+4768	4789	sugar mine				
+4790	4792	land purchace elements				
