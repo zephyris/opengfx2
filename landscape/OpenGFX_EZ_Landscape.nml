@@ -2178,7 +2178,7 @@ template template_girder(x, y, z) {
 	template_bridge_single_rear(x+325, y+0, z)
 	template_bridge_single_rear(x+0, y+0, z)
 	template_bridge_single_rear(x+130, y+0, z)
-	template_bridge_single_rear(x+325, y+0, z)
+	template_bridge_single_rear(x+260, y+0, z)
 }
 
 template template_girder_front(x, y, z) {
@@ -2187,11 +2187,11 @@ template template_girder_front(x, y, z) {
 	template_bridge_single_front_nwse(x+325, y+129, z)
 	template_bridge_single_front_swne(x+0, y+129, z)
 	template_bridge_single_front_swne(x+130, y+129, z)
-	template_bridge_single_front_swne(x+325, y+129, z)
-	template_bridge_single_front_nwse(x+65, y+259, z)
-	template_bridge_single_front_nwse(x+325, y+259, z)
-	template_bridge_single_front_swne(x+0, y+259, z)
-	template_bridge_single_front_swne(x+260, y+259, z)
+	template_bridge_single_front_swne(x+260, y+129, z)
+	template_bridge_single_front_nwse(x+195, y+259, z)
+	template_bridge_single_front_nwse(x+195, y+259, z)
+	template_bridge_single_front_swne(x+130, y+259, z)
+	template_bridge_single_front_swne(x+130, y+259, z)
 }
 
 //Road bridges
