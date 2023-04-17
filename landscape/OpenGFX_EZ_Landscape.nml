@@ -851,13 +851,13 @@ if (climate==CLIMATE_TEMPERATE) {
 //Replace canals and rivers
 //Templates
 template template_waterslopes(x, y, z) {
-	//Flat tile
+	//Flat tile TODO: How to code?
 	[ 322*z+x*z,   1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
 	//Sloped tiles
-	[   1*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
 	[  81*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
-	[ 161*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,   0*z ]
-	[ 241*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,   0*z ]
+	[ 241*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[   1*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 161*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
 }
 
 template template_waterfeature_flat(x, y, z) {
@@ -961,27 +961,25 @@ template template_waterfeature_slopes(x, y, z) {
 	[ 285*z+x*z, 121*z+y*z, 16*z, 10*z-1,  -7*z,  -8*z ]
 }
 
-//TODO: Fix out of image bounds error
-//spriteset (waterfeature_river_waterslopes, "../graphics/terrain/64/universal_watertiles_8bpp.png") {
-//	template_waterfeature_slopes(80, 0, 1)
-//}
-//alternative_sprites(waterfeature_river_waterslopes, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") {
-//	template_waterfeature_slopes(80, 0, 2)
-//}
-//alternative_sprites(waterfeature_river_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") {
-//	template_waterfeature_slopes(80, 0, 4)
-//}
+spriteset (waterfeature_river_waterslopes, "../graphics/terrain/64/universal_watertiles_8bpp.png") {
+	template_waterslopes(80, 0, 1)
+}
+alternative_sprites(waterfeature_river_waterslopes, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") {
+	template_waterslopes(80, 0, 2)
+}
+alternative_sprites(waterfeature_river_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") {
+	template_waterslopes(80, 0, 4)
+}
 
-//TODO: Fix out of image bounds error
-//spriteset (waterfeature_canal_waterslopes, "../graphics/terrain/64/universal_watertiles_8bpp.png") {
-//	template_waterfeature_slopes(80, 0, 1)
-//}
-//alternative_sprites(waterfeature_canal_waterslopes, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") {
-//	template_waterfeature_slopes(80, 0, 2)
-//}
-//alternative_sprites(waterfeature_canal_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") {
-//	template_waterfeature_slopes(80, 0, 4)
-//}
+spriteset (waterfeature_canal_waterslopes, "../graphics/terrain/64/universal_watertiles_8bpp.png") {
+	template_waterslopes(80, 0, 1)
+}
+alternative_sprites(waterfeature_canal_waterslopes, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") {
+	template_waterslopes(80, 0, 2)
+}
+alternative_sprites(waterfeature_canal_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") {
+	template_waterslopes(80, 0, 4)
+}
 
 spriteset (waterfeature_canal_temperate, "../graphics/infrastructure/64/pygen/canal_temperate_grass_8bpp.png") {
 	template_waterfeature_flat(0, 0, 1)
@@ -1058,11 +1056,14 @@ switch (FEAT_CANALS, SELF, switch_waterfeature_canal_climate, [
 	waterfeature_canal_temperate;
 }
 
-//item(FEAT_CANALS, waterfeature_canal_slopes, WF_WATERCLIFFS) {
-//	graphics {
-//		default: waterfeature_canal_waterslopes;
-//	}
-//}
+item(FEAT_CANALS, waterfeature_canal_slopes, WF_WATERCLIFFS) {
+	property {
+		graphic_flags: bitmask(WATERFEATURE_ALTERNATIVE_SPRITES);
+	}
+	graphics {
+		default: waterfeature_canal_waterslopes;
+	}
+}
 
 item(FEAT_CANALS, waterfeature_canal, WF_DIKES) {
 	graphics {
@@ -1196,11 +1197,14 @@ switch (FEAT_CANALS, SELF, switch_waterfeature_river_climate, [
 	switch_waterfeature_river_temperate_elevation;
 }
 
-//item(FEAT_CANALS, waterfeature_river_slopes, WF_RIVER_SLOPE) {
-//	graphics {
-//		default: waterfeature_river_waterslopes;
-//	}
-//}
+item(FEAT_CANALS, waterfeature_river_slopes, WF_RIVER_SLOPE) {
+	property {
+		graphic_flags: bitmask(WATERFEATURE_ALTERNATIVE_SPRITES);
+	}
+	graphics {
+		default: waterfeature_river_waterslopes;
+	}
+}
 
 item(FEAT_CANALS, waterfeature_river_banks, WF_RIVERBANKS) {
 	graphics {
