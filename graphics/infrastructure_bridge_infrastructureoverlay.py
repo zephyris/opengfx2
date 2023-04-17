@@ -25,10 +25,10 @@ if mode == "bridges":
   v_offs = [81, 81]
   # Infrastructure sprites to use
   infrastructure_list = {
-    "road": "road_general_concrete_32bpp.png",
-    "rail": "rail_general_concrete_32bpp.png",
-    "monorail": "monorail_general_concrete_32bpp.png",
-    "maglev": "maglev_general_concrete_32bpp.png"
+    "road": "road_general_bridge_32bpp.png",
+    "rail": "rail_general_bridge_32bpp.png",
+    "monorail": "monorail_general_bridge_32bpp.png",
+    "maglev": "maglev_general_bridge_32bpp.png"
   }
   # Terrain sprites to use
   bridge_list = {
@@ -36,9 +36,9 @@ if mode == "bridges":
     "deckonly": "bridge_deckonly_32bpp.png",
     "steelfast": "bridge_steelfast_32bpp.png",
     "steelslow": "bridge_steelslow_32bpp.png",
-    "wood": "bridge_wood_32bpp.png"
-    #"girder": "bridge_girder_32bpp.png"
-    #"suspension": "bridge_suspension_32bpp.png"
+    "wood": "bridge_wood_32bpp.png",
+    #"girder": "bridge_girder_32bpp.png",
+    "suspension": "bridge_suspension_32bpp.png",
     #"tubular": "bridge_tubular_32bpp.png"
   }
   bridgemask = "bridge_deckmask.png"
@@ -102,8 +102,8 @@ for bridge_key in bridge_list:
     infrastructure_target_image = Image.new("RGBA", bridge_image.size, (255, 255, 255, 255))
     mask_target_image = Image.new("RGBA", bridge_image.size, (255, 255, 255, 255))
     for i in range(int((bridge_image.size[0] - 1) / (tile_size + 1))):
-      infrastructure_target_image = paste_to(infrastructure_image, tile_positions[i % len(tile_positions)][0], tile_positions[i % len(tile_positions)][1], tile_positions[i % len(tile_positions)][2], tile_positions[i % len(tile_positions)][3], infrastructure_target_image, (i % len(tile_positions)) * (tile_size // scale + 1) + 1, 1 + v_offs[i % len(tile_positions)], scale)
-      mask_target_image = paste_to(bridgemask_image, 1 + (i % len(tile_positions)) * (tile_size + 1), 0, tile_size, bridge_image.size[1], mask_target_image, (i % len(tile_positions)) * (tile_size // scale + 1) + 1, 0, scale)
+      infrastructure_target_image = paste_to(infrastructure_image, tile_positions[i % len(tile_positions)][0], tile_positions[i % len(tile_positions)][1], tile_positions[i % len(tile_positions)][2], tile_positions[i % len(tile_positions)][3], infrastructure_target_image, i * (tile_size // scale + 1) + 1, 1 + v_offs[i % len(tile_positions)], scale)
+      mask_target_image = paste_to(bridgemask_image, 1 + (i % len(tile_positions)) * (tile_size + 1), 0, tile_size, bridge_image.size[1], mask_target_image, i * (tile_size // scale + 1) + 1, 0, scale)
     target_image = mask_image(infrastructure_target_image, mask_target_image)
     # Overlay for 32bpp image
     if composite_over:
