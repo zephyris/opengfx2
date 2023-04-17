@@ -37,9 +37,9 @@ if mode == "bridges":
     "steelfast": "bridge_steelfast_32bpp.png",
     "steelslow": "bridge_steelslow_32bpp.png",
     "wood": "bridge_wood_32bpp.png",
-    #"girder": "bridge_girder_32bpp.png",
+    "girder": "bridge_girder_32bpp.png",
     "suspension": "bridge_suspension_32bpp.png",
-    #"tubular": "bridge_tubular_32bpp.png"
+    "tubular": "bridge_tubular_32bpp.png"
   }
   bridgemask = "bridge_deckmask.png"
   composite_over = True
