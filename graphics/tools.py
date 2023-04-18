@@ -61,10 +61,13 @@ def check_update_needed(input_file_list, output_file):
     return True
   for input_file in input_file_list:
     # check all input files
-    if os.path.getmtime(input_file) > os.path.getmtime(output_file):
-      # at least one input is newer than output, needs update
-      return True
+    if os.path.isfile(input_file):
+      # implicitly treat missing files as up-to-date
+      if os.path.getmtime(input_file) > os.path.getmtime(output_file):
+        # at least one input is newer than output, needs update
+        return True
   # otherwise all up-to-date
+  print("  Skipped, output exists and is up-to-date")
   return False
 
 def paste_to(input, ix, iy, iw, ih, output, ox, oy, scale):

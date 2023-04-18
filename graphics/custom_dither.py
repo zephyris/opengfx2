@@ -206,5 +206,3 @@ for input_file in glob.glob("*"+suffix):
         palmask.putpalette(palimage.getpalette())
       image_8bpp = make_8bpp(image, palmask, 1);
       image_8bpp.save(name+"_8bpp.png", "PNG")
-  else:
-    print("  Skipped, output exists and is up-to-date")

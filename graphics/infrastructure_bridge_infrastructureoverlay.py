@@ -93,28 +93,40 @@ for bridge_key in bridge_list:
   print(" "+bridge_key)
   for infrastructure_key in infrastructure_list:
     print("  "+infrastructure_key)
-    # Open bridge image
-    bridge_image = Image.open(bridge_list[bridge_key])
-    # Open bridge image
-    bridgemask_image = Image.open(bridgemask)
-    # Make images containing arranged infrastructure sprites and arranged mask sprites
-    infrastructure_image = Image.open(os.path.join("..", "..", "infrastructure", str(tile_size), "pygen", infrastructure_list[infrastructure_key]))
-    infrastructure_target_image = Image.new("RGBA", bridge_image.size, (255, 255, 255, 255))
-    mask_target_image = Image.new("RGBA", bridge_image.size, (255, 255, 255, 255))
-    for i in range(int((bridge_image.size[0] - 1) / (tile_size + 1))):
-      infrastructure_target_image = paste_to(infrastructure_image, tile_positions[i % len(tile_positions)][0], tile_positions[i % len(tile_positions)][1], tile_positions[i % len(tile_positions)][2], tile_positions[i % len(tile_positions)][3], infrastructure_target_image, i * (tile_size // scale + 1) + 1, 1 + v_offs[i % len(tile_positions)], scale)
-      mask_target_image = paste_to(bridgemask_image, 1 + (i % len(tile_positions)) * (tile_size + 1), 0, tile_size, bridge_image.size[1], mask_target_image, i * (tile_size // scale + 1) + 1, 0, scale)
-    target_image = mask_image(infrastructure_target_image, mask_target_image)
-    # Overlay for 32bpp image
-    if composite_over:
-      target_image = overlay_bluetransp(bridge_image, target_image)
-    else:
-      target_image = overlay_bluetransp(target_image, bridge_image)
-    # Save 32bpp image
-    target_image.save(os.path.join("pygen", bridge_key+"_"+infrastructure_key+"_32bpp.png"))
-    # Load palmask image, if it exists
+    # input image paths
+    bridge_image_path = bridge_list[bridge_key]
+    bridgemask_image_path = bridgemask
+    infrastructure_image_path = os.path.join("..", "..", "infrastructure", str(tile_size), "pygen", infrastructure_list[infrastructure_key])
     bridge_palmask_path = os.path.join(infrastructure_list[infrastructure_key][:len("_32bpp.png")]+"_palmask.png")
-    if os.path.isfile(bridge_palmask_path):
-      bridge_image_palmask = Image.open()
-      target_image_palmask.putpalette(palimg.getpalette())
-      target_image_palmask.save(os.path.join("pygen", bridge_key+"_"+infrastructure_key+"_palmask.png"))
+    image_output_path = os.path.join("pygen", bridge_key+"_"+infrastructure_key+"_32bpp.png")
+    palmask_output_path = os.path.join("pygen", bridge_key+"_"+infrastructure_key+"_palmask.png")
+    # main image
+    if check_update_needed([bridge_image_path, bridgemask_image_path, infrastructure_image_path], image_output_path):
+      # if update is needed
+      # Open bridge image
+      bridge_image = Image.open(bridge_image_path)
+      # Open bridge image
+      bridgemask_image = Image.open(bridgemask_image_path)
+      # Make images containing arranged infrastructure sprites and arranged mask sprites
+      infrastructure_image = Image.open(infrastructure_image_path)
+      infrastructure_target_image = Image.new("RGBA", bridge_image.size, (255, 255, 255, 255))
+      mask_target_image = Image.new("RGBA", bridge_image.size, (255, 255, 255, 255))
+      for i in range(int((bridge_image.size[0] - 1) / (tile_size + 1))):
+        infrastructure_target_image = paste_to(infrastructure_image, tile_positions[i % len(tile_positions)][0], tile_positions[i % len(tile_positions)][1], tile_positions[i % len(tile_positions)][2], tile_positions[i % len(tile_positions)][3], infrastructure_target_image, i * (tile_size // scale + 1) + 1, 1 + v_offs[i % len(tile_positions)], scale)
+        mask_target_image = paste_to(bridgemask_image, 1 + (i % len(tile_positions)) * (tile_size + 1), 0, tile_size, bridge_image.size[1], mask_target_image, i * (tile_size // scale + 1) + 1, 0, scale)
+      target_image = mask_image(infrastructure_target_image, mask_target_image)
+      # Overlay for 32bpp image
+      if composite_over:
+        target_image = overlay_bluetransp(bridge_image, target_image)
+      else:
+        target_image = overlay_bluetransp(target_image, bridge_image)
+      # Save 32bpp image
+      target_image.save(image_output_path)
+    # palmask image
+    if check_update_needed([bridge_palmask_path], palmask_output_path):
+      # if update is needed
+      # Load palmask image, if it exists
+      if os.path.isfile(bridge_palmask_path):
+        bridge_image_palmask = Image.open()
+        target_image_palmask.putpalette(palimg.getpalette())
+        target_image_palmask.save(palmask_output_path)
