@@ -26,7 +26,7 @@ for image_index in range(len(source_suffices)):
     # Must be sequentially numbered, indices 1..255 represent subtiles, 0 indicates background
     region_mask = openttd_palettise(Image.open(region_mask_path))
     scale = int(sys.argv[3])
-    tile_size = source_image.width - scale
+    tile_size = source_image.width - scale * 2
 
     # Process source_image in rows of region_mask height (plus scale px border)
     region_mask_width, region_mask_height = region_mask.size
