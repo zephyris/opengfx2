@@ -1422,12 +1422,12 @@ replace infrastructure_general_depot_maglev(1227, "../graphics/stations/general/
 //Road depots
 //TODO: Fix offsets
 template template_road_depot(x, y, z) {
-	template_house_1x1_addoffs( 65,   0, z, 64,   0,  -4)
-	template_house_1x1_addoffs(  0,   0, z, 64,  23, -15)
-	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -4)
-	template_house_1x1_addoffs(  0,  65, z, 64, -21, -15)
-	template_house_1x1_addoffs(  0, 195, z, 64, -21, -15)
-	template_house_1x1_addoffs(  0, 130, z, 64,  23, -15)
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0,   0, z, 64,  30, -16)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0,  65, z, 64, -30, -16)
+	template_house_1x1_addoffs(  0, 195, z, 64, -30, -16)
+	template_house_1x1_addoffs(  0, 130, z, 64,  30, -16)
 }
 
 replace infrastructure_general_depot_road(1408, "../graphics/stations/general/64/pygen/roaddepots_regions_8bpp.png") {
