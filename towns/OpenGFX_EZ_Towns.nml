@@ -1459,3 +1459,7 @@ template template_rail_station(x, y, z) {
 replace infrastructure_general_station_rail(1069, "../graphics/stations/general/64/pygen/railstations_8bpp.png") {
 	template_rail_station(0, 0, 1)
 }
+
+replace infrastructure_general_station_monorail(1151, "../graphics/stations/general/64/pygen/monorailstations_8bpp.png") {
+	template_rail_station(0, 0, 1)
+}
