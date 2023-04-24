@@ -44,9 +44,10 @@ def check_update_needed(input_file_list, output_file):
     # output file does not exist, needs update
     return True
   for input_file in input_file_list:
-    # check all input files
-    if os.path.getmtime(input_file) > os.path.getmtime(output_file):
-      # at least one input is newer than output, needs update
-      return True
+    # check all input files which exist (ie. treat missing as up-to-date)
+    if os.path.isfile(input_file):
+      if os.path.getmtime(input_file) > os.path.getmtime(output_file):
+        # at least one input is newer than output, needs update
+        return True
   # otherwise all up-to-date
   return False

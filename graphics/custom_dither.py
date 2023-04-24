@@ -195,7 +195,7 @@ for input_file in glob.glob("*"+suffix):
   if verbose == True:
     print(" "+name)
   # BUG: Also check for changes to palmask file
-  do_processing = check_update_needed([input_file], name+"_8bpp.png")
+  do_processing = check_update_needed([input_file, input_file+"_palmask.png"], name+"_8bpp.png")
   if do_processing:
     with Image.open(input_file) as image:
       name = input_file[:-len(suffix)]
