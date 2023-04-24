@@ -146,7 +146,7 @@ def make_dithered(src, pal, dither_factor):
   ]
   
   # Do dithering
-  # TODO: Change to dithering in HSV space, with error propogation factors of h, s, v = 0, 0.8, 1.0
+  # TODO?: Change to dithering in HSV space, with error propogation factors of h, s, v = 0, 0.8, 1.0
   res = Image.new("P", (src.size))
   res.putpalette(palimage.getpalette())
   for y in range(height):
@@ -194,6 +194,7 @@ for input_file in glob.glob("*"+suffix):
   name = input_file[:-len(suffix)]
   if verbose == True:
     print(" "+name)
+  # BUG: Also check for changes to palmask file
   do_processing = check_update_needed([input_file], name+"_8bpp.png")
   if do_processing:
     with Image.open(input_file) as image:
