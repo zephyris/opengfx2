@@ -26,39 +26,55 @@ template template_general(x, y, w, h, ox, oy, z) {
 template template_animation_frame(z, f, w, h, ox, oy) {
 	[1*z+f*(1+w)*z, 1*z, w*z, h*z, ox*z, oy*z]
 }
+
+template template_terraininteraction_explosionlg(z) {
+	template_animation_frame(z,  0, 64, 96, -31, -85)
+	template_animation_frame(z,  1, 64, 96, -31, -85)
+	template_animation_frame(z,  2, 64, 96, -31, -85)
+	template_animation_frame(z,  3, 64, 96, -31, -85)
+	template_animation_frame(z,  4, 64, 96, -31, -85)
+	template_animation_frame(z,  5, 64, 96, -31, -85)
+	template_animation_frame(z,  6, 64, 96, -31, -85)
+	template_animation_frame(z,  7, 64, 96, -31, -85)
+	template_animation_frame(z,  8, 64, 96, -31, -85)
+	template_animation_frame(z,  9, 64, 96, -31, -85)
+	template_animation_frame(z, 10, 64, 96, -31, -85)
+	template_animation_frame(z, 11, 64, 96, -31, -85)
+	template_animation_frame(z, 12, 64, 96, -31, -85)
+	template_animation_frame(z, 13, 64, 96, -31, -85)
+	template_animation_frame(z, 14, 64, 96, -31, -85)
+	template_animation_frame(z, 15, 64, 96, -31, -85)
+}
+
+template template_terraininteraction_explosionsm(z) {
+	template_animation_frame(z,  0, 32, 32, -16, -16)
+	template_animation_frame(z,  1, 32, 32, -16, -16)
+	template_animation_frame(z,  2, 32, 32, -16, -16)
+	template_animation_frame(z,  3, 32, 32, -16, -16)
+	template_animation_frame(z,  4, 32, 32, -16, -16)
+	template_animation_frame(z,  5, 32, 32, -16, -16)
+	template_animation_frame(z,  6, 32, 32, -16, -16)
+	template_animation_frame(z,  7, 32, 32, -16, -16)
+	template_animation_frame(z,  8, 32, 32, -16, -16)
+	template_animation_frame(z,  9, 32, 32, -16, -16)
+	template_animation_frame(z, 10, 32, 32, -16, -16)
+	template_animation_frame(z, 11, 32, 32, -16, -16)
+}
+
 //Large explosion
 replace terraininteraction_explosionlg(3709, "../graphics/effects/64/explosion_large_8bpp.png") {
-	template_animation_frame(1,  0, 64, 96, -31, -85)
-	template_animation_frame(1,  1, 64, 96, -31, -85)
-	template_animation_frame(1,  2, 64, 96, -31, -85)
-	template_animation_frame(1,  3, 64, 96, -31, -85)
-	template_animation_frame(1,  4, 64, 96, -31, -85)
-	template_animation_frame(1,  5, 64, 96, -31, -85)
-	template_animation_frame(1,  6, 64, 96, -31, -85)
-	template_animation_frame(1,  7, 64, 96, -31, -85)
-	template_animation_frame(1,  8, 64, 96, -31, -85)
-	template_animation_frame(1,  9, 64, 96, -31, -85)
-	template_animation_frame(1, 10, 64, 96, -31, -85)
-	template_animation_frame(1, 11, 64, 96, -31, -85)
-	template_animation_frame(1, 12, 64, 96, -31, -85)
-	template_animation_frame(1, 13, 64, 96, -31, -85)
-	template_animation_frame(1, 14, 64, 96, -31, -85)
-	template_animation_frame(1, 15, 64, 96, -31, -85)
+	template_terraininteraction_explosionlg(1)
 }
+alternative_sprites(terraininteraction_explosionlg, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/effects/256/explosion_large_8bpp.png") {
+	template_terraininteraction_explosionlg(4)
+}
+
 //Small explosion
 replace terraininteraction_explosionsm(3725, "../graphics/effects/64/explosion_small_8bpp.png") {
-	template_animation_frame(1,  0, 32, 32, -16, -16)
-	template_animation_frame(1,  1, 32, 32, -16, -16)
-	template_animation_frame(1,  2, 32, 32, -16, -16)
-	template_animation_frame(1,  3, 32, 32, -16, -16)
-	template_animation_frame(1,  4, 32, 32, -16, -16)
-	template_animation_frame(1,  5, 32, 32, -16, -16)
-	template_animation_frame(1,  6, 32, 32, -16, -16)
-	template_animation_frame(1,  7, 32, 32, -16, -16)
-	template_animation_frame(1,  8, 32, 32, -16, -16)
-	template_animation_frame(1,  9, 32, 32, -16, -16)
-	template_animation_frame(1, 10, 32, 32, -16, -16)
-	template_animation_frame(1, 11, 32, 32, -16, -16)
+	template_terraininteraction_explosionsm(1)
+}
+alternative_sprites(terraininteraction_explosionsm, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/effects/256/explosion_small_8bpp.png") {
+	template_terraininteraction_explosionsm(4)
 }
 
 //Templates
@@ -1783,7 +1799,7 @@ alternative_sprites(roads_busstop, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphic
 	template_roadstoptiles(0, 0, 4)
 }
 //Road stop roads
-replace roads_lorrystop(2692, "../graphics/infrastructure/64/pygen/road_general_concrete_8bpp.png") {
+replace roads_lorrystop(2708, "../graphics/infrastructure/64/pygen/road_general_concrete_8bpp.png") {
 	template_roadstoptiles(0, 0, 1)
 }
 alternative_sprites(roads_lorrystop, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_general_concrete_8bpp.png") {
