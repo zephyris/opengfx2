@@ -1395,3 +1395,95 @@ replace industry_tropical_copperoremin(2026, "../graphics/industries/tropical/64
 	template_house_1x1(325, 75, 1, 74)
 	template_house_1x1(325,  0, 1, 74)
 }
+
+
+//Rail depots
+template template_rail_depot(x, y, z) {
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,  -4)
+	template_house_1x1_addoffs(  0,   0, z, 64,  23, -15)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -4)
+	template_house_1x1_addoffs(  0,  65, z, 64, -21, -15)
+	template_house_1x1_addoffs(  0, 195, z, 64, -21, -15)
+	template_house_1x1_addoffs(  0, 130, z, 64,  23, -15)
+}
+
+replace infrastructure_general_depot_rail(1063, "../graphics/stations/general/64/pygen/raildepots_regions_8bpp.png") {
+	template_rail_depot(0, 0, 1)
+}
+
+replace infrastructure_general_depot_monorail(1145, "../graphics/stations/general/64/pygen/monoraildepots_regions_8bpp.png") {
+	template_rail_depot(0, 0, 1)
+}
+
+replace infrastructure_general_depot_maglev(1227, "../graphics/stations/general/64/pygen/maglevdepots_regions_8bpp.png") {
+	template_rail_depot(0, 0, 1)
+}
+
+//Road depots
+//TODO: Fix offsets
+template template_road_depot(x, y, z) {
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0,   0, z, 64,  30, -16)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0,  65, z, 64, -30, -16)
+	template_house_1x1_addoffs(  0, 195, z, 64, -30, -16)
+	template_house_1x1_addoffs(  0, 130, z, 64,  30, -16)
+}
+
+replace infrastructure_general_depot_road(1408, "../graphics/stations/general/64/pygen/roaddepots_regions_8bpp.png") {
+	template_road_depot(0, 0, 1)
+}
+
+// Rail stations
+template template_rail_station(x, y, z) {
+	template_house_1x1_addoffs(  0,   0, z, 64,  22, -12)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0, 195, z, 64, -22, -12)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs( 65, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(130,   0, z, 64,  22, -12)
+	template_house_1x1_addoffs(130,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs(130, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(130, 195, z, 64, -22, -12)
+	template_house_1x1_addoffs(195,  65, z, 64,   0,  15)
+	template_house_1x1_addoffs(195, 130, z, 64,   0,  15)
+	template_house_1x1_addoffs(195, 195, z, 64,   0,  15)
+	template_house_1x1_addoffs(195,   0, z, 64,   0,  15)
+	[ 261*z+x*z,  66*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
+	[ 261*z+x*z, 131*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
+	[ 261*z+x*z, 196*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
+	[ 261*z+x*z,   1*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
+}
+
+replace infrastructure_general_station_rail(1069, "../graphics/stations/general/64/pygen/railstations_8bpp.png") {
+	template_rail_station(0, 0, 1)
+}
+
+replace infrastructure_general_station_monorail(1151, "../graphics/stations/general/64/pygen/monorailstations_8bpp.png") {
+	template_rail_station(0, 0, 1)
+}
+
+replace infrastructure_general_station_maglev(1233, "../graphics/stations/general/64/pygen/maglevstations_8bpp.png") {
+	template_rail_station(0, 0, 1)
+}
+
+// Road stations
+template template_roadstop(x, y, z) {
+	template_house_1x1_addoffs( 65,   0, z, 64, -30, -16)
+	template_house_1x1_addoffs( 65,  65, z, 64,  24, -19)
+	template_house_1x1_addoffs( 65, 130, z, 64,   6,  -4)
+	template_house_1x1_addoffs( 65, 195, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0,   0, z, 64,  26, -14)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0, 195, z, 64, -26, -14)
+	template_house_1x1_addoffs(130,   0, z, 64,   4,  -3)
+	template_house_1x1_addoffs(130,  65, z, 64,  -6,  -4)
+	template_house_1x1_addoffs(130, 130, z, 64, -24, -19)
+	template_house_1x1_addoffs(130, 195, z, 64,  26, -18)
+}
+
+replace infrastructure_general_roadstop_lorry(2712, "../graphics/stations/general/64/pygen/lorrystops_8bpp.png") {
+	template_roadstop(0, 0, 1)
+}
