@@ -52,7 +52,7 @@ def alpha_to(input1, ix1, iy1, w, h, input2, ix2, iy2):
   crop2 = input2.crop((ix2 * scale, iy2 * scale, (ix2 + w) * scale, (iy2 + h) * scale))
   crop = Image.alpha_composite(crop2, crop1)
   output = paste_to(crop, 0, 0, w, h, input2, ix2, iy2)
-  return output  
+  return output
 
 # Output image properties
 output_width = (scale + (tile_size + scale) * len(rail_tile_positions))
