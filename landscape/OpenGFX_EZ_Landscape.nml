@@ -619,80 +619,80 @@ if (climate==CLIMATE_TEMPERATE) {
 	replace terrain_toyland_grass_33(3981, "../graphics/terrain/64/toyland_groundtiles_8bpp.png") {
 		template_groundtiles(0, 0, 1)
 	}
-	//alternative_sprites(terrain_toyland_grass_33, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_8bpp.png") {
-	//	template_groundtiles(0, 0, 2)
-	//}
-	//alternative_sprites(terrain_toyland_grass_33, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_8bpp.png") {
-	//	template_groundtiles(0, 0, 4)
-	//}
+	alternative_sprites(terrain_toyland_grass_33, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_8bpp.png") {
+		template_groundtiles(0, 0, 2)
+	}
+	alternative_sprites(terrain_toyland_grass_33, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_8bpp.png") {
+		template_groundtiles(0, 0, 4)
+	}
 
 	//Grass 2/3
 	replace terrain_toyland_grass_23(3962, "../graphics/terrain/64/toyland_groundtiles_8bpp.png") {
 		template_groundtiles(0, 48, 1)
 	}
-	//alternative_sprites(terrain_toyland_grass_23, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_8bpp.png") {
-	//	template_groundtiles(0, 48, 2)
-	//}
-	//alternative_sprites(terrain_toyland_grass_23, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_8bpp.png") {
-	//	template_groundtiles(0, 48, 4)
-	//}
+	alternative_sprites(terrain_toyland_grass_23, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_8bpp.png") {
+		template_groundtiles(0, 48, 2)
+	}
+	alternative_sprites(terrain_toyland_grass_23, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_8bpp.png") {
+		template_groundtiles(0, 48, 4)
+	}
 
 	//Grass 1/3
 	replace terrain_toyland_grass_13(3943, "../graphics/terrain/64/toyland_groundtiles_8bpp.png") {
 		template_groundtiles(0, 96, 1)
 	}
-	//alternative_sprites(terrain_toyland_grass_13, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_8bpp.png") {
-	//	template_groundtiles(0, 96, 2)
-	//}
-	//alternative_sprites(terrain_toyland_grass_13, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_8bpp.png") {
-	//	template_groundtiles(0, 96, 4)
-	//}
+	alternative_sprites(terrain_toyland_grass_13, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_8bpp.png") {
+		template_groundtiles(0, 96, 2)
+	}
+	alternative_sprites(terrain_toyland_grass_13, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_8bpp.png") {
+		template_groundtiles(0, 96, 4)
+	}
 
 	//Grass 0/3 (bare earth)
 	replace terrain_toyland_grass_03(3924, "../graphics/terrain/64/toyland_groundtiles_8bpp.png") {
 		template_groundtiles(0, 144, 1)
 	}
-	//alternative_sprites(terrain_toyland_grass_03, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_8bpp.png") {
-	//	template_groundtiles(0, 144, 2)
-	//}
-	//alternative_sprites(terrain_toyland_grass_03, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_8bpp.png") {
-	//	template_groundtiles(0, 144, 4)
-	//}
+	alternative_sprites(terrain_toyland_grass_03, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_8bpp.png") {
+		template_groundtiles(0, 144, 2)
+	}
+	alternative_sprites(terrain_toyland_grass_03, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_8bpp.png") {
+		template_groundtiles(0, 144, 4)
+	}
 
 	//Rough
 	replace terrain_toyland_rough(4000, "../graphics/terrain/64/toyland_groundtiles_rough_8bpp.png") {
 		template_groundtiles(0, 0, 1)
 		template_groundtiles_extra(0, 0, 1)
 	}
-	//alternative_sprites(terrain_toyland_rough, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_rough_8bpp.png") {
-	//	template_groundtiles(0, 0, 2)
-	//	template_groundtiles_extra(0, 0, 2)
-	//}
-	//alternative_sprites(terrain_toyland_rough, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_rough_8bpp.png") {
-	//	template_groundtiles(0, 0, 4)
-	//	template_groundtiles_extra(0, 0, 4)
-	//}
+	alternative_sprites(terrain_toyland_rough, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_rough_8bpp.png") {
+		template_groundtiles(0, 0, 2)
+		template_groundtiles_extra(0, 0, 2)
+	}
+	alternative_sprites(terrain_toyland_rough, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_rough_8bpp.png") {
+		template_groundtiles(0, 0, 4)
+		template_groundtiles_extra(0, 0, 4)
+	}
 
 	//Shore
 	replace terrain_toyland_shore_core(4062, "../graphics/terrain/64/toyland_shoretiles_8bpp.png") {
 		template_watertiles_core(0, 0, 1)
 	}
-	//alternative_sprites(terrain_toyland_shore_core, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/toyland_shoretiles_8bpp.png") {
-	//	template_watertiles_core(0, 0, 2)
-	//}
-	//alternative_sprites(terrain_toyland_shore_core, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/toyland_shoretiles_8bpp.png") {
-	//	template_watertiles_core(0, 0, 4)
-	//}
+	alternative_sprites(terrain_toyland_shore_core, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_shoretiles_8bpp.png") {
+		template_watertiles_core(0, 0, 2)
+	}
+	alternative_sprites(terrain_toyland_shore_core, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_shoretiles_8bpp.png") {
+		template_watertiles_core(0, 0, 4)
+	}
 	//New shore tiles
 	replacenew terrain_toyland_shore_extended(COAST_TILES, "../graphics/terrain/64/toyland_shoretiles_8bpp.png") {
 		template_watertiles_full(0, 0, 1)
 	}
-	//alternative_sprites(terrain_toyland_shore_extended, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_shoretiles_8bpp.png") {
-	//	template_watertiles_full(0, 0, 2)
-	//}
-	//alternative_sprites(terrain_toyland_shore_extended, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_shoretiles_8bpp.png") {
-	//	template_watertiles_full(0, 0, 4)
-	//}
+	alternative_sprites(terrain_toyland_shore_extended, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_shoretiles_8bpp.png") {
+		template_watertiles_full(0, 0, 2)
+	}
+	alternative_sprites(terrain_toyland_shore_extended, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_shoretiles_8bpp.png") {
+		template_watertiles_full(0, 0, 4)
+	}
 
 	//Rocks (unused rock graphics not replaced)
 	replace terrain_toyland_rocks(4023, "../graphics/terrain/64/toyland_groundtiles_rocks_8bpp.png") {
