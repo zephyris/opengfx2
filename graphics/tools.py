@@ -109,6 +109,10 @@ def check_update_needed(input_file_list, output_file):
   print("  Skipped, output exists and is up-to-date")
   return False
 
+def paste_to_unscaled(input, ix, iy, iw, ih, output, ox, oy):
+  output = paste_to(input, ix, iy, iw, ih, output, ox, oy, 1)
+  return output
+
 def paste_to(input, ix, iy, iw, ih, output, ox, oy, scale):
   """
   Paste from a rectangle in the input image to a rectangle in the output image of the same size.
@@ -169,6 +173,27 @@ def mask_image(source, mask):
       if (r, g, b) in mask_values:
         output.putpixel((x, y), (r, g, b))
   return output
+
+def blue_over(image1, image2):
+  """
+  Overlay image2 onto image1, assuming image2 is indexed, using blue as transparent
+
+  :input source: Input image.
+  :input overlay: Overlay image.
+  :return: Output image.
+  """
+  v = [255] * 256
+  v[0] = 0
+  palette = []
+  for i in range(len(v)):
+    palette.append(v[i])
+    palette.append(v[i])
+    palette.append(v[i])
+  mask = image2.copy()
+  mask.putpalette(palette)
+  mask = mask.convert("L")
+  image1.paste(image2, (0, 0), mask)
+  return image1
 
 def overlay_bluetransp(source, overlay):
   """
