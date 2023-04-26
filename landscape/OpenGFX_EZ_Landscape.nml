@@ -714,12 +714,12 @@ if (climate==CLIMATE_TEMPERATE) {
 	replace terrain_toyland_rocks(4023, "../graphics/terrain/64/toyland_groundtiles_rocks_8bpp.png") {
 		template_groundtiles(0, 0, 1)
 	}
-	//alternative_sprites(terrain_toyland_rocks, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_rocks_8bpp.png") {
-	//	template_groundtiles(0, 0, 2)
-	//}
-	//alternative_sprites(terrain_toyland_rocks, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_rocks_8bpp.png") {
-	//	template_groundtiles(0, 0, 4)
-	//}
+	alternative_sprites(terrain_toyland_rocks, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_rocks_8bpp.png") {
+		template_groundtiles(0, 0, 2)
+	}
+	alternative_sprites(terrain_toyland_rocks, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_rocks_8bpp.png") {
+		template_groundtiles(0, 0, 4)
+	}
 }
 
 //Farmland
