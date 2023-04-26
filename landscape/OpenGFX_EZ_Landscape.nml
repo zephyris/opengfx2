@@ -889,9 +889,6 @@ if (climate==CLIMATE_TEMPERATE) {
 	replace terrain_foundations_temperate_base (990, "../graphics/foundations/64/foundations_temperate_8bpp.png") {
 		template_foundations_base(0, 0, 1)
 	}
-	//alternative_sprites(terrain_foundations_temperate_base, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/foundations/128/foundations_temperate_8bpp.png") {
-	//	template_foundations_base(0, 0, 2)
-	//}
 	alternative_sprites(terrain_foundations_temperate_base, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_temperate_8bpp.png") {
 		template_foundations_base(0, 0, 4)
 	}
@@ -899,9 +896,6 @@ if (climate==CLIMATE_TEMPERATE) {
 	replacenew terrain_foundations_temperate_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_temperate_8bpp.png") {
 		template_foundations_slope_halftile(0, 82, 1)
 	}
-	//alternative_sprites(terrain_foundations_temperate_slope_halftile, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/foundations/128/foundations_temperate_8bpp.png") {
-	//	template_foundations_slope_halftile(0, 82, 2)
-	//}
 	alternative_sprites(terrain_foundations_temperate_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_temperate_8bpp.png") {
 		template_foundations_slope_halftile(0, 82, 4)
 	}
@@ -909,9 +903,6 @@ if (climate==CLIMATE_TEMPERATE) {
 	replace terrain_foundations_arctic_base (990, "../graphics/foundations/64/foundations_arctic_8bpp.png") {
 		template_foundations_base(0, 0, 1)
 	}
-	//alternative_sprites(terrain_foundations_arctic_base, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/foundations/128/foundations_arctic_8bpp.png") {
-	//	template_foundations_base(0, 0, 2)
-	//}
 	alternative_sprites(terrain_foundations_arctic_base, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_arctic_8bpp.png") {
 		template_foundations_base(0, 0, 4)
 	}
@@ -919,9 +910,6 @@ if (climate==CLIMATE_TEMPERATE) {
 	replacenew terrain_foundations_arctic_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_arctic_8bpp.png") {
 		template_foundations_slope_halftile(0, 82, 1)
 	}
-	//alternative_sprites(terrain_foundations_arctic_slope_halftile, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/foundations/128/foundations_arctic_8bpp.png") {
-	//	template_foundations_slope_halftile(0, 82, 2)
-	//}
 	alternative_sprites(terrain_foundations_arctic_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_arctic_8bpp.png") {
 		template_foundations_slope_halftile(0, 82, 4)
 	}
@@ -929,9 +917,6 @@ if (climate==CLIMATE_TEMPERATE) {
 	replace terrain_foundations_tropical_base (990, "../graphics/foundations/64/foundations_tropical_8bpp.png") {
 		template_foundations_base(0, 0, 1)
 	}
-	//alternative_sprites(terrain_foundations_tropical_base, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/foundations/128/foundations_tropical_8bpp.png") {
-	//	template_foundations_base(0, 0, 2)
-	//}
 	alternative_sprites(terrain_foundations_tropical_base, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_tropical_8bpp.png") {
 		template_foundations_base(0, 0, 4)
 	}
@@ -939,9 +924,6 @@ if (climate==CLIMATE_TEMPERATE) {
 	replacenew terrain_foundations_tropical_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_tropical_8bpp.png") {
 		template_foundations_slope_halftile(0, 82, 1)
 	}
-	//alternative_sprites(terrain_foundations_tropical_slope_halftile, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/foundations/128/foundations_tropical_8bpp.png") {
-	//	template_foundations_slope_halftile(0, 82, 2)
-	//}
 	alternative_sprites(terrain_foundations_tropical_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_tropical_8bpp.png") {
 		template_foundations_slope_halftile(0, 82, 4)
 	}
@@ -949,9 +931,6 @@ if (climate==CLIMATE_TEMPERATE) {
 	replace terrain_foundations_toyland_base (990, "../graphics/foundations/64/foundations_toyland_8bpp.png") {
 		template_foundations_base(0, 0, 1)
 	}
-	//alternative_sprites(terrain_foundations_toyland_base, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/foundations/128/foundations_toyland_8bpp.png") {
-	//	template_foundations_base(0, 0, 2)
-	//}
 	alternative_sprites(terrain_foundations_toyland_base, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_toyland_8bpp.png") {
 		template_foundations_base(0, 0, 4)
 	}
@@ -959,9 +938,6 @@ if (climate==CLIMATE_TEMPERATE) {
 	replacenew terrain_foundations_toyland_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_toyland_8bpp.png") {
 		template_foundations_slope_halftile(0, 82, 1)
 	}
-	//alternative_sprites(terrain_foundations_toyland_slope_halftile, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/foundations/128/foundations_toyland_8bpp.png") {
-	//	template_foundations_slope_halftile(0, 82, 2)
-	//}
 	alternative_sprites(terrain_foundations_toyland_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_toyland_8bpp.png") {
 		template_foundations_slope_halftile(0, 82, 4)
 	}
@@ -1170,6 +1146,16 @@ alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DE
 	template_waterfeature_flat(0, 0, 4)
 }
 
+spriteset (waterfeature_canal_toyland, "../graphics/infrastructure/64/pygen/canal_toyland_grass_8bpp.png") {
+	template_waterfeature_flat(0, 0, 1)
+}
+alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_8bpp.png") {
+	template_waterfeature_flat(0, 0, 2)
+}
+alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_toyland_grass_8bpp.png") {
+	template_waterfeature_flat(0, 0, 4)
+}
+
 switch (FEAT_CANALS, SELF, switch_waterfeature_canal_arctic_snowline, [
 	terrain_type
 ]) {
@@ -1192,6 +1178,7 @@ switch (FEAT_CANALS, SELF, switch_waterfeature_canal_climate, [
 	CLIMATE_TEMPERATE: waterfeature_canal_temperate;
 	CLIMATE_ARCTIC: switch_waterfeature_canal_arctic_snowline;
 	CLIMATE_TROPICAL: switch_waterfeature_canal_tropical_desert;
+	CLIMATE_TOYLAND: waterfeature_canal_toyland;
 	waterfeature_canal_temperate;
 }
 
@@ -1297,6 +1284,26 @@ alternative_sprites(waterfeature_river_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DE
 	template_waterfeature_slopes(0, 0, 4)
 }
 
+spriteset (waterfeature_river_toyland, "../graphics/infrastructure/64/pygen/river_toyland_grass_8bpp.png") {
+	template_waterfeature_slopes(0, 0, 1)
+}
+alternative_sprites(waterfeature_river_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_toyland_grass_8bpp.png") {
+	template_waterfeature_slopes(0, 0, 2)
+}
+alternative_sprites(waterfeature_river_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_toyland_grass_8bpp.png") {
+	template_waterfeature_slopes(0, 0, 4)
+}
+
+spriteset (waterfeature_river_toyland_shores, "../graphics/infrastructure/64/pygen/river_toyland_grass_shores_8bpp.png") {
+	template_waterfeature_slopes(0, 0, 1)
+}
+alternative_sprites(waterfeature_river_toyland_shores, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_toyland_grass_shores_8bpp.png") {
+	template_waterfeature_slopes(0, 0, 2)
+}
+alternative_sprites(waterfeature_river_toyland_shores, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_toyland_grass_shores_8bpp.png") {
+	template_waterfeature_slopes(0, 0, 4)
+}
+
 switch (FEAT_CANALS, SELF, switch_waterfeature_river_temperate_elevation, [
 	tile_height
 ]) {
@@ -1334,12 +1341,20 @@ switch (FEAT_CANALS, SELF, switch_waterfeature_river_tropical_elevation, [
 	switch_waterfeature_river_tropical_desert;
 }
 
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_toyland_elevation, [
+	tile_height
+]) {
+	0: waterfeature_river_toyland_shores;
+	waterfeature_river_toyland;
+}
+
 switch (FEAT_CANALS, SELF, switch_waterfeature_river_climate, [
 	climate
 ]) {
 	CLIMATE_TEMPERATE: switch_waterfeature_river_temperate_elevation;
 	CLIMATE_ARCTIC: switch_waterfeature_river_arctic_elevation;
 	CLIMATE_TROPICAL: switch_waterfeature_river_tropical_elevation;
+	CLIMATE_TOYLAND: switch_waterfeature_river_toyland_elevation;
 	switch_waterfeature_river_temperate_elevation;
 }
 
@@ -2187,6 +2202,44 @@ replacenew maglev_overlay_extra(SLOPED_RAILS, "../graphics/infrastructure/64/mag
 alternative_sprites(maglev_overlay_extra, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/maglev_bits_8bpp.png") {
 	template_railoverlay_extra(0, 0, 4)
 }
+
+//Tunnels
+//Templates
+template template_tunnels_general(x, y, z) {
+	[66*z+x*z,  66*z+y*z, 64*z, 64*z-1, -31*z, -33*z ]
+	[ 1*z+x*z,  66*z+y*z, 64*z, 64*z-1, -31*z, -63*z ]
+
+	[66*z+x*z, 131*z+y*z, 64*z, 64*z-1, -31*z, -33*z ]
+	[ 1*z+x*z, 131*z+y*z, 64*z, 64*z-1, -31*z, -63*z ]
+
+	[66*z+x*z, 196*z+y*z, 64*z, 64*z-1, -31*z, -33*z ]
+	[ 1*z+x*z, 196*z+y*z, 64*z, 64*z-1, -31*z, -63*z ]
+
+	[66*z+x*z,   1*z+y*z, 64*z, 64*z-1, -31*z, -33*z ]
+	[ 1*z+x*z,   1*z+y*z, 64*z, 64*z-1, -31*z, -63*z ]
+}
+
+//Rail
+replace rail_tunnel(2365, "../graphics/stations/general/64/pygen/tunnels_rail_temperate_grass_8bpp.png") {
+	template_tunnels_general(0, 0, 1)
+}
+//alternative_sprites(rail_tunnel, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/stations/general/128/pygen/tunnels_rail_temperate_grass_8bpp.png") {
+//	template_tunnels_general(0, 0, 2)
+//}
+//alternative_sprites(rail_tunnel, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_rail_temperate_grass_8bpp.png") {
+//	template_tunnels_general(0, 0, 4)
+//}
+
+//Road
+replace road_tunnel(2389, "../graphics/stations/general/64/pygen/tunnels_road_temperate_grass_8bpp.png") {
+	template_tunnels_general(0, 0, 1)
+}
+//alternative_sprites(rail_tunnel, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/stations/general/128/pygen/tunnels_road_temperate_grass_8bpp.png") {
+//	template_tunnels_general(0, 0, 2)
+//}
+//alternative_sprites(rail_tunnel, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_road_temperate_grass_8bpp.png") {
+//	template_tunnels_general(0, 0, 4)
+//}
 
 //Bridges
 //Templates

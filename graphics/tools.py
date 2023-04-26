@@ -109,6 +109,31 @@ def check_update_needed(input_file_list, output_file):
   print("  Skipped, output exists and is up-to-date")
   return False
 
+def color_to_alpha(input, r, g, b):
+  """
+  Makes any pixels equal to r, g, b in the input image transparent, while preserving alpha of other pixel values
+
+  :param input: Input image
+  :param r: Red value
+  :param g: Green value
+  :param b: Blue value
+  :return: Image with pixels equal to r, g, b now alpha zero
+  """
+  input = input.convert("RGBA")
+  # update alpha channel
+  ir, ig, ib, ia = input.split()
+  # update ia so pixels equal to r, g, b are also full transparent
+  width, height = input.size
+  for x in range(width):
+    for y in range(height):
+      pr, pg, pb, pa = input.getpixel((x, y))
+      if r == pr and g == pg and b == pb:
+        ia.putpixel((x, y), 0)
+  return Image.merge("RGBA", (ir, ig, ib, ia))
+
+def blue_to_alpha(input):
+  return color_to_alpha(input, 0, 0, 255)
+
 def paste_to_unscaled(input, ix, iy, iw, ih, output, ox, oy):
   output = paste_to(input, ix, iy, iw, ih, output, ox, oy, 1)
   return output
@@ -152,6 +177,36 @@ def alpha_to(input1, ix1, iy1, w, h, input2, ix2, iy2, scale):
   crop = Image.alpha_composite(crop2, crop1)
   output = paste_to(crop, 0, 0, w, h, input2, ix2, iy2, scale)
   return output
+
+def colour_to(input1, ix1, iy1, w, h, input2, ix2, iy2, scale, r, g, b):
+  """
+  Paste using a specific colour as transparent from a rectangle in the input image to a rectangle in the output image of the same size.
+
+  :param input: Input image.
+  :param ix: Rectangle x coordinate in input.
+  :param iy: Rectangle y coordinate in input.
+  :param iw: Rectangle width.
+  :param ih: Rectangle width.
+  :param input: Output image.
+  :param ix: Rectangle x coordinate in output.
+  :param iy: Rectangle y coordinate in output.
+  :param scale: Scale factor for coordinates.
+  :param r: red value for transparent.
+  :param g: green value for transparent.
+  :param b: blue value for transparent.
+  :return: Modified output image.
+  """
+  crop1 = input1.convert("RGBA").crop((ix1 * scale, iy1 * scale, (ix1 + w) * scale, (iy1 + h) * scale))  
+  crop2 = input2.convert("RGBA").crop((ix2 * scale, iy2 * scale, (ix2 + w) * scale, (iy2 + h) * scale))
+  # update alpha channel of crop 1
+  crop1 = color_to_alpha(crop1, r, g, b)
+  # alpha over with updated 
+  crop = Image.alpha_composite(crop2, crop1)
+  output = paste_to(crop, 0, 0, w, h, input2, ix2, iy2, scale)
+  return output 
+
+def blue_to(input1, ix1, iy1, w, h, input2, ix2, iy2, scale):
+  return colour_to(input1, ix1, iy1, w, h, input2, ix2, iy2, scale, 0, 0, 255)
 
 def mask_image(source, mask):
   """
