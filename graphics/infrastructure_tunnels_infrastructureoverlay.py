@@ -65,8 +65,11 @@ for terrain_key in terrain_list:
   for infrastructure_key in infrastructure_list:
     terrain_image_path = os.path.join("..", "..", "..", "terrain", str(tile_size), terrain_list[terrain_key])
     infrastructure_image_path = os.path.join("..", "..", "..", "infrastructure", str(tile_size), infrastructure_list[infrastructure_key]+"_overlayalpha.png")
-    name_overlay = os.path.join("pygen", infrastructure_list[infrastructure_key]+"tunnels_regions_32bpp.png")
-    name_overlayshading = infrastructure_list[infrastructure_key]+"tunnels_overlayshading.png"
+    if terrain_key == "arctic_snow":
+      name_overlay = os.path.join("pygen", infrastructure_list[infrastructure_key]+"tunnels_snow_regions_32bpp.png")
+    else:
+      name_overlay = os.path.join("pygen", infrastructure_list[infrastructure_key]+"tunnels_regions_32bpp.png")
+    name_overlayshading = infrastructure_list[infrastructure_key]+"tunnels_regions_overlayshading.png"
     output_normal_path = os.path.join("pygen", "tunnels_"+infrastructure_list[infrastructure_key]+"_"+terrain_key+"_32bpp.png")
     # Check if update needed
     if check_update_needed([terrain_image_path, infrastructure_image_path, name_overlay, name_overlayshading], output_normal_path):
@@ -75,10 +78,9 @@ for terrain_key in terrain_list:
       infrastructure_image = blue_to_alpha(Image.open(infrastructure_image_path))
       target_image = Image.new("RGBA", (output_width, output_height), (255, 255, 255, 255))
       for i in range(len(infrastructure_tile_positions)):
-        target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 0 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - terrain_tile_positions[i][3] + terrain_tile_voffs[i] + 1) * scale, scale)
-        target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 1 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - terrain_tile_positions[i][3] + terrain_tile_voffs[i] + 1) * scale, scale)
-        #target_image = alpha_to(infrastructure_image, infrastructure_tile_positions[i][0], infrastructure_tile_positions[i][1], infrastructure_tile_positions[i][2], infrastructure_tile_positions[i][3], target_image, 0 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - infrastructure_tile_positions[i][3] + 1) * scale, scale)
-        target_image = alpha_to(infrastructure_image, infrastructure_tile_positions[i][0], infrastructure_tile_positions[i][1], infrastructure_tile_positions[i][2], infrastructure_tile_positions[i][3], target_image, 1 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - infrastructure_tile_positions[i][3] + 1) * scale, scale)
+        target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 0 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - terrain_tile_positions[i][3] + terrain_tile_voffs[i]) * scale, scale)
+        target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 1 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - terrain_tile_positions[i][3] + terrain_tile_voffs[i]) * scale, scale)
+        target_image = alpha_to(infrastructure_image, infrastructure_tile_positions[i][0], infrastructure_tile_positions[i][1], infrastructure_tile_positions[i][2], infrastructure_tile_positions[i][3], target_image, 1 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - infrastructure_tile_positions[i][3]) * scale, scale)
         # Overlay each infrastructure set
         print("  "+infrastructure_key)
         # Overlay overlay_alpha
@@ -88,7 +90,7 @@ for terrain_key in terrain_list:
         # Overlay overlayshading, if it exists
         if os.path.isfile(name_overlayshading):
           print(name_overlayshading)
-          infrastructure_image = Image.open(name_overlayshading).convert("RGBA")
-          target_image = blend_overlay(target_image, infrastructure_image, 192/255)
+          overlay_image = Image.open(name_overlayshading).convert("RGBA")
+          target_image = blend_overlay(target_image, overlay_image, 1.0)
         # Save 32bpp image
         target_image.save(output_normal_path)
