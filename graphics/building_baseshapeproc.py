@@ -39,7 +39,7 @@ from random import randint
 import numpy, blend_modes # For overlay blending
 import glob, os, sys
 
-from tools import openttd_palettise, check_update_needed, openttd_palette_image, openttd_palette, openttd_palette_animated, openttd_palette_generalmask
+from tools import openttd_palettise, check_update_needed, openttd_palette_image, palette_image, openttd_palette, openttd_palette_animated, openttd_palette_generalmask
 
 if os.path.isdir("pygen") == False: os.mkdir("pygen")
 
