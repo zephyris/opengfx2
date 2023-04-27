@@ -84,11 +84,11 @@ for terrain_key in terrain_list:
         # Overlay overlay_alpha
         print(name_overlay)
         overlay_image = Image.open(name_overlay).convert("RGBA")
-        target_image = colour_to(overlay_image, 0, 0, output_width, output_height, target_image, 0, 0, scale, 252, 0, 255) # Warning magenta gets change to 252, 0, 255 by building_shapeproc
+        target_image = colour_to(overlay_image, 0, 0, output_width, output_height, target_image, 0, 0, scale, 252, 0, 255) # Warning magenta (255, 0, 255) gets change to 252, 0, 255 by building_shapeproc
         # Overlay overlayshading, if it exists
         if os.path.isfile(name_overlayshading):
           print(name_overlayshading)
           infrastructure_image = Image.open(name_overlayshading).convert("RGBA")
-          target_image = blend_overlay(target_image, infrastructure_image)
+          target_image = blend_overlay(target_image, infrastructure_image, 192/255)
         # Save 32bpp image
         target_image.save(output_normal_path)

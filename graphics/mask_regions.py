@@ -63,7 +63,7 @@ for image_index in range(len(source_suffices)):
         current_mask.putpalette(palette)
         current_mask = current_mask.convert("L")
         # define bounds
-        bounds = 1, 1, tile_size, region_mask_height
+        bounds = 1, 1, tile_size + 1, region_mask_height + 1
         print("   ", "Mask position  ", tile, bounds)
         # Fill background of sprite blue
         sprite_x = scale + tile * (tile_size + scale)
