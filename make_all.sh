@@ -1,3 +1,7 @@
+# Make all outputs
+# Processes image files from sources then builds the output grfs
+# If given an argument, copies the grfs to that path once complete
+
 if [ ! -d grf ]; then
   mkdir grf
 fi
@@ -24,7 +28,7 @@ nmlc OpenGFX_EZ_Landscape.nml
 mv OpenGFX_EZ_Landscape.grf ../grf
 cd ..
 
-if [ -z "$1" ]; then
+if [ ! -z "$1" ]; then
   cd grf
   cp *.grf "$1"
   cd ..
