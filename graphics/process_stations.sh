@@ -12,6 +12,7 @@ mask_regions.py pygen/monoraildepots monoraildepots_regionmask.png 1
 mask_regions.py pygen/maglevdepots maglevdepots_regionmask.png 1
 mask_regions.py pygen/roaddepots roaddepots_regionmask.png 1
 mask_regions.py pygen/tramdepots tramdepots_regionmask.png 1
+mask_regions.py pygen/shipdepots shipdepots_regionmask.png 1
 # mask regions of tunnels (ie. back wall and roadway from rest of tunnel/sloped tile)
 mask_regions.py pygen/railtunnels railtunnels_regionmask.png 1
 mask_regions.py pygen/railtunnels_snow railtunnels_regionmask.png 1

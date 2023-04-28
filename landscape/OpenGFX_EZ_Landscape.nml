@@ -213,12 +213,12 @@ template template_watertiles_full(x, y, z) {
 }
 
 template template_farms_fences(x, y, z) {
-	[   1*z+x*z, 1*z+y*z, 33*z, 21*z-1, -30*z,  11*z ]
-	[  49*z+x*z, 1*z+y*z, 33*z, 21*z-1,  -1*z,  11*z ]
-	[  97*z+x*z, 1*z+y*z, 33*z, 29*z-1, -29*z,   4*z ]
-	[ 145*z+x*z, 1*z+y*z, 33*z, 29*z-1,  -1*z,   4*z ]
-	[ 193*z+x*z, 1*z+y*z, 33*z, 13*z-1, -29*z,  19*z ]
-	[ 241*z+x*z, 1*z+y*z, 33*z, 13*z-1,  -1*z,  19*z ]
+	[  35*z+x*z, 1*z+y*z, 33*z, 22*z-1, -30*z,  10*z ]
+	[   1*z+x*z, 1*z+y*z, 33*z, 22*z-1,   0*z,  10*z ]
+	[ 171*z+x*z, 1*z+y*z, 33*z, 30*z-1, -30*z,   2*z ]
+	[ 137*z+x*z, 1*z+y*z, 33*z, 30*z-1,   0*z,   2*z ]
+	[ 103*z+x*z, 1*z+y*z, 33*z, 14*z-1, -30*z,  17*z ]
+	[  69*z+x*z, 1*z+y*z, 33*z, 14*z-1,   0*z,  17*z ]
 }
 
 //Universal
@@ -233,7 +233,7 @@ alternative_sprites(terrainspecial_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../
 	template_watertiles_single(0, 0, 4)
 }
 
-//Water tile
+//Water tile & bouy
 if (climate==CLIMATE_TOYLAND) {
 	replace terrain_water_toyland(4061, "../graphics/terrain/64/toyland_watertiles_8bpp.png") {
 		template_watertiles_single(0, 0, 1)
@@ -244,6 +244,15 @@ if (climate==CLIMATE_TOYLAND) {
 	alternative_sprites(terrain_water_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") {
 		template_watertiles_single(0, 0, 4)
 	}
+	//replace terrain_water_bouy_toyland(1004, "../graphics/terrain/64/universal_bouy_toyland_8bpp.png") {
+	//	template_watertiles_single(0, 0, 1)
+	//}
+	//alternative_sprites(terrain_water_bouy_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_bouy_toyland_8bpp.png") {
+	//	template_watertiles_single(0, 0, 2)
+	//}
+	//alternative_sprites(terrain_water_bouy_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_bouy_toyland_8bpp.png") {
+	//	template_watertiles_single(0, 0, 4)
+	//}
 } else {
 	replace terrain_water(4061, "../graphics/terrain/64/universal_watertiles_8bpp.png") {
 		template_watertiles_single(0, 0, 1)
@@ -254,6 +263,15 @@ if (climate==CLIMATE_TOYLAND) {
 	alternative_sprites(terrain_water, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") {
 		template_watertiles_single(0, 0, 4)
 	}
+	replace terrain_water_bouy(1004, "../graphics/terrain/64/universal_bouy_8bpp.png") {
+		template_watertiles_single(0, 0, 1)
+	}
+	//alternative_sprites(terrain_water_bouy, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_bouy_8bpp.png") {
+	//	template_watertiles_single(0, 0, 2)
+	//}
+	//alternative_sprites(terrain_water_bouy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_bouy_8bpp.png") {
+	//	template_watertiles_single(0, 0, 4)
+	//}
 }
 
 //Concrete
@@ -758,14 +776,14 @@ alternative_sprites(terrain_farmland_field, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, ".
 }
 
 //Farm fences (hedge 1)
-//replace terrain_farms_fences(4090, "../graphics/terrain_old/64/farm_fences_8bpp.png") {
-//	template_farms_fences(0, 0, 1)
-//	template_farms_fences(0, 29, 1)
-//	template_farms_fences(0, 58, 1)
-//	template_farms_fences(0, 87, 1)
-//	template_farms_fences(0, 116, 1)
-//	template_farms_fences(0, 145, 1)
-//}
+replace terrain_farms_fences(4090, "../graphics/terrain/64/farm_fences_8bpp.png") {
+	template_farms_fences(0, 0, 1)
+	template_farms_fences(0, 31, 1)
+	template_farms_fences(0, 62, 1)
+	template_farms_fences(0, 93, 1)
+	template_farms_fences(0, 124, 1)
+	template_farms_fences(0, 155, 1)
+}
 
 //Replace foundations
 //Templates

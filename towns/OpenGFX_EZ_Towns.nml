@@ -1420,18 +1420,31 @@ replace infrastructure_general_depot_maglev(1227, "../graphics/stations/general/
 }
 
 //Road depots
-//TODO: Fix offsets
 template template_road_depot(x, y, z) {
-	template_house_1x1_addoffs( 65,   0, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0,   0, z, 64,  30, -16)
-	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0,  65, z, 64, -30, -16)
-	template_house_1x1_addoffs(  0, 195, z, 64, -30, -16)
-	template_house_1x1_addoffs(  0, 130, z, 64,  30, -16)
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0,   0, z, 64,  30, -15)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0,  65, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0, 195, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0, 130, z, 64,  30, -15)
 }
 
 replace infrastructure_general_depot_road(1408, "../graphics/stations/general/64/pygen/roaddepots_regions_8bpp.png") {
 	template_road_depot(0, 0, 1)
+}
+
+//Ship depots
+template template_ship_depot(x, y, z) {
+	template_house_1x1_addoffs(  0,  65, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0,   0, z, 64,  30, -15)
+	template_house_1x1_addoffs(  0, 195, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0, 130, z, 64,  30, -15)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,   0)
+}
+
+replace infrastructure_general_depot_ship(4070, "../graphics/stations/general/64/pygen/shipdepots_regions_8bpp.png") {
+	template_ship_depot(0, 0, 1)
 }
 
 // Rail stations
