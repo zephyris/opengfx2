@@ -140,6 +140,24 @@ elif mode == "road_town":
   terrain_list = {
     "general_concrete": "general_concretetiles_32bpp.png"
   }
+if mode == "airport_modern":
+  # Remapping of tile positions
+  tile_positions = [
+    [1, 1, 64, 32]
+  ] * 25
+  # Infrastructure sprites to use
+  infrastructure_list = {
+    "airport_modern": "airport_modern"
+  }
+  # Terrain sprites to use
+  terrain_list = {
+    "arctic_grass": "arctic_groundtiles_32bpp.png",
+    "arctic_snow": "arctic_groundtiles_snow_32bpp.png",
+    "tropical_grass": "tropical_groundtiles_32bpp.png",
+    "tropical_desert": "tropical_groundtiles_desert_32bpp.png",
+    "temperate_grass": "temperate_groundtiles_32bpp.png",
+    "toyland_grass": "toyland_groundtiles_32bpp.png"
+  }
 
 # Output image properties
 output_width = (scale + (tile_size + scale) * len(tile_positions))
@@ -178,8 +196,8 @@ for terrain_key in terrain_list:
       output_image = target_image.copy()
       # Overlay overlay_alpha, if it exists
       if os.path.isfile(name_overlayalpha):
-        print(name_overlayalpha)
         infrastructure_image = Image.open(name_overlayalpha).convert("RGBA")
+        print(infrastructure_image.size)
         output_image = Image.alpha_composite(output_image, infrastructure_image)
       # Overlay additional overlay, if it exists
       if os.path.isfile(name_overlayalpha2):

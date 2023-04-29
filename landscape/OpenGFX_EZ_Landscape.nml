@@ -3072,3 +3072,32 @@ replace maglev_bridge_tubular(2587, "../graphics/bridges/64/pygen/tubular_maglev
 //alternative_sprites(maglev_bridge_tubular, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_maglev_8bpp.png") {
 //	template_girder(0, 0, 4)
 //}
+
+template template_airport_modern_groundtiles(x, y, z) {
+	template_watertiles_single(0, 0, z)
+	template_watertiles_single(65, 0, z)
+	template_watertiles_single(455, 0, z)
+	template_watertiles_single(520, 0, z)
+	template_watertiles_single(585, 0, z)
+	template_watertiles_single(650, 0, z)
+	template_watertiles_single(715, 0, z)
+	template_watertiles_single(780, 0, z)
+	template_watertiles_single(845, 0, z)
+	template_watertiles_single(910, 0, z)
+	template_watertiles_single(975, 0, z)
+	template_watertiles_single(130, 0, z)
+	template_watertiles_single(195, 0, z)
+	template_watertiles_single(260, 0, z)
+	template_watertiles_single(325, 0, z)
+	template_watertiles_single(390, 0, z)
+}
+
+replace airport_modern_groundtiles(2634, "../graphics/infrastructure/64/pygen/airport_modern_temperate_grass_8bpp.png") {
+	template_airport_modern_groundtiles(0, 0, 1)
+}
+//alternative_sprites(airport_modern_groundtiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/bridges/128/pygen/airport_modern_temperate_grass_8bpp.png") {
+//	template_airport_modern_groundtiles(0, 0, 2)
+//}
+//alternative_sprites(airport_modern_groundtiles, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/airport_modern_temperate_grass_8bpp.png") {
+//	template_airport_modern_groundtiles(0, 0, 4)
+//}
