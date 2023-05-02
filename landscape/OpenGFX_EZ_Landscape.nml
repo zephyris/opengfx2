@@ -1420,6 +1420,16 @@ template template_tree_narrow(x, y, z) {
 	[240*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
 }
 
+template template_tree_bordered(x, y, z) {
+	[  1*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 37*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 73*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[109*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[145*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[181*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[217*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+}
+
 //Temperate
 replace trees_temperate_01(1576, "../graphics/trees/64/temperate_tree_01_leaf_8bpp.png") {
 	template_tree_wide(0, 0, 1)
@@ -1708,6 +1718,18 @@ replace trees_tropical_06(1940, "../graphics/trees/64/tropical_tree_06_leaf_8bpp
 }
 alternative_sprites(trees_tropical_06, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/tropical_tree_06_leaf_8bpp.png") {
 	template_tree_wide(0, 0, 4)
+}
+
+replace trees_toyland(1947, "../graphics/trees/64/toyland_trees_8bpp.png") {
+	template_tree_bordered(0,   0, 1)
+	template_tree_bordered(0,  81, 1)
+	template_tree_bordered(0, 162, 1)
+	template_tree_bordered(0, 243, 1)
+	template_tree_bordered(0, 324, 1)
+	template_tree_bordered(0, 405, 1)
+	template_tree_bordered(0, 486, 1)
+	template_tree_bordered(0, 567, 1)
+	template_tree_bordered(0, 648, 1)
 }
 
 //Replace infrastructure tiles
