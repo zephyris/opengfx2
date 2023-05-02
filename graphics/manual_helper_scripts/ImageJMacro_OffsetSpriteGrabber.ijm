@@ -17,8 +17,8 @@
 //FX, vehicle, helicopter rotor: 3901 4
 //FX, bubble factory, bubble: 4748 15
 
-start=805;
-number=184;
+start=2055;
+number=6;
 name="ogfx1_base";
 //name="trg1r";
 
@@ -69,7 +69,9 @@ for (i=start; i<start+number; i++) {
 			selectImage(cid);
 			close();
 		}
+		setBatchMode(true);
 		open(path+substring(data[1], lengthOf("sprites/"), lengthOf(data[1])));
+		setBatchMode(false);
 		cid=getImageID();
 		cimage=data[1];
 	}
@@ -77,7 +79,9 @@ for (i=start; i<start+number; i++) {
 	makeRectangle(data[3], data[4], data[5], data[6]);
 	run("Copy");
 	if (i==start) {
-		run("Duplicate...", "t");
+		setBatchMode(false);
+		run("Duplicate...", ""+name+"_"+start+""+(start+number-1));
+		setBatchMode(true);
 		run("Copy");
 		oid=getImageID();
 		run("Canvas Size...", "width="+width+" height="+height+" position=Center");
