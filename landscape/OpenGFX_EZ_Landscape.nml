@@ -1847,8 +1847,8 @@ template template_rail_fences(x, y, z) {
 }
 
 template template_road_reconstruction(x, y, z) {
-	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
 	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
 	[ 131*z+x*z, 1*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
 	[ 151*z+x*z, 1*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
 }
