@@ -1,0 +1,11 @@
+// equiv. sprite 4836 wrt to sprite base (if one wants to use actionA on these)
+// letters E and D are part of the OpenTTD GUI sprites and defined there
+base_graphics spr43(  43, "../graphics/icons/1/title_letters_8bpp.png") { [   0,   40,  34,  41,   0,   0] } // Bigger
+base_graphics spr44(  44, "../graphics/icons/1/title_letters_8bpp.png") {    [  34,    0,  26,  33,   0,   0] }
+base_graphics spr45(  45, "../graphics/icons/1/title_letters_8bpp.png") {    [  66,    0,  30,  33,   0,   0] }
+base_graphics spr46(  46, "../graphics/icons/1/title_letters_8bpp.png") {    [  102,    0,  24,  33,   0,   7] } // with offset
+base_graphics spr47(  47, "../graphics/icons/1/title_letters_8bpp.png") {    [ 132,    0,  27,  33,   0,   7] } // with offset
+base_graphics spr48(  48, "../graphics/icons/1/title_letters_8bpp.png") {    [ 165,    0,  25,  33,   0,   7] } // with offset
+base_graphics spr49(  49, "../graphics/icons/1/title_letters_8bpp.png") { [ 197,   40,  79,  41,   0,   0] } // Bigger
+base_graphics spr50(  50, "../graphics/icons/1/title_letters_8bpp.png") {    [ 228,    0,  30,  33,   0,   0] }
+base_graphics spr51(  51, "../graphics/icons/1/title_letters_8bpp.png") {    [ 264,    0,  26,  33,   0,   0] }

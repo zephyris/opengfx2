@@ -10,8 +10,8 @@ files = [
   {"type": "arctic", "name": "ogfx2c_arctic"},
   {"type": "tropical", "name": "ogfx2h_tropical"},
   {"type": "toyland", "name": "ogfx2t_toyland"},
-  {"type": "logos", "name": "ogfxi_logos", "md5": "53030590b9ff87b4cff119556d301d2c"}, 
-  {"type": "extra", "name": "ogfxe_extra", "md5": "535f24c86cf7d77204f5a883e135c085"}
+  {"type": "logos", "name": "ogfx2i_logos"}, 
+  {"type": "extra", "name": "ogfx2e_extra"}
 ]
 
 with open("opengfx2.obg", "w") as obg:

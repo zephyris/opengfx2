@@ -26,4 +26,4 @@ with open(sys.argv[1]+".nml", "w") as nml:
           include_text = include.read()
           nml.write(include_text)
       else:
-        nml.write(line)
+        nml.write(line + "\n")

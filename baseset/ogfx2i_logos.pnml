@@ -22,7 +22,7 @@ base_graphics spr10( 10, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0
 base_graphics spr41( 41, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
 base_graphics spr42( 42, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
 
-#include "sprites/logos/logos-0043-intro-letters.pnml"
+#include "nml/logos/logos-0043-intro-letters.pnml"
 #include "sprites/logos/logos-0052-original-map-generator.pnml"
 #include "sprites/logos/logos-0089-gui-clima.pnml"
 
