@@ -1678,6 +1678,11 @@ alternative_sprites(trees_arctic_08S, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../grap
 }
 
 //Tropical
+replace trees_tropicalspecial_agave(1849, "../graphics/trees/64/tropical_specialtrees_8bpp.png") {
+	template_tree_bordered(0,   0, 1)
+	template_tree_bordered(0,  81, 1)
+}
+
 replace trees_tropical_01(1842, "../graphics/trees/64/tropical_tree_01_leaf_8bpp.png") {
 	template_tree_wide(0, 0, 1)
 }
@@ -1697,6 +1702,16 @@ replace trees_tropical_03(1870, "../graphics/trees/64/tropical_tree_03_leaf_8bpp
 }
 alternative_sprites(trees_tropical_03, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/tropical_tree_03_leaf_8bpp.png") {
 	template_tree_wide(0, 0, 4)
+}
+
+replace trees_tropicalspecial_palmcactus(1884, "../graphics/trees/64/tropical_specialtrees_8bpp.png") {
+	template_tree_bordered(0, 162, 1)
+	template_tree_bordered(0, 243, 1)
+	template_tree_bordered(0, 324, 1)
+	template_tree_bordered(0, 405, 1)
+	template_tree_bordered(0, 486, 1)
+	template_tree_bordered(0, 567, 1)
+	template_tree_bordered(0, 648, 1)
 }
 
 replace trees_tropical_04(1877, "../graphics/trees/64/tropical_tree_04_leaf_8bpp.png") {
@@ -1831,6 +1846,13 @@ template template_rail_fences(x, y, z) {
 	[ 240*z+x*z, 1*z+y*z, 33*z, 30*z-1,   1*z, -14*z ]
 }
 
+template template_road_reconstruction(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 131*z+x*z, 1*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
+	[ 151*z+x*z, 1*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
+}
+
 //Universal
 //Town roads
 replace roads_town(1313, "../graphics/infrastructure/64/pygen/road_general_concrete_8bpp.png") {
@@ -1920,6 +1942,10 @@ if (climate==CLIMATE_TEMPERATE) {
 	alternative_sprites(roads_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_tropical_desert_8bpp.png") {
 		template_roadtiles(0, 0, 4)
 	}
+}
+
+replace roads_reconstruction(1414, "../graphics/infrastructure/64/road_reconstruction_8bpp.png") {
+	template_road_reconstruction(0, 0, 1)
 }
 
 //Climate specific rail
