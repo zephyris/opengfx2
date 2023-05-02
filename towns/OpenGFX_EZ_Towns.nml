@@ -1548,10 +1548,62 @@ replace infrastructure_general_modernairporttransmitter(2601, "../graphics/stati
 	template_airporttransmitter(0, 0, 1)
 }
 
+//Heliport
 template template_heliport(x, y, z) {
 	template_house_1x1_addoffs(0, 0, z, 96, 0, 0)
 }
 
 replace infrastructure_general_heliport(2633, "../graphics/stations/general/64/pygen/heliport_combo_8bpp.png") {
 	template_heliport(0, 0, 1)
+}
+
+//Docks and locks
+template template_docks(x, y, z) {
+	template_house_1x1_addoffs( 0, 195, z, 64, -7, -5)
+	template_house_1x1_addoffs( 0,   0, z, 64,  7, -5)
+	template_house_1x1_addoffs( 0,  65, z, 64, -7, -5)
+	template_house_1x1_addoffs( 0, 130, z, 64,  7, -5)
+	template_house_1x1_addoffs(65,  65, z, 64, -7, -5)
+	template_house_1x1_addoffs(65,   0, z, 64,  7, -5)
+}
+
+replace infrastructure_general_docks(2727, "../graphics/stations/general/64/pygen/docksandlocks_8bpp.png") {
+	template_docks(0, 0, 1)
+}
+
+template template_locks(x, y, z) {
+	template_house_1x1_addoffs( 325, 130, z, 64,  0,  0)
+	template_house_1x1_addoffs( 325,  65, z, 64,  0,  0)
+	template_house_1x1_addoffs( 325, 195, z, 64,  0,  0)
+	template_house_1x1_addoffs( 325,   0, z, 64,  0,  0)
+	template_house_1x1_addoffs( 260, 130, z, 64, 32,-15)
+	template_house_1x1_addoffs( 260,  65, z, 64,-32,-15)
+	template_house_1x1_addoffs( 260, 195, z, 64,-32,-15)
+	template_house_1x1_addoffs( 260,   0, z, 64, 32,-15)
+	template_house_1x1_addoffs( 455, 130, z, 64,  0,  0)
+	template_house_1x1_addoffs( 455,  65, z, 64,  0,  0)
+	template_house_1x1_addoffs( 455, 195, z, 64,  0,  0)
+	template_house_1x1_addoffs( 455,   0, z, 64,  0,  0)
+	template_house_1x1_addoffs( 390, 130, z, 64, 32,-15)
+	template_house_1x1_addoffs( 390,  65, z, 64,-32,-15)
+	template_house_1x1_addoffs( 390, 195, z, 64,-32,-15)
+	template_house_1x1_addoffs( 390,   0, z, 64, 32,-15)
+	template_house_1x1_addoffs( 195, 130, z, 64,  0,  0)
+	template_house_1x1_addoffs( 195,  65, z, 64,  0,  0)
+	template_house_1x1_addoffs( 195, 195, z, 64,  0,  0)
+	template_house_1x1_addoffs( 195,   0, z, 64,  0,  0)
+	template_house_1x1_addoffs( 130, 130, z, 64, 32,-15)
+	template_house_1x1_addoffs( 130,  65, z, 64,-32,-15)
+	template_house_1x1_addoffs( 130, 195, z, 64,-32,-15)
+	template_house_1x1_addoffs( 130,   0, z, 64, 32,-15)
+}
+
+spriteset (waterfeature_locks_general, "../graphics/stations/general/64/pygen/docksandlocks_8bpp.png") {
+	template_locks(0, 0, 1)
+}
+
+item(FEAT_CANALS, waterfeature_locks, WF_LOCKS) {
+	graphics {
+		default: waterfeature_locks_general;
+	}
 }
