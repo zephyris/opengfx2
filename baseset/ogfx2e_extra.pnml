@@ -1,0 +1,43 @@
+#include "sprites/templates/sprite_templates.pnml"
+#include "sprites/templates/tmpl_trains.nml"
+
+#include "nml/extra/extra-header.pnml"
+#include "nml/templates/zoom-specific.pnml"
+
+#include "nml/extra/extra-2ccmap.pnml"
+#include "sprites/extra/extra-aqueduct.pnml"
+#include "sprites/extra/extra-canals.pnml"
+#include "nml/extra/extra-chars.pnml"
+#include "sprites/extra/extra-erails.pnml"
+#include "sprites/extra/extra-rail-tunnels.pnml"
+#include "nml/extra/extra-foundations.pnml"
+#include "sprites/extra/extra-oneway.pnml"
+#include "sprites/extra/extra-road-stops.pnml"
+#include "sprites/extra/extra-shores.pnml"
+#include "sprites/extra/extra-signals.pnml"
+#include "sprites/extra/extra-sloped-tracks.pnml"
+#include "sprites/extra/extra-tram-tracks.pnml"
+
+#include "sprites/extra/extra-openttd-airport.pnml"
+#include "sprites/extra/extra-openttd-autorail.pnml"
+#include "sprites/extra/extra-openttd-flags.pnml"
+#include "sprites/extra/extra-openttd-gui.pnml"
+#include "sprites/extra/extra-openttd-airport-preview.pnml"
+#include "sprites/extra/extra-openttd-recolour.pnml"
+
+#include "sprites/extra/extra-plus-canals.pnml"
+#include "sprites/extra/extra-plus-locks.pnml"
+#include "sprites/extra/extra-plus-rivers.pnml"
+
+if (climate == CLIMATE_ARCTIC) {
+#include "sprites/extra/extra-plus-arctic-rail-vehicles.pnml"
+}
+
+if (climate == CLIMATE_TROPICAL) {
+#include "sprites/extra/extra-plus-tropic-rail-vehicles.pnml"
+}
+
+if (climate == CLIMATE_TOYLAND) {
+#include "sprites/extra/extra-plus-toyland-infrastructure.pnml"
+}
+

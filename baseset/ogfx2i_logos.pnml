@@ -1,0 +1,35 @@
+#include "sprites/templates/sprite_templates.pnml"
+#include "sprites/templates/tmpl_trains.nml"
+
+// 0-10 EMPTY
+base_graphics spr0(  0, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr1(  1, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr2(  2, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr3(  3, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr4(  4, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr5(  5, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr6(  6, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr7(  7, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr8(  8, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr9(  9, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr10( 10, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+
+#include "sprites/logos/logos-0011-highscore.pnml"
+#include "sprites/logos/logos-0021-newspaper-2051.pnml"
+#include "sprites/logos/logos-0031-tycoon-of-century.pnml"
+
+// 41-42 EMPTY
+base_graphics spr41( 41, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr42( 42, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+
+#include "sprites/logos/logos-0043-intro-letters.pnml"
+#include "sprites/logos/logos-0052-original-map-generator.pnml"
+#include "sprites/logos/logos-0089-gui-clima.pnml"
+
+// 97-102 EMPTY
+base_graphics spr97( 97, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr98( 98, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr99( 99, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr100(100, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr101(101, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }
+base_graphics spr102(102, "sprites/png/miscellaneous/empty.png") { [0, 0, 1, 1, 0, 0] }

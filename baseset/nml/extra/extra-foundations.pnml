@@ -1,0 +1,19 @@
+if (climate == CLIMATE_TEMPERATE) {
+	replacenew terrain_foundations_temperate_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_temperate_8bpp.png") { template_foundations_slope_halftile(0, 0, 1) }
+	alternative_sprites(terrain_foundations_temperate_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_temperate_8bpp.png") { template_foundations_slope_halftile(0, 0, 4) }
+}
+
+if (climate == CLIMATE_ARCTIC) {
+	replacenew terrain_foundations_arctic_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_arctic_8bpp.png") { template_foundations_slope_halftile(0, 0, 1) }
+	alternative_sprites(terrain_foundations_arctic_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_arctic_8bpp.png") { template_foundations_slope_halftile(0, 0, 4) }
+}
+
+if (climate == CLIMATE_TROPICAL) {
+	replacenew terrain_foundations_tropical_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_tropical_8bpp.png") { template_foundations_slope_halftile(0, 0, 1) }
+	alternative_sprites(terrain_foundations_tropical_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_tropical_8bpp.png") { template_foundations_slope_halftile(0, 0, 4) }
+}
+
+if (climate == CLIMATE_TOYLAND) {
+	replacenew terrain_foundations_toyland_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_tropical_8bpp.png") { template_foundations_slope_halftile(0, 0, 1) }
+	alternative_sprites(terrain_foundations_toyland_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_tropical_8bpp.png") { template_foundations_slope_halftile(0, 0, 4) }
+}

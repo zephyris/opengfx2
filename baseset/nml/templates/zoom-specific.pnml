@@ -1,0 +1,155 @@
+// x: X offset
+// y: Y offset
+// w: Width
+// h: Height
+// ox: X alignment offset
+// oy: Y alignment offset
+// z: Zoom factor
+// f: Frame number
+
+// Template for simple zoom-sensitive sprite
+template template_general(x, y, w, h, ox, oy, z) {
+	[ x*z, y*z, w*z, h*z, ox*z, oy*z]
+}
+
+// Templates for handling general sprite sheets with 1px borders
+
+// Template for a matrix of standard size sprites
+template template_sprite_matrix(w, h, ox, oy, xindex, yindex, z) {
+	[(1+xindex*(1+w))*z, (1+yindex*(1+h))*z, w*z, h*z, ox*z, oy*z]
+}
+template template_sprite_matrix_nocrop(w, h, ox, oy, xindex, yindex, z) {
+	[(1+xindex*(1+w))*z, (1+yindex*(1+h))*z, w*z, h*z, ox*z, oy*z, NOCROP]
+}
+
+//Template for an (0, 0) animation frame series or similar
+template template_animation_frame(z, f, w, h, ox, oy) {
+	[1*z+f*(1+w)*z, 1*z, w*z, h*z, ox*z, oy*z]
+}
+
+
+// Set-specific templates
+
+// Ground tiles
+// Single flat tile
+template template_flattile_single(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+}
+
+// Foundations
+// Base
+template template_foundations_base(x, y, z) {
+	[   1*z+x*z,  1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z,  1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z,  1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z,  1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z,  1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z,  1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z,  1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z,  1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+}
+
+// Extended
+template template_foundations_slope_halftile(x, y, z) {
+	[   1*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z,   1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z,   1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z,  42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z,  42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z,  42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z,  42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z,  42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z,  42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z,  42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z,  42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z,  83*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z,  83*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z,  83*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	
+	[ 481*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 124*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 124*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 124*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 165*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 165*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 165*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 165*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 165*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 165*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 165*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 165*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 206*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 206*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 206*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 206*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	
+	[ 321*z+x*z, 206*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 206*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 206*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 206*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 247*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 247*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 288*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 288*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 288*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 288*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 288*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 288*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 288*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 288*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 329*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+
+	[ 161*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 329*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 329*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 370*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 370*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	
+	[   1*z+x*z, 411*z+y*z, 64*z, 41*z-1, -15*z, -17*z, NOCROP ]
+	[  81*z+x*z, 411*z+y*z, 64*z, 34*z-1, -31*z, -25*z, NOCROP ]
+	[ 161*z+x*z, 411*z+y*z, 64*z, 41*z-1, -47*z, -17*z, NOCROP ]
+	[ 241*z+x*z, 411*z+y*z, 64*z, 34*z-1, -31*z,  -9*z, NOCROP ]
+	[ 321*z+x*z, 411*z+y*z, 64*z, 41*z-1, -15*z, -17*z, NOCROP ]
+	[ 401*z+x*z, 411*z+y*z, 64*z, 34*z-1, -31*z, -25*z, NOCROP ]
+	[ 481*z+x*z, 411*z+y*z, 64*z, 41*z-1, -47*z, -17*z, NOCROP ]
+	[ 561*z+x*z, 411*z+y*z, 64*z, 34*z-1, -31*z,  -9*z, NOCROP ]
+	
+	[   1*z+x*z, 452*z+y*z, 64*z, 41*z-1, -15*z, -17*z, NOCROP ]
+	[  81*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z, -25*z, NOCROP ]
+	[ 161*z+x*z, 452*z+y*z, 64*z, 41*z-1, -47*z, -17*z, NOCROP ]
+	[ 241*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z,  -9*z, NOCROP ]
+	[ 321*z+x*z, 452*z+y*z, 64*z, 41*z-1, -15*z, -17*z, NOCROP ]
+	[ 401*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z, -25*z, NOCROP ]
+	[ 481*z+x*z, 452*z+y*z, 64*z, 41*z-1, -47*z, -17*z, NOCROP ]
+	[ 561*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z,  -9*z, NOCROP ]
+}

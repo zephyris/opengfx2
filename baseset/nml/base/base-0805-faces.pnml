@@ -1,0 +1,275 @@
+//805-911 white manager faces
+//805-806 top of head
+base_graphics spr805( 805, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 0, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 0, 1)
+}
+//807-810 bottom of head
+base_graphics spr807 ( 807, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 1, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 1, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 1, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 1, 1)
+}
+//811-838 eyes
+base_graphics spr811 ( 811, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 6, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 7, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 8, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 9, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 10, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 11, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 12, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 13, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 14, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 15, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 16, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 17, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 18, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 19, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 20, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 21, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 22, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 23, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 24, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 25, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 26, 2, 1)
+	template_sprite_matrix(92, 119, 0, 0, 27, 2, 1)
+}
+//839-840 glasses
+base_graphics spr839 ( 839, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 3, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 3, 1)
+}
+//841-848 noses
+base_graphics spr841 ( 841, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 4, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 4, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 4, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 4, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 4, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 4, 1)
+	template_sprite_matrix(92, 119, 0, 0, 6, 4, 1)
+	template_sprite_matrix(92, 119, 0, 0, 7, 4, 1)
+}
+//849-870 mouth
+base_graphics spr849 ( 849, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 6, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 7, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 8, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 9, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 10, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 11, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 12, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 13, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 14, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 15, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 16, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 17, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 18, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 19, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 20, 5, 1)
+	template_sprite_matrix(92, 119, 0, 0, 21, 5, 1)
+}
+//871-873 moustaches
+base_graphics spr871 ( 871, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 6, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 6, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 6, 1)
+}
+//874 background
+base_graphics spr874 ( 874, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 7, 1)
+}
+//875-877 coats
+base_graphics spr875 ( 875, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 8, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 8, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 8, 1)
+}
+//878-881 shirts
+base_graphics spr878 ( 878, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 9, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 9, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 9, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 9, 1)
+}
+//882-887 ties
+base_graphics spr882 ( 882, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 10, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 10, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 10, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 10, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 10, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 10, 1)
+}
+//888-890 blouses
+base_graphics spr888 ( 888, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 11, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 11, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 11, 1)
+}
+//891-894 t-shirts
+base_graphics spr891 ( 891, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 12, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 12, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 12, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 12, 1)
+}
+//895-897 earrings
+base_graphics spr895 ( 895, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 13, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 13, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 13, 1)
+}
+//898-911 hair
+base_graphics spr898 ( 898, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 6, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 7, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 8, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 9, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 10, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 11, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 12, 14, 1)
+	template_sprite_matrix(92, 119, 0, 0, 13, 14, 1)
+}
+
+//912-989 black manager faces
+//912 top of head
+base_graphics spr912 ( 912, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 15, 1)
+}
+//913-914 bottom of head
+base_graphics spr913 ( 913, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 16, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 16, 1)
+}
+//915-918 nose
+base_graphics spr915 ( 915, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 17, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 17, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 17, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 17, 1)
+}
+//919-921 moustache
+base_graphics spr919 ( 919, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 18, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 18, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 18, 1)
+}
+//922-932 eyes
+base_graphics spr922 ( 922, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 6, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 7, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 8, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 9, 19, 1)
+	template_sprite_matrix(92, 119, 0, 0, 10, 19, 1)
+}
+//933-941 mouth
+base_graphics spr933 ( 933, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 6, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 7, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 8, 20, 1)
+}
+//942-943 glasses
+base_graphics spr942 ( 942, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 20, 1)
+}
+//944 top of head
+base_graphics spr944 ( 944, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 21, 1)
+}
+//945-946 bottom of head
+base_graphics spr945 ( 945, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 22, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 23, 1)
+}
+//947-951 nose
+base_graphics spr947 ( 947, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 24, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 24, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 24, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 24, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 24, 1)
+}
+//952-967 eyes
+base_graphics spr952 ( 952, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 6, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 7, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 8, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 9, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 10, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 11, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 12, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 13, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 14, 25, 1)
+	template_sprite_matrix(92, 119, 0, 0, 15, 25, 1)
+}
+//968-976 mouth
+base_graphics spr968 ( 968, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 26, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 26, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 26, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 26, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 26, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 26, 1)
+	template_sprite_matrix(92, 119, 0, 0, 6, 26, 1)
+	template_sprite_matrix(92, 119, 0, 0, 7, 26, 1)
+	template_sprite_matrix(92, 119, 0, 0, 8, 26, 1)
+}
+//977-979 earrings
+base_graphics spr977 ( 977, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 27, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 27, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 27, 1)
+}
+//980-989 mouth
+base_graphics spr980 ( 980, "../graphics/icons/1/manager_faces_8bpp.png") {
+	template_sprite_matrix(92, 119, 0, 0, 0, 28, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 28, 1)
+	template_sprite_matrix(92, 119, 0, 0, 2, 28, 1)
+	template_sprite_matrix(92, 119, 0, 0, 3, 28, 1)
+	template_sprite_matrix(92, 119, 0, 0, 4, 28, 1)
+	template_sprite_matrix(92, 119, 0, 0, 5, 28, 1)
+	template_sprite_matrix(92, 119, 0, 0, 6, 28, 1)
+	template_sprite_matrix(92, 119, 0, 0, 7, 28, 1)
+	template_sprite_matrix(92, 119, 0, 0, 8, 28, 1)
+	template_sprite_matrix(92, 119, 0, 0, 9, 28, 1)
+}

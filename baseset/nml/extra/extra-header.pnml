@@ -1,0 +1,17 @@
+grf {
+	grfid: "\FFOT\02";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	version: 0;
+	min_compatible_version: 878;
+}
+
+if (ttd_platform == PLATFORM_OPENTTD) {
+	if (openttd_version < version_openttd(1, 2, 0, 23667)) {
+		error(FATAL, REQUIRES_OPENTTD, "1.2.0");
+	}
+}
+
+if (ttd_platform != PLATFORM_OPENTTD) {
+	error(FATAL, REQUIRES_OPENTTD, "1.2.0");
+}
