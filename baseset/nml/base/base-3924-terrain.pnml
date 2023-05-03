@@ -1,5 +1,3 @@
-
-
 // bare land (0% grassy) 3924 - 3942
 base_graphics spr3924(3924, "../graphics/terrain/64/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 144, 1) }
 alternative_sprites(spr3924, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 144, 2) }

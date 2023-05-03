@@ -30,6 +30,7 @@ building_baseshapeproc.py 1
 building_base_flatten.py churches 1
 building_base_flatten.py houses 1
 building_base_flatten.py flats 1
+building_base_flatten.py bungalow 1
 building_base_flatten.py 1x2_tallofficeblock 1
 mask_tiles.py pygen/1x2_tallofficeblock_combo 1x2_tallofficeblock_tilemask.png 1
 building_base_flatten.py shantyhouses 1

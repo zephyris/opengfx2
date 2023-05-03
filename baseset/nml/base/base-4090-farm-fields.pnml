@@ -1,0 +1,44 @@
+//4090-4125 farm fences
+base_graphics spr4090(4090, "../graphics/terrain/64/farm_fences_8bpp.png") {
+	template_farms_fences(0, 0, 1)
+	template_farms_fences(0, 31, 1)
+	template_farms_fences(0, 62, 1)
+	template_farms_fences(0, 93, 1)
+	template_farms_fences(0, 124, 1)
+	template_farms_fences(0, 155, 1)
+}
+
+//4126-4296 farm field tiles
+base_graphics spr4126(4126, "../graphics/terrain/64/farm_groundtiles_8bpp.png") {
+	template_groundtiles(0, 0, 1)
+	template_groundtiles(0, 49, 1)
+	template_groundtiles(0, 98, 1)
+	template_groundtiles(0, 147, 1)
+	template_groundtiles(0, 196, 1)
+	template_groundtiles(0, 245, 1)
+	template_groundtiles(0, 294, 1)
+	template_groundtiles(0, 343, 1)
+	template_groundtiles(0, 392, 1)
+}
+alternative_sprites(spr4126, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/farm_groundtiles_8bpp.png") {
+	template_groundtiles(0, 0, 2)
+	template_groundtiles(0, 49, 2)
+	template_groundtiles(0, 98, 2)
+	template_groundtiles(0, 147, 2)
+	template_groundtiles(0, 196, 2)
+	template_groundtiles(0, 245, 2)
+	template_groundtiles(0, 294, 2)
+	template_groundtiles(0, 343, 2)
+	template_groundtiles(0, 392, 2)
+}
+alternative_sprites(spr4126, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/farm_groundtiles_8bpp.png") {
+	template_groundtiles(0, 0, 4)
+	template_groundtiles(0, 49, 4)
+	template_groundtiles(0, 98, 4)
+	template_groundtiles(0, 147, 4)
+	template_groundtiles(0, 196, 4)
+	template_groundtiles(0, 245, 4)
+	template_groundtiles(0, 294, 4)
+	template_groundtiles(0, 343, 4)
+	template_groundtiles(0, 392, 4)
+}

@@ -34,6 +34,45 @@ template template_house_1x1_addoffs(x, y, z, h, ox, oy) {
 	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2)]
 }
 
+//TODO: Fix tile masking and check behaviour at higher zoom levels
+//Template for 2x2 house, 4 sprite layout
+template template_house_2x2_4sprite(x, y, z, h) {
+	template_house_1x1(x, y, 1, h) //Top
+	template_house_1x1(x + 65, y, 1, h) //Right
+	template_house_1x1(x + 130, y, 1, h,) //Left
+	template_house_1x1(x + 195, y, 1, h) //Bottom
+}
+//Template for 2x2 house, 7 sprite layout
+template template_house_2x2_7sprite(x, y, z, h) {
+	template_house_1x1(x, y, 1, h) //Top ground tile
+	template_house_1x1_addoffs(x + 65, y, 1, h, 0, -16) //Top upper extension
+	template_house_1x1(x + 130, y, 1, h) //Right ground tile
+	template_house_1x1_addoffs(x + 195, y, 1, h, 0, -16) //Right upper extension
+	template_house_1x1(x + 260, y, 1, h,) //Left ground tile
+	template_house_1x1_addoffs(x + 325, y, 1, h, 0, -16) //Left upper extension
+	template_house_1x1(x + 390, y, 1, h) //Bottom ground tile
+}
+//Template for 2x2 house, 7 minus 2 sprite layout
+template template_house_2x2_7m2sprite(x, y, z, h) {
+	template_house_1x1(x, y, 1, h) //Top ground tile
+	template_house_1x1_addoffs(x + 65, y, 1, h, 0, -16) //Top upper extension
+	template_house_1x1(x + 130, y, 1, h) //Right ground tile
+	template_house_1x1(x + 260, y, 1, h,) //Left ground tile
+	template_house_1x1(x + 390, y, 1, h) //Bottom ground tile
+}
+//Template for 1x2 house, 4 sprite layout
+template template_house_1x2_4sprite(x, y, z, h) {
+	template_house_1x1(x, y, 1, h) //Top-right ground tile
+	template_house_1x1_addoffs(x + 65, y, 1, h, 0, -16) //Top-right upper extension
+	template_house_1x1(x + 130, y, 1, h) //Bottom-left ground tile
+	template_house_1x1_addoffs(x + 195, y, 1, h, 0, -16) //Bottom-left upper extension
+}
+
+//Template for standard short house sprite
+template template_house_short(x, y, z) {
+	template_house_1x1(x, y, z, 47)
+}
+
 // Templates for handling general sprite sheets with 1px borders
 
 // Template for a matrix of standard size sprites
@@ -49,11 +88,9 @@ template template_animation_frame(z, f, w, h, ox, oy) {
 	[1*z+f*(1+w)*z, 1*z, w*z, h*z, ox*z, oy*z]
 }
 
+// Sprite sets
 
-// Set-specific templates
-
-// Ground tiles
-// Single flat tile
+// Terrain: Single flat tile
 template template_flattile_single(x, y, z) {
 	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
 }
@@ -496,4 +533,14 @@ template template_farms_fences(x, y, z) {
 	[ 137*z+x*z, 1*z+y*z, 33*z, 30*z-1,   0*z,   2*z ]
 	[ 103*z+x*z, 1*z+y*z, 33*z, 14*z-1, -30*z,  17*z ]
 	[  69*z+x*z, 1*z+y*z, 33*z, 14*z-1,   0*z,  17*z ]
+}
+
+//Template infrastructure building: Ship depots
+template template_ship_depot(x, y, z) {
+	template_house_1x1_addoffs(  0,  65, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0,   0, z, 64,  30, -15)
+	template_house_1x1_addoffs(  0, 195, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0, 130, z, 64,  30, -15)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,   0)
 }
