@@ -1,0 +1,132 @@
+// 1005-1010 rail overlays
+base_graphics spr1005(1005, "../graphics/infrastructure/64/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 1) }
+alternative_sprites(spr1005, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 2) }
+alternative_sprites(spr1005, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 4) }
+
+//1011-1036 rail tracks temperate grass
+base_graphics spr1011(1011, "../graphics/infrastructure/64/pygen/rail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1011, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/rail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1011, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/rail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1037-1062 rail tracks snowy terrain
+base_graphics spr1037(1037, "../graphics/infrastructure/64/pygen/rail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1037, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/rail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1037, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/rail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1063-1068 rail depots
+base_graphics spr1063(1063, "../graphics/stations/general/64/pygen/raildepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+
+//1069-1086 rail station
+base_graphics spr1069(1069, "../graphics/stations/general/64/pygen/railstations_8bpp.png") { template_rail_station(0, 0, 1) }
+
+//1087-1092 monorail overlays
+base_graphics spr1087(1087, "../graphics/infrastructure/64/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
+alternative_sprites(spr1087, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 4) }
+
+//1093-1118 monorail track temperate grass
+base_graphics spr1093(1093, "../graphics/infrastructure/64/pygen/monorail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1093, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/monorail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1093, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/monorail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1119-1144 monorail track snowy terrain
+base_graphics spr1119(1119, "../graphics/infrastructure/64/pygen/monorail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1119, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/monorail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1119, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/monorail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1145-1150 monorail depots
+base_graphics spr1145(1145, "../graphics/stations/general/64/pygen/monoraildepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+
+//1151-1168 monorail station
+base_graphics spr1151(1151, "../graphics/stations/general/64/pygen/monorailstations_8bpp.png") { template_rail_station(0, 0, 1) }
+
+// 1169 - 1174 Maglev overlay tracks
+base_graphics spr1169(1169, "../graphics/infrastructure/64/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
+alternative_sprites(spr1169, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 4) }
+
+// 1175 - 1200 Maglev tracks temperate grass
+base_graphics spr1175(1175, "../graphics/infrastructure/64/pygen/maglev_temperate_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1175, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_temperate_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1175, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/maglev_temperate_grass_8bpp.png") { template_railtiles(0, 0, 4) }
+
+// 1201 - 1226 Maglev track snowy terrain
+base_graphics spr1201(1201, "../graphics/infrastructure/64/pygen/maglev_arctic_snow_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1201, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_arctic_snow_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1201, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/maglev_arctic_snow_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1227-1232 maglev depot
+base_graphics spr1227(1227, "../graphics/stations/general/64/pygen/maglevdepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+
+//1233-1250 maglev station
+base_graphics spr1233(1233, "../graphics/stations/general/64/pygen/maglevstations_8bpp.png") { template_rail_station(0, 0, 1) }
+
+//1251-1262 rail gui buttons
+base_graphics spr1251(1251, "sprites/png/gui/gui04.png") { [ 642,  152,  20,  20,   0,   0] }
+base_graphics spr1252(1252, "sprites/png/gui/gui04.png") { [ 674,  152,  20,  20,   0,   0] }
+base_graphics spr1253(1253, "sprites/png/gui/gui04.png") { [ 706,  152,  20,  20,   0,   0] }
+base_graphics spr1254(1254, "sprites/png/gui/gui04.png") { [ 738,  152,  20,  20,   0,   0] }
+base_graphics spr1255(1255, "sprites/png/gui/gui04.png") { [ 770,  152,  20,  20,   0,   0] }
+base_graphics spr1256(1256, "sprites/png/gui/gui04.png") { [   2,  184,  20,  20,   0,   0] }
+base_graphics spr1257(1257, "sprites/png/gui/gui04.png") { [  34,  184,  20,  20,   0,   0] }
+base_graphics spr1258(1258, "sprites/png/gui/gui04.png") { [  66,  184,  20,  20,   0,   0] }
+base_graphics spr1259(1259, "sprites/png/gui/gui04.png") { [  98,  184,  20,  20,   0,   0] }
+base_graphics spr1260(1260, "sprites/png/gui/gui04.png") { [ 130,  184,  20,  20,   0,   0] }
+base_graphics spr1261(1261, "sprites/png/gui/gui04.png") { [ 194,  184,  20,  20,   0,   0] }
+base_graphics spr1262(1262, "sprites/png/gui/gui04.png") { [ 162,  184,  20,  20,   0,   0] }
+alternative_sprites (spr1251, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(482, 200) }
+alternative_sprites (spr1252, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(530, 200) }
+alternative_sprites (spr1253, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(578, 200) }
+alternative_sprites (spr1254, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(626, 200) }
+alternative_sprites (spr1255, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(674, 200) }
+alternative_sprites (spr1256, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(722, 200) }
+alternative_sprites (spr1257, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(  2, 264) }
+alternative_sprites (spr1258, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar( 50, 264) }
+alternative_sprites (spr1259, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar( 98, 264) }
+alternative_sprites (spr1260, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(146, 264) }
+alternative_sprites (spr1261, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(194, 264) }
+alternative_sprites (spr1262, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(242, 264) }
+
+//1263-1274 rail gui cursors
+base_graphics spr1263(1263, "sprites/png/gui/gui04.png") { [ 226,  184,  32,  32,   0,   0] }
+base_graphics spr1264(1264, "sprites/png/gui/gui04.png") { [ 274,  184,  32,  32,   0,   0] }
+base_graphics spr1265(1265, "sprites/png/gui/gui04.png") { [ 322,  184,  32,  32,   0,   0] }
+base_graphics spr1266(1266, "sprites/png/gui/gui04.png") { [ 370,  184,  32,  32,   0,   0] }
+base_graphics spr1267(1267, "sprites/png/gui/gui04.png") { [ 418,  184,  32,  32,   0,   0] }
+base_graphics spr1268(1268, "sprites/png/gui/gui04.png") { [ 466,  184,  32,  32,   0,   0] }
+base_graphics spr1269(1269, "sprites/png/gui/gui04.png") { [ 514,  184,  32,  32,   0,   0] }
+base_graphics spr1270(1270, "sprites/png/gui/gui04.png") { [ 562,  184,  32,  32,   0,   0] }
+base_graphics spr1271(1271, "sprites/png/gui/gui04.png") { [ 610,  184,  32,  30,   0,   0] }
+base_graphics spr1272(1272, "sprites/png/gui/gui04.png") { [ 658,  184,  32,  32,   0,   0] }
+base_graphics spr1273(1273, "sprites/png/gui/gui04.png") { [ 706,  184,  32,  34,   0,   0] }
+base_graphics spr1274(1274, "sprites/png/gui/gui04.png") { [ 754,  184,  32,  32,   0,   0] }
+
+//1275-1290 signals
+base_graphics spr1275(1275, "sprites/png/infrastructure/signals/light-generic.png") { tmpl_signals(10, 50) }
+
+//1291-1300 signal, depot and station gui elements
+base_graphics spr1291(1291, "sprites/png/gui/gui04.png") { [  18,  232,  20,  20,   0,   0] }
+base_graphics spr1292(1292, "sprites/png/gui/gui04.png") { [  50,  232,  32,  32,   0,   0] }
+base_graphics spr1293(1293, "sprites/png/gui/gui04.png") { [  98,  232,  32,  32,   0,   0] }
+base_graphics spr1294(1294, "sprites/png/gui/gui04.png") { [ 146,  232,  20,  20,   0,   0] }
+base_graphics spr1295(1295, "sprites/png/gui/gui04.png") { [ 178,  232,  20,  20,   0,   0] }
+base_graphics spr1296(1296, "sprites/png/gui/gui04.png") { [ 210,  232,  32,  32,   0,   0] }
+base_graphics spr1297(1297, "sprites/png/gui/gui04.png") { [ 258,  232,  32,  32,   0,   0] }
+base_graphics spr1298(1298, "sprites/png/gui/gui04.png") { [ 306,  232,  40,  20,   0,   0] }
+base_graphics spr1299(1299, "sprites/png/gui/gui04.png") { [ 354,  232,  20,  20,   0,   0] }
+base_graphics spr1300(1300, "sprites/png/gui/gui04.png") { [ 386,  232,  32,  32,   0,   0] }
+alternative_sprites (spr1291, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(290, 264) }
+
+alternative_sprites (spr1294, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(338, 264) }
+alternative_sprites (spr1295, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(386, 264) }
+
+alternative_sprites (spr1298, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar_wide(482, 264, 0) }
+alternative_sprites (spr1299, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "sprites/png/gui/gui2x.png") { tmpl_gui2x_toolbar(578, 264) }
+
+//1301-1308 rail fences
+base_graphics spr1301(1301, "sprites/png/infrastructure/infra06.png") { [ 194, 5416,  33,  22, -31,  -7] }
+base_graphics spr1302(1302, "sprites/png/infrastructure/infra06.png") { [ 242, 5416,  33,  22,   1,  -7] }
+base_graphics spr1303(1303, "sprites/png/infrastructure/infra06.png") { [ 290, 5416,   2,  38,   1, -22] }
+base_graphics spr1304(1304, "sprites/png/infrastructure/infra06.png") { [ 306, 5416,  65,   6, -31,  -7] }
+base_graphics spr1305(1305, "sprites/png/infrastructure/infra06.png") { [ 386, 5416,  33,  14, -31,  -7] }
+base_graphics spr1306(1306, "sprites/png/infrastructure/infra06.png") { [ 434, 5416,  33,  14,   1,  -7] }
+base_graphics spr1307(1307, "sprites/png/infrastructure/infra06.png") { [ 482, 5416,  33,  30, -31, -14] }
+base_graphics spr1308(1308, "sprites/png/infrastructure/infra06.png") { [ 530, 5416,  33,  30,   1, -14] }

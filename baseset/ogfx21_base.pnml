@@ -10,7 +10,7 @@
 #include "nml/base/base-0775-recolor.pnml"
 #include "nml/base/base-0805-faces.pnml"
 #include "nml/base/base-0990-foundations.pnml"
-#include "sprites/base/base-1005-rail-infra.pnml"
+#include "nml/base/base-1005-rail-infra.pnml"
 #include "sprites/base/base-1309-road-infra.pnml"
 #include "sprites/base/base-1420-houses-church.pnml"
 #include "sprites/base/base-1438-recolor-church.pnml"

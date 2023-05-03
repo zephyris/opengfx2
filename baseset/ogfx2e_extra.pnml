@@ -15,7 +15,7 @@
 #include "sprites/extra/extra-road-stops.pnml"
 #include "sprites/extra/extra-shores.pnml"
 #include "sprites/extra/extra-signals.pnml"
-#include "sprites/extra/extra-sloped-tracks.pnml"
+#include "nml/extra/extra-sloped-tracks.pnml"
 #include "sprites/extra/extra-tram-tracks.pnml"
 
 #include "sprites/extra/extra-openttd-airport.pnml"
