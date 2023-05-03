@@ -21,7 +21,7 @@
 #include "sprites/extra/extra-openttd-airport.pnml"
 #include "sprites/extra/extra-openttd-autorail.pnml"
 #include "sprites/extra/extra-openttd-flags.pnml"
-#include "sprites/extra/extra-openttd-gui.pnml"
+#include "nml/extra/extra-openttd-gui.pnml"
 #include "sprites/extra/extra-openttd-airport-preview.pnml"
 #include "sprites/extra/extra-openttd-recolour.pnml"
 

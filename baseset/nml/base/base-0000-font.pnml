@@ -1,7 +1,10 @@
 //0-1 cursor and sleepy cursor
-base_graphics spr0(   0, "../graphics/cursors/cursors_base_8bpp.png") { [   1,    1,  24,  24,   0,   0] }
-base_graphics spr1(   1, "../graphics/cursors/cursors_base_8bpp.png") { [  34,    1,  31,  24, -15, -12] }
+base_graphics spr0(   0, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_sprite_matrix(32, 32, 0, 0, 0, 0, 1)
+    template_sprite_matrix(32, 32, 0, 0, 1, 0, 1)
+}
 
+// OPENGFX1 COPY
 //2-225 regular font
 base_graphics spr2(   2, "../graphics/fonts/fonts_8bpp.png") { [  10,   10,   2,   1,   0,  -2, NOCROP] }
 base_graphics spr3(   3, "../graphics/fonts/fonts_8bpp.png") { [  30,   10,   3,  13,   0,  -2] }

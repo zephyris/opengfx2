@@ -1,3 +1,5 @@
+// OPENGFX1 COPY
+
 // "Characters"
 
 template font_normal(x, y, width) { [x, y, width, 13, 0, -2, NOCROP] }

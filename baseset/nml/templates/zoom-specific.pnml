@@ -36,8 +36,7 @@ template template_flattile_single(x, y, z) {
 	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
 }
 
-// Foundations
-// Base
+// Foundations: base
 template template_foundations_base(x, y, z) {
 	[   1*z+x*z,  1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
 	[  81*z+x*z,  1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
@@ -55,7 +54,7 @@ template template_foundations_base(x, y, z) {
 	[ 401*z+x*z, 42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
 }
 
-// Extended
+// Foundations: extended
 template template_foundations_slope_halftile(x, y, z) {
 	[   1*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
 	[  81*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
@@ -152,4 +151,49 @@ template template_foundations_slope_halftile(x, y, z) {
 	[ 401*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z, -25*z, NOCROP ]
 	[ 481*z+x*z, 452*z+y*z, 64*z, 41*z-1, -47*z, -17*z, NOCROP ]
 	[ 561*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z,  -9*z, NOCROP ]
+}
+
+// Tile selectors: base
+template template_selectors_tile(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[  81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 399*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 479*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+	[ 559*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+
+	[ 639*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[ 719*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[ 799*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[ 879*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+
+	[ 959*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[1039*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[1119*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[1197*z+x*z, 1*z+y*z, 64*z, 48*z-1, -31*z,  -9*z ]
+
+	[1277*z+x*z, 1*z+y*z, 64*z, 16*z-1, -31*z,   7*z ]
+	[1357*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[1437*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+}
+
+// Tile selectors: extra halftiles
+template template_selectors_halftile(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[  81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 399*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[ 479*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 559*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+
+	[ 639*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[ 719*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[ 799*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[ 879*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
 }
