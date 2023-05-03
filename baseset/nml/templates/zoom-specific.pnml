@@ -355,3 +355,23 @@ template template_rail_station(x, y, z) {
 	[ 261*z+x*z, 196*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
 	[ 261*z+x*z,   1*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
 }
+
+// Infrastructure: signals base
+template template_signals_base(z) {
+	template_sprite_matrix(22, 30, -7, -30, 0, 0, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 0, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 1, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 1, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 2, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 2, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 3, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 3, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 4, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 4, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 5, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 5, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 6, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 6, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 7, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 7, z)
+}
