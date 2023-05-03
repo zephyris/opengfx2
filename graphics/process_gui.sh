@@ -5,7 +5,11 @@ font_convert.py
 cd ..
 
 cd cursors
+
+cd 1
 custom_dither.py
+cd ..
+
 cd ..
 
 cd icons

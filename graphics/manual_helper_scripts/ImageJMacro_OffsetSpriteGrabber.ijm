@@ -1,4 +1,5 @@
 
+//===Base graphics===
 //Faces: 805 184
 //Signals, base: 1275 16
 //Trees, tropical, agave: 1849 14
@@ -17,10 +18,18 @@
 //FX, vehicle, helicopter rotor: 3901 4
 //FX, bubble factory, bubble: 4748 15
 
-start=805;
-number=184;
+//===Ogfx Extra===
+//Signals 1: 2035 48
+//Signals 2: 2084 192
+//Signals 2: 2281 192
+
+start=1275;
+number=16;
 name="ogfx1_base";
 //name="trg1r";
+//name="ogfxe_extra";
+
+
 
 width=256;
 height=256;
@@ -69,7 +78,9 @@ for (i=start; i<start+number; i++) {
 			selectImage(cid);
 			close();
 		}
+		setBatchMode(true);
 		open(path+substring(data[1], lengthOf("sprites/"), lengthOf(data[1])));
+		setBatchMode(false);
 		cid=getImageID();
 		cimage=data[1];
 	}
@@ -77,7 +88,9 @@ for (i=start; i<start+number; i++) {
 	makeRectangle(data[3], data[4], data[5], data[6]);
 	run("Copy");
 	if (i==start) {
-		run("Duplicate...", "t");
+		setBatchMode(false);
+		run("Duplicate...", ""+name+"_"+start+""+(start+number-1));
+		setBatchMode(true);
 		run("Copy");
 		oid=getImageID();
 		run("Canvas Size...", "width="+width+" height="+height+" position=Center");
