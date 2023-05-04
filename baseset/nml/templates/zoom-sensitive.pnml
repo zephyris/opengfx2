@@ -721,3 +721,41 @@ template template_girder_front(x, y, z) {
 	template_bridge_single_front_swne(x+130, y+259, z)
 	template_bridge_single_front_swne(x+260, y+259, z)
 }
+
+//Template trees: Wide
+template template_tree_wide(x, y, z) {
+	[  0*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[ 50*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[100*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[150*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[200*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[250*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[300*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+}
+
+//Template trees: Narrow
+template template_tree_narrow(x, y, z) {
+	[  0*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 40*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 80*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[120*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[160*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[200*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[240*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+}
+
+//Template trees: 1px border
+template template_tree_bordered(x, y, z) {
+	[  1*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 37*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 73*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[109*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[145*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[181*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[217*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+}
+
+//Template infrastructure: city trees
+template template_tree_city(x, y, z) {
+	[	 1*z+x*z, 1*z+y*z, 19*z, 41*z, -9*z, -36*z-int((z-1)/2)]
+}

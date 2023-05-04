@@ -2,6 +2,7 @@
 //===Base graphics===
 //Faces: 805 184
 //Signals, base: 1275 16
+//Trees, tropical, banana: 1821 14
 //Trees, tropical, agave: 1849 14
 //Trees, tropical, palm & cacti: 1884 49
 //Trees, toyland, all: 1947 63
@@ -23,8 +24,8 @@
 //Signals 2: 2084 192
 //Signals 2: 2281 192
 
-start=1275;
-number=16;
+start=1821;
+number=14;
 name="ogfx1_base";
 //name="trg1r";
 //name="ogfxe_extra";

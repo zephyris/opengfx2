@@ -64,9 +64,9 @@ base_graphics spr1464(1464, "../graphics/towns/temperate/64/pygen/shopsandoffice
 	template_house_1x1_addoffs(260,  0, 1, 95, 4, -5) }
 // 1467-1469 old offices
 base_graphics spr1467(1467, "../graphics/towns/temperate/64/pygen/shopsandoffices_8bpp.png") {
-	template_house_1x1(130,192, 1, 95) // Recolour: STRUCT_BLUE, STRUCT_WHITE
-	template_house_1x1(130, 96, 1, 95) // Recolour: STRUCT_BLUE, STRUCT_WHITE
-	template_house_1x1(130,  0, 1, 95) // Recolour: STRUCT_BLUE, STRUCT_WHITE
+	template_house_1x1_addoffs(130,192, 1, 95, 4, -2) // Recolour: STRUCT_BLUE, STRUCT_WHITE
+	template_house_1x1_addoffs(130, 96, 1, 95, 4, -2) // Recolour: STRUCT_BLUE, STRUCT_WHITE
+	template_house_1x1_addoffs(130,  0, 1, 95, 4, -2) // Recolour: STRUCT_BLUE, STRUCT_WHITE
 }
 // 1470-1472 pointy modern building
 base_graphics spr1470(1470, "../graphics/towns/temperate/64/pygen/modernoffice_8bpp.png") {
@@ -118,7 +118,7 @@ alternative_sprites(spr1496, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/town
 base_graphics spr1497(1497, "../graphics/towns/temperate/64/pygen/bungalow_combo_8bpp.png") {
 	template_house_short(0, 96, 1) // constr. stage 1 (as ground tile)
 	template_house_short(0, 48, 1) // constr. stage 2 (as ground tile)
-} // ground tile for finished building
+}
 base_graphics spr1499(1499, "../graphics/towns/temperate/64/pygen/bungalow_base_8bpp.png") { template_house_short(0, 0, 1) } // ground tile for finished building
 base_graphics spr1500(1500, "../graphics/towns/temperate/64/pygen/bungalow_8bpp.png") { template_house_short(0, 0, 1) } // finished building
 //house

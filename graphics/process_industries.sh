@@ -28,6 +28,8 @@ building_baseshapeproc.py 1 arctic
 building_base_flatten.py foodprocessingplant 1
 mask_tiles.py pygen/bank bank_tilemask.png 1
 mask_tiles.py pygen/bank_base bank_tilemask.png 1
+mask_tiles.py pygen/farm farm_tilemask.png 1
+mask_tiles.py pygen/farm_base farm_tilemask.png 1
 building_base_flatten.py papermill 1
 building_base_flatten.py printingworks 1
 mask_tiles.py pygen/printingworks_combo printingworks_tilemask.png 1

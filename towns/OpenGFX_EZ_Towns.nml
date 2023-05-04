@@ -22,7 +22,7 @@ alternative_sprites(town_lights, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/
 }
 //Temperate roadside trees
 template template_tree_city(x, y, z) {
-	[	 0*z+x*z, 0*z+y*z, 19*z, 41*z, -9*z, -36*z-int((z-1)/2)]
+	[	 1*z+x*z, 1*z+y*z, 19*z, 41*z, -9*z, -36*z-int((z-1)/2)]
 }
 replace town_temperate_tree(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") {
 	template_tree_city(0, 0, 1)
@@ -1529,10 +1529,6 @@ template template_airportoilrefinery_building(x, y, z) {
 	template_house_1x1_addoffs(455,   0, z, 96,   0,  -7)
 }
 
-template template_airporttransmitter(x, y, z) {
-	template_house_1x1_addoffs(520,   0, z, 96,   0, -15)
-}
-
 replace infrastructure_general_modernairport_buildings(2650, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") {
 	template_modernairport_buildings_core(0, 0, 1)
 }
@@ -1546,7 +1542,7 @@ replace infrastructure_general_modernairportoilrefinery_building(2095, "../graph
 	template_airportoilrefinery_building(0, 0, 1)
 }
 replace infrastructure_general_modernairporttransmitter(2601, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") {
-	template_airporttransmitter(0, 0, 1)
+	template_house_1x1_addoffs(520,   0, z, 96,   0, -15)
 }
 
 //Heliport

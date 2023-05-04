@@ -48,21 +48,6 @@ base_graphics spr2581(2581, "../graphics/bridges/64/pygen/tubular_monorail_8bpp.
 //2587-2592 tubular maglev
 base_graphics spr2587(2587, "../graphics/bridges/64/pygen/tubular_maglev_8bpp.png") { template_girder(0, 0, 1) }
 
-//base_graphics monorail_bridge_slowsteel(4324, "../graphics/bridges/64/pygen/steelslow_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
-//base_graphics monorail_bridgeramps_general(4326, "../graphics/bridges/64/pygen/ramps_general_monorail_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
-//base_graphics monorail_bridge_suspension(4334, "../graphics/bridges/64/pygen/suspension_monorail_8bpp.png") { template_suspension_other(0, 0, 1) }
-//base_graphics monorail_bridge_girder(4346, "../graphics/bridges/64/pygen/girder_monorail_8bpp.png") { template_girder(0, 0, 1) }
-//base_graphics monorail_bridgeramps_wood(4352, "../graphics/bridges/64/pygen/ramps_wood_monorail_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
-//base_graphics monorail_bridge_wood(4360, "../graphics/bridges/64/pygen/wood_monorail_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) }
-//base_graphics maglev_bridgeramps_general(4366, "../graphics/bridges/64/pygen/ramps_general_maglev_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
-//base_graphics monorail_bridge_faststeel(4362, "../graphics/bridges/64/pygen/steelfast_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
-//base_graphics maglev_bridge_slowsteel(4364, "../graphics/bridges/64/pygen/steelslow_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
-//base_graphics maglev_bridge_suspension(4374, "../graphics/bridges/64/pygen/suspension_maglev_8bpp.png") { template_suspension_other(0, 0, 1) }
-//base_graphics maglev_bridge_girder(4386, "../graphics/bridges/64/pygen/girder_maglev_8bpp.png") { template_girder(0, 0, 1) }
-//base_graphics maglev_bridgeramps_wood(4392, "../graphics/bridges/64/pygen/ramps_wood_maglev_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
-//base_graphics maglev_bridge_wood(4400, "../graphics/bridges/64/pygen/wood_maglev_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) }
-//base_graphics maglev_bridge_faststeel(4402, "../graphics/bridges/64/pygen/steelfast_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
-
 //2593 bridge cursor
 base_graphics spr2593( 2593, "../graphics/cursors/1/cursors_8bpp.png") {
     template_sprite_matrix(32, 32, 0, 0, 0, 14, 1)
