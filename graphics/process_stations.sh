@@ -6,7 +6,7 @@ cd general/64
 # process all buildings
 building_shapeproc.py 1
 building_shapeproc.py 1 True
-building_baseshapeproc.py 1
+building_baseshapeproc.py 1 temperate
 building_base_flatten.py heliport 1
 # mask regions of depots (ie. back wall from rest of building)
 mask_regions.py pygen/raildepots raildepots_regionmask.png 1

@@ -4,7 +4,7 @@ cd industries
 
 cd temperate/64/
 building_shapeproc.py 1
-building_baseshapeproc.py 1
+building_baseshapeproc.py 1 temperate
 building_base_flatten.py steelmill 1
 mask_tiles.py pygen/steelmill_combo steelmill_tilemask.png 1
 building_base_flatten.py factory 1
@@ -24,7 +24,7 @@ cd ../../../
 
 cd arctic/64/
 building_shapeproc.py 1
-building_baseshapeproc.py 1
+building_baseshapeproc.py 1 arctic
 building_base_flatten.py foodprocessingplant 1
 mask_tiles.py pygen/bank bank_tilemask.png 1
 mask_tiles.py pygen/bank_base bank_tilemask.png 1
@@ -40,7 +40,9 @@ cd ../../../
 
 cd tropical/64/
 building_shapeproc.py 1
-building_baseshapeproc.py 1
+building_baseshapeproc.py 1 tropicaldesert
+building_base_flatten.py diamondmine 1
+mask_tiles.py pygen/diamondmine_combo diamondmine_tilemask.png 1
 custom_dither.py
 cd pygen
 custom_dither.py
