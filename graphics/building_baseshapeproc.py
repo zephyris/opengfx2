@@ -47,11 +47,13 @@ verbose = True
 scale = 1
 scale = int(sys.argv[1])
 
+climate = sys.argv[2]
+
 snow = False
 snowname = ""
-if len(sys.argv) > 2:
+if len(sys.argv) > 3:
   snow = True
-  print("Using snow!")
+  print("Using snow! (or desert)")
   snowname = "snow_"
   
 
@@ -291,7 +293,15 @@ for input_file in glob.glob("*"+suffix):
     # Ground textures
     texture_opacity = 255
     if snow == True:
-      image_32bit = simple_overlay_texture(image_32bit, image_shape, Image.open("../../textures/ground_snow.png"), [index_groundtextures[0]])
+      image_32bit = simple_overlay_texture(image_32bit, image_shape, Image.open("../../textures/ground_alt_arctic.png"), [index_groundtextures[0]])
+    elif climate == "temperate":
+      image_32bit = simple_overlay_texture(image_32bit, image_shape, Image.open("../../textures/ground_grass_temperate.png"), [index_groundtextures[0]])
+    elif climate == "arctic":
+      image_32bit = simple_overlay_texture(image_32bit, image_shape, Image.open("../../textures/ground_grass_arctic.png"), [index_groundtextures[0]])
+    elif climate == "tropical":
+      image_32bit = simple_overlay_texture(image_32bit, image_shape, Image.open("../../textures/ground_grass_tropical.png"), [index_groundtextures[0]])
+    elif climate == "tropicaldesert":
+      image_32bit = simple_overlay_texture(image_32bit, image_shape, Image.open("../../textures/ground_alt_tropical.png"), [index_groundtextures[0]])
     else:
       image_32bit = simple_overlay_texture(image_32bit, image_shape, Image.open("../../textures/ground_grass_temperate.png"), [index_groundtextures[0]])
     image_32bit = simple_overlay_texture(image_32bit, image_shape, Image.open("../../textures/ground_bare.png"), [index_groundtextures[1]])
