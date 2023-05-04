@@ -1,7 +1,7 @@
 #include "sprites/templates/sprite_templates.pnml"
 #include "sprites/templates/tmpl_trains.nml"
 
-#include "nml/templates/zoom-specific.pnml"
+#include "nml/templates/zoom-sensitive.pnml"
 
 #include "nml/base/base-0000-font.pnml"
 #include "nml/base/base-0674-gui.pnml"
@@ -16,9 +16,9 @@
 #include "nml/base/base-1438-recolor-church.pnml"
 #include "nml/base/base-1440-houses.pnml"
 #include "sprites/base/base-1576-trees.pnml"
-#include "sprites/base/base-2011-industries.pnml"
-#include "sprites/base/base-2365-tunnels.pnml"
-#include "sprites/base/base-2437-bridges.pnml"
+#include "nml/base/base-2011-industries.pnml"
+#include "nml/base/base-2365-tunnels.pnml"
+#include "nml/base/base-2437-bridges.pnml"
 #include "sprites/base/base-2601-objects.pnml"
 #include "sprites/base/base-2603-hq.pnml"
 #include "sprites/base/base-2633-airports.pnml"

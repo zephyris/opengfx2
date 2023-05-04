@@ -1,9 +1,11 @@
 #include "sprites/templates/sprite_templates.pnml"
 #include "sprites/templates/tmpl_trains.nml"
 
-#include "sprites/tropical/tropical-0000-bare-land.pnml"
+#include "nml/templates/zoom-sensitive.pnml"
+
+#include "nml/tropical/tropical-0000-bare-land.pnml"
 #include "sprites/tropical/tropical-0057-pass-waggon.pnml"
-#include "sprites/tropical/tropical-0061-rough-land.pnml"
+#include "nml/tropical/tropical-0061-rough-land.pnml"
 #include "sprites/tropical/tropical-0103-rail-infra.pnml"
 #include "sprites/tropical/tropical-0199-road-infra.pnml"
 #include "sprites/tropical/tropical-0218-rail-road-tunnels.pnml"

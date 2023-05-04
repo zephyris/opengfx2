@@ -2,7 +2,7 @@
 #include "sprites/templates/tmpl_trains.nml"
 
 #include "nml/extra/extra-header.pnml"
-#include "nml/templates/zoom-specific.pnml"
+#include "nml/templates/zoom-sensitive.pnml"
 
 #include "nml/extra/extra-2ccmap.pnml"
 #include "sprites/extra/extra-aqueduct.pnml"

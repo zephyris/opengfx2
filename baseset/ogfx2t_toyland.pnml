@@ -1,6 +1,8 @@
 #include "sprites/templates/sprite_templates.pnml"
 #include "sprites/templates/tmpl_trains.nml"
 
+#include "nml/templates/zoom-sensitive.pnml"
+
 #include "sprites/toyland/toyland-0000-terrain.pnml"
 #include "sprites/toyland/toyland-0076-water.pnml"
 #include "sprites/toyland/toyland-0086-rough-rocky-terrain.pnml"

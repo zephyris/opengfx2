@@ -1,0 +1,14 @@
+// bare tropical land (33% grassy) 0 - 18
+base_graphics spr0(0, "../graphics/terrain/64/tropical_groundtiles_8bpp.png") { template_groundtiles(0, 96, 1) }
+alternative_sprites(spr0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/tropical_groundtiles_8bpp.png") { template_groundtiles(0, 96, 2) }
+alternative_sprites(spr0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/tropical_groundtiles_8bpp.png") { template_groundtiles(0, 96, 4) }
+
+// bare tropical land (66% grassy) 19 - 37
+base_graphics spr19(19, "../graphics/terrain/64/tropical_groundtiles_8bpp.png") { template_groundtiles(0, 48, 1) }
+alternative_sprites(spr19, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/tropical_groundtiles_8bpp.png") { template_groundtiles(0, 48, 2) }
+alternative_sprites(spr19, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/tropical_groundtiles_8bpp.png") { template_groundtiles(0, 48, 4) }
+
+// tropical grass (100% grassy) 38 - 56
+base_graphics spr38(38, "../graphics/terrain/64/tropical_groundtiles_8bpp.png") { template_groundtiles(0, 0, 1) }
+alternative_sprites(spr38, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/tropical_groundtiles_8bpp.png") { template_groundtiles(0, 0, 2) }
+alternative_sprites(spr38, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/tropical_groundtiles_8bpp.png") { template_groundtiles(0, 0, 4) }

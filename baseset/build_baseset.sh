@@ -4,10 +4,11 @@
 # eg. /my/install/of/openttd/baseset/
 
 # Clone OpenGFX and copy sprites for unchanged source
-if [ ! -d OpenGFX ]; then
+if [ ! -d sprites ]; then
   git clone https://github.com/OpenTTD/OpenGFX
+  cp -r OpenGFX/sprites sprites
+  rm -rf OpenGFX
 fi
-cp -r OpenGFX/sprites sprites
 
 echo "OGFX2 Base"
 python3 baseset_nml_preprocessor.py ogfx21_base

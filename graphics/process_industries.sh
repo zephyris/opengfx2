@@ -43,6 +43,8 @@ building_shapeproc.py 1
 building_baseshapeproc.py 1 tropicaldesert
 building_base_flatten.py diamondmine 1
 mask_tiles.py pygen/diamondmine_combo diamondmine_tilemask.png 1
+building_base_flatten.py lumbermill 1
+mask_tiles.py pygen/lumbermill_combo lumbermill_tilemask.png 1
 custom_dither.py
 cd pygen
 custom_dither.py
