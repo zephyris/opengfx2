@@ -13,7 +13,7 @@
 #include "nml/extra/extra-foundations.pnml"
 #include "sprites/extra/extra-oneway.pnml"
 #include "sprites/extra/extra-road-stops.pnml"
-#include "sprites/extra/extra-shores.pnml"
+#include "nml/extra/extra-shores.pnml"
 #include "sprites/extra/extra-signals.pnml"
 #include "nml/extra/extra-sloped-tracks.pnml"
 #include "sprites/extra/extra-tram-tracks.pnml"
@@ -40,4 +40,3 @@ if (climate == CLIMATE_TROPICAL) {
 if (climate == CLIMATE_TOYLAND) {
 #include "sprites/extra/extra-plus-toyland-infrastructure.pnml"
 }
-

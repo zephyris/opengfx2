@@ -1,0 +1,13 @@
+// Water and shore tiles
+//76 flat water tile
+base_graphics spr76(76, "../graphics/terrain/64/toyland_watertiles_8bpp.png") { template_flattile_single(0, 0, 1) }
+alternative_sprites(spr76, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 2) }
+alternative_sprites(spr76, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 4) }
+
+//77-84 shore tiles
+base_graphics spr77(77, "../graphics/terrain/64/toyland_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
+alternative_sprites(spr77, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
+alternative_sprites(spr77, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
+
+//85 unused buoy
+base_graphics spr85(85, "../graphics/terrain/64/universal_bouy_8bpp.png") { template_flattile_single(0, 0, 1) }

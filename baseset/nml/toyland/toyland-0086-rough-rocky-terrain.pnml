@@ -1,0 +1,19 @@
+
+// toyland rough terrain 86-108
+base_graphics spr86(86, "../graphics/terrain/64/toyland_groundtiles_rough_8bpp.png") {
+    template_groundtiles(0, 0, 1)
+    template_groundtiles_extra(0, 0, 1)
+}
+alternative_sprites(spr86, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_rough_8bpp.png") {
+    template_groundtiles(0, 0, 2)
+    template_groundtiles_extra(0, 0, 2)
+}
+alternative_sprites(spr86, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_rough_8bpp.png") {
+    template_groundtiles(0, 0, 4)
+    template_groundtiles_extra(0, 0, 4)
+}
+
+//109-127 toyland rocky terrain
+base_graphics spr109(109, "../graphics/terrain/64/toyland_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 1) }
+alternative_sprites(spr109, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 2) }
+alternative_sprites(spr109, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 4) }

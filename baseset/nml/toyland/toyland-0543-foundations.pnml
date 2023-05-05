@@ -1,0 +1,3 @@
+//543-556 Foundations
+base_graphics spr543 (543, "../graphics/foundations/64/foundations_toyland_8bpp.png") { template_foundations_base(0, 0, 1) }
+alternative_sprites(spr543, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_toyland_8bpp.png") { template_foundations_base(0, 0, 4) }
