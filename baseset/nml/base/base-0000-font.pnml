@@ -1,7 +1,7 @@
 //0-1 cursor and sleepy cursor
 base_graphics spr0(   0, "../graphics/cursors/1/cursors_8bpp.png") {
-    template_sprite_matrix(32, 32, 0, 0, 0, 0, 1)
-    template_sprite_matrix(32, 32, 0, 0, 1, 0, 1)
+    template_cursor_matrix(32, 32, 0, 0, 0, 0, 1)
+    template_cursor_matrix(32, 32, 0, 0, 1, 0, 1)
 }
 
 // OPENGFX1 COPY
