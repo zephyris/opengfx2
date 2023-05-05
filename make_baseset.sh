@@ -3,6 +3,8 @@
 # If given an argument, copies the grfs to that path once complete
 # eg. /my/install/of/openttd/baseset/
 
+cd baseset
+
 # Clone OpenGFX and copy sprites for unchanged source
 if [ ! -d sprites ]; then
   git clone https://github.com/OpenTTD/OpenGFX
@@ -43,3 +45,5 @@ if [ ! -z "$1" ]; then
   cp *.grf "$1"
   cp *.obg "$1"
 fi
+
+cd ..

@@ -1542,7 +1542,7 @@ replace infrastructure_general_modernairportoilrefinery_building(2095, "../graph
 	template_airportoilrefinery_building(0, 0, 1)
 }
 replace infrastructure_general_modernairporttransmitter(2601, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") {
-	template_house_1x1_addoffs(520,   0, z, 96,   0, -15)
+	template_house_1x1_addoffs(520,   0, 1, 96,   0, -15)
 }
 
 //Heliport

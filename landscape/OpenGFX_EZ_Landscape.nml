@@ -1678,7 +1678,7 @@ alternative_sprites(trees_arctic_08S, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../grap
 }
 
 //Tropical
-replace trees_tropicalspecial_agave(1849, "../graphics/trees/64/tropical_specialtrees_8bpp.png") {
+replace trees_tropicalspecial_agave(1849, "../graphics/trees/64/tropical_nonleafy_8bpp.png") {
 	template_tree_bordered(0,   0, 1)
 	template_tree_bordered(0,  81, 1)
 }
@@ -1704,7 +1704,7 @@ alternative_sprites(trees_tropical_03, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../gra
 	template_tree_wide(0, 0, 4)
 }
 
-replace trees_tropicalspecial_palmcactus(1884, "../graphics/trees/64/tropical_specialtrees_8bpp.png") {
+replace trees_tropicalspecial_palmcactus(1884, "../graphics/trees/64/tropical_nonleafy_8bpp.png") {
 	template_tree_bordered(0, 162, 1)
 	template_tree_bordered(0, 243, 1)
 	template_tree_bordered(0, 324, 1)

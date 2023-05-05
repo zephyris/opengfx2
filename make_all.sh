@@ -1,36 +1,18 @@
 # Make all outputs
 # Processes image files from sources then builds the output grfs
-# If given an argument, copies the grfs to that path once complete
+# If given an argument, copies the base and new grfs to the appropriate subdirectories of that install once complete
+# eg. /my/install/of/openttd/
 
-if [ ! -d grf ]; then
-  mkdir grf
-fi
-
-cd graphics
-bash process_gui.sh
-bash process_terrain.sh
-bash process_buildings.sh
-bash process_industries.sh
-bash process_infrastructure.sh
-bash process_bridges.sh
-bash process_stations.sh
-bash process_selectors.sh
-bash process_trees.sh
-bash process_effects.sh
-cd ..
-
-cd towns
-nmlc OpenGFX_EZ_Towns.nml
-mv OpenGFX_EZ_Towns.grf ../grf
-cd ..
-
-cd landscape
-nmlc OpenGFX_EZ_Landscape.nml
-mv OpenGFX_EZ_Landscape.grf ../grf
-cd ..
+bash make_graphics.sh
 
 if [ ! -z "$1" ]; then
-  cd grf
-  cp *.grf "$1"
-  cd ..
+  bash make_newgrfs.sh "$1/newgrf/"
+else
+  bash make_newgrfs.sh
+fi
+
+if [ ! -z "$1" ]; then
+  bash make_baseset.sh "$1/baseset/"
+else
+  bash make_baseset.sh
 fi
