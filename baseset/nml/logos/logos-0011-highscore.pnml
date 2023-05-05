@@ -1,0 +1,2 @@
+//11-20 high score list background
+base_graphics spr11(11, "../graphics/icons/1/scoreboard_8bpp.png") { template_highscore_background(1) }

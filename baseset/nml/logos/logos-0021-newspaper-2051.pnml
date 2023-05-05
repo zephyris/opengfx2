@@ -1,0 +1,2 @@
+//21-30 image 2, newspaper
+base_graphics spr21(21, "../graphics/icons/1/newspaper_8bpp.png") { template_highscore_background(1) }

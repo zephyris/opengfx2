@@ -1,3 +1,7 @@
+template template_empty() {
+	[0, 0, 1, 1, 0, 0, "../graphics/icons/1/empty_8bpp.png"]
+}
+
 // x: X offset
 // y: Y offset
 // w: Width
@@ -17,12 +21,18 @@ template template_general(x, y, w, h, ox, oy, z) {
 template template_house_1x1(x, y, z, h) {
 	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2)]
 }
+template template_house_1x1_anim(x, y, z, h) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2), ANIM]
+}
 
 //Template for house sprite with additional offset
 //ox: Additional X alignment offset
 //oy: Additional Y alignment offset
 template template_house_1x1_addoffs(x, y, z, h, ox, oy) {
 	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2)]
+}
+template template_house_1x1_addoffs_anim(x, y, z, h, ox, oy) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2), ANIM]
 }
 
 //TODO: Fix tile masking and check behaviour at higher zoom levels
@@ -63,6 +73,9 @@ template template_house_1x2_4sprite(x, y, z, h) {
 template template_house_short(x, y, z) {
 	template_house_1x1(x, y, z, 47)
 }
+template template_house_short_anim(x, y, z) {
+	template_house_1x1_anim(x, y, z, 47)
+}
 
 // Templates for handling general sprite sheets with 1px borders
 
@@ -84,10 +97,29 @@ template template_animation_frame(w, h, ox, oy, f, z) {
 
 // GUI templates: Cursors
 template template_cursor_matrix(xindex, yindex, z) {
-	template_sprite_matrix(32, 32, 0, 0, xindex, yindex, z)
+	template_sprite_matrix(48, 32, 0, 0, xindex, yindex, z)
+}
+
+// Templates for handling general sprite sheets with 0px borders
+template template_sprite_borderlessmatrix(w, h, ox, oy, xindex, yindex, z) {
+	[xindex*w*z, yindex*h*z, w*z, h*z, ox*z, oy*z]
 }
 
 // Sprite sets
+
+// Highscore: Fullscreen background
+template template_highscore_background(z) {
+	template_general(0, 0, 640, 50, 0, 0, z)
+	template_general(0, 50, 640, 50, 0, 0, z)
+	template_general(0, 100, 640, 50, 0, 0, z)
+	template_general(0, 150, 640, 50, 0, 0, z)
+	template_general(0, 200, 640, 50, 0, 0, z)
+	template_general(0, 250, 640, 50, 0, 0, z)
+	template_general(0, 300, 640, 50, 0, 0, z)
+	template_general(0, 350, 640, 50, 0, 0, z)
+	template_general(0, 400, 640, 50, 0, 0, z)
+    template_general(0, 450, 640, 30, 0, 0, z)
+}
 
 // Terrain: Single flat tile
 template template_flattile_single(x, y, z) {

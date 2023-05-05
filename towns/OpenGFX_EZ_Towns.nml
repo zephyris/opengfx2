@@ -468,21 +468,21 @@ replace town_temperate_house_flats3c_base(1528, "../graphics/towns/temperate/64/
 
 //Large office block (with lift)
 //Building sprite
-replace town_temperate_house_largeofficeblock_building(1440, "../graphics/towns/temperate/64/pygen/largeofficeblock_8bpp.png") {
+replace town_temperate_house_largeofficeblock_building(1440, "../graphics/towns/arctic/64/pygen/largeofficeblock_8bpp.png") {
 	template_house_1x1(0,196, 1, 97)
 	template_house_1x1(0, 98, 1, 97)
 	template_house_1x1(0,	0, 1, 97)
 }
-//alternative_sprites(town_temperate_house_largeofficeblock_building, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/largeofficeblock_8bpp.png") {
+//alternative_sprites(town_temperate_house_largeofficeblock_building, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/arctic/256/pygen/largeofficeblock_8bpp.png") {
 //	template_house_1x1(0,196, 4, 97)
 //	template_house_1x1(0, 98, 4, 97)
 //	template_house_1x1(0,	0, 4, 97)
 //}
 //Lift sprite
-replace town_temperate_house_largeofficeblock_lift(1443, "../graphics/towns/temperate/64/pygen/largeofficeblock_8bpp.png") {
+replace town_temperate_house_largeofficeblock_lift(1443, "../graphics/towns/arctic/64/pygen/largeofficeblock_8bpp.png") {
 	template_general(66, 84, 4, 14, 1, 15, 1)
 }
-//replace alternative_sprites(town_temperate_house_largeofficeblock_lift, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/largeofficeblock_8bpp.png") {
+//replace alternative_sprites(town_temperate_house_largeofficeblock_lift, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/arctic/256/pygen/largeofficeblock_8bpp.png") {
 //	template_general(66, 84, 14, 4, 0, 0, 4)
 //}
 

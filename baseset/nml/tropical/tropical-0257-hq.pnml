@@ -1,0 +1,6 @@
+// 257-271 headquarters
+base_graphics spr257(257, "../graphics/towns/tropical/64/pygen/hqs_combo_tiles_8bpp.png") {
+	template_house_2x2_4sprite(   0,0, 1, 107)
+	template_house_2x2_4sprite( 260,0, 1, 107)
+	template_house_2x2_7sprite( 520,0, 1, 107)
+}
