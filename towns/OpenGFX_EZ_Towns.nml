@@ -22,7 +22,7 @@ alternative_sprites(town_lights, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/
 }
 //Temperate roadside trees
 template template_tree_city(x, y, z) {
-	[	 0*z+x*z, 0*z+y*z, 19*z, 41*z, -9*z, -36*z-int((z-1)/2)]
+	[	 1*z+x*z, 1*z+y*z, 19*z, 41*z, -9*z, -36*z-int((z-1)/2)]
 }
 replace town_temperate_tree(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") {
 	template_tree_city(0, 0, 1)
@@ -468,21 +468,21 @@ replace town_temperate_house_flats3c_base(1528, "../graphics/towns/temperate/64/
 
 //Large office block (with lift)
 //Building sprite
-replace town_temperate_house_largeofficeblock_building(1440, "../graphics/towns/temperate/64/pygen/largeofficeblock_8bpp.png") {
+replace town_temperate_house_largeofficeblock_building(1440, "../graphics/towns/arctic/64/pygen/largeofficeblock_8bpp.png") {
 	template_house_1x1(0,196, 1, 97)
 	template_house_1x1(0, 98, 1, 97)
 	template_house_1x1(0,	0, 1, 97)
 }
-//alternative_sprites(town_temperate_house_largeofficeblock_building, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/largeofficeblock_8bpp.png") {
+//alternative_sprites(town_temperate_house_largeofficeblock_building, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/arctic/256/pygen/largeofficeblock_8bpp.png") {
 //	template_house_1x1(0,196, 4, 97)
 //	template_house_1x1(0, 98, 4, 97)
 //	template_house_1x1(0,	0, 4, 97)
 //}
 //Lift sprite
-replace town_temperate_house_largeofficeblock_lift(1443, "../graphics/towns/temperate/64/pygen/largeofficeblock_8bpp.png") {
+replace town_temperate_house_largeofficeblock_lift(1443, "../graphics/towns/arctic/64/pygen/largeofficeblock_8bpp.png") {
 	template_general(66, 84, 4, 14, 1, 15, 1)
 }
-//replace alternative_sprites(town_temperate_house_largeofficeblock_lift, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/largeofficeblock_8bpp.png") {
+//replace alternative_sprites(town_temperate_house_largeofficeblock_lift, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/arctic/256/pygen/largeofficeblock_8bpp.png") {
 //	template_general(66, 84, 14, 4, 0, 0, 4)
 //}
 
@@ -1194,6 +1194,7 @@ replace industry_temperate_factory(2146, "../graphics/industries/temperate/64/py
 	template_house_1x1(130,202, 1, 101)
 	template_house_1x1(260,202, 1, 101)
 	template_house_1x1(390,202, 1, 101)
+	template_house_1x1(390,202, 1, 101) // Pretty hacky
 }
 //Bank
 replace industry_temperate_bank(2180, "../graphics/industries/temperate/64/pygen/bank_tiles_8bpp.png") {
@@ -1528,10 +1529,6 @@ template template_airportoilrefinery_building(x, y, z) {
 	template_house_1x1_addoffs(455,   0, z, 96,   0,  -7)
 }
 
-template template_airporttransmitter(x, y, z) {
-	template_house_1x1_addoffs(520,   0, z, 96,   0, -15)
-}
-
 replace infrastructure_general_modernairport_buildings(2650, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") {
 	template_modernairport_buildings_core(0, 0, 1)
 }
@@ -1545,7 +1542,7 @@ replace infrastructure_general_modernairportoilrefinery_building(2095, "../graph
 	template_airportoilrefinery_building(0, 0, 1)
 }
 replace infrastructure_general_modernairporttransmitter(2601, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") {
-	template_airporttransmitter(0, 0, 1)
+	template_house_1x1_addoffs(520,   0, z, 96,   0, -15)
 }
 
 //Heliport

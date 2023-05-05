@@ -1,0 +1,61 @@
+//3701-3708 powerplant smoke
+template spr3701_template(z) {
+	template_animation_frame(64, 64, -6, -64, 0, z)
+	template_animation_frame(64, 64, -6, -64, 1, z)
+	template_animation_frame(64, 64, -6, -64, 2, z)
+	template_animation_frame(64, 64, -6, -64, 3, z)
+	template_animation_frame(64, 64, -6, -64, 4, z)
+	template_animation_frame(64, 64, -6, -64, 5, z)
+	template_animation_frame(64, 64, -6, -64, 6, z)
+	template_animation_frame(64, 64, -6, -64, 7, z)
+}
+base_graphics spr3701(3701, "../graphics/effects/64/industries_powerstation_smoke_8bpp.png") { spr3701_template(1) }
+
+//3709-3724 large explosion
+template spr3709_template(z) {
+	template_animation_frame(64, 96, -31, -85, 0, z)
+	template_animation_frame(64, 96, -31, -85, 1, z)
+	template_animation_frame(64, 96, -31, -85, 2, z)
+	template_animation_frame(64, 96, -31, -85, 3, z)
+	template_animation_frame(64, 96, -31, -85, 4, z)
+	template_animation_frame(64, 96, -31, -85, 5, z)
+	template_animation_frame(64, 96, -31, -85, 6, z)
+	template_animation_frame(64, 96, -31, -85, 7, z)
+	template_animation_frame(64, 96, -31, -85, 8, z)
+	template_animation_frame(64, 96, -31, -85, 9, z)
+	template_animation_frame(64, 96, -31, -85, 10, z)
+	template_animation_frame(64, 96, -31, -85, 11, z)
+	template_animation_frame(64, 96, -31, -85, 12, z)
+	template_animation_frame(64, 96, -31, -85, 13, z)
+	template_animation_frame(64, 96, -31, -85, 14, z)
+	template_animation_frame(64, 96, -31, -85, 15, z)
+}
+base_graphics spr3709(3709, "../graphics/effects/64/explosion_large_8bpp.png") { spr3709_template(1) }
+alternative_sprites(spr3709, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/effects/256/explosion_large_8bpp.png") { spr3709_template(4) }
+
+//3725-3736 small explosion
+template spr3725_template(z) {
+	template_animation_frame(32, 32, -16, -16, 0, z)
+	template_animation_frame(32, 32, -16, -16, 1, z)
+	template_animation_frame(32, 32, -16, -16, 2, z)
+	template_animation_frame(32, 32, -16, -16, 3, z)
+	template_animation_frame(32, 32, -16, -16, 4, z)
+	template_animation_frame(32, 32, -16, -16, 5, z)
+	template_animation_frame(32, 32, -16, -16, 6, z)
+	template_animation_frame(32, 32, -16, -16, 7, z)
+	template_animation_frame(32, 32, -16, -16, 8, z)
+	template_animation_frame(32, 32, -16, -16, 9, z)
+	template_animation_frame(32, 32, -16, -16, 10, z)
+	template_animation_frame(32, 32, -16, -16, 11, z)
+}
+base_graphics spr3725(3725, "../graphics/effects/64/explosion_small_8bpp.png") { spr3725_template(1) }
+alternative_sprites(spr3725, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/effects/256/explosion_small_8bpp.png") { spr3725_template(4) }
+
+//3737-3740 breakdown smoke
+template spr3737_template(z) {
+	template_animation_frame(36, 36, -1, -36, 0, z)
+	template_animation_frame(36, 36, -1, -36, 1, z)
+	template_animation_frame(36, 36, -1, -36, 2, z)
+	template_animation_frame(36, 36, -1, -36, 3, z)
+}
+base_graphics spr3737(3737, "../graphics/effects/64/vehicle_breakdownsmoke_8bpp.png") { spr3737_template(1) }

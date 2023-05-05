@@ -1,0 +1,8 @@
+// 990-1003 foundations
+base_graphics spr990 (990, "../graphics/foundations/64/foundations_temperate_8bpp.png") { template_foundations_base(0, 0, 1) }
+alternative_sprites(spr990, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_temperate_8bpp.png") { template_foundations_base(0, 0, 4) }
+
+// 1004 map edge
+base_graphics spr1004 (1004, "../graphics/terrain/64/general_blacktile_8bpp.png") { template_flattile_single(0, 0, 1) }
+alternative_sprites(spr1004, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/general_blacktile_8bpp.png") { template_flattile_single(0, 0, 2) }
+alternative_sprites(spr1004, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/general_blacktile_8bpp.png") { template_flattile_single(0, 0, 4) }

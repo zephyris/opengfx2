@@ -1,0 +1,2 @@
+//31-40 image 2, newspaper
+base_graphics spr31(31, "../graphics/icons/1/magazine_8bpp.png") { template_highscore_background(1) }

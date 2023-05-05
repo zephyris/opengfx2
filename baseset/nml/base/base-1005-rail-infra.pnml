@@ -1,0 +1,132 @@
+// 1005-1010 rail overlays
+base_graphics spr1005(1005, "../graphics/infrastructure/64/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 1) }
+alternative_sprites(spr1005, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 2) }
+alternative_sprites(spr1005, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 4) }
+
+//1011-1036 rail tracks temperate grass
+base_graphics spr1011(1011, "../graphics/infrastructure/64/pygen/rail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1011, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/rail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1011, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/rail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1037-1062 rail tracks snowy terrain
+base_graphics spr1037(1037, "../graphics/infrastructure/64/pygen/rail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1037, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/rail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1037, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/rail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1063-1068 rail depots
+base_graphics spr1063(1063, "../graphics/stations/general/64/pygen/raildepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+
+//1069-1086 rail station
+base_graphics spr1069(1069, "../graphics/stations/general/64/pygen/railstations_8bpp.png") { template_rail_station(0, 0, 1) }
+
+//1087-1092 monorail overlays
+base_graphics spr1087(1087, "../graphics/infrastructure/64/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
+alternative_sprites(spr1087, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 4) }
+
+//1093-1118 monorail track temperate grass
+base_graphics spr1093(1093, "../graphics/infrastructure/64/pygen/monorail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1093, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/monorail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1093, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/monorail_temperate_grass_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1119-1144 monorail track snowy terrain
+base_graphics spr1119(1119, "../graphics/infrastructure/64/pygen/monorail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1119, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/monorail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1119, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/monorail_arctic_snow_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1145-1150 monorail depots
+base_graphics spr1145(1145, "../graphics/stations/general/64/pygen/monoraildepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+
+//1151-1168 monorail station
+base_graphics spr1151(1151, "../graphics/stations/general/64/pygen/monorailstations_8bpp.png") { template_rail_station(0, 0, 1) }
+
+// 1169 - 1174 Maglev overlay tracks
+base_graphics spr1169(1169, "../graphics/infrastructure/64/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
+alternative_sprites(spr1169, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 4) }
+
+// 1175 - 1200 Maglev tracks temperate grass
+base_graphics spr1175(1175, "../graphics/infrastructure/64/pygen/maglev_temperate_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1175, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_temperate_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1175, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/maglev_temperate_grass_8bpp.png") { template_railtiles(0, 0, 4) }
+
+// 1201 - 1226 Maglev track snowy terrain
+base_graphics spr1201(1201, "../graphics/infrastructure/64/pygen/maglev_arctic_snow_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr1201, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_arctic_snow_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr1201, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/maglev_arctic_snow_8bpp.png") { template_railtiles(0, 0, 4) }
+
+//1227-1232 maglev depot
+base_graphics spr1227(1227, "../graphics/stations/general/64/pygen/maglevdepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+
+//1233-1250 maglev station
+base_graphics spr1233(1233, "../graphics/stations/general/64/pygen/maglevstations_8bpp.png") { template_rail_station(0, 0, 1) }
+
+//1251-1262 rail gui buttons
+base_graphics spr1251(1251, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix(20, 20, 0, 0, 0, 9, 1) // Rail N-S
+	template_sprite_matrix(20, 20, 0, 0, 1, 9, 1) // Rail SW-NE
+	template_sprite_matrix(20, 20, 0, 0, 2, 9, 1) // Rail W-E
+	template_sprite_matrix(20, 20, 0, 0, 3, 9, 1) // Rail NW-SE
+    template_sprite_matrix(20, 20, 0, 0, 0, 11, 1) // Monorail
+	template_sprite_matrix(20, 20, 0, 0, 1, 11, 1)
+	template_sprite_matrix(20, 20, 0, 0, 2, 11, 1)
+	template_sprite_matrix(20, 20, 0, 0, 3, 11, 1)
+    template_sprite_matrix(20, 20, 0, 0, 0, 12, 1) // Maglev
+	template_sprite_matrix(20, 20, 0, 0, 1, 12, 1)
+	template_sprite_matrix(20, 20, 0, 0, 2, 12, 1)
+	template_sprite_matrix(20, 20, 0, 0, 3, 12, 1)
+}
+
+//1263-1274 rail gui cursors
+base_graphics spr1263(1263, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_cursor_matrix(1, 8, 1) // Rail N-S
+	template_cursor_matrix(2, 8, 1) // Rail SW-NE
+	template_cursor_matrix(3, 8, 1) // Rail W-E
+	template_cursor_matrix(4, 8, 1) // Rail NW-SE
+    template_cursor_matrix(1, 10, 1) // Monorail
+	template_cursor_matrix(2, 10, 1)
+	template_cursor_matrix(3, 10, 1)
+	template_cursor_matrix(4, 10, 1)
+    template_cursor_matrix(1, 11, 1) // Maglev
+	template_cursor_matrix(2, 11, 1)
+	template_cursor_matrix(3, 11, 1)
+	template_cursor_matrix(4, 11, 1)
+}
+
+//1275-1290 signals
+base_graphics spr1275(1275, "../graphics/infrastructure/64/signals_base_8bpp.png") {
+    template_signals_base(1)
+}
+
+//1291-1300 signal, depot and station gui elements
+//1291 signal icon
+base_graphics spr1291(1291, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix(20, 20, 0, 0, 5, 8, 1)
+}
+//1292-1293 signal cursors
+base_graphics spr1292(1292, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_cursor_matrix(0, 5, 1) // signal 1/2
+    template_cursor_matrix(1, 5, 1) // signal 2/2
+}
+//1294-1295 rail and road depot icons
+base_graphics spr1294(1294, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix(20, 20, 0, 0, 0, 8, 1) // rail
+    template_sprite_matrix(20, 20, 0, 0, 1, 8, 1) // road
+}
+//1296-1297 rail and road depot cursors
+base_graphics spr1296(1296, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_cursor_matrix(0, 6, 1) // rail
+    template_cursor_matrix(0, 8, 1) // road
+}
+//1298-1299 rail station icons
+base_graphics spr1298(1298, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_general(1, 148, 40, 20, 0, 0, 1) // wide
+    template_sprite_matrix(20, 20, 0, 0, 7, 7, 1) // square
+}
+//1300 rail station cursor
+base_graphics spr1300(1300, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_cursor_matrix(8, 8, 1) // rail
+}
+
+//1301-1308 rail fences
+base_graphics spr1301(1301, "../graphics/infrastructure/64/rail_fences_8bpp.png") { template_rail_fences(0, 0, 1) }
+alternative_sprites(spr1301, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_fences_8bpp.png") { template_rail_fences(0, 0, 2) }
+alternative_sprites(spr1301, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/rail_fences_8bpp.png") { template_rail_fences(0, 0, 4) }

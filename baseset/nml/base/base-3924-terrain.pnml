@@ -1,0 +1,32 @@
+// bare land (0% grassy) 3924 - 3942
+base_graphics spr3924(3924, "../graphics/terrain/64/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 144, 1) }
+alternative_sprites(spr3924, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 144, 2) }
+alternative_sprites(spr3924, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 144, 4) }
+
+// bare land (33% grassy) 3943 - 3961
+base_graphics spr3943(3943, "../graphics/terrain/64/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 96, 1) }
+alternative_sprites(spr3943, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 96, 2) }
+alternative_sprites(spr3943, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 96, 4) }
+
+//3962-3980 bare land (66% grassy)
+base_graphics spr3962(3962, "../graphics/terrain/64/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 48, 1) }
+alternative_sprites(spr3962, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 48, 2) }
+alternative_sprites(spr3962, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 48, 4) }
+
+//3981-3999 temperate grass (100% grassy)
+base_graphics spr3981(3981, "../graphics/terrain/64/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 0, 1) }
+alternative_sprites(spr3981, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 0, 2) }
+alternative_sprites(spr3981, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/temperate_groundtiles_8bpp.png") { template_groundtiles(0, 0, 4) }
+
+//4000-4022 temperate rough terrain
+base_graphics spr4000(4000, "../graphics/terrain/64/temperate_groundtiles_rough_8bpp.png") { template_groundtiles(0, 0, 1) template_groundtiles_extra(0, 0, 1) }
+alternative_sprites(spr4000, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/temperate_groundtiles_rough_8bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
+alternative_sprites(spr4000, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/temperate_groundtiles_rough_8bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
+
+//4023-4041 temperate rocky terrain
+base_graphics spr4023(4023, "../graphics/terrain/64/temperate_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 1) }
+alternative_sprites(spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/temperate_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 2) }
+alternative_sprites(spr4023, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/temperate_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 4) }
+
+//4042-4060 fully rocky ground (not used in OpenTTD or even TTD)
+base_graphics spr4042(4042, "../graphics/terrain/64/temperate_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 1) } // temperate rocky terrain used for unused sprites

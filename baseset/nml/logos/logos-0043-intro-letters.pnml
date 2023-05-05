@@ -1,0 +1,12 @@
+// 43-51 title screen characters (E and D are defined in extra/extra-openttd-gui.pnml)
+base_graphics spr43( 43, "../graphics/icons/1/title_letters_alt_8bpp.png") {
+    [   1,  62,  41,  49,   0,  -3] // larger T
+    [  48,   1,  48,  39,   0,   0] // R
+    [  92,   1,  39,  39,   0,   0] // A
+    [ 142,   1,  37,  39,   0,   0] // N
+    [ 190,   1,  34,  39,   0,   0] // S
+    [ 237,   1,  32,  39,   0,   0] // P
+    [ 148,  57, 100,  54,   0,  -8] // larger O
+    [ 239,   1,  34,  40,   0,   0] // Y
+    [ 239,   1,  34,  39,   0,   0] // C
+}

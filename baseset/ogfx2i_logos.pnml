@@ -1,0 +1,40 @@
+#include "nml/templates/zoom-sensitive.pnml"
+
+//0-10 unused, left empty
+base_graphics spr0(0, "") {
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+}
+
+#include "nml/logos/logos-0011-highscore.pnml"
+#include "nml/logos/logos-0021-newspaper-2051.pnml"
+#include "nml/logos/logos-0031-tycoon-of-century.pnml"
+
+//41-42 unused, left empty
+base_graphics spr41(41, "") {
+    template_empty()
+    template_empty()
+}
+
+#include "nml/logos/logos-0043-intro-letters.pnml"
+#include "sprites/logos/logos-0052-original-map-generator.pnml"
+#include "sprites/logos/logos-0089-gui-clima.pnml"
+
+//97-102 unused, left empty
+base_graphics spr97(97, "") {
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+    template_empty()
+}

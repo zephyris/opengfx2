@@ -1,0 +1,4 @@
+//407-432 rail on desert ground
+base_graphics spr407(407, "../graphics/infrastructure/64/pygen/rail_tropical_desert_8bpp.png") { template_railtiles(0, 0, 1) }
+alternative_sprites(spr407, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/rail_tropical_desert_8bpp.png") { template_railtiles(0, 0, 2) }
+alternative_sprites(spr407, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/rail_tropical_desert_8bpp.png") { template_railtiles(0, 0, 4) }

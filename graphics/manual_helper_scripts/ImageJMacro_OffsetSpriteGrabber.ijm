@@ -1,6 +1,8 @@
 
+//===Base graphics===
 //Faces: 805 184
 //Signals, base: 1275 16
+//Trees, tropical, banana: 1821 14
 //Trees, tropical, agave: 1849 14
 //Trees, tropical, palm & cacti: 1884 49
 //Trees, toyland, all: 1947 63
@@ -17,10 +19,18 @@
 //FX, vehicle, helicopter rotor: 3901 4
 //FX, bubble factory, bubble: 4748 15
 
-start=2055;
-number=6;
+//===Ogfx Extra===
+//Signals 1: 2035 48
+//Signals 2: 2084 192
+//Signals 2: 2281 192
+
+start=1821;
+number=14;
 name="ogfx1_base";
 //name="trg1r";
+//name="ogfxe_extra";
+
+
 
 width=256;
 height=256;

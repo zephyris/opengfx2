@@ -1,0 +1,11 @@
+//543-554 tropical farm
+base_graphics spr543(543, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }
+base_graphics spr545(545, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }
+base_graphics spr547(547, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(130, 0, 1, 80) }
+base_graphics spr548(548, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(130, 0, 1, 80) }
+base_graphics spr549(549, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(195, 0, 1, 80) }
+base_graphics spr550(550, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(195, 0, 1, 80) }
+base_graphics spr551(551, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(260, 0, 1, 80) }
+base_graphics spr552(552, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(260, 0, 1, 80) }
+base_graphics spr553(553, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(325, 0, 1, 80) }
+base_graphics spr554(554, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(325, 0, 1, 80) }

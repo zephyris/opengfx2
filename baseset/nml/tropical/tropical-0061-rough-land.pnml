@@ -1,0 +1,9 @@
+//61-83 tropical rough terrain
+base_graphics spr61(61, "../graphics/terrain/64/tropical_groundtiles_rough_8bpp.png") { template_groundtiles(0, 0, 1) template_groundtiles_extra(0, 0, 1) }
+alternative_sprites(spr61, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/tropical_groundtiles_rough_8bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
+alternative_sprites(spr61, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/tropical_groundtiles_rough_8bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
+
+//84-102 tropical rocky terrain
+base_graphics spr84(84, "../graphics/terrain/64/tropical_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 1) }
+alternative_sprites(spr84, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/tropical_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 2) }
+alternative_sprites(spr84, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/tropical_groundtiles_rocks_8bpp.png") { template_groundtiles(0, 0, 4) }

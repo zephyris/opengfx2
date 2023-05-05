@@ -1,0 +1,14 @@
+// SLOPED_RAILS 0 rail
+replacenew sloped_rails0(SLOPED_RAILS, "../graphics/infrastructure/64/rail_bits_masked_8bpp.png", 0) { template_railoverlay_extra(0, 0, 1) }
+alternative_sprites(sloped_rails0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_bits_masked_8bpp.png") { template_railoverlay_extra(0, 0, 2) }
+alternative_sprites(sloped_rails0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/rail_bits_masked_8bpp.png") { template_railoverlay_extra(0, 0, 4) }
+
+// SLOPED_RAILS 4 monorail
+replacenew sloped_rails4(SLOPED_RAILS, "../graphics/infrastructure/64/monorail_bits_masked_8bpp.png", 4) { template_railoverlay_extra(0, 0, 1) }
+//alternative_sprites(sloped_rails4, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/monorail_bits_masked_8bpp.png") { template_railoverlay_extra(0, 0, 2) }
+alternative_sprites(sloped_rails4, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/monorail_bits_masked_8bpp.png") { template_railoverlay_extra(0, 0, 4) }
+
+// SLOPED_RAILS 8 maglev
+replacenew sloped_rails8(SLOPED_RAILS, "../graphics/infrastructure/64/maglev_bits_8bpp.png", 8) { template_railoverlay_extra(0, 0, 1) }
+//alternative_sprites(sloped_rails8, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/maglev_bits_8bpp.png") { template_railoverlay_extra(0, 0, 2) }
+alternative_sprites(sloped_rails8, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/maglev_bits_8bpp.png") { template_railoverlay_extra(0, 0, 4) }

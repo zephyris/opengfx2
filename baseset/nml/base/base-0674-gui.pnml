@@ -1,0 +1,143 @@
+//674-678 company colour swatches
+base_graphics spr674( 674, "../graphics/icons/1/company_colour_swatches_8bpp.png") {
+    [ 1,      1,  34,   1,   0,   0]
+    [ 49,     1,  16,  16,   0,   0]
+    [ 81,     1,  16,  20,   0,   0]
+    [ 113,    1,  20,  20,   0,   0]
+    [ 145,    1,  40,  20,   0,   0]
+}
+
+//icons and cursors
+//679-681 toolbar icons
+base_graphics spr679( 679, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 0, 1) // main toolbar: subsidies
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 0, 1) // main toolbar: news settings
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 0, 1) // unused(?): bin
+}
+//682 window maximise icon
+base_graphics spr682( 682, "../graphics/icons/1/icons_10px_8bpp.png") {
+    template_sprite_matrix_nocrop(10, 10, 0, 0, 14, 1, 1) // window titlebar: maximise
+}
+//683 vehicle window icons
+base_graphics spr683( 683, "../graphics/icons/1/icons_16px_8bpp.png") {
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 0, 0, 1) // vehicle window: centre map on vehicle
+}
+//684 toolbar icons
+base_graphics spr684( 684, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 0, 1) // main toolbar: company league table
+}
+//685-692 vehicle window icons
+base_graphics spr685( 685, "../graphics/icons/1/icons_16px_8bpp.png") {
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 1, 0, 1) // vehicle window: send to rail depot
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 2, 0, 1) // vehicle window: send to road depot
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 3, 0, 1) // vehicle window: send to hangar
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 4, 0, 1) // vehicle window: send to ship depot
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 5, 0, 1) // vehicle window: ignore signals
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 6, 0, 1) // vehicle window: set orders
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 7, 0, 1) // vehicle window: details
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 8, 0, 1) // vehicle window: refit
+}
+//693-695 toolbar icons
+base_graphics spr693( 693, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 2, 1) // construction toolbar: bouy
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 2, 1) // landscaping toolbar: raise land
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 2, 1) // landscaping toolbar: lower land
+}
+//696-702 cursors
+base_graphics spr696( 696, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_cursor_matrix(0, 2, 1) // raise land: 1/3
+    template_cursor_matrix(1, 2, 1) // raise land: 2/3
+    template_cursor_matrix(2, 2, 1) // raise land: 3/3
+    template_cursor_matrix(3, 2, 1) // lower land: 1/3
+    template_cursor_matrix(4, 2, 1) // lower land: 2/3
+    template_cursor_matrix(5, 2, 1) // lower land: 3/3
+    template_cursor_matrix(4, 13, 1) // buoy
+}
+
+//703 toolbar icons
+base_graphics spr703( 703, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 2, 1) // construction toolbar: dynamite
+}
+//704-707 cursors
+base_graphics spr704( 704, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_cursor_matrix(0, 3, 1) // dynamite: 1/4
+    template_cursor_matrix(1, 3, 1) // dynamite: 2/4
+    template_cursor_matrix(2, 3, 1) // dynamite: 3/4
+    template_cursor_matrix(3, 3, 1) // dynamite: 4/4
+}
+//708 toolbar icons
+base_graphics spr708( 708, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 0, 1) // main toolbar: map
+}
+//709-714 toolbar icons
+base_graphics spr709( 709, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 3, 1) // jukebox: skip to previous track
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 3, 1) // jukebox: skip to next track
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 3, 1) // jukebox: stop
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 3, 1) // jukebox: play
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 0, 1) // main toolbar: jukebox
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 2, 1) // construction toolbar: remove
+}
+//715 vehicle window icons
+base_graphics spr715( 715, "../graphics/icons/1/icons_16px_8bpp.png") {
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 9, 0, 1) // vehicle view: turn around
+}
+//716-722 cursors
+base_graphics spr716( 716, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_cursor_matrix(0, 4, 1) // vehicle orders: 1/3
+    template_cursor_matrix(1, 4, 1) // vehicle orders: 2/3
+    template_cursor_matrix(2, 4, 1) // vehicle orders: 3/3
+    template_cursor_matrix(0, 1, 1) // cursor: land area information
+    template_cursor_matrix(1, 1, 1) // cursor: build hq
+    template_cursor_matrix(0, 6, 1) // cursor: build depot
+    template_cursor_matrix(2, 1, 1) // cursor: place sign
+}
+//723-746 toolbar icons
+base_graphics spr723( 723, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 0, 1) // main toolbar: information
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 1, 1) // main toolbar: save 1/2
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 1, 1) // main toolbar: save 2/2
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 1, 1) // main toolbar: pause
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 4, 1) // main toolbar: build rail
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 4, 1) // main toolbar: build road
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 4, 1) // main toolbar: build water
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 4, 1) // main toolbar: build air
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 5, 1) // main toolbar: manage trains
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 5, 1) // main toolbar: manage road
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 5, 1) // main toolbar: manage ships
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 5, 1) // main toolbar: manage air
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 1, 1) // main toolbar: zoom in
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 1, 1) // main toolbar: zoom out
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 1, 1) // main toolbar: finance
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 6, 1) // minimap: elevation
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 6, 1) // minimap: vehicles
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 6, 1) // minimap: infrastructure
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 6, 1) // main toolbar/minimap: industries
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 6, 1) // main toolbar/minimap: trees
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 6, 1) // main toolbar/minimap: companies
+    template_general(64, 148, 39, 20, 0, 0, 1) // construction toolbar: build airport
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 1, 1) // main toolbar: graphs
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 7, 1) // construction toolbar: build dock
+}
+//727 company list company colour blob
+base_graphics spr747( 747, "../graphics/icons/1/company_colour_swatches_8bpp.png") {
+    [ 1, 9, 14, 8, 0, 0] // company cover oval
+}
+//748- toolbar icons
+base_graphics spr748( 748, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 8, 1) // construction toolbar: build depot
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 7, 1) // construction toolbar: build bus stop
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 7, 1) // construction toolbar: build lorry stop
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 1, 1) // main toolbar: options
+}
+
+//752-770 tile selectors
+base_graphics spr752(752, "../graphics/selectors/64/selector_tile_8bpp.png") {
+	template_selectors_tile(0, 0, 1)
+}
+alternative_sprites(spr752, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/selectors/128/selector_tile_8bpp.png") {
+	template_selectors_tile(0, 0, 2)
+}
+alternative_sprites(spr752, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/selectors/256/selector_tile_8bpp.png") {
+	template_selectors_tile(0, 0, 4)
+}

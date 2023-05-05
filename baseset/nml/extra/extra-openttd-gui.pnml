@@ -1,0 +1,224 @@
+// INCOMPLETE UPDATE
+
+// OTTD_GUI 0 tile border hightlights
+replacenew ottd_gui0(OTTD_GUI,  "../graphics/selectors/64/selector_halftile_8bpp.png", 0) { template_selectors_halftile(0, 0, 1) }
+
+// OTTD_GUI 12 title screen letters
+replacenew ottd_gui12(OTTD_GUI, "../graphics/icons/1/title_letters_alt_8bpp.png", 12) {
+	[ 426,   1,  33,  39,   0,   0] // E
+    [ 106,  62,  43,  49,  -7,  -3] // larger D
+}
+
+replacenew ottd_gui1(OTTD_GUI, "", 14) {
+                                                                                  // bridge piers colour 1 (~copper)
+	[ 146,  632,   4,   8,  28,  16, "sprites/png/gui/gui04.png"]
+	[ 162,  632,   4,   9,   0,   1, "sprites/png/gui/gui04.png"]
+	[ 178,  632,  32,  23,   0,   1, "sprites/png/gui/gui04.png"]
+	[ 226,  632,   4,   8, -31,  15, "sprites/png/gui/gui04.png"]
+	[ 242,  632,   4,   9,  -3,   0, "sprites/png/gui/gui04.png"]
+	[ 258,  632,  32,  23, -31,   0, "sprites/png/gui/gui04.png"]
+                                                                                  // bridge piers colour 2 (~copper)
+	[ 306,  632,   4,   8,  28,  16, "sprites/png/gui/gui04.png"]
+	[ 322,  632,   4,   9,   0,   1, "sprites/png/gui/gui04.png"]
+	[ 338,  632,  32,  23,   0,   1, "sprites/png/gui/gui04.png"]
+	[ 386,  632,   4,   8, -31,  15, "sprites/png/gui/gui04.png"]
+	[ 402,  632,   4,   9,  -3,   0, "sprites/png/gui/gui04.png"]
+	[ 418,  632,  32,  23, -31,   0, "sprites/png/gui/gui04.png"]
+                                                                                  // bridge piers colour 3 (~copper)
+	[ 466,  632,   4,   8,  28,  16, "sprites/png/gui/gui04.png"]
+	[ 482,  632,   4,   9,   0,   1, "sprites/png/gui/gui04.png"]
+	[ 498,  632,  32,  23,   0,   1, "sprites/png/gui/gui04.png"]
+	[ 546,  632,   4,   8, -31,  15, "sprites/png/gui/gui04.png"]
+	[ 562,  632,   4,   9,  -3,   0, "sprites/png/gui/gui04.png"]
+	[ 578,  632,  32,  23, -31,   0, "sprites/png/gui/gui04.png"]
+                                                                                  // bridge piers colour 4 (silver)
+	[ 626,  632,   4,   8,  28,  16, "sprites/png/gui/gui04.png"]
+	[ 642,  632,   4,   9,   0,   1, "sprites/png/gui/gui04.png"]
+	[ 658,  632,  32,  23,   0,   1, "sprites/png/gui/gui04.png"]
+	[ 706,  632,   4,   8, -31,  15, "sprites/png/gui/gui04.png"]
+	[ 722,  632,   4,   9,  -3,   0, "sprites/png/gui/gui04.png"]
+	[ 738,  632,  32,  23, -31,   0, "sprites/png/gui/gui04.png"]
+}
+
+replacenew ottd_gui38(OTTD_GUI, "", 38) {
+	[ 786,  632,  10,  10,   0,   0, "sprites/png/gui/gui04.png"]                   // newgrf settings: square status icon
+	[   2,  696,   8,   8,   1,   1, "sprites/png/gui/gui04.png"]                   // server join menu: circular status icon
+	[  18,  696,   7,   9,   1,   0, "sprites/png/gui/gui04.png"]                   // server join menu: password protected
+	[  34,  696,   9,   7,   0,   1, "sprites/png/gui/gui04.png"]                   // content download menu: empty check box
+	[  50,  696,   9,   7,   0,   1, "sprites/png/gui/gui04.png"]                   // content download menu: checked check box
+	[  66,  696,  10,  10,   0,   0, "sprites/png/gui/gui04.png"]                   // newgrf settings: warning icon
+	[  82,  696,   7,   7,   3,   3, "sprites/png/gui/gui04.png"]                   // window decoration: resize (ltr languages)
+	[  98,  696,   7,   4,   1,   2, "sprites/png/gui/gui04.png"]                   // window decoration: arrow up
+	[ 114,  696,   7,   4,   1,   2, "sprites/png/gui/gui04.png"]                   // window decoration: arrow down
+	[ 130,  696,   4,   7,   1,   1, "sprites/png/gui/gui04.png"]                   // window decoration: arrow left
+	[ 146,  696,   4,   7,   2,   1, "sprites/png/gui/gui04.png"]                   // window decoration: arrow right
+	[ 162,  696,   8,   8,   1,   1, "sprites/png/gui/gui04.png"]                   // window decoration: go to default directory
+	[ 178,  696,   9,   9,   1,   0, "sprites/png/gui/gui04.png"]                   // window decoration: (?) list (?)
+	[ 194,  696,   7,   8,   1,   1, "sprites/png/gui/gui04.png"]                   // window decoration: sticky window
+	[ 210,  696,   8,   8,   1,   1, "sprites/png/gui/gui04.png"]                   // window decoration: make window sticky
+	[ 226,  696,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // rail toolbar: autorail normal rail
+}
+
+replacenew ottd_gui54(OTTD_GUI, "", 54) { [ 258,  696,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: autorail normal rail
+replacenew ottd_gui55(OTTD_GUI, "", 55) { [ 306,  696,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: convert to normal rail
+replacenew ottd_gui56(OTTD_GUI, "", 56) { [ 338,  696,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: convert to normal rail
+replacenew ottd_gui57(OTTD_GUI, "", 57) { [ 386,  696,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: autorail e-rail
+replacenew ottd_gui58(OTTD_GUI, "", 58) { [ 418,  696,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: autorail e-rail
+replacenew ottd_gui59(OTTD_GUI, "", 59) { [ 466,  696,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: convert to e-rail
+replacenew ottd_gui60(OTTD_GUI, "", 60) { [ 498,  696,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: convert to e-rail
+replacenew ottd_gui61(OTTD_GUI, "", 61) { [ 546,  696,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: depot
+replacenew ottd_gui62(OTTD_GUI, "", 62) { [ 578,  696,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: place depot
+replacenew ottd_gui63(OTTD_GUI, "", 63) { [ 626,  696,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: autorail monorail
+replacenew ottd_gui64(OTTD_GUI, "", 64) { [ 658,  696,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: autorail monorail
+replacenew ottd_gui65(OTTD_GUI, "", 65) { [ 706,  696,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: convert to monorail
+replacenew ottd_gui66(OTTD_GUI, "", 66) { [ 738,  696,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: convert to monorail
+replacenew ottd_gui67(OTTD_GUI, "", 67) { [   2,  744,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: depot monorail
+replacenew ottd_gui68(OTTD_GUI, "", 68) { [  34,  744,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: place monorail depot
+replacenew ottd_gui69(OTTD_GUI, "", 69) { [  82,  744,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: autorail maglev
+replacenew ottd_gui70(OTTD_GUI, "", 70) { [ 114,  744,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: autorail maglev
+replacenew ottd_gui71(OTTD_GUI, "", 71) { [ 162,  744,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: convert to maglev
+replacenew ottd_gui72(OTTD_GUI, "", 72) { [ 194,  744,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: convert to maglev
+replacenew ottd_gui73(OTTD_GUI, "", 73) { [ 242,  744,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: depot maglev
+replacenew ottd_gui74(OTTD_GUI, "", 74) { [ 274,  744,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: place maglev depot
+replacenew ottd_gui75(OTTD_GUI, "", 75) { [ 322,  744,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // (?)
+replacenew ottd_gui76(OTTD_GUI, "", 76) { [ 354,  744,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // rail toolbar: waypoint
+replacenew ottd_gui77(OTTD_GUI, "", 77) { [ 386,  744,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor rail: place waypoint
+replacenew ottd_gui78(OTTD_GUI, "", 78) { [ 434,  744,  62,  40, -31,  -9, "sprites/png/gui/gui04.png"] }                 // default waypoint building part 1 SW-NE view
+replacenew ottd_gui79(OTTD_GUI, "", 79) { [ 514,  744,  62,  40, -52, -20, "sprites/png/gui/gui04.png"] }                 // default waypoint building part 2 SW-NE view
+replacenew ottd_gui80(OTTD_GUI, "", 80) { [ 594,  744,  62,  40, -31,  -9, "sprites/png/gui/gui04.png"] }                 // default waypoint building part 1 NW-SE view
+replacenew ottd_gui81(OTTD_GUI, "", 81) { [ 674,  744,  62,  40, -10, -20, "sprites/png/gui/gui04.png"] }                 // default waypoint building part 2 NW-SE view
+replacenew ottd_gui82(OTTD_GUI, "", 82) { [ 754,  744,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // road toolbar: autoroad
+replacenew ottd_gui83(OTTD_GUI, "", 83) { [   2,  808,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor road: autoroad
+replacenew ottd_gui84(OTTD_GUI, "", 84) { [  50,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // road toolbar: autoroad tram
+replacenew ottd_gui85(OTTD_GUI, "", 85) { [  82,  808,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor road: autoroad tram
+replacenew ottd_gui86(OTTD_GUI, "", 86) { [ 174,  472,  39,  18,  -9,  -9, ANIM, "sprites/png/infrastructure/airports.png"] }   // helipad
+replacenew ottd_gui87(OTTD_GUI, "", 87) { [ 178,  808,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor waterways: place ship lift
+replacenew ottd_gui88(OTTD_GUI, "", 88) { [ 226,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // waterways toolbar: build canal
+replacenew ottd_gui89(OTTD_GUI, "", 89) { [ 258,  808,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor waterways: place canal
+replacenew ottd_gui90(OTTD_GUI, "", 90) { [ 306,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // main toolbar: fast forward
+replacenew ottd_gui91(OTTD_GUI, "", 91) { [ 338,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // landscaping toolbar: level land
+replacenew ottd_gui92(OTTD_GUI, "", 92) { [ 370,  808,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor landscaping: level land
+replacenew ottd_gui93(OTTD_GUI, "", 93) {
+	[ 418,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell single train
+	[ 450,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell single road vehicle
+	[ 482,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell single ship
+	[ 514,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell single plane
+	[ 546,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell all trains
+	[ 578,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell all road vehicles
+	[ 610,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell all ships
+	[ 642,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell all aircrafts
+	[ 674,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: autoreplace all trains in depot
+	[ 706,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: autoreplace all road vehicles in depot
+	[ 738,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: autoreplace all ships in depot
+	[ 770,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: autoreplace all aircrafts in hangar
+	[   2,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell whole train
+	[  34,  856,  16,  16,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle view: clone train
+	[  66,  856,  16,  16,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle view: clone road vehicle
+	[  98,  856,  16,  16,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle view: clone ship
+	[ 130,  856,  16,  16,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle view: clone aircraft
+}
+
+replacenew ottd_gui110(OTTD_GUI, "", 110) {
+	[ 162,  856,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor clone vehicle: select train to clone
+	[ 210,  856,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor clone vehicle: select road vehicle to clone
+	[ 258,  856,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor clone vehicle: select ship to clone
+	[ 306,  856,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor clone vehicle: select aircraft to clone
+}
+replacenew ottd_gui114(OTTD_GUI, "", 114) {
+	[ 354,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: create new train group
+	[ 386,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: create new road vehicles group
+	[ 418,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: create new ships group
+	[ 450,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: create new aircrafts group
+	[ 482,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: delete train group
+	[ 514,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: delete road vehicles group
+	[ 546,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: delete ships group
+	[ 578,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: delete aircrafts group
+	[ 610,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: rename train group
+	[ 642,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: rename road vehicles group
+	[ 674,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: rename ship group
+	[ 706,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: rename aircrafts group
+	[ 738,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: don't autoreplace this group of trains
+	[ 770,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: don't autoreplace this group of road vehicles
+	[   2,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: don't autoreplace this group of ships
+	[  34,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: don't autoreplace this group of aircrafts
+	[  66,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: select no autoreplace for this group of trains
+	[  98,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: select no autoreplace for this group of road vehicles
+	[ 130,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: select no autoreplace for this group of ships
+	[ 162,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: select no autoreplace for this group of aircrafts
+	[ 194,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // road toolbar: build one-way roads
+	[ 226,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // signal toolbar: convert signals
+	[ 258,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // waterways toolbar: build rivers
+}
+
+replacenew ottd_gui137(OTTD_GUI, "", 137) {
+	[ 290,  904,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor waterways: build rivers
+}
+replacenew ottd_gui138(OTTD_GUI, "", 138) {
+	[ 338,  904,   7,   7,   1,   3, "sprites/png/gui/gui04.png"]                   // (?) arrow left
+	[ 354,  904,   7,   7,   2,   3, "sprites/png/gui/gui04.png"]                   // (?) arrow right
+	[ 370,  904,  10,   9,   0,   1, "sprites/png/gui/gui04.png"]                   // (?) arrow down
+	[ 386,  904,  10,   9,   0,   0, "sprites/png/gui/gui04.png"]                   // (?) arrow up
+	[ 402,  904,  11,   7,   0,   1, "sprites/png/gui/gui04.png"]                   // (?) arrow left
+	[ 418,  904,   9,   9,   0,   0, "sprites/png/gui/gui04.png"]                   // (?) command symbol
+	[ 434,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // main toolbar: switch toolbars
+	[ 466,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // waterways toolbar: build aquaduct
+}
+replacenew ottd_gui146(OTTD_GUI, "", 146) {
+	[ 498,  904,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor waterways: build aquaduct
+}
+replacenew ottd_gui147(OTTD_GUI, "", 147) {
+	[   0,    0,  10,  10,   0,   0, "sprites/png/extra/extra-gui-plus-minus.png"]  // (?)
+	[  16,    0,  10,  10,   0,   0, "sprites/png/extra/extra-gui-plus-minus.png"]  // (?)
+	[  82,  705,   7,   7,   0,   3, "sprites/png/gui/gui04.png"]                   // window decorations: resize window (rtl languages)
+	[   2,  125,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // juke box: play (rtl languages)
+	[ 242,  352,   7,   8,   1,   1, "sprites/png/gui/gui04.png"]                   // (?) to bottom
+	[ 256,  352,   7,   8,   1,   1, "sprites/png/gui/gui04.png"]                   // (?) to top
+}
+replacenew ottd_gui153(OTTD_GUI, "", 153) {
+	[   0,    0,   7,   8,   1,   1, "sprites/png/extra/extra-gui-bug.png"]         // window decorations: debugging icon
+	[ 401,  201,   9,   9,   0,   0, "sprites/png/extra/extra-gui-profit.png"]      // Profit not applicable
+	[ 420,  201,   9,   9,   0,   0, "sprites/png/extra/extra-gui-profit.png"]      // Profit negative
+	[ 439,  201,   9,   9,   0,   0, "sprites/png/extra/extra-gui-profit.png"]      // Profit some
+	[ 458,  201,   9,   9,   0,   0, "sprites/png/extra/extra-gui-profit.png"]      // Profit lots
+	[ 401,   99,   8,  10,   1,   0, "sprites/png/extra/extra-gui-profit.png"]      // Unread news
+	[   6,    7,  13,  10,   0,   0, "sprites/png/extra/extra-gui-exclusive.png"]   // Exclusive transport rights
+	[  22,   23,  12,  10,   0,   0, "sprites/png/extra/extra-gui-autoreplace.png"] // vehicle groups: Autoreplace protection
+	[  22,    2,  12,  10,   0,   0, "sprites/png/extra/extra-gui-autoreplace.png"] // vehicle groups: Autoreplace defined
+}
+replacenew ottd_gui162(OTTD_GUI, "", 162) {
+	[   0,    0,   1,   1,   0,   0, "sprites/png/miscellaneous/empty.png"]         // no town rating. Empty sprite on purpose
+	[   0,   22,  10,  10,   0,   0, "sprites/png/gui/town_indicators.png"]         // appalling town rating, sad, red smily
+	[   0,   33,  10,  10,   0,   0, "sprites/png/gui/town_indicators.png"]         // mediocre town rating, yellow smily
+	[   0,   44,  10,  10,   0,   0, "sprites/png/gui/town_indicators.png"]         // very good town rating, happy, green smily
+	[   3,   10,  14,  10,   0,   0, "sprites/png/extra/extra-gui-delete.png"]      // delete to left
+	[  19,   10,  14,  10,   0,   0, "sprites/png/extra/extra-gui-delete.png"]      // delete to right
+	[   0,    0,   8,   8,   0,   0, NOCROP, "sprites/png/extra/extra-gui-window-default.png"]  // Window decorations: default size
+	[   0,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book main toolbar button
+	[  26,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book: inspect place
+	[  52,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book: incomplete goal
+	[  78,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book: completed goal
+	[ 104,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book: un-accessible goal
+	[   0,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-cargoflow.png"]   // minimap: cargoflow icon
+}
+replacenew ottd_gui175(OTTD_GUI, "", 175) {
+	[   0,  0,  20,  20,   0,   0, "sprites/png/gui/group_liveries.png"]         // train group livery icon
+	[   22,  0,  20,  20,   0,   0, "sprites/png/gui/group_liveries.png"]         // road vehicle group livery icon
+	[   44,   0,  20,  20,   0,   0, "sprites/png/gui/group_liveries.png"]         // boat group livery icon
+	[   66,   0,  20,  20,   0,   0, "sprites/png/gui/group_liveries.png"]         // aircraft group livery icon
+}
+replacenew ottd_gui179(OTTD_GUI, "", 179) { [   0,  0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-build-tram.png"] } // global toolbar build tram
+replacenew ottd_gui180(OTTD_GUI, "", 180) { [   0,  0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-convert-road-tram.png"] } // road toolbar: convert road icon
+replacenew ottd_gui181(OTTD_GUI, "", 181) { [  32,  0,  32,  32,   0,   0, "sprites/png/extra/extra-gui-convert-road-tram.png"] } // cursor convert road
+replacenew ottd_gui182(OTTD_GUI, "", 182) { [  80,  0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-convert-road-tram.png"] } // road toolbar: convert tram icon
+replacenew ottd_gui183(OTTD_GUI, "", 183) { [ 112,  0,  32,  32,   0,   0, "sprites/png/extra/extra-gui-convert-road-tram.png"] } // cursor convert tram
+replacenew ottd_gui184(OTTD_GUI, "", 184) {
+    [  4,  4,  10,  10,   0,   0, NOCROP, "sprites/png/extra/extra-gui-window-icons.png"] // rename entity
+    [ 42,  4,  11,  10,   0,   0, NOCROP, "sprites/png/extra/extra-gui-window-icons.png"] // go to location
+}
+replacenew ottd_gui186(OTTD_GUI, "", 186) {
+	[    0,  0,  12,  10,   0,   0, "sprites/png/gui/network.png"]         // network chat icon
+	[   22,  0,  12,  10,   0,   0, "sprites/png/gui/network.png"]         // network settings icon
+	[   44,  0,  12,  10,   0,   0, "sprites/png/gui/network.png"]         // network join icon
+	[   66,  0,  10,  10,   0,   0, "sprites/png/gui/network.png"]         // network player icon
+	[   86,  0,  10,  10,   0,   0, "sprites/png/gui/network.png"]         // network crown icon
+}

@@ -1,0 +1,4 @@
+//211-229 arctic road
+base_graphics spr211(211, "../graphics/infrastructure/64/pygen/road_arctic_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
+alternative_sprites(spr211, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_arctic_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
+alternative_sprites(spr211, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_arctic_grass_8bpp.png") { template_roadtiles(0, 0, 4) }

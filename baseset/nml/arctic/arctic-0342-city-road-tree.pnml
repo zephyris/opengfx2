@@ -1,0 +1,2 @@
+// 342 arctic city roadside tree
+base_graphics spr342(342, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city(20, 0, 1) }
