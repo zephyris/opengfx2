@@ -50,7 +50,7 @@ base_graphics spr2587(2587, "../graphics/bridges/64/pygen/tubular_maglev_8bpp.pn
 
 //2593 bridge cursor
 base_graphics spr2593( 2593, "../graphics/cursors/1/cursors_8bpp.png") {
-    template_sprite_matrix(32, 32, 0, 0, 0, 14, 1)
+    template_cursor_matrix(0, 14, 1)
 }
 
 //2594-2600 bridge icons

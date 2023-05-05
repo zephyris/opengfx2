@@ -82,6 +82,11 @@ template template_animation_frame(w, h, ox, oy, f, z) {
 	[1*z+f*(1+w)*z, 1*z, w*z, h*z, ox*z, oy*z]
 }
 
+// GUI templates: Cursors
+template template_cursor_matrix(xindex, yindex, z) {
+	template_sprite_matrix(32, 32, 0, 0, xindex, yindex, z)
+}
+
 // Sprite sets
 
 // Terrain: Single flat tile

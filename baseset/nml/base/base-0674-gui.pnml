@@ -45,13 +45,13 @@ base_graphics spr693( 693, "../graphics/icons/1/icons_20px_8bpp.png") {
 }
 //696-702 cursors
 base_graphics spr696( 696, "../graphics/cursors/1/cursors_8bpp.png") {
-    template_sprite_matrix(32, 32, 0, 0, 0, 2, 1) // raise land: 1/3
-    template_sprite_matrix(32, 32, 0, 0, 1, 2, 1) // raise land: 2/3
-    template_sprite_matrix(32, 32, 0, 0, 2, 2, 1) // raise land: 3/3
-    template_sprite_matrix(32, 32, 0, 0, 3, 2, 1) // lower land: 1/3
-    template_sprite_matrix(32, 32, 0, 0, 4, 2, 1) // lower land: 2/3
-    template_sprite_matrix(32, 32, 0, 0, 5, 2, 1) // lower land: 3/3
-    template_sprite_matrix(32, 32, 0, 0, 4, 13, 1) // buoy
+    template_cursor_matrix(0, 2, 1) // raise land: 1/3
+    template_cursor_matrix(1, 2, 1) // raise land: 2/3
+    template_cursor_matrix(2, 2, 1) // raise land: 3/3
+    template_cursor_matrix(3, 2, 1) // lower land: 1/3
+    template_cursor_matrix(4, 2, 1) // lower land: 2/3
+    template_cursor_matrix(5, 2, 1) // lower land: 3/3
+    template_cursor_matrix(4, 13, 1) // buoy
 }
 
 //703 toolbar icons
@@ -60,10 +60,10 @@ base_graphics spr703( 703, "../graphics/icons/1/icons_20px_8bpp.png") {
 }
 //704-707 cursors
 base_graphics spr704( 704, "../graphics/cursors/1/cursors_8bpp.png") {
-    template_sprite_matrix(32, 32, 0, 0, 0, 3, 1) // dynamite: 1/4
-    template_sprite_matrix(32, 32, 0, 0, 1, 3, 1) // dynamite: 2/4
-    template_sprite_matrix(32, 32, 0, 0, 2, 3, 1) // dynamite: 3/4
-    template_sprite_matrix(32, 32, 0, 0, 3, 3, 1) // dynamite: 4/4
+    template_cursor_matrix(0, 3, 1) // dynamite: 1/4
+    template_cursor_matrix(1, 3, 1) // dynamite: 2/4
+    template_cursor_matrix(2, 3, 1) // dynamite: 3/4
+    template_cursor_matrix(3, 3, 1) // dynamite: 4/4
 }
 //708 toolbar icons
 base_graphics spr708( 708, "../graphics/icons/1/icons_20px_8bpp.png") {
@@ -84,13 +84,13 @@ base_graphics spr715( 715, "../graphics/icons/1/icons_16px_8bpp.png") {
 }
 //716-722 cursors
 base_graphics spr716( 716, "../graphics/cursors/1/cursors_8bpp.png") {
-    template_sprite_matrix(32, 32, 0, 0, 0, 4, 1) // vehicle orders: 1/3
-    template_sprite_matrix(32, 32, 0, 0, 1, 4, 1) // vehicle orders: 2/3
-    template_sprite_matrix(32, 32, 0, 0, 2, 4, 1) // vehicle orders: 3/3
-    template_sprite_matrix(32, 32, 0, 0, 0, 1, 1) // cursor: land area information
-    template_sprite_matrix(32, 32, 0, 0, 1, 1, 1) // cursor: build hq
-    template_sprite_matrix(32, 32, 0, 0, 0, 6, 1) // cursor: build depot
-    template_sprite_matrix(32, 32, 0, 0, 2, 1, 1) // cursor: place sign
+    template_cursor_matrix(0, 4, 1) // vehicle orders: 1/3
+    template_cursor_matrix(1, 4, 1) // vehicle orders: 2/3
+    template_cursor_matrix(2, 4, 1) // vehicle orders: 3/3
+    template_cursor_matrix(0, 1, 1) // cursor: land area information
+    template_cursor_matrix(1, 1, 1) // cursor: build hq
+    template_cursor_matrix(0, 6, 1) // cursor: build depot
+    template_cursor_matrix(2, 1, 1) // cursor: place sign
 }
 //723-746 toolbar icons
 base_graphics spr723( 723, "../graphics/icons/1/icons_20px_8bpp.png") {

@@ -124,5 +124,5 @@ base_graphics spr(1947, "../graphics/trees/64/toyland_trees_8bpp.png") {
 
 //2010 tree cursor
 base_graphics spr2010( 2010, "../graphics/cursors/1/cursors_8bpp.png") {
-    template_sprite_matrix(32, 32, 0, 0, 10, 1, 1)
+    template_cursor_matrix(10, 1, 1)
 }
