@@ -14,7 +14,9 @@
 //FX, vehicle, steam: 3084 6
 //FX, power station, smoke: 3701 8
 //FX, vehicle, breakdown: 3737 4
+//Vehicles, trains: 2733 340
 //Vehicles, aircraft: 3741 168
+//Vehicles, road: 3092 576
 //Vehicles, ships: 3669 32
 //FX, vehicle, helicopter rotor: 3901 4
 //FX, bubble factory, bubble: 4748 15
@@ -24,10 +26,10 @@
 //Signals 2: 2084 192
 //Signals 2: 2281 192
 
-start=1821;
-number=14;
+start=3669 ;
+number=32;
 name="ogfx1_base";
-//name="trg1r";
+name="trg1r";
 //name="ogfxe_extra";
 
 

@@ -1,0 +1,5 @@
+Climate-specific variants not copied.
+
+OpenGFX also provides alternate:
+Arctic-specific paper train and monolev wagon (ie. not re-using steel)
+Tropic-specific copper ore train wagon (ie. not re-using iron ore)
