@@ -796,3 +796,61 @@ template template_tree_bordered(x, y, z) {
 template template_tree_city(x, y, z) {
 	[	 1*z+x*z, 1*z+y*z, 19*z, 41*z, -9*z, -36*z-int((z-1)/2)]
 }
+
+//Vehicle templates assume a standardised sprite size for each vehicle type
+//Vehicles should be centre bottom (road, rail) or centred (air, water) in their sprite
+//yindex is the row in the 1px bordered vehicle spritesheet, xindex is the column
+
+//Template vehicles: road
+template template_vehicle_road_8view(xindex, yindex, z) {
+	[(1+  0+xindex*89)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -15*z]
+	[(2+  8+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -10*z]
+	[(3+ 30+xindex*89)*z, (1+yindex*24)*z, 31*z, 15*z, -15*z,  -9*z]
+	[(4+ 61+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -10*z]
+	[(5+ 69+xindex*89)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -15*z]
+	[(6+ 91+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -10*z]
+	[(7+122+xindex*89)*z, (1+yindex*24)*z, 31*z, 15*z, -15*z,  -9*z]
+	[(8+144+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -10*z]
+}
+
+//Template vehicles: rail
+template template_vehicle_rail_4view(xindex, yindex, z) {
+	[(1+  0+xindex*89)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z]
+	[(2+  8+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z]
+	[(3+ 30+xindex*89)*z, (1+yindex*24)*z, 31*z, 15*z, -17*z, -11*z]
+	[(4+ 61+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z]
+}
+template template_vehicle_rail_8view(xindex, yindex, z) {
+	[(1+  0+xindex*89)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z]
+	[(2+  8+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z]
+	[(3+ 30+xindex*89)*z, (1+yindex*24)*z, 31*z, 15*z, -17*z, -11*z]
+	[(4+ 61+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z]
+	[(5+ 69+xindex*89)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z]
+	[(6+ 91+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z]
+	[(7+122+xindex*89)*z, (1+yindex*24)*z, 31*z, 15*z, -17*z, -11*z]
+	[(8+144+xindex*89)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z]
+}
+
+//Template vehicles: air
+template template_vehicle_air_8view(xindex, yindex, z) {
+	[(1+  0+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(2+ 80+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(3+160+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(4+240+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(5+320+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(6+400+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(7+480+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(8+560+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+}
+
+//Template vehicles: water
+template template_vehicle_air_8view(xindex, yindex, z) {
+	[(1+  0+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
+	[(2+ 96+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -74*z, -32*z]
+	[(3+192+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
+	[(4+288+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -22*z, -32*z]
+	[(5+384+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
+	[(6+480+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -74*z, -32*z]
+	[(7+576+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
+	[(8+672+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -22*z, -32*z]
+}

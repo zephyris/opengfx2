@@ -63,12 +63,12 @@ base_graphics spr2045(2045, "../graphics/industries/temperate/64/pygen/powerstat
 }
 //2055-2060 power plant spark effect
 base_graphics spr2055(2055, "../graphics/effects/64/industries_powerstation_sparks_8bpp.png") {
-	template_animation_frame(48, 48, 0, 0, 0, 1)
-	template_animation_frame(48, 48, 0, 0, 1, 1)
-	template_animation_frame(48, 48, 0, 0, 2, 1)
-	template_animation_frame(48, 48, 0, 0, 3, 1)
-	template_animation_frame(48, 48, 0, 0, 4, 1)
-	template_animation_frame(48, 48, 0, 0, 4, 1)
+	template_animation_frame(48, 48, -14, -16, 0, 1)
+	template_animation_frame(48, 48, -14, -16, 1, 1)
+	template_animation_frame(48, 48, -14, -16, 2, 1)
+	template_animation_frame(48, 48, -14, -16, 3, 1)
+	template_animation_frame(48, 48, -14, -16, 4, 1)
+	template_animation_frame(48, 48, -14, -16, 4, 1)
 }
 
 //2061-2071 sawmill
