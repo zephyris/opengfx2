@@ -26,10 +26,14 @@
 //Signals 2: 2084 192
 //Signals 2: 2281 192
 
-start=3669 ;
-number=32;
-name="ogfx1_base";
-name="trg1r";
+start=401;
+number=16;
+//name="ogfxc_arctic";
+name="ogfxh_tropical";
+name="ogfxt_toyland";
+name="ogfxe_extra";
+//name="ogfx1_base";
+//name="trg1r";
 //name="ogfxe_extra";
 
 
