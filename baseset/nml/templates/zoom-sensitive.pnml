@@ -844,7 +844,7 @@ template template_vehicle_air_8view(xindex, yindex, z) {
 }
 
 //Template vehicles: water
-template template_vehicle_air_8view(xindex, yindex, z) {
+template template_vehicle_water_8view(xindex, yindex, z) {
 	[(1+  0+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
 	[(2+ 96+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -74*z, -32*z]
 	[(3+192+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]

@@ -15,6 +15,6 @@ if (climate == CLIMATE_TROPICAL) {
 }
 
 if (climate == CLIMATE_TOYLAND) {
-	replacenew terrain_foundations_toyland_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_tropical_8bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
-	alternative_sprites(terrain_foundations_toyland_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_tropical_8bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
+	replacenew terrain_foundations_toyland_slope_halftile (FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_toyland_8bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
+	alternative_sprites(terrain_foundations_toyland_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_toyland_8bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
 }

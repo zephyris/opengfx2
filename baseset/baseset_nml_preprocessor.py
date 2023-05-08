@@ -1,5 +1,6 @@
 """
-Loads a pnml file and populates with in information from #import lines to make an nml file.
+Loads a pnml file and:
+Populates with information from #import lines.
 
 Import lines in the pnml must be formatted:
 #import "path/to/nml/file.nml"

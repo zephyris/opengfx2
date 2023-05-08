@@ -62,6 +62,10 @@ cd pygen
 custom_dither.py
 cd ../../../
 
+cd toyland/64/
+custom_dither.py
+cd ../../
+
 cd temperate/256/
 building_shapeproc.py 4
 building_baseshapeproc.py 4 temperate

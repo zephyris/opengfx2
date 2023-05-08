@@ -52,4 +52,8 @@ cd pygen
 custom_dither.py
 cd ../../../
 
+cd toyland/64/
+custom_dither.py
+cd ../../
+
 cd ..
