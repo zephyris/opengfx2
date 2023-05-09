@@ -1,0 +1,2 @@
+//393-400 Powernaut Cho Cho
+base_graphics spr393(393, "../graphics/vehicles/64/rail_engines_toyland_8bpp.png") { template_vehicle_rail_8view(0, 0, 1) }

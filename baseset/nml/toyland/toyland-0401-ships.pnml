@@ -1,0 +1,3 @@
+//401-416 ships
+base_graphics spr401(401, "../graphics/vehicles/64/water_toyland_8bpp.png") { template_vehicle_water_8view(0, 0, 1) } //cargo
+base_graphics spr409(409, "../graphics/vehicles/64/water_toyland_8bpp.png") { template_vehicle_water_8view(0, 1, 1) } //passenger

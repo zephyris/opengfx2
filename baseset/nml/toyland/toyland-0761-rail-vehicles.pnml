@@ -1,0 +1,29 @@
+//761-840 rail, monorail and maglev wagons
+base_graphics spr761(761, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) } // pax (empty + full)
+base_graphics spr765(765, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 1, 1) } // mail (empty + full)
+base_graphics spr769(769, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 2, 1) } // sugar (empty)
+base_graphics spr773(773, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(1, 2, 1) } // sugar (full)
+base_graphics spr777(777, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 3, 1) } // cotton candy	(empty)
+base_graphics spr781(781, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(1, 3, 1) } // cotton candy	(full)
+base_graphics spr785(785, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 4, 1) } // toffee (empty)
+base_graphics spr789(789, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(1, 4, 1) } // toffee (full)
+base_graphics spr793(793, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 5, 1) } // bubbles (empty)
+base_graphics spr797(797, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(1, 5, 1) } // bubbles (full)
+base_graphics spr801(801, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 6, 1) } // cola 	(empty)
+base_graphics spr805(805, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(1, 6, 1) } // cola 	(full)
+base_graphics spr809(809, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 7, 1) } // sweets (empty + full)
+base_graphics spr813(813, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 8, 1) } // toys 	(empty + full)
+base_graphics spr817(817, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 9, 1) } // batteries (empty)
+base_graphics spr821(821, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(1, 9, 1) } // batteries (full)
+base_graphics spr825(825, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 10, 1) } // fizzy drinks	(empty)
+base_graphics spr829(829, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(1, 10, 1) } // fizzy drinks	(full)
+base_graphics spr833(833, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(0, 11, 1) } // plastic (empty)
+base_graphics spr837(837, "../graphics/vehicles/64/rail_wagons_toyland_8bpp.png") { template_vehicle_rail_4view(1, 11, 1) } // plastic (full)
+
+//841-884 rail, monorail and maglev engines
+base_graphics spr841(841, "../graphics/vehicles/64/rail_engines_toyland_8bpp.png") { template_vehicle_rail_8view(0, 1, 1) } // Ploddyphut Cho cho
+base_graphics spr849(849, "../graphics/vehicles/64/rail_engines_toyland_8bpp.png") { template_vehicle_rail_8view(0, 2, 1) } // Mightymover Cho Cho
+base_graphics spr857(857, "../graphics/vehicles/64/rail_engines_toyland_8bpp.png") { template_vehicle_rail_8view(0, 3, 1) } // Ploddyphut Diesel
+base_graphics spr865(865, "../graphics/vehicles/64/rail_engines_toyland_8bpp.png") { template_vehicle_rail_8view(0, 4, 1) } // Powernaut Diesel
+base_graphics spr873(873, "../graphics/vehicles/64/rail_engines_toyland_8bpp.png") { template_vehicle_rail_8view(0, 5, 1) } // Monorail Wizzowow Z99
+base_graphics spr881(881, "../graphics/vehicles/64/rail_engines_toyland_8bpp.png") { template_vehicle_rail_4view(0, 6, 1) } // Maglev Wizzowow Rocketeer

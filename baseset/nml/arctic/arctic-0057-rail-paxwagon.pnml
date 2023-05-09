@@ -1,0 +1,2 @@
+//57-64 arctic passenger carriage
+base_graphics spr57(57, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) }

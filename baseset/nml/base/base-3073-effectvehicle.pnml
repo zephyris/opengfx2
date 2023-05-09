@@ -1,0 +1,36 @@
+//3073-3089 rail smoke/spark effects
+//3073-3078 diesel smoke
+template spr3073_template(z) {
+	template_animation_frame(32, 32, -16, -16, 0, z)
+	template_animation_frame(32, 32, -16, -16, 1, z)
+	template_animation_frame(32, 32, -16, -16, 2, z)
+	template_animation_frame(32, 32, -16, -16, 3, z)
+	template_animation_frame(32, 32, -16, -16, 4, z)
+	template_animation_frame(32, 32, -16, -16, 5, z)
+}
+base_graphics spr3073(3073, "../graphics/effects/64/vehicle_running_smoke_8bpp.png") { spr3073_template(1) }
+//3079-3083 steam
+template spr3079_template(z) {
+	template_animation_frame(32, 32, -16, -16, 0, z)
+	template_animation_frame(32, 32, -16, -16, 1, z)
+	template_animation_frame(32, 32, -16, -16, 2, z)
+	template_animation_frame(32, 32, -16, -16, 3, z)
+	template_animation_frame(32, 32, -16, -16, 4, z)
+}
+base_graphics spr3079(3079, "../graphics/effects/64/vehicle_running_steam_8bpp.png") { spr3079_template(1) }
+//3084-3089 electric sparks
+template spr3084_template(z) {
+	template_animation_frame(32, 32, -16, -16, 0, z)
+	template_animation_frame(32, 32, -16, -16, 1, z)
+	template_animation_frame(32, 32, -16, -16, 2, z)
+	template_animation_frame(32, 32, -16, -16, 3, z)
+	template_animation_frame(32, 32, -16, -16, 4, z)
+	template_animation_frame(32, 32, -16, -16, 4, z)
+}
+base_graphics spr3084(3084, "../graphics/effects/64/vehicle_running_sparks_8bpp.png") { spr3084_template(1) }
+
+//3090-3091 stop/go vehicle/depot gui
+base_graphics spr3090(3090, "../graphics/icons/1/icons_7px_8bpp.png") {
+    template_sprite_matrix(7, 7, 0, 0, 1, 1, 1) // stop/red
+    template_sprite_matrix(7, 7, 0, 0, 2, 0, 1) // go/green
+}

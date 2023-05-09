@@ -1,0 +1,10 @@
+//341-392 aircraft
+base_graphics spr341(341, "../graphics/vehicles/64/air_toyland_8bpp.png") { template_vehicle_air_8view(0, 0, 1) } // Ploddyphut 100
+base_graphics spr349(349, "../graphics/vehicles/64/air_toyland_8bpp.png") { template_vehicle_air_8view(0, 1, 1) } // Ploddyphut 500
+base_graphics spr357(357, "../graphics/vehicles/64/air_toyland_8bpp.png") { template_vehicle_air_8view(0, 2, 1) } // Flashbang X1
+base_graphics spr365(365, "../graphics/vehicles/64/air_toyland_8bpp.png") { template_vehicle_air_8view(0, 3, 1) } // Juggerplane M1
+base_graphics spr373(373, "../graphics/vehicles/64/air_toyland_8bpp.png") { template_vehicle_air_8view(0, 4, 1) } // Flashbang Whizzer
+base_graphics spr381(381, "../graphics/vehicles/64/air_toyland_8bpp.png") { template_vehicle_air_8view(0, 5, 1) } // Powernaut Helicopter
+
+//389-393 helicopter rotor
+base_graphics spr389(389, "../graphics/vehicles/64/vehicles_air_rotoreffect_8bpp.png") { template_vehicle_air_4view(0, 0, 1) }

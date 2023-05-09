@@ -4,7 +4,7 @@
 #include "nml/templates/zoom-sensitive.pnml"
 
 #include "nml/arctic/arctic-0000-bare-land.pnml"
-#include "sprites/arctic/arctic-0057-rail-paxwagon.pnml"
+#include "nml/arctic/arctic-0057-rail-paxwagon.pnml"
 #include "nml/arctic/arctic-0061-farm.pnml"
 #include "nml/arctic/arctic-0073-rough-land.pnml"
 #include "nml/arctic/arctic-0115-rail-infra.pnml"

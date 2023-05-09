@@ -1,0 +1,22 @@
+//2905-2980 temperate rail engines
+base_graphics spr2905(2905, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 0, 1) } // Chaney Jubilee + SH 8P (Steam)
+base_graphics spr2913(2913, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 1, 1) } // Ginzu A4 (Steam)
+base_graphics spr2921(2921, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 2, 1) } // Kirby Paul (Steam)
+base_graphics spr2929(2929, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_4view(0, 3, 1) } // SH/Hendry 25 + Floss 47 (Diesel)
+base_graphics spr2933(2933, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_4view(0, 4, 1) } // UU/37 (Diesel)
+base_graphics spr2937(2937, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_4view(0, 5, 1) } // SH/30 + SH/40 (Diesel)
+base_graphics spr2941(2941, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 6, 1) } // SH 125 (Diesel)
+base_graphics spr2949(2949, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 7, 1) } // Manley-Morel VT (Diesel)
+base_graphics spr2957(2957, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 8, 1) } // Dash (Diesel)
+base_graphics spr2965(2965, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 9, 1) } // Asia Star (Electric)
+base_graphics spr2973(2973, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 10, 1) } // T.I.M. (Electric)
+
+//2981-2992 monorail engines
+base_graphics spr2981(2981, "../graphics/vehicles/64/monorail_engines_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) } // X2001
+base_graphics spr2985(2985,"../graphics/vehicles/64/monorail_engines_8bpp.png") { template_vehicle_rail_8view(0, 1, 1) } // Millenium
+
+//2993-3016 maglev engines
+base_graphics spr2993(2993, "../graphics/vehicles/64/maglev_engines_8bpp.png") { template_vehicle_rail_8view(0, 2, 1) } // Lev3 Pegasus
+base_graphics spr3001(3001, "../graphics/vehicles/64/maglev_engines_8bpp.png") { template_vehicle_rail_8view(0, 3, 1) } // Lev4 Chimaera
+base_graphics spr3009(3009, "../graphics/vehicles/64/maglev_engines_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) } // Lev1 Leviathan
+base_graphics spr3013(3013, "../graphics/vehicles/64/maglev_engines_8bpp.png") { template_vehicle_rail_4view(0, 1, 1) } // Lev2 Cyclops

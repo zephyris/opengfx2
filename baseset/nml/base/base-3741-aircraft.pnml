@@ -1,0 +1,66 @@
+//2741-3900 aircraft
+base_graphics spr3741(3741, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 0, 1) } //Bakewell Luckett LB-8, Yate Aerospace AYAe46
+base_graphics spr3757(3749, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 1, 1) } //Darwin 300
+base_graphics spr3749(3757, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 2, 1) } //Yate Haugan
+base_graphics spr3765(3765, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 3, 1) } //Coleman Count
+base_graphics spr3773(3773, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 4, 1) } //Samson U52
+base_graphics spr3781(3781, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 5, 1) } //FFP Dart, Bakewell Luckett LB-9, Bakewell Luckett LB80, Yate Aerospace YAC1-11, Darwin 100, Dinger 100
+base_graphics spr3789(3789, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 6, 1) } //Bakewell Luckett LB-10, Bakewell Luckett LB-11, Guru Galaxy
+base_graphics spr3797(3797, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 7, 1) } //Darwin 200, Darwin 400, Darwin 500, Darwin 600, Airtaxi A21, Airtaxi A31, Airtaxi A32, Airtaxi A33
+base_graphics spr3805(3805, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 8, 1) } //Bakewell Cotswald LB-3
+base_graphics spr3813(3813, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 9, 1) } //Tricario Helicopter
+base_graphics spr3821(3821, "../graphics/vehicles/64/air_futuristic_8bpp.png") { template_vehicle_air_8view(0, 0, 1) } //FFP Hyperdart 2
+base_graphics spr3829(3829, "../graphics/vehicles/64/air_futuristic_8bpp.png") { template_vehicle_air_8view(0, 1, 1) } //Dinger 200
+base_graphics spr3837(3837, "../graphics/vehicles/64/air_futuristic_8bpp.png") { template_vehicle_air_8view(0, 2, 1) } //Dinger 1000
+base_graphics spr3845(3845, "../graphics/vehicles/64/air_futuristic_8bpp.png") { template_vehicle_air_8view(0, 3, 1) } //YateZ-Shuttle
+base_graphics spr3853(3853, "../graphics/vehicles/64/air_futuristic_8bpp.png") { template_vehicle_air_8view(0, 4, 1) } //Airtaxi A34-1000
+base_graphics spr3861(3861, "../graphics/vehicles/64/air_futuristic_8bpp.png") { template_vehicle_air_8view(0, 5, 1) } //Kelling K6
+base_graphics spr3869(3869, "../graphics/vehicles/64/air_futuristic_8bpp.png") { template_vehicle_air_8view(0, 6, 1) } //Kelling K7
+base_graphics spr3877(3877, "../graphics/vehicles/64/air_futuristic_8bpp.png") { template_vehicle_air_8view(0, 7, 1) } //Darwin 700
+base_graphics spr3885(3885, "../graphics/vehicles/64/air_futuristic_8bpp.png") { template_vehicle_air_8view(0, 8, 1) } //Kelling K1
+base_graphics spr3893(3893, "../graphics/vehicles/64/air_real_8bpp.png") { template_vehicle_air_8view(0, 10, 1) } //Guru X2 helicopter
+
+//3901 helicopter rotor
+base_graphics spr3901(3901, "../graphics/vehicles/64/vehicles_air_rotoreffect_8bpp.png") { template_vehicle_air_4view(0, 0, 1) }
+
+//3905-3932 diaseter aircraft, submarines and ufos
+//3905-3907 crashed airship
+base_graphics spr3905(3905, "../graphics/vehicles/64/disaster_airship_8bpp.png") {
+	template_sprite_matrix(80, 80, -40, -40, 0, 0, 1)
+	template_sprite_matrix(80, 80, -40, -40, 1, 0, 1)
+	template_sprite_matrix(80, 80, -40, -40, 2, 0, 1)
+}
+//3908-3909 small ufo
+base_graphics spr3908(3908, "../graphics/vehicles/64/disaster_other_8bpp.png") {
+	template_sprite_matrix(48, 48, -24, -24, 0, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 1, 0, 1)
+}
+//3910-3917 submarines
+base_graphics spr3910(3910, "../graphics/vehicles/64/disaster_other_8bpp.png") {
+	template_sprite_matrix(48, 48, -24, -24, 2, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 3, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 4, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 5, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 6, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 7, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 8, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 9, 0, 1)
+}
+//3918-3919 small fighter
+base_graphics spr3918(3918, "../graphics/vehicles/64/disaster_other_8bpp.png") {
+	template_sprite_matrix(48, 48, -24, -24, 10, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 11, 0, 1)
+}
+//3920 large ufo
+base_graphics spr3920(3920, "../graphics/vehicles/64/disaster_other_8bpp.png") {
+	template_sprite_matrix(48, 48, -24, -24, 12, 0, 1)
+}
+//3921 large fighter
+base_graphics spr3921(3921, "../graphics/vehicles/64/disaster_other_8bpp.png") {
+template_sprite_matrix(48, 48, -24, -24, 13, 0, 1)
+}
+//3922-3923 apache attack helicopter
+base_graphics spr3922(3922, "../graphics/vehicles/64/disaster_other_8bpp.png") {
+	template_sprite_matrix(48, 48, -24, -24, 14, 0, 1)
+	template_sprite_matrix(48, 48, -24, -24, 15, 0, 1)
+}
