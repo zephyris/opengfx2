@@ -162,7 +162,7 @@ base_graphics spr1518(1518, "../graphics/towns/temperate/64/pygen/houses_arrange
 alternative_sprites(spr1518, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/houses_arranged_8bpp.png") { template_house_short(65, 0, 4) }
 // 1519-1523 small flats
 base_graphics spr1519(1519, "../graphics/towns/temperate/64/pygen/flats_base_8bpp.png") { template_house_1x1(65, 150, 1, 74) }
-base_graphics spr1520(1520, "../graphics/towns/temperate/64/pygen/flats_8bpp.png") { template_house_1x1(65, 75, 1, 74) }
+base_graphics spr1520(1520, "../graphics/towns/temperate/64/pygen/flats_base_8bpp.png") { template_house_1x1(65, 75, 1, 74) }
 base_graphics spr1521(1521, "../graphics/towns/temperate/64/pygen/flats_8bpp.png") { template_house_1x1(65, 75, 1, 74) }
 base_graphics spr1522(1522, "../graphics/towns/temperate/64/pygen/flats_base_8bpp.png") { template_house_1x1(65, 0, 1, 74) }
 base_graphics spr1523(1523, "../graphics/towns/temperate/64/pygen/flats_8bpp.png") { template_house_1x1(65, 0, 1, 74) }
