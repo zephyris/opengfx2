@@ -1,0 +1,9 @@
+//322-327 arctic (snowy) forest
+base_graphics spr322(322, "../graphics/industries/arctic/64/forest_8bpp.png") {
+	template_house_1x1(  0,  75, 1, 74)
+	template_house_1x1( 65,  75, 1, 74)
+	template_house_1x1(130,  75, 1, 74)
+	template_house_1x1(195,  75, 1, 74)
+	template_house_1x1(260,  75, 1, 74)
+	template_house_1x1(325,  75, 1, 74)
+}

@@ -46,12 +46,18 @@ verbose = True
 scale = 1
 scale = int(sys.argv[1])
 
+climate = sys.argv[2]
+
 snow = False
-snowname = ""
-if len(sys.argv) > 2:
+namesuffix = ""
+if len(sys.argv) > 3:
   snow = True
   print("Using snow!")
-  snowname = "snow_"
+  namesuffix = "snow_"
+
+# make toyland sprites in parallel
+if climate == "toyland":
+  namesuffix += "toyland_"
 
 # OpenTTD DOS palette, RGB values
 palette_r = [0,16,32,48,64,80,100,116,132,148,168,184,200,216,232,252,52,68,88,108,132,156,176,204,48,64,80,96,120,148,176,204,72,88,104,124,152,184,212,244,64,88,112,136,160,188,204,220,236,252,252,252,252,76,96,116,136,156,176,196,68,96,128,156,184,212,232,252,252,252,32,64,84,108,128,148,168,184,196,212,8,16,32,48,64,84,104,128,28,44,60,80,104,128,152,180,16,32,56,76,96,120,152,184,32,56,72,88,104,124,140,160,76,96,116,136,164,184,204,212,224,236,80,100,120,140,160,184,36,48,64,80,100,132,172,212,40,64,88,104,120,140,160,188,0,0,0,0,0,24,56,88,128,188,16,24,40,52,80,116,156,204,172,212,252,252,252,252,252,252,72,92,112,140,168,200,208,232,60,92,128,160,196,224,252,252,252,252,252,252,252,252,204,228,252,252,252,252,8,12,20,28,40,56,72,100,92,108,124,144,224,200,180,132,88,244,245,246,247,248,249,250,251,252,253,254,255,76,108,144,176,210,252,252,252,252,252,252,252,64,255,48,64,80,255,32,36,40,44,48,72,100,216,96,68,255]
@@ -268,11 +274,12 @@ for input_file in glob.glob("*"+suffix):
     normal_overlay_name = input_file[:-len(suffix)]+"_overlaynormal.png"
     if os.path.isfile(normal_overlay_name):
       image_colorised = overlay_texture(image_32bit, image_shape, Image.open(normal_overlay_name), range(256), 255/255, "normal")
-    image_colorised.save(os.path.join("pygen", input_file[:-len(suffix)]+"_"+snowname+"palmask.png"), "PNG")
+    image_colorised.save(os.path.join("pygen", input_file[:-len(suffix)]+"_"+namesuffix+"palmask.png"), "PNG")
     # Shade using standard rules
     if scale == 1:
       # Wall and roof noise
-      image_32bit = add_value_noise(image_32bit, image_shape, index_base + index_roofs + index_walls, 12)
+      if climate != "toyland":
+        image_32bit = add_value_noise(image_32bit, image_shape, index_base + index_roofs + index_walls, 12)
       # Roof shading
       image_32bit = inout_blur(image_32bit, image_shape, index_roofs, 0, 0, 2, (0, 0, 0), 191/255, "overlay", "inset")
       # Wall shading
@@ -282,11 +289,13 @@ for input_file in glob.glob("*"+suffix):
       image_32bit = inout_blur(image_32bit, image_shape, index_walls, 1, -1, 1.5, (255, 255, 255), 223/255, "overlay", "inset")
     elif scale == 4:
       # Wall and roof noise
-      image_32bit = add_value_noise(image_32bit, image_shape, index_base + index_roofs + index_walls, 12)
+      if climate != "toyland":
+        image_32bit = add_value_noise(image_32bit, image_shape, index_base + index_roofs + index_walls, 12)
       # Wall and roof textures, brick texture only on primary wall style
-      texture_opacity = 191
-      image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/bricks_l.png"), [index_walls[0]], texture_opacity/255, "overlay")
-      image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/bricks_r.png"), [index_walls[1]], texture_opacity/255, "overlay")
+      if climate != "toyland":
+        texture_opacity = 191
+        image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/bricks_l.png"), [index_walls[0]], texture_opacity/255, "overlay")
+        image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/bricks_r.png"), [index_walls[1]], texture_opacity/255, "overlay")
       # Roof shading
       image_32bit = inout_blur(image_32bit, image_shape, index_roofs, 0, 0, 2, (0, 0, 0), 191/255, "overlay", "inset")
       # Wall shading
@@ -310,4 +319,4 @@ for input_file in glob.glob("*"+suffix):
       #image_colorised = overlay_texture(image_32bit, image_shape, Image.open(normal_overlay_name), range(256), 255/255, "normal")
       image_32bit = overlay_texture(image_32bit, image_shape, Image.open(normal_overlay_name), range(256), 255/255, "normal")
     # Save shaded image
-    image_32bit.save(os.path.join("pygen", input_file[:-len(suffix)]+"_"+snowname+"32bpp.png"), "PNG")
+    image_32bit.save(os.path.join("pygen", input_file[:-len(suffix)]+"_"+namesuffix+"32bpp.png"), "PNG")

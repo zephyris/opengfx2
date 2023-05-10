@@ -26,8 +26,8 @@ base_graphics spr41(41, "") {
 }
 
 #include "nml/logos/logos-0043-intro-letters.pnml"
-#include "sprites/logos/logos-0052-original-map-generator.pnml"
-#include "sprites/logos/logos-0089-gui-clima.pnml"
+#include "nml/logos/logos-0052-original-map-generator.pnml"
+#include "nml/logos/logos-0089-gui-clima.pnml"
 
 //97-102 unused, left empty
 base_graphics spr97(97, "") {

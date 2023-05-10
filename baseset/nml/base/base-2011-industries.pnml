@@ -86,12 +86,14 @@ base_graphics spr2061(2061, "../graphics/industries/temperate/64/pygen/sawmill_8
 	template_house_1x1(260,   0, 1, 74)
 }
 //2072-2077 forest
-base_graphics spr2072(2072, "sprites/png/miscellaneous/random.png") { [  10,  136,  64,  67, -31, -39] }
-base_graphics spr2073(2073, "sprites/png/miscellaneous/random.png") { [  80,  136,  64,  67, -31, -39] }
-base_graphics spr2074(2074, "sprites/png/miscellaneous/random.png") { [ 150,  136,  64,  67, -31, -39] }
-base_graphics spr2075(2075, "sprites/png/miscellaneous/random.png") { [ 220,  136,  64,  67, -31, -39] }
-base_graphics spr2076(2076, "sprites/png/miscellaneous/random.png") { [ 290,  136,  64,  67, -31, -39] }
-base_graphics spr2077(2077, "sprites/png/industries/forest_groundtiles.png") { [   0,    0,  64,  31, -31,   0] }
+base_graphics spr2072(2072, "../graphics/industries/arctic/64/forest_8bpp.png") {
+	template_house_1x1(  0,   0, 1, 74)
+	template_house_1x1( 65,   0, 1, 74)
+	template_house_1x1(130,   0, 1, 74)
+	template_house_1x1(195,   0, 1, 74)
+	template_house_1x1(260,   0, 1, 74)
+	template_house_1x1(325,   0, 1, 74)
+}
 
 //2078-2095 oil refinery
 base_graphics spr2078(2078, "sprites/png/industries/industries_misc.png") { [ 706,  872,  42,  20, -21,   1] }

@@ -1,0 +1,131 @@
+//INCOMPLETE: Buoys (bottom of file)
+
+//climate-sensitive rivers
+spriteset (waterfeature_river_temperate, "../graphics/infrastructure/64/pygen/river_temperate_grass_8bpp.png") { template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_temperate_grass_8bpp.png") { template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_temperate_grass_8bpp.png") { template_waterfeature_slopes(0, 0, 4) }
+
+spriteset (waterfeature_river_temperate_shores, "../graphics/infrastructure/64/pygen/river_temperate_grass_shores_8bpp.png") { template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_temperate_shores, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_temperate_grass_shores_8bpp.png") { template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_temperate_shores, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_temperate_grass_shores_8bpp.png") { template_waterfeature_slopes(0, 0, 4) }
+
+spriteset (waterfeature_river_arctic, "../graphics/infrastructure/64/pygen/river_arctic_grass_8bpp.png") { template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_arctic_grass_8bpp.png") { template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_arctic_grass_8bpp.png") { template_waterfeature_slopes(0, 0, 4) }
+
+spriteset (waterfeature_river_arctic_shores, "../graphics/infrastructure/64/pygen/river_arctic_grass_shores_8bpp.png") {template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_arctic_shores, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_arctic_grass_shores_8bpp.png") {template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_arctic_shores, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_arctic_grass_shores_8bpp.png") {template_waterfeature_slopes(0, 0, 4) }
+
+spriteset (waterfeature_river_arctic_snow, "../graphics/infrastructure/64/pygen/river_arctic_snow_8bpp.png") {template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_arctic_snow, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_arctic_snow_8bpp.png") {template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_arctic_snow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_arctic_snow_8bpp.png") {template_waterfeature_slopes(0, 0, 4) }
+
+spriteset (waterfeature_river_tropical, "../graphics/infrastructure/64/pygen/river_tropical_grass_8bpp.png") {template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_tropical, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_tropical_grass_8bpp.png") {template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_tropical, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_tropical_grass_8bpp.png") {template_waterfeature_slopes(0, 0, 4) }
+
+spriteset (waterfeature_river_tropical_shores, "../graphics/infrastructure/64/pygen/river_tropical_grass_shores_8bpp.png") {template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_tropical_shores, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_tropical_grass_shores_8bpp.png") {template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_tropical_shores, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_tropical_grass_shores_8bpp.png") {template_waterfeature_slopes(0, 0, 4) }
+
+spriteset (waterfeature_river_tropical_desert, "../graphics/infrastructure/64/pygen/river_tropical_desert_8bpp.png") {template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_tropical_desert_8bpp.png") {template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_tropical_desert_8bpp.png") {template_waterfeature_slopes(0, 0, 4) }
+
+spriteset (waterfeature_river_toyland, "../graphics/infrastructure/64/pygen/river_toyland_grass_8bpp.png") {template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_toyland_grass_8bpp.png") {template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_toyland_grass_8bpp.png") {template_waterfeature_slopes(0, 0, 4) }
+
+spriteset (waterfeature_river_toyland_shores, "../graphics/infrastructure/64/pygen/river_toyland_grass_shores_8bpp.png") {template_waterfeature_slopes(0, 0, 1) }
+alternative_sprites(waterfeature_river_toyland_shores, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_toyland_grass_shores_8bpp.png") {template_waterfeature_slopes(0, 0, 2) }
+alternative_sprites(waterfeature_river_toyland_shores, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/river_toyland_grass_shores_8bpp.png") {template_waterfeature_slopes(0, 0, 4) }
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_temperate_elevation, [
+	tile_height
+]) {
+	0: waterfeature_river_temperate_shores;
+	waterfeature_river_temperate;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_arctic_snowline, [
+	terrain_type
+]) {
+	TILETYPE_NORMAL: waterfeature_river_arctic;
+	TILETYPE_SNOW: waterfeature_river_arctic_snow;
+	waterfeature_river_arctic;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_arctic_elevation, [
+	tile_height
+]) {
+	0: waterfeature_river_arctic_shores;
+	switch_waterfeature_river_arctic_snowline;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_tropical_desert, [
+	terrain_type
+]) {
+	TILETYPE_NORMAL: waterfeature_river_tropical;
+	TILETYPE_DESERT: waterfeature_river_tropical_desert;
+	waterfeature_river_tropical;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_tropical_elevation, [
+	tile_height
+]) {
+	0: waterfeature_river_tropical_shores;
+	switch_waterfeature_river_tropical_desert;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_toyland_elevation, [
+	tile_height
+]) {
+	0: waterfeature_river_toyland_shores;
+	waterfeature_river_toyland;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_climate, [
+	climate
+]) {
+	CLIMATE_TEMPERATE: switch_waterfeature_river_temperate_elevation;
+	CLIMATE_ARCTIC: switch_waterfeature_river_arctic_elevation;
+	CLIMATE_TROPICAL: switch_waterfeature_river_tropical_elevation;
+	CLIMATE_TOYLAND: switch_waterfeature_river_toyland_elevation;
+	switch_waterfeature_river_temperate_elevation;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_slopes_climate, [
+	climate
+]) {
+	CLIMATE_TOYLAND: waterfeature_river_waterslopes_toyland;
+	waterfeature_river_waterslopes;
+}
+
+item(FEAT_CANALS, waterfeature_river_slopes, WF_RIVER_SLOPE) {
+	property {
+		graphic_flags: bitmask(WATERFEATURE_ALTERNATIVE_SPRITES);
+	}
+	graphics {
+		default: switch_waterfeature_river_slopes_climate;
+	}
+}
+
+item(FEAT_CANALS, waterfeature_river_banks, WF_RIVERBANKS) {
+	graphics {
+		default: switch_waterfeature_river_climate;
+	}
+}
+
+//buoys
+spriteset(buoy_normal, "../graphics/terrain/64/universal_bouyonly_8bpp.png") {	template_flattile_single(0, 0, 1) }
+spriteset(buoy_toyland, "../graphics/terrain/64/toyland_bouyonly_8bpp.png") { template_flattile_single(0, 0, 1) }
+switch(FEAT_CANALS, SELF, buoy_climate_switch, climate) {
+	CLIMATE_ARCTIC: buoy_normal;
+	CLIMATE_TOYLAND: buoy_toyland;
+	buoy_normal;
+}
+
+item( FEAT_CANALS, buoy, WF_BUOY) {
+	graphics { default: buoy_climate_switch; }
+}

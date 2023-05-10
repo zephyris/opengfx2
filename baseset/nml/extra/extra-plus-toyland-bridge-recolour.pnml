@@ -1,0 +1,33 @@
+// Replaces base graphics structure recolour sprites, used only for bridges in toyland
+// Gives bright yellow, pink and white toyland suspension, girder and tubular bridges (plus default brown)
+
+// 796 PALETTE_TO_STRUCT_BROWN -> teal
+replace spr796_toyland(796, "") {
+    recolour_sprite {
+        0x46..0x4D: 0x9A..0xA1;
+        0x4E: 0xD2;
+        0x4F: 0x0F;
+    }
+}
+
+// 798 PALETTE_TO_STRUCT_RED -> pink
+replace spr798_toyland(798, "") {
+    recolour_sprite {
+        0x46..0x47: 0x2A..0x2B;
+        0x48..0x4F: 0xA2..0xA9;
+    }
+}
+
+// 800 PALETTE_TO_STRUCT_CONCRETE -> white
+replace spr800_toyland(800, "") {
+    recolour_sprite {
+        0x46..0x4F: 0x06..0x0F;
+    }
+}
+
+// 801 PALETTE_TO_STRUCT_YELLOW -> yellow
+replace spr801_toyland(801, "") {
+    recolour_sprite {
+        0x46..0x4F: 0x3C..0x45;
+    }
+}

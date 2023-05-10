@@ -1,0 +1,62 @@
+//INCOMPLETE: Missing town statue
+
+//174-205 rail overlay
+base_graphics spr174(174, "../graphics/infrastructure/64/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 1) }
+
+//180-205 rail tiles
+base_graphics spr180(180, "../graphics/infrastructure/64/pygen/rail_toyland_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+
+//206-237 monorail overlay
+base_graphics spr206(206, "../graphics/infrastructure/64/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
+
+//212-237 monorail tiles
+base_graphics spr213(212, "../graphics/infrastructure/64/pygen/monorail_toyland_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+
+//238-243 maglev overlay
+base_graphics spr238(238, "../graphics/infrastructure/64/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
+
+//224-269 maglev
+base_graphics spr244( 244, "sprites/png/infrastructure/rail/maglev_tracks_toyland.png") { tmpl_rail_tracks() }
+
+//270   270     1       Company statue
+base_graphics spr270( 270, "sprites/png/houses/toysta.png") { [   0,    0,  32,  70, -15, -46] }
+
+//271-286 signals
+base_graphics spr271(271, "../graphics/infrastructure/64/signals_base_8bpp.png") { template_signals_base(1) }
+
+//287-310 bunch'o'levelcrossings
+//287-290 level crossing rail toyland grass
+base_graphics spr287(287, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_toyland_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
+//290-294 level crossing rail city
+base_graphics spr291(291, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
+//295-298 level crossing monorail toyland grass
+base_graphics spr295(295, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_toyland_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
+//299-302 level crossing monorail city
+base_graphics spr299(299, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
+//303-306 level crossing maglev toyland grass
+base_graphics spr303(303, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_toyland_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
+//307-310 level crossing maglev city
+base_graphics spr307(307, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
+
+//311-316 rail depot
+base_graphics spr311(311, "../graphics/stations/general/64/pygen/raildepots_toyland_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+//317-322 monorail depot
+base_graphics spr317(317, "../graphics/stations/general/64/pygen/monoraildepots_toyland_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+//323-328 maglev depot
+base_graphics spr323(323, "../graphics/stations/general/64/pygen/maglevdepots_toyland_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+
+//329-340 rail build cursors
+base_graphics spr329(329, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_cursor_matrix(1, 8, 1) // Rail N-S
+	template_cursor_matrix(2, 8, 1) // Rail SW-NE
+	template_cursor_matrix(3, 8, 1) // Rail W-E
+	template_cursor_matrix(4, 8, 1) // Rail NW-SE
+    template_cursor_matrix(1, 10, 1) // Monorail
+	template_cursor_matrix(2, 10, 1)
+	template_cursor_matrix(3, 10, 1)
+	template_cursor_matrix(4, 10, 1)
+    template_cursor_matrix(1, 11, 1) // Maglev
+	template_cursor_matrix(2, 11, 1)
+	template_cursor_matrix(3, 11, 1)
+	template_cursor_matrix(4, 11, 1)
+}

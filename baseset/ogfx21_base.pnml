@@ -39,6 +39,6 @@
 #include "nml/base/base-4324-bridges-monolev.pnml"
 #include "nml/base/base-4404-houses-town-snow.pnml"
 #include "nml/base/base-4588-houses-tropic.pnml"
-#include "sprites/base/base-4627-toyland-houses.pnml"
-#include "sprites/base/base-4677-toyland-industries.pnml"
+#include "nml/base/base-4627-toyland-houses.pnml"
+#include "nml/base/base-4677-toyland-industries.pnml"
 #include "nml/base/base-4790-gui-buy-land.pnml"

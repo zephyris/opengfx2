@@ -1,0 +1,11 @@
+//89-96 main menu climate previews88
+base_graphics spr89(89, "../graphics/icons/1/climate_previews_8bpp.png") {
+    template_sprite_matrix(71, 49, 0, 0, 0, 0, 1)
+    template_sprite_matrix(71, 49, 0, 0, 0, 1, 1)
+    template_sprite_matrix(71, 49, 0, 0, 1, 0, 1)
+    template_sprite_matrix(71, 49, 0, 0, 1, 1, 1)
+    template_sprite_matrix(71, 49, 0, 0, 2, 0, 1)
+    template_sprite_matrix(71, 49, 0, 0, 2, 1, 1)
+    template_sprite_matrix(71, 49, 0, 0, 3, 0, 1)
+    template_sprite_matrix(71, 49, 0, 0, 3, 1, 1)
+}

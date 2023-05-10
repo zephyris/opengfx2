@@ -15,7 +15,7 @@ scale = int(sys.argv[1])
 mode = sys.argv[2]
 tile_size = scale * 64
 
-if mode == "rail":
+if mode == "rail" or mode == "rail_toyland":
   # Remapping of tile positions
   tile_positions = [
     [1, 1, 64, 32],
@@ -45,24 +45,34 @@ if mode == "rail":
     [1, 1, 64, 32],
     [1, 1, 64, 32]
   ]
-  # Infrastructure sprites to use
-  infrastructure_list = {
-    "rail": "rail",
-    "monorail": "monorail",
-    "maglev": "maglev"
-  }
-  # Terrain sprites to use
-  terrain_list = {
-    "arctic_grass": "arctic_groundtiles_32bpp.png",
-    "arctic_snow": "arctic_groundtiles_snow_32bpp.png",
-    "tropical_grass": "tropical_groundtiles_32bpp.png",
-    "tropical_desert": "tropical_groundtiles_desert_32bpp.png",
-    "temperate_grass": "temperate_groundtiles_32bpp.png",
-    "toyland_grass": "toyland_groundtiles_32bpp.png",
-    "general_concrete": "general_concretetiles_32bpp.png",
-    "general_bridge": "general_bridgetiles_32bpp.png"
-  }
-elif mode == "road" or mode == "road_noline":
+  if mode == "rail_toyland":
+    infrastructure_list = {
+      "rail": "rail_toyland",
+      "monorail": "monorail_toyland",
+      "maglev": "maglev_toyland"
+    }
+    terrain_list = {
+      "toyland_grass": "toyland_groundtiles_32bpp.png",
+      "toyland_concrete": "toyland_concretetiles_32bpp.png"
+    }
+  else:
+    # Infrastructure sprites to use
+    infrastructure_list = {
+      "rail": "rail",
+      "monorail": "monorail",
+      "maglev": "maglev"
+    }
+    # Terrain sprites to use
+    terrain_list = {
+      "arctic_grass": "arctic_groundtiles_32bpp.png",
+      "arctic_snow": "arctic_groundtiles_snow_32bpp.png",
+      "tropical_grass": "tropical_groundtiles_32bpp.png",
+      "tropical_desert": "tropical_groundtiles_desert_32bpp.png",
+      "temperate_grass": "temperate_groundtiles_32bpp.png",
+      "general_concrete": "general_concretetiles_32bpp.png",
+      "general_bridge": "general_bridgetiles_32bpp.png"
+    }
+elif mode == "road" or mode == "road_noline" or mode == "road_toyland":
   tile_positions = [
     [1, 1, 65, 32],
     [1, 1, 65, 32],
@@ -94,7 +104,6 @@ elif mode == "road" or mode == "road_noline":
       "arctic_grass": "arctic_groundtiles_32bpp.png",
       "arctic_snow": "arctic_groundtiles_snow_32bpp.png",
       "temperate_grass": "temperate_groundtiles_32bpp.png",
-      "toyland_grass": "toyland_groundtiles_32bpp.png",
       "general_bridge": "general_bridgetiles_32bpp.png"
     }
   if mode == "road_noline":
@@ -107,7 +116,16 @@ elif mode == "road" or mode == "road_noline":
       "tropical_grass": "tropical_groundtiles_32bpp.png",
       "tropical_desert": "tropical_groundtiles_desert_32bpp.png"
     }
-elif mode == "road_town":
+  if mode == "road_toyland":
+    # Infrastructure sprites to use
+    infrastructure_list = {
+      "road": "road_toyland",
+    }
+    # Terrain sprites to use
+    terrain_list = {
+      "toyland_grass": "toyland_groundtiles_32bpp.png",
+    }
+elif mode == "road_town" or mode == "road_town_toyland":
   # Includes bus stops
   tile_positions = [
     [1, 1, 65, 32],
@@ -134,13 +152,21 @@ elif mode == "road_town":
     [1, 1, 65, 32],
     [1, 1, 65, 32]
   ]
-  infrastructure_list = {
-    "road": "road_town"
-  }
-  terrain_list = {
-    "general_concrete": "general_concretetiles_32bpp.png"
-  }
-if mode == "airport_modern":
+  if mode == "road_town_toyland":
+    infrastructure_list = {
+      "road": "road_toyland"
+    }
+    terrain_list = {
+      "toyland_concrete": "toyland_concretetiles_32bpp.png"
+    }
+  else:
+    infrastructure_list = {
+      "road": "road_town"
+    }
+    terrain_list = {
+      "general_concrete": "general_concretetiles_32bpp.png"
+    }
+elif mode == "airport_modern":
   # Remapping of tile positions
   tile_positions = [
     [1, 1, 64, 32]
@@ -175,6 +201,7 @@ for terrain_key in terrain_list:
   target_image = Image.new("RGBA", (output_width, output_height), (255, 255, 255, 255))
   for i in range(len(tile_positions)):
     target_image = paste_to(terrain_image, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image, i * (tile_size // scale + 1) + 1, 1, scale)
+  target_image_width, target_image_height = target_image.size
   # Make a palmask image from terrain background palmask images, if they exists
   terrain_palmask_path = os.path.join("..", "..", "terrain", str(tile_size), terrain_list[terrain_key][:len("_32bpp.png")]+"_palmask.png")
   if os.path.isfile(terrain_palmask_path):
@@ -197,17 +224,20 @@ for terrain_key in terrain_list:
       # Overlay overlay_alpha, if it exists
       if os.path.isfile(name_overlayalpha):
         infrastructure_image = Image.open(name_overlayalpha).convert("RGBA")
+        infrastructure_image = infrastructure_image.crop((0, 0, target_image_width, target_image_height))
         print(infrastructure_image.size)
         output_image = Image.alpha_composite(output_image, infrastructure_image)
       # Overlay additional overlay, if it exists
       if os.path.isfile(name_overlayalpha2):
         print(name_overlayalpha2)
         infrastructure_image = Image.open(name_overlayalpha2).convert("RGBA")
+        infrastructure_image = infrastructure_image.crop((0, 0, target_image_width, target_image_height))
         output_image = Image.alpha_composite(output_image, infrastructure_image)
       # Overlay overlayshading, if it exists
       if os.path.isfile(name_overlayshading):
         print(name_overlayshading)
         infrastructure_image = Image.open(name_overlayshading).convert("RGBA")
+        infrastructure_image = infrastructure_image.crop((0, 0, target_image_width, target_image_height))
         output_image = blend_overlay(output_image, infrastructure_image, 192/255)
       # Save 32bpp image
       output_image.save(output_normal_path)

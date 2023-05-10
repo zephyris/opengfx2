@@ -1,6 +1,3 @@
-#include "sprites/templates/sprite_templates.pnml"
-#include "sprites/templates/tmpl_trains.nml"
-
 #include "nml/templates/zoom-sensitive.pnml"
 
 #include "nml/arctic/arctic-0000-bare-land.pnml"
@@ -14,6 +11,6 @@
 #include "nml/arctic/arctic-0262-oil-well.pnml"
 #include "nml/arctic/arctic-0269-hq.pnml"
 #include "nml/arctic/arctic-0284-maglev.pnml"
-#include "sprites/arctic/arctic-0322-forest.pnml"
+#include "nml/arctic/arctic-0322-forest.pnml"
 #include "nml/arctic/arctic-0328-foundations.pnml"
 #include "nml/arctic/arctic-0342-city-road-tree.pnml"

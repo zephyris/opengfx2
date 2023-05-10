@@ -42,7 +42,8 @@ terrain_list = {
   "tropical_desert": "tropical_desert",
   "temperate_grass": "temperate_grass",
   "toyland_grass": "toyland_grass",
-  "concrete": "general_concrete"
+  "concrete": "general_concrete",
+  "toyland_concrete": "toyland_concrete"
 }
 
 # Output image properties
