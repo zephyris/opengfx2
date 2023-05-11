@@ -113,7 +113,8 @@ base_graphics spr2091(2091, "sprites/png/industries/industries_misc.png") { [ 48
 base_graphics spr2092(2092, "sprites/png/industries/industries_misc.png") { [ 562,  952,  64,  59, -31, -36] }
 base_graphics spr2093(2093, "sprites/png/industries/industries_misc.png") { [ 642,  952,  46,  19, -19,  -3] }
 base_graphics spr2094(2094, "sprites/png/industries/industries_misc.png") { [ 706,  952,  46,  26, -19, -10] }
-base_graphics spr2095(2095, "sprites/png/industries/industries_misc.png") { [   2, 1080,  46,  26, -19, -10] }
+//... shared with modern airport
+base_graphics infrastructure_general_modernairportoilrefinery_building(2095, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_airportoilrefinery_building(0, 0, 1) }
 
 //2096-2105 oil rig
 base_graphics spr2096(2096, "../graphics/industries/temperate/64/pygen/oilrig_tiles_8bpp.png") {

@@ -1,5 +1,3 @@
-//INCOMPLETE: Buoys (bottom of file)
-
 //climate-sensitive rivers
 spriteset (waterfeature_river_temperate, "../graphics/infrastructure/64/pygen/river_temperate_grass_8bpp.png") { template_waterfeature_slopes(0, 0, 1) }
 alternative_sprites(waterfeature_river_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/river_temperate_grass_8bpp.png") { template_waterfeature_slopes(0, 0, 2) }

@@ -175,7 +175,8 @@ elif mode == "airport_modern":
   ] * 25
   # Infrastructure sprites to use
   infrastructure_list = {
-    "airport_modern": "airport_modern"
+    "airport_modern": "airport_modern",
+    "airport_old": "airport_old"
   }
   # Terrain sprites to use
   terrain_list = {
