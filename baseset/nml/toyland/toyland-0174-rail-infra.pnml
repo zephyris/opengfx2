@@ -16,7 +16,7 @@ base_graphics spr213(212, "../graphics/infrastructure/64/pygen/monorail_toyland_
 base_graphics spr238(238, "../graphics/infrastructure/64/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
 
 //224-269 maglev
-base_graphics spr244( 244, "sprites/png/infrastructure/rail/maglev_tracks_toyland.png") { tmpl_rail_tracks() }
+base_graphics spr244( 244, "../graphics/infrastructure/64/pygen/maglev_toyland_grass_8bpp.png") { template_railtiles(0, 0, 1) }
 
 //270   270     1       Company statue
 base_graphics spr270( 270, "sprites/png/houses/toysta.png") { [   0,    0,  32,  70, -15, -46] }

@@ -1,33 +1,52 @@
-// Replaces base graphics structure recolour sprites, used only for bridges in toyland
-// Gives bright yellow, pink and white toyland suspension, girder and tubular bridges (plus default brown)
+// Replaces base graphics structure recolour sprites, as used for bridges in toyland
+// Gives bright teal, pink, pink, and yellow instead of default (dull) brown, red, gray and yellow
+// Changes standard STRUCT remap range (46..4F, browns), as found in normal recolourable bridge sprites
+// Also remaps 90..99 (blues), used in OpenGFX2 toyland recolourable bridge sprites
 
 // 796 PALETTE_TO_STRUCT_BROWN -> teal
 replace spr796_toyland(796, "") {
     recolour_sprite {
+        //Standard STRUCT range
         0x46..0x4D: 0x9A..0xA1;
         0x4E: 0xD2;
         0x4F: 0x0F;
+        //OpenGFX2-specific range
+        0x90..0x97: 0x9A..0xA1;
+        0x98: 0xD2;
+        0x99: 0x0F;
     }
 }
 
 // 798 PALETTE_TO_STRUCT_RED -> pink
 replace spr798_toyland(798, "") {
     recolour_sprite {
+        //Standard STRUCT range
         0x46..0x47: 0x2A..0x2B;
         0x48..0x4F: 0xA2..0xA9;
+        //OpenGFX2-specific range
+        0x90..0x91: 0x2A..0x2B;
+        0x92..0x99: 0xA2..0xA9;
     }
 }
 
-// 800 PALETTE_TO_STRUCT_CONCRETE -> white
+// 800 PALETTE_TO_STRUCT_CONCRETE -> pink
 replace spr800_toyland(800, "") {
     recolour_sprite {
-        0x46..0x4F: 0x06..0x0F;
+        //Standard STRUCT range
+        0x46..0x47: 0x2A..0x2B;
+        0x48..0x4F: 0xA2..0xA9;
+        //OpenGFX2-specific range
+        0x90..0x91: 0x2A..0x2B;
+        0x92..0x99: 0xA2..0xA9;
     }
 }
 
-// 801 PALETTE_TO_STRUCT_YELLOW -> yellow
+// 801 PALETTE_TO_STRUCT_YELLOW -> white
 replace spr801_toyland(801, "") {
     recolour_sprite {
+        //Standard STRUCT range
         0x46..0x4F: 0x3C..0x45;
+        //OpenGFX2-specific range
+        0x90..0x99: 0x3C..0x45;
     }
 }

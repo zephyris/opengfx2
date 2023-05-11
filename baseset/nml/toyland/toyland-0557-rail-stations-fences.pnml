@@ -1,0 +1,10 @@
+//557-568 rail stations
+//557-566 monorail
+base_graphics spr557(557, "../graphics/stations/general/64/pygen/monorailstations_toyland_8bpp.png") { template_rail_station_platformsonly(0, 0, 1) }
+//567-576 maglev
+base_graphics spr567(567, "../graphics/stations/general/64/pygen/maglevstations_toyland_8bpp.png") { template_rail_station_platformsonly(0, 0, 1) }
+//577-586 maglev
+base_graphics spr577(577, "../graphics/stations/general/64/pygen/railstations_toyland_8bpp.png") { template_rail_station_platformsonly(0, 0, 1) }
+
+//587-594 rail fences
+base_graphics spr587(587, "../graphics/infrastructure/64/rail_fences_toyland_8bpp.png") { template_rail_fences(0, 0, 1) }

@@ -7,7 +7,7 @@ base_graphics spr2445(2445, "../graphics/bridges/64/pygen/ramps_general_road_8bp
 base_graphics spr2453(2453, "../graphics/bridges/64/pygen/suspension_road_8bpp.png") { template_suspension_road_1(0, 0, 1) }
 //2469-2476 suspension rail, part 1
 base_graphics spr2469(2469, "../graphics/bridges/64/pygen/suspension_rail_8bpp.png") { template_suspension_rail_1(0, 0, 1) }
-//2477-2484 suspension road, part 2, bridge front and legs
+//2477-2484 suspension road, part 2, legs
 base_graphics spr2477(2477, "../graphics/bridges/64/pygen/suspension_road_8bpp.png") { template_suspension_road_2(0, 0, 1) }
 //2485-2486 suspension rail, part 3
 base_graphics spr2485(2485, "../graphics/bridges/64/pygen/suspension_rail_8bpp.png") { template_suspension_rail_3(0, 0, 1) }
@@ -49,12 +49,12 @@ base_graphics spr2581(2581, "../graphics/bridges/64/pygen/tubular_monorail_8bpp.
 base_graphics spr2587(2587, "../graphics/bridges/64/pygen/tubular_maglev_8bpp.png") { template_girder(0, 0, 1) }
 
 //2593 bridge cursor
-base_graphics spr2593( 2593, "../graphics/cursors/1/cursors_8bpp.png") {
+base_graphics spr2593(2593, "../graphics/cursors/1/cursors_8bpp.png") {
     template_cursor_matrix(0, 14, 1)
 }
 
 //2594-2600 bridge icons
-base_graphics spr2594( 2594, "../graphics/icons/1/bridges_8bpp.png") {
+base_graphics spr2594(2594, "../graphics/icons/1/bridges_8bpp.png") {
     template_sprite_matrix(43, 20, 0, 0, 0, 0, 1)
     template_sprite_matrix(43, 20, 0, 0, 0, 1, 1)
     template_sprite_matrix(43, 20, 0, 0, 0, 2, 1)

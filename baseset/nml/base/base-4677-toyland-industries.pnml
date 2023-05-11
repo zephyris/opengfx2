@@ -101,9 +101,9 @@ base_graphics spr4737(4737, "../graphics/industries/toyland/64/pygen/fizzy_drink
 	template_house_1x1(65, 386, 1, 192)  // 1st constr. stage: centre tile
 	template_house_1x1(65, 193, 1, 192)  // 2nd constr. stage: centre tile
 	template_house_1x1(0, 193, 1, 192)  // 2nd constr. stage: left tile
-	template_house_1x1(130, 0, 1, 192)  // right tile
-	template_house_1x1(65, 0, 1, 192)  // centre tile
 	template_house_1x1(0, 0, 1, 192)  // left tile
+	template_house_1x1(65, 0, 1, 192)  // centre tile
+	template_house_1x1(130, 0, 1, 192)  // right tile
 }
 
 //4743  4762    20      Toyland: industries/Bubble generator

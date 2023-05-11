@@ -1,0 +1,24 @@
+//885-887 cursors
+base_graphics spr885(885, "../graphics/cursors/1/cursors_8bpp.png") {
+    template_cursor_matrix(1, 1, 1) // hq construction cursor
+	template_cursor_matrix(8, 6, 1) // road stop cursor
+    template_cursor_matrix(9, 6, 1) // lorry stop cursor
+}
+
+//888-901 toolbar icons
+base_graphics spr888(888, "../graphics/icons/1/icons_20px_8bpp.png") {
+    template_sprite_matrix(20, 20, 0, 0, 1, 8, 1) // construction toolbar: build road depot
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 7, 1) // construction toolbar: build docks
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 7, 1) // construction toolbar: build road stop
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 7, 1) // construction toolbar: build lorry stop
+    template_general(1, 148, 40, 20, 0, 0, 1) // construction toolbar: build rail station, wide
+    template_sprite_matrix(20, 20, 0, 0, 7, 7, 1) // construction toolbar: build rail station, square
+    template_sprite_matrix(20, 20, 0, 0, 0, 11, 1) // Monorail N-S
+	template_sprite_matrix(20, 20, 0, 0, 1, 11, 1) // Monorail SW-NE
+	template_sprite_matrix(20, 20, 0, 0, 2, 11, 1) // Monorail W-E
+	template_sprite_matrix(20, 20, 0, 0, 3, 11, 1) // Monorail NW-SE
+    template_sprite_matrix(20, 20, 0, 0, 0, 12, 1) // Maglev
+	template_sprite_matrix(20, 20, 0, 0, 1, 12, 1)
+	template_sprite_matrix(20, 20, 0, 0, 2, 12, 1)
+	template_sprite_matrix(20, 20, 0, 0, 3, 12, 1)
+}

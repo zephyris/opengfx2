@@ -1,0 +1,2 @@
+//595-600 road depot
+base_graphics spr595(595, "../graphics/stations/general/64/pygen/roaddepots_toyland_regions_8bpp.png") { template_road_depot(0, 0, 1) }

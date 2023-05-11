@@ -53,7 +53,8 @@ if mode == "rail" or mode == "rail_toyland":
     }
     terrain_list = {
       "toyland_grass": "toyland_groundtiles_32bpp.png",
-      "toyland_concrete": "toyland_concretetiles_32bpp.png"
+      "toyland_concrete": "toyland_concretetiles_32bpp.png",
+      "toyland_bridge": "general_bridgetiles_32bpp.png"
     }
   else:
     # Infrastructure sprites to use
@@ -124,6 +125,7 @@ elif mode == "road" or mode == "road_noline" or mode == "road_toyland":
     # Terrain sprites to use
     terrain_list = {
       "toyland_grass": "toyland_groundtiles_32bpp.png",
+      "toyland_bridge": "general_bridgetiles_32bpp.png"
     }
 elif mode == "road_town" or mode == "road_town_toyland":
   # Includes bus stops

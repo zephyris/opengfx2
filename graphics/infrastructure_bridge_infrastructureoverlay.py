@@ -15,7 +15,7 @@ scale = int(sys.argv[1])
 mode = sys.argv[2]
 tile_size = scale * 64
 
-if mode == "bridges":
+if mode == "bridges" or mode == "bridges_toyland":
   # Source tile positions in infrastructure
   tile_positions = [
     [1, 1, 64, 32],
@@ -23,29 +23,49 @@ if mode == "bridges":
   ]
   # vertical offset for infrastructure tiles
   v_offs = [81, 81]
-  # Infrastructure sprites to use
-  infrastructure_list = {
-    "road": "road_general_bridge_32bpp.png",
-    "rail": "rail_general_bridge_32bpp.png",
-    "monorail": "monorail_general_bridge_32bpp.png",
-    "maglev": "maglev_general_bridge_32bpp.png"
-  }
-  # Terrain sprites to use
-  bridge_list = {
-    "template": "bridge_template_32bpp.png",
-    "deckonly": "bridge_deckonly_32bpp.png",
-    "steelfast": "bridge_steelfast_32bpp.png",
-    "steelslow": "bridge_steelslow_32bpp.png",
-    "wood": "bridge_wood_32bpp.png",
-    "girder": "bridge_girder_32bpp.png",
-    "suspension": "bridge_suspension_32bpp.png",
-    "tubular": "bridge_tubular_32bpp.png"
-  }
+  if mode == "bridges":
+    # Infrastructure sprites to use
+    infrastructure_list = {
+      "road": "road_general_bridge_32bpp.png",
+      "rail": "rail_general_bridge_32bpp.png",
+      "monorail": "monorail_general_bridge_32bpp.png",
+      "maglev": "maglev_general_bridge_32bpp.png"
+    }
+    # Bridge sprites to use
+    bridge_list = {
+      "template": "bridge_template_32bpp.png",
+      "deckonly": "bridge_deckonly_32bpp.png",
+      "steelfast": "bridge_steelfast_32bpp.png",
+      "steelslow": "bridge_steelslow_32bpp.png",
+      "wood": "bridge_wood_32bpp.png",
+      "girder": "bridge_girder_32bpp.png",
+      "suspension": "bridge_suspension_32bpp.png",
+      "tubular": "bridge_tubular_32bpp.png"
+    }
+  elif mode == "bridges_toyland":
+    # Infrastructure sprites to use
+    infrastructure_list = {
+      "road": "road_toyland_bridge_32bpp.png",
+      "rail": "rail_toyland_bridge_32bpp.png",
+      "monorail": "monorail_toyland_bridge_32bpp.png",
+      "maglev": "maglev_toyland_bridge_32bpp.png"
+    }
+    # Bridge sprites to use
+    bridge_list = {
+      "template_toyland": "bridge_template_32bpp.png",
+      "deckonly_toyland": "bridge_deckonly_32bpp.png",
+      "steelfast_toyland": "bridge_steelfast_toyland_32bpp.png",
+      "steelslow_toyland": "bridge_steelslow_toyland_32bpp.png",
+      "wood_toyland": "bridge_wood_toyland_32bpp.png",
+      "girder_toyland": "bridge_girder_toyland_32bpp.png",
+      "suspension_toyland": "bridge_suspension_toyland_32bpp.png",
+      "tubular_toyland": "bridge_tubular_toyland_32bpp.png"
+    }
   bridgemask = "bridge_deckmask.png"
   composite_over = True
-elif mode == "railramps" or mode == "roadramps":
+elif mode == "railramps" or mode == "roadramps" or mode == "railramps_toyland" or mode == "roadramps_toyland":
   # Source tile positions in infrastructure
-  if mode == "railramps":
+  if mode == "railramps" or mode == "railramps_toyland":
     tile_positions = [
       [66, 1, 64, 32],
       [66, 1, 64, 32],
@@ -57,12 +77,19 @@ elif mode == "railramps" or mode == "roadramps":
       [1366, 1, 64, 23]
     ]
     # Infrastructure sprites to use
-    infrastructure_list = {
-      "rail": "rail_general_bridge_32bpp.png",
-      "monorail": "monorail_general_bridge_32bpp.png",
-      "maglev": "maglev_general_bridge_32bpp.png"
-    }
-  elif mode == "roadramps":
+    if mode == "railramps":
+      infrastructure_list = {
+        "rail": "rail_general_bridge_32bpp.png",
+        "monorail": "monorail_general_bridge_32bpp.png",
+        "maglev": "maglev_general_bridge_32bpp.png"
+      }
+    elif mode == "railramps_toyland":
+      infrastructure_list = {
+        "rail": "rail_toyland_bridge_32bpp.png",
+        "monorail": "monorail_toyland_bridge_32bpp.png",
+        "maglev": "maglev_toyland_bridge_32bpp.png"
+      }
+  elif mode == "roadramps" or mode == "roadramps_toyland":
     # Tile poisitions
     tile_positions = [
       [66, 1, 64, 32],
@@ -75,16 +102,27 @@ elif mode == "railramps" or mode == "roadramps":
       [1041, 1, 64, 23]
     ]
     # Infrastructure sprites to use
-    infrastructure_list = {
-      "road": "road_general_bridge_32bpp.png"
-    }
+    if mode == "roadramps":
+      infrastructure_list = {
+        "road": "road_general_bridge_32bpp.png"
+      }
+    elif mode == "roadramps_toyland":
+      infrastructure_list = {
+        "road": "road_toyland_bridge_32bpp.png"
+      }
   # vertical offset for infrastructure tiles
   v_offs = [16, 24, 16, 24, 16, 24, 16, 24]
   # Terrain sprites to use
-  bridge_list = {
-    "ramps_general": "bridgeramps_general_32bpp.png",
-    "ramps_wood": "bridgeramps_wood_32bpp.png",
-  }
+  if mode == "roadramps" or mode == "railramps":
+    bridge_list = {
+      "ramps_general": "bridgeramps_general_32bpp.png",
+      "ramps_wood": "bridgeramps_wood_32bpp.png",
+    }
+  elif mode == "roadramps_toyland" or mode == "railramps_toyland":
+    bridge_list = {
+      "ramps_general_toyland": "bridgeramps_general_toyland_32bpp.png",
+      "ramps_wood_toyland": "bridgeramps_wood_toyland_32bpp.png",
+    }
   bridgemask = "bridgeramps_deckmask.png"
   composite_over = False
 
