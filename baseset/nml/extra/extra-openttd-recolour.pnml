@@ -1,0 +1,5 @@
+
+replacenew(OTTD_RECOLOUR, "") {
+	/* All black recolour sprite. */
+	recolour_sprite { 0x00..0xFF: 1; }
+}

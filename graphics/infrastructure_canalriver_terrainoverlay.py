@@ -37,11 +37,12 @@ if mode == "canal":
     "tropical_grass": "tropical_groundtiles_32bpp.png",
     "tropical_desert": "tropical_groundtiles_desert_32bpp.png",
     "temperate_grass": "temperate_groundtiles_32bpp.png",
+    "general_concrete": "general_concretetiles_32bpp.png",
     "toyland_grass": "toyland_groundtiles_32bpp.png",
     "arctic_grass_shores": os.path.join("pygen", "arctic_grass_shoretiles_32bpp.png"),
     "tropical_grass_shores": os.path.join("pygen", "tropical_grass_shoretiles_32bpp.png"),
     "temperate_grass_shores": os.path.join("pygen", "temperate_grass_shoretiles_32bpp.png"),
-    "toyland_grass_shores": os.path.join("toyland_shoretiles_32bpp.png")
+    "toyland_grass_shores": "toyland_shoretiles_32bpp.png"
   }
 
 # Output image properties

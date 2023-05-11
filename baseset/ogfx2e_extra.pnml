@@ -11,7 +11,7 @@
 #include "sprites/extra/extra-erails.pnml"
 #include "sprites/extra/extra-rail-tunnels.pnml"
 #include "nml/extra/extra-foundations.pnml"
-#include "sprites/extra/extra-oneway.pnml"
+#include "nml/extra/extra-oneway.pnml"
 #include "sprites/extra/extra-road-stops.pnml"
 #include "nml/extra/extra-shores.pnml"
 #include "sprites/extra/extra-signals.pnml"
@@ -23,11 +23,11 @@
 #include "sprites/extra/extra-openttd-flags.pnml"
 #include "nml/extra/extra-openttd-gui.pnml"
 #include "sprites/extra/extra-openttd-airport-preview.pnml"
-#include "sprites/extra/extra-openttd-recolour.pnml"
+#include "nml/extra/extra-openttd-recolour.pnml"
 
-#include "nml/extra/extra-plus-canals.pnml"
-#include "sprites/extra/extra-plus-locks.pnml"
-#include "nml/extra/extra-plus-rivers.pnml"
+//#include "nml/extra/extra-plus-canals.pnml"
+//#include "sprites/extra/extra-plus-locks.pnml"
+//#include "nml/extra/extra-plus-rivers.pnml"
 
 if (climate == CLIMATE_ARCTIC) {
 #include "sprites/extra/extra-plus-arctic-rail-vehicles.pnml"
@@ -38,6 +38,6 @@ if (climate == CLIMATE_TROPICAL) {
 }
 
 if (climate == CLIMATE_TOYLAND) {
-#include "sprites/extra/extra-plus-toyland-infrastructure.pnml"
+#include "nml/extra/extra-plus-toyland-infrastructure.pnml"
 #include "nml/extra/extra-plus-toyland-bridge-recolour.pnml"
 }

@@ -501,6 +501,16 @@ template template_road_reconstruction(x, y, z) {
 	[ 151*z+x*z, 17*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
 }
 
+// Infrastructure: Road one way overlay
+template template_road_oneway(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+}
+
 // Terrain: Standard groundtiles
 template template_groundtiles(x, y, z) {
 	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
@@ -999,4 +1009,42 @@ template template_waterfeature_slopes(x, y, z) {
 	[ 285*z+x*z, 151*z+y*z, 16*z, 10*z-1,  -7*z,  22*z ]
 	[ 261*z+x*z, 133*z+y*z, 16*z, 10*z-1, -31*z,   4*z ]
 	[ 285*z+x*z, 121*z+y*z, 16*z, 10*z-1,  -7*z,  -8*z ]
+}
+
+//Template: water docks
+template template_docks(x, y, z) {
+	template_house_1x1_addoffs( 0, 195, z, 64, -7, -5)
+	template_house_1x1_addoffs( 0,   0, z, 64,  7, -5)
+	template_house_1x1_addoffs( 0,  65, z, 64, -7, -5)
+	template_house_1x1_addoffs( 0, 130, z, 64,  7, -5)
+	template_house_1x1_addoffs(65,  65, z, 64, -7, -5)
+	template_house_1x1_addoffs(65,   0, z, 64,  7, -5)
+}
+
+//Template: water locks
+template template_locks(x, y, z) {
+	template_house_1x1_addoffs( 325, 130, z, 64,  0,  0)
+	template_house_1x1_addoffs( 325,  65, z, 64,  0,  0)
+	template_house_1x1_addoffs( 325, 195, z, 64,  0,  0)
+	template_house_1x1_addoffs( 325,   0, z, 64,  0,  0)
+	template_house_1x1_addoffs( 260, 130, z, 64, 32,-15)
+	template_house_1x1_addoffs( 260,  65, z, 64,-32,-15)
+	template_house_1x1_addoffs( 260, 195, z, 64,-32,-15)
+	template_house_1x1_addoffs( 260,   0, z, 64, 32,-15)
+	template_house_1x1_addoffs( 455, 130, z, 64,  0,  0)
+	template_house_1x1_addoffs( 455,  65, z, 64,  0,  0)
+	template_house_1x1_addoffs( 455, 195, z, 64,  0,  0)
+	template_house_1x1_addoffs( 455,   0, z, 64,  0,  0)
+	template_house_1x1_addoffs( 390, 130, z, 64, 32,-15)
+	template_house_1x1_addoffs( 390,  65, z, 64,-32,-15)
+	template_house_1x1_addoffs( 390, 195, z, 64,-32,-15)
+	template_house_1x1_addoffs( 390,   0, z, 64, 32,-15)
+	template_house_1x1_addoffs( 195, 130, z, 64,  0,  0)
+	template_house_1x1_addoffs( 195,  65, z, 64,  0,  0)
+	template_house_1x1_addoffs( 195, 195, z, 64,  0,  0)
+	template_house_1x1_addoffs( 195,   0, z, 64,  0,  0)
+	template_house_1x1_addoffs( 130, 130, z, 64, 32,-15)
+	template_house_1x1_addoffs( 130,  65, z, 64,-32,-15)
+	template_house_1x1_addoffs( 130, 195, z, 64,-32,-15)
+	template_house_1x1_addoffs( 130,   0, z, 64, 32,-15)
 }
