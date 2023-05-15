@@ -203,16 +203,16 @@ base_graphics spr933 ( 933, "../graphics/icons/1/manager_faces_8bpp.png") {
 }
 //942-943 glasses
 base_graphics spr942 ( 942, "../graphics/icons/1/manager_faces_8bpp.png") {
-	template_sprite_matrix(92, 119, 0, 0, 0, 20, 1)
-	template_sprite_matrix(92, 119, 0, 0, 1, 20, 1)
+	template_sprite_matrix(92, 119, 0, 0, 0, 21, 1)
+	template_sprite_matrix(92, 119, 0, 0, 1, 21, 1)
 }
 //944 top of head
 base_graphics spr944 ( 944, "../graphics/icons/1/manager_faces_8bpp.png") {
-	template_sprite_matrix(92, 119, 0, 0, 0, 21, 1)
+	template_sprite_matrix(92, 119, 0, 0, 0, 22, 1)
 }
 //945-946 bottom of head
 base_graphics spr945 ( 945, "../graphics/icons/1/manager_faces_8bpp.png") {
-	template_sprite_matrix(92, 119, 0, 0, 0, 22, 1)
+	template_sprite_matrix(92, 119, 0, 0, 0, 23, 1)
 	template_sprite_matrix(92, 119, 0, 0, 1, 23, 1)
 }
 //947-951 nose

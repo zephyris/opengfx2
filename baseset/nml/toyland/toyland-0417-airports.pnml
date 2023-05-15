@@ -1,0 +1,38 @@
+//417 heliport
+base_graphics spr417(417, "../graphics/stations/general/64/pygen/heliport_combo_8bpp.png") { template_heliport(0, 0, 1) }
+
+//418-448 (mostly) modern airport
+base_graphics spr418(418, "../graphics/infrastructure/64/pygen/airport_modern_toyland_grass_8bpp.png") { template_airport_modern_groundtiles(0, 0, 1) }
+base_graphics spr434(434, "../graphics/stations/general/64/pygen/modernairport_toyland_8bpp.png") { template_modernairport_walkwaysfences(0, 0, 1) }
+base_graphics spr440(440, "../graphics/stations/general/64/pygen/modernairport_toyland_8bpp.png") { template_modernairport_buildings_core(0, 0, 1) }
+base_graphics spr445(445, "../graphics/stations/general/64/pygen/modernairdepots_toyland_regions_8bpp.png") { template_modernairport_depot_core(0, 0, 1) }
+base_graphics spr447(447, "../graphics/stations/general/64/pygen/oldairdepots_toyland_regions_8bpp.png") { template_modernairport_depot_core(0, 0, 1) }
+
+//449-460 radar
+base_graphics spr449(449, "../graphics/effects/64/airport_radar_8bpp.png") {
+    template_animation_frame(40, 40, -20, -29, 0, 1)
+    template_animation_frame(40, 40, -20, -29, 1, 1)
+    template_animation_frame(40, 40, -20, -29, 2, 1)
+    template_animation_frame(40, 40, -20, -29, 3, 1)
+    template_animation_frame(40, 40, -20, -29, 4, 1)
+    template_animation_frame(40, 40, -20, -29, 5, 1)
+    template_animation_frame(40, 40, -20, -29, 6, 1)
+    template_animation_frame(40, 40, -20, -29, 7, 1)
+    template_animation_frame(40, 40, -20, -29, 8, 1)
+    template_animation_frame(40, 40, -20, -29, 9, 1)
+    template_animation_frame(40, 40, -20, -29, 10, 1)
+    template_animation_frame(40, 40, -20, -29, 11, 1)
+}
+
+//461-471 (remaining) old airport
+// TODO: Fix build of toyland-specific tiles
+base_graphics spr461(461, "../graphics/stations/general/64/pygen/oldairport_multitile_combo_tiles_8bpp.png") { template_airport_old_buildingtiles(0, 0, 1) }
+base_graphics spr465(465, "../graphics/infrastructure/64/pygen/airport_old_toyland_grass_8bpp.png") { template_airport_old_groundtiles(0, 0, 1) }
+
+//472-745 windsock
+base_graphics spr472(472, "../graphics/effects/64/airport_windsock_8bpp.png") {
+    template_animation_frame(32, 32, -5, -29, 0, 1)
+    template_animation_frame(32, 32, -5, -29, 1, 1)
+    template_animation_frame(32, 32, -5, -29, 2, 1)
+    template_animation_frame(32, 32, -5, -29, 3, 1)
+}

@@ -1,5 +1,3 @@
-
-
 //toyland buildings
 //4627-4629 church
 base_graphics spr4627(4627, "../graphics/towns/toyland/64/church_8bpp.png") {

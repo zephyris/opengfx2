@@ -12,13 +12,13 @@
 #include "sprites/extra/extra-rail-tunnels.pnml"
 #include "nml/extra/extra-foundations.pnml"
 #include "nml/extra/extra-oneway.pnml"
-#include "sprites/extra/extra-road-stops.pnml"
+#include "nml/extra/extra-road-stops.pnml"
 #include "nml/extra/extra-shores.pnml"
 #include "sprites/extra/extra-signals.pnml"
 #include "nml/extra/extra-sloped-tracks.pnml"
 #include "sprites/extra/extra-tram-tracks.pnml"
 
-#include "sprites/extra/extra-openttd-airport.pnml"
+#include "nml/extra/extra-openttd-airport.pnml"
 #include "sprites/extra/extra-openttd-autorail.pnml"
 #include "sprites/extra/extra-openttd-flags.pnml"
 #include "nml/extra/extra-openttd-gui.pnml"
@@ -26,7 +26,6 @@
 #include "nml/extra/extra-openttd-recolour.pnml"
 
 #include "nml/extra/extra-plus-canals.pnml"
-#include "sprites/extra/extra-plus-locks.pnml"
 #include "nml/extra/extra-plus-rivers.pnml"
 
 if (climate == CLIMATE_ARCTIC) {

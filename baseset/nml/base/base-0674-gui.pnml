@@ -15,8 +15,8 @@ base_graphics spr679( 679, "../graphics/icons/1/icons_20px_8bpp.png") {
     template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 0, 1) // unused(?): bin
 }
 //682 window maximise icon
-base_graphics spr682( 682, "../graphics/icons/1/icons_10px_8bpp.png") {
-    template_sprite_matrix_nocrop(10, 10, 0, 0, 14, 1, 1) // window titlebar: maximise
+base_graphics spr682( 682, "../graphics/icons/1/icons_8px_8bpp.png") {
+    template_sprite_matrix_nocrop(8, 8, 0, 0, 7, 1, 1) // window titlebar: maximise
 }
 //683 vehicle window icons
 base_graphics spr683( 683, "../graphics/icons/1/icons_16px_8bpp.png") {

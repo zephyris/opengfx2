@@ -316,7 +316,10 @@ for input_file in glob.glob("*"+suffix):
     # Pixel art/normal mode overlay
     normal_overlay_name = input_file[:-len(suffix)]+"_overlaynormal.png"
     if os.path.isfile(normal_overlay_name):
-      #image_colorised = overlay_texture(image_32bit, image_shape, Image.open(normal_overlay_name), range(256), 255/255, "normal")
       image_32bit = overlay_texture(image_32bit, image_shape, Image.open(normal_overlay_name), range(256), 255/255, "normal")
+    # Additional toyland pixel art/normal mode overlay
+    toyland_overlay_name = input_file[:-len(suffix)]+"_toylandoverlaynormal.png"
+    if os.path.isfile(toyland_overlay_name) and climate == "toyland":
+      image_32bit = overlay_texture(image_32bit, image_shape, Image.open(toyland_overlay_name), range(256), 255/255, "normal")
     # Save shaded image
     image_32bit.save(os.path.join("pygen", input_file[:-len(suffix)]+"_"+namesuffix+"32bpp.png"), "PNG")

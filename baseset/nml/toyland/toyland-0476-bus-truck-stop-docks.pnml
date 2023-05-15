@@ -1,0 +1,15 @@
+//road stops
+//476-491 bus stop
+base_graphics spr476(476, "../graphics/infrastructure/64/pygen/road_toyland_concrete_8bpp.png") { template_roadstoptiles(0, 0, 1) } // ground tiles
+//alternative_sprites(spr476, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_toyland_concrete_8bpp.png") { template_roadstoptiles(0, 0, 2) }
+//alternative_sprites(spr476, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_toyland_concrete_8bpp.png") { template_roadstoptiles(0, 0, 4) }
+base_graphics spr480(480, "../graphics/stations/general/64/pygen/roadstops_toyland_8bpp.png") { template_busstop(325, 0, 1) } // building sprites
+
+//492-507 lorry stop
+base_graphics spr492(492, "../graphics/infrastructure/64/pygen/road_toyland_concrete_8bpp.png") { template_roadstoptiles(0, 0, 1) } // ground tiles
+//alternative_sprites(spr492, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_toyland_concrete_8bpp.png") { template_roadstoptiles(0, 0, 2) }
+//alternative_sprites(spr492, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_toyland_concrete_8bpp.png") { template_roadstoptiles(0, 0, 4) }
+base_graphics spr496(496, "../graphics/stations/general/64/pygen/roadstops_toyland_8bpp.png") { template_lorrystop(0, 0, 1) } // building sprites
+
+//508-702 docks
+base_graphics spr508(508, "../graphics/stations/general/64/pygen/docksandlocks_toyland_8bpp.png") { template_docks(0, 0, 1) }

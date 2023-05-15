@@ -1,6 +1,3 @@
-#include "sprites/templates/sprite_templates.pnml"
-#include "sprites/templates/tmpl_trains.nml"
-
 #include "nml/templates/zoom-sensitive.pnml"
 
 #include "nml/base/base-0000-font.pnml"

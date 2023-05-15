@@ -436,6 +436,14 @@ template template_rail_station_platformsonly(x, y, z) {
 	template_house_1x1_addoffs(130, 195, z, 64, -22, -12)
 }
 
+// Infrastructure buildings: Rail waypoints
+template template_rail_waypoint(x, y, z) {
+	template_house_1x1_addoffs(  0,   0, z, 64,   0,  -1)
+	template_house_1x1_addoffs( 65,   0, z, 64, -22, -12)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs( 65,  65, z, 64,  22, -12)
+}
+
 //Template: Tunnels
 template template_tunnels_general(x, y, z) {
 	[66*z+x*z,  66*z+y*z, 64*z, 64*z-1, -31*z, -32*z ]
@@ -672,6 +680,15 @@ template template_bridge_onespan_rear_rev(x, y, z) {
 template template_bridge_onespan_front_rev(x, y, z) {
 	template_bridge_single_front_swne(x+0, y+0, z)
 	template_bridge_single_front_nwse(x+65, y+0, z)
+}
+
+template template_bridge_extralegs(x, y, z) {
+	template_bridge_single_front_swne(x+0, y, z)
+	template_bridge_single_front_swne(x+135, y, z)
+	template_bridge_single_front_swne(x+260, y, z)
+	template_bridge_single_front_nwse(x+65, y, z)
+	template_bridge_single_front_nwse(x+195, y, z)
+	template_bridge_single_front_nwse(x+325, y, z)
 }
 
 // Template bridges: suspension road
@@ -1050,19 +1067,40 @@ template template_locks(x, y, z) {
 }
 
 //Template: road stop, base
-template template_roadstop(x, y, z) {
-	template_house_1x1_addoffs( 65,   0, z, 64, -30, -16)
-	template_house_1x1_addoffs( 65,  65, z, 64,  24, -19)
-	template_house_1x1_addoffs( 65, 130, z, 64,   6,  -4)
-	template_house_1x1_addoffs( 65, 195, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0,   0, z, 64,  26, -14)
-	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0, 130, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0, 195, z, 64, -26, -14)
-	template_house_1x1_addoffs(130,   0, z, 64,   4,  -3)
-	template_house_1x1_addoffs(130,  65, z, 64,  -6,  -4)
-	template_house_1x1_addoffs(130, 130, z, 64, -24, -19)
-	template_house_1x1_addoffs(130, 195, z, 64,  26, -18)
+template template_lorrystop(x, y, z) {
+	template_house_1x1_addoffs( 65+x,   0+y, z, 64, -30, -16)
+	template_house_1x1_addoffs( 65+x,  65+y, z, 64,  24, -19)
+	template_house_1x1_addoffs( 65+x, 130+y, z, 64,   6,  -4)
+	template_house_1x1_addoffs( 65+x, 195+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x,   0+y, z, 64,  26, -14)
+	template_house_1x1_addoffs(  0+x,  65+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x, 130+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x, 195+y, z, 64, -26, -14)
+	template_house_1x1_addoffs(130+x,   0+y, z, 64,   4,  -3)
+	template_house_1x1_addoffs(130+x,  65+y, z, 64,  -6,  -4)
+	template_house_1x1_addoffs(130+x, 130+y, z, 64, -24, -19)
+	template_house_1x1_addoffs(130+x, 195+y, z, 64,  26, -18)
+}
+template template_busstop(x, y, z) {
+	template_house_1x1_addoffs( 65+x, 130+y, z, 64,  -4,  -3)
+	template_house_1x1_addoffs( 65+x, 195+y, z, 64,  -6,  -4)
+	template_house_1x1_addoffs( 65+x,   0+y, z, 64, -24, -19)
+	template_house_1x1_addoffs( 65+x,  65+y, z, 64,  26, -18)
+	template_house_1x1_addoffs(  0+x,   0+y, z, 64,  26, -14)
+	template_house_1x1_addoffs(  0+x,  65+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x, 130+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x, 195+y, z, 64, -26, -14)
+	template_house_1x1_addoffs(130+x, 130+y, z, 64, -26, -14)
+	template_house_1x1_addoffs(130+x, 195+y, z, 64,  20, -17)
+	template_house_1x1_addoffs(130+x,   0+y, z, 64,   6,  -4)
+	template_house_1x1_addoffs(130+x,  65+y, z, 64,   0,  -1)
+}
+//Template: road stop, extra through stops
+template template_roadstop_throughstop(x, y, z) {
+	template_house_1x1_addoffs(260+x,  65+y, z, 64,  25, -13)
+	template_house_1x1_addoffs(260+x,   0+y, z, 64,   0,   0)
+	template_house_1x1_addoffs(195+x,  65+y, z, 64,   0,   0)
+	template_house_1x1_addoffs(195+x,   0+y, z, 64, -26, -13)
 }
 
 //Template: Modern airport, base
@@ -1107,7 +1145,39 @@ template template_airportoilrefinery_building(x, y, z) {
 	template_house_1x1_addoffs(455,   0, z, 96,   0,  -7)
 }
 
+//Template: Modern Airport, extended
+template template_airport_modern_extragroundtiles1(x, y, z) {
+	template_flattile_single(0, 0, z)
+	template_flattile_single(1040, 0, z)
+	template_flattile_single(1105, 0, z)
+	template_flattile_single(1170, 0, z)
+	template_flattile_single(1235, 0, z)
+	template_flattile_single(1300, 0, z)
+}
+template template_airport_modern_extragroundtiles2(x, y, z) {
+	template_flattile_single(1430, 0, z)
+	template_flattile_single(1495, 0, z)
+	template_flattile_single(1560, 0, z)
+}
+
 //Template: Heliport
 template template_heliport(x, y, z) {
 	template_house_1x1_addoffs(0, 0, z, 96, 0, 0)
+}
+
+//Template: Old airport, base
+template template_airport_old_buildingtiles(x, y, z) {
+	template_house_1x1(0, 0, z, 96)
+	template_house_1x1(65, 0, z, 96)
+	template_house_1x1(130, 0, z, 96)
+	template_house_1x1_addoffs(195, 0, z, 96, 0, -31)
+}
+template template_airport_old_groundtiles(x, y, z) {
+	template_flattile_single(195, 0, z)
+	template_flattile_single(260, 0, z)
+	template_flattile_single(325, 0, z)
+	template_flattile_single(390, 0, z)
+	template_flattile_single(455, 0, z)
+	template_flattile_single(520, 0, z)
+	template_flattile_single(650, 0, z)
 }

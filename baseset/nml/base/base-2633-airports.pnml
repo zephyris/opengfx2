@@ -5,21 +5,10 @@ base_graphics spr2633(2633, "../graphics/stations/general/64/pygen/heliport_comb
 base_graphics spr2634(2634, "../graphics/infrastructure/64/pygen/airport_modern_temperate_grass_8bpp.png") { template_airport_modern_groundtiles(0, 0, 1) }
 base_graphics spr2650(2650, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_modernairport_buildings_core(0, 0, 1) }
 base_graphics spr2655(2655, "../graphics/stations/general/64/pygen/modernairdepots_regions_8bpp.png") { template_modernairport_depot_core(0, 0, 1) }
-base_graphics spr2657(2657, "sprites/png/infrastructure/airports.png") { [ 290,  216,  64,  55,  -2, -38] }
-base_graphics spr2658(2658, "sprites/png/infrastructure/airports.png") { [ 370,  216,  18,  17,  16,  -1] }
+base_graphics spr2657(2657, "../graphics/stations/general/64/pygen/oldairdepots_regions_8bpp.png") { template_modernairport_depot_core(0, 0, 1) }
 base_graphics spr2659(2659, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_modernairport_walkwaysfences(0, 0, 1) }
-
-base_graphics spr2665(2665, "sprites/png/infrastructure/airports.png") { [ 658,  216,  64,  31, -31,   0] }
-base_graphics spr2666(2666, "sprites/png/infrastructure/airports.png") { [   2,  296,  64,  31, -31,   0] }
-base_graphics spr2667(2667, "sprites/png/infrastructure/airports.png") { [  82,  296,  64,  31, -31,   0] }
-base_graphics spr2668(2668, "sprites/png/infrastructure/airports.png") { [ 162,  296,  50,  26, -21, -13] }
-base_graphics spr2669(2669, "sprites/png/infrastructure/airports.png") { [ 226,  296,  64,  31, -31,   0] }
-base_graphics spr2670(2670, "sprites/png/infrastructure/airports.png") { [ 306,  296,  64,  31, -31,   0] }
-base_graphics spr2671(2671, "sprites/png/infrastructure/airports.png") { [ 386,  296,  64,  31, -31,   0] }
-base_graphics spr2672(2672, "sprites/png/infrastructure/airports.png") { [ 466,  296,  64,  31, -31,   0] }
-base_graphics spr2673(2673, "sprites/png/infrastructure/airports.png") { [ 546,  296,  64,  31, -31,   0] }
-base_graphics spr2674(2674, "sprites/png/infrastructure/airports.png") { [ 626,  296,  64,  31, -31,   0] }
-base_graphics spr2675(2675, "sprites/png/infrastructure/airports.png") { [ 706,  296,  64,  31, -31,   0] }
+base_graphics spr2665(2665, "../graphics/stations/general/64/pygen/oldairport_multitile_combo_tiles_8bpp.png") { template_airport_old_buildingtiles(0, 0, 1) }
+base_graphics spr2669(2669, "../graphics/infrastructure/64/pygen/airport_old_temperate_grass_8bpp.png") { template_airport_old_groundtiles(0, 0, 1) }
 
 //2676-2679 windsock
 base_graphics spr2676(2676, "../graphics/effects/64/airport_windsock_8bpp.png") {

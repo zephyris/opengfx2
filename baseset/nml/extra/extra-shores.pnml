@@ -1,4 +1,3 @@
-
 // COAST_TILES_BASEGFX additional coast sprites
 if (climate == CLIMATE_TEMPERATE) {
 	replacenew coast_tiles_basegfx_temperate(COAST_TILES_BASEGFX, "../graphics/terrain/64/pygen/temperate_grass_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 1) }

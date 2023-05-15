@@ -1,0 +1,5 @@
+//Road stops
+replacenew(ROAD_STOPS, "../graphics/stations/general/64/pygen/roadstops_8bpp.png") {
+    template_roadstop_throughstop(325, 0, 1)
+    template_roadstop_throughstop(0, 0, 1)
+}

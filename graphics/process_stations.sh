@@ -24,6 +24,8 @@ mask_regions.py pygen/shipdepots shipdepots_regionmask.png 1
 mask_regions.py pygen/shipdepots_toyland shipdepots_regionmask.png 1
 mask_regions.py pygen/modernairdepots modernairdepots_regionmask.png 1
 mask_regions.py pygen/modernairdepots_toyland modernairdepots_regionmask.png 1
+mask_regions.py pygen/oldairdepots oldairdepots_regionmask.png 1
+mask_regions.py pygen/oldairdepots_toyland oldairdepots_regionmask.png 1
 # mask regions of tunnels (ie. back wall and roadway from rest of tunnel/sloped tile)
 mask_regions.py pygen/railtunnels railtunnels_regionmask.png 1
 mask_regions.py pygen/railtunnels_snow railtunnels_regionmask.png 1
@@ -36,6 +38,13 @@ mask_regions.py pygen/roadtunnels_snow roadtunnels_regionmask.png 1
 # overlay tunnels onto terrain sprites
 infrastructure_tunnels_infrastructureoverlay.py 1 road
 infrastructure_tunnels_infrastructureoverlay.py 1 rail
+# handle old airport
+building_base_flatten.py oldairport_multitile 1
+mask_tiles.py pygen/oldairport_multitile oldairport_multitile_tilemask.png 1
+mask_tiles.py pygen/oldairport_multitile_combo oldairport_multitile_tilemask.png 1
+building_base_flatten.py oldairport_multitile_toyland 1
+mask_tiles.py pygen/oldairport_multitile_toyland oldairport_multitile_tilemask.png 1
+mask_tiles.py pygen/oldairport_multitile_toyland_combo oldairport_multitile_tilemask.png 1
 custom_dither.py
 cd pygen
 custom_dither.py

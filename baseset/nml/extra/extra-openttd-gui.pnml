@@ -1,5 +1,3 @@
-// INCOMPLETE UPDATE
-
 // OTTD_GUI 0-11 tile border hightlights
 replacenew ottd_gui0(OTTD_GUI,  "../graphics/selectors/64/selector_halftile_8bpp.png", 0) { template_selectors_halftile(0, 0, 1) }
 
@@ -9,37 +7,13 @@ replacenew ottd_gui12(OTTD_GUI, "../graphics/icons/1/title_letters_alt_8bpp.png"
     [ 106,  62,  43,  49,  -7,  -3] // larger D
 }
 
-//TODO
+// TODO: Aligned correctly? Where are these used?
 // OTTD_GUI 14-37 ottd bridge piers
-replacenew ottd_gui14(OTTD_GUI, "", 14) {
-                                                                                  // bridge piers colour 1 (~copper)
-	[ 146,  632,   4,   8,  28,  16, "sprites/png/gui/gui04.png"]
-	[ 162,  632,   4,   9,   0,   1, "sprites/png/gui/gui04.png"]
-	[ 178,  632,  32,  23,   0,   1, "sprites/png/gui/gui04.png"]
-	[ 226,  632,   4,   8, -31,  15, "sprites/png/gui/gui04.png"]
-	[ 242,  632,   4,   9,  -3,   0, "sprites/png/gui/gui04.png"]
-	[ 258,  632,  32,  23, -31,   0, "sprites/png/gui/gui04.png"]
-                                                                                  // bridge piers colour 2 (~copper)
-	[ 306,  632,   4,   8,  28,  16, "sprites/png/gui/gui04.png"]
-	[ 322,  632,   4,   9,   0,   1, "sprites/png/gui/gui04.png"]
-	[ 338,  632,  32,  23,   0,   1, "sprites/png/gui/gui04.png"]
-	[ 386,  632,   4,   8, -31,  15, "sprites/png/gui/gui04.png"]
-	[ 402,  632,   4,   9,  -3,   0, "sprites/png/gui/gui04.png"]
-	[ 418,  632,  32,  23, -31,   0, "sprites/png/gui/gui04.png"]
-                                                                                  // bridge piers colour 3 (~copper)
-	[ 466,  632,   4,   8,  28,  16, "sprites/png/gui/gui04.png"]
-	[ 482,  632,   4,   9,   0,   1, "sprites/png/gui/gui04.png"]
-	[ 498,  632,  32,  23,   0,   1, "sprites/png/gui/gui04.png"]
-	[ 546,  632,   4,   8, -31,  15, "sprites/png/gui/gui04.png"]
-	[ 562,  632,   4,   9,  -3,   0, "sprites/png/gui/gui04.png"]
-	[ 578,  632,  32,  23, -31,   0, "sprites/png/gui/gui04.png"]
-                                                                                  // bridge piers colour 4 (silver)
-	[ 626,  632,   4,   8,  28,  16, "sprites/png/gui/gui04.png"]
-	[ 642,  632,   4,   9,   0,   1, "sprites/png/gui/gui04.png"]
-	[ 658,  632,  32,  23,   0,   1, "sprites/png/gui/gui04.png"]
-	[ 706,  632,   4,   8, -31,  15, "sprites/png/gui/gui04.png"]
-	[ 722,  632,   4,   9,  -3,   0, "sprites/png/gui/gui04.png"]
-	[ 738,  632,  32,  23, -31,   0, "sprites/png/gui/gui04.png"]
+replacenew ottd_gui14(OTTD_GUI, "../graphics/bridges/64/extra_legs_8bpp.png", 14) {
+	template_bridge_extralegs(0, 0, 1) // copper square
+	template_bridge_extralegs(0, 129, 1) // wood
+	template_bridge_extralegs(0, 258, 1) // copper
+	template_bridge_extralegs(0, 387, 1) // silver square
 }
 
 // OTTD_GUI 38-43
@@ -55,16 +29,15 @@ replacenew ottd_gui38(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 38) {
 // OTTD_GUI 44-52
 replacenew ottd_gui44(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 44) {
     template_sprite_matrix_nocrop(8, 8, 0, 0, 0, 1, 1) // window decoration: resize
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 0, 1) // window decoration: arrow up
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 0, 1) // window decoration: arrow down
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 5, 0, 1) // window decoration: arrow left
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, 1) // window decoration: arrow up
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, 1) // window decoration: arrow down
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 5, 0, 1) // window decoration: arrow left
 	template_sprite_matrix_nocrop(8, 8, 0, 0, 6, 0, 1) // window decoration: arrow right
 	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 1, 1) // window decoration: go to default directory
 	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 1, 1) // window decoration: list (?)
 	template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 1, 1) // window decoration: pin/sticky
 	template_sprite_matrix_nocrop(8, 8, 0, 0, 4, 1, 1) // window decoration: unpin/unstick
 }
-
 
 // OTTD_GUI 53-54 rail autorail icon and cursor
 replacenew ottd_gui53(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 53) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 9, 1) }
@@ -106,14 +79,11 @@ replacenew ottd_gui74(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 74) { 
 replacenew ottd_gui75(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 75) { template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 4, 1) }
 
 // OTTD_GUI 76-77 rail waypoint icon and cursor
-replacenew ottd_gui76(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 76) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 8, 1) }
+replacenew ottd_gui76(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 76) { template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 6, 1) }
 replacenew ottd_gui77(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 77) { template_cursor_matrix(9, 8, 1) }
 
-//TODO
-replacenew ottd_gui78(OTTD_GUI, "", 78) { [ 434,  744,  62,  40, -31,  -9, "sprites/png/gui/gui04.png"] }                 // default waypoint building part 1 SW-NE view
-replacenew ottd_gui79(OTTD_GUI, "", 79) { [ 514,  744,  62,  40, -52, -20, "sprites/png/gui/gui04.png"] }                 // default waypoint building part 2 SW-NE view
-replacenew ottd_gui80(OTTD_GUI, "", 80) { [ 594,  744,  62,  40, -31,  -9, "sprites/png/gui/gui04.png"] }                 // default waypoint building part 1 NW-SE view
-replacenew ottd_gui81(OTTD_GUI, "", 81) { [ 674,  744,  62,  40, -10, -20, "sprites/png/gui/gui04.png"] }                 // default waypoint building part 2 NW-SE view
+// OTTD_GUI 78-81 rail waypoint (real, not GUI!)
+replacenew ottd_gui78(OTTD_GUI, "../graphics/stations/general/64/pygen/railwaypoint_8bpp.png", 78) { template_rail_waypoint(0, 0, 1) }
 
 // OTTD_GUI 82-83 road autoroad icon and cursor
 replacenew ottd_gui82(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 76) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 14, 1) }
@@ -128,144 +98,191 @@ replacenew ottd_gui86(OTTD_GUI, "../graphics/infrastructure/64/pygen/airport_mod
 // OTTD_GUI 87 lock cursor
 replacenew ottd_gui87(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 87) { template_cursor_matrix(1, 13, 1) }
 
-replacenew ottd_gui88(OTTD_GUI, "", 88) { [ 226,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // waterways toolbar: build canal
-replacenew ottd_gui89(OTTD_GUI, "", 89) { [ 258,  808,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor waterways: place canal
-replacenew ottd_gui90(OTTD_GUI, "", 90) { [ 306,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // main toolbar: fast forward
-replacenew ottd_gui91(OTTD_GUI, "", 91) { [ 338,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"] }                 // landscaping toolbar: level land
-replacenew ottd_gui92(OTTD_GUI, "", 92) { [ 370,  808,  32,  32,   0,   0, "sprites/png/gui/gui04.png"] }                 // cursor landscaping: level land
-replacenew ottd_gui93(OTTD_GUI, "", 93) {
-	[ 418,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell single train
-	[ 450,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell single road vehicle
-	[ 482,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell single ship
-	[ 514,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell single plane
-	[ 546,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell all trains
-	[ 578,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell all road vehicles
-	[ 610,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell all ships
-	[ 642,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell all aircrafts
-	[ 674,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: autoreplace all trains in depot
-	[ 706,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: autoreplace all road vehicles in depot
-	[ 738,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: autoreplace all ships in depot
-	[ 770,  808,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: autoreplace all aircrafts in hangar
-	[   2,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // depot view: sell whole train
-	[  34,  856,  16,  16,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle view: clone train
-	[  66,  856,  16,  16,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle view: clone road vehicle
-	[  98,  856,  16,  16,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle view: clone ship
-	[ 130,  856,  16,  16,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle view: clone aircraft
+// OTTD_GUI 88-89 canal icon and cursor
+replacenew ottd_gui88(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 88) { template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 8, 1) }
+replacenew ottd_gui89(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 89) { template_cursor_matrix(2, 13, 1) }
+
+// OTTD_GUI 90 main toolbar: fast forward icon
+replacenew ottd_gui90(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 90) { template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 0, 1) }
+
+// OTTD_GUI 91-92 level land icon and cursor
+replacenew ottd_gui91(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 91) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 2, 1) }
+replacenew ottd_gui92(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 92) { template_cursor_matrix(6, 2, 1) }
+
+// OTTD_GUI 93-105 depot view new vehicle management icons controls
+replacenew ottd_gui93(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 93) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 16, 1) // depot view: sell single train
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 16, 1) // depot view: sell single road vehicle
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 16, 1) // depot view: sell single ship
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 16, 1) // depot view: sell single plane
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 16, 1) // depot view: sell all trains
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 16, 1) // depot view: sell all road vehicles
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 16, 1) // depot view: sell all ships
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 16, 1) // depot view: sell all aircraft
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 17, 1) // depot view: autoreplace all trains in depot
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 17, 1) // depot view: autoreplace all road vehicles in depot
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 17, 1) // depot view: autoreplace all ships in depot
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 17, 1) // depot view: autoreplace all aircrafts in hangar
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 16, 1) // depot view: sell whole train
 }
 
-replacenew ottd_gui110(OTTD_GUI, "", 110) {
-	[ 162,  856,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor clone vehicle: select train to clone
-	[ 210,  856,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor clone vehicle: select road vehicle to clone
-	[ 258,  856,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor clone vehicle: select ship to clone
-	[ 306,  856,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor clone vehicle: select aircraft to clone
-}
-replacenew ottd_gui114(OTTD_GUI, "", 114) {
-	[ 354,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: create new train group
-	[ 386,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: create new road vehicles group
-	[ 418,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: create new ships group
-	[ 450,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: create new aircrafts group
-	[ 482,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: delete train group
-	[ 514,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: delete road vehicles group
-	[ 546,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: delete ships group
-	[ 578,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: delete aircrafts group
-	[ 610,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: rename train group
-	[ 642,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: rename road vehicles group
-	[ 674,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: rename ship group
-	[ 706,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: rename aircrafts group
-	[ 738,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: don't autoreplace this group of trains
-	[ 770,  856,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: don't autoreplace this group of road vehicles
-	[   2,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: don't autoreplace this group of ships
-	[  34,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: don't autoreplace this group of aircrafts
-	[  66,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: select no autoreplace for this group of trains
-	[  98,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: select no autoreplace for this group of road vehicles
-	[ 130,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: select no autoreplace for this group of ships
-	[ 162,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // vehicle groups: select no autoreplace for this group of aircrafts
-	[ 194,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // road toolbar: build one-way roads
-	[ 226,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // signal toolbar: convert signals
-	[ 258,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // waterways toolbar: build rivers
+// OTTD_GUI 93-105 vehicle view new vehicle management controls
+replacenew ottd_gui106(OTTD_GUI, "../graphics/icons/1/icons_16px_8bpp.png", 106) {
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 0, 1, 1) // vehicle view: clone train
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 1, 1, 1) // vehicle view: clone road vehicle
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 2, 1, 1) // vehicle view: clone ship
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 3, 1, 1) // vehicle view: clone aircraft
 }
 
-replacenew ottd_gui137(OTTD_GUI, "", 137) {
-	[ 290,  904,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor waterways: build rivers
-}
-replacenew ottd_gui138(OTTD_GUI, "", 138) {
-	[ 338,  904,   7,   7,   1,   3, "sprites/png/gui/gui04.png"]                   // (?) arrow left
-	[ 354,  904,   7,   7,   2,   3, "sprites/png/gui/gui04.png"]                   // (?) arrow right
-	[ 370,  904,  10,   9,   0,   1, "sprites/png/gui/gui04.png"]                   // (?) arrow down
-	[ 386,  904,  10,   9,   0,   0, "sprites/png/gui/gui04.png"]                   // (?) arrow up
-	[ 402,  904,  11,   7,   0,   1, "sprites/png/gui/gui04.png"]                   // (?) arrow left
-	[ 418,  904,   9,   9,   0,   0, "sprites/png/gui/gui04.png"]                   // (?) command symbol
-	[ 434,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // main toolbar: switch toolbars
-	[ 466,  904,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // waterways toolbar: build aquaduct
+// OTTD_GUI 110-103 vehicle clone cursors
+replacenew ottd_gui110(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 110) {
+	template_cursor_matrix(10, 8, 1) // cursor clone vehicle: select train to clone
+	template_cursor_matrix(10, 6, 1) // cursor clone vehicle: select road vehicle to clone
+	template_cursor_matrix(10, 10, 1) // cursor clone vehicle: select ship to clone
+	template_cursor_matrix(10, 11, 1) // cursor clone vehicle: select aircraft to clone
 }
 
-replacenew ottd_gui146(OTTD_GUI, "", 146) {
-	[ 498,  904,  32,  32,   0,   0, "sprites/png/gui/gui04.png"]                   // cursor waterways: build aquaduct
+// OTTD_GUI 114-136 many icons
+replacenew ottd_gui114(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 114) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 17, 1) // vehicle groups: create new train group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 17, 1) // vehicle groups: create new road vehicles group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 17, 1) // vehicle groups: create new ships group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 17, 1) // vehicle groups: create new aircrafts group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 16, 1) // vehicle groups: delete train group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 16, 1) // vehicle groups: delete road vehicles group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 16, 1) // vehicle groups: delete ships group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 16, 1) // vehicle groups: delete aircrafts group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 18, 1) // vehicle groups: rename train group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 18, 1) // vehicle groups: rename road vehicles group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 18, 1) // vehicle groups: rename ship group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 18, 1) // vehicle groups: rename aircrafts group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 18, 1) // vehicle groups: don't autoreplace this group of trains
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 18, 1) // vehicle groups: don't autoreplace this group of road vehicles
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 18, 1) // vehicle groups: don't autoreplace this group of ships
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 18, 1) // vehicle groups: don't autoreplace this group of aircrafts
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 19, 1) // vehicle groups: select no autoreplace for this group of trains
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 19, 1) // vehicle groups: select no autoreplace for this group of road vehicles
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 19, 1) // vehicle groups: select no autoreplace for this group of ships
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 19, 1) // vehicle groups: select no autoreplace for this group of aircrafts
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 15, 1) // road toolbar: build one-way roads
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 18, 1) // signal toolbar: convert signals
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 15, 1) // waterways toolbar: build rivers
 }
-replacenew ottd_gui147(OTTD_GUI, "", 147) {
-	[   0,    0,  10,  10,   0,   0, "sprites/png/extra/extra-gui-plus-minus.png"]  // (?)
-	[  16,    0,  10,  10,   0,   0, "sprites/png/extra/extra-gui-plus-minus.png"]  // (?)
-	[  82,  705,   7,   7,   0,   3, "sprites/png/gui/gui04.png"]                   // window decorations: resize window (rtl languages)
-	[   2,  125,  20,  20,   0,   0, "sprites/png/gui/gui04.png"]                   // juke box: play (rtl languages)
-	[ 242,  352,   7,   8,   1,   1, "sprites/png/gui/gui04.png"]                   // (?) to bottom
-	[ 256,  352,   7,   8,   1,   1, "sprites/png/gui/gui04.png"]                   // (?) to top
+
+// OTTD_GUI 137 build river cursor
+replacenew ottd_gui137(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 137) {
+	template_cursor_matrix(3, 13, 1) // cursor waterways: build rivers
 }
-replacenew ottd_gui153(OTTD_GUI, "", 153) {
-	[   0,    0,   7,   8,   1,   1, "sprites/png/extra/extra-gui-bug.png"]         // window decorations: debugging icon
-	[ 401,  201,   9,   9,   0,   0, "sprites/png/extra/extra-gui-profit.png"]      // Profit not applicable
-	[ 420,  201,   9,   9,   0,   0, "sprites/png/extra/extra-gui-profit.png"]      // Profit negative
-	[ 439,  201,   9,   9,   0,   0, "sprites/png/extra/extra-gui-profit.png"]      // Profit some
-	[ 458,  201,   9,   9,   0,   0, "sprites/png/extra/extra-gui-profit.png"]      // Profit lots
-	[ 401,   99,   8,  10,   1,   0, "sprites/png/extra/extra-gui-profit.png"]      // Unread news
-	[   6,    7,  13,  10,   0,   0, "sprites/png/extra/extra-gui-exclusive.png"]   // Exclusive transport rights
-	[  22,   23,  12,  10,   0,   0, "sprites/png/extra/extra-gui-autoreplace.png"] // vehicle groups: Autoreplace protection
-	[  22,    2,  12,  10,   0,   0, "sprites/png/extra/extra-gui-autoreplace.png"] // vehicle groups: Autoreplace defined
+
+// OTTD_GUI 148-143 small icons (unknown use?)
+replacenew ottd_gui138(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 138) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 2, 1) // (?) arrow left
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 2, 1) // (?) arrow right
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 3, 1) // (?) open arrow down
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 3, 1) // (?) open arrow up
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 0, 3, 1) // (?) open arrow left
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 4, 3, 1) // (?) command symbol
 }
-alternative_sprites (ottd_gui153, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP) {
-	tmpl_gui2x_file_caption( 27, 0, "sprites/png/extra/extra-gui-bug.png")                              // window decorations: NewGRF debugging icon
-	[ 401,  225,  18,  18,   0,   0, "sprites/png/extra/extra-gui-profit.png"]                    // Profit not applicable
-	[ 420,  225,  18,  18,   0,   0, "sprites/png/extra/extra-gui-profit.png"]                    // Profit negative
-	[ 439,  225,  18,  18,   0,   0, "sprites/png/extra/extra-gui-profit.png"]                    // Profit some
-	[ 458,  225,  18,  18,   0,   0, "sprites/png/extra/extra-gui-profit.png"]                    // Profit lots
-	tmpl_gui2x_file_caption( 50, 456, "sprites/png/gui/gui2x.png")                                   // Unread news
-	[  40,    7,  26,  20,   0,   0, "sprites/png/extra/extra-gui-exclusive.png"]                 // Exclusive transport rights
-	[  52,   23,  24,  20,   0,   0, "sprites/png/extra/extra-gui-autoreplace.png"]               // vehicle groups: Autoreplace protection
-	[  52,    2,  24,  20,   0,   0, "sprites/png/extra/extra-gui-autoreplace.png"]               // vehicle groups: Autoreplace defined
+
+// OTTD_GUI 144-145 more icons
+replacenew ottd_gui144(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 144) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 1, 1) // main toolbar: switch toolbars
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 8, 1) // waterways toolbar: build aquaduct
 }
-replacenew ottd_gui162(OTTD_GUI, "", 162) {
-	[   0,    0,   1,   1,   0,   0, "sprites/png/miscellaneous/empty.png"]         // no town rating. Empty sprite on purpose
-	[   0,   22,  10,  10,   0,   0, "sprites/png/gui/town_indicators.png"]         // appalling town rating, sad, red smily
-	[   0,   33,  10,  10,   0,   0, "sprites/png/gui/town_indicators.png"]         // mediocre town rating, yellow smily
-	[   0,   44,  10,  10,   0,   0, "sprites/png/gui/town_indicators.png"]         // very good town rating, happy, green smily
-	[   3,   10,  14,  10,   0,   0, "sprites/png/extra/extra-gui-delete.png"]      // delete to left
-	[  19,   10,  14,  10,   0,   0, "sprites/png/extra/extra-gui-delete.png"]      // delete to right
-	[   0,    0,   8,   8,   0,   0, NOCROP, "sprites/png/extra/extra-gui-window-default.png"]  // Window decorations: default size
-	[   0,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book main toolbar button
-	[  26,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book: inspect place
-	[  52,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book: incomplete goal
-	[  78,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book: completed goal
-	[ 104,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-storybook.png"]   // story book: un-accessible goal
-	[   0,    0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-cargoflow.png"]   // minimap: cargoflow icon
+
+// OTTD_GUI 146 build aqueduct cursor
+replacenew ottd_gui146(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 146) {
+	template_cursor_matrix(2, 14, 1) // cursor waterways: build aquaduct
 }
-replacenew ottd_gui175(OTTD_GUI, "", 175) {
-	[   0,  0,  20,  20,   0,   0, "sprites/png/gui/group_liveries.png"]         // train group livery icon
-	[   22,  0,  20,  20,   0,   0, "sprites/png/gui/group_liveries.png"]         // road vehicle group livery icon
-	[   44,   0,  20,  20,   0,   0, "sprites/png/gui/group_liveries.png"]         // boat group livery icon
-	[   66,   0,  20,  20,   0,   0, "sprites/png/gui/group_liveries.png"]         // aircraft group livery icon
+
+// OTTD_GUI 147-148 settings tree menu icons
+replacenew ottd_gui147(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 147) {
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 6, 0, 1) // settings: tree menu +
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 7, 0, 1) // settings: tree menu -
 }
-replacenew ottd_gui179(OTTD_GUI, "", 179) { [   0,  0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-build-tram.png"] } // global toolbar build tram
-replacenew ottd_gui180(OTTD_GUI, "", 180) { [   0,  0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-convert-road-tram.png"] } // road toolbar: convert road icon
-replacenew ottd_gui181(OTTD_GUI, "", 181) { [  32,  0,  32,  32,   0,   0, "sprites/png/extra/extra-gui-convert-road-tram.png"] } // cursor convert road
-replacenew ottd_gui182(OTTD_GUI, "", 182) { [  80,  0,  20,  20,   0,   0, "sprites/png/extra/extra-gui-convert-road-tram.png"] } // road toolbar: convert tram icon
-replacenew ottd_gui183(OTTD_GUI, "", 183) { [ 112,  0,  32,  32,   0,   0, "sprites/png/extra/extra-gui-convert-road-tram.png"] } // cursor convert tram
-replacenew ottd_gui184(OTTD_GUI, "", 184) {
-    [  4,  4,  10,  10,   0,   0, NOCROP, "sprites/png/extra/extra-gui-window-icons.png"] // rename entity
-    [ 42,  4,  11,  10,   0,   0, NOCROP, "sprites/png/extra/extra-gui-window-icons.png"] // go to location
+
+// OTTD_GUI 149 right to left language resize window
+replacenew ottd_gui149(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 149) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 5, 1, 1) // window decorations: resize window (rtl languages)
 }
-replacenew ottd_gui186(OTTD_GUI, "", 186) {
-	[    0,  0,  12,  10,   0,   0, "sprites/png/gui/network.png"]         // network chat icon
-	[   22,  0,  12,  10,   0,   0, "sprites/png/gui/network.png"]         // network settings icon
-	[   44,  0,  12,  10,   0,   0, "sprites/png/gui/network.png"]         // network join icon
-	[   66,  0,  10,  10,   0,   0, "sprites/png/gui/network.png"]         // network player icon
-	[   86,  0,  10,  10,   0,   0, "sprites/png/gui/network.png"]         // network crown icon
+
+// OTTD_GUI 150 right to left language jukebox play
+replacenew ottd_gui150(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 150) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 3, 1) // juke box: play (rtl languages)
+}
+
+// OTTD_GUI 151 small icons
+replacenew ottd_gui151(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 151) {
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 4, 2, 1) // (?) to bottom
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 5, 2, 1) // (?) to top
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 6, 1, 1) // window decorations: debugging icon
+}
+
+// OTTD_GUI 154-161 vehicle status mini icons
+replacenew ottd_gui154(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 154) {
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 1, 1)  // Profit not applicable
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 1, 1)  // Profit negative
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 1, 1)  // Profit some
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 1, 1)  // Profit lots
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 8, 1, 1)  // Unread news
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 7, 1, 1)  // Exclusive transport rights
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 2, 1)  // vehicle groups: Autoreplace protection
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 2, 1)  // vehicle groups: Autoreplace defined
+}
+
+// OTTD_GUI 162-165 town status mini icons
+replacenew ottd_gui162(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 162) {
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 0, 2, 1)  // awaiting town rating
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 2, 1)  // appalling town rating, sad, red smily
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 2, 1)  // mediocre town rating, yellow smily
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 2, 1)  // very good town rating, happy, green smily
+}
+
+// OTTD_GUI 166-167 text clear mini icons
+replacenew ottd_gui166(OTTD_GUI, "../graphics/icons/1/icons_textdelete_8bpp.png", 166) {
+	template_sprite_matrix_nocrop(14, 8, 0, 1, 0, 0, 1)  // delete/clear text (left to right language)
+	template_sprite_matrix_nocrop(14, 8, 0, 1, 1, 0, 1)  // delete/clear (right to left language)
+}
+
+// OTTD_GUI 168 window decoration
+replacenew ottd_gui168(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 168) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 7, 1, 1) // Window decorations: default size
+}
+
+// OTTD_GUI 169-174 storybook and cargo flow toolbar icons, vehicle group livery, build tram icons
+replacenew ottd_gui169(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 169) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 20, 1) // story book main toolbar button
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 20, 1) // story book: inspect place
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 20, 1) // story book: incomplete goal
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 20, 1) // story book: completed goal
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 20, 1) // story book: un-accessible goal
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 20, 1) // minimap: cargoflow icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 21, 1) // train group livery icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 21, 1) // road vehicle group livery icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 21, 1) // boat group livery icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 21, 1) // aircraft group livery icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 4, 1) // main toolbar build tram
+}
+
+// OTTD_GUI 180-181 road convert icon and cursor
+replacenew ottd_gui180(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 180) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 14, 1) }
+replacenew ottd_gui181(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 181) { template_cursor_matrix(7, 6, 1) }
+
+// OTTD_GUI 182-183 tram convert icon and cursor
+replacenew ottd_gui182(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 182) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 13, 1) }
+replacenew ottd_gui183(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 183) { template_cursor_matrix(7, 7, 1) }
+
+// OTTD_GUI 184-185 rename and go to location mini icons
+replacenew ottd_gui184(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 184) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 5, 3, 1) // rename entity
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 6, 3, 1) // go to location
+}
+
+// OTTD_GUI 186-190 network mini icons
+replacenew ottd_gui186(OTTD_GUI, "../graphics/icons/1/icons_network_8bpp.png", 186) {
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 0, 0, 1) // network chat icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 1, 0, 1) // network settings icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 2, 0, 1) // network join icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 1, 1, 1) // network player icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 2, 1, 1) // network crown icon
 }
