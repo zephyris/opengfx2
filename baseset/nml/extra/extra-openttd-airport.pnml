@@ -1,17 +1,3 @@
-template template_airport_modern_extragroundtiles1(x, y, z) {
-	template_flattile_single(0, 0, z)
-	template_flattile_single(1040, 0, z)
-	template_flattile_single(1105, 0, z)
-	template_flattile_single(1170, 0, z)
-	template_flattile_single(1235, 0, z)
-	template_flattile_single(1300, 0, z)
-}
-template template_airport_modern_extragroundtiles2(x, y, z) {
-	template_flattile_single(1430, 0, z)
-	template_flattile_single(1495, 0, z)
-	template_flattile_single(1560, 0, z)
-}
-
 //AIRPORTS
 //AIRPORTS 0-5 rotated runway ground tiles
 replacenew(AIRPORTS, "../graphics/infrastructure/64/pygen/airport_modern_temperate_grass_8bpp.png", 0) {
