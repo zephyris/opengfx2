@@ -29,10 +29,10 @@ base_graphics spr41(41, "") {
 #include "nml/logos/logos-0052-original-map-generator.pnml"
 #include "nml/logos/logos-0089-gui-clima.pnml"
 
-//97-102 unused, left empty
+//97-102 unused, can be empty
 base_graphics spr97(97, "") {
-    template_empty()
-    template_empty()
+    [315, 25, 139, 25, 0, 0, "../graphics/icons/1/title_letters_alt_8bpp.png"]
+    [315, 82, 139, 25, 0, 0, "../graphics/icons/1/title_letters_alt_8bpp.png"]
     template_empty()
     template_empty()
     template_empty()
