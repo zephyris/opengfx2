@@ -1,0 +1,33 @@
+// Arctic-specific cargo appearance variants, road
+// first generation
+replace tropical_spr3308(3308, "../graphics/vehicles/64/road_lorries_firstgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 2, 1) } //oil
+replace tropical_spr3324(3324, "../graphics/vehicles/64/road_lorries_firstgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 4, 1) } //goods
+replace tropical_spr3332(3332, "../graphics/vehicles/64/road_lorries_firstgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 5, 1) } //food
+replace tropical_spr3340(3340, "../graphics/vehicles/64/road_lorries_firstgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 6, 1) } //grain unloaded
+replace tropical_spr3348(3348, "../graphics/vehicles/64/road_lorries_firstgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 7, 1) } //wood unloaded
+replace tropical_spr3364(3364, "../graphics/vehicles/64/road_lorries_firstgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 9, 1) } //iron/copper ore unloaded
+replace tropical_spr3388(3388, "../graphics/vehicles/64/road_lorries_firstgeneration_tropical_8bpp.png") { template_vehicle_road_8view(1, 6, 1) } //grain loaded
+replace tropical_spr3396(3396, "../graphics/vehicles/64/road_lorries_firstgeneration_tropical_8bpp.png") { template_vehicle_road_8view(1, 7, 1) } //wood loaded
+replace tropical_spr3428(3428, "../graphics/vehicles/64/road_lorries_firstgeneration_tropical_8bpp.png") { template_vehicle_road_8view(2, 9, 1) } //copper ore loaded
+
+// second generation
+replace tropical_spr3116(3116, "../graphics/vehicles/64/road_lorries_secondgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 2, 1) } //oil
+replace tropical_spr3132(3132, "../graphics/vehicles/64/road_lorries_secondgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 4, 1) } //goods
+replace tropical_spr3140(3140, "../graphics/vehicles/64/road_lorries_secondgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 5, 1) } //food
+replace tropical_spr3148(3148, "../graphics/vehicles/64/road_lorries_secondgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 6, 1) } //grain unloaded
+replace tropical_spr3156(3156, "../graphics/vehicles/64/road_lorries_secondgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 7, 1) } //wood unloaded
+replace tropical_spr3172(3172, "../graphics/vehicles/64/road_lorries_secondgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 9, 1) } //iron/copper ore unloaded
+replace tropical_spr3196(3196, "../graphics/vehicles/64/road_lorries_secondgeneration_tropical_8bpp.png") { template_vehicle_road_8view(1, 6, 1) } //grain loaded
+replace tropical_spr3204(3204, "../graphics/vehicles/64/road_lorries_secondgeneration_tropical_8bpp.png") { template_vehicle_road_8view(1, 7, 1) } //wood loaded
+replace tropical_spr3236(3236, "../graphics/vehicles/64/road_lorries_secondgeneration_tropical_8bpp.png") { template_vehicle_road_8view(2, 9, 1) } //copper ore loaded
+
+// third generation
+replace tropical_spr3500(3500, "../graphics/vehicles/64/road_lorries_thirdgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 2, 1) } //oil
+replace tropical_spr3516(3516, "../graphics/vehicles/64/road_lorries_thirdgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 4, 1) } //goods
+replace tropical_spr3524(3524, "../graphics/vehicles/64/road_lorries_thirdgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 5, 1) } //food
+replace tropical_spr3532(3532, "../graphics/vehicles/64/road_lorries_thirdgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 6, 1) } //grain unloaded
+replace tropical_spr3540(3540, "../graphics/vehicles/64/road_lorries_thirdgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 7, 1) } //wood unloaded
+replace tropical_spr3556(3556, "../graphics/vehicles/64/road_lorries_thirdgeneration_tropical_8bpp.png") { template_vehicle_road_8view(0, 9, 1) } //iron/copper ore unloaded
+replace tropical_spr3580(3580, "../graphics/vehicles/64/road_lorries_thirdgeneration_tropical_8bpp.png") { template_vehicle_road_8view(1, 6, 1) } //grain loaded
+replace tropical_spr3588(3588, "../graphics/vehicles/64/road_lorries_thirdgeneration_tropical_8bpp.png") { template_vehicle_road_8view(1, 7, 1) } //wood loaded
+replace tropical_spr3620(3620, "../graphics/vehicles/64/road_lorries_thirdgeneration_tropical_8bpp.png") { template_vehicle_road_8view(2, 9, 1) } //copper ore loaded

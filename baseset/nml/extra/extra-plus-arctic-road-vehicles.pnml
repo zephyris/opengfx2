@@ -1,0 +1,21 @@
+// Arctic-specific cargo appearance variants, road
+// first generation
+replace arctic_spr3292(3292, "../graphics/vehicles/64/road_lorries_firstgeneration_arctic_8bpp.png") { template_vehicle_road_8view(0, 0, 1) } //coal unloaded
+replace arctic_spr3324(3324, "../graphics/vehicles/64/road_lorries_firstgeneration_arctic_8bpp.png") { template_vehicle_road_8view(0, 4, 1) } //goods
+replace arctic_spr3356(3356, "../graphics/vehicles/64/road_lorries_firstgeneration_arctic_8bpp.png") { template_vehicle_road_8view(0, 8, 1) } //steel/paper unloaded
+replace arctic_spr3380(3380, "../graphics/vehicles/64/road_lorries_firstgeneration_arctic_8bpp.png") { template_vehicle_road_8view(1, 0, 1) } //coal loaded
+replace arctic_spr3420(3420, "../graphics/vehicles/64/road_lorries_firstgeneration_arctic_8bpp.png") { template_vehicle_road_8view(2, 8, 1) } //paper loaded
+
+// second generation
+replace arctic_spr3100(3100, "../graphics/vehicles/64/road_lorries_secondgeneration_arctic_8bpp.png") { template_vehicle_road_8view(0, 0, 1) } //coal unloaded
+replace arctic_spr3132(3132, "../graphics/vehicles/64/road_lorries_secondgeneration_arctic_8bpp.png") { template_vehicle_road_8view(0, 4, 1) } //goods
+replace arctic_spr3164(3164, "../graphics/vehicles/64/road_lorries_secondgeneration_arctic_8bpp.png") { template_vehicle_road_8view(0, 8, 1) } //steel/paper unloaded
+replace arctic_spr3188(3188, "../graphics/vehicles/64/road_lorries_secondgeneration_arctic_8bpp.png") { template_vehicle_road_8view(1, 0, 1) } //coal loaded
+replace arctic_spr3228(3228, "../graphics/vehicles/64/road_lorries_secondgeneration_arctic_8bpp.png") { template_vehicle_road_8view(2, 8, 1) } //paper loaded
+
+// third generation
+replace arctic_spr3484(3484, "../graphics/vehicles/64/road_lorries_thirdgeneration_arctic_8bpp.png") { template_vehicle_road_8view(0, 0, 1) } //coal unloaded
+replace arctic_spr3516(3516, "../graphics/vehicles/64/road_lorries_thirdgeneration_arctic_8bpp.png") { template_vehicle_road_8view(0, 4, 1) } //goods
+replace arctic_spr3548(3548, "../graphics/vehicles/64/road_lorries_thirdgeneration_arctic_8bpp.png") { template_vehicle_road_8view(0, 8, 1) } //steel/paper unloaded
+replace arctic_spr3572(3572, "../graphics/vehicles/64/road_lorries_thirdgeneration_arctic_8bpp.png") { template_vehicle_road_8view(1, 0, 1) } //coal loaded
+replace arctic_spr3612(3612, "../graphics/vehicles/64/road_lorries_thirdgeneration_arctic_8bpp.png") { template_vehicle_road_8view(2, 8, 1) } //paper loaded

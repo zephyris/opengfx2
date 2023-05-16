@@ -14,4 +14,12 @@ cd 256
 custom_dither.py
 cd ..
 
+cd 32
+custom_dither.py
+cd ..
+
+cd 16
+custom_dither.py
+cd ..
+
 cd ..

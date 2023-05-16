@@ -29,11 +29,13 @@
 #include "nml/extra/extra-plus-rivers.pnml"
 
 if (climate == CLIMATE_ARCTIC) {
-#include "sprites/extra/extra-plus-arctic-rail-vehicles.pnml"
+#include "nml/extra/extra-plus-arctic-rail-vehicles.pnml"
+#include "nml/extra/extra-plus-arctic-road-vehicles.pnml"
 }
 
 if (climate == CLIMATE_TROPICAL) {
-#include "sprites/extra/extra-plus-tropic-rail-vehicles.pnml"
+#include "nml/extra/extra-plus-tropic-rail-vehicles.pnml"
+#include "nml/extra/extra-plus-tropic-road-vehicles.pnml"
 }
 
 if (climate == CLIMATE_TOYLAND) {
