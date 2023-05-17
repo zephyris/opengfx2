@@ -1,0 +1,2 @@
+// AUTORAIL
+replacenew autorail(AUTORAIL, "../graphics/selectors/64/selector_autorail_8bpp.png", 0) { template_selectors_autorail(0, 0, 1) }

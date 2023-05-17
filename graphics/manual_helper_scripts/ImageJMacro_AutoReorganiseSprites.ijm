@@ -1,4 +1,4 @@
-spacing=1;
+spacing=16;
 minspritearea=20;
 
 //get source image ID
