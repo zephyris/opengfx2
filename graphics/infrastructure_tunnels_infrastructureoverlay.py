@@ -27,6 +27,11 @@ elif mode == "road":
   infrastructure_list = {
     "road": "road"
   }
+elif mode == "terrain":
+  # Infrastructure sprites to use
+  infrastructure_list = {
+    "none": "none"
+  }
 # Terrain sprites to use
 terrain_tile_positions = [
   [719, 1, 64, 39],
@@ -46,12 +51,20 @@ terrain_list = {
   "toyland_grass": "toyland_groundtiles_32bpp.png",
 }
 # Infrastructure sprites to use
-infrastructure_tile_positions = [
-  [1, 1, 64, 31],
-  [66, 1, 64, 31],
-  [1, 1, 64, 31],
-  [66, 1, 64, 31]
-]
+if mode == "terrain":
+  infrastructure_tile_positions = [
+    [1, 1, 64, 31],
+    [1, 1, 64, 31],
+    [1, 1, 64, 31],
+    [1, 1, 64, 31]
+  ]
+else:
+  infrastructure_tile_positions = [
+    [1, 1, 64, 31],
+    [66, 1, 64, 31],
+    [1, 1, 64, 31],
+    [66, 1, 64, 31]
+  ]
 col_width = 64
 row_height = 64
 
@@ -64,7 +77,10 @@ for terrain_key in terrain_list:
   print(" "+terrain_key)
   for infrastructure_key in infrastructure_list:
     terrain_image_path = os.path.join("..", "..", "..", "terrain", str(tile_size), terrain_list[terrain_key])
-    infrastructure_image_path = os.path.join("..", "..", "..", "infrastructure", str(tile_size), infrastructure_list[infrastructure_key]+"_overlayalpha.png")
+    if mode == "terrain":
+      infrastructure_image_path = terrain_image_path
+    else:
+      infrastructure_image_path = os.path.join("..", "..", "..", "infrastructure", str(tile_size), infrastructure_list[infrastructure_key]+"_overlayalpha.png")
     if terrain_key == "arctic_snow":
       name_overlay = os.path.join("pygen", infrastructure_list[infrastructure_key]+"tunnels_snow_regions_32bpp.png")
     else:

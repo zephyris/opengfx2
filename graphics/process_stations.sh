@@ -35,9 +35,12 @@ mask_regions.py pygen/maglevtunnels maglevtunnels_regionmask.png 1
 mask_regions.py pygen/maglevtunnels_snow maglevtunnels_regionmask.png 1
 mask_regions.py pygen/roadtunnels roadtunnels_regionmask.png 1
 mask_regions.py pygen/roadtunnels_snow roadtunnels_regionmask.png 1
+mask_regions.py pygen/nonetunnels nonetunnels_regionmask.png 1
+mask_regions.py pygen/nonetunnels_snow nonetunnels_regionmask.png 1
 # overlay tunnels onto terrain sprites
 infrastructure_tunnels_infrastructureoverlay.py 1 road
 infrastructure_tunnels_infrastructureoverlay.py 1 rail
+infrastructure_tunnels_infrastructureoverlay.py 1 terrain
 # handle old airport
 building_base_flatten.py oldairport_multitile 1
 mask_tiles.py pygen/oldairport_multitile oldairport_multitile_tilemask.png 1

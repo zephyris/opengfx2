@@ -1181,3 +1181,83 @@ template template_airport_old_groundtiles(x, y, z) {
 	template_flattile_single(520, 0, z)
 	template_flattile_single(650, 0, z)
 }
+
+// Infrastructure: tram tiles
+template template_tramtiles(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 456*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 521*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 586*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 651*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+
+	[ 976*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
+
+// Infrastructure: tram bridge tiles
+template template_trambridgetiles(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+
+	[ 976*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
+
+// Infrastructure: tram catenary, straight and junctions
+template template_tram_catenary_straightjunctions(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+}
+
+// Infrastructure: tram catenary, corners
+template template_tram_catenary_corners(x, y, z) {
+	[ 456*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 521*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 586*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 651*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+}
+
+// Infrastructure: tram catenary, slopes
+template template_tram_catenary_slopes(x, y, z) {
+	[ 976*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+}
+
+// Infrastructure: tram catenary, tunnels
+template template_tram_catenary_tunnels(x, y, z) {
+	[1366*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[1431*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[1236*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[1301*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+}
+
+// Infrastructure: tram catenary, bridge level
+template template_tram_catenary_bridge(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+}
+
+// Infrastructure: tram catenary, bridge slopes
+template template_tram_catenary_bridgeslopes(x, y, z) {
+	[ 976*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
+}
