@@ -1,3 +1,4 @@
+//601-753 road vehicles (only generation)
 base_graphics spr601(601, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 0, 1) } // Ploddyphut bus
 base_graphics spr609(609, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 1, 1) } // Sugar truck unloaded
 base_graphics spr617(617, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 1, 1) } // Sugar truck loaded

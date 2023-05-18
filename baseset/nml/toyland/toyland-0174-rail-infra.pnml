@@ -22,7 +22,7 @@ base_graphics spr244( 244, "../graphics/infrastructure/64/pygen/maglev_toyland_g
 base_graphics spr270( 270, "sprites/png/houses/toysta.png") { [   0,    0,  32,  70, -15, -46] }
 
 //271-286 signals
-base_graphics spr271(271, "../graphics/infrastructure/64/signals_base_8bpp.png") { template_signals_base(1) }
+base_graphics spr271(271, "../graphics/signals/64/base_8bpp.png") { template_signals_base(1) }
 
 //287-310 bunch'o'levelcrossings
 //287-290 level crossing rail toyland grass

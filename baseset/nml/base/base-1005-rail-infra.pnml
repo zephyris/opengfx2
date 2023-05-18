@@ -92,7 +92,7 @@ base_graphics spr1263(1263, "../graphics/cursors/1/cursors_8bpp.png") {
 }
 
 //1275-1290 signals
-base_graphics spr1275(1275, "../graphics/infrastructure/64/signals_base_8bpp.png") {
+base_graphics spr1275(1275, "../graphics/signals/64/base_8bpp.png") {
     template_signals_base(1)
 }
 

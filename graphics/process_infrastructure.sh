@@ -51,3 +51,11 @@ custom_dither.py
 cd ../..
 
 cd ..
+
+cd signals
+
+cd 64
+custom_dither.py
+cd ..
+
+cd ..

@@ -1,5 +1,3 @@
-
-
 //61-72 arctic farm
 base_graphics spr61(61, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }
 base_graphics spr63(63, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }

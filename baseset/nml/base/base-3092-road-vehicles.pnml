@@ -51,7 +51,7 @@ base_graphics spr3346(3460, "../graphics/vehicles/64/road_lorries_firstgeneratio
 base_graphics spr3468(3468, "../graphics/vehicles/64/road_lorries_firstgeneration_8bpp.png") { template_vehicle_road_8view(1, 13, 1) } //rubber loaded
 
 //3476-3667 3rd generation road vehicles
-base_graphics spr3476(3476, "../graphics/vehicles/64/road_buses_8bpp.png") { template_vehicle_road_8view(0, 0, 1) } // bus
+base_graphics spr3476(3476, "../graphics/vehicles/64/road_buses_8bpp.png") { template_vehicle_road_8view(0, 2, 1) } // bus
 base_graphics spr3484(3484, "../graphics/vehicles/64/road_lorries_thirdgeneration_8bpp.png") { template_vehicle_road_8view(0, 0, 1) } //coal unloaded
 base_graphics spr3492(3492, "../graphics/vehicles/64/road_lorries_thirdgeneration_8bpp.png") { template_vehicle_road_8view(0, 1, 1) } //mail
 base_graphics spr3500(3500, "../graphics/vehicles/64/road_lorries_thirdgeneration_8bpp.png") { template_vehicle_road_8view(0, 2, 1) } //oil

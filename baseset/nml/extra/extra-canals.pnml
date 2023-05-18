@@ -1,25 +1,11 @@
 //canals
 //CANALS 0-3 water slopes
-replacenew canals_spr0(CANALS, "../graphics/terrain/64/universal_watertiles_8bpp.png", 0) {
-    template_waterslopes_slopesonly(80, 0, 1)
-}
-
-//CANALS 4-27 locks
-replacenew canals_spr4(CANALS, "../graphics/stations/general/64/pygen/docksandlocks_8bpp.png", 4) {
-	template_locks(0, 0, 1)
-}
-
-//CANALS 28-51 snowy locks
-replacenew canals_spr28(CANALS, "../graphics/stations/general/64/pygen/docksandlocks_snow_8bpp.png", 28) {
-	template_locks(0, 0, 1)
-}
-
+replacenew canals_spr0(CANALS, "../graphics/terrain/64/universal_watertiles_8bpp.png", 0) { template_waterslopes_slopesonly(80, 0, 1) }
+//CANALS 4-27 sea level locks(?)
+replacenew canals_spr4(CANALS, "../graphics/stations/general/64/pygen/docksandlocks_sealevel_8bpp.png", 4) { template_locks(0, 0, 1) }
+//CANALS 28-51 other locks(?)
+replacenew canals_spr28(CANALS, "../graphics/stations/general/64/pygen/docksandlocks_8bpp.png", 28) { template_locks(0, 0, 1) }
 //CANALS 52-63 canal banks
-replacenew canals_spr53(CANALS, "../graphics/infrastructure/64/pygen/canal_general_concrete_8bpp.png", 52) {
-    template_waterfeature_flat(0, 0, 1)
-}
-
+replacenew canals_spr53(CANALS, "../graphics/infrastructure/64/pygen/canal_general_concrete_8bpp.png", 52) { template_waterfeature_flat(0, 0, 1) }
 //CANALS 64 canal banks
-replacenew canals_spr64(CANALS, "../graphics/icons/1/icons_20px_8bpp.png", 64) {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 8, 1) // construction toolbar: canal
-}
+replacenew canals_spr64(CANALS, "../graphics/icons/1/icons_20px_8bpp.png", 64) { template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 8, 1) } // construction toolbar: canal

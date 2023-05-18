@@ -1,11 +1,8 @@
-#include "sprites/templates/sprite_templates.pnml"
-#include "sprites/templates/tmpl_trains.nml"
-
 #include "nml/extra/extra-header.pnml"
 #include "nml/templates/zoom-sensitive.pnml"
 
 #include "nml/extra/extra-2ccmap.pnml"
-#include "sprites/extra/extra-aqueduct.pnml"
+#include "nml/extra/extra-aqueduct.pnml"
 #include "nml/extra/extra-canals.pnml"
 #include "nml/extra/extra-chars.pnml"
 #include "nml/extra/extra-erails.pnml"
@@ -14,7 +11,7 @@
 #include "nml/extra/extra-oneway.pnml"
 #include "nml/extra/extra-road-stops.pnml"
 #include "nml/extra/extra-shores.pnml"
-#include "sprites/extra/extra-signals.pnml"
+#include "nml/extra/extra-signals.pnml"
 #include "nml/extra/extra-sloped-tracks.pnml"
 #include "nml/extra/extra-tram-tracks.pnml"
 
@@ -26,7 +23,10 @@
 #include "nml/extra/extra-openttd-recolour.pnml"
 
 #include "nml/extra/extra-plus-canals.pnml"
+#include "nml/extra/extra-plus-locks.pnml"
 #include "nml/extra/extra-plus-rivers.pnml"
+
+#include "nml/extra/extra-plus-climate-specific-recolour.pnml"
 
 if (climate == CLIMATE_ARCTIC) {
 #include "nml/extra/extra-plus-arctic-rail-vehicles.pnml"
