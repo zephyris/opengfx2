@@ -1,3 +1,5 @@
+//TODO: Fix build of toyland sprites: toyland/64/pygen/hqs_combo_tiles_8bpp.png
+
 //514-542 company headcastle
 base_graphics spr514(514, "../graphics/towns/temperate/64/pygen/hqs_combo_tiles_8bpp.png") {
 	template_house_2x2_4sprite(   0,0, 1, 107)
