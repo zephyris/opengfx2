@@ -56,9 +56,13 @@ cd toyland/64/
 if [ ! -d pygen ]; then
   mkdir pygen
 fi
+building_baseshapeproc.py 1 toyland
 cp fizzy_drink_factory_32bpp.png pygen/
 cp fizzy_drink_factory_palmask.png pygen/
 mask_tiles.py pygen/fizzy_drink_factory fizzy_drink_factory_tilemask.png 1
+cp toy_factory_32bpp.png pygen/
+building_base_flatten.py toy_factory 1
+mask_tiles.py pygen/toy_factory toy_factory_tilemask.png 1
 custom_dither.py
 cd pygen
 custom_dither.py

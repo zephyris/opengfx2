@@ -5,9 +5,9 @@ diffuseRange=2;
 anisotropic=true;
 
 //general_water
-probDiffuse=0.4;
-diffuseRange=2;
-anisotropic=true;
+//probDiffuse=0.4;
+//diffuseRange=2;
+//anisotropic=true;
 
 //Resize 2x using nearest neighbour
 run("Size...", "width="+getWidth()*2+" height="+getHeight()*2+" constrain average interpolation=None");
