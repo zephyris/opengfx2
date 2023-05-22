@@ -24,6 +24,9 @@ template template_house_1x1(x, y, z, h) {
 template template_house_1x1_anim(x, y, z, h) {
 	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2), ANIM]
 }
+template template_house_1x1_nocrop(x, y, z, h) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2), NOCROP]
+}
 
 //Template for house sprite with additional offset
 //ox: Additional X alignment offset
@@ -33,6 +36,9 @@ template template_house_1x1_addoffs(x, y, z, h, ox, oy) {
 }
 template template_house_1x1_addoffs_anim(x, y, z, h, ox, oy) {
 	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2), ANIM]
+}
+template template_house_1x1_addoffs_nocrop(x, y, z, h, ox, oy) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2), NOCROP]
 }
 
 //TODO: Fix tile masking and check behaviour at higher zoom levels
