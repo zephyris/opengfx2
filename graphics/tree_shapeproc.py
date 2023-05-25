@@ -145,7 +145,7 @@ for input_file in glob.glob("*"+suffix):
       for column in range(columns):
         x = column * (w + 1) + 1
         for outcolumn in range(7):
-          for row in [1, 0]:
+          for row in [0, 1, 0]:
             y = row * (h + 1) + 1
             current_spriteset = image_colorised.crop((x * scale, y * scale, (x + w) * scale, (y + h) * scale))
             ow = int(w * resize[outcolumn] * scale)
