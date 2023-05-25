@@ -411,9 +411,9 @@ base_graphics spr2293(2293, "../graphics/industries/temperate/64/pygen/ironoremi
 
 //2341-2343 fruit/rubber plantation
 base_graphics spr2341(2341, "../graphics/industries/tropical/64/plantations_8bpp.png") {
+	template_house_1x1(130,   0, 1, 74)
 	template_house_1x1(  0,   0, 1, 74)
 	template_house_1x1( 65,   0, 1, 74)
-	template_house_1x1(130,   0, 1, 74)
 }
 
 //2344-2346 water tower

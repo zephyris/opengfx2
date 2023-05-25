@@ -14,3 +14,25 @@ replace arctic_spr2849(2849, "../graphics/vehicles/64/monolev_wagons_arctic_8bpp
 replace arctic_spr2865(2865, "../graphics/vehicles/64/monolev_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 9, 1) } // monorail steel + paper (empty)
 replace arctic_spr2877(2877, "../graphics/vehicles/64/monolev_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(1, 1, 1) } // monorail coal (full)
 replace arctic_spr2897(2897, "../graphics/vehicles/64/monolev_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(2, 9, 1) } // monorail paper (full)
+
+
+// openttd title screen logo arctic easter egg
+/*
+// logos 43-51 title screen characters
+replace spr4836_arcticalt(4836, "../graphics/icons/1/title_letters_cabriolet_8bpp.png") {
+    [   4,  63,  67,  57, -10,   0] // larger T
+    [  68,   2,  54,  57, -10,   0] // R
+    [ 142,   2,  51,  57, -10,   0] // A
+    [ 210,   2,  54,  57, -10,   0] // N
+    [ 281,   2,  54,  57, -10,   0] // S
+    [ 346,   2,  61,  57, -10,   0] // P
+    [ 273,  63, 126,  57, -10,   0] // larger O
+    [ 497,   2,  51,  57, -10,   0] // Y
+    [ 567,   2,  50,  57, -10,   0] // C
+}
+
+replacenew ottd_gui12_arcticalt(OTTD_GUI, "../graphics/icons/1/title_letters_cabriolet_8bpp.png", 12) {
+	[ 636,   2,  52,  57, -10,   0] // E
+    [ 188,  63,  71,  57, -10,   0] // larger D
+}
+*/

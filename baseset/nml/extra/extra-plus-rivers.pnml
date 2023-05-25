@@ -116,8 +116,8 @@ item(FEAT_CANALS, waterfeature_river_banks, WF_RIVERBANKS) {
 }
 
 //buoys
-spriteset(buoy_normal, "../graphics/terrain/64/universal_bouyonly_8bpp.png") {	template_flattile_single(0, 0, 1) }
-spriteset(buoy_toyland, "../graphics/terrain/64/toyland_bouyonly_8bpp.png") { template_flattile_single(0, 0, 1) }
+spriteset(buoy_normal, "../graphics/terrain/64/universal_bouyonly_8bpp.png") {	template_house_1x1_addoffs_anim(0, 0, 1, 31, 10, -3) }
+spriteset(buoy_toyland, "../graphics/terrain/64/toyland_bouyonly_8bpp.png") { template_house_1x1_addoffs_anim(0, 0, 1, 31, 10, -3) }
 switch(FEAT_CANALS, SELF, buoy_climate_switch, climate) {
 	CLIMATE_ARCTIC: buoy_normal;
 	CLIMATE_TOYLAND: buoy_toyland;
