@@ -1,0 +1,20 @@
+grf {
+	grfid: "\FFOT\10";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	version: 0;
+	min_compatible_version: 0;
+	param 1 {
+		param_temperate_terrain {
+			name: string(STR_PARAM_TERRAIN_TEMPERATE);
+			type: int;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_DEFAULT);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+			};
+		}
+	}
+}

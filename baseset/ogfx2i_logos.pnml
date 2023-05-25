@@ -1,4 +1,4 @@
-#include "nml/templates/zoom-sensitive.pnml"
+#include "../templates/zoom-sensitive.pnml"
 
 //0-10 unused, left empty
 base_graphics spr0(0, "") {

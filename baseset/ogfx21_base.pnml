@@ -1,4 +1,4 @@
-#include "nml/templates/zoom-sensitive.pnml"
+#include "../templates/zoom-sensitive.pnml"
 
 #include "nml/base/base-0000-font.pnml"
 #include "nml/base/base-0674-gui.pnml"

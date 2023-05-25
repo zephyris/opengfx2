@@ -13,27 +13,27 @@ if [ ! -d sprites ]; then
 fi
 
 echo "OGFX2 Base"
-python3 baseset_nml_preprocessor.py ogfx21_base
+python3 ../templates/nml_preprocessor.py ogfx21_base
 nmlc -p DOS --quiet -c ogfx21_base.nml --md5 ogfx21_base.md5
 
 echo "OGFX2 Arctic"
-python3 baseset_nml_preprocessor.py ogfx2c_arctic
+python3 ../templates/nml_preprocessor.py ogfx2c_arctic
 nmlc -p DOS --quiet -c ogfx2c_arctic.nml --md5 ogfx2c_arctic.md5
 
 echo "OGFX2 Extra"
-python3 baseset_nml_preprocessor.py ogfx2e_extra
+python3 ../templates/nml_preprocessor.py ogfx2e_extra
 nmlc -p DOS --quiet -c ogfx2e_extra.nml --md5 ogfx2e_extra.md5
 
 echo "OGFX2 Tropical"
-python3 baseset_nml_preprocessor.py ogfx2h_tropical
+python3 ../templates/nml_preprocessor.py ogfx2h_tropical
 nmlc -p DOS --quiet -c ogfx2h_tropical.nml --md5 ogfx2h_tropical.md5
 
 echo "OGFX2 Logos"
-python3 baseset_nml_preprocessor.py ogfx2i_logos
+python3 ../templates/nml_preprocessor.py ogfx2i_logos
 nmlc -p DOS --quiet -c ogfx2i_logos.nml --md5 ogfx2i_logos.md5
 
 echo "OGFX2 Toyland"
-python3 baseset_nml_preprocessor.py ogfx2t_toyland
+python3 ../templates/nml_preprocessor.py ogfx2t_toyland
 nmlc -p DOS --quiet -c ogfx2t_toyland.nml --md5 ogfx2t_toyland.md5
 
 python3 baseset_generate_obg.py

@@ -1,4 +1,4 @@
-#include "nml/templates/zoom-sensitive.pnml"
+#include "../templates/zoom-sensitive.pnml"
 
 #include "nml/arctic/arctic-0000-bare-land.pnml"
 #include "nml/arctic/arctic-0057-rail-paxwagon.pnml"

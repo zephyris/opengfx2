@@ -1,5 +1,5 @@
 #include "nml/extra/extra-header.pnml"
-#include "nml/templates/zoom-sensitive.pnml"
+#include "../templates/zoom-sensitive.pnml"
 
 #include "nml/extra/extra-2ccmap.pnml"
 #include "nml/extra/extra-aqueduct.pnml"

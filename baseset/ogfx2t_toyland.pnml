@@ -1,4 +1,4 @@
-#include "nml/templates/zoom-sensitive.pnml"
+#include "../templates/zoom-sensitive.pnml"
 
 #include "nml/toyland/toyland-0000-terrain.pnml"
 #include "nml/toyland/toyland-0076-water.pnml"

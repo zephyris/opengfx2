@@ -1,0 +1,22 @@
+# python optimised files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# generated nml
+*.nml
+
+# nmlc intermediates and output
+.nmlcache/
+*.grf
+*.grf.cache
+*.grf.cacheindex
+
+# other output
+*.obg
+*.md5
+*.tar
+
+# OpenGFX-derived working directories
+OpenGFX/
+sprites/

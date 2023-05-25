@@ -3,22 +3,12 @@
 # If given an argument, copies the grfs to that path once complete
 # eg. /my/install/of/openttd/newgrf/
 
-if [ ! -d newgrf ]; then
-  mkdir newgrf
-fi
-
-cd towns
-nmlc OpenGFX_EZ_Towns.nml --quiet -c
-mv OpenGFX_EZ_Towns.grf ../newgrf
-cd ..
-
-cd landscape
-nmlc OpenGFX_EZ_Landscape.nml --quiet -c
-mv OpenGFX_EZ_Landscape.grf ../newgrf
-cd ..
+cd newgrf
+python3 ../templates/nml_preprocessor.py ogfx2_landscape
+nmlc ogfx2_landscape.nml --quiet -c -l lang/landscape
 
 if [ ! -z "$1" ]; then
-  cd newgrf
   cp *.grf "$1"
-  cd ..
 fi
+
+cd ..

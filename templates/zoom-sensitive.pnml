@@ -1,0 +1,1366 @@
+template template_empty() {
+	[0, 0, 1, 1, 0, 0, "../graphics/icons/1/empty_8bpp.png"]
+}
+
+// x: X offset
+// y: Y offset
+// w: Width
+// h: Height
+// ox: X alignment offset
+// oy: Y alignment offset
+// z: Zoom factor
+
+// Template for simple zoom-sensitive sprite
+template template_general(x, y, w, h, ox, oy, z) {
+	[ x*z, y*z, w*z, h*z, ox*z, oy*z]
+}
+
+// Templates for handling building sprites
+
+//Template for standard house sprite
+template template_house_1x1(x, y, z, h) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2)]
+}
+template template_house_1x1_anim(x, y, z, h) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2), ANIM]
+}
+template template_house_1x1_nocrop(x, y, z, h) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2), NOCROP]
+}
+
+//Template for house sprite with additional offset
+//ox: Additional X alignment offset
+//oy: Additional Y alignment offset
+template template_house_1x1_addoffs(x, y, z, h, ox, oy) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2)]
+}
+template template_house_1x1_addoffs_anim(x, y, z, h, ox, oy) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2), ANIM]
+}
+template template_house_1x1_addoffs_nocrop(x, y, z, h, ox, oy) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2), NOCROP]
+}
+
+//TODO: Fix tile masking and check behaviour at higher zoom levels
+//Template for 2x2 house, 4 sprite layout
+template template_house_2x2_4sprite(x, y, z, h) {
+	template_house_1x1(x, y, 1, h) //Top
+	template_house_1x1(x + 65, y, 1, h) //Right
+	template_house_1x1(x + 130, y, 1, h,) //Left
+	template_house_1x1(x + 195, y, 1, h) //Bottom
+}
+//Template for 2x2 house, 7 sprite layout
+template template_house_2x2_7sprite(x, y, z, h) {
+	template_house_1x1(x, y, 1, h) //Top ground tile
+	template_house_1x1_addoffs(x + 65, y, 1, h, 0, -16) //Top upper extension
+	template_house_1x1(x + 130, y, 1, h) //Right ground tile
+	template_house_1x1_addoffs(x + 195, y, 1, h, 0, -16) //Right upper extension
+	template_house_1x1(x + 260, y, 1, h,) //Left ground tile
+	template_house_1x1_addoffs(x + 325, y, 1, h, 0, -16) //Left upper extension
+	template_house_1x1(x + 390, y, 1, h) //Bottom ground tile
+}
+//Template for 2x2 house, 7 minus 2 sprite layout
+template template_house_2x2_7m2sprite(x, y, z, h) {
+	template_house_1x1(x, y, 1, h) //Top ground tile
+	template_house_1x1_addoffs(x + 65, y, 1, h, 0, -16) //Top upper extension
+	template_house_1x1(x + 130, y, 1, h) //Right ground tile
+	template_house_1x1(x + 260, y, 1, h,) //Left ground tile
+	template_house_1x1(x + 390, y, 1, h) //Bottom ground tile
+}
+//Template for 1x2 house, 4 sprite layout
+template template_house_1x2_4sprite(x, y, z, h) {
+	template_house_1x1(x, y, 1, h) //Top-right ground tile
+	template_house_1x1_addoffs(x + 65, y, 1, h, 0, -16) //Top-right upper extension
+	template_house_1x1(x + 130, y, 1, h) //Bottom-left ground tile
+	template_house_1x1_addoffs(x + 195, y, 1, h, 0, -16) //Bottom-left upper extension
+}
+
+//Template for standard short house sprite
+template template_house_short(x, y, z) {
+	template_house_1x1(x, y, z, 47)
+}
+template template_house_short_anim(x, y, z) {
+	template_house_1x1_anim(x, y, z, 47)
+}
+
+// Templates for handling general sprite sheets with 1px borders
+
+// Template for a (0, 0)-based matrix of standard size sprites, with 1px border
+// xindex: horizontal position in matrix
+// yindex: vertical position in matrix
+template template_sprite_matrix(w, h, ox, oy, xindex, yindex, z) {
+	[(1+xindex*(1+w))*z, (1+yindex*(1+h))*z, w*z, h*z, ox*z, oy*z]
+}
+template template_sprite_matrix_nocrop(w, h, ox, oy, xindex, yindex, z) {
+	[(1+xindex*(1+w))*z, (1+yindex*(1+h))*z, w*z, h*z, ox*z, oy*z, NOCROP]
+}
+
+//Template for an (0, 0) animation frame series or similar, with 1px border
+// f: Frame number
+template template_animation_frame(w, h, ox, oy, f, z) {
+	[1*z+f*(1+w)*z, 1*z, w*z, h*z, ox*z, oy*z]
+}
+
+// GUI templates: Cursors, with 1px border
+template template_cursor_matrix(xindex, yindex, z) {
+	template_sprite_matrix(48, 32, 0, 0, xindex, yindex, z)
+}
+
+// Templates for handling general sprite sheets with 0px borders
+template template_sprite_borderlessmatrix(w, h, ox, oy, xindex, yindex, z) {
+	[xindex*w*z, yindex*h*z, w*z, h*z, ox*z, oy*z]
+}
+
+// Sprite sets
+
+// Highscore: Fullscreen background
+template template_highscore_background(z) {
+	template_general(0, 0, 640, 50, 0, 0, z)
+	template_general(0, 50, 640, 50, 0, 0, z)
+	template_general(0, 100, 640, 50, 0, 0, z)
+	template_general(0, 150, 640, 50, 0, 0, z)
+	template_general(0, 200, 640, 50, 0, 0, z)
+	template_general(0, 250, 640, 50, 0, 0, z)
+	template_general(0, 300, 640, 50, 0, 0, z)
+	template_general(0, 350, 640, 50, 0, 0, z)
+	template_general(0, 400, 640, 50, 0, 0, z)
+    template_general(0, 450, 640, 30, 0, 0, z)
+}
+
+// Terrain: Single flat tile
+template template_flattile_single(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+}
+
+// Foundations: base
+template template_foundations_base(x, y, z) {
+	[   1*z+x*z,  1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z,  1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z,  1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z,  1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z,  1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z,  1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z,  1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z,  1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+}
+
+// Foundations: extended
+template template_foundations_slope_halftile(x, y, z) {
+	[   1*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z,   1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z,   1*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z,   1*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z,  42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z,  42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z,  42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z,  42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z,  42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z,  42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z,  42*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z,  42*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z,  83*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z,  83*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z,  83*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	
+	[ 481*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z,  83*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 124*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 124*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 124*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 124*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 165*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 165*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 165*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 165*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 165*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 165*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 165*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 165*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 206*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 206*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 206*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 206*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	
+	[ 321*z+x*z, 206*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 206*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 206*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 206*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 247*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 247*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 247*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 288*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 288*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 161*z+x*z, 288*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 288*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 288*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 288*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 288*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 288*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 329*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+
+	[ 161*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 241*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 321*z+x*z, 329*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 401*z+x*z, 329*z+y*z, 64*z, 33*z-1, -31*z, -9*z, NOCROP ]
+	[ 481*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[ 561*z+x*z, 329*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[   1*z+x*z, 370*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	[  81*z+x*z, 370*z+y*z, 64*z, 41*z-1, -31*z, -9*z, NOCROP ]
+	
+	[   1*z+x*z, 411*z+y*z, 64*z, 41*z-1, -15*z, -17*z, NOCROP ]
+	[  81*z+x*z, 411*z+y*z, 64*z, 34*z-1, -31*z, -25*z, NOCROP ]
+	[ 161*z+x*z, 411*z+y*z, 64*z, 41*z-1, -47*z, -17*z, NOCROP ]
+	[ 241*z+x*z, 411*z+y*z, 64*z, 34*z-1, -31*z,  -9*z, NOCROP ]
+	[ 321*z+x*z, 411*z+y*z, 64*z, 41*z-1, -15*z, -17*z, NOCROP ]
+	[ 401*z+x*z, 411*z+y*z, 64*z, 34*z-1, -31*z, -25*z, NOCROP ]
+	[ 481*z+x*z, 411*z+y*z, 64*z, 41*z-1, -47*z, -17*z, NOCROP ]
+	[ 561*z+x*z, 411*z+y*z, 64*z, 34*z-1, -31*z,  -9*z, NOCROP ]
+	
+	[   1*z+x*z, 452*z+y*z, 64*z, 41*z-1, -15*z, -17*z, NOCROP ]
+	[  81*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z, -25*z, NOCROP ]
+	[ 161*z+x*z, 452*z+y*z, 64*z, 41*z-1, -47*z, -17*z, NOCROP ]
+	[ 241*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z,  -9*z, NOCROP ]
+	[ 321*z+x*z, 452*z+y*z, 64*z, 41*z-1, -15*z, -17*z, NOCROP ]
+	[ 401*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z, -25*z, NOCROP ]
+	[ 481*z+x*z, 452*z+y*z, 64*z, 41*z-1, -47*z, -17*z, NOCROP ]
+	[ 561*z+x*z, 452*z+y*z, 64*z, 34*z-1, -31*z,  -9*z, NOCROP ]
+}
+
+// Tile selectors: base
+template template_selectors_tile(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[  81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 399*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 479*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+	[ 559*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+
+	[ 639*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[ 719*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[ 799*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[ 879*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+
+	[ 959*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[1039*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[1119*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[1197*z+x*z, 1*z+y*z, 64*z, 48*z-1, -31*z,  -9*z ]
+
+	[1277*z+x*z, 1*z+y*z, 64*z, 16*z-1, -31*z,   7*z ]
+	[1357*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[1437*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+}
+
+// Tile selectors: extra halftiles
+template template_selectors_halftile(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[  81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 399*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+	[ 479*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   7*z ]
+	[ 559*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   7*z ]
+
+	[ 639*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[ 719*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[ 799*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -1*z ]
+	[ 879*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -1*z ]
+}
+
+// Infrastructure: road tiles
+template template_roadtiles(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 456*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 521*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 586*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 651*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+
+	[ 976*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+
+	[ 846*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 911*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 716*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 781*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+}
+
+// Infrastructure: road stop tiles
+template template_roadstoptiles(x, y, z) {
+	[1366*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[1431*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[1236*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[1301*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+}
+
+// Infrastructure: rail tiles
+template template_railtiles(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 456*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 521*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 586*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 651*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 716*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+
+	[ 781*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 846*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 911*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 976*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1236*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+
+	[1301*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1366*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1431*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1496*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	
+	[1561*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[1626*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+}
+
+// Infrastructure: rail overlay base
+template template_railoverlay_base(x, y, z) {
+	[  1*z+x*z,  1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 66*z+x*z,  1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[131*z+x*z,  1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[196*z+x*z,  1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[261*z+x*z,  1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[326*z+x*z,  1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+}
+
+// Infrastructure: rail overlay extra
+template template_railoverlay_extra(x, y, z) {
+	[  1*z+x*z, 33*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 66*z+x*z, 33*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[131*z+x*z, 33*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[196*z+x*z, 33*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
+
+// Infrastructure: level crossing
+template template_railcrossing(x, y, z) {
+    [  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+    [ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, ANIM ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, ANIM ]
+}
+
+// Infrastructure: rail fences
+template template_rail_fences(x, y, z) {
+    [   1*z+x*z, 1*z+y*z, 33*z, 22*z-1, -31*z,  -7*z ]
+	[  35*z+x*z, 1*z+y*z, 33*z, 22*z-1,   1*z,  -7*z ]
+	[  69*z+x*z, 1*z+y*z,  2*z, 38*z-1,   1*z, -22*z ]
+	[  72*z+x*z, 1*z+y*z, 65*z,  6*z-1, -31*z,  -7*z ]
+	[ 138*z+x*z, 1*z+y*z, 33*z, 14*z-1, -31*z,  -7*z ]
+	[ 172*z+x*z, 1*z+y*z, 33*z, 14*z-1,   1*z,  -7*z ]
+	[ 206*z+x*z, 1*z+y*z, 33*z, 30*z-1, -31*z, -14*z ]
+	[ 240*z+x*z, 1*z+y*z, 33*z, 30*z-1,   1*z, -14*z ]
+}
+
+//Infrastructure buildings: Rail depots
+template template_rail_depot(x, y, z) {
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,  -4)
+	template_house_1x1_addoffs(  0,   0, z, 64,  23, -15)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -4)
+	template_house_1x1_addoffs(  0,  65, z, 64, -21, -15)
+	template_house_1x1_addoffs(  0, 195, z, 64, -21, -15)
+	template_house_1x1_addoffs(  0, 130, z, 64,  23, -15)
+}
+
+// Infrastructure buildings: Rail stations
+template template_rail_station(x, y, z) {
+	template_house_1x1_addoffs(  0,   0, z, 64,  22, -12)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0, 195, z, 64, -22, -12)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs( 65, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(130,   0, z, 64,  22, -12)
+	template_house_1x1_addoffs(130,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs(130, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(130, 195, z, 64, -22, -12)
+	template_house_1x1_addoffs(195,  65, z, 64,   0,  15)
+	template_house_1x1_addoffs(195, 130, z, 64,   0,  15)
+	template_house_1x1_addoffs(195, 195, z, 64,   0,  15)
+	template_house_1x1_addoffs(195,   0, z, 64,   0,  15)
+	[ 261*z+x*z,  66*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
+	[ 261*z+x*z, 131*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
+	[ 261*z+x*z, 196*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
+	[ 261*z+x*z,   1*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
+}
+template template_rail_station_platformsonly(x, y, z) {
+	template_house_1x1_addoffs(  0,   0, z, 64,  22, -12)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0, 195, z, 64, -22, -12)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs( 65, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(130,   0, z, 64,  22, -12)
+	template_house_1x1_addoffs(130,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs(130, 130, z, 64,   0,  -1)
+	template_house_1x1_addoffs(130, 195, z, 64, -22, -12)
+}
+
+// Infrastructure buildings: Rail waypoints
+template template_rail_waypoint(x, y, z) {
+	template_house_1x1_addoffs(  0,   0, z, 64,   0,  -1)
+	template_house_1x1_addoffs( 65,   0, z, 64, -22, -12)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
+	template_house_1x1_addoffs( 65,  65, z, 64,  22, -12)
+}
+
+//Template: Tunnels
+template template_tunnels_general(x, y, z) {
+	[66*z+x*z,  66*z+y*z, 64*z, 64*z-1, -31*z, -32*z ]
+	[ 1*z+x*z,  66*z+y*z, 64*z, 64*z-1, -31*z, -62*z ]
+
+	[66*z+x*z, 131*z+y*z, 64*z, 64*z-1, -31*z, -32*z ]
+	[ 1*z+x*z, 131*z+y*z, 64*z, 64*z-1, -31*z, -62*z ]
+
+	[66*z+x*z, 196*z+y*z, 64*z, 64*z-1, -31*z, -32*z ]
+	[ 1*z+x*z, 196*z+y*z, 64*z, 64*z-1, -31*z, -62*z ]
+
+	[66*z+x*z,   1*z+y*z, 64*z, 64*z-1, -31*z, -32*z ]
+	[ 1*z+x*z,   1*z+y*z, 64*z, 64*z-1, -31*z, -62*z ]
+}
+
+// Infrastructure: signals base
+template template_signals_base(z) {
+	template_sprite_matrix(22, 30, -7, -28, 0, 0, z)
+	template_sprite_matrix(22, 30, -7, -28, 1, 0, z)
+	template_sprite_matrix(22, 30, -7, -28, 0, 1, z)
+	template_sprite_matrix(22, 30, -7, -28, 1, 1, z)
+	template_sprite_matrix(22, 30, -7, -28, 0, 2, z)
+	template_sprite_matrix(22, 30, -7, -28, 1, 2, z)
+	template_sprite_matrix(22, 30, -7, -28, 0, 3, z)
+	template_sprite_matrix(22, 30, -7, -28, 1, 3, z)
+	template_sprite_matrix(22, 30, -7, -28, 0, 4, z)
+	template_sprite_matrix(22, 30, -7, -28, 1, 4, z)
+	template_sprite_matrix(22, 30, -7, -28, 0, 5, z)
+	template_sprite_matrix(22, 30, -7, -28, 1, 5, z)
+	template_sprite_matrix(22, 30, -7, -28, 0, 6, z)
+	template_sprite_matrix(22, 30, -7, -28, 1, 6, z)
+	template_sprite_matrix(22, 30, -7, -28, 0, 7, z)
+	template_sprite_matrix(22, 30, -7, -28, 1, 7, z)
+}
+
+// Infrastructure: road lights
+template template_road_lights(x, y, z) {
+	[	 9*z+x*z, 0*z+y*z, 8*z, 16*z, -1*z, -14*z-int((z-1)/2)]
+	[	 0*z+x*z, 0*z+y*z, 8*z, 16*z, -3*z, -14*z-int((z-1)/2)]
+}
+template template_road_lights_tall(x, y, z) {
+	[	 9*z+x*z, 0*z+y*z, 8*z, 25*z, -1*z, -23*z-int((z-1)/2)]
+	[	 0*z+x*z, 0*z+y*z, 8*z, 25*z, -3*z, -23*z-int((z-1)/2)]
+}
+
+// Infrastructure buildings: Road depots
+template template_road_depot(x, y, z) {
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0,   0, z, 64,  30, -15)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0,  65, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0, 195, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0, 130, z, 64,  30, -15)
+}
+
+// Infrastructure: Road reconstruction
+template template_road_reconstruction(x, y, z) {
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 131*z+x*z, 1*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
+	[ 151*z+x*z, 1*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
+	[ 131*z+x*z, 17*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
+	[ 151*z+x*z, 17*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
+}
+
+// Infrastructure: Road one way overlay
+template template_road_oneway(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+}
+
+// Terrain: Standard groundtiles
+template template_groundtiles(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 399*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 479*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 559*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+
+	[ 639*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 719*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 799*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[ 879*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+
+	[ 959*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1039*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1119*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1197*z+x*z, 1*z+y*z, 64*z, 48*z-1, -31*z, -16*z ]
+
+	[1277*z+x*z, 1*z+y*z, 64*z, 16*z-1, -31*z,   0*z ]
+	[1357*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1437*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+}
+
+// Terrain: Extra flat ground tiles (rough ground)
+template template_groundtiles_extra(x, y, z) {
+	[1502*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[1567*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[1632*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[1697*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+}
+
+// Terrain: Water tiles base
+template template_watertiles_base(x, y, z) {
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 639*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+
+	[ 479*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 959*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 719*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
+
+// Terrain: Water tiles extra
+template template_watertiles_extended(x, y, z) {
+	[1277*z+x*z, 1*z+y*z, 64*z, 16*z-1, -31*z,   0*z ]
+	[1357*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[ 559*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1197*z+x*z, 1*z+y*z, 64*z, 48*z-1, -31*z, -16*z ]
+	[ 879*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	
+	[1039*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1119*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1437*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[ 399*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 799*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+}
+
+// Terrain: Water tiles full
+template template_watertiles_full(x, y, z) {
+	[1277*z+x*z, 1*z+y*z, 64*z, 16*z-1, -31*z,   0*z ]
+	[  81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[1357*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[ 479*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 559*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	
+	[ 639*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 719*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1197*z+x*z, 1*z+y*z, 64*z, 48*z-1, -31*z, -16*z ]
+	[ 879*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	
+	[ 959*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1039*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1119*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1437*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+}
+
+// Terrain: Farm fences
+template template_farms_fences(x, y, z) {
+	[  35*z+x*z, 1*z+y*z, 33*z, 22*z-1, -30*z,  10*z ]
+	[   1*z+x*z, 1*z+y*z, 33*z, 22*z-1,   0*z,  10*z ]
+	[ 171*z+x*z, 1*z+y*z, 33*z, 30*z-1, -30*z,   2*z ]
+	[ 137*z+x*z, 1*z+y*z, 33*z, 30*z-1,   0*z,   2*z ]
+	[ 103*z+x*z, 1*z+y*z, 33*z, 14*z-1, -30*z,  17*z ]
+	[  69*z+x*z, 1*z+y*z, 33*z, 14*z-1,   0*z,  17*z ]
+}
+
+//Template infrastructure building: Ship depots
+template template_ship_depot(x, y, z) {
+	template_house_1x1_addoffs(  0,  65, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0,   0, z, 64,  30, -15)
+	template_house_1x1_addoffs(  0, 195, z, 64, -30, -15)
+	template_house_1x1_addoffs(  0, 130, z, 64,  30, -15)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,   0)
+}
+
+//Template bridges: General ramps
+template template_bridgeramps_general(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 47*z-1, -31*z, -24*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 63*z-1, -31*z, -32*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 47*z-1, -31*z, -24*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 63*z-1, -31*z, -32*z ]
+
+	[ 261*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 456*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+}
+
+//Template bridges: Wood ramps
+template template_bridgeramps_wood(x, y, z) {
+	[ 456*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 55*z-1, -31*z, -24*z ]
+
+	[ 196*z+x*z, 1*z+y*z, 64*z, 63*z-1, -31*z, -32*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 63*z-1, -31*z, -32*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 47*z-1, -31*z, -24*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 47*z-1, -31*z, -24*z ]
+}
+
+// Template bridges: simple/core bridges
+template template_bridge_single_rear(x, y, z) {
+	[  1*z+x*z, 1*z+y*z, 64*z, 128*z-1, -31*z, -84*z ]
+}
+template template_bridge_single_front_nwse(x, y, z) {
+	[  1*z+x*z, 1*z+y*z, 64*z, 128*z-1, -55*z, -95*z ]
+}
+template template_bridge_single_front_swne(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 128*z-1,  -7*z, -95*z ]
+}
+
+template template_bridge_onespan_rear(x, y, z) {
+	template_bridge_single_rear(x+65, y+0, z)
+	template_bridge_single_rear(x+0, y+0, z)
+}
+
+template template_bridge_onespan_front(x, y, z) {
+	template_bridge_single_front_nwse(x+65, y+0, z)
+	template_bridge_single_front_swne(x+0, y+0, z)
+}
+
+template template_bridge_onespan_rear_rev(x, y, z) {
+	template_bridge_single_rear(x+0, y+0, z)
+	template_bridge_single_rear(x+65, y+0, z)
+}
+
+template template_bridge_onespan_front_rev(x, y, z) {
+	template_bridge_single_front_swne(x+0, y+0, z)
+	template_bridge_single_front_nwse(x+65, y+0, z)
+}
+
+template template_bridge_extralegs(x, y, z) {
+	template_bridge_single_front_swne(x+0, y, z)
+	template_bridge_single_front_swne(x+135, y, z)
+	template_bridge_single_front_swne(x+260, y, z)
+	template_bridge_single_front_nwse(x+65, y, z)
+	template_bridge_single_front_nwse(x+195, y, z)
+	template_bridge_single_front_nwse(x+325, y, z)
+}
+
+// Template bridges: suspension road
+// part 1
+template template_suspension_road_1(x, y, z) {
+	template_bridge_single_rear(x+0, y+0, z)
+	template_bridge_single_rear(x+130, y+0, z)
+	template_bridge_single_front_swne(x+0, y+129, z)
+	template_bridge_single_front_swne(x+130, y+129, z)
+	template_bridge_single_rear(x+260, y+0, z)
+	template_bridge_single_rear(x+390, y+0, z)
+	template_bridge_single_front_swne(x+260, y+129, z)
+	template_bridge_single_front_swne(x+390, y+129, z)
+	template_bridge_single_rear(x+65, y+0, z)
+	template_bridge_single_rear(x+195, y+0, z)
+	template_bridge_single_front_nwse(x+65, y+129, z)
+	template_bridge_single_front_nwse(x+195, y+129, z)
+	template_bridge_single_rear(x+325, y+0, z)
+	template_bridge_single_rear(x+455, y+0, z)
+	template_bridge_single_front_nwse(x+325, y+129, z)
+	template_bridge_single_front_nwse(x+455, y+129, z)
+}
+// part 2
+template template_suspension_road_2(x, y, z) {
+	template_bridge_single_front_swne(x+0, y+259, z)
+	template_bridge_single_front_swne(x+130, y+259, z)
+	template_bridge_single_front_swne(x+260, y+259, z)
+	template_bridge_single_front_swne(x+390, y+259, z)
+	template_bridge_single_front_nwse(x+65, y+259, z)
+	template_bridge_single_front_nwse(x+195, y+259, z)
+	template_bridge_single_front_nwse(x+325, y+259, z)
+	template_bridge_single_front_nwse(x+455, y+259, z)
+}
+// part 3
+template template_suspension_road_3(x, y, z) {
+	template_bridge_single_rear(x+520, y+0, z)
+	template_bridge_single_rear(x+585, y+0, z)
+	template_bridge_single_front_swne(x+520, y+129, z)
+	template_bridge_single_front_nwse(x+585, y+129, z)
+	template_bridge_single_front_swne(x+520, y+259, z)
+	template_bridge_single_front_nwse(x+585, y+259, z)
+}
+// part 4
+template template_suspension_road_4(x, y, z) {
+	template_bridge_single_rear(x+715, y+0, z)
+	template_bridge_single_rear(x+650, y+0, z)
+	template_bridge_single_front_nwse(x+715, y+129, z)
+	template_bridge_single_front_swne(x+650, y+129, z)
+}
+
+// Template bridges: suspension rail
+// part 1
+template template_suspension_rail_1(x, y, z) {
+	template_bridge_single_rear(x+0, y+0, z)
+	template_bridge_single_rear(x+130, y+0, z)
+	template_bridge_single_rear(x+260, y+0, z)
+	template_bridge_single_rear(x+390, y+0, z)
+	template_bridge_single_rear(x+65, y+0, z)
+	template_bridge_single_rear(x+195, y+0, z)
+	template_bridge_single_rear(x+325, y+0, z)
+	template_bridge_single_rear(x+455, y+0, z)
+}
+// part 2
+template template_suspension_rail_3(x, y, z) {
+	template_bridge_single_rear(x+520, y+0, z)
+	template_bridge_single_rear(x+585, y+0, z)
+}
+// part 3
+template template_suspension_rail_4(x, y, z) {
+	template_bridge_single_rear(x+715, y+0, z)
+	template_bridge_single_rear(x+650, y+0, z)
+}
+
+// Template bridges: suspension monorail, maglev
+template template_suspension_other(x, y, z) {
+	template_bridge_single_rear(x+0, y+0, z)
+	template_bridge_single_rear(x+130, y+0, z)
+	template_bridge_single_rear(x+260, y+0, z)
+	template_bridge_single_rear(x+390, y+0, z)
+	template_bridge_single_rear(x+65, y+0, z)
+	template_bridge_single_rear(x+195, y+0, z)
+	template_bridge_single_rear(x+325, y+0, z)
+	template_bridge_single_rear(x+455, y+0, z)
+	template_bridge_single_rear(x+520, y+0, z)
+	template_bridge_single_rear(x+585, y+0, z)
+	template_bridge_single_rear(x+715, y+0, z)
+	template_bridge_single_rear(x+650, y+0, z)
+}
+
+// Template bridges: girder rear
+template template_girder(x, y, z) {
+	template_bridge_single_rear(x+65, y+0, z)
+	template_bridge_single_rear(x+195, y+0, z)
+	template_bridge_single_rear(x+325, y+0, z)
+	template_bridge_single_rear(x+0, y+0, z)
+	template_bridge_single_rear(x+130, y+0, z)
+	template_bridge_single_rear(x+260, y+0, z)
+}
+
+// Template bridges: girder rear
+template template_girder_front(x, y, z) {
+	template_bridge_single_front_nwse(x+65, y+129, z)
+	template_bridge_single_front_nwse(x+195, y+129, z)
+	template_bridge_single_front_nwse(x+325, y+129, z)
+	template_bridge_single_front_swne(x+0, y+129, z)
+	template_bridge_single_front_swne(x+130, y+129, z)
+	template_bridge_single_front_swne(x+260, y+129, z)
+	template_bridge_single_front_nwse(x+65, y+259, z)
+	template_bridge_single_front_nwse(x+195, y+259, z)
+	template_bridge_single_front_swne(x+130, y+259, z)
+	template_bridge_single_front_swne(x+260, y+259, z)
+}
+
+//Template trees: Wide
+template template_tree_wide(x, y, z) {
+	[  0*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[ 50*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[100*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[150*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[200*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[250*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[300*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+}
+
+//Template trees: Narrow
+template template_tree_narrow(x, y, z) {
+	[  0*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 40*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 80*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[120*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[160*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[200*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[240*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+}
+
+//Template trees: 1px border
+template template_tree_bordered(x, y, z) {
+	[  1*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 37*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 73*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[109*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[145*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[181*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[217*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+}
+
+//Template infrastructure: city trees
+template template_tree_city(x, y, z) {
+	[	 1*z+x*z, 1*z+y*z, 19*z, 41*z, -9*z, -36*z-int((z-1)/2)]
+}
+
+//Vehicle templates assume a standardised sprite size for each vehicle type
+//Vehicles should be centre bottom (road, rail) or centred (air, water) in their sprite
+//yindex is the row in the 1px bordered vehicle spritesheet, xindex is the column
+
+//Template vehicles: road
+template template_vehicle_road_8view(xindex, yindex, z) {
+	[(1+  0+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -15*z]
+	[(2+  8+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -10*z]
+	[(3+ 30+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -15*z,  -9*z]
+	[(4+ 61+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -10*z]
+	[(5+ 83+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -15*z]
+	[(6+ 91+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -10*z]
+	[(7+113+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -15*z,  -9*z]
+	[(8+144+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -10*z]
+}
+
+//Template vehicles: rail
+template template_vehicle_rail_4view(xindex, yindex, z) {
+	[(1+  0+xindex*87)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z]
+	[(2+  8+xindex*87)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z]
+	[(3+ 30+xindex*87)*z, (1+yindex*24)*z, 31*z, 15*z, -17*z,  -9*z]
+	[(4+ 61+xindex*87)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z]
+}
+template template_vehicle_rail_8view(xindex, yindex, z) {
+	[(1+  0+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z]
+	[(2+  8+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z]
+	[(3+ 30+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -17*z,  -9*z]
+	[(4+ 61+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z]
+	[(5+ 83+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z]
+	[(6+ 91+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z]
+	[(7+113+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -17*z,  -9*z]
+	[(8+144+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z]
+}
+
+//Template vehicles: air
+template template_vehicle_air_4view(xindex, yindex, z) {
+	[(1+  0+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(2+ 80+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(3+160+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(4+240+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+}
+template template_vehicle_air_8view(xindex, yindex, z) {
+	[(1+  0+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(2+ 80+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(3+160+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(4+240+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(5+320+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(6+400+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(7+480+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(8+560+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+}
+
+//Template vehicles: water
+template template_vehicle_water_8view(xindex, yindex, z) {
+	[(1+  0+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
+	[(2+ 96+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -74*z, -32*z]
+	[(3+192+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
+	[(4+288+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -22*z, -32*z]
+	[(5+384+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
+	[(6+480+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -74*z, -32*z]
+	[(7+576+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
+	[(8+672+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -22*z, -32*z]
+}
+
+
+
+//Replace canals and rivers
+//Template: water slopes
+template template_waterslopes(x, y, z) {
+	//Flat tile
+	[ 322*z+x*z,   1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	//Sloped tiles
+	[  81*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 241*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[   1*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 161*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
+template template_waterslopes_slopesonly(x, y, z) {
+	//Sloped tiles
+	[  81*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 241*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[   1*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 161*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
+
+//Template: river/canal banks, flat
+template template_waterfeature_flat(x, y, z) {
+	//Straight sides
+	[  27*z+x*z,  41*z+y*z, 38*z, 19*z-1,  -5*z,   0*z ]
+	[  27*z+x*z,  14*z+y*z, 38*z, 19*z-1,  -5*z,  13*z ]
+	[   1*z+x*z,  54*z+y*z, 38*z, 19*z-1, -31*z,  13*z ]
+	[   1*z+x*z,   1*z+y*z, 38*z, 19*z-1, -31*z,   0*z ]
+	//Outer corners
+	[  41*z+x*z,  91*z+y*z, 24*z, 12*z-1,   9*z,  10*z ]
+	[  21*z+x*z, 101*z+y*z, 24*z, 12*z-1, -11*z,  20*z ]
+	[   1*z+x*z,  91*z+y*z, 24*z, 12*z-1, -31*z,  10*z ]
+	[  21*z+x*z,  81*z+y*z, 24*z, 12*z-1, -11*z,   0*z ]
+	//Inner corners
+	[  49*z+x*z, 133*z+y*z, 16*z,  8*z-1,  17*z,  12*z ]
+	[  25*z+x*z, 145*z+y*z, 16*z,  8*z-1,  -7*z,  24*z ]
+	[   1*z+x*z, 133*z+y*z, 16*z,  8*z-1, -31*z,  12*z ]
+	[  25*z+x*z, 121*z+y*z, 16*z,  8*z-1,  -7*z,   0*z ]	
+}
+
+//Template: river/canal banks, slopes
+template template_waterfeature_slopes(x, y, z) {
+	//Flat
+	//Straight sides
+	[  27*z+x*z,  41*z+y*z, 38*z, 19*z-1,  -5*z,   0*z ]
+	[  27*z+x*z,  14*z+y*z, 38*z, 19*z-1,  -5*z,  13*z ]
+	[   1*z+x*z,  54*z+y*z, 38*z, 19*z-1, -31*z,  13*z ]
+	[   1*z+x*z,   1*z+y*z, 38*z, 19*z-1, -31*z,   0*z ]
+	//Outer corners
+	[  41*z+x*z,  91*z+y*z, 24*z, 12*z-1,   9*z,  10*z ]
+	[  21*z+x*z, 101*z+y*z, 24*z, 12*z-1, -11*z,  20*z ]
+	[   1*z+x*z,  91*z+y*z, 24*z, 12*z-1, -31*z,  10*z ]
+	[  21*z+x*z,  81*z+y*z, 24*z, 12*z-1, -11*z,   0*z ]
+	//Inner corners
+	[  49*z+x*z, 133*z+y*z, 16*z,  8*z-1,  17*z,  12*z ]
+	[  25*z+x*z, 145*z+y*z, 16*z,  8*z-1,  -7*z,  24*z ]
+	[   1*z+x*z, 133*z+y*z, 16*z,  8*z-1, -31*z,  12*z ]
+	[  25*z+x*z, 121*z+y*z, 16*z,  8*z-1,  -7*z,   0*z ]
+	//NW down
+	//Straight sides
+	[ 223*z+x*z,  41*z+y*z, 37*z, 18*z-1,  -4*z,   0*z ]
+	[ 223*z+x*z,   7*z+y*z, 37*z, 18*z-1,  -4*z,   6*z ]
+	[ 196*z+x*z,  47*z+y*z, 37*z, 18*z-1, -31*z,   6*z ]
+	[ 196*z+x*z,   1*z+y*z, 37*z, 18*z-1, -31*z,   0*z ]
+	//Outer corners
+	[ 236*z+x*z,  86*z+y*z, 24*z,  9*z-1,   9*z,   5*z ]
+	[ 216*z+x*z,  96*z+y*z, 24*z,  9*z-1, -11*z,  16*z ]
+	[ 196*z+x*z,  91*z+y*z, 24*z,  9*z-1, -31*z,  10*z ]
+	[ 216*z+x*z,  81*z+y*z, 24*z,  9*z-1, -11*z,   0*z ]
+	//Inner corners
+	[ 244*z+x*z, 127*z+y*z, 16*z,  6*z-1,  17*z,   6*z ]
+	[ 220*z+x*z, 139*z+y*z, 16*z,  6*z-1,  -7*z,  18*z ]
+	[ 196*z+x*z, 133*z+y*z, 16*z,  6*z-1, -31*z,  12*z ]
+	[ 220*z+x*z, 121*z+y*z, 16*z,  6*z-1,  -7*z,   0*z ]
+	//SW down
+	//Straight sides
+	[  92*z+x*z,  41*z+y*z, 38*z, 27*z-1,  -5*z,  -8*z ]
+	[  92*z+x*z,  14*z+y*z, 38*z, 27*z-1,  -5*z,   5*z ]
+	[  66*z+x*z,  54*z+y*z, 38*z, 27*z-1, -31*z,   5*z ]
+	[  66*z+x*z,   1*z+y*z, 38*z, 27*z-1, -31*z,  -8*z ]
+	//Outer corners
+	[ 106*z+x*z,  91*z+y*z, 24*z, 15*z-1,   9*z,   2*z ]
+	[  86*z+x*z, 106*z+y*z, 24*z, 15*z-1, -11*z,  17*z ]
+	[  66*z+x*z,  96*z+y*z, 24*z, 15*z-1, -31*z,   7*z ]
+	[  86*z+x*z,  81*z+y*z, 24*z, 15*z-1, -11*z,  -8*z ]
+	//Inner corners
+	[ 114*z+x*z, 133*z+y*z, 16*z, 10*z-1,  17*z,   4*z ]
+	[  90*z+x*z, 151*z+y*z, 16*z, 10*z-1,  -7*z,  22*z ]
+	[  66*z+x*z, 139*z+y*z, 16*z, 10*z-1, -31*z,  10*z ]
+	[  90*z+x*z, 121*z+y*z, 16*z, 10*z-1,  -7*z,  -8*z ]
+	//NE down
+	//Straight sides
+	[ 158*z+x*z,  41*z+y*z, 37*z, 18*z-1,  -4*z,   0*z ]
+	[ 158*z+x*z,   7*z+y*z, 37*z, 18*z-1,  -4*z,   6*z ]
+	[ 131*z+x*z,  47*z+y*z, 37*z, 18*z-1, -31*z,   6*z ]
+	[ 131*z+x*z,   1*z+y*z, 37*z, 18*z-1, -31*z,   0*z ]
+	//Outer corners
+	[ 171*z+x*z,  91*z+y*z, 24*z,  9*z-1,   9*z,  10*z ]
+	[ 151*z+x*z,  96*z+y*z, 24*z,  9*z-1, -11*z,  16*z ]
+	[ 131*z+x*z,  86*z+y*z, 24*z,  9*z-1, -31*z,   5*z ]
+	[ 151*z+x*z,  81*z+y*z, 24*z,  9*z-1, -11*z,   0*z ]
+	//Inner corners
+	[ 179*z+x*z, 133*z+y*z, 16*z,  6*z-1,  17*z,  12*z ]
+	[ 155*z+x*z, 139*z+y*z, 16*z,  6*z-1,  -7*z,  18*z ]
+	[ 131*z+x*z, 127*z+y*z, 16*z,  6*z-1, -31*z,   6*z ]
+	[ 155*z+x*z, 121*z+y*z, 16*z,  6*z-1,  -7*z,   0*z ]
+	//SE down
+	//Straight sides
+	[ 287*z+x*z,  41*z+y*z, 38*z, 27*z-1,  -5*z,  -8*z ]
+	[ 287*z+x*z,  14*z+y*z, 38*z, 27*z-1,  -5*z,   5*z ]
+	[ 261*z+x*z,  54*z+y*z, 38*z, 27*z-1, -31*z,   5*z ]
+	[ 261*z+x*z,   1*z+y*z, 38*z, 27*z-1, -31*z,  -8*z ]
+	//Outer corners
+	[ 301*z+x*z,  96*z+y*z, 24*z, 15*z-1,   9*z,   7*z ]
+	[ 281*z+x*z, 106*z+y*z, 24*z, 15*z-1, -11*z,  17*z ]
+	[ 261*z+x*z,  91*z+y*z, 24*z, 15*z-1, -31*z,   2*z ]
+	[ 281*z+x*z,  81*z+y*z, 24*z, 15*z-1, -11*z,  -8*z ]
+	//Inner corners
+	[ 309*z+x*z, 139*z+y*z, 16*z, 10*z-1,  17*z,  10*z ]
+	[ 285*z+x*z, 151*z+y*z, 16*z, 10*z-1,  -7*z,  22*z ]
+	[ 261*z+x*z, 133*z+y*z, 16*z, 10*z-1, -31*z,   4*z ]
+	[ 285*z+x*z, 121*z+y*z, 16*z, 10*z-1,  -7*z,  -8*z ]
+}
+
+//Template: water docks
+template template_docks(x, y, z) {
+	template_house_1x1_addoffs( 0, 195, z, 64, -7, -5)
+	template_house_1x1_addoffs( 0,   0, z, 64,  7, -5)
+	template_house_1x1_addoffs( 0,  65, z, 64, -7, -5)
+	template_house_1x1_addoffs( 0, 130, z, 64,  7, -5)
+	template_house_1x1_addoffs(65,  65, z, 64, -7, -5)
+	template_house_1x1_addoffs(65,   0, z, 64,  7, -5)
+}
+
+//Template: water locks
+template template_locks(x, y, z) {
+	template_house_1x1_addoffs( 325, 130, z, 64,  0,  0)
+	template_house_1x1_addoffs( 325,  65, z, 64,  0,  0)
+	template_house_1x1_addoffs( 325, 195, z, 64,  0,  0)
+	template_house_1x1_addoffs( 325,   0, z, 64,  0,  0)
+	template_house_1x1_addoffs( 260, 130, z, 64, 32,-15)
+	template_house_1x1_addoffs( 260,  65, z, 64,-32,-15)
+	template_house_1x1_addoffs( 260, 195, z, 64,-32,-15)
+	template_house_1x1_addoffs( 260,   0, z, 64, 32,-15)
+	template_house_1x1_addoffs( 455, 130, z, 64,  0,  0)
+	template_house_1x1_addoffs( 455,  65, z, 64,  0,  0)
+	template_house_1x1_addoffs( 455, 195, z, 64,  0,  0)
+	template_house_1x1_addoffs( 455,   0, z, 64,  0,  0)
+	template_house_1x1_addoffs( 390, 130, z, 64, 32,-15)
+	template_house_1x1_addoffs( 390,  65, z, 64,-32,-15)
+	template_house_1x1_addoffs( 390, 195, z, 64,-32,-15)
+	template_house_1x1_addoffs( 390,   0, z, 64, 32,-15)
+	template_house_1x1_addoffs( 195, 130, z, 64,  0,  0)
+	template_house_1x1_addoffs( 195,  65, z, 64,  0,  0)
+	template_house_1x1_addoffs( 195, 195, z, 64,  0,  0)
+	template_house_1x1_addoffs( 195,   0, z, 64,  0,  0)
+	template_house_1x1_addoffs( 130, 130, z, 64, 32,-15)
+	template_house_1x1_addoffs( 130,  65, z, 64,-32,-15)
+	template_house_1x1_addoffs( 130, 195, z, 64,-32,-15)
+	template_house_1x1_addoffs( 130,   0, z, 64, 32,-15)
+}
+
+//Template: road stop, base
+template template_lorrystop(x, y, z) {
+	template_house_1x1_addoffs( 65+x,   0+y, z, 64, -30, -16)
+	template_house_1x1_addoffs( 65+x,  65+y, z, 64,  24, -19)
+	template_house_1x1_addoffs( 65+x, 130+y, z, 64,   6,  -4)
+	template_house_1x1_addoffs( 65+x, 195+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x,   0+y, z, 64,  26, -14)
+	template_house_1x1_addoffs(  0+x,  65+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x, 130+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x, 195+y, z, 64, -26, -14)
+	template_house_1x1_addoffs(130+x,   0+y, z, 64,   4,  -3)
+	template_house_1x1_addoffs(130+x,  65+y, z, 64,  -6,  -4)
+	template_house_1x1_addoffs(130+x, 130+y, z, 64, -24, -19)
+	template_house_1x1_addoffs(130+x, 195+y, z, 64,  26, -18)
+}
+template template_busstop(x, y, z) {
+	template_house_1x1_addoffs( 65+x, 130+y, z, 64,  -4,  -3)
+	template_house_1x1_addoffs( 65+x, 195+y, z, 64,  -6,  -4)
+	template_house_1x1_addoffs( 65+x,   0+y, z, 64, -24, -19)
+	template_house_1x1_addoffs( 65+x,  65+y, z, 64,  26, -18)
+	template_house_1x1_addoffs(  0+x,   0+y, z, 64,  26, -14)
+	template_house_1x1_addoffs(  0+x,  65+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x, 130+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs(  0+x, 195+y, z, 64, -26, -14)
+	template_house_1x1_addoffs(130+x, 130+y, z, 64, -26, -14)
+	template_house_1x1_addoffs(130+x, 195+y, z, 64,  20, -17)
+	template_house_1x1_addoffs(130+x,   0+y, z, 64,   6,  -4)
+	template_house_1x1_addoffs(130+x,  65+y, z, 64,   0,  -1)
+}
+//Template: road stop, extra through stops
+template template_roadstop_throughstop(x, y, z) {
+	template_house_1x1_addoffs(260+x,  65+y, z, 64,  25, -13)
+	template_house_1x1_addoffs(260+x,   0+y, z, 64,   0,   0)
+	template_house_1x1_addoffs(195+x,  65+y, z, 64,   0,   0)
+	template_house_1x1_addoffs(195+x,   0+y, z, 64, -26, -13)
+}
+
+//Template: Modern airport, base
+template template_airport_modern_groundtiles(x, y, z) {
+	template_flattile_single(0, 0, z)
+	template_flattile_single(65, 0, z)
+	template_flattile_single(455, 0, z)
+	template_flattile_single(520, 0, z)
+	template_flattile_single(585, 0, z)
+	template_flattile_single(650, 0, z)
+	template_flattile_single(715, 0, z)
+	template_flattile_single(780, 0, z)
+	template_flattile_single(845, 0, z)
+	template_flattile_single(910, 0, z)
+	template_flattile_single(975, 0, z)
+	template_flattile_single(130, 0, z)
+	template_flattile_single(195, 0, z)
+	template_flattile_single(260, 0, z)
+	template_flattile_single(325, 0, z)
+	template_flattile_single(390, 0, z)
+}
+template template_modernairport_buildings_core(x, y, z) {
+	template_house_1x1_addoffs(  0,   0, z, 96,   4,  -3)
+	template_house_1x1_addoffs( 65,   0, z, 96,   0,  -7)
+	template_house_1x1_addoffs(130,   0, z, 96,  -2,  -2)
+	template_house_1x1_addoffs(195,   0, z, 96,   0,  -7)
+	template_house_1x1_addoffs(  0,  97, z, 96,  -6,  -4)
+}
+template template_modernairport_depot_core(x, y, z) {
+	template_house_1x1_addoffs(  0,   0, z, 64,  28, -14)
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,   0)
+}
+template template_modernairport_walkwaysfences(x, y, z) {
+	template_house_1x1_addoffs(260,   0, z, 96,  -8, -19)
+	template_house_1x1_addoffs(260,  97, z, 96, -10, -10)
+	template_house_1x1_addoffs(260, 195, z, 96,   2,  -5)
+	template_house_1x1_addoffs(325,   0, z, 96, -16,  -9)
+	template_house_1x1_addoffs(390,   0, z, 96,   0,   0)
+	template_house_1x1_addoffs(390,  97, z, 96,   0,   0)
+}
+template template_airportoilrefinery_building(x, y, z) {
+	template_house_1x1_addoffs(455,   0, z, 96,   0,  -7)
+}
+
+//Template: Modern Airport, extended
+template template_airport_modern_extragroundtiles1(x, y, z) {
+	template_flattile_single(0, 0, z)
+	template_flattile_single(1040, 0, z)
+	template_flattile_single(1105, 0, z)
+	template_flattile_single(1170, 0, z)
+	template_flattile_single(1235, 0, z)
+	template_flattile_single(1300, 0, z)
+}
+template template_airport_modern_extragroundtiles2(x, y, z) {
+	template_flattile_single(1430, 0, z)
+	template_flattile_single(1495, 0, z)
+	template_flattile_single(1560, 0, z)
+}
+
+//Template: Heliport
+template template_heliport(x, y, z) {
+	template_house_1x1_addoffs(0, 0, z, 96, 0, 0)
+}
+
+//Template: Old airport, base
+template template_airport_old_buildingtiles(x, y, z) {
+	template_house_1x1(0, 0, z, 96)
+	template_house_1x1(65, 0, z, 96)
+	template_house_1x1(130, 0, z, 96)
+	template_house_1x1_addoffs(195, 0, z, 96, 0, -31)
+}
+template template_airport_old_groundtiles(x, y, z) {
+	template_flattile_single(195, 0, z)
+	template_flattile_single(260, 0, z)
+	template_flattile_single(325, 0, z)
+	template_flattile_single(390, 0, z)
+	template_flattile_single(455, 0, z)
+	template_flattile_single(520, 0, z)
+	template_flattile_single(650, 0, z)
+}
+
+// Infrastructure: tram tiles
+template template_tramtiles(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 456*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 521*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 586*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 651*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+
+	[ 976*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
+
+// Infrastructure: tram bridge tiles
+template template_trambridgetiles(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+
+	[ 976*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
+
+// Infrastructure: tram catenary, straight and junctions
+template template_tram_catenary_straightjunctions(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+}
+
+// Infrastructure: tram catenary, corners
+template template_tram_catenary_corners(x, y, z) {
+	[ 456*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 521*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 586*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[ 651*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+}
+
+// Infrastructure: tram catenary, slopes
+template template_tram_catenary_slopes(x, y, z) {
+	[ 976*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+}
+
+// Infrastructure: tram catenary, tunnels
+template template_tram_catenary_tunnels(x, y, z) {
+	[1236*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[1301*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[1366*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[1431*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+}
+
+// Infrastructure: tram catenary, bridge level
+template template_tram_catenary_bridge(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -23*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -23*z ]
+}
+
+// Infrastructure: tram catenary, bridge slopes
+template template_tram_catenary_bridgeslopes(x, y, z) {
+	[ 976*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -32*z ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -32*z ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
+}
+
+// Tile selectors: autorail
+template template_selectors_autorail(x, y, z) {
+	[ 1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+	[ 81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z, -1*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 48*z-1, -31*z, -9*z ]
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -5*z ]
+	[ 401*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z, 7*z ]
+	[ 481*z+x*z, 1*z+y*z, 64*z, 19*z-1, -31*z, 4*z ]
+	[ 561*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+
+	[ 1*z+x*z, 49*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+	[ 81*z+x*z, 49*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 161*z+x*z, 49*z+y*z, 64*z, 24*z-1, -31*z, 7*z ]
+	[ 241*z+x*z, 49*z+y*z, 64*z, 19*z-1, -31*z, 4*z ]
+	[ 321*z+x*z, 49*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 401*z+x*z, 49*z+y*z, 64*z, 40*z-1, -31*z, -1*z ]
+	[ 481*z+x*z, 49*z+y*z, 64*z, 48*z-1, -31*z, -9*z ]
+	[ 561*z+x*z, 49*z+y*z, 64*z, 32*z-1, -31*z, -5*z ]
+
+	[ 1*z+x*z, 97*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+	[ 81*z+x*z, 97*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 161*z+x*z, 97*z+y*z, 64*z, 48*z-1, -31*z, -9*z ]
+	[ 241*z+x*z, 97*z+y*z, 64*z, 27*z-1, -31*z, 4*z ]
+	[ 321*z+x*z, 97*z+y*z, 64*z, 24*z-1, -31*z, 4*z ]
+	[ 401*z+x*z, 97*z+y*z, 64*z, 32*z-1, -31*z, -3*z ]
+	[ 481*z+x*z, 97*z+y*z, 64*z, 27*z-1, -31*z, 4*z ]
+	[ 561*z+x*z, 97*z+y*z, 64*z, 24*z-1, -31*z, 4*z ]
+	[ 641*z+x*z, 97*z+y*z, 64*z, 32*z-1, -31*z, -3*z ]
+
+	[ 1*z+x*z, 145*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+	[ 81*z+x*z, 145*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 161*z+x*z, 145*z+y*z, 64*z, 16*z-1, -31*z, 7*z ]
+	[ 241*z+x*z, 145*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+	[ 321*z+x*z, 145*z+y*z, 64*z, 40*z-1, -31*z, -1*z ]
+	[ 401*z+x*z, 145*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 481*z+x*z, 145*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+	[ 561*z+x*z, 145*z+y*z, 64*z, 40*z-1, -31*z, -1*z ]
+	[ 641*z+x*z, 145*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+
+	[ 1*z+x*z, 193*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+	[ 81*z+x*z, 193*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 161*z+x*z, 193*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 241*z+x*z, 193*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 321*z+x*z, 193*z+y*z, 64*z, 24*z-1, -31*z, 7*z ]
+	[ 401*z+x*z, 193*z+y*z, 64*z, 16*z-1, -31*z, 7*z ]
+	[ 481*z+x*z, 193*z+y*z, 64*z, 40*z-1, -31*z, -1*z ]
+	[ 561*z+x*z, 193*z+y*z, 64*z, 48*z-1, -31*z, -9*z ]
+
+	[ 1*z+x*z, 241*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+	[ 81*z+x*z, 241*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 161*z+x*z, 241*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 241*z+x*z, 241*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 321*z+x*z, 241*z+y*z, 64*z, 24*z-1, -31*z, 7*z ]
+	[ 401*z+x*z, 241*z+y*z, 64*z, 16*z-1, -31*z, 7*z ]
+	[ 481*z+x*z, 241*z+y*z, 64*z, 40*z-1, -31*z, -1*z ]
+	[ 561*z+x*z, 241*z+y*z, 64*z, 48*z-1, -31*z, -9*z ]
+
+	[ 1*z+x*z, 289*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 81*z+x*z, 289*z+y*z, 64*z, 32*z-1, -31*z, -1*z ]
+	[ 161*z+x*z, 289*z+y*z, 64*z, 24*z-1, -31*z, 7*z ]
+	[ 241*z+x*z, 289*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+	[ 321*z+x*z, 289*z+y*z, 64*z, 32*z-1, -31*z, 7*z ]
+}
+
+// Template: Infrastructure elrail catenary
+template template_elrail_catenary(x, y, z) {
+	[  16*z+x*z, 16*z+y*z, 32*z, 16*z, -29*z, -2*z ]
+	[  64*z+x*z, 16*z+y*z, 32*z, 16*z,  -1*z, -2*z ]
+	[ 112*z+x*z, 16*z+y*z, 32*z,  1*z,  -1*z, -2*z ]
+	[ 160*z+x*z, 16*z+y*z,  1*z, 16*z,   0*z, -3*z ]
+	[ 177*z+x*z, 16*z+y*z, 32*z, 24*z, -29*z, -2*z ]
+	[ 225*z+x*z, 16*z+y*z, 32*z,  9*z,  -1*z,  6*z ]
+	[ 273*z+x*z, 16*z+y*z, 32*z,  9*z, -29*z,  6*z ]
+	[ 321*z+x*z, 16*z+y*z, 32*z, 24*z,  -1*z, -2*z ]
+}
+
+// Template: Infrastructure elrail catenary, tunnel entrances
+template template_elrail_catenarytunnel(x, y, z) {
+	[  16*z+x*z, 16*z+y*z, 16*z, 8*z, -29*z,  6*z ]
+	[  48*z+x*z, 16*z+y*z, 16*z, 8*z,  -1*z, -2*z ]
+	[  80*z+x*z, 16*z+y*z, 16*z, 8*z, -13*z, -2*z ]
+	[ 112*z+x*z, 16*z+y*z, 16*z, 8*z,  15*z,  6*z ]
+}
+
+// Template: Infrastructure elrail masts/gantries
+template template_elrail_masts(z) {
+	template_sprite_matrix(22, 30, -7, -30, 0, 0, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 0, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 1, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 1, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 2, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 2, z)
+	template_sprite_matrix(22, 30, -7, -30, 0, 3, z)
+	template_sprite_matrix(22, 30, -7, -30, 1, 3, z)
+}
