@@ -9,6 +9,11 @@ anisotropic=true;
 //diffuseRange=2;
 //anisotropic=true;
 
+//trees
+probDiffuse=0.8;
+diffuseRange=1;
+anisotropic=false;
+
 //Resize 2x using nearest neighbour
 run("Size...", "width="+getWidth()*2+" height="+getHeight()*2+" constrain average interpolation=None");
 //Loop through all the pixels for pixel diffusion

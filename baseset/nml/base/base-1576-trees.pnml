@@ -1,6 +1,17 @@
 //TODO: Unified tree style and templating
 
+template template_tree_alt(x, y, z) {
+	[  1*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[ 47*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[ 93*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[139*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[185*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[231*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[277*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+}
+
 //1576-1764 temperate trees
+/*
 base_graphics spr1576(1576, "../graphics/trees/64/temperate_tree_01_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy
 alternative_sprites(spr1576, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/temperate_tree_01_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
 base_graphics spr1583(1583, "../graphics/trees/64/temperate_tree_02_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy
@@ -39,8 +50,35 @@ base_graphics spr1695(1695, "../graphics/trees/64/temperate_tree_18_leaf_8bpp.pn
 alternative_sprites(spr1695, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/temperate_tree_18_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
 base_graphics spr1702(1702, "../graphics/trees/64/temperate_tree_19_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy
 alternative_sprites(spr1702, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/temperate_tree_19_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
+*/
+
+template template_tree_temperate_set(z) {
+	template_tree_alt(0, 1, z)
+	template_tree_alt(0, 82, z)
+	template_tree_alt(0, 244, z)
+	template_tree_alt(0, 163, z)
+	template_tree_alt(0, 325, z)
+	template_tree_alt(0, 406, z)
+	template_tree_alt(0, 487, z)
+	template_tree_alt(0, 568, z)
+	template_tree_alt(0, 649, z)
+	template_tree_alt(0, 730, z)
+	template_tree_alt(0, 811, z)
+	template_tree_alt(0, 973, z)
+	template_tree_alt(0, 892, z)
+	template_tree_alt(0, 1054, z)
+	template_tree_alt(0, 1135, z)
+	template_tree_alt(0, 1216, z)
+	template_tree_alt(0, 1297, z)
+	template_tree_alt(0, 1378, z)
+	template_tree_alt(0, 1459, z)
+}
+
+base_graphics spr1576(1576, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_set(1) }
+//alternative_sprites(spr1576, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/temperate_8bpp.png") { template_tree_temperate_set(4) }
 
 //Arctic trees
+/*
 //1709-1764 Arctic trees
 base_graphics spr1709(1709, "../graphics/trees/64/arctic_tree_01_conifer_8bpp.png") { template_tree_narrow(0, 0, 1) } // conifer, snow @1765
 alternative_sprites(spr1709, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/arctic_tree_01_conifer_8bpp.png") { template_tree_narrow(0, 0, 4) }
@@ -75,6 +113,23 @@ base_graphics spr1807(1807, "../graphics/trees/64/arctic_tree_05_conifer_snow_8b
 alternative_sprites(spr1807, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/arctic_tree_05_conifer_snow_8bpp.png") { template_tree_narrow(0, 0, 4) }
 base_graphics spr1814(1814, "../graphics/trees/64/arctic_tree_10_leaf_snow_8bpp.png") { template_tree_narrow(0, 0, 1) }
 alternative_sprites(spr1814, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/arctic_tree_10_leaf_snow_8bpp.png") { template_tree_narrow(0, 0, 4) }
+*/
+
+template template_tree_arctic_set(z) {
+	template_tree_alt(0,  81, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0,   0, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
+}
+
+base_graphics spr1709(1709, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_set(1) }
+alternative_sprites(spr1709, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/arctic_8bpp.png") { template_tree_arctic_set(4) }
+base_graphics spr1765(1765, "../graphics/trees/64_alt/pygen/arctic_snow_8bpp.png") { template_tree_arctic_set(1) }
+alternative_sprites(spr1765, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/arctic_snow_8bpp.png") { template_tree_arctic_set(4) }
 
 //1821-1946 tropical trees
 base_graphics spr1821(1821, "../graphics/trees/64/tropical_nonleafy_8bpp.png") {
