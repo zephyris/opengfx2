@@ -5,9 +5,3 @@ __pycache__/
 
 # generated nml
 *.nml
-
-# nmlc intermediates and output
-.nmlcache/
-*.grf
-*.grf.cache
-*.grf.cacheindex

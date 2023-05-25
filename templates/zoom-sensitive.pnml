@@ -1364,3 +1364,4 @@ template template_elrail_masts(z) {
 	template_sprite_matrix(22, 30, -7, -30, 0, 3, z)
 	template_sprite_matrix(22, 30, -7, -30, 1, 3, z)
 }
+
