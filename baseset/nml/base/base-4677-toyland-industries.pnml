@@ -123,22 +123,24 @@ base_graphics spr4747(4747, "../graphics/industries/toyland/64/bubble_generator_
 	template_general(1, 1, 22, 22, -7, -16, 1)
 }
 
-// industries/Bubbles
-base_graphics spr4748(4748, "sprites/png/industries/bubbles.png") { [  66,    8,  15,  15,  -7, -15] }
-base_graphics spr4749(4749, "sprites/png/industries/bubbles.png") { [  98,    8,  15,  16,  -7, -16] }
-base_graphics spr4750(4750, "sprites/png/industries/bubbles.png") { [ 130,    8,  16,  15,  -7, -15] }
-base_graphics spr4751(4751, "sprites/png/industries/bubbles.png") { [ 162,    8,  17,   4,  -8,  -2] }
-base_graphics spr4752(4752, "sprites/png/industries/bubbles.png") { [ 194,    8,  17,   8,  -8,  -6] }
-base_graphics spr4753(4753, "sprites/png/industries/bubbles.png") { [ 226,    8,  17,  12,  -8, -10] }
-base_graphics spr4754(4754, "sprites/png/industries/bubbles.png") { [ 258,    8,  17,  15,  -8, -13] }
-base_graphics spr4755(4755, "sprites/png/industries/bubbles.png") { [ 290,    8,  20,  21,  -9, -18] }
-base_graphics spr4756(4756, "sprites/png/industries/bubbles.png") { [ 322,    8,  28,  28, -13, -21] }
-base_graphics spr4757(4757, "sprites/png/industries/bubbles.png") { [ 370,    8,  37,  36, -17, -25] }
-base_graphics spr4758(4758, "sprites/png/industries/bubbles.png") { [ 418,    8,  15,  16,  -7, -15] }
-base_graphics spr4759(4759, "sprites/png/industries/bubbles.png") { [ 450,    8,  15,  18,  -7, -14] }
-base_graphics spr4760(4760, "sprites/png/industries/bubbles.png") { [ 482,    8,  13,  22,  -6, -12] }
-base_graphics spr4761(4761, "sprites/png/industries/bubbles.png") { [ 514,    8,  11,  26,  -5,  -6] }
-base_graphics spr4762(4762, "sprites/png/industries/bubbles.png") { [ 530,    8,   7,  35,  -3,   1] }
+//4748-4762 bubbles
+base_graphics spr4748(4748, "../graphics/effects/64/industries_bubblegenerator_bubbles_8bpp.png") {
+	template_animation_frame(64, 64, 0, 0,  0, 1) // bobbling
+	template_animation_frame(64, 64, 0, 0,  1, 1)
+	template_animation_frame(64, 64, 0, 0,  2, 1)
+	template_animation_frame(64, 64, 0, 0,  3, 1) // blowing
+	template_animation_frame(64, 64, 0, 0,  4, 1)
+	template_animation_frame(64, 64, 0, 0,  5, 1)
+	template_animation_frame(64, 64, 0, 0,  6, 1)
+	template_animation_frame(64, 64, 0, 0,  7, 1) // popping
+	template_animation_frame(64, 64, 0, 0,  8, 1)
+	template_animation_frame(64, 64, 0, 0,  9, 1)
+	template_animation_frame(64, 64, 0, 0, 10, 1) // sucking
+	template_animation_frame(64, 64, 0, 0, 11, 1)
+	template_animation_frame(64, 64, 0, 0, 12, 1)
+	template_animation_frame(64, 64, 0, 0, 13, 1)
+	template_animation_frame(64, 64, 0, 0, 14, 1)
+}
 
 //4763-4767 toffee quarry
 base_graphics spr4763(4763, "../graphics/industries/toyland/64/pygen/toffee_quarry_tiles_8bpp.png") {
@@ -151,28 +153,40 @@ base_graphics spr4767(4767, "../graphics/industries/toyland/64/toffee_quarry_cut
 	template_general(1, 1, 30, 30, 0, 0, 1)
 }
 
-//4768  4789    22      Toyland: Sugar mine
-base_graphics spr4768(4768, "sprites/png/industries/sugarmine/bgstockpile.png") { [  32,    1,  64,  32, -32,   0, ANIM] }
-base_graphics spr4769(4769, "sprites/png/industries/sugarmine/bgstockpile.png") { [  96,   16,  32,  32,   0,  -1, ANIM] }
-base_graphics spr4770(4770, "sprites/png/industries/sugarmine/bgstockpile.png") { [   1,   16,  32,  32, -32,  -1, ANIM] }
-base_graphics spr4771(4771, "sprites/png/industries/sugarmine/bgstockpile.png") { [  32,   32,  64,  32, -32,  -1, ANIM] }
-base_graphics spr4772(4772, "sprites/png/industries/sugarmine/Support.png") { [  78,    0,  13,  95,   0, -78] }
-base_graphics spr4773(4773, "sprites/png/industries/sugarmine/Support.png") { [  14,    0,  64, 106, -32, -94, NOCROP] }  // Don't crop this sprite!
-base_graphics spr4774(4774, "sprites/png/industries/sugarmine/Support.png") { [   0,    0,  14,  95, -13, -78] }
+
+//4768-4789 sugar mine
+base_graphics spr4768(4768, "../graphics/industries/toyland/64/pygen/sugar_mine_stockpile_tiles_8bpp.png") {
+	template_house_1x1(  0, 0, 1, 63)
+	template_house_1x1( 65, 0, 1, 63)
+	template_house_1x1(130, 0, 1, 63)
+	template_house_1x1(195, 0, 1, 63)
+}
+//4768-4789
+base_graphics spr4772(4772, "../graphics/industries/toyland/64/pygen/sugar_mine_stand_tiles_8bpp.png") {
+	template_house_1x1(  0, 0, 1, 126)
+	template_house_1x1( 65, 0, 1, 126)
+	template_house_1x1(130, 0, 1, 126)
+}
 // Animation sprites. All sprites are drawn as childsprites of 4773 with the specified offsets.
 // Requirements: 0 <= offset[4775..4789] + rel[4775..4789] and offset[4775..4789] + rel[4775..4789] + size[4775..4789] <= size[4773]
-base_graphics spr4775(4775, "sprites/png/industries/sugarmine/Sieve5.png") { [   0,    0,  49,  48,   0,   0] } // offset (4, 0) to (12, 0)
-base_graphics spr4776(4776, "sprites/png/industries/sugarmine/Sieve4.png") { [   0,    0,  49,  48,   0,   0] } // offset (4, 0) to (12, 0)
-base_graphics spr4777(4777, "sprites/png/industries/sugarmine/Sieve3.png") { [   0,    0,  49,  48,   0,   0] } // offset (4, 0) to (12, 0)
-base_graphics spr4778(4778, "sprites/png/industries/sugarmine/Sieve2.png") { [   0,    0,  49,  48,   0,   0] } // offset (4, 0) to (12, 0)
-base_graphics spr4779(4779, "sprites/png/industries/sugarmine/Sieve1.png") { [   0,    0,  49,  48,   0,   0] } // offset (4, 0) to (12, 0)
-base_graphics spr4780(4780, "sprites/png/industries/sugarmine/Pile4.png") { [   0,    0,  49,  48, -16, -16] }  // offset (22, 73)
-base_graphics spr4781(4781, "sprites/png/industries/sugarmine/Pile3.png") { [   0,    0,  49,  48,  -8, -12] }  // offset (17, 70)
-base_graphics spr4782(4782, "sprites/png/industries/sugarmine/Pile2.png") { [   0,    0,  49,  48,  -4, -12] }  // offset (14, 69)
-base_graphics spr4783(4783, "sprites/png/industries/sugarmine/Pile1.png") { [   0,    0,  49,  48,   0,  -8] }  // offset (10, 66)
-base_graphics spr4784(4784, "sprites/png/industries/sugarmine/Sug2.png") { [   0,    0,  49,  44,   0,   0] }   // offset ( 8, 41)
-base_graphics spr4785(4785, "sprites/png/industries/sugarmine/Sug3.png") { [   0,    0,  49,  44,   0,   0] }   // offset ( 8, 41)
-base_graphics spr4786(4786, "sprites/png/industries/sugarmine/Sug4.png") { [   0,    0,  49,  44,   0,   0] }   // offset ( 8, 41)
-base_graphics spr4787(4787, "sprites/png/industries/sugarmine/Sug5.png") { [   0,    0,  49,  44,   0,   0] }   // offset ( 8, 41)
-base_graphics spr4788(4788, "sprites/png/industries/sugarmine/Sug1.png") { [   0,    0,  49,  44,   0,   0] }   // offset ( 8, 41)
-base_graphics spr4789(4789, "sprites/png/industries/sugarmine/Sug3.png") { [   0,    0,  49,  44,   0,   0] }   // offset ( 8, 41)
+base_graphics spr4775(4775, "../graphics/industries/toyland/64/sugarmine_sieve_8bpp.png") {
+	template_animation_frame(49, 48, 0, -10,  4, 1)
+	template_animation_frame(49, 48, 0, -10,  3, 1)
+	template_animation_frame(49, 48, 0, -10,  2, 1)
+	template_animation_frame(49, 48, 0, -10,  1, 1)
+	template_animation_frame(49, 48, 0, -10,  0, 1)
+}
+base_graphics spr4780(4780, "../graphics/industries/toyland/64/sugarmine_pile_8bpp.png") {
+	template_animation_frame(49, 48, 0, -20,  1, 1)
+	template_animation_frame(49, 48, 0, -20,  2, 1)
+	template_animation_frame(49, 48, 0, -20,  3, 1)
+	template_animation_frame(49, 48, 0, -20,  4, 1)
+}
+base_graphics spr4784(4784, "../graphics/effects/64/industries_sugarmine_sugar_8bpp.png") {
+	template_animation_frame(48, 56, 0, -15,  0, 1)
+	template_animation_frame(48, 56, 0, -15,  1, 1)
+	template_animation_frame(48, 56, 0, -15,  2, 1)
+	template_animation_frame(48, 56, 0, -15,  3, 1)
+	template_animation_frame(48, 56, 0, -15,  4, 1)
+	template_animation_frame(48, 56, 0, -15,  5, 1)
+}

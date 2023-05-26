@@ -72,6 +72,10 @@ mask_tiles.py pygen/toffee_quarry toffee_quarry_tilemask.png 1
 cp bubble_generator_32bpp.png pygen/
 cp bubble_generator_palmask.png pygen/
 mask_tiles.py pygen/bubble_generator bubble_generator_tilemask.png 1
+cp sugar_mine_stand_32bpp.png pygen/
+cp sugar_mine_stockpile_32bpp.png pygen/
+mask_tiles.py pygen/sugar_mine_stand sugar_mine_stand_tilemask.png 1
+mask_tiles.py pygen/sugar_mine_stockpile sugar_mine_stockpile_tilemask.png 1
 custom_dither.py
 cd pygen
 custom_dither.py
