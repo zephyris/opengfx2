@@ -1,19 +1,15 @@
-//INCOMPLETE
-
-//4677  4685    9       Toyland: Sweet factory
-//Recolour: CC translates to random colour
-// fully boxed
-base_graphics spr4677(4677, "sprites/png/industries/sweetfactory_fullwrap.png") { [  96,   22,  32,  88,   1, -57] }
-base_graphics spr4678(4678, "sprites/png/industries/sweetfactory_fullwrap.png") { [  32,    6,  64, 120, -31, -89] }
-base_graphics spr4679(4679, "sprites/png/industries/sweetfactory_fullwrap.png") { [   0,   22,  32,  88, -31, -57] }
- // partially unwrapped
-base_graphics spr4680(4680, "sprites/png/industries/sweetfactory.png") { [ 170,   17,  32,  88,   1, -57] }
-base_graphics spr4681(4681, "sprites/png/industries/sweetfactory.png") { [ 104,    1,  64, 120, -31, -89] }
-base_graphics spr4682(4682, "sprites/png/industries/sweetfactory.png") { [  70,   17,  32,  88, -31, -57] }
-// completely built
-base_graphics spr4683(4683, "sprites/png/industries/sweetfactory.png") { [ 170,  140,  32,  88,   1, -57] }
-base_graphics spr4684(4684, "sprites/png/industries/sweetfactory.png") { [ 104,  124,  64, 120, -31, -89] }
-base_graphics spr4685(4685, "sprites/png/industries/sweetfactory.png") { [  70,  140,  32,  88, -31, -57] }
+//4677-4685 sweet factory
+base_graphics spr4677(4677, "../graphics/industries/toyland/64/pygen/sweet_factory_tiles_8bpp.png") {
+	template_house_1x1(0, 316, 1, 157)
+	template_house_1x1(130, 316, 1, 157)
+	template_house_1x1(65, 316, 1, 157)
+	template_house_1x1(0, 158, 1, 157)
+	template_house_1x1(130, 158, 1, 157)
+	template_house_1x1(65, 158, 1, 157)
+	template_house_1x1(0, 0, 1, 157)
+	template_house_1x1(130, 0, 1, 157)
+	template_house_1x1(64, 0, 1, 157)
+}
 
 //4686-4690 battery farm
 base_graphics spr4686(4686, "../graphics/industries/toyland/64/battery_farm_8bpp.png") {

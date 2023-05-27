@@ -6,11 +6,12 @@
 cd baseset
 
 # Clone OpenGFX and copy sprites for unchanged source
-if [ ! -d sprites ]; then
-  git clone https://github.com/OpenTTD/OpenGFX
-  cp -r OpenGFX/sprites sprites
-  rm -rf OpenGFX
-fi
+# No longer needed - OpenGFX independent
+#if [ ! -d sprites ]; then
+#  git clone https://github.com/OpenTTD/OpenGFX
+#  cp -r OpenGFX/sprites sprites
+#  rm -rf OpenGFX
+#fi
 
 echo "OGFX2 Base"
 python3 ../templates/nml_preprocessor.py ogfx21_base

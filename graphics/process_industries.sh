@@ -67,6 +67,8 @@ cp toy_factory_32bpp.png pygen/
 cp toy_factory_constr_32bpp.png pygen/
 mask_tiles.py pygen/toy_factory toy_factory_tilemask.png 1
 mask_tiles.py pygen/toy_factory_constr toy_factory_constr_tilemask.png 1
+cp sweet_factory_32bpp.png pygen/
+mask_tiles.py pygen/sweet_factory toy_shop_tilemask.png 1
 cp toffee_quarry_32bpp.png pygen/
 mask_tiles.py pygen/toffee_quarry toffee_quarry_tilemask.png 1
 cp bubble_generator_32bpp.png pygen/

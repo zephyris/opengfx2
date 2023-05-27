@@ -1176,7 +1176,7 @@ template template_airport_old_buildingtiles(x, y, z) {
 	template_house_1x1(0, 0, z, 96)
 	template_house_1x1(65, 0, z, 96)
 	template_house_1x1(130, 0, z, 96)
-	template_house_1x1_addoffs(195, 0, z, 96, 0, -31)
+	template_house_1x1_addoffs(195, 0, z, 96, 0, -16)
 }
 template template_airport_old_groundtiles(x, y, z) {
 	template_flattile_single(195, 0, z)
