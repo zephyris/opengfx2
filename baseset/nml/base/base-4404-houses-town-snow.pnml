@@ -3,7 +3,7 @@
 base_graphics spr4404(4404, "../graphics/towns/temperate/64/pygen/theatreandcinema_base_8bpp.png") { template_house_1x1( 65,  0, 1, 69) }
 base_graphics spr4405(4405, "../graphics/towns/temperate/64/pygen/theatreandcinema_8bpp.png") { template_house_1x1_anim( 65,  0, 1, 69) }
 //4406-4417 shopping centre/mall
-base_graphics spr4406(4406, "../graphics/towns/temperate/64/pygen/2x2_mallandstadia_combo_tiles_8bpp.png") { template_house_2x2_7m2sprite(0, 90, 1, 88) }
+base_graphics spr4406(4406, "../graphics/towns/temperate/64/pygen/2x2_mallandstadia_combo_tiles_8bpp.png") { template_house_2x2_7m2sprite(0, 89, 1, 88) }
 base_graphics spr4411(4411, "../graphics/towns/temperate/64/pygen/2x2_mallandstadia_combo_tiles_8bpp.png") { template_house_2x2_7sprite(0, 0, 1, 88) }
 //4418-4427 double house
 base_graphics spr4418(4418, "../graphics/towns/arctic/64/pygen/largehouses_base_8bpp.png") { template_house_short(  0,  0, 1) }

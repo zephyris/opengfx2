@@ -14,7 +14,7 @@ cd temperate/64/
 building_shapeproc.py 1 temperate
 building_baseshapeproc.py 1 temperate
 building_base_flatten.py bungalow 1
-../2x2_mallandstadia.py 1
+building_base_flatten.py 2x2_mallandstadia 1
 mask_tiles.py pygen/2x1_hotel 2x1_hotel_tilemask.png 1
 mask_tiles.py pygen/2x2_mallandstadia 2x2_mallandstadia_tilemask.png 1
 mask_tiles.py pygen/2x2_mallandstadia_base 2x2_mallandstadia_tilemask.png 1

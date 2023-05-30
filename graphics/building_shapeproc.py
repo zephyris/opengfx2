@@ -38,7 +38,7 @@ from random import randint
 import numpy, blend_modes # For overlay blending
 import glob, os, sys
 
-from tools import openttd_palettise
+from tools import openttd_palettise, check_update_needed
 
 if os.path.isdir("pygen") == False: os.mkdir("pygen")
 
@@ -213,113 +213,117 @@ index_woodwork = [200,202,203]
 index_ironwork = [178,179,180]
 index_windows = [130,132,133]
 for input_file in glob.glob("*"+suffix):
-  with Image.open(input_file) as image:
-    # Open shape image
-    width, height = image.size
-    print("%s in scale %d mode" % (input_file, scale))
-    # Convert shape image to OpenTTD 8 bit
-    image_shape = openttd_palettise(image)
-    # Apply colouring specified by pixel above each column of sprites
-    # Loop through _second_ row of pixels (multiplied by scale)
-    image_colorised = Image.new("P", (image_shape.size))
-    image_colorised.paste(image_shape, (0,0))
-    image_colorised.putpalette(image_shape.getpalette())
-    x = 0
-    while x < width - scale:
-      # Find start of a sprite
-      while x < width - scale and image_shape.getpixel((x, 2 * scale)) in index_frame:
-        x += 1
-      # Find sprite width
-      w = 0
-      while x + w < width - scale and image_shape.getpixel((x + w, 2 * scale)) not in index_frame:
-        w += 1
-      if verbose == True:
-        print(" Sprite column, x: %d, w: %d" % (x, w))
-      # Lookup color remapping
-      if w > len(index_remaps):
-        # Only process if sprite column is wide enough to have all remapping info in row 1
-        index_target = []
-        for i in range(len(index_remaps)):
-          index_target.append(image_shape.getpixel((x + i * scale, 0 * scale)))
+  print("%s in scale %d mode" % (input_file, scale))
+  # check for input file changes
+  shading_overlay_name = input_file[:-len(suffix)]+"_overlayshading.png"
+  normal_overlay_name = input_file[:-len(suffix)]+"_overlaynormal.png"
+  toyland_overlay_name = input_file[:-len(suffix)]+"_toylandoverlaynormal.png"
+  image_shaded_name = os.path.join("pygen", input_file[:-len(suffix)]+"_"+namesuffix+"32bpp.png")
+  image_unshaded_name = os.path.join("pygen", input_file[:-len(suffix)]+"_"+namesuffix+"palmask.png")
+  if check_update_needed([input_file, shading_overlay_name, normal_overlay_name, toyland_overlay_name] + glob.glob("../../textures/*.png"), image_shaded_name):
+    with Image.open(input_file) as image:
+      # Open shape image
+      width, height = image.size
+      # Convert shape image to OpenTTD 8 bit
+      image_shape = openttd_palettise(image)
+      # Apply colouring specified by pixel above each column of sprites
+      # Loop through _second_ row of pixels (multiplied by scale)
+      image_colorised = Image.new("P", (image_shape.size))
+      image_colorised.paste(image_shape, (0,0))
+      image_colorised.putpalette(image_shape.getpalette())
+      x = 0
+      while x < width - scale:
+        # Find start of a sprite
+        while x < width - scale and image_shape.getpixel((x, 2 * scale)) in index_frame:
+          x += 1
+        # Find sprite width
+        w = 0
+        while x + w < width - scale and image_shape.getpixel((x + w, 2 * scale)) not in index_frame:
+          w += 1
         if verbose == True:
-          print("  Source indices: "+",".join(map(str, index_remaps)))
-          print("  Target indices: "+",".join(map(str, index_target)))
-        # Apply new colours
-        current_r = palette_r.copy()
-        current_g = palette_g.copy()
-        current_b = palette_b.copy()
-        for i in range(len(index_remaps)):
-          current_r[index_remaps[i]] = palette_r[index_target[i]]
-          current_g[index_remaps[i]] = palette_g[index_target[i]]
-          current_b[index_remaps[i]] = palette_b[index_target[i]]
-        # Override with snow colors, if in snow mode
-        if snow == True:
-          #Replace horizontal and roofs with snow colours
-          for i in range(len(index_remaps_snow)):
-            if index_remaps_snow[i] != -1:
-              current_r[index_remaps[i]] = palette_r[index_remaps_snow[i]]
-              current_g[index_remaps[i]] = palette_g[index_remaps_snow[i]]
-              current_b[index_remaps[i]] = palette_b[index_remaps_snow[i]]
-        current_palimg = palette_image(current_r, current_g, current_b)
-        current_spriteset = image_colorised.crop((x, 0, x + w, height))
-        current_spriteset.putpalette(current_palimg.getpalette())
-        current_spriteset = openttd_palettise(current_spriteset)
-        image_colorised.paste(current_spriteset, (x, 0))
-        # Increment x position by width for the next sprite set
-        x += w
-    # Make copy of the image for shading
-    image_32bit = Image.new("RGB", (image_colorised.size))
-    image_32bit.paste(image_colorised, (0, 0))
-    # Save a copy of the unshaded image, with the pixel art overlay if it exists
-    normal_overlay_name = input_file[:-len(suffix)]+"_overlaynormal.png"
-    if os.path.isfile(normal_overlay_name):
-      image_colorised = overlay_texture(image_32bit, image_shape, Image.open(normal_overlay_name), range(256), 255/255, "normal")
-    image_colorised.save(os.path.join("pygen", input_file[:-len(suffix)]+"_"+namesuffix+"palmask.png"), "PNG")
-    # Shade using standard rules
-    if scale == 1:
-      # Wall and roof noise
-      if climate != "toyland":
-        image_32bit = add_value_noise(image_32bit, image_shape, index_base + index_roofs + index_walls, 12)
-      # Roof shading
-      image_32bit = inout_blur(image_32bit, image_shape, index_roofs, 0, 0, 2, (0, 0, 0), 191/255, "overlay", "inset")
-      # Wall shading
-      #image_32bit = inout_blur(image_32bit, image_shape, index_walls, 1, -1, 1.5, (0, 0, 0), 159/255, "overlay", "inset")
-      #image_32bit = inout_blur(image_32bit, image_shape, index_walls, -1, 1, 1.5, (255, 255, 255), 223/255, "overlay", "inset")
-      image_32bit = inout_blur(image_32bit, image_shape, index_walls, -1, 1, 1.5, (0, 0, 0), 159/255, "overlay", "inset")
-      image_32bit = inout_blur(image_32bit, image_shape, index_walls, 1, -1, 1.5, (255, 255, 255), 223/255, "overlay", "inset")
-    elif scale == 4:
-      # Wall and roof noise
-      if climate != "toyland":
-        image_32bit = add_value_noise(image_32bit, image_shape, index_base + index_roofs + index_walls, 12)
-      # Wall and roof textures, brick texture only on primary wall style
-      if climate != "toyland":
-        texture_opacity = 191
-        image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/bricks_l.png"), [index_walls[0]], texture_opacity/255, "overlay")
-        image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/bricks_r.png"), [index_walls[1]], texture_opacity/255, "overlay")
-      # Roof shading
-      image_32bit = inout_blur(image_32bit, image_shape, index_roofs, 0, 0, 2, (0, 0, 0), 191/255, "overlay", "inset")
-      # Wall shading
-      image_32bit = inout_blur(image_32bit, image_shape, index_walls, 2, -2, 2, (0, 0, 0), 159/255, "overlay", "inset")
-      image_32bit = inout_blur(image_32bit, image_shape, index_walls, -2, 2, 2, (255, 255, 255), 223/255, "overlay", "inset")
-      # Wood/ironwork shading
-      image_32bit = inout_blur(image_32bit, image_shape, index_woodwork, -1, 1, 1, (0, 0, 0), 127/255, "normal", "outset")
-      image_32bit = inout_blur(image_32bit, image_shape, index_ironwork, -1, 1, 1, (0, 0, 0), 127/255, "normal", "outset")
-    texture_opacity = 255
-    image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/window_l.png"), [index_windows[0]], texture_opacity/255, "overlay")
-    image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/window_r.png"), [index_windows[1]], texture_opacity/255, "overlay")
-    image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/window_t.png"), [index_windows[2]], texture_opacity/255, "overlay")
-    # Add manual overlays, if the files exist
-    # Shading/overlay mode overlay
-    shading_overlay_name = input_file[:-len(suffix)]+"_overlayshading.png"
-    if os.path.isfile(shading_overlay_name):
-      image_32bit = overlay_texture(image_32bit, image_shape, Image.open(shading_overlay_name), range(256), 128/255, "overlay")
-    # Pixel art/normal mode overlay
-    normal_overlay_name = input_file[:-len(suffix)]+"_overlaynormal.png"
-    if os.path.isfile(normal_overlay_name):
-      image_32bit = overlay_texture(image_32bit, image_shape, Image.open(normal_overlay_name), range(256), 255/255, "normal")
-    # Additional toyland pixel art/normal mode overlay
-    toyland_overlay_name = input_file[:-len(suffix)]+"_toylandoverlaynormal.png"
-    if os.path.isfile(toyland_overlay_name) and climate == "toyland":
-      image_32bit = overlay_texture(image_32bit, image_shape, Image.open(toyland_overlay_name), range(256), 255/255, "normal")
-    # Save shaded image
-    image_32bit.save(os.path.join("pygen", input_file[:-len(suffix)]+"_"+namesuffix+"32bpp.png"), "PNG")
+          print(" Sprite column, x: %d, w: %d" % (x, w))
+        # Lookup color remapping
+        if w > len(index_remaps):
+          # Only process if sprite column is wide enough to have all remapping info in row 1
+          index_target = []
+          for i in range(len(index_remaps)):
+            index_target.append(image_shape.getpixel((x + i * scale, 0 * scale)))
+          if verbose == True:
+            print("  Source indices: "+",".join(map(str, index_remaps)))
+            print("  Target indices: "+",".join(map(str, index_target)))
+          # Apply new colours
+          current_r = palette_r.copy()
+          current_g = palette_g.copy()
+          current_b = palette_b.copy()
+          for i in range(len(index_remaps)):
+            current_r[index_remaps[i]] = palette_r[index_target[i]]
+            current_g[index_remaps[i]] = palette_g[index_target[i]]
+            current_b[index_remaps[i]] = palette_b[index_target[i]]
+          # Override with snow colors, if in snow mode
+          if snow == True:
+            #Replace horizontal and roofs with snow colours
+            for i in range(len(index_remaps_snow)):
+              if index_remaps_snow[i] != -1:
+                current_r[index_remaps[i]] = palette_r[index_remaps_snow[i]]
+                current_g[index_remaps[i]] = palette_g[index_remaps_snow[i]]
+                current_b[index_remaps[i]] = palette_b[index_remaps_snow[i]]
+          current_palimg = palette_image(current_r, current_g, current_b)
+          current_spriteset = image_colorised.crop((x, 0, x + w, height))
+          current_spriteset.putpalette(current_palimg.getpalette())
+          current_spriteset = openttd_palettise(current_spriteset)
+          image_colorised.paste(current_spriteset, (x, 0))
+          # Increment x position by width for the next sprite set
+          x += w
+      # Make copy of the image for shading
+      image_32bit = Image.new("RGB", (image_colorised.size))
+      image_32bit.paste(image_colorised, (0, 0))
+      # Save a copy of the unshaded image, with the pixel art overlay if it exists
+      normal_overlay_name = input_file[:-len(suffix)]+"_overlaynormal.png"
+      if os.path.isfile(normal_overlay_name):
+        image_colorised = overlay_texture(image_32bit, image_shape, Image.open(normal_overlay_name), range(256), 255/255, "normal")
+      image_colorised.save(image_unshaded_name, "PNG")
+      # Shade using standard rules
+      if scale == 1:
+        # Wall and roof noise
+        if climate != "toyland":
+          image_32bit = add_value_noise(image_32bit, image_shape, index_base + index_roofs + index_walls, 12)
+        # Roof shading
+        image_32bit = inout_blur(image_32bit, image_shape, index_roofs, 0, 0, 2, (0, 0, 0), 191/255, "overlay", "inset")
+        # Wall shading
+        #image_32bit = inout_blur(image_32bit, image_shape, index_walls, 1, -1, 1.5, (0, 0, 0), 159/255, "overlay", "inset")
+        #image_32bit = inout_blur(image_32bit, image_shape, index_walls, -1, 1, 1.5, (255, 255, 255), 223/255, "overlay", "inset")
+        image_32bit = inout_blur(image_32bit, image_shape, index_walls, -1, 1, 1.5, (0, 0, 0), 159/255, "overlay", "inset")
+        image_32bit = inout_blur(image_32bit, image_shape, index_walls, 1, -1, 1.5, (255, 255, 255), 223/255, "overlay", "inset")
+      elif scale == 4:
+        # Wall and roof noise
+        if climate != "toyland":
+          image_32bit = add_value_noise(image_32bit, image_shape, index_base + index_roofs + index_walls, 12)
+        # Wall and roof textures, brick texture only on primary wall style
+        if climate != "toyland":
+          texture_opacity = 191
+          image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/bricks_l.png"), [index_walls[0]], texture_opacity/255, "overlay")
+          image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/bricks_r.png"), [index_walls[1]], texture_opacity/255, "overlay")
+        # Roof shading
+        image_32bit = inout_blur(image_32bit, image_shape, index_roofs, 0, 0, 2, (0, 0, 0), 191/255, "overlay", "inset")
+        # Wall shading
+        image_32bit = inout_blur(image_32bit, image_shape, index_walls, 2, -2, 2, (0, 0, 0), 159/255, "overlay", "inset")
+        image_32bit = inout_blur(image_32bit, image_shape, index_walls, -2, 2, 2, (255, 255, 255), 223/255, "overlay", "inset")
+        # Wood/ironwork shading
+        image_32bit = inout_blur(image_32bit, image_shape, index_woodwork, -1, 1, 1, (0, 0, 0), 127/255, "normal", "outset")
+        image_32bit = inout_blur(image_32bit, image_shape, index_ironwork, -1, 1, 1, (0, 0, 0), 127/255, "normal", "outset")
+      texture_opacity = 255
+      image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/window_l.png"), [index_windows[0]], texture_opacity/255, "overlay")
+      image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/window_r.png"), [index_windows[1]], texture_opacity/255, "overlay")
+      image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/window_t.png"), [index_windows[2]], texture_opacity/255, "overlay")
+      # Add manual overlays, if the files exist
+      # Shading/overlay mode overlay
+      if os.path.isfile(shading_overlay_name):
+        image_32bit = overlay_texture(image_32bit, image_shape, Image.open(shading_overlay_name), range(256), 128/255, "overlay")
+      # Pixel art/normal mode overlay
+      if os.path.isfile(normal_overlay_name):
+        image_32bit = overlay_texture(image_32bit, image_shape, Image.open(normal_overlay_name), range(256), 255/255, "normal")
+      # Additional toyland pixel art/normal mode overlay
+      if os.path.isfile(toyland_overlay_name) and climate == "toyland":
+        image_32bit = overlay_texture(image_32bit, image_shape, Image.open(toyland_overlay_name), range(256), 255/255, "normal")
+      # Save shaded image
+      image_32bit.save(image_shaded_name, "PNG")

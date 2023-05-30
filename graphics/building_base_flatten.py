@@ -6,7 +6,7 @@
 from PIL import Image
 import glob, os, sys
 
-from tools import openttd_palettise
+from tools import openttd_palettise, check_update_needed
 
 if os.path.isdir("pygen") == False: os.mkdir("pygen")
 
@@ -29,11 +29,6 @@ def palette_image(r, g, b):
   return palimage
 palette = palette_image(palette_r, palette_g, palette_b)
 
-building_pal = openttd_palettise(Image.open(os.path.join("pygen", name+"_palmask.png")))
-ground_pal = openttd_palettise(Image.open(os.path.join("pygen", name+"_base_palmask.png")))
-building_32bpp = Image.open(os.path.join("pygen", name+"_32bpp.png"))
-ground_32bpp = Image.open(os.path.join("pygen", name+"_base_32bpp.png"))
-
 def simple_overlay_texture(image1, image2, image2_pal):
   # Make sharp mask from indices (white = in indices)
   v = [255] * 255
@@ -45,8 +40,20 @@ def simple_overlay_texture(image1, image2, image2_pal):
   image1.paste(image2, (0, 0), mask)
   return image1
 
-out_32bpp = simple_overlay_texture(ground_32bpp, building_32bpp, building_pal) 
-out_pal = simple_overlay_texture(ground_pal, building_pal, building_pal) 
+building_pal_name = os.path.join("pygen", name+"_palmask.png")
+ground_pal_name = os.path.join("pygen", name+"_base_palmask.png")
+building_32bpp_name = os.path.join("pygen", name+"_32bpp.png")
+ground_32bpp_name = os.path.join("pygen", name+"_base_32bpp.png")
+outname = os.path.join("pygen", name+"_combo_32bpp.png")
 
-out_32bpp.save(os.path.join("pygen", name+"_combo_32bpp.png"))
-out_pal.save(os.path.join("pygen", name+"_combo_palmask.png"))
+if check_update_needed([building_pal_name, ground_pal_name, building_32bpp_name, ground_32bpp_name], outname):
+  building_pal = openttd_palettise(Image.open(building_pal_name))
+  ground_pal = openttd_palettise(Image.open(ground_pal_name))
+  building_32bpp = Image.open(building_32bpp_name)
+  ground_32bpp = Image.open(ground_32bpp_name)
+
+  out_32bpp = simple_overlay_texture(ground_32bpp, building_32bpp, building_pal) 
+  out_pal = simple_overlay_texture(ground_pal, building_pal, building_pal) 
+
+  out_32bpp.save(outname)
+  out_pal.save(os.path.join("pygen", name+"_combo_palmask.png"))
