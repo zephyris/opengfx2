@@ -14,4 +14,4 @@ Requires a system which can run `bash` shell scripts, `python3` with `PIL`, `ble
 
 Files used by `python` are `.png` files, but those may be derived from other sources. Raw raw sprites variously drawn\generated in Paint.NET, Aseprite, Blender and more.
 
-Currently, output are "newgrf" `.grf` files which can be loaded to replace sprites. Ultimately (hopefully) will generate base graphics set `.grf` files.
+Generates base graphics set `.grf` files. May, in the future, make newgrf `.grf` files which give basic extended functionality.
