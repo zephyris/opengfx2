@@ -75,7 +75,7 @@ template template_tree_temperate_set(z) {
 }
 
 base_graphics spr1576(1576, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_set(1) }
-//alternative_sprites(spr1576, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/temperate_8bpp.png") { template_tree_temperate_set(4) }
+alternative_sprites(spr1576, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/temperate_8bpp.png") { template_tree_temperate_set(4) }
 
 //Arctic trees
 /*

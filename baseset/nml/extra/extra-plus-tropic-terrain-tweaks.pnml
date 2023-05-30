@@ -1,0 +1,4 @@
+// Tropical-specific tweaks to match terriain
+// Airport ground tiles
+replace spr2634_tropical(2634, "../graphics/infrastructure/64/pygen/airport_modern_tropical_grass_8bpp.png") { template_airport_modern_groundtiles(0, 0, 1) }
+replace spr2669_tropical(2669, "../graphics/infrastructure/64/pygen/airport_old_tropical_grass_8bpp.png") { template_airport_old_groundtiles(0, 0, 1) }

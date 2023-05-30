@@ -31,11 +31,13 @@
 if (climate == CLIMATE_ARCTIC) {
 #include "nml/extra/extra-plus-arctic-rail-vehicles.pnml"
 #include "nml/extra/extra-plus-arctic-road-vehicles.pnml"
+#include "nml/extra/extra-plus-arctic-terrain-tweaks.pnml"
 }
 
 if (climate == CLIMATE_TROPICAL) {
 #include "nml/extra/extra-plus-tropic-rail-vehicles.pnml"
 #include "nml/extra/extra-plus-tropic-road-vehicles.pnml"
+#include "nml/extra/extra-plus-tropic-terrain-tweaks.pnml"
 }
 
 if (climate == CLIMATE_TOYLAND) {
