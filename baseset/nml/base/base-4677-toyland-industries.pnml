@@ -1,14 +1,14 @@
 //4677-4685 sweet factory
 base_graphics spr4677(4677, "../graphics/industries/toyland/64/pygen/sweet_factory_tiles_8bpp.png") {
 	template_house_1x1(0, 316, 1, 157)
-	template_house_1x1(130, 316, 1, 157)
 	template_house_1x1(65, 316, 1, 157)
+	template_house_1x1(130, 316, 1, 157)
 	template_house_1x1(0, 158, 1, 157)
-	template_house_1x1(130, 158, 1, 157)
 	template_house_1x1(65, 158, 1, 157)
+	template_house_1x1(130, 158, 1, 157)
 	template_house_1x1(0, 0, 1, 157)
+	template_house_1x1(65, 0, 1, 157)
 	template_house_1x1(130, 0, 1, 157)
-	template_house_1x1(64, 0, 1, 157)
 }
 
 //4686-4690 battery farm
@@ -50,22 +50,22 @@ base_graphics spr4699(4699, "../graphics/industries/toyland/64/pygen/toy_shop_ti
 	template_house_1x1(65, 158, 1, 157)
 	template_house_1x1(0, 0, 1, 157)
 	template_house_1x1(130, 0, 1, 157)
-	template_house_1x1(64, 0, 1, 157)
+	template_house_1x1(65, 0, 1, 157)
 }
 
 //4708-4720 toy factory
 base_graphics spr4708(4708, "../graphics/industries/toyland/64/pygen/toy_factory_constr_tiles_8bpp.png") {
-	template_house_1x1_addoffs(0, 0, 1, 162, -10, 8)
-	template_house_1x1_addoffs(65, 0, 1, 162, -10, 8)
-	template_house_1x1_addoffs(130, 0, 1, 162, -10, 8)
-	template_house_1x1_addoffs(195, 0, 1, 162, -10, 8)
+	template_house_1x1_addoffs(0, 0, 1, 162, -10, 9)
+	template_house_1x1_addoffs(65, 0, 1, 162, -10, 9)
+	template_house_1x1_addoffs(130, 0, 1, 162, -10, 9)
+	template_house_1x1_addoffs(195, 0, 1, 162, -10, 9)
 }
 base_graphics spr4712(4712, "../graphics/industries/toyland/64/pygen/toy_factory_tiles_8bpp.png") {
-	template_house_1x1_addoffs(0, 0, 1, 162, -10, 8)
-	template_house_1x1_addoffs_nocrop(65, 0, 1, 162, -10, 19)
+	template_house_1x1_addoffs(0, 0, 1, 162, -10, 9)
+	template_house_1x1_addoffs_nocrop(65, 0, 1, 162, -10, 20)
 	template_empty()
-	template_house_1x1_addoffs(130, 0, 1, 162, -10, 8)
-	template_house_1x1_addoffs(195, 0, 1, 162, -10, 8)
+	template_house_1x1_addoffs(130, 0, 1, 162, -10, 9)
+	template_house_1x1_addoffs(195, 0, 1, 162, -10, 9)
 	template_general(261, 1, 64, 162, 0, -37, 1)
 }
 // Animation sprites. All sprites are drawn as childsprites of 4713 with the specified offsets.
@@ -111,8 +111,8 @@ base_graphics spr4737(4737, "../graphics/industries/toyland/64/pygen/fizzy_drink
 //4743-4762 bubble generator
 base_graphics spr4743(4743, "../graphics/industries/toyland/64/pygen/bubble_generator_tiles_8bpp.png") {
 	template_empty()
-	template_house_1x1_addoffs(0, 0, 1, 137, 17, 16)
-	template_house_1x1_addoffs(65, 0, 1, 137, -14, 0)
+	template_house_1x1_addoffs(0, 0, 1, 137, 17, 17)
+	template_house_1x1_addoffs(65, 0, 1, 137, -14, 1)
 	template_general(131, 1, 64, 137, -24, -109, 1)
 }
 base_graphics spr4747(4747, "../graphics/industries/toyland/64/bubble_generator_plunger_8bpp.png") {
@@ -141,12 +141,12 @@ base_graphics spr4748(4748, "../graphics/effects/64/industries_bubblegenerator_b
 //4763-4767 toffee quarry
 base_graphics spr4763(4763, "../graphics/industries/toyland/64/pygen/toffee_quarry_tiles_8bpp.png") {
 	template_house_1x1(0, 0, 1, 128)
-	template_house_1x1_addoffs(195, 0, 1, 128, -32, -13)
+	template_house_1x1_addoffs(195, 0, 1, 128, -32, -12)
 	template_house_1x1(130, 0, 1, 128)
-	template_house_1x1_addoffs(65, 0, 1, 128, 16, -23)
+	template_house_1x1_addoffs(65, 0, 1, 128, 16, -22)
 }
 base_graphics spr4767(4767, "../graphics/industries/toyland/64/toffee_quarry_cutter_8bpp.png") {
-	template_general(1, 1, 30, 30, 0, 0, 1)
+	template_general(1, 1, 30, 30, -31, -38, 1)
 }
 
 
@@ -178,7 +178,7 @@ base_graphics spr4780(4780, "../graphics/industries/toyland/64/sugarmine_pile_8b
 	template_animation_frame(49, 48, 0, -20,  3, 1)
 	template_animation_frame(49, 48, 0, -20,  4, 1)
 }
-base_graphics spr4784(4784, "../graphics/effects/64/industries_sugarmine_sugar_8bpp.png") {
+base_graphics spr4784(4784, "../graphics/effects/64/industries_sugarmine_sugar_8bpp.png") { //BUG?: Needs to be NOCROP?
 	template_animation_frame(48, 56, 0, -15,  0, 1)
 	template_animation_frame(48, 56, 0, -15,  1, 1)
 	template_animation_frame(48, 56, 0, -15,  2, 1)

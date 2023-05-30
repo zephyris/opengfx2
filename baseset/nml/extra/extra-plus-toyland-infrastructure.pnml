@@ -1,1 +1,4 @@
 // Currently unused, space for additional toyland-specific infrastructure and infrastructure UI
+
+//2022 general industry ground tile (used for sweet factory, toy shop)
+replace spr2022_toyland(2022, "../graphics/terrain/64/toyland_towntiles_8bpp.png") { template_flattile_single(240, 0, 1) }

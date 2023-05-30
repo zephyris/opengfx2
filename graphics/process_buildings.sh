@@ -69,8 +69,7 @@ fi
 cp 2x1_boot_32bpp.png pygen/
 mask_tiles.py pygen/2x1_boot 2x1_boot_tilemask.png 1
 building_shapeproc.py 1 toyland
-building_base_flatten.py hqs_toyland 1
-mask_tiles.py pygen/hqs_toyland_combo hqs_tilemask.png 1
+mask_tiles.py pygen/hqs_toyland hqs_tilemask.png 1
 custom_dither.py
 cd pygen
 custom_dither.py

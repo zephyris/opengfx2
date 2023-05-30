@@ -20,10 +20,10 @@ base_graphics spr2421(2421, "../graphics/stations/general/64/pygen/tunnels_road_
 
 //2429-2432 tunnel icons
 base_graphics spr2429(2429, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 9, 1) // construction toolbar: road tunnel
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 11, 1) // construction toolbar: rail tunnel
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 12, 1) // construction toolbar: monorail tunnel
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 13, 1) // construction toolbar: maglev tunnel
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 14, 1) // construction toolbar: road tunnel
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 9, 1) // construction toolbar: rail tunnel
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 11, 1) // construction toolbar: monorail tunnel
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 12, 1) // construction toolbar: maglev tunnel
 }
 
 //2433-2439 tunnel cursors

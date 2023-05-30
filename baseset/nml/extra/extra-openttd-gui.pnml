@@ -79,7 +79,7 @@ replacenew ottd_gui74(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 74) { 
 replacenew ottd_gui75(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 75) { template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 4, 1) }
 
 // OTTD_GUI 76-77 rail waypoint icon and cursor
-replacenew ottd_gui76(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 76) { template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 6, 1) }
+replacenew ottd_gui76(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 76) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 8, 1) }
 replacenew ottd_gui77(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 77) { template_cursor_matrix(9, 8, 1) }
 
 // OTTD_GUI 78-81 rail waypoint (real, not GUI!)

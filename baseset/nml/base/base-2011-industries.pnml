@@ -149,52 +149,52 @@ base_graphics spr2117(2117, "../graphics/industries/temperate/64/pygen/farm_tile
 //2118-2145 steel mill
 //TODO: Adjust for 'true' transparency?
 base_graphics spr2118(2118, "../graphics/industries/temperate/64/pygen/steelmill_combo_tiles_8bpp.png") {
-	template_house_2x2_7sprite(0, 0, 1, 81)
-	template_house_1x2_4sprite(455, 0, 1, 81)
-	template_house_2x2_7sprite(0, 81, 1, 81)
-	template_house_1x2_4sprite(455, 81, 1, 81)
-	template_house_1x1(  0, 162, 1, 81)
-	template_house_1x1(130, 162, 1, 81)
-	template_house_1x1(260, 162, 1, 81)
-	template_house_1x1(390, 162, 1, 81)
-	template_house_1x1(455, 162, 1, 81)
-	template_house_1x1(585, 162, 1, 81)
+	template_house_2x2_7sprite(0, 0, 1, 80)
+	template_house_1x2_4sprite(455, 0, 1, 80)
+	template_house_2x2_7sprite(0, 81, 1, 80)
+	template_house_1x2_4sprite(455, 81, 1, 80)
+	template_house_1x1(  0, 162, 1, 80)
+	template_house_1x1(130, 162, 1, 80)
+	template_house_1x1(260, 162, 1, 80)
+	template_house_1x1(390, 162, 1, 80)
+	template_house_1x1(455, 162, 1, 80)
+	template_house_1x1(585, 162, 1, 80)
 }
 
 //2146-2160 factory // Recolour: RANDOM
 //TODO: Fix construction stages? Adjust for 'true' transparency?
 base_graphics spr2146(2146, "../graphics/industries/temperate/64/pygen/factory_combo_tiles_8bpp.png") {
-	template_house_1x1(  0,  0, 1, 101)
-	template_house_1x1(130,  0, 1, 101)
-	template_house_1x1(260,  0, 1, 101)
-	template_house_1x1(390,  0, 1, 101)
-	template_house_1x1_addoffs( 65, 0, 1, 101, 0, -16)
-	template_house_1x1_addoffs(195, 0, 1, 101, 0, -16)
-	template_house_1x1_addoffs(325, 0, 1, 101, 0, -16)
-	template_house_1x1(  0,202, 1, 101)
-	template_house_1x1(130,202, 1, 101)
-	template_house_1x1(260,202, 1, 101)
-	template_house_1x1(390,202, 1, 101)
-	template_house_1x1(  0,101, 1, 101)
-	template_house_1x1(130,101, 1, 101)
-	template_house_1x1(260,101, 1, 101)
-	template_house_1x1(390,101, 1, 101)
+	template_house_1x1(  0,  0, 1, 100)
+	template_house_1x1(130,  0, 1, 100)
+	template_house_1x1(260,  0, 1, 100)
+	template_house_1x1(390,  0, 1, 100)
+	template_house_1x1_addoffs( 65, 0, 1, 100, 0, -16)
+	template_house_1x1_addoffs(195, 0, 1, 100, 0, -16)
+	template_house_1x1_addoffs(325, 0, 1, 100, 0, -16)
+	template_house_1x1(  0,202, 1, 100)
+	template_house_1x1(130,202, 1, 100)
+	template_house_1x1(260,202, 1, 100)
+	template_house_1x1(390,202, 1, 100)
+	template_house_1x1(  0,101, 1, 100)
+	template_house_1x1(130,101, 1, 100)
+	template_house_1x1(260,101, 1, 100)
+	template_house_1x1(390,101, 1, 100)
 }
 
 //2161-2172 printworks
 base_graphics spr2161(2161, "../graphics/industries/arctic/64/pygen/printingworks_combo_tiles_8bpp.png") {
-	template_house_1x1(  0,202, 1, 101)
-	template_house_1x1( 65,202, 1, 101)
-	template_house_1x1(130,202, 1, 101)
-	template_house_1x1(195,202, 1, 101)
-	template_house_1x1(  0,101, 1, 101)
-	template_house_1x1( 65,101, 1, 101)
-	template_house_1x1(130,101, 1, 101)
-	template_house_1x1(195,101, 1, 101)
-	template_house_1x1(  0,  0, 1, 101)
-	template_house_1x1( 65,  0, 1, 101)
-	template_house_1x1(130,  0, 1, 101)
-	template_house_1x1(195,  0, 1, 101)
+	template_house_1x1(  0,202, 1, 100)
+	template_house_1x1( 65,202, 1, 100)
+	template_house_1x1(130,202, 1, 100)
+	template_house_1x1(195,202, 1, 100)
+	template_house_1x1(  0,101, 1, 100)
+	template_house_1x1( 65,101, 1, 100)
+	template_house_1x1(130,101, 1, 100)
+	template_house_1x1(195,101, 1, 100)
+	template_house_1x1(  0,  0, 1, 100)
+	template_house_1x1( 65,  0, 1, 100)
+	template_house_1x1(130,  0, 1, 100)
+	template_house_1x1(195,  0, 1, 100)
 }
 
 //2173-2179 oil wells
@@ -220,7 +220,7 @@ base_graphics spr2182(2182, "../graphics/industries/temperate/64/pygen/bank_base
 	template_house_1x1( 65, 0, 1, 80)
 }
 
-//2184-2187 other bank
+//2184-2187 arctic/tropical bank
 base_graphics spr2184(2184, "../graphics/industries/arctic/64/pygen/bank_base_tiles_8bpp.png") {
 	template_house_1x1(  0, 0, 1, 80)
 	template_house_1x1( 65, 0, 1, 80)
@@ -232,18 +232,18 @@ base_graphics spr2186(2186, "../graphics/industries/arctic/64/pygen/bank_tiles_8
 
 //2188-2199 food processing plant
 base_graphics spr2188(2188, "../graphics/industries/arctic/64/pygen/foodprocessingplant_combo_8bpp.png") {
-	template_house_1x1(  0, 150, 1, 75)
-	template_house_1x1(  0,  75, 1, 75)
-	template_house_1x1(  0,   0, 1, 75)
-	template_house_1x1( 65, 150, 1, 75)
-	template_house_1x1( 65,  75, 1, 75)
-	template_house_1x1( 65,   0, 1, 75)
-	template_house_1x1(130, 150, 1, 75)
-	template_house_1x1(130,  75, 1, 75)
-	template_house_1x1(130,   0, 1, 75)
-	template_house_1x1(195, 150, 1, 75)
-	template_house_1x1(195,  75, 1, 75)
-	template_house_1x1(195,   0, 1, 75)
+	template_house_1x1(  0, 150, 1, 74)
+	template_house_1x1(  0,  75, 1, 74)
+	template_house_1x1(  0,   0, 1, 74)
+	template_house_1x1( 65, 150, 1, 74)
+	template_house_1x1( 65,  75, 1, 74)
+	template_house_1x1( 65,   0, 1, 74)
+	template_house_1x1(130, 150, 1, 74)
+	template_house_1x1(130,  75, 1, 74)
+	template_house_1x1(130,   0, 1, 74)
+	template_house_1x1(195, 150, 1, 74)
+	template_house_1x1(195,  75, 1, 74)
+	template_house_1x1(195,   0, 1, 74)
 }
 
 //2200-2214 paper mill

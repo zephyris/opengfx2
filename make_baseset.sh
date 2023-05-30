@@ -43,8 +43,7 @@ tar -cf opengfx2.tar *.grf *.obg
 
 if [ ! -z "$1" ]; then
   echo "Copying to install directory"
-  cp *.grf "$1"
-  cp *.obg "$1"
+  cp opengfx2.tar "$1"
 fi
 
 cd ..

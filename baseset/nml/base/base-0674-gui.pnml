@@ -125,7 +125,7 @@ base_graphics spr747( 747, "../graphics/icons/1/company_colour_swatches_8bpp.png
 }
 //748- toolbar icons
 base_graphics spr748( 748, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 8, 1) // construction toolbar: build depot
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 8, 1) // construction toolbar: build ship depot
     template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 7, 1) // construction toolbar: build bus stop
     template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 7, 1) // construction toolbar: build lorry stop
     template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 1, 1) // main toolbar: options

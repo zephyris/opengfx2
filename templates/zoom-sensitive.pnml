@@ -1,3 +1,4 @@
+// Template for 1x1 transparent sprite, essentially empty
 template template_empty() {
 	[0, 0, 1, 1, 0, 0, "../graphics/icons/1/empty_8bpp.png"]
 }
@@ -9,6 +10,8 @@ template template_empty() {
 // ox: X alignment offset
 // oy: Y alignment offset
 // z: Zoom factor
+//ox: Additional X alignment offset
+//oy: Additional Y alignment offset
 
 // Template for simple zoom-sensitive sprite
 template template_general(x, y, w, h, ox, oy, z) {
@@ -17,28 +20,29 @@ template template_general(x, y, w, h, ox, oy, z) {
 
 // Templates for handling building sprites
 
-//Template for standard house sprite
-template template_house_1x1(x, y, z, h) {
-	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2)]
-}
-template template_house_1x1_anim(x, y, z, h) {
-	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2), ANIM]
-}
-template template_house_1x1_nocrop(x, y, z, h) {
-	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z, 32*z-h*z-int((z-1)/2), NOCROP]
-}
-
 //Template for house sprite with additional offset
-//ox: Additional X alignment offset
-//oy: Additional Y alignment offset
+template template_house_1x1_addoffs_master(x, y, z, h, ox, oy, flags) {
+	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-z+1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2)-1, flags]
+}
 template template_house_1x1_addoffs(x, y, z, h, ox, oy) {
-	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2)]
+	template_house_1x1_addoffs_master(x, y, z, h, ox, oy, 0)
 }
 template template_house_1x1_addoffs_anim(x, y, z, h, ox, oy) {
-	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2), ANIM]
+	template_house_1x1_addoffs_master(x, y, z, h, ox, oy, ANIM)
 }
 template template_house_1x1_addoffs_nocrop(x, y, z, h, ox, oy) {
-	[	 1*z+x*z, 1*z+y*z, 64*z, h*z-1, -31*z+ox*z, 32*z-h*z+oy*z-int((z-1)/2), NOCROP]
+	template_house_1x1_addoffs_master(x, y, z, h, ox, oy, NOCROP)
+}
+
+//Template for standard house sprite
+template template_house_1x1(x, y, z, h) {
+	template_house_1x1_addoffs(x, y, z, h, 0, 0)
+}
+template template_house_1x1_anim(x, y, z, h) {
+	template_house_1x1_addoffs_anim(x, y, z, h, 0, 0)
+}
+template template_house_1x1_nocrop(x, y, z, h) {
+	template_house_1x1_addoffs_nocrop(x, y, z, h, 0, 0)
 }
 
 //TODO: Fix tile masking and check behaviour at higher zoom levels
@@ -410,44 +414,44 @@ template template_rail_depot(x, y, z) {
 
 // Infrastructure buildings: Rail stations
 template template_rail_station(x, y, z) {
-	template_house_1x1_addoffs(  0,   0, z, 64,  22, -12)
-	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0, 130, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0, 195, z, 64, -22, -12)
-	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -1)
-	template_house_1x1_addoffs( 65, 130, z, 64,   0,  -1)
-	template_house_1x1_addoffs(130,   0, z, 64,  22, -12)
-	template_house_1x1_addoffs(130,  65, z, 64,   0,  -1)
-	template_house_1x1_addoffs(130, 130, z, 64,   0,  -1)
-	template_house_1x1_addoffs(130, 195, z, 64, -22, -12)
-	template_house_1x1_addoffs(195,  65, z, 64,   0,  15)
-	template_house_1x1_addoffs(195, 130, z, 64,   0,  15)
-	template_house_1x1_addoffs(195, 195, z, 64,   0,  15)
-	template_house_1x1_addoffs(195,   0, z, 64,   0,  15)
+	template_house_1x1_addoffs(  0,   0, z, 64,  22, -11)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0, 130, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0, 195, z, 64, -22, -11)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs( 65, 130, z, 64,   0,   0)
+	template_house_1x1_addoffs(130,   0, z, 64,  22, -11)
+	template_house_1x1_addoffs(130,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs(130, 130, z, 64,   0,   0)
+	template_house_1x1_addoffs(130, 195, z, 64, -22, -11)
+	template_house_1x1_addoffs(195,  65, z, 64,   0,  16)
+	template_house_1x1_addoffs(195, 130, z, 64,   0,  16)
+	template_house_1x1_addoffs(195, 195, z, 64,   0,  16)
+	template_house_1x1_addoffs(195,   0, z, 64,   0,  16)
 	[ 261*z+x*z,  66*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
 	[ 261*z+x*z, 131*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
 	[ 261*z+x*z, 196*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
 	[ 261*z+x*z,   1*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
 }
 template template_rail_station_platformsonly(x, y, z) {
-	template_house_1x1_addoffs(  0,   0, z, 64,  22, -12)
-	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0, 130, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0, 195, z, 64, -22, -12)
-	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -1)
-	template_house_1x1_addoffs( 65, 130, z, 64,   0,  -1)
-	template_house_1x1_addoffs(130,   0, z, 64,  22, -12)
-	template_house_1x1_addoffs(130,  65, z, 64,   0,  -1)
-	template_house_1x1_addoffs(130, 130, z, 64,   0,  -1)
-	template_house_1x1_addoffs(130, 195, z, 64, -22, -12)
+	template_house_1x1_addoffs(  0,   0, z, 64,  22, -11)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0, 130, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0, 195, z, 64, -22, -11)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs( 65, 130, z, 64,   0,   0)
+	template_house_1x1_addoffs(130,   0, z, 64,  22, -11)
+	template_house_1x1_addoffs(130,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs(130, 130, z, 64,   0,   0)
+	template_house_1x1_addoffs(130, 195, z, 64, -22, -11)
 }
 
 // Infrastructure buildings: Rail waypoints
 template template_rail_waypoint(x, y, z) {
-	template_house_1x1_addoffs(  0,   0, z, 64,   0,  -1)
-	template_house_1x1_addoffs( 65,   0, z, 64, -22, -12)
-	template_house_1x1_addoffs(  0,  65, z, 64,   0,  -1)
-	template_house_1x1_addoffs( 65,  65, z, 64,  22, -12)
+	template_house_1x1_addoffs(  0,   0, z, 64,   0,   0)
+	template_house_1x1_addoffs( 65,   0, z, 64, -22, -11)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs( 65,  65, z, 64,  22, -11)
 }
 
 //Template: Tunnels
@@ -497,12 +501,12 @@ template template_road_lights_tall(x, y, z) {
 
 // Infrastructure buildings: Road depots
 template template_road_depot(x, y, z) {
-	template_house_1x1_addoffs( 65,   0, z, 64,   0,   0)
-	template_house_1x1_addoffs(  0,   0, z, 64,  30, -15)
-	template_house_1x1_addoffs( 65,  65, z, 64,   0,   0)
-	template_house_1x1_addoffs(  0,  65, z, 64, -30, -15)
-	template_house_1x1_addoffs(  0, 195, z, 64, -30, -15)
-	template_house_1x1_addoffs(  0, 130, z, 64,  30, -15)
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,   1)
+	template_house_1x1_addoffs(  0,   0, z, 64,  30, -14)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,   1)
+	template_house_1x1_addoffs(  0,  65, z, 64, -30, -14)
+	template_house_1x1_addoffs(  0, 195, z, 64, -30, -14)
+	template_house_1x1_addoffs(  0, 130, z, 64,  30, -14)
 }
 
 // Infrastructure: Road reconstruction
@@ -623,12 +627,12 @@ template template_farms_fences(x, y, z) {
 
 //Template infrastructure building: Ship depots
 template template_ship_depot(x, y, z) {
-	template_house_1x1_addoffs(  0,  65, z, 64, -30, -15)
-	template_house_1x1_addoffs(  0,   0, z, 64,  30, -15)
-	template_house_1x1_addoffs(  0, 195, z, 64, -30, -15)
-	template_house_1x1_addoffs(  0, 130, z, 64,  30, -15)
-	template_house_1x1_addoffs( 65,  65, z, 64,   0,   0)
-	template_house_1x1_addoffs( 65,   0, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0,  65, z, 64, -30, -14)
+	template_house_1x1_addoffs(  0,   0, z, 64,  30, -14)
+	template_house_1x1_addoffs(  0, 195, z, 64, -30, -14)
+	template_house_1x1_addoffs(  0, 130, z, 64,  30, -14)
+	template_house_1x1_addoffs( 65,  65, z, 64,   0,   1)
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,   1)
 }
 
 //Template bridges: General ramps
@@ -1036,77 +1040,77 @@ template template_waterfeature_slopes(x, y, z) {
 
 //Template: water docks
 template template_docks(x, y, z) {
-	template_house_1x1_addoffs( 0, 195, z, 64, -7, -5)
-	template_house_1x1_addoffs( 0,   0, z, 64,  7, -5)
-	template_house_1x1_addoffs( 0,  65, z, 64, -7, -5)
-	template_house_1x1_addoffs( 0, 130, z, 64,  7, -5)
-	template_house_1x1_addoffs(65,  65, z, 64, -7, -5)
-	template_house_1x1_addoffs(65,   0, z, 64,  7, -5)
+	template_house_1x1_addoffs( 0, 195, z, 64, -7, -4)
+	template_house_1x1_addoffs( 0,   0, z, 64,  7, -4)
+	template_house_1x1_addoffs( 0,  65, z, 64, -7, -4)
+	template_house_1x1_addoffs( 0, 130, z, 64,  7, -4)
+	template_house_1x1_addoffs(65,  65, z, 64, -7, -4)
+	template_house_1x1_addoffs(65,   0, z, 64,  7, -4)
 }
 
 //Template: water locks
 template template_locks(x, y, z) {
-	template_house_1x1_addoffs( 325, 130, z, 64,  0,  0)
-	template_house_1x1_addoffs( 325,  65, z, 64,  0,  0)
-	template_house_1x1_addoffs( 325, 195, z, 64,  0,  0)
-	template_house_1x1_addoffs( 325,   0, z, 64,  0,  0)
-	template_house_1x1_addoffs( 260, 130, z, 64, 32,-15)
-	template_house_1x1_addoffs( 260,  65, z, 64,-32,-15)
-	template_house_1x1_addoffs( 260, 195, z, 64,-32,-15)
-	template_house_1x1_addoffs( 260,   0, z, 64, 32,-15)
-	template_house_1x1_addoffs( 455, 130, z, 64,  0,  0)
-	template_house_1x1_addoffs( 455,  65, z, 64,  0,  0)
-	template_house_1x1_addoffs( 455, 195, z, 64,  0,  0)
-	template_house_1x1_addoffs( 455,   0, z, 64,  0,  0)
-	template_house_1x1_addoffs( 390, 130, z, 64, 32,-15)
-	template_house_1x1_addoffs( 390,  65, z, 64,-32,-15)
-	template_house_1x1_addoffs( 390, 195, z, 64,-32,-15)
-	template_house_1x1_addoffs( 390,   0, z, 64, 32,-15)
-	template_house_1x1_addoffs( 195, 130, z, 64,  0,  0)
-	template_house_1x1_addoffs( 195,  65, z, 64,  0,  0)
-	template_house_1x1_addoffs( 195, 195, z, 64,  0,  0)
-	template_house_1x1_addoffs( 195,   0, z, 64,  0,  0)
-	template_house_1x1_addoffs( 130, 130, z, 64, 32,-15)
-	template_house_1x1_addoffs( 130,  65, z, 64,-32,-15)
-	template_house_1x1_addoffs( 130, 195, z, 64,-32,-15)
-	template_house_1x1_addoffs( 130,   0, z, 64, 32,-15)
+	template_house_1x1_addoffs( 325, 130, z, 64,  0,  1)
+	template_house_1x1_addoffs( 325,  65, z, 64,  0,  1)
+	template_house_1x1_addoffs( 325, 195, z, 64,  0,  1)
+	template_house_1x1_addoffs( 325,   0, z, 64,  0,  1)
+	template_house_1x1_addoffs( 260, 130, z, 64, 32,-14)
+	template_house_1x1_addoffs( 260,  65, z, 64,-32,-14)
+	template_house_1x1_addoffs( 260, 195, z, 64,-32,-14)
+	template_house_1x1_addoffs( 260,   0, z, 64, 32,-14)
+	template_house_1x1_addoffs( 455, 130, z, 64,  0,  1)
+	template_house_1x1_addoffs( 455,  65, z, 64,  0,  1)
+	template_house_1x1_addoffs( 455, 195, z, 64,  0,  1)
+	template_house_1x1_addoffs( 455,   0, z, 64,  0,  1)
+	template_house_1x1_addoffs( 390, 130, z, 64, 32,-14)
+	template_house_1x1_addoffs( 390,  65, z, 64,-32,-14)
+	template_house_1x1_addoffs( 390, 195, z, 64,-32,-14)
+	template_house_1x1_addoffs( 390,   0, z, 64, 32,-14)
+	template_house_1x1_addoffs( 195, 130, z, 64,  0,  1)
+	template_house_1x1_addoffs( 195,  65, z, 64,  0,  1)
+	template_house_1x1_addoffs( 195, 195, z, 64,  0,  1)
+	template_house_1x1_addoffs( 195,   0, z, 64,  0,  1)
+	template_house_1x1_addoffs( 130, 130, z, 64, 32,-14)
+	template_house_1x1_addoffs( 130,  65, z, 64,-32,-14)
+	template_house_1x1_addoffs( 130, 195, z, 64,-32,-14)
+	template_house_1x1_addoffs( 130,   0, z, 64, 32,-14)
 }
 
 //Template: road stop, base
 template template_lorrystop(x, y, z) {
-	template_house_1x1_addoffs( 65+x,   0+y, z, 64, -30, -16)
-	template_house_1x1_addoffs( 65+x,  65+y, z, 64,  24, -19)
-	template_house_1x1_addoffs( 65+x, 130+y, z, 64,   6,  -4)
-	template_house_1x1_addoffs( 65+x, 195+y, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0+x,   0+y, z, 64,  26, -14)
-	template_house_1x1_addoffs(  0+x,  65+y, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0+x, 130+y, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0+x, 195+y, z, 64, -26, -14)
-	template_house_1x1_addoffs(130+x,   0+y, z, 64,   4,  -3)
-	template_house_1x1_addoffs(130+x,  65+y, z, 64,  -6,  -4)
-	template_house_1x1_addoffs(130+x, 130+y, z, 64, -24, -19)
-	template_house_1x1_addoffs(130+x, 195+y, z, 64,  26, -18)
+	template_house_1x1_addoffs( 65+x,   0+y, z, 64, -30, -15)
+	template_house_1x1_addoffs( 65+x,  65+y, z, 64,  24, -18)
+	template_house_1x1_addoffs( 65+x, 130+y, z, 64,   6,  -3)
+	template_house_1x1_addoffs( 65+x, 195+y, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0+x,   0+y, z, 64,  26, -13)
+	template_house_1x1_addoffs(  0+x,  65+y, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0+x, 130+y, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0+x, 195+y, z, 64, -26, -13)
+	template_house_1x1_addoffs(130+x,   0+y, z, 64,   4,  -2)
+	template_house_1x1_addoffs(130+x,  65+y, z, 64,  -6,  -3)
+	template_house_1x1_addoffs(130+x, 130+y, z, 64, -24, -18)
+	template_house_1x1_addoffs(130+x, 195+y, z, 64,  26, -17)
 }
 template template_busstop(x, y, z) {
-	template_house_1x1_addoffs( 65+x, 130+y, z, 64,  -4,  -3)
-	template_house_1x1_addoffs( 65+x, 195+y, z, 64,  -6,  -4)
-	template_house_1x1_addoffs( 65+x,   0+y, z, 64, -24, -19)
-	template_house_1x1_addoffs( 65+x,  65+y, z, 64,  26, -18)
-	template_house_1x1_addoffs(  0+x,   0+y, z, 64,  26, -14)
-	template_house_1x1_addoffs(  0+x,  65+y, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0+x, 130+y, z, 64,   0,  -1)
-	template_house_1x1_addoffs(  0+x, 195+y, z, 64, -26, -14)
-	template_house_1x1_addoffs(130+x, 130+y, z, 64, -26, -14)
-	template_house_1x1_addoffs(130+x, 195+y, z, 64,  20, -17)
-	template_house_1x1_addoffs(130+x,   0+y, z, 64,   6,  -4)
-	template_house_1x1_addoffs(130+x,  65+y, z, 64,   0,  -1)
+	template_house_1x1_addoffs( 65+x, 130+y, z, 64,  -4,  -2)
+	template_house_1x1_addoffs( 65+x, 195+y, z, 64,  -6,  -3)
+	template_house_1x1_addoffs( 65+x,   0+y, z, 64, -24, -18)
+	template_house_1x1_addoffs( 65+x,  65+y, z, 64,  26, -17)
+	template_house_1x1_addoffs(  0+x,   0+y, z, 64,  26, -13)
+	template_house_1x1_addoffs(  0+x,  65+y, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0+x, 130+y, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0+x, 195+y, z, 64, -26, -13)
+	template_house_1x1_addoffs(130+x, 130+y, z, 64, -26, -13)
+	template_house_1x1_addoffs(130+x, 195+y, z, 64,  20, -16)
+	template_house_1x1_addoffs(130+x,   0+y, z, 64,   6,  -3)
+	template_house_1x1_addoffs(130+x,  65+y, z, 64,   0,   0)
 }
 //Template: road stop, extra through stops
 template template_roadstop_throughstop(x, y, z) {
-	template_house_1x1_addoffs(260+x,  65+y, z, 64,  25, -13)
-	template_house_1x1_addoffs(260+x,   0+y, z, 64,   0,   0)
-	template_house_1x1_addoffs(195+x,  65+y, z, 64,   0,   0)
-	template_house_1x1_addoffs(195+x,   0+y, z, 64, -26, -13)
+	template_house_1x1_addoffs(260+x,  65+y, z, 64,  25, -12)
+	template_house_1x1_addoffs(260+x,   0+y, z, 64,   0,   1)
+	template_house_1x1_addoffs(195+x,  65+y, z, 64,   0,   1)
+	template_house_1x1_addoffs(195+x,   0+y, z, 64, -26, -12)
 }
 
 //Template: Modern airport, base
@@ -1129,26 +1133,26 @@ template template_airport_modern_groundtiles(x, y, z) {
 	template_flattile_single(390, 0, z)
 }
 template template_modernairport_buildings_core(x, y, z) {
-	template_house_1x1_addoffs(  0,   0, z, 96,   4,  -3)
-	template_house_1x1_addoffs( 65,   0, z, 96,   0,  -7)
-	template_house_1x1_addoffs(130,   0, z, 96,  -2,  -2)
-	template_house_1x1_addoffs(195,   0, z, 96,   0,  -7)
-	template_house_1x1_addoffs(  0,  97, z, 96,  -6,  -4)
+	template_house_1x1_addoffs(  0,   0, z, 96,   4,  -2)
+	template_house_1x1_addoffs( 65,   0, z, 96,   0,  -6)
+	template_house_1x1_addoffs(130,   0, z, 96,  -2,  -1)
+	template_house_1x1_addoffs(195,   0, z, 96,   0,  -6)
+	template_house_1x1_addoffs(  0,  97, z, 96,  -6,  -3)
 }
 template template_modernairport_depot_core(x, y, z) {
-	template_house_1x1_addoffs(  0,   0, z, 64,  28, -14)
-	template_house_1x1_addoffs( 65,   0, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0,   0, z, 64,  28, -13)
+	template_house_1x1_addoffs( 65,   0, z, 64,   0,   1)
 }
 template template_modernairport_walkwaysfences(x, y, z) {
-	template_house_1x1_addoffs(260,   0, z, 96,  -8, -19)
-	template_house_1x1_addoffs(260,  97, z, 96, -10, -10)
-	template_house_1x1_addoffs(260, 195, z, 96,   2,  -5)
-	template_house_1x1_addoffs(325,   0, z, 96, -16,  -9)
-	template_house_1x1_addoffs(390,   0, z, 96,   0,   0)
-	template_house_1x1_addoffs(390,  97, z, 96,   0,   0)
+	template_house_1x1_addoffs(260,   0, z, 96,  -8, -18)
+	template_house_1x1_addoffs(260,  97, z, 96, -10,  -9)
+	template_house_1x1_addoffs(260, 195, z, 96,   2,  -4)
+	template_house_1x1_addoffs(325,   0, z, 96, -16,  -8)
+	template_house_1x1_addoffs(390,   0, z, 96,   0,   1)
+	template_house_1x1_addoffs(390,  97, z, 96,   0,   1)
 }
 template template_airportoilrefinery_building(x, y, z) {
-	template_house_1x1_addoffs(455,   0, z, 96,   0,  -7)
+	template_house_1x1_addoffs(455,   0, z, 96,   0,  -6)
 }
 
 //Template: Modern Airport, extended
@@ -1168,7 +1172,7 @@ template template_airport_modern_extragroundtiles2(x, y, z) {
 
 //Template: Heliport
 template template_heliport(x, y, z) {
-	template_house_1x1_addoffs(0, 0, z, 96, 0, 0)
+	template_house_1x1(0, 0, z, 96)
 }
 
 //Template: Old airport, base
@@ -1176,7 +1180,7 @@ template template_airport_old_buildingtiles(x, y, z) {
 	template_house_1x1(0, 0, z, 96)
 	template_house_1x1(65, 0, z, 96)
 	template_house_1x1(130, 0, z, 96)
-	template_house_1x1_addoffs(195, 0, z, 96, 0, -16)
+	template_house_1x1_addoffs(195, 0, z, 96, 0, -15)
 }
 template template_airport_old_groundtiles(x, y, z) {
 	template_flattile_single(195, 0, z)
