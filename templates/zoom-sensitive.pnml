@@ -489,6 +489,26 @@ template template_signals_base(z) {
 	template_sprite_matrix(22, 30, -7, -28, 1, 7, z)
 }
 
+// Infrastructure: empty/dummy signals base
+template template_signals_base_empty() {
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+	template_empty()
+}
+
 // Infrastructure: road lights
 template template_road_lights(x, y, z) {
 	[	 9*z+x*z, 0*z+y*z, 8*z, 16*z, -1*z, -14*z-int((z-1)/2)]

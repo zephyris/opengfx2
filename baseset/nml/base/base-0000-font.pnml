@@ -134,7 +134,7 @@ base_graphics spr126( 126, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   
 base_graphics spr127( 127, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
 base_graphics spr128( 128, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
 base_graphics spr129( 129, "../graphics/fonts/fonts_8bpp.png") { [ 290,  130,   9,  13,   0,  -2] }
-base_graphics spr130( 130, "../graphics/icons/1/icons_8px_8bpp.png") { template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, 1) } // window: up
+base_graphics spr130( 130, "../graphics/icons/1/icons_8px_8bpp.png") { template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, 1) } // window: up
 base_graphics spr131( 131, "../graphics/fonts/fonts_8bpp.png") { [ 330,  130,   3,  13,   0,  -2] }
 base_graphics spr132( 132, "../graphics/fonts/fonts_8bpp.png") { [ 350,  130,   6,  13,   0,  -2] }
 base_graphics spr133( 133, "../graphics/fonts/fonts_8bpp.png") { [ 370,  130,   8,  13,   0,  -2] }

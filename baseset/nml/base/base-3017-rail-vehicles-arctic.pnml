@@ -6,4 +6,4 @@ base_graphics spr3041(3041, "../graphics/vehicles/64/rail_engines_arctictropic_8
 base_graphics spr3049(3049, "../graphics/vehicles/64/rail_engines_arctictropic_8bpp.png") { template_vehicle_rail_4view(0, 4, 1) } // Kelling 3100 (Diesel)
 base_graphics spr3053(3053, "../graphics/vehicles/64/rail_engines_arctictropic_8bpp.png") { template_vehicle_rail_8view(0, 5, 1) } // Turner Turbo (Diesel)
 base_graphics spr3061(3061, "../graphics/vehicles/64/rail_engines_arctictropic_8bpp.png") { template_vehicle_rail_4view(0, 6, 1) } // MJS 1000 (Diesel)
-base_graphics spr3065(3065, "../graphics/vehicles/64/rail_engines_arctictropic_8bpp.png") { template_vehicle_rail_8view(0, 6, 1) } // MJS 250 (Steam)
+base_graphics spr3065(3065, "../graphics/vehicles/64/rail_engines_arctictropic_8bpp.png") { template_vehicle_rail_8view(0, 7, 1) } // MJS 250 (Steam)

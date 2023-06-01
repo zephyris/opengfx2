@@ -53,7 +53,7 @@ replacenew ottd_gui59(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 59) {
 replacenew ottd_gui60(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 60) { template_cursor_matrix(7, 9, 1) }
 // OTTD_GUI 61-62 rail depot icon and cursor
 replacenew ottd_gui61(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 61) { template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 9, 1) }
-replacenew ottd_gui62(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 62) { template_cursor_matrix(7, 9, 1) }
+replacenew ottd_gui62(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 62) { template_cursor_matrix(0, 8, 1) }
 
 // OTTD_GUI 63-64 monorail autorail icon and cursor
 replacenew ottd_gui63(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 63) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 11, 1) }
@@ -63,7 +63,7 @@ replacenew ottd_gui65(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 65) {
 replacenew ottd_gui66(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 66) { template_cursor_matrix(7, 10, 1) }
 // OTTD_GUI 67-68 monorail depot icon and cursor
 replacenew ottd_gui67(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 67) { template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 11, 1) }
-replacenew ottd_gui68(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 68) { template_cursor_matrix(7, 10, 1) }
+replacenew ottd_gui68(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 68) { template_cursor_matrix(0, 10, 1) }
 
 // OTTD_GUI 69-70 maglev autorail icon and cursor
 replacenew ottd_gui69(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 69) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 12, 1) }
@@ -73,10 +73,10 @@ replacenew ottd_gui71(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 71) {
 replacenew ottd_gui72(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 72) { template_cursor_matrix(7, 11, 1) }
 // OTTD_GUI 73-74 maglev depot icon and cursor
 replacenew ottd_gui73(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 73) { template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 12, 1) }
-replacenew ottd_gui74(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 74) { template_cursor_matrix(7, 11, 1) }
+replacenew ottd_gui74(OTTD_GUI, "../graphics/cursors/1/cursors_8bpp.png", 74) { template_cursor_matrix(0, 11, 1) }
 
 // OTTD_GUI 75 semaphore signal icon
-replacenew ottd_gui75(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 75) { template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 4, 1) }
+replacenew ottd_gui75(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 75) { template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 8, 1) }
 
 // OTTD_GUI 76-77 rail waypoint icon and cursor
 replacenew ottd_gui76(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 76) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 8, 1) }
@@ -220,7 +220,7 @@ replacenew ottd_gui151(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 151) 
 
 // OTTD_GUI 154-161 vehicle status mini icons
 replacenew ottd_gui154(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 154) {
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 1, 1)  // Profit not applicable
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 1, 1)  // Profit not applicable
 	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 1, 1)  // Profit negative
 	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 1, 1)  // Profit some
 	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 1, 1)  // Profit lots
@@ -232,7 +232,7 @@ replacenew ottd_gui154(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 154)
 
 // OTTD_GUI 162-165 town status mini icons
 replacenew ottd_gui162(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 162) {
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 0, 2, 1)  // awaiting town rating
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 1, 1)  // awaiting town rating
 	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 2, 1)  // appalling town rating, sad, red smily
 	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 2, 1)  // mediocre town rating, yellow smily
 	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 2, 1)  // very good town rating, happy, green smily

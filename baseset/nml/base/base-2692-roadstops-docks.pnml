@@ -14,8 +14,8 @@ base_graphics spr2712(2712, "../graphics/stations/general/64/pygen/roadstops_8bp
 //2724-702 airport and road stop cursors
 base_graphics spr2724(2724, "../graphics/cursors/1/cursors_8bpp.png") {
     template_cursor_matrix(0, 12, 1) // airport
-    template_cursor_matrix(6, 8, 1) // bus
-    template_cursor_matrix(6, 9, 1) // lorry
+    template_cursor_matrix(8, 6, 1) // bus
+    template_cursor_matrix(9, 6, 1) // lorry
 }
 
 //2727-2732 docks

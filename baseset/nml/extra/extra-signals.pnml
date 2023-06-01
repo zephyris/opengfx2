@@ -58,22 +58,22 @@ template template_signals_presignal(z) {
 replacenew presignal_0(PRE_SIGNAL, "../graphics/signals/64/presignal_light_combined_8bpp.png", 0) { template_signals_presignal(1) } //pre-signal, entry
 
 // PRE_SIGNAL_SEMAPHORE_PBS
-// commented out appear unused
+// template_signals_base_empty and/or commented out appear unused
 // British-style for default (and TRAFFIC_SIDE_LEFT)
 replacenew presignalsemaphorepbs_48(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/base_semaphore_leftside_8bpp.png", 48) { template_signals_base(1) } //base/block
 replacenew presignalsemaphorepbs_64(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/presignal_semaphore_leftside_entry_8bpp.png", 64) { template_signals_base(1) } //pre-signal, entry
 replacenew presignalsemaphorepbs_80(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/presignal_semaphore_leftside_exit_8bpp.png", 80) { template_signals_base(1) } //pre-signal, exit
 replacenew presignalsemaphorepbs_96(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/presignal_semaphore_leftside_combo_8bpp.png", 96) { template_signals_base(1) } //pre-signal, combo
 
-//replacenew presignalsemaphorepbs_112(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_base_8bpp.png", 112) { template_signals_base(1) } // unused? PBS unused type 1 toyland (standard)
-//replacenew presignalsemaphorepbs_128(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_oneway_8bpp.png", 128) { template_signals_base(1) } //unused? PBS unused type 2 toyland (oneway)
-//replacenew presignalsemaphorepbs_144(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_basealt_8bpp.png", 144) { template_signals_base(1) } //unused? PBS standard toyland
-//replacenew presignalsemaphorepbs_160(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_onewayalt_8bpp.png", 160) { template_signals_base(1) } //unused? PBS oneway toyland
+replacenew presignalsemaphorepbs_112(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_base_8bpp.png", 112) { template_signals_base(1) } // PBS (two way)
+replacenew presignalsemaphorepbs_128(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_oneway_8bpp.png", 128) { template_signals_base(1) } //PBS (one way)
+replacenew presignalsemaphorepbs_144(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_basealt_8bpp.png", 144) { template_signals_base_empty() } //unused? PBS (two way) toyland?
+replacenew presignalsemaphorepbs_160(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_onewayalt_8bpp.png", 160) { template_signals_base_empty() } //unused? PBS (one way) toyland?
 
 replacenew presignalsemaphorepbs_176(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_leftside_twoway_8bpp.png", 176) { template_signals_base(1) } //PBS semaphore (two way)
-replacenew presignalsemaphorepbs_192(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_leftside_oneway_8bpp.png", 192) { template_signals_base(1) } //PBS semaphore (oneway)
-//replacenew presignalsemaphorepbs_208(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_leftside_unused_8bpp.png", 208) { template_signals_base(1) } //unused? PBS semaphore unused 1
-//replacenew presignalsemaphorepbs_224(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_leftside_unusedalt_8bpp.png", 224) { template_signals_base(1) } //unused? PBS semaphore unused 1
+replacenew presignalsemaphorepbs_192(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_leftside_oneway_8bpp.png", 192) { template_signals_base(1) } //PBS semaphore (one way)
+replacenew presignalsemaphorepbs_208(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_leftside_unused_8bpp.png", 208) { template_signals_base_empty() } //unused? PBS semaphore unused 1
+replacenew presignalsemaphorepbs_224(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_leftside_unusedalt_8bpp.png", 224) { template_signals_base_empty() } //unused? PBS semaphore unused 2
 
 //German-style for TRAFFIC_SIDE_RIGHT
 if ((traffic_side == TRAFFIC_SIDE_RIGHT)) {
@@ -84,6 +84,6 @@ if ((traffic_side == TRAFFIC_SIDE_RIGHT)) {
 
 	replacenew presignalsemaphorepbs_176_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_rightside_twoway_8bpp.png", 176) { template_signals_base(1) } //PBS semaphore (two way)
 	replacenew presignalsemaphorepbs_192_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_rightside_oneway_8bpp.png", 192) { template_signals_base(1) } //PBS semaphore (oneway)
-	//replacenew presignalsemaphorepbs_208_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_rightside_unused_8bpp.png", 208) { template_signals_base(1) } //unused? PBS semaphore unused 1
-	//replacenew presignalsemaphorepbs_224_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_rightside_unusedalt_8bpp.png", 224) { template_signals_base(1) } //unused? PBS semaphore unused 1
+	//replacenew presignalsemaphorepbs_208_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_rightside_unused_8bpp.png", 208) { template_signals_base_empty() } //unused? PBS semaphore unused 1
+	//replacenew presignalsemaphorepbs_224_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_rightside_unusedalt_8bpp.png", 224) { template_signals_base_empty() } //unused? PBS semaphore unused 2
 }
