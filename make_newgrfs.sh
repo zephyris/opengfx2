@@ -4,8 +4,8 @@
 # eg. /my/install/of/openttd/newgrf/
 
 cd newgrf
-python3 ../templates/nml_preprocessor.py ogfx2_controller
-nmlc ogfx2_controller.nml --quiet -c -l lang/controller
+python3 ../templates/nml_preprocessor.py ogfx2_settings
+nmlc ogfx2_settings.nml --quiet -c -l lang/settings
 
 python3 ../templates/nml_preprocessor.py ogfx2_landscape
 nmlc ogfx2_landscape.nml --quiet -c -l lang/landscape

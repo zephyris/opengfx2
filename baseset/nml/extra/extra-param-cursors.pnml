@@ -1,0 +1,169 @@
+if (param_cursors==1) {
+    // Base graphics
+    //0-1 cursor and sleepy cursor
+    replace altcursor1_spr0(   0, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(0, 0, 1)
+        template_cursor_matrix(1, 0, 1)
+    }
+    //696-702 cursors
+    replace altcursor1_spr696( 696, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(0, 2, 1) // raise land: 1/3
+        template_cursor_matrix(1, 2, 1) // raise land: 2/3
+        template_cursor_matrix(2, 2, 1) // raise land: 3/3
+        template_cursor_matrix(3, 2, 1) // lower land: 1/3
+        template_cursor_matrix(4, 2, 1) // lower land: 2/3
+        template_cursor_matrix(5, 2, 1) // lower land: 3/3
+        template_cursor_matrix(4, 13, 1) // buoy
+    }
+    //704-707 cursors
+    replace altcursor1_spr704( 704, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(0, 3, 1) // dynamite: 1/4
+        template_cursor_matrix(1, 3, 1) // dynamite: 2/4
+        template_cursor_matrix(2, 3, 1) // dynamite: 3/4
+        template_cursor_matrix(3, 3, 1) // dynamite: 4/4
+    }
+    //716-722 cursors
+    replace altcursor1_spr716( 716, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(0, 4, 1) // vehicle orders: 1/3
+        template_cursor_matrix(1, 4, 1) // vehicle orders: 2/3
+        template_cursor_matrix(2, 4, 1) // vehicle orders: 3/3
+        template_cursor_matrix(0, 1, 1) // cursor: land area information
+        template_cursor_matrix(1, 1, 1) // cursor: build hq
+        template_cursor_matrix(0, 6, 1) // cursor: build depot
+        template_cursor_matrix(2, 1, 1) // cursor: place sign
+    }
+    //1263-1274 rail gui cursors
+    replace altcursor1_spr1263(1263, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(1, 8, 1) // Rail N-S
+        template_cursor_matrix(2, 8, 1) // Rail SW-NE
+        template_cursor_matrix(3, 8, 1) // Rail W-E
+        template_cursor_matrix(4, 8, 1) // Rail NW-SE
+        template_cursor_matrix(1, 10, 1) // Monorail
+        template_cursor_matrix(2, 10, 1)
+        template_cursor_matrix(3, 10, 1)
+        template_cursor_matrix(4, 10, 1)
+        template_cursor_matrix(1, 11, 1) // Maglev
+        template_cursor_matrix(2, 11, 1)
+        template_cursor_matrix(3, 11, 1)
+        template_cursor_matrix(4, 11, 1)
+    }
+    //1292-1293 signal cursors
+    replace altcursor1_spr1292(1292, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(0, 5, 1) // signal 1/2
+        template_cursor_matrix(1, 5, 1) // signal 2/2
+    }
+    //1296-1297 rail and road depot cursors
+    replace altcursor1_spr1296(1296, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(0, 8, 1) // rail
+        template_cursor_matrix(0, 6, 1) // road
+    }
+    //1300 rail station cursor
+    replace altcursor1_spr1300(1300, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(8, 8, 1) // rail
+    }
+    //1311-1312 road cursors
+    replace altcursor1_spr1311(1311, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(1, 6, 1) // SW-NE
+        template_cursor_matrix(2, 6, 1) // NW-SE
+    }
+    //2010 tree cursor
+    replace altcursor1_spr2010( 2010, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(10, 1, 1)
+    }
+    //2433-2439 tunnel cursors
+    replace altcursor1_spr2433( 2433, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(5, 6, 1) // road tunnel
+        template_cursor_matrix(5, 8, 1) // rail tunnel
+        template_cursor_matrix(5, 10, 1) // monorail tunnel
+        template_cursor_matrix(5, 11, 1) // maglev tunnel
+    }
+    //2593 bridge cursor
+    replace altcursor1_spr2593(2593, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(0, 14, 1)
+    }
+    //2724-702 airport and road stop cursors
+    replace altcursor1_spr2724(2724, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(0, 12, 1) // airport
+        template_cursor_matrix(8, 6, 1) // bus
+        template_cursor_matrix(9, 6, 1) // lorry
+    }
+    //3668 dock gui cursor
+    replace altcursor1_spr3668( 3668, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") { template_cursor_matrix(8, 13, 1) }
+    //4080-4081 town and industry cursors
+    replace altcursor1_spr4080(4080, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(3, 1, 1) // build town cursor
+        template_cursor_matrix(0, 4, 1) // build industry cursor
+    }
+    //4087-4090 town and industry cursors
+    replace altcursor1_spr4087(4087, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(5, 1, 1) // build rocky land cursor
+        template_cursor_matrix(6, 1, 1) // build lighthouse cursor
+        template_cursor_matrix(7, 1, 1) // build transmitter cursor
+    }
+    //4793 buy land cursor
+    replace altcursor1_spr4792(4792, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+        template_cursor_matrix(8, 1, 1) // buy land
+    }
+
+    //OpenTTD/TTDPatch additional
+    // CATENARY 40-43 elrail cursors
+    replacenew altcursor1_catenary_spr40(CATENARY, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 40) {
+        template_cursor_matrix(1, 9, 1)
+        template_cursor_matrix(2, 9, 1)
+        template_cursor_matrix(3, 9, 1)
+        template_cursor_matrix(4, 9, 1)
+    }
+    //various
+    replacenew altcursor1_catenary_spr45(CATENARY, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 45) { template_cursor_matrix(5, 9, 1) }
+    replacenew altcursor1_ottd_gui54(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 54) { template_cursor_matrix(6, 8, 1) }
+    replacenew altcursor1_ottd_gui56(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 56) { template_cursor_matrix(7, 8, 1) }
+    replacenew altcursor1_ottd_gui58(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 58) { template_cursor_matrix(6, 9, 1) }
+    replacenew altcursor1_ottd_gui60(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 60) { template_cursor_matrix(7, 9, 1) }
+    replacenew altcursor1_ottd_gui62(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 62) { template_cursor_matrix(0, 8, 1) }
+    replacenew altcursor1_ottd_gui64(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 64) { template_cursor_matrix(6, 10, 1) }
+    replacenew altcursor1_ottd_gui66(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 66) { template_cursor_matrix(7, 10, 1) }
+    replacenew altcursor1_ottd_gui68(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 68) { template_cursor_matrix(0, 10, 1) }
+    replacenew altcursor1_ottd_gui70(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 70) { template_cursor_matrix(6, 11, 1) }
+    replacenew altcursor1_ottd_gui72(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 72) { template_cursor_matrix(7, 11, 1) }
+    replacenew altcursor1_ottd_gui74(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 74) { template_cursor_matrix(0, 11, 1) }
+    replacenew altcursor1_ottd_gui77(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 77) { template_cursor_matrix(9, 8, 1) }
+    replacenew altcursor1_ottd_gui83(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 83) { template_cursor_matrix(6, 6, 1) }
+    replacenew altcursor1_ottd_gui85(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 85) { template_cursor_matrix(6, 7, 1) }
+    replacenew altcursor1_ottd_gui87(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 87) { template_cursor_matrix(1, 13, 1) }
+    replacenew altcursor1_ottd_gui89(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 89) { template_cursor_matrix(2, 13, 1) }
+    replacenew altcursor1_ottd_gui92(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 92) { template_cursor_matrix(6, 2, 1) }
+    // OTTD_GUI 110-103 vehicle clone cursors
+    replacenew altcursor1_ottd_gui110(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 110) {
+        template_cursor_matrix(10, 8, 1) // cursor clone vehicle: select train to clone
+        template_cursor_matrix(10, 6, 1) // cursor clone vehicle: select road vehicle to clone
+        template_cursor_matrix(10, 10, 1) // cursor clone vehicle: select ship to clone
+        template_cursor_matrix(10, 11, 1) // cursor clone vehicle: select aircraft to clone
+    }
+    // OTTD_GUI 137 build river cursor
+    replacenew altcursor1_ottd_gui137(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 137) {
+        template_cursor_matrix(3, 13, 1) // cursor waterways: build rivers
+    }
+    // OTTD_GUI 146 build aqueduct cursor
+    replacenew altcursor1_ottd_gui146(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 146) {
+        template_cursor_matrix(2, 14, 1) // cursor waterways: build aquaduct
+    }
+    replacenew altcursor1_ottd_gui181(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 181) { template_cursor_matrix(7, 6, 1) }
+    replacenew altcursor1_ottd_gui183(OTTD_GUI, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 183) { template_cursor_matrix(7, 7, 1) }
+    // TRAMWAY 2-3 build tram track cursors
+    replacenew altcursor1_tramway_spr2(TRAMWAY, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png", 2) {
+        template_cursor_matrix(1, 7, 1)
+        template_cursor_matrix(2, 7, 1)
+    }
+
+    // Climate-specific
+    if (climate==CLIMATE_TROPICAL) {
+        //base4088 / tropical556 build desert cursor
+        replace altcursor1_spr4088(4088, "../graphics/cursors/1/pygen/opengfx_yellow_8bpp.png") {
+            template_cursor_matrix(9, 1, 1) // dynamite: 1/4
+        }
+    }
+
+    if (climate==CLIMATE_TOYLAND) {
+        //Toyland-specific cursors not implemented
+    }
+}

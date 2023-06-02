@@ -1,0 +1,21 @@
+grf {
+	grfid: "OGZ\1";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	url:  string(STR_GRF_URL);
+	version: 1;
+	min_compatible_version: 1;
+	param 1 {
+		param_cursors {
+			name: string(STR_PARAM_CURSOR_NAME);
+			desc: string(STR_PARAM_CURSOR_DESC);
+			type: int;
+			min_value: 0;
+			max_value: 1;
+			names: {
+				0: string(STR_PARAM_CURSOR_VALUE_DEFAULT);
+				1: string(STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW);
+			};
+		}
+	}
+}

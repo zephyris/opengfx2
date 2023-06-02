@@ -1,6 +1,7 @@
 #include "nml/extra/extra-header.pnml"
 #include "../templates/zoom-sensitive.pnml"
 
+// Additional sprite sets
 #include "nml/extra/extra-2ccmap.pnml"
 #include "nml/extra/extra-aqueduct.pnml"
 #include "nml/extra/extra-canals.pnml"
@@ -15,6 +16,7 @@
 #include "nml/extra/extra-sloped-tracks.pnml"
 #include "nml/extra/extra-tram-tracks.pnml"
 
+// OpenTTD-specific additional sprite sets
 #include "nml/extra/extra-openttd-airport.pnml"
 #include "nml/extra/extra-openttd-autorail.pnml"
 #include "nml/extra/extra-openttd-flags.pnml"
@@ -22,10 +24,12 @@
 #include "nml/extra/extra-openttd-airport-preview.pnml"
 #include "nml/extra/extra-openttd-recolour.pnml"
 
+// Waterfeatures
 #include "nml/extra/extra-plus-canals.pnml"
 #include "nml/extra/extra-plus-locks.pnml"
 #include "nml/extra/extra-plus-rivers.pnml"
 
+// Additional climate-specific sprites
 #include "nml/extra/extra-plus-climate-specific-recolour.pnml"
 
 if (climate == CLIMATE_ARCTIC) {
@@ -44,3 +48,6 @@ if (climate == CLIMATE_TOYLAND) {
 #include "nml/extra/extra-plus-toyland-infrastructure.pnml"
 #include "nml/extra/extra-plus-toyland-bridge-recolour.pnml"
 }
+
+// Parameter-switchable graphics
+#include "nml/extra/extra-param-cursors.pnml"
