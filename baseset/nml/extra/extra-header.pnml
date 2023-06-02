@@ -1,7 +1,8 @@
 grf {
-	grfid: "\FFOT\02";
+	grfid: "OGZ\0";
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESCRIPTION);
+	url: string(STR_GRF_URL);
 	version: 0;
 	min_compatible_version: 878;
 }

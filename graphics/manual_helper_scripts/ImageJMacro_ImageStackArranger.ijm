@@ -1,4 +1,5 @@
 wrap=-1;
+pad=1;
 
 cid=getImageID();
 w=getWidth();
@@ -8,14 +9,14 @@ getLut(r, g, b);
 if (wrap==-1) {
 	wrap=d;
 }
-outwidth=(w+1)*wrap;
+outwidth=(w+pad)*wrap;
 if(d%wrap==0) {
 	rows=d/wrap;
 } else {
 	rows=floor(d/wrap)+1;
 }
 outheight=(h+1)*rows;
-newImage("t", "8-bit white", outwidth+1, outheight+1, 1);
+newImage("t", "8-bit white", outwidth+pad, outheight+pad, 1);
 setLut(r, g, b);
 oid=getImageID();
 for (i=0; i<d; i++) {
@@ -25,6 +26,6 @@ for (i=0; i<d; i++) {
 	run("Copy");
 	selectImage(oid);
 	row=floor(i/wrap);
-	makeRectangle(((w+1)*i)%outwidth+1, row*(h+1)+1, w, h);
+	makeRectangle(((w+pad)*i)%outwidth+pad, row*(h+pad)+pad, w, h);
 	run("Paste");
 }

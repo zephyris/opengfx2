@@ -1,9 +1,9 @@
 grf {
-	grfid: "\FFOT\10";
+	grfid: "OGZ\2";
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESCRIPTION);
-	version: 0;
-	min_compatible_version: 0;
+	version: 1;
+	min_compatible_version: 1;
 	param 1 {
 		param_temperate_terrain {
 			name: string(STR_PARAM_TERRAIN_TEMPERATE);

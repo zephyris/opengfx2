@@ -1,5 +1,5 @@
 //3668 dock gui cursor
-base_graphics spr3668( 3668, "../graphics/cursors/1/cursors_8bpp.png") { template_cursor_matrix(8, 13, 1) }
+base_graphics spr3668( 3668, "../graphics/cursors/1/pygen/default_8bpp.png") { template_cursor_matrix(8, 13, 1) }
 
 //3669-3700 ships
 base_graphics spr3669(3669, "../graphics/vehicles/64/water_8bpp.png") { template_vehicle_water_8view(0, 0, 1) } //oil

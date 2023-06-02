@@ -8,6 +8,6 @@ base_graphics spr4791(4791, "../graphics/icons/1/icons_20px_8bpp.png") {
     template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 15, 1) // construction toolbar: buy land
 }
 //4793 buy land cursor
-base_graphics spr4792(4792, "../graphics/cursors/1/cursors_8bpp.png") {
+base_graphics spr4792(4792, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(8, 1, 1) // buy land
 }

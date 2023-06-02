@@ -4,7 +4,7 @@ replacenew tramway_spr0(TRAMWAY, "../graphics/icons/1/icons_20px_8bpp.png", 0) {
     template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 13, 1)
 }
 // TRAMWAY 2-3 build tram track cursors
-replacenew tramway_spr2(TRAMWAY, "../graphics/cursors/1/cursors_8bpp.png", 2) {
+replacenew tramway_spr2(TRAMWAY, "../graphics/cursors/1/pygen/default_8bpp.png", 2) {
     template_cursor_matrix(1, 7, 1)
     template_cursor_matrix(2, 7, 1)
 }

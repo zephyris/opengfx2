@@ -1,5 +1,5 @@
 //885-887 cursors
-base_graphics spr885(885, "../graphics/cursors/1/cursors_8bpp.png") {
+base_graphics spr885(885, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(1, 1, 1) // hq construction cursor
 	template_cursor_matrix(8, 6, 1) // road stop cursor
     template_cursor_matrix(9, 6, 1) // lorry stop cursor

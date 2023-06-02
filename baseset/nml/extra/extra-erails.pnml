@@ -17,7 +17,7 @@ replacenew catenary_spr36(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 3
 	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 10, 1)
 }
 // CATENARY 40-43 elrail cursors
-replacenew catenary_spr40(CATENARY, "../graphics/cursors/1/cursors_8bpp.png", 40) {
+replacenew catenary_spr40(CATENARY, "../graphics/cursors/1/pygen/default_8bpp.png", 40) {
     template_cursor_matrix(1, 9, 1)
     template_cursor_matrix(2, 9, 1)
     template_cursor_matrix(3, 9, 1)
@@ -25,4 +25,4 @@ replacenew catenary_spr40(CATENARY, "../graphics/cursors/1/cursors_8bpp.png", 40
 }
 // CATENARY 44-45 tunnel icon and cursor
 replacenew catenary_spr44(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 44) { template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 10, 1) }
-replacenew catenary_spr45(CATENARY, "../graphics/cursors/1/cursors_8bpp.png", 45) { template_cursor_matrix(5, 9, 1) }
+replacenew catenary_spr45(CATENARY, "../graphics/cursors/1/pygen/default_8bpp.png", 45) { template_cursor_matrix(5, 9, 1) }

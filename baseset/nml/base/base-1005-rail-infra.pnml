@@ -76,7 +76,7 @@ base_graphics spr1251(1251, "../graphics/icons/1/icons_20px_8bpp.png") {
 }
 
 //1263-1274 rail gui cursors
-base_graphics spr1263(1263, "../graphics/cursors/1/cursors_8bpp.png") {
+base_graphics spr1263(1263, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(1, 8, 1) // Rail N-S
 	template_cursor_matrix(2, 8, 1) // Rail SW-NE
 	template_cursor_matrix(3, 8, 1) // Rail W-E
@@ -102,7 +102,7 @@ base_graphics spr1291(1291, "../graphics/icons/1/icons_20px_8bpp.png") {
     template_sprite_matrix(20, 20, 0, 0, 5, 8, 1)
 }
 //1292-1293 signal cursors
-base_graphics spr1292(1292, "../graphics/cursors/1/cursors_8bpp.png") {
+base_graphics spr1292(1292, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(0, 5, 1) // signal 1/2
     template_cursor_matrix(1, 5, 1) // signal 2/2
 }
@@ -112,7 +112,7 @@ base_graphics spr1294(1294, "../graphics/icons/1/icons_20px_8bpp.png") {
     template_sprite_matrix(20, 20, 0, 0, 1, 8, 1) // road
 }
 //1296-1297 rail and road depot cursors
-base_graphics spr1296(1296, "../graphics/cursors/1/cursors_8bpp.png") {
+base_graphics spr1296(1296, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(0, 8, 1) // rail
     template_cursor_matrix(0, 6, 1) // road
 }
@@ -122,7 +122,7 @@ base_graphics spr1298(1298, "../graphics/icons/1/icons_20px_8bpp.png") {
     template_sprite_matrix(20, 20, 0, 0, 7, 7, 1) // square
 }
 //1300 rail station cursor
-base_graphics spr1300(1300, "../graphics/cursors/1/cursors_8bpp.png") {
+base_graphics spr1300(1300, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(8, 8, 1) // rail
 }
 

@@ -50,7 +50,7 @@ base_graphics spr1046(1046, "../graphics/bridges/64/pygen/tubular_toyland_monora
 base_graphics spr1052(1052, "../graphics/bridges/64/pygen/tubular_toyland_maglev_8bpp.png") { template_girder(0, 0, 1) }
 
 //1058 bridge cursor
-base_graphics spr1058(1058, "../graphics/cursors/1/cursors_8bpp.png") {
+base_graphics spr1058(1058, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(0, 14, 1)
 }
 

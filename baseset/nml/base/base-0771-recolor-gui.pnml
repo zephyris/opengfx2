@@ -27,4 +27,3 @@ base_graphics spr771(771, "") {
 		0x10..0xFF: 0x00;
 	}
 }
-

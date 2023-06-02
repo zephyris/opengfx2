@@ -8,7 +8,10 @@ cd cursors
 
 cd 1
 custom_dither.py
-cd ..
+gui_cursoroverlay.py 1
+cd pygen
+custom_dither.py
+cd ../..
 
 cd ..
 

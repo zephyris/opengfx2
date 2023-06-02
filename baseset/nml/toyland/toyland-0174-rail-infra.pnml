@@ -46,7 +46,7 @@ base_graphics spr317(317, "../graphics/stations/general/64/pygen/monoraildepots_
 base_graphics spr323(323, "../graphics/stations/general/64/pygen/maglevdepots_toyland_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
 
 //329-340 rail build cursors
-base_graphics spr329(329, "../graphics/cursors/1/cursors_8bpp.png") {
+base_graphics spr329(329, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(1, 8, 1) // Rail N-S
 	template_cursor_matrix(2, 8, 1) // Rail SW-NE
 	template_cursor_matrix(3, 8, 1) // Rail W-E
