@@ -132,24 +132,46 @@ base_graphics spr1765(1765, "../graphics/trees/64_alt/pygen/arctic_snow_8bpp.png
 alternative_sprites(spr1765, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/arctic_snow_8bpp.png") { template_tree_arctic_set(4) }
 
 //1821-1946 tropical trees
+template template_tree_tropical_setleaf1(z) {
+	template_tree_alt(0,   0, z)
+	template_tree_alt(0,  81, z)
+}
+template template_tree_tropical_setleaf2(z) {
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+}
+template template_tree_tropical_setleaf3(z) {
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+}
+
 base_graphics spr1821(1821, "../graphics/trees/64/tropical_nonleafy_8bpp.png") {
 	template_tree_bordered(0,   0, 1) // palm, banana
 	template_tree_bordered(0,  81, 1) // palm, banana
 }
+/*
 base_graphics spr1835(1835, "../graphics/trees/64/tropical_tree_01_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy
 alternative_sprites(spr1835, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/tropical_tree_01_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
 base_graphics spr1842(1842, "../graphics/trees/64/tropical_tree_01_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy, lianias
 alternative_sprites(spr1842, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/tropical_tree_01_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
+*/
+base_graphics spr1835(1835, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf1(1) }
+//alternative_sprites(spr1835, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf1(4) }
 base_graphics spr1849(1849, "../graphics/trees/64/tropical_nonleafy_8bpp.png") {
 	template_tree_bordered(0, 162, 1) // scrub, agave
 	template_tree_bordered(0, 243, 1) // scrup, agave
 }
+/*
 base_graphics spr1863(1863, "../graphics/trees/64/tropical_tree_02_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy
 alternative_sprites(spr1863, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/tropical_tree_02_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
 base_graphics spr1870(1870, "../graphics/trees/64/tropical_tree_03_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy, eucalyptus
 alternative_sprites(spr1870, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/tropical_tree_03_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
 base_graphics spr1877(1877, "../graphics/trees/64/tropical_tree_04_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy
 alternative_sprites(spr1877, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/tropical_tree_04_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
+*/
+base_graphics spr1863(1863, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf2(1) }
+//alternative_sprites(spr1863, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf2(4) }
 base_graphics spr1884(1884, "../graphics/trees/64/tropical_nonleafy_8bpp.png") {
 	template_tree_bordered(0, 324, 1) // palm
 	template_tree_bordered(0, 405, 1) // palm, coconut
@@ -159,10 +181,14 @@ base_graphics spr1884(1884, "../graphics/trees/64/tropical_nonleafy_8bpp.png") {
     template_tree_bordered(0, 729, 1) // cactus, small
     template_tree_bordered(0, 810, 1) // palm
 }
+/*
 base_graphics spr1933(1933, "../graphics/trees/64/tropical_tree_05_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy
 alternative_sprites(spr1933, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/tropical_tree_05_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
 base_graphics spr1940(1940, "../graphics/trees/64/tropical_tree_06_leaf_8bpp.png") { template_tree_wide(0, 0, 1) } // leafy
 alternative_sprites(spr1940, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/tropical_tree_06_leaf_8bpp.png") { template_tree_wide(0, 0, 4) }
+*/
+base_graphics spr1933(1933, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf3(1) }
+//alternative_sprites(spr1933, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf3(4) }
 
 //1947-2009 toyland trees, see src/table/tree_land.h for recolour details
 base_graphics spr(1947, "../graphics/trees/64/toyland_trees_8bpp.png") {
