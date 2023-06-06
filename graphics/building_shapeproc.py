@@ -213,6 +213,8 @@ index_woodwork = [200,202,203]
 index_ironwork = [178,179,180]
 index_windows = [130,132,133]
 for input_file in glob.glob("*"+suffix):
+  if (input_file.endswith("_base_shape.png")):
+    continue
   print("%s in scale %d mode" % (input_file, scale))
   # check for input file changes
   shading_overlay_name = input_file[:-len(suffix)]+"_overlayshading.png"

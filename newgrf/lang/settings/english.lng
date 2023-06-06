@@ -7,5 +7,10 @@ STR_GRF_URL             :https://github.com/zephyris/opengfx2
 
 STR_PARAM_CURSOR_NAME                 :Cursor
 STR_PARAM_CURSOR_DESC                 :Appearance of the mouse cursor/pointer.
-STR_PARAM_CURSOR_VALUE_DEFAULT        :Default (classic-style, yellow)
+STR_PARAM_CURSOR_VALUE_DEFAULT        :Classic-style, yellow (Default)
 STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW :OpenGFX-style, yellow
+
+STR_PARAM_GRIDLINE_NAME               :Gridlines
+STR_PARAM_GRIDLINE_DESC               :Show gridlines on the edges of ground tiles.
+STR_PARAM_GRIDLINE_VALUE_DEFAULT      :Show gridlines (Default)
+STR_PARAM_GRIDLINE_VALUE_NOGRIDLINE   :No gridlines

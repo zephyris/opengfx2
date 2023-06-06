@@ -5,22 +5,7 @@ grf {
 	url: string(STR_GRF_URL);
 	version: 0;
 	min_compatible_version: 878;
-	//param 1 {
-	//	param_cursors {
-	//		name: string(STR_PARAM_CURSOR_NAME);
-	//		desc: string(STR_PARAM_CURSOR_DESC);
-	//		type: int;
-	//		min_value: 0;
-	//		max_value: 1;
-	//		names: {
-	//			0: string(STR_PARAM_CURSOR_VALUE_DEFAULT);
-	//			1: string(STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW);
-	//		};
-	//	}
-	//}
 }
-
-param_cursors = param["OGZ\1", 1];
 
 if (ttd_platform == PLATFORM_OPENTTD) {
 	if (openttd_version < version_openttd(1, 2, 0, 23667)) {
@@ -31,3 +16,6 @@ if (ttd_platform == PLATFORM_OPENTTD) {
 if (ttd_platform != PLATFORM_OPENTTD) {
 	error(FATAL, REQUIRES_OPENTTD, "1.2.0");
 }
+
+param_cursors = param["OGZ\1", 1];
+param_gridlines = param["OGZ\1", 2];

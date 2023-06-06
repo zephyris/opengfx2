@@ -52,7 +52,7 @@ if mode == "rail" or mode == "rail_toyland":
       "maglev": "maglev_toyland"
     }
     terrain_list = {
-      "toyland_grass": "toyland_groundtiles_32bpp.png",
+      "toyland_grass": os.path.join("pygen", "toyland_groundtiles_gridline_32bpp.png"),
       "toyland_concrete": "toyland_concretetiles_32bpp.png",
       "toyland_bridge": "general_bridgetiles_32bpp.png"
     }
@@ -65,11 +65,11 @@ if mode == "rail" or mode == "rail_toyland":
     }
     # Terrain sprites to use
     terrain_list = {
-      "arctic_grass": "arctic_groundtiles_32bpp.png",
-      "arctic_snow": "arctic_groundtiles_snow_32bpp.png",
-      "tropical_grass": "tropical_groundtiles_32bpp.png",
-      "tropical_desert": "tropical_groundtiles_desert_32bpp.png",
-      "temperate_grass": "temperate_groundtiles_32bpp.png",
+      "arctic_grass": os.path.join("pygen", "arctic_groundtiles_gridline_32bpp.png"),
+      "arctic_snow": os.path.join("pygen", "arctic_groundtiles_snow_gridline_32bpp.png"),
+      "tropical_grass": os.path.join("pygen", "tropical_groundtiles_gridline_32bpp.png"),
+      "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
+      "temperate_grass": os.path.join("pygen", "temperate_groundtiles_gridline_32bpp.png"),
       "general_concrete": "general_concretetiles_32bpp.png",
       "general_bridge": "general_bridgetiles_32bpp.png"
     }
@@ -102,9 +102,9 @@ elif mode == "road" or mode == "road_noline" or mode == "road_toyland":
     }
     # Terrain sprites to use
     terrain_list = {
-      "arctic_grass": "arctic_groundtiles_32bpp.png",
-      "arctic_snow": "arctic_groundtiles_snow_32bpp.png",
-      "temperate_grass": "temperate_groundtiles_32bpp.png",
+      "arctic_grass": os.path.join("pygen", "arctic_groundtiles_gridline_32bpp.png"),
+      "arctic_snow": os.path.join("pygen", "arctic_groundtiles_snow_gridline_32bpp.png"),
+      "temperate_grass": os.path.join("pygen", "temperate_groundtiles_gridline_32bpp.png"),
       "general_bridge": "general_bridgetiles_32bpp.png"
     }
   if mode == "road_noline":
@@ -114,8 +114,8 @@ elif mode == "road" or mode == "road_noline" or mode == "road_toyland":
     }
     # Terrain sprites to use
     terrain_list = {
-      "tropical_grass": "tropical_groundtiles_32bpp.png",
-      "tropical_desert": "tropical_groundtiles_desert_32bpp.png"
+      "tropical_grass": os.path.join("pygen", "tropical_groundtiles_gridline_32bpp.png"),
+      "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png")
     }
   if mode == "road_toyland":
     # Infrastructure sprites to use
@@ -124,7 +124,7 @@ elif mode == "road" or mode == "road_noline" or mode == "road_toyland":
     }
     # Terrain sprites to use
     terrain_list = {
-      "toyland_grass": "toyland_groundtiles_32bpp.png",
+      "toyland_grass": os.path.join("pygen", "toyland_groundtiles_gridline_32bpp.png"),
       "toyland_bridge": "general_bridgetiles_32bpp.png"
     }
 elif mode == "road_town" or mode == "road_town_toyland":
@@ -180,12 +180,12 @@ elif mode == "airport_modern":
   }
   # Terrain sprites to use
   terrain_list = {
-    "arctic_grass": "arctic_groundtiles_32bpp.png",
-    "arctic_snow": "arctic_groundtiles_snow_32bpp.png",
-    "tropical_grass": "tropical_groundtiles_32bpp.png",
-    "tropical_desert": "tropical_groundtiles_desert_32bpp.png",
-    "temperate_grass": "temperate_groundtiles_32bpp.png",
-    "toyland_grass": "toyland_groundtiles_32bpp.png"
+    "arctic_grass": os.path.join("pygen", "arctic_groundtiles_gridline_32bpp.png"),
+    "arctic_snow": os.path.join("pygen", "arctic_groundtiles_snow_gridline_32bpp.png"),
+    "tropical_grass": os.path.join("pygen", "tropical_groundtiles_gridline_32bpp.png"),
+    "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
+    "temperate_grass": os.path.join("pygen", "temperate_groundtiles_gridline_32bpp.png"),
+    "toyland_grass": os.path.join("pygen", "toyland_groundtiles_gridline_32bpp.png")
   }
 
 # Output image properties

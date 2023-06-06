@@ -10,11 +10,26 @@ grf {
 			name: string(STR_PARAM_CURSOR_NAME);
 			desc: string(STR_PARAM_CURSOR_DESC);
 			type: int;
+			def_value: 0;
 			min_value: 0;
 			max_value: 1;
 			names: {
 				0: string(STR_PARAM_CURSOR_VALUE_DEFAULT);
 				1: string(STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW);
+			};
+		}
+	}
+	param 2 {
+		param_gridlines {
+			name: string(STR_PARAM_GRIDLINE_NAME);
+			desc: string(STR_PARAM_GRIDLINE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 1;
+			names: {
+				0: string(STR_PARAM_GRIDLINE_VALUE_DEFAULT);
+				1: string(STR_PARAM_GRIDLINE_VALUE_NOGRIDLINE);
 			};
 		}
 	}

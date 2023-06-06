@@ -43,12 +43,12 @@ terrain_tile_positions = [
 terrain_tile_voffs = [0, 0, -7, -7]
 # Terrain list to process
 terrain_list = {
-  "arctic_grass": "arctic_groundtiles_32bpp.png",
-  "arctic_snow": "arctic_groundtiles_snow_32bpp.png",
-  "tropical_grass": "tropical_groundtiles_32bpp.png",
-  "tropical_desert": "tropical_groundtiles_desert_32bpp.png",
-  "temperate_grass": "temperate_groundtiles_32bpp.png",
-  "toyland_grass": "toyland_groundtiles_32bpp.png",
+  "arctic_grass": os.path.join("pygen", "arctic_groundtiles_gridline_32bpp.png"),
+  "arctic_snow": os.path.join("pygen", "arctic_groundtiles_snow_gridline_32bpp.png"),
+  "tropical_grass": os.path.join("pygen", "tropical_groundtiles_gridline_32bpp.png"),
+  "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
+  "temperate_grass": os.path.join("pygen", "temperate_groundtiles_gridline_32bpp.png"),
+  "toyland_grass": os.path.join("pygen", "toyland_groundtiles_gridline_32bpp.png"),
 }
 # Infrastructure sprites to use
 if mode == "terrain":

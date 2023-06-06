@@ -5,9 +5,9 @@ alternative_sprites(spr4061, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terr
 alternative_sprites(spr4061, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 4) }
 
 // 4061-4069 shore tiles
-base_graphics spr4062(4062, "../graphics/terrain/64/pygen/temperate_grass_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
-alternative_sprites(spr4062, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_grass_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
-alternative_sprites(spr4062, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_grass_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
+base_graphics spr4062(4062, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
+alternative_sprites(spr4062, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
+alternative_sprites(spr4062, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
 
 // 4070-4075 ship depot
 base_graphics spr4070(4070, "../graphics/stations/general/64/pygen/shipdepots_regions_8bpp.png") { template_ship_depot(0, 0, 1) }
