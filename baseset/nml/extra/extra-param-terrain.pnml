@@ -218,3 +218,57 @@ if (param_gridlines==1) {
         alternative_sprites(nogrid_coast_tiles_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/toyland_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 4) }
     }
 }
+
+if (param_gridlines==2) {
+    // 4061 flat water tile
+    replace watergrid_temperate_spr4061(4061, "../graphics/terrain/64/pygen/universal_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 1) }
+
+    // 4061-4069 shore tiles
+    replace watergrid_temperate_spr4062(4062, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
+
+    // Extra coasts
+    // COAST_TILES_BASEGFX
+    replacenew watergrid_coast_tiles_basegfx_temperate(COAST_TILES_BASEGFX, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 1) }
+
+    // COAST_TILES
+    replacenew watergrid_coast_tiles_temperate(COAST_TILES, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 1) }
+
+    if (climate==CLIMATE_ARCTIC) {
+        // 4061-4069 shore tiles
+        replace watergrid_arctic_spr4062(4062, "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
+
+        // Extra coasts
+        // COAST_TILES_BASEGFX
+        replacenew watergrid_coast_tiles_basegfx_arctic(COAST_TILES_BASEGFX, "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 1) }
+
+        // COAST_TILES
+        replacenew watergrid_coast_tiles_arctic(COAST_TILES, "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 1) }
+    }
+
+    if (climate==CLIMATE_TROPICAL) {
+        // 4061-4069 shore tiles
+        replace watergrid_tropical_spr4062(4062, "../graphics/terrain/64/pygen/tropical_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
+
+        // Extra coasts
+        // COAST_TILES_BASEGFX
+        replacenew watergrid_coast_tiles_basegfx_tropical(COAST_TILES_BASEGFX, "../graphics/terrain/64/pygen/tropical_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 1) }
+
+        // COAST_TILES
+        replacenew watergrid_coast_tiles_tropical(COAST_TILES, "../graphics/terrain/64/pygen/tropical_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 1) }   
+    }
+
+    if (climate==CLIMATE_TOYLAND) {
+        // 4061 flat water tile
+        replace watergrid_toyland_spr4061(4061, "../graphics/terrain/64/pygen/toyland_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 1) }
+
+        // 4061-4069 shore tiles
+        replace watergrid_toyland_spr4062(4062, "../graphics/terrain/64/pygen/toyland_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
+
+        // Extra coasts
+        // COAST_TILES_BASEGFX
+        replacenew watergrid_coast_tiles_basegfx_toyland(COAST_TILES_BASEGFX, "../graphics/terrain/64/pygen/toyland_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 1) }
+
+        // COAST_TILES
+        replacenew watergrid_coast_tiles_toyland(COAST_TILES, "../graphics/terrain/64/pygen/toyland_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 1) }
+    }
+}

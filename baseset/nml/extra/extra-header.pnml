@@ -19,3 +19,4 @@ if (ttd_platform != PLATFORM_OPENTTD) {
 
 param_cursors = param["OGZ\1", 1];
 param_gridlines = param["OGZ\1", 2];
+param_watergridlines = param["OGZ\1", 3];

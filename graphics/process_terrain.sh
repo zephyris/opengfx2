@@ -6,6 +6,10 @@ cd 64
 terrain_gridoverlay.py 1
 terrain_shoreoverlay.py 1 normal
 terrain_shoreoverlay.py 1 toyland
+terrain_watergridoverlay.py 1 water
+terrain_watergridoverlay.py 1 shore
+terrain_watergridoverlay.py 1 watertoyland
+terrain_watergridoverlay.py 1 shoretoyland
 custom_dither.py
 cd pygen
 custom_dither.py
