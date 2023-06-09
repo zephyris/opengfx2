@@ -32,6 +32,41 @@ if (param_gridlines==1) {
     alternative_sprites(nogrid_temperate_spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rocks_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
     alternative_sprites(nogrid_temperate_spr4023, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_rocks_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 
+    //4126-4296 farm field tiles
+    replace nogrid_temperate_spr4126(4126, "../graphics/terrain/64/pygen/farm_groundtiles_nogridline_8bpp.png") {
+        template_groundtiles(0, 0, 1)
+        template_groundtiles(0, 49, 1)
+        template_groundtiles(0, 98, 1)
+        template_groundtiles(0, 147, 1)
+        template_groundtiles(0, 196, 1)
+        template_groundtiles(0, 245, 1)
+        template_groundtiles(0, 294, 1)
+        template_groundtiles(0, 343, 1)
+        template_groundtiles(0, 392, 1)
+    }
+    alternative_sprites(nogrid_temperate_spr4126, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/farm_groundtiles_nogridline_8bpp.png") {
+        template_groundtiles(0, 0, 2)
+        template_groundtiles(0, 49, 2)
+        template_groundtiles(0, 98, 2)
+        template_groundtiles(0, 147, 2)
+        template_groundtiles(0, 196, 2)
+        template_groundtiles(0, 245, 2)
+        template_groundtiles(0, 294, 2)
+        template_groundtiles(0, 343, 2)
+        template_groundtiles(0, 392, 2)
+    }
+    alternative_sprites(nogrid_temperate_spr4126, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/farm_groundtiles_nogridline_8bpp.png") {
+        template_groundtiles(0, 0, 4)
+        template_groundtiles(0, 49, 4)
+        template_groundtiles(0, 98, 4)
+        template_groundtiles(0, 147, 4)
+        template_groundtiles(0, 196, 4)
+        template_groundtiles(0, 245, 4)
+        template_groundtiles(0, 294, 4)
+        template_groundtiles(0, 343, 4)
+        template_groundtiles(0, 392, 4)
+    }
+
     // 4061-4069 shore tiles
     replace nogrid_temperate_spr4062(4062, "../graphics/terrain/64/pygen/temperate_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
     alternative_sprites(nogrid_temperate_spr4062, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }

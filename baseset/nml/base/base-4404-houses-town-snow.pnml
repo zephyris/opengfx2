@@ -7,14 +7,14 @@ base_graphics spr4406(4406, "../graphics/towns/temperate/64/pygen/2x2_mallandsta
 base_graphics spr4411(4411, "../graphics/towns/temperate/64/pygen/2x2_mallandstadia_combo_tiles_8bpp.png") { template_house_2x2_7sprite(0, 0, 1, 88) }
 //4418-4427 double house
 base_graphics spr4418(4418, "../graphics/towns/arctic/64/pygen/largehouses_base_8bpp.png") { template_house_short(  0,  0, 1) }
-base_graphics spr4419(4419, "../graphics/towns/arctic/64/pygen/largehouses_base_snow_8bpp.png") { template_house_short(  0,  0, 1) }
+base_graphics spr4419(4419, "../graphics/towns/arctic/64/pygen/largehouses_snow_base_8bpp.png") { template_house_short(  0,  0, 1) }
 base_graphics spr4420(4420, "../graphics/towns/arctic/64/pygen/largehouses_8bpp.png") { template_house_short(  0, 96, 1) template_house_short(  0, 48, 1) template_house_short(  0,  0, 1) }
 base_graphics spr4423(4423, "../graphics/towns/arctic/64/pygen/largehouses_snow_8bpp.png") { template_house_short(  0,  0, 1) }
 base_graphics spr4424(4424, "../graphics/towns/arctic/64/pygen/largehouses_8bpp.png") { template_house_short( 65, 96, 1) template_house_short( 65, 48, 1) template_house_short( 65,  0, 1) }
 base_graphics spr4427(4427, "../graphics/towns/arctic/64/pygen/largehouses_snow_8bpp.png") { template_house_short( 65,  0, 1) }
 //4428-4433 house
 base_graphics spr4428(4428, "../graphics/towns/arctic/64/pygen/houses_base_8bpp.png") { template_house_short( 65,  0, 1) }
-base_graphics spr4429(4429, "../graphics/towns/arctic/64/pygen/houses_base_snow_8bpp.png") { template_house_short( 65,  0, 1) }
+base_graphics spr4429(4429, "../graphics/towns/arctic/64/pygen/houses_snow_base_8bpp.png") { template_house_short( 65,  0, 1) }
 base_graphics spr4430(4430, "../graphics/towns/arctic/64/pygen/houses_8bpp.png") { template_house_short( 65, 96, 1) template_house_short( 65, 48, 1) template_house_short( 65,  0, 1) }
 base_graphics spr4433(4433, "../graphics/towns/arctic/64/pygen/houses_snow_8bpp.png") { template_house_short( 65,  0, 1) }
 //4434-4437 office block

@@ -19,7 +19,7 @@ base_graphics spr238(238, "../graphics/infrastructure/64/maglev_bits_8bpp.png") 
 base_graphics spr244( 244, "../graphics/infrastructure/64/pygen/maglev_toyland_grass_8bpp.png") { template_railtiles(0, 0, 1) }
 
 //270 company statue
-base_graphics spr270(270, "../graphics/towns/toyland/64/church_8bpp.png") { template_house_1x1(0,	0, 1, 123) }
+base_graphics spr270(270, "../graphics/towns/toyland/64/company_statue_8bpp.png") { template_house_1x1(0,	0, 1, 123) }
 
 //271-286 signals
 base_graphics spr271(271, "../graphics/signals/64/base_8bpp.png") { template_signals_base(1) }

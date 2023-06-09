@@ -297,12 +297,13 @@ def bluewhite_to_transp(source):
         source.putpixel((x, y), (r, g, b, 0))
   return source
 
-def blend_overlay(image_32bit, image_texture, opacity):
+def blendmode_overlay(image_32bit, image_texture, opacity, blendmode):
   """
-  Applies an image texture, overlayed with a custom opacity, on an RGB image. Uses blend_modes.overlay
+  Applies an image texture, overlayed with a custom opacity, on an RGB image.
   :param image_32bit: Base image, treated as RGB
   :param image_texture: Image to overlay, 
   :param opacity: Overlay opacity
+  :param blendmode: Name of the blend_mode to use
   :return: 
   """
   # Used to be named `overlay_simple`
@@ -325,7 +326,23 @@ def blend_overlay(image_32bit, image_texture, opacity):
   image_32bit = Image.merge("RGBA", (r, g, b, image_white))
   image_bg_arr = numpy.array(image_32bit).astype(float)
   image_fg_arr = numpy.array(image_texture).astype(float)
-  image_blended_arr_float = blend_modes.overlay(image_bg_arr, image_fg_arr, opacity)
+  if blendmode == "overlay":
+    image_blended_arr_float = blend_modes.overlay(image_bg_arr, image_fg_arr, opacity)
+  elif blendmode == "normal":
+    image_blended_arr_float = blend_modes.normal(image_bg_arr, image_fg_arr, opacity)
+  elif blendmode == "darken_only":
+    image_blended_arr_float = blend_modes.darken_only(image_bg_arr, image_fg_arr, opacity)
   image_blended_arr = numpy.uint8(image_blended_arr_float)
   image_out = Image.fromarray(image_blended_arr)
   return image_out
+
+def blend_overlay(image_32bit, image_texture, opacity):
+  """
+  Applies an image texture, overlayed with a custom opacity, on an RGB image. Uses blend_modes.overlay
+  :param image_32bit: Base image, treated as RGB
+  :param image_texture: Image to overlay, 
+  :param opacity: Overlay opacity
+  :return: 
+  """
+  # Used to be named `overlay_simple`
+  return blendmode_overlay(image_32bit, image_texture, opacity, "overlay")

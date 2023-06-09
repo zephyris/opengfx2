@@ -11,7 +11,7 @@ STR_PARAM_CURSOR_VALUE_DEFAULT        :Classic-style, yellow (Default)
 STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW :OpenGFX-style, yellow
 
 STR_PARAM_GRIDLINE_NAME               :Terrain gridlines
-STR_PARAM_GRIDLINE_DESC               :Show gridlines on the edges of ground tiles and corner markers on the corners of water tiles.
+STR_PARAM_GRIDLINE_DESC               :Whether or not to show gridlines on the edges of ground and water tiles.
 STR_PARAM_GRIDLINE_VALUE_DEFAULT      :Ground gridlines only (Default)
-STR_PARAM_GRIDLINE_VALUE_NOGRIDLINE   :No gridlines or corner markers
-STR_PARAM_GRIDLINE_VALUE_WATERGRID    :Ground gridlines and water corner markers
+STR_PARAM_GRIDLINE_VALUE_NOGRIDLINE   :No gridlines
+STR_PARAM_GRIDLINE_VALUE_WATERGRID    :Ground and water gridlines

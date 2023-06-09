@@ -5,7 +5,7 @@ base_graphics spr1440(1440, "../graphics/towns/arctic/64/pygen/largeofficeblock_
 	template_house_1x1(0, 98, 1, 97)
 	template_house_1x1(0,	0, 1, 97)
 }
-base_graphics spr1443(1443, "../graphics/towns/arctic/64/pygen/largeofficeblock_8bpp.png") { template_general(66, 84, 4, 14, 1, 15, 1) } // Elevator
+base_graphics spr1443(1443, "../graphics/towns/arctic/64/pygen/largeofficeblock_8bpp.png") { template_general(66, 84, 4, 14, 1, 0, 1) } // Elevator
 // These are in fact two houses for the same houseID.  so V1 and V2 (V2 is sprites 1501-1506)
 base_graphics spr1444(1444, "../graphics/towns/temperate/64/pygen/townhouses_arranged_8bpp.png") {
 	template_house_short(0, 96, 1)
