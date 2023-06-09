@@ -48,7 +48,7 @@ for terrain_key in terrain_list:
   output_palmask_path = os.path.join("pygen", terrain_key+"_shoretiles_32bpp.png")
   if check_update_needed([terrain_image_path, shoreline_overlay_path, shoreline_shading_path], output_main_path):
     terrain_image = Image.open(terrain_list[terrain_key]).convert("RGB")
-    shore_image = Image.open("shorelines_overlaynormal.png")
+    shore_image = Image.open(shoreline_overlay_path)
     shore_image = openttd_palettise(shore_image)
     width, height = shore_image.size
     target_image = terrain_image.crop((0, 0, width, height))
