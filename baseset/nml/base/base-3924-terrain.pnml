@@ -24,9 +24,9 @@ alternative_sprites(spr4000, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terr
 alternative_sprites(spr4000, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_rough_gridline_8bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
 
 //4023-4041 temperate rocky terrain
-base_graphics spr4023(4023, "../graphics/terrain/64/pygen/temperate_groundtiles_rocks_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-alternative_sprites(spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rocks_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
-alternative_sprites(spr4023, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_rocks_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+base_graphics spr4023(4023, "../graphics/terrain/64/pygen/temperate_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
+alternative_sprites(spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+alternative_sprites(spr4023, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 
 //4042-4060 fully rocky ground (not used in OpenTTD or even TTD)
-base_graphics spr4042(4042, "../graphics/terrain/64/pygen/temperate_groundtiles_rocks_gridline_8bpp.png") { template_groundtiles(0, 0, 1) } // temperate rocky terrain used for unused sprites
+base_graphics spr4042(4042, "../graphics/terrain/64/pygen/temperate_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 1) } // temperate rocky terrain used for unused sprites

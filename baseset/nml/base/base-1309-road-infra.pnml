@@ -68,6 +68,7 @@ alternative_sprites(spr1406, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/town
 
 //1408-1413 road depot
 base_graphics spr1408(1408, "../graphics/stations/general/64/pygen/roaddepots_regions_8bpp.png") { template_road_depot(0, 0, 1) }
+alternative_sprites(spr1408, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/roaddepots_regions_8bpp.png") { template_road_depot(0, 0, 4) }
 
 //1414-1419 road reconstruction
 base_graphics spr1414(1414, "../graphics/infrastructure/64/road_reconstruction_8bpp.png") { template_road_reconstruction(0, 0, 1) }

@@ -35,7 +35,7 @@ building_base_flatten.py 1x2_tallofficeblock 1
 mask_tiles.py pygen/1x2_tallofficeblock_combo 1x2_tallofficeblock_tilemask.png 1
 building_base_flatten.py shantyhouses 1
 building_base_flatten.py tallofficeblock 1
-cp ../../temperate/64/pygen/hqs_32bpp.png .
+cp -p ../../temperate/64/pygen/hqs_32bpp.png .
 building_base_flatten.py hqs 1
 mask_tiles.py pygen/hqs_combo ../../temperate/64/hqs_tilemask.png 1
 cd pygen
@@ -57,7 +57,7 @@ mask_tiles.py pygen/1x2_tallofficeblock_snow 1x2_tallofficeblock_tilemask.png 1
 mask_tiles.py pygen/1x2_tallofficeblock_base 1x2_tallofficeblock_tilemask.png 1
 mask_tiles.py pygen/2x1_hotel_combo 2x1_hotel_tilemask.png 1
 mask_tiles.py pygen/2x1_hotel_snow_combo 2x1_hotel_tilemask.png 1
-cp ../../temperate/64/pygen/hqs_32bpp.png .
+cp -p ../../temperate/64/pygen/hqs_32bpp.png .
 building_base_flatten.py hqs 1
 mask_tiles.py pygen/hqs_combo ../../temperate/64/hqs_tilemask.png 1
 cd pygen
@@ -68,7 +68,7 @@ cd toyland/64/
 if [ ! -d pygen ]; then
   mkdir pygen
 fi
-cp 2x1_boot_32bpp.png pygen/
+cp -p 2x1_boot_32bpp.png pygen/
 mask_tiles.py pygen/2x1_boot 2x1_boot_tilemask.png 1
 building_shapeproc.py 1 toyland
 mask_tiles.py pygen/hqs_toyland hqs_tilemask.png 1

@@ -312,7 +312,9 @@ for input_file in glob.glob("*"+suffix):
         image_32bit = inout_blur(image_32bit, image_shape, index_walls, -2, 2, 2, (255, 255, 255), 223/255, "overlay", "inset")
         # Wood/ironwork shading
         image_32bit = inout_blur(image_32bit, image_shape, index_woodwork, -1, 1, 1, (0, 0, 0), 127/255, "normal", "outset")
+        image_32bit = inout_blur(image_32bit, image_shape, index_woodwork, -1, 1, 1, (255, 255, 255), 127/255, "overlay", "inset")
         image_32bit = inout_blur(image_32bit, image_shape, index_ironwork, -1, 1, 1, (0, 0, 0), 127/255, "normal", "outset")
+        image_32bit = inout_blur(image_32bit, image_shape, index_ironwork, -1, 1, 1, (255, 255, 255), 127/255, "overlay", "inset")
       texture_opacity = 255
       image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/window_l.png"), [index_windows[0]], texture_opacity/255, "overlay")
       image_32bit = overlay_texture(image_32bit, image_shape, Image.open("../../textures/window_r.png"), [index_windows[1]], texture_opacity/255, "overlay")

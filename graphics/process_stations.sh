@@ -2,7 +2,9 @@ export PATH=$PATH:$(pwd)
 
 cd stations
 
-cd general/64
+cd general
+
+cd 64
 # process all buildings
 building_shapeproc.py 1 temperate
 building_shapeproc.py 1 temperate True
@@ -52,5 +54,21 @@ custom_dither.py
 cd pygen
 custom_dither.py
 cd ../..
+
+cd 256
+# process all buildings
+building_shapeproc.py 4 temperate
+building_shapeproc.py 4 temperate True
+building_shapeproc.py 4 toyland
+building_baseshapeproc.py 4 temperate
+# mask regions of depots (ie. back wall from rest of building)
+mask_regions.py pygen/roaddepots roaddepots_regionmask.png 4
+mask_regions.py pygen/roaddepots_toyland roaddepots_regionmask.png 4
+custom_dither.py
+cd pygen
+custom_dither.py
+cd ../..
+
+cd ..
 
 cd ..

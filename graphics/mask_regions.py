@@ -43,7 +43,7 @@ for image_index in range(len(source_suffices)):
     # Setup output image
     source_image_width, source_image_height = source_image.size
     output_rows = (source_image_height - 1) // (region_mask_height - 1)
-    output_image = Image.new("RGB", ((region_number * (tile_size + 1) + 1) * scale, region_mask_height * output_rows + scale), (255, 255, 255))
+    output_image = Image.new("RGB", ((region_number * (tile_size + scale) + scale), region_mask_height * output_rows + scale), (255, 255, 255))
 
     # Loop through rows
     for row in range(output_rows):
@@ -69,7 +69,7 @@ for image_index in range(len(source_suffices)):
         sprite_x = scale + tile * (tile_size + scale)
         sprite_y = scale + row * (region_mask_height)
         drawing = ImageDraw.Draw(output_image)
-        drawing.rectangle((sprite_x, sprite_y, sprite_x + tile_size - scale, sprite_y + region_mask_height - scale * 2), fill="#0000ff", outline=None)
+        drawing.rectangle((sprite_x, sprite_y, sprite_x + tile_size, sprite_y + region_mask_height - scale), fill="#0000ff", outline=None)
         # Paste into output using mask
         source_x = bounds[0]
         source_y = bounds[1] + row * region_mask_height

@@ -4,6 +4,6 @@ alternative_sprites(spr73, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrai
 alternative_sprites(spr73, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_rough_gridline_8bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
 
 //96-114 arctic rocky terrain
-base_graphics spr96(96, "../graphics/terrain/64/pygen/arctic_groundtiles_rocks_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-alternative_sprites(spr96, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_rocks_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
-alternative_sprites(spr96, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_rocks_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+base_graphics spr96(96, "../graphics/terrain/64/pygen/arctic_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
+alternative_sprites(spr96, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+alternative_sprites(spr96, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
