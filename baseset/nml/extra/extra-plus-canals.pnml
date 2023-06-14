@@ -1,12 +1,5 @@
 //climate-sensitive canals
-spriteset (waterfeature_river_waterslopes, "../graphics/terrain/64/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 1) }
-alternative_sprites(waterfeature_river_waterslopes, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 2) }
-alternative_sprites(waterfeature_river_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
-
-spriteset (waterfeature_river_waterslopes_toyland, "../graphics/terrain/64/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 1) }
-alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 2) }
-alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
-
+//water
 spriteset (waterfeature_canal_waterslopes, "../graphics/terrain/64/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 1) }
 alternative_sprites(waterfeature_canal_waterslopes, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 2) }
 alternative_sprites(waterfeature_canal_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
@@ -15,6 +8,7 @@ spriteset (waterfeature_canal_waterslopes_toyland, "../graphics/terrain/64/toyla
 alternative_sprites(waterfeature_canal_waterslopes_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 2) }
 alternative_sprites(waterfeature_canal_waterslopes_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
 
+//banks
 spriteset (waterfeature_canal_temperate, "../graphics/infrastructure/64/pygen/canal_temperate_grass_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_temperate_grass_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_temperate_grass_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
