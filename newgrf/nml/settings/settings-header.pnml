@@ -34,4 +34,18 @@ grf {
 			};
 		}
 	}
+	param 3 {
+		param_gridlines {
+			name: string(STR_PARAM_LOGO_NAME);
+			desc: string(STR_PARAM_LOGO_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 1;
+			names: {
+				0: string(STR_PARAM_LOGO_VALUE_DEFAULT);
+				1: string(STR_PARAM_LOGO_VALUE_CABRIOLET);
+			};
+		}
+	}
 }
