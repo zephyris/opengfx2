@@ -86,7 +86,7 @@ replacenew ottd_gui77(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 
 replacenew ottd_gui78(OTTD_GUI, "../graphics/stations/general/64/pygen/railwaypoint_8bpp.png", 78) { template_rail_waypoint(0, 0, 1) }
 
 // OTTD_GUI 82-83 road autoroad icon and cursor
-replacenew ottd_gui82(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 76) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 14, 1) }
+replacenew ottd_gui82(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 82) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 14, 1) }
 replacenew ottd_gui83(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 83) { template_cursor_matrix(6, 6, 1) }
 // OTTD_GUI 84-85 tram autoroad icon and cursor
 replacenew ottd_gui84(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 84) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 13, 1) }
