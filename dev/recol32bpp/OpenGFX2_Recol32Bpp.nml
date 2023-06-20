@@ -1,0 +1,18 @@
+//Define the NewGRF
+grf {
+	grfid: "OGZ\B";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	url:  string(STR_GRF_URL);
+	version: 1;
+	min_compatible_version: 1;
+}
+
+//Repace bus sprite used as company colour preview, 3097
+template template_256square() {
+	[0, 0, 256, 256, 0, 0]
+}
+
+replace bus(3097, "hgradient_ttdpal_8bpp.png") { template_256square() }
+alternative_sprites(bus, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "vgradient_gray_32bpp.png", "hgradient_ttdpal_8bpp.png") { template_256square() }
+//alternative_sprites(bus, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "rgb_32bpp.png", "hgradient_ttdpal_8bpp.png") { template_256square() }

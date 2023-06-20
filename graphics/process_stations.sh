@@ -64,6 +64,8 @@ building_baseshapeproc.py 4 temperate
 # mask regions of depots (ie. back wall from rest of building)
 mask_regions.py pygen/roaddepots roaddepots_regionmask.png 4
 mask_regions.py pygen/roaddepots_toyland roaddepots_regionmask.png 4
+mask_regions.py pygen/raildepots raildepots_regionmask.png 4
+mask_regions.py pygen/raildepots_toyland raildepots_regionmask.png 4
 custom_dither.py
 cd pygen
 custom_dither.py

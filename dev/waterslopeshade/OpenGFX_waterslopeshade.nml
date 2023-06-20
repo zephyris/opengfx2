@@ -1,0 +1,41 @@
+//Define the NewGRF
+grf {
+	grfid: "OGZ\C";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	url:  string(STR_GRF_URL);
+	version: 1;
+	min_compatible_version: 1;
+}
+
+//Template: water slopes
+template template_waterslopes(x, y) {
+	//Flat tile
+	[ 322+x, 1+y, 64, 32-1, -31,  0 ]
+	//Sloped tiles
+	[  81+x, 1+y, 64, 24-1, -31,  0 ]
+	[ 241+x, 1+y, 64, 40-1, -31, -8 ]
+	[   1+x, 1+y, 64, 24-1, -31,  0 ]
+	[ 161+x, 1+y, 64, 40-1, -31, -8 ]
+}
+
+spriteset (waterfeature_waterslopes, "watertiles_8bpp.png") { template_waterslopes(80, 0) }
+alternative_sprites(waterfeature_waterslopes, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "watertiles_true32bpp.png", "watertiles_8bpp.png") { template_waterslopes(80, 0) }
+
+item(FEAT_CANALS, waterfeature_canal_slopes, WF_WATERCLIFFS) {
+	property {
+		graphic_flags: bitmask(WATERFEATURE_ALTERNATIVE_SPRITES);
+	}
+	graphics {
+		default: waterfeature_waterslopes;
+	}
+}
+
+item(FEAT_CANALS, waterfeature_river_slopes, WF_RIVER_SLOPE) {
+	property {
+		graphic_flags: bitmask(WATERFEATURE_ALTERNATIVE_SPRITES);
+	}
+	graphics {
+		default: waterfeature_waterslopes;
+	}
+}
