@@ -8,11 +8,11 @@ alternative_sprites(waterfeature_river_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_
 alternative_sprites(waterfeature_river_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/universal_rivertiles_bt32bpp.png", "../graphics/terrain/256/universal_rivertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
 
 spriteset (waterfeature_river_waterslopes_toyland, "../graphics/terrain/64/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 1) }
-alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/universal_rivertiles_bt32bpp.png", "../graphics/terrain/64/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 1) }
+alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/universal_watertiles_bt32bpp.png", "../graphics/terrain/64/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 1) }
 alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 2) }
-alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/universal_rivertiles_bt32bpp.png", "../graphics/terrain/128/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 2) }
+alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/universal_watertiles_bt32bpp.png", "../graphics/terrain/128/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 2) }
 alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
-alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/universal_rivertiles_bt32bpp.png", "../graphics/terrain/256/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 3) }
+alternative_sprites(waterfeature_river_waterslopes_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/universal_watertiles_bt32bpp.png", "../graphics/terrain/256/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
 
 //banks
 spriteset (waterfeature_river_temperate, "../graphics/infrastructure/64/pygen/river_temperate_grass_8bpp.png") { template_waterfeature_slopes(0, 0, 1) }
