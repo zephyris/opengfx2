@@ -15,6 +15,7 @@ alternative_sprites(spr1037, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infr
 
 //1063-1068 rail depots
 base_graphics spr1063(1063, "../graphics/stations/general/64/pygen/raildepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+alternative_sprites (spr1063, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/raildepots_regions_8bpp.png") { template_rail_depot(0, 0, 4) }
 
 //1069-1086 rail station
 base_graphics spr1069(1069, "../graphics/stations/general/64/pygen/railstations_8bpp.png") { template_rail_station(0, 0, 1) }
