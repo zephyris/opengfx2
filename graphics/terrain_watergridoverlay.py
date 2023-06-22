@@ -63,7 +63,7 @@ for terrain_key in terrain_list:
   print("  "+terrain_key)
   terrain_image_path = terrain_list[terrain_key]
   output_grid_path = os.path.join("pygen", terrain_key+"_gridline_32bpp.png")
-  if mode != "shore":
+  if mode != "shore" and mode != "shoretoy":
     palmask_path = palmask_paths[terrain_key]
   output_gridpalmask_path = os.path.join("pygen", terrain_key+"_gridline_palmask.png")
   if check_update_needed([terrain_image_path, palmask_path, gridline_overlay_path], output_grid_path):

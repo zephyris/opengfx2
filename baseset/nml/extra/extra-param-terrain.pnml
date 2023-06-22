@@ -256,9 +256,9 @@ if (param_gridlines==1) {
 
 if (param_gridlines==2) {
     // 4061 flat water tile
-    replace watergrid_temperate_spr4061(4061, "../graphics/terrain/64/pygen/universal_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 1) }
-    alternative_sprites(watergrid_temperate_spr4061, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/universal_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 2) }
-    alternative_sprites(watergrid_temperate_spr4061, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/universal_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 4) }
+    replace watergrid_temperate_spr4061(4061, "../graphics/terrain/64/pygen/universal_watertiles_gridline_8bpp.png") { template_flattile_single(0, 0, 1) }
+    alternative_sprites(watergrid_temperate_spr4061, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/universal_watertiles_gridline_8bpp.png") { template_flattile_single(0, 0, 2) }
+    alternative_sprites(watergrid_temperate_spr4061, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/universal_watertiles_gridline_8bpp.png") { template_flattile_single(0, 0, 4) }
 
     // 4061-4069 shore tiles
     replace watergrid_temperate_spr4062(4062, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
