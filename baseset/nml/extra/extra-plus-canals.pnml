@@ -14,6 +14,21 @@ alternative_sprites(waterfeature_canal_waterslopes_toyland, ZOOM_LEVEL_IN_2X, BI
 alternative_sprites(waterfeature_canal_waterslopes_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
 alternative_sprites(waterfeature_canal_waterslopes_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/universal_watertiles_bt32bpp.png", "../graphics/terrain/256/toyland_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
 
+//gridline water
+spriteset (waterfeaturegrid_canal_waterslopes, "../graphics/terrain/64/pygen/universal_watertiles_gridline_8bpp.png") { template_waterslopes(80, 0, 1) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/universal_watertiles_bt32bpp.png", "../graphics/terrain/64/pygen/universal_watertiles_gridline_8bpp.png") { template_waterslopes(80, 0, 1) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 2) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/universal_watertiles_bt32bpp.png", "../graphics/terrain/128/pygen/universal_watertiles_gridline_8bpp.png") { template_waterslopes(80, 0, 2) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/universal_watertiles_bt32bpp.png", "../graphics/terrain/256/pygen/universal_watertiles_gridline_8bpp.png") { template_waterslopes(80, 0, 4) }
+
+spriteset (waterfeaturegrid_canal_waterslopes_toyland, "../graphics/terrain/64/pygen/toyland_watertiles_gridline_8bpp.png") { template_waterslopes(80, 0, 1) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes_toyland, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/universal_watertiles_bt32bpp.png", "../graphics/terrain/64/pygen/toyland_watertiles_gridline_8bpp.png") { template_waterslopes(80, 0, 1) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 2) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/universal_watertiles_bt32bpp.png", "../graphics/terrain/128/pygen/toyland_watertiles_gridline_8bpp.png") { template_waterslopes(80, 0, 2) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_waterslopes(80, 0, 4) }
+alternative_sprites(waterfeaturegrid_canal_waterslopes_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/universal_watertiles_bt32bpp.png", "../graphics/terrain/256/pygen/toyland_watertiles_gridline_8bpp.png") { template_waterslopes(80, 0, 4) }
+
 //banks
 spriteset (waterfeature_canal_temperate, "../graphics/infrastructure/64/pygen/canal_temperate_grass_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_temperate_grass_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
@@ -39,25 +54,19 @@ spriteset (waterfeature_canal_toyland, "../graphics/infrastructure/64/pygen/cana
 alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_toyland_grass_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_canal_arctic_snowline, [
-	terrain_type
-]) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_arctic_snowline, terrain_type) {
 	TILETYPE_NORMAL: waterfeature_canal_arctic;
 	TILETYPE_SNOW: waterfeature_canal_arctic_snow;
 	waterfeature_canal_arctic;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_canal_tropical_desert, [
-	terrain_type
-]) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_tropical_desert, terrain_type) {
 	TILETYPE_NORMAL: waterfeature_canal_tropical;
 	TILETYPE_DESERT: waterfeature_canal_tropical_desert;
 	waterfeature_canal_tropical;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_canal_climate, [
-	climate
-]) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_climate, climate) {
 	CLIMATE_TEMPERATE: waterfeature_canal_temperate;
 	CLIMATE_ARCTIC: switch_waterfeature_canal_arctic_snowline;
 	CLIMATE_TROPICAL: switch_waterfeature_canal_tropical_desert;
@@ -65,11 +74,19 @@ switch (FEAT_CANALS, SELF, switch_waterfeature_canal_climate, [
 	waterfeature_canal_temperate;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_canal_slopes_climate, [
-	climate
-]) {
-	CLIMATE_TOYLAND: waterfeature_canal_waterslopes_toyland;
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_slopes_normalclimate_gridlines, param_gridlines) {
+	2: waterfeaturegrid_canal_waterslopes;
 	waterfeature_canal_waterslopes;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_slopes_toylandclimate_gridlines, param_gridlines) {
+	2: waterfeaturegrid_canal_waterslopes_toyland;
+	waterfeature_canal_waterslopes_toyland;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_slopes_climate, climate) {
+	CLIMATE_TOYLAND: switch_waterfeature_canal_slopes_toylandclimate_gridlines;
+	switch_waterfeature_canal_slopes_normalclimate_gridlines;
 }
 
 item(FEAT_CANALS, waterfeature_canal_slopes, WF_WATERCLIFFS) {

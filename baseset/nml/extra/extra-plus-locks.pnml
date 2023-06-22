@@ -4,25 +4,19 @@ spriteset (waterfeature_locks_general, "../graphics/stations/general/64/pygen/do
 spriteset (waterfeature_locks_arctic_snow, "../graphics/stations/general/64/pygen/docksandlocks_snow_8bpp.png") { template_locks(0, 0, 1) } //snowy
 
 // switch for elevation
-switch (FEAT_CANALS, SELF, switch_waterfeature_locks_elevation, [
-	tile_height
-]) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_locks_elevation, tile_height) {
 	0: waterfeature_locks_sealevel;
 	waterfeature_locks_general;
 }
 
 // switch for tile type
-switch (FEAT_CANALS, SELF, switch_waterfeature_locks_arctic_snowline, [
-	terrain_type
-]) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_locks_arctic_snowline, terrain_type) {
 	TILETYPE_SNOW: waterfeature_locks_arctic_snow;
 	switch_waterfeature_locks_elevation;
 }
 
 // switch for climate
-switch (FEAT_CANALS, SELF, switch_waterfeature_locks_climate, [
-	climate
-]) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_locks_climate, climate) {
 	CLIMATE_ARCTIC: switch_waterfeature_locks_arctic_snowline;
 	switch_waterfeature_locks_elevation;
 }

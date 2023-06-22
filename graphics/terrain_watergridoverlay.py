@@ -30,9 +30,14 @@ if mode == "shore":
 elif mode == "water":
   terrain_list = {
     "universal_watertile": "universal_watertile_32bpp.png",
-    "universal_watertile": "universal_watertiles_32bpp.png",
+    "universal_watertiles": "universal_watertiles_32bpp.png",
+    "universal_rivertiles": "universal_rivertiles_32bpp.png",
   }
-  palmask_path = "universal_watertiles_palmask.png"
+  palmask_paths = {
+    "universal_watertile": "universal_watertile_palmask.png",
+    "universal_watertiles": "universal_watertiles_palmask.png",
+    "universal_rivertiles": "universal_rivertiles_palmask.png",
+  }
   gridline_overlay_path = "watertiles_cornermarkers.png"
 elif mode == "shoretoyland":
   terrain_list = {
@@ -43,9 +48,14 @@ elif mode == "shoretoyland":
 elif mode == "watertoyland":
   terrain_list = {
     "toyland_watertile": "toyland_watertile_32bpp.png",
-    "toyland_watertile": "toyland_watertiles_32bpp.png",
+    "toyland_watertiles": "toyland_watertiles_32bpp.png",
+    "toyland_rivertiles": "toyland_rivertiles_32bpp.png",
   }
-  palmask_path = "toyland_watertiles_palmask.png"
+  palmask_paths = {
+    "toyland_watertile": "toyland_watertile_palmask.png",
+    "toyland_watertiles": "toyland_watertiles_palmask.png",
+    "toyland_rivertiles": "toyland_rivertiles_palmask.png",
+  }
   gridline_overlay_path = "toyland_watertiles_cornermarkers.png"
 
 print("Running in scale "+str(scale)+" (tile size "+str(tile_size)+")")
@@ -53,6 +63,8 @@ for terrain_key in terrain_list:
   print("  "+terrain_key)
   terrain_image_path = terrain_list[terrain_key]
   output_grid_path = os.path.join("pygen", terrain_key+"_gridline_32bpp.png")
+  if mode != "shore":
+    palmask_path = palmask_paths[terrain_key]
   output_gridpalmask_path = os.path.join("pygen", terrain_key+"_gridline_palmask.png")
   if check_update_needed([terrain_image_path, palmask_path, gridline_overlay_path], output_grid_path):
     terrain_image = Image.open(terrain_list[terrain_key]).convert("RGB")
