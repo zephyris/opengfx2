@@ -7,9 +7,6 @@ cd newgrf
 python3 ../templates/nml_preprocessor.py ogfx2_settings
 nmlc ogfx2_settings.nml --quiet -c -l lang/settings
 
-python3 ../templates/nml_preprocessor.py ogfx2_landscape
-nmlc ogfx2_landscape.nml --quiet -c -l lang/landscape
-
 if [ ! -z "$1" ]; then
   cp *.grf "$1"
 fi

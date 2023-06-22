@@ -1,4 +1,0 @@
-#include "nml/landscape/landscape-header.pnml"
-#include "../templates/zoom-sensitive.pnml"
-
-#include "nml/landscape/landscape-terrain.pnml"
