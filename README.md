@@ -21,6 +21,12 @@ Install the baseset by copying `opengfx2.tar` into the `baseset` directory for y
 
 Install the newgrfs by copying each `.grf` file into the `newgrf` directory for your OpenTTD installation. 
 
+To set as the base graphics set, go to `Game Options>(Graphics)>Base Graphics` Set and select `OpenGFX2`.
+
+To set OpenGFX2 settings, go to `NewGRF Settings`, find `OpenGFX2 Settings` and add to `Active NewGRF files`. Then, select `OpenGFX2 Settings` in the `Active NewGRF files list` and select `Set parameters` then adjust the settings. This is a bit of a hack, and will hopefully change in the future.
+
+Install other NewGRFs as normal using `NewGRF settings`.
+
 ## Further notes
 Image processing makes a bunch of intermediate files, particularly `*_8bpp.png` and things in `pygen` directories.
 
