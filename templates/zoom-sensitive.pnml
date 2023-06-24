@@ -404,9 +404,9 @@ template template_rail_fences(x, y, z) {
 
 //Infrastructure buildings: Rail depots
 template template_rail_depot(x, y, z) {
-	template_house_1x1_addoffs( 65,   0, z, 64,   0,  -4)
+	template_house_1x1_addoffs( 65,   0, z, 64,   1,  -4)
 	template_house_1x1_addoffs(  0,   0, z, 64,  23, -15)
-	template_house_1x1_addoffs( 65,  65, z, 64,   0,  -4)
+	template_house_1x1_addoffs( 65,  65, z, 64,   1,  -4)
 	template_house_1x1_addoffs(  0,  65, z, 64, -21, -15)
 	template_house_1x1_addoffs(  0, 195, z, 64, -21, -15)
 	template_house_1x1_addoffs(  0, 130, z, 64,  23, -15)
