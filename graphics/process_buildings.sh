@@ -35,7 +35,8 @@ building_base_flatten.py 1x2_tallofficeblock 1
 mask_tiles.py pygen/1x2_tallofficeblock_combo 1x2_tallofficeblock_tilemask.png 1
 building_base_flatten.py shantyhouses 1
 building_base_flatten.py tallofficeblock 1
-cp -p ../../temperate/64/pygen/hqs_32bpp.png .
+cp -p ../../temperate/64/pygen/hqs_32bpp.png pygen/
+cp -p ../../temperate/64/pygen/hqs_palmask.png pygen/
 building_base_flatten.py hqs 1
 mask_tiles.py pygen/hqs_combo ../../temperate/64/hqs_tilemask.png 1
 cd pygen
@@ -57,7 +58,8 @@ mask_tiles.py pygen/1x2_tallofficeblock_snow 1x2_tallofficeblock_tilemask.png 1
 mask_tiles.py pygen/1x2_tallofficeblock_base 1x2_tallofficeblock_tilemask.png 1
 mask_tiles.py pygen/2x1_hotel_combo 2x1_hotel_tilemask.png 1
 mask_tiles.py pygen/2x1_hotel_snow_combo 2x1_hotel_tilemask.png 1
-cp -p ../../temperate/64/pygen/hqs_32bpp.png .
+cp -p ../../temperate/64/pygen/hqs_32bpp.png pygen/
+cp -p ../../temperate/64/pygen/hqs_palmask.png pygen/
 building_base_flatten.py hqs 1
 mask_tiles.py pygen/hqs_combo ../../temperate/64/hqs_tilemask.png 1
 cd pygen
