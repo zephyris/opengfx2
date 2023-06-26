@@ -1,12 +1,12 @@
 //272-297 maglev track
 base_graphics spr272(272, "../graphics/infrastructure/64/pygen/maglev_tropical_grass_8bpp.png") { template_railtiles(0, 0, 1) }
-alternative_sprites(spr272, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_tropical_grass_8bpp.png") { template_railtiles(0, 0, 2) }
-alternative_sprites(spr272, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/maglev_tropical_grass_8bpp.png") { template_railtiles(0, 0, 4) }
+#ez alternative_sprites(spr272, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_tropical_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+#ez alternative_sprites(spr272, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/maglev_tropical_grass_8bpp.png") { template_railtiles(0, 0, 4) }
 
 //298-301 tropical maglev level crossings
 base_graphics spr298(298, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr298, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr298, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr298, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr298, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
 
 //302-309 tropical maglev tunnel
 base_graphics spr302(302, "../graphics/stations/general/64/pygen/tunnels_maglev_tropical_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }

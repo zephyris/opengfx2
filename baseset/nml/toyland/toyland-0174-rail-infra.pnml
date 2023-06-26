@@ -1,5 +1,3 @@
-//INCOMPLETE: Missing town statue
-
 //174-205 rail overlay
 base_graphics spr174(174, "../graphics/infrastructure/64/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 1) }
 

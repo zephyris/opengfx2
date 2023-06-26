@@ -1,6 +1,6 @@
 //774 Point selector for terraform
 base_graphics spr774(774, "../graphics/selectors/64/selector_point_8bpp.png") { template_general(1, 1, 7, 7, -3, -4, 1) }
-alternative_sprites(spr774, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/selectors/128/selector_point_8bpp.png") { template_general(1, 1, 7, 7, -3, -4, 1) }
-alternative_sprites(spr774, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/selectors/256/selector_point_8bpp.png") { template_general(1, 1, 7, 7, -3, -4, 1) }
+#ez alternative_sprites(spr774, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/selectors/128/selector_point_8bpp.png") { template_general(1, 1, 7, 7, -3, -4, 1) }
+#ez alternative_sprites(spr774, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/selectors/256/selector_point_8bpp.png") { template_general(1, 1, 7, 7, -3, -4, 1) }
 alternative_sprites(spr774, ZOOM_LEVEL_OUT_2X, BIT_DEPTH_8BPP, "../graphics/selectors/32/selector_point_8bpp.png") { template_general(1, 1, 7, 7, -3, -4, 1) }
 alternative_sprites(spr774, ZOOM_LEVEL_OUT_4X, BIT_DEPTH_8BPP, "../graphics/selectors/16/selector_point_8bpp.png") { template_general(1, 1, 5, 5, -2, -3, 1) }

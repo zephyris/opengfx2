@@ -31,7 +31,7 @@ template spr3709_template(z) {
 	template_animation_frame(64, 96, -31, -85, 15, z)
 }
 base_graphics spr3709(3709, "../graphics/effects/64/explosion_large_8bpp.png") { spr3709_template(1) }
-alternative_sprites(spr3709, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/effects/256/explosion_large_8bpp.png") { spr3709_template(4) }
+#ez alternative_sprites(spr3709, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/effects/256/explosion_large_8bpp.png") { spr3709_template(4) }
 
 //3725-3736 small explosion
 template spr3725_template(z) {
@@ -49,7 +49,7 @@ template spr3725_template(z) {
 	template_animation_frame(32, 32, -16, -16, 11, z)
 }
 base_graphics spr3725(3725, "../graphics/effects/64/explosion_small_8bpp.png") { spr3725_template(1) }
-alternative_sprites(spr3725, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/effects/256/explosion_small_8bpp.png") { spr3725_template(4) }
+#ez alternative_sprites(spr3725, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/effects/256/explosion_small_8bpp.png") { spr3725_template(4) }
 
 //3737-3740 breakdown smoke
 template spr3737_template(z) {

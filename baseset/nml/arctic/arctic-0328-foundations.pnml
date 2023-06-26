@@ -1,3 +1,3 @@
 //328-341 arctic foundations
 base_graphics spr328 (328, "../graphics/foundations/64/foundations_arctic_8bpp.png") { template_foundations_base(0, 0, 1) }
-alternative_sprites(spr328, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_arctic_8bpp.png") { template_foundations_base(0, 0, 4) }
+#ez alternative_sprites(spr328, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_arctic_8bpp.png") { template_foundations_base(0, 0, 4) }

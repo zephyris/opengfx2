@@ -1,4 +1,4 @@
 //388-406 road on tropical grass
 base_graphics spr388(388, "../graphics/infrastructure/64/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
-alternative_sprites(spr388, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
-alternative_sprites(spr388, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
+#ez alternative_sprites(spr388, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
+#ez alternative_sprites(spr388, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 4) }

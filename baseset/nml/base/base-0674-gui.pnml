@@ -132,12 +132,6 @@ base_graphics spr748( 748, "../graphics/icons/1/icons_20px_8bpp.png") {
 }
 
 //752-770 tile selectors
-base_graphics spr752(752, "../graphics/selectors/64/selector_tile_8bpp.png") {
-	template_selectors_tile(0, 0, 1)
-}
-alternative_sprites(spr752, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/selectors/128/selector_tile_8bpp.png") {
-	template_selectors_tile(0, 0, 2)
-}
-alternative_sprites(spr752, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/selectors/256/selector_tile_8bpp.png") {
-	template_selectors_tile(0, 0, 4)
-}
+base_graphics spr752(752, "../graphics/selectors/64/selector_tile_8bpp.png") { template_selectors_tile(0, 0, 1) }
+#ez alternative_sprites(spr752, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/selectors/128/selector_tile_8bpp.png") { template_selectors_tile(0, 0, 2) }
+#ez alternative_sprites(spr752, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/selectors/256/selector_tile_8bpp.png") { template_selectors_tile(0, 0, 4) }

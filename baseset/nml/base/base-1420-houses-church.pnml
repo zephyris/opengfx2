@@ -1,7 +1,7 @@
 //1420 plain paved tile
 base_graphics spr1420(1420, "../graphics/terrain/64/general_concretetiles_8bpp.png") { template_flattile_single(0, 0, 1) }
-alternative_sprites(spr1420, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/general_concretetiles_8bpp.png") { template_flattile_single(0, 0, 2) }
-alternative_sprites(spr1420, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/general_concretetiles_8bpp.png") { template_flattile_single(0, 0, 4) }
+#ez alternative_sprites(spr1420, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/general_concretetiles_8bpp.png") { template_flattile_single(0, 0, 2) }
+#ez alternative_sprites(spr1420, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/general_concretetiles_8bpp.png") { template_flattile_single(0, 0, 4) }
 
 //1421-1437 bunch'o'buildings
 //offices
@@ -32,10 +32,10 @@ base_graphics spr1434(1434, "../graphics/towns/temperate/64/pygen/churches_8bpp.
 	template_house_1x1(0, 65, 1, 64) // Recolour: CHURCH_RED, CHURCH_CREAM
 	template_house_1x1(0,	0, 1, 64) // Recolour: CHURCH_RED, CHURCH_CREAM
 }
-alternative_sprites(spr1434, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/churches_8bpp.png") {
-	template_house_1x1(0,130, 4, 64)
-	template_house_1x1(0, 65, 4, 64)
-	template_house_1x1(0, 0, 4, 64)
-}
+#ez alternative_sprites(spr1434, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/churches_8bpp.png") {
+#ez 	template_house_1x1(0,130, 4, 64)
+#ez 	template_house_1x1(0, 65, 4, 64)
+#ez 	template_house_1x1(0, 0, 4, 64)
+#ez }
 base_graphics spr1437(1437, "../graphics/towns/temperate/64/pygen/churches_base_8bpp.png") { template_house_1x1(0,	0, 1, 64) }
-//alternative_sprites(spr1437, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/churches_base_8bpp.png") { template_house_1x1(0, 0, 4, 64) }
+//#ez alternative_sprites(spr1437, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/churches_base_8bpp.png") { template_house_1x1(0, 0, 4, 64) }

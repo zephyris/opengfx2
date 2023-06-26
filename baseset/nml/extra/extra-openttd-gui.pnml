@@ -1,7 +1,7 @@
 // OTTD_GUI 0-11 tile border hightlights
 replacenew ottd_gui0(OTTD_GUI,  "../graphics/selectors/64/selector_halftile_8bpp.png", 0) { template_selectors_halftile(0, 0, 1) }
-alternative_sprites (ottd_gui0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/selectors/128/selector_halftile_8bpp.png") { template_selectors_halftile(0, 0, 2) }
-alternative_sprites (ottd_gui0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/selectors/256/selector_halftile_8bpp.png") { template_selectors_halftile(0, 0, 4) }
+#ez alternative_sprites (ottd_gui0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/selectors/128/selector_halftile_8bpp.png") { template_selectors_halftile(0, 0, 2) }
+#ez alternative_sprites (ottd_gui0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/selectors/256/selector_halftile_8bpp.png") { template_selectors_halftile(0, 0, 4) }
 
 // OTTD_GUI 12-13 title screen letters
 replacenew ottd_gui12(OTTD_GUI, "../graphics/icons/1/title_letters_alt_8bpp.png", 12) {

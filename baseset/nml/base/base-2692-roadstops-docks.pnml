@@ -1,14 +1,14 @@
 //road stops
 //2692-2707 bus stop
 base_graphics spr2692(2692, "../graphics/infrastructure/64/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 1) } // ground tiles
-alternative_sprites(spr2692, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 2) }
-alternative_sprites(spr2692, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 4) }
+#ez alternative_sprites(spr2692, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 2) }
+#ez alternative_sprites(spr2692, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 4) }
 base_graphics spr2696(2696, "../graphics/stations/general/64/pygen/roadstops_8bpp.png") { template_busstop(325, 0, 1) } // building sprites
 
 //2708-2723 lorry stop
 base_graphics spr2708(2708, "../graphics/infrastructure/64/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 1) } // ground tiles
-alternative_sprites(spr2708, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 2) }
-alternative_sprites(spr2708, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 4) }
+#ez alternative_sprites(spr2708, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 2) }
+#ez alternative_sprites(spr2708, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_general_concrete_8bpp.png") { template_roadstoptiles(0, 0, 4) }
 base_graphics spr2712(2712, "../graphics/stations/general/64/pygen/roadstops_8bpp.png") { template_lorrystop(0, 0, 1) } // building sprites
 
 //2724-702 airport and road stop cursors

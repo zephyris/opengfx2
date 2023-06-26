@@ -11,64 +11,64 @@ base_graphics spr1311(1311, "../graphics/cursors/1/pygen/default_8bpp.png") {
 
 //1313-1331 road city
 base_graphics spr1313(1313, "../graphics/infrastructure/64/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 1) }
-alternative_sprites(spr1313, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 2) }
-alternative_sprites(spr1313, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 4) }
+#ez alternative_sprites(spr1313, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 2) }
+#ez alternative_sprites(spr1313, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 4) }
 
 //1332-1350 road temperate grass
 base_graphics spr1332(1332, "../graphics/infrastructure/64/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
-alternative_sprites(spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
-alternative_sprites(spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
+#ez alternative_sprites(spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
+#ez alternative_sprites(spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
 
 //1351-1369 road snowy terrain
 base_graphics spr1351(1351, "../graphics/infrastructure/64/pygen/road_arctic_snow_8bpp.png") { template_roadtiles(0, 0, 1) }
-alternative_sprites(spr1351, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_arctic_snow_8bpp.png") { template_roadtiles(0, 0, 2) }
-alternative_sprites(spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_arctic_snow_8bpp.png") { template_roadtiles(0, 0, 4) }
+#ez alternative_sprites(spr1351, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_arctic_snow_8bpp.png") { template_roadtiles(0, 0, 2) }
+#ez alternative_sprites(spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_arctic_snow_8bpp.png") { template_roadtiles(0, 0, 4) }
 
 //1370-1405 bunch'o'levelcrossings
 //1370-1373 level crossing rail temperate grass
 base_graphics spr1370(1370, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr1370, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr1370, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr1370, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr1370, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
 //1374-1377 level crossing rail city
 base_graphics spr1374(1374, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr1374, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr1374, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr1374, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr1374, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }
 //1378-1381 level crossing rail snowy terrain
 base_graphics spr1378(1378, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr1378, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr1378, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr1378, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr1378, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 4) }
 //1382-1385 level crossing monorail temperate grass
 base_graphics spr1382(1382, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr1382, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr1382, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr1382, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr1382, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
 //1386-1389 level crossing monorail city
 base_graphics spr1386(1386, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr1386, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr1386, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr1386, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr1386, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }
 //1390-1393 level crossing monorail snowy terrain
 base_graphics spr1390(1390, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr1390, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr1390, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr1390, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr1390, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 4) }
 //1394-1397 level crossing maglev temperate grass
 base_graphics spr1394(1394, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr1394, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr1394, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr1394, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr1394, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_temperate_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
 //1398-1401 level crossing maglev city
 base_graphics spr1398(1398, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr1398, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr1398, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr1398, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr1398, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }
 //1402-1405 level crossing maglev snowy terrain
 base_graphics spr1402(1402, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 1) }
-alternative_sprites(spr1402, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 2) }
-alternative_sprites(spr1402, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 4) }
+#ez alternative_sprites(spr1402, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 2) }
+#ez alternative_sprites(spr1402, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_snow_8bpp.png") { template_railcrossing(0, 0, 4) }
 
 //1406-1407 street lights
 base_graphics spr1406(1406, "../graphics/towns/streetfurniture/64/town_lamp_8bpp.png") { template_road_lights(0, 0, 1) }
-alternative_sprites(spr1406, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/streetfurniture/256/town_lamp_8bpp.png") { template_road_lights(0, 0, 4) }
+#ez alternative_sprites(spr1406, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/streetfurniture/256/town_lamp_8bpp.png") { template_road_lights(0, 0, 4) }
 
 //1408-1413 road depot
 base_graphics spr1408(1408, "../graphics/stations/general/64/pygen/roaddepots_regions_8bpp.png") { template_road_depot(0, 0, 1) }
-alternative_sprites(spr1408, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/roaddepots_regions_8bpp.png") { template_road_depot(0, 0, 4) }
+#ez alternative_sprites(spr1408, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/roaddepots_regions_8bpp.png") { template_road_depot(0, 0, 4) }
 
 //1414-1419 road reconstruction
 base_graphics spr1414(1414, "../graphics/infrastructure/64/road_reconstruction_8bpp.png") { template_road_reconstruction(0, 0, 1) }
