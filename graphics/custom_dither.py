@@ -30,7 +30,6 @@ palimage=palette_image(palette_r, palette_g, palette_b)
 
 # Setup palette dict for quick lookup
 
-
 # Define special palette index sets
 # 'Normal' palette entries
 colors_normal = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 255]
@@ -186,6 +185,21 @@ def make_dithered(src, pal, dither_factor):
   # Return result
   return res
 
+def bluewhite_to_transp(src):
+  # Make sure src is RGB
+  src = src.convert("RGB")
+  # Find pixels in src exactly matching pure blue and make an alpha channel from this mask
+  width, height = src.size
+  a = Image.new("L", (width, height), 255)
+  for x in range(width):
+    for y in range(height):
+      pr, pg, pb = src.getpixel((x, y))
+      if 0 == pr and 0 == pg and 255 == pb:
+        a.putpixel((x, y), 0)
+  # Make RGBA composite
+  r, g, b = src.split()
+  return Image.merge("RGBA", (r, g, b, a))
+
 suffix = "_32bpp.png";
 print("Converting to 8-bit")
 for input_file in glob.glob("*"+suffix):
@@ -194,11 +208,8 @@ for input_file in glob.glob("*"+suffix):
   name = input_file[:-len(suffix)]
   if verbose == True:
     print(" "+name)
-  # BUG: Also check for changes to palmask file
-  do_processing = check_update_needed([input_file, input_file+"_palmask.png"], name+"_8bpp.png")
-  if do_processing:
+  if check_update_needed([input_file, input_file+"_palmask.png"], name+"_8bpp.png"):
     with Image.open(input_file) as image:
-      name = input_file[:-len(suffix)]
       width, height = image.size
       if os.path.isfile(name+"_palmask.png"):
         palmask = Image.open(name+"_palmask.png")
@@ -207,3 +218,7 @@ for input_file in glob.glob("*"+suffix):
         palmask.putpalette(palimage.getpalette())
       image_8bpp = make_8bpp(image, palmask, 1);
       image_8bpp.save(name+"_8bpp.png", "PNG")
+  if check_update_needed([input_file, input_file+"_palmask.png"], name+"_bt32bpp.png"):
+    with Image.open(input_file) as image:
+      image_bt32bpp = bluewhite_to_transp(image)
+      image_bt32bpp.save(name+"_bt32bpp.png", "PNG")

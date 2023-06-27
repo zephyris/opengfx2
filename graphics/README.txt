@@ -3,8 +3,8 @@ This is an 8-bit (8bpp) image set.
 Many images are automatically generated. All 8-bit images are generated from RGB or RGBA (32bpp) png images.
 The 32bpp png images may themselves have a source, and may be manually derived from Paint.NET (pdn), GIMP (xcf) or Blender (blend) files.
 
-All "*_8bpp.png" images are automatically generated from the file called "*_32bpp.png".
-Do not directly modify any file named "*_8bpp.png", your changes will be overwritten!
+All "*_8bpp.png" and "*_bt32bpp.png" images are automatically generated from the file called "*_32bpp.png".
+Do not directly modify any file named "*_8bpp.png" or "*_bt32bpp.png", your changes will be overwritten!
 
 Files within a directory named "pygen" are automatically generated from images in the parent directory.
 This includes files named "*_32bpp.png", do not modify them as your changes will be overwritten!
@@ -21,11 +21,14 @@ Overlaying various additional layers to add detail:
 	"*_overlayshading.png": A 32bpp image overlaid in overlay blending mode.
 	"*_overlaynormal.png": A pseudo-8bpp image overlaid in alpha blending mode.
 Converting to 8bpp:
-	Conversion uses a custom, standardised, dither script.
+	Conversion uses a custom, standardised, dither script, making "*_8bpp.png".
 	If "*_palmask.png" exists, restricting dither to within the colour series/groups within this set.
 	"*_palmask.png" is usually generated from unshaded recoloured "*_shape.png" images, overlaid with "*_overlaynormal.png"
 	Animated palette indices are not used in normal dithering, unless in the "*_palmask.png" image, in which case they are protected and preserved.
+Converting for 32bpp:
+	Conversion simply replaces tranparent blue in the 32bpp image to transparent, making "_bt32bpp.png".
 
-Further sprite specific processing may then be done, including:
-	Overlaying/merging building sprites with ground tiles
-	Cutting up a multi-tile sprite into individual sprites
+Further sprite specific processing may be done, including:
+	Overlaying/merging sprites (eg. building sprites onto their ground tile)
+	Cutting up a sprite into individual sprites (eg. multi-tile buildings)
+	TODO: Ensuring a region of multiple sprites is identical between them (eg. avoiding dither dancing for animations)

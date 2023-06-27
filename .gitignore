@@ -5,6 +5,7 @@ __pycache__/
 
 # generated images
 *_8bpp.png
+*_bt32bpp.png
 pygen/
 
 # nmlc intermediates and output

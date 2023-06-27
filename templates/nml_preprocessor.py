@@ -21,7 +21,7 @@ nml file with the same name as the pnml file
 comment_import = "#include"
 
 comment_alternate = ["#ez ", "#32 "]
-settings_alternate = [True, False]
+settings_alternate = [True, True]
 
 import sys
 
