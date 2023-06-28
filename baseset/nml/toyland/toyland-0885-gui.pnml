@@ -13,12 +13,12 @@ base_graphics spr888(888, "../graphics/icons/1/icons_20px_8bpp.png") {
     template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 7, 1) // construction toolbar: build lorry stop
     template_general(1, 148, 40, 20, 0, 0, 1) // construction toolbar: build rail station, wide
     template_sprite_matrix(20, 20, 0, 0, 7, 7, 1) // construction toolbar: build rail station, square
-    template_sprite_matrix(20, 20, 0, 0, 0, 11, 1) // Monorail N-S
-	template_sprite_matrix(20, 20, 0, 0, 1, 11, 1) // Monorail SW-NE
-	template_sprite_matrix(20, 20, 0, 0, 2, 11, 1) // Monorail W-E
-	template_sprite_matrix(20, 20, 0, 0, 3, 11, 1) // Monorail NW-SE
-    template_sprite_matrix(20, 20, 0, 0, 0, 12, 1) // Maglev
-	template_sprite_matrix(20, 20, 0, 0, 1, 12, 1)
-	template_sprite_matrix(20, 20, 0, 0, 2, 12, 1)
-	template_sprite_matrix(20, 20, 0, 0, 3, 12, 1)
+    template_sprite_matrix(20, 20, 0, 0, 0, 12, 1) // Monorail N-S
+	template_sprite_matrix(20, 20, 0, 0, 1, 12, 1) // Monorail SW-NE
+	template_sprite_matrix(20, 20, 0, 0, 2, 12, 1) // Monorail W-E
+	template_sprite_matrix(20, 20, 0, 0, 3, 12, 1) // Monorail NW-SE
+    template_sprite_matrix(20, 20, 0, 0, 0, 11, 1) // Maglev
+	template_sprite_matrix(20, 20, 0, 0, 1, 11, 1)
+	template_sprite_matrix(20, 20, 0, 0, 2, 11, 1)
+	template_sprite_matrix(20, 20, 0, 0, 3, 11, 1)
 }

@@ -2,16 +2,16 @@
 base_graphics spr1178(1178, "../graphics/icons/1/icons_20px_8bpp.png") {
     template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 9, 1) // construction toolbar: road tunnel
     template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 11, 1) // construction toolbar: rail tunnel
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 12, 1) // construction toolbar: monorail tunnel
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 13, 1) // construction toolbar: maglev tunnel
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 11, 1) // construction toolbar: monorail tunnel
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 12, 1) // construction toolbar: maglev tunnel
 }
 
 //1182-1185 tunnel cursors
 base_graphics spr1182(1182, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(5, 8, 1) // road tunnel
     template_cursor_matrix(5, 10, 1) // rail tunnel
-    template_cursor_matrix(5, 11, 1) // monorail tunnel
-    template_cursor_matrix(5, 12, 1) // maglev tunnel
+    template_cursor_matrix(5, 10, 1) // monorail tunnel
+    template_cursor_matrix(5, 11, 1) // maglev tunnel
 }
 
 //1186 tree cursor
