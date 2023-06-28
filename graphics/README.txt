@@ -26,7 +26,9 @@ Converting to 8bpp:
 	"*_palmask.png" is usually generated from unshaded recoloured "*_shape.png" images, overlaid with "*_overlaynormal.png"
 	Animated palette indices are not used in normal dithering, unless in the "*_palmask.png" image, in which case they are protected and preserved.
 Converting for 32bpp:
-	Conversion simply replaces tranparent blue in the 32bpp image to transparent, making "_bt32bpp.png".
+	Conversion uses two strategies:
+	1. Simply replace tranparent blue in the 32bpp image with transparent, making the 'blue transparent' image "_bt32bpp.png". This is good for most sprites.
+	2. Make tranparent blue in the 32bpp image transparent, and for other pixels measure the brightness difference to the 8bpp sprite making the 'remainder' image "_rm32bpp.png". This is convenient for recoloured sprites.
 
 Further sprite specific processing may be done, including:
 	Overlaying/merging sprites (eg. building sprites onto their ground tile)

@@ -200,6 +200,27 @@ def bluewhite_to_transp(src):
   r, g, b = src.split()
   return Image.merge("RGBA", (r, g, b, a))
 
+def remainder_32bpp(src8bit, src32bit):
+  """
+  Uses a input 32bit image and its 8bit pallete conversion to make 32bpp (but grayscale) map of brightness remainder.
+  Makes an output 32bit image which, when used with the input 8bit image as a mask, inherits hue/sat from 8bit but brightness from input 32bpp.
+  Preserves alpha channel from 32bit image.
+  """
+  def v(r, g, b):
+    return max(r, g, b)
+
+  src8bit = src8bit.convert("RGBA")
+  src32bit = src32bit.convert("RGBA")
+  out32bit = src32bit.copy()
+  width, height = src32bit.size
+  for x in range(width):
+    for y in range(height):
+      pr8, pg8, pb8, pa8 = src8bit.getpixel((x, y))
+      pr32, pg32, pb32, pa32 = src32bit.getpixel((x, y))
+      deltav = v(pr32, pg32, pb32) - v(pr8, pg8, pb8) + 128
+      out32bit.putpixel((x, y), (deltav, deltav, deltav, pa32))
+  return out32bit
+
 suffix = "_32bpp.png";
 print("Converting to 8-bit")
 for input_file in glob.glob("*"+suffix):
@@ -208,7 +229,7 @@ for input_file in glob.glob("*"+suffix):
   name = input_file[:-len(suffix)]
   if verbose == True:
     print(" "+name)
-  if check_update_needed([input_file, input_file+"_palmask.png"], name+"_8bpp.png"):
+  if check_update_needed([input_file, input_file+"_palmask.png"], name+"_8bpp.png") or check_update_needed([input_file, input_file+"_palmask.png"], name+"_bt32bpp.png") or check_update_needed([input_file, input_file+"_palmask.png"], name+"_rm32bpp.png"):
     with Image.open(input_file) as image:
       width, height = image.size
       if os.path.isfile(name+"_palmask.png"):
@@ -218,7 +239,7 @@ for input_file in glob.glob("*"+suffix):
         palmask.putpalette(palimage.getpalette())
       image_8bpp = make_8bpp(image, palmask, 1);
       image_8bpp.save(name+"_8bpp.png", "PNG")
-  if check_update_needed([input_file, input_file+"_palmask.png"], name+"_bt32bpp.png"):
-    with Image.open(input_file) as image:
       image_bt32bpp = bluewhite_to_transp(image)
       image_bt32bpp.save(name+"_bt32bpp.png", "PNG")
+      image_rm32bpp = remainder_32bpp(image_8bpp, image_bt32bpp)
+      image_rm32bpp.save(name+"_rm32bpp.png", "PNG")
