@@ -8,8 +8,9 @@ Import lines in the pnml must be formatted:
 Path must be quoted, no additional whitespace is tolerated.
 
 Extra zoom and 32bpp alternative sprites are controlled by removing comment strings exactly matching:
-"#ez" for extra zoom sprites
-"#32" for 32bpp sprites
+"#ez " for extra zoom sprites
+"#32 " for 32bpp sprites
+(use "#32 #ez " for 32bpp extra zoom sprites)
 
 Argument:
 pnml name (without extension)
