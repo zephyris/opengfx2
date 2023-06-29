@@ -5,6 +5,12 @@ replacenew catenary_spr0(CATENARY, "../graphics/infrastructure/64/elrail_catenar
 	template_elrail_catenary(0, 80, 1) // 2 tile span, part 2
 	template_elrail_catenarytunnel(0, 120, 1) // tunnel entrance
 }
+#ez alternative_sprites (catenary_spr0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/elrail_catenary_8bpp.png") {
+#ez 	template_elrail_catenary(0,  0, 4) // 1 tile span
+#ez 	template_elrail_catenary(0, 40, 4) // 2 tile span, part 1
+#ez 	template_elrail_catenary(0, 80, 4) // 2 tile span, part 2
+#ez 	template_elrail_catenarytunnel(0, 120, 4) // tunnel entrance
+#ez }
 
 // CATENARY 28-35 masts
 replacenew catenary_spr28(CATENARY, "../graphics/infrastructure/64/elrail_masts_8bpp.png", 28) { template_elrail_masts(1) }
