@@ -25,7 +25,7 @@ base_graphics spr1037(1037, "../graphics/infrastructure/64/pygen/rail_arctic_sno
 //1063-1068 rail depots
 base_graphics spr1063(1063, "../graphics/stations/general/64/pygen/raildepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
 #ez alternative_sprites (spr1063, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/raildepots_regions_8bpp.png") { template_rail_depot(0, 0, 4) }
-#32 alternative_sprites (spr1063, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/raildepots_regions_rm32bpp.png", "../graphics/stations/general/64/pygen/raildepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
+#32 alternative_sprites (spr1063, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/raildepots_regions_rm32bpp.png", "../graphics/stations/general/64/pygen/raildepots_regions_8bpp.png") { template_rail_depot(0, 0, 1) }
 #32 #ez alternative_sprites (spr1063, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/raildepots_regions_rm32bpp.png", "../graphics/stations/general/256/pygen/raildepots_regions_8bpp.png") { template_rail_depot(0, 0, 4) }
 
 //1069-1086 rail station
