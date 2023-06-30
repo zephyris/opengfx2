@@ -539,7 +539,7 @@ template template_road_reconstruction(x, y, z) {
 	[ 151*z+x*z, 17*z+y*z, 19*z, 15*z-1,  -9*z,  -7*z ]
 }
 
-// Infrastructure: Road one way overlay
+// Infrastructure: Road one way overlay (flat only)
 template template_road_oneway(x, y, z) {
 	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
 	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
@@ -547,6 +547,22 @@ template template_road_oneway(x, y, z) {
 	[ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
 	[ 261*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
 	[ 326*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z, -16*z ]
+}
+
+// Infrastructure: Road one way overlay (slopes only)
+template template_road_oneway_slopes(x, y, z) {
+	[   1*z+x*z, 33*z+y*z, 64*z, 40*z-1, -31*z, -19*z ]
+	[  66*z+x*z, 33*z+y*z, 64*z, 40*z-1, -31*z, -19*z ]
+	[ 131*z+x*z, 33*z+y*z, 64*z, 40*z-1, -31*z, -21*z ]
+	[ 196*z+x*z, 33*z+y*z, 64*z, 40*z-1, -31*z, -19*z ]
+	[ 261*z+x*z, 33*z+y*z, 64*z, 40*z-1, -31*z, -19*z ]
+	[ 326*z+x*z, 33*z+y*z, 64*z, 40*z-1, -31*z, -21*z ]
+	[   1*z+x*z, 73*z+y*z, 64*z, 24*z-1, -31*z, -13*z ]
+	[  66*z+x*z, 73*z+y*z, 64*z, 24*z-1, -31*z, -12*z ]
+	[ 131*z+x*z, 73*z+y*z, 64*z, 24*z-1, -31*z, -13*z ]
+	[ 196*z+x*z, 73*z+y*z, 64*z, 24*z-1, -31*z, -12*z ]
+	[ 261*z+x*z, 73*z+y*z, 64*z, 24*z-1, -31*z, -13*z ]
+	[ 326*z+x*z, 73*z+y*z, 64*z, 24*z-1, -31*z, -13*z ]
 }
 
 // Terrain: Standard groundtiles

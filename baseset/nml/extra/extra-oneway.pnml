@@ -1,4 +1,2 @@
 //one way road
-replacenew(ONE_WAY_ROAD, "../graphics/infrastructure/64/road_oneway_8bpp.png") {
-	template_road_oneway(0, 0, 1)
-}
+replacenew(ONE_WAY_ROAD, "../graphics/infrastructure/64/road_oneway_8bpp.png") { template_road_oneway(0, 0, 1) template_road_oneway_slopes(0, 0, 1) }
