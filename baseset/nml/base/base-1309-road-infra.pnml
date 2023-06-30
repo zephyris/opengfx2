@@ -13,16 +13,25 @@ base_graphics spr1311(1311, "../graphics/cursors/1/pygen/default_8bpp.png") {
 base_graphics spr1313(1313, "../graphics/infrastructure/64/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 1) }
 #ez alternative_sprites(spr1313, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 2) }
 #ez alternative_sprites(spr1313, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 4) }
+#32 alternative_sprites(spr1313, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_general_concrete_rm32bpp.png", "../graphics/infrastructure/64/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 1) }
+#32 #ez alternative_sprites(spr1313, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_general_concrete_rm32bpp.png", "../graphics/infrastructure/128/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 2) }
+#32 #ez alternative_sprites(spr1313, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_general_concrete_rm32bpp.png", "../graphics/infrastructure/256/pygen/road_general_concrete_8bpp.png") { template_roadtiles(0, 0, 4) }
 
 //1332-1350 road temperate grass
 base_graphics spr1332(1332, "../graphics/infrastructure/64/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
 #ez alternative_sprites(spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
 #ez alternative_sprites(spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
+#32 alternative_sprites(spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_temperate_grass_bt32bpp.png") { template_roadtiles(0, 0, 1) }
+#32 #ez alternative_sprites(spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_bt32bpp.png") { template_roadtiles(0, 0, 2) }
+#32 #ez alternative_sprites(spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_bt32bpp.png") { template_roadtiles(0, 0, 4) }
 
 //1351-1369 road snowy terrain
 base_graphics spr1351(1351, "../graphics/infrastructure/64/pygen/road_arctic_snow_8bpp.png") { template_roadtiles(0, 0, 1) }
 #ez alternative_sprites(spr1351, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_arctic_snow_8bpp.png") { template_roadtiles(0, 0, 2) }
 #ez alternative_sprites(spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_arctic_snow_8bpp.png") { template_roadtiles(0, 0, 4) }
+#32 alternative_sprites(spr1351, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_arctic_snow_bt32bpp.png") { template_roadtiles(0, 0, 1) }
+#32 #ez alternative_sprites(spr1351, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_arctic_snow_bt32bpp.png") { template_roadtiles(0, 0, 2) }
+#32 #ez alternative_sprites(spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_arctic_snow_bt32bpp.png") { template_roadtiles(0, 0, 4) }
 
 //1370-1405 bunch'o'levelcrossings
 //1370-1373 level crossing rail temperate grass
