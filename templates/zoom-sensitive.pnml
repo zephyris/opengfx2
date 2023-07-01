@@ -1246,6 +1246,11 @@ template template_tramtiles(x, y, z) {
 	[1041*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
 	[1106*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
 	[1171*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+
+	[ 716*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 781*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 846*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 911*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
 }
 
 // Infrastructure: tram bridge tiles

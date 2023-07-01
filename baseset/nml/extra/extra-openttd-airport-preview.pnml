@@ -1,7 +1,7 @@
 //TODO: Update based on finalised airport sprites
 
 // AIRPORT_PREVIEW
-replacenew(FLAGS, "../graphics/icons/1/airports_8bpp.png") {
+replacenew(AIRPORT_PREVIEW, "../graphics/icons/1/airports_8bpp.png") {
 	template_sprite_matrix(230, 140, 0, 0, 0, 0, 1)
 	template_sprite_matrix(230, 140, 0, 0, 0, 1, 1)
 	template_sprite_matrix(230, 140, 0, 0, 0, 2, 1)
