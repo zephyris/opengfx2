@@ -1,448 +1,520 @@
 //2011-2364 industries
 //2011-2025 coal mine
-base_graphics spr2011(2011, "../graphics/industries/temperate/64/pygen/coalmine_8bpp.png") {
-	template_house_1x1_addoffs(  0,150, 1, 74, 11, -11)
-	template_house_1x1_addoffs(  0, 75, 1, 74, 11, -11)
-	template_house_1x1_addoffs(  0,  0, 1, 74, 11, -11)
-	template_house_1x1_addoffs( 65,  0, 1, 74, 11, -11)
-	template_house_1x1_addoffs(130,  0, 1, 74, 11, -11)
-	template_house_1x1(195,150, 1, 74)
-	template_house_1x1(195, 75, 1, 74)
-	template_house_1x1(195,  0, 1, 74)
-	template_house_1x1_addoffs(260,150, 1, 74, 0, -12)
-	template_house_1x1_addoffs(260, 75, 1, 74, 0, -12)
-	template_house_1x1_addoffs(260,  0, 1, 74, 0, -12)
+template template_spr2011(z) {
+	template_house_1x1_addoffs(  0,150, z, 74, 11, -11)
+	template_house_1x1_addoffs(  0, 75, z, 74, 11, -11)
+	template_house_1x1_addoffs(  0,  0, z, 74, 11, -11)
+	template_house_1x1_addoffs( 65,  0, z, 74, 11, -11)
+	template_house_1x1_addoffs(130,  0, z, 74, 11, -11)
+	template_house_1x1(195,150, z, 74)
+	template_house_1x1(195, 75, z, 74)
+	template_house_1x1(195,  0, z, 74)
+	template_house_1x1_addoffs(260,150, z, 74, 0, -12)
+	template_house_1x1_addoffs(260, 75, z, 74, 0, -12)
+	template_house_1x1_addoffs(260,  0, z, 74, 0, -12)
 }
-base_graphics spr2022(2022, "../graphics/industries/temperate/64/pygen/coalmine_base_tiles_8bpp.png") {
-	template_house_1x1(  0,  0, 1, 74) // also used elsewhere, including gold mine, factory 2nd construction stage
-	template_house_1x1( 65,  0, 1, 74)
-	template_house_1x1(130,  0, 1, 74)
-	template_house_1x1(195,  0, 1, 74)
+base_graphics spr2011(2011, "../graphics/industries/temperate/64/pygen/coalmine_8bpp.png") { template_spr2011(1) }
+#32 alternative_sprites(spr2011, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/coalmine_bt32bpp.png") { template_spr2011(1) }
+template template_spr2022(z) {
+	template_house_1x1(  0,  0, z, 74) // also used elsewhere, including gold mine, factory 2nd construction stage
+	template_house_1x1( 65,  0, z, 74)
+	template_house_1x1(130,  0, z, 74)
+	template_house_1x1(195,  0, z, 74)
 }
+base_graphics spr2022(2022, "../graphics/industries/temperate/64/pygen/coalmine_base_tiles_8bpp.png") { template_spr2022(1) }
+#32 alternative_sprites(spr2022, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/coalmine_base_tiles_bt32bpp.png") { template_spr2022(1) }
 
 //2026-2039 copper ore mine
-base_graphics spr2026(2026, "../graphics/industries/tropical/64/pygen/copperoremine_8bpp.png") {
-	template_house_1x1(  0,150, 1, 74)
-	template_house_1x1(  0, 75, 1, 74)
-	template_house_1x1(  0,  0, 1, 74)
-	template_house_1x1( 65,  0, 1, 74)
-	template_house_1x1(130,  0, 1, 74)
-	template_house_1x1(195,150, 1, 74)
-	template_house_1x1(195, 75, 1, 74)
-	template_house_1x1(195,  0, 1, 74)
-	template_house_1x1(260,150, 1, 74)
-	template_house_1x1(260, 75, 1, 74)
-	template_house_1x1(260,  0, 1, 74)
-	template_house_1x1(325,150, 1, 74)
-	template_house_1x1(325, 75, 1, 74)
-	template_house_1x1(325,  0, 1, 74)
+template template_spr2026(z) {
+	template_house_1x1(  0,150, z, 74)
+	template_house_1x1(  0, 75, z, 74)
+	template_house_1x1(  0,  0, z, 74)
+	template_house_1x1( 65,  0, z, 74)
+	template_house_1x1(130,  0, z, 74)
+	template_house_1x1(195,150, z, 74)
+	template_house_1x1(195, 75, z, 74)
+	template_house_1x1(195,  0, z, 74)
+	template_house_1x1(260,150, z, 74)
+	template_house_1x1(260, 75, z, 74)
+	template_house_1x1(260,  0, z, 74)
+	template_house_1x1(325,150, z, 74)
+	template_house_1x1(325, 75, z, 74)
+	template_house_1x1(325,  0, z, 74)
 }
+base_graphics spr2026(2026, "../graphics/industries/tropical/64/pygen/copperoremine_8bpp.png") { template_spr2026(1) }
+#32 alternative_sprites(spr2026, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/tropical/64/pygen/copperoremine_bt32bpp.png") { template_spr2026(1) }
 //2040-2044 grey smoke effect
-base_graphics spr2040(2040, "../graphics/effects/64/industries_copperoremine_smoke_8bpp.png") {
-	template_animation_frame(20, 20, -10, -10, 0, 1)
-	template_animation_frame(20, 20, -10, -10, 1, 1)
-	template_animation_frame(20, 20, -10, -10, 2, 1)
-	template_animation_frame(20, 20, -10, -10, 3, 1)
-	template_animation_frame(20, 20, -10, -10, 4, 1)
+template template_spr2040(z) {
+	template_animation_frame(20, 20, -10, -10, 0, z)
+	template_animation_frame(20, 20, -10, -10, 1, z)
+	template_animation_frame(20, 20, -10, -10, 2, z)
+	template_animation_frame(20, 20, -10, -10, 3, z)
+	template_animation_frame(20, 20, -10, -10, 4, z)
 }
+base_graphics spr2040(2040, "../graphics/effects/64/industries_copperoremine_smoke_8bpp.png") { template_spr2040(1) }
+#32 alternative_sprites(spr2040, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/effects/64/industries_copperoremine_smoke_bt32bpp.png") { template_spr2040(1) }
 
 //2045-2054 power plant
-base_graphics spr2045(2045, "../graphics/industries/temperate/64/pygen/powerstation_8bpp.png") {
-	template_house_1x1(  0, 150, 1, 74)
-	template_house_1x1(  0,  75, 1, 74)
-	template_house_1x1(  0,   0, 1, 74)
-	template_house_1x1( 65, 150, 1, 74)
-	template_house_1x1( 65,  75, 1, 74)
-	template_house_1x1( 65,   0, 1, 74)
-	template_house_1x1(130, 150, 1, 74)
-	template_house_1x1(130,  75, 1, 74)
-	template_house_1x1(130,   0, 1, 74)
-	template_house_1x1(195,   0, 1, 74)
+template template_spr2045(z) {
+	template_house_1x1(  0, 150, z, 74)
+	template_house_1x1(  0,  75, z, 74)
+	template_house_1x1(  0,   0, z, 74)
+	template_house_1x1( 65, 150, z, 74)
+	template_house_1x1( 65,  75, z, 74)
+	template_house_1x1( 65,   0, z, 74)
+	template_house_1x1(130, 150, z, 74)
+	template_house_1x1(130,  75, z, 74)
+	template_house_1x1(130,   0, z, 74)
+	template_house_1x1(195,   0, z, 74)
 }
+base_graphics spr2045(2045, "../graphics/industries/temperate/64/pygen/powerstation_8bpp.png") { template_spr2045(1) }
+#32 alternative_sprites(spr2045, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/powerstation_bt32bpp.png") { template_spr2045(1) }
 //2055-2060 power plant spark effect
-base_graphics spr2055(2055, "../graphics/effects/64/industries_powerstation_sparks_8bpp.png") {
-	template_animation_frame(48, 48, -14, -16, 0, 1)
-	template_animation_frame(48, 48, -14, -16, 1, 1)
-	template_animation_frame(48, 48, -14, -16, 2, 1)
-	template_animation_frame(48, 48, -14, -16, 3, 1)
-	template_animation_frame(48, 48, -14, -16, 4, 1)
-	template_animation_frame(48, 48, -14, -16, 4, 1)
+template template_spr2055(z) {
+	template_animation_frame(48, 48, -14, -16, 0, z)
+	template_animation_frame(48, 48, -14, -16, 1, z)
+	template_animation_frame(48, 48, -14, -16, 2, z)
+	template_animation_frame(48, 48, -14, -16, 3, z)
+	template_animation_frame(48, 48, -14, -16, 4, z)
+	template_animation_frame(48, 48, -14, -16, 4, z)
 }
+base_graphics spr2055(2055, "../graphics/effects/64/industries_powerstation_sparks_8bpp.png") { template_spr2055(1) }
+#32 alternative_sprites(spr2055, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/effects/64/industries_powerstation_sparks_bt32bpp.png") { template_spr2055(1) }
 
 //2061-2071 sawmill
-base_graphics spr2061(2061, "../graphics/industries/temperate/64/pygen/sawmill_8bpp.png") {
-	template_house_1x1(  0, 150, 1, 74)
-	template_house_1x1(  0,  75, 1, 74)
-	template_house_1x1(  0,   0, 1, 74)
-	template_house_1x1( 65, 150, 1, 74)
-	template_house_1x1( 65,  75, 1, 74)
-	template_house_1x1( 65,   0, 1, 74)
-	template_house_1x1(130, 150, 1, 74)
-	template_house_1x1(130,  75, 1, 74)
-	template_house_1x1(130,   0, 1, 74)
-	template_house_1x1(195,   0, 1, 74)
-	template_house_1x1(260,   0, 1, 74)
+template template_spr2061(z) {
+	template_house_1x1(  0, 150, z, 74)
+	template_house_1x1(  0,  75, z, 74)
+	template_house_1x1(  0,   0, z, 74)
+	template_house_1x1( 65, 150, z, 74)
+	template_house_1x1( 65,  75, z, 74)
+	template_house_1x1( 65,   0, z, 74)
+	template_house_1x1(130, 150, z, 74)
+	template_house_1x1(130,  75, z, 74)
+	template_house_1x1(130,   0, z, 74)
+	template_house_1x1(195,   0, z, 74)
+	template_house_1x1(260,   0, z, 74)
 }
+base_graphics spr2061(2061, "../graphics/industries/temperate/64/pygen/sawmill_8bpp.png") { template_spr2061(1) }
+#32 alternative_sprites(spr2061, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/sawmill_rm32bpp.png", "../graphics/industries/temperate/64/pygen/sawmill_8bpp.png") { template_spr2061(1) }
+
 //2072-2077 forest
-base_graphics spr2072(2072, "../graphics/industries/arctic/64/forest_8bpp.png") {
-	template_house_1x1(  0,   0, 1, 74)
-	template_house_1x1( 65,   0, 1, 74)
-	template_house_1x1(130,   0, 1, 74)
-	template_house_1x1(195,   0, 1, 74)
-	template_house_1x1(260,   0, 1, 74)
-	template_house_1x1(325,   0, 1, 74)
+template template_spr2072(z) {
+	template_house_1x1(  0,   0, z, 74)
+	template_house_1x1( 65,   0, z, 74)
+	template_house_1x1(130,   0, z, 74)
+	template_house_1x1(195,   0, z, 74)
+	template_house_1x1(260,   0, z, 74)
+	template_house_1x1(325,   0, z, 74)
 }
+base_graphics spr2072(2072, "../graphics/industries/arctic/64/forest_8bpp.png") { template_spr2072(1) }
+#32 alternative_sprites(spr2072, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/forest_bt32bpp.png") { template_spr2072(1) }
 
 //2078-2095 oil refinery
-base_graphics spr2078(2078, "../graphics/industries/temperate/64/pygen/oil_refinery_8bpp.png") {
-	template_house_1x1(  0, 259, 1, 128)
-	template_house_1x1(  0, 130, 1, 128)
-	template_house_1x1(  0,   0, 1, 128)
-	template_house_1x1( 65, 259, 1, 128)
-	template_house_1x1( 65, 130, 1, 128)
-	template_house_1x1( 65,   0, 1, 128)
-	template_house_1x1(130, 259, 1, 128)
-	template_house_1x1(130, 130, 1, 128)
-	template_house_1x1(130,   0, 1, 128)
-	template_house_1x1(195, 259, 1, 128)
-	template_house_1x1(195, 130, 1, 128)
-	template_house_1x1(195,   0, 1, 128)
-	template_house_1x1(260, 259, 1, 128)
-	template_house_1x1(260, 130, 1, 128)
-	template_house_1x1(260,   0, 1, 128)
+template template_spr2078(z) {
+	template_house_1x1(  0, 259, z, 128)
+	template_house_1x1(  0, 130, z, 128)
+	template_house_1x1(  0,   0, z, 128)
+	template_house_1x1( 65, 259, z, 128)
+	template_house_1x1( 65, 130, z, 128)
+	template_house_1x1( 65,   0, z, 128)
+	template_house_1x1(130, 259, z, 128)
+	template_house_1x1(130, 130, z, 128)
+	template_house_1x1(130,   0, z, 128)
+	template_house_1x1(195, 259, z, 128)
+	template_house_1x1(195, 130, z, 128)
+	template_house_1x1(195,   0, z, 128)
+	template_house_1x1(260, 259, z, 128)
+	template_house_1x1(260, 130, z, 128)
+	template_house_1x1(260,   0, z, 128)
 }
-base_graphics spr2093(2093, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") {
-	template_house_1x1_addoffs(455, 195, 1, 96,   0,  -7)
-	template_house_1x1_addoffs(455, 98, 1, 96,   0,  -7)
+base_graphics spr2078(2078, "../graphics/industries/temperate/64/pygen/oil_refinery_8bpp.png") { template_spr2078(1) }
+#32 alternative_sprites(spr2078, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/oil_refinery_rm32bpp.png", "../graphics/industries/temperate/64/pygen/oil_refinery_8bpp.png") { template_spr2078(1) }
+//2093-2094 construction stages of building...
+template template_spr2093(z) {
+	template_house_1x1_addoffs(455, 195, z, 96, 0, -7)
+	template_house_1x1_addoffs(455,  98, z, 96, 0, -7)
 }
+base_graphics spr2093(2093, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_spr2093(1) }
+#32 alternative_sprites(spr2093, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/modernairport_bt32bpp.png") { template_spr2093(1) }
 //2095 ... shared with modern airport
 base_graphics spr2095(2095, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_airportoilrefinery_building(0, 0, 1) }
+#32 alternative_sprites(spr2095, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/modernairport_bt32bpp.png") { template_airportoilrefinery_building(0, 0, 1) }
 
 //2096-2105 oil rig
-base_graphics spr2096(2096, "../graphics/industries/temperate/64/pygen/oilrig_tiles_8bpp.png") {
-	template_house_1x1(  0,  0, 1, 172)
-	template_house_1x1( 65,  0, 1, 172)
-	template_house_1x1(130,  0, 1, 172)
-	template_house_1x1(195,  0, 1, 172)
-	template_house_1x1(  0,173, 1, 172)
-	template_house_1x1( 65,173, 1, 172)
-	template_house_1x1(130,173, 1, 172)
-	template_house_1x1(  0,346, 1, 172)
-	template_house_1x1( 65,346, 1, 172)
-	template_house_1x1(130,346, 1, 172)
+template template_spr2096(z) {
+	template_house_1x1(  0,  0, z, 172)
+	template_house_1x1( 65,  0, z, 172)
+	template_house_1x1(130,  0, z, 172)
+	template_house_1x1(195,  0, z, 172)
+	template_house_1x1(  0,173, z, 172)
+	template_house_1x1( 65,173, z, 172)
+	template_house_1x1(130,173, z, 172)
+	template_house_1x1(  0,346, z, 172)
+	template_house_1x1( 65,346, z, 172)
+	template_house_1x1(130,346, z, 172)
 }
+base_graphics spr2096(2096, "../graphics/industries/temperate/64/pygen/oilrig_tiles_8bpp.png") { template_spr2096(1) }
+#32 alternative_sprites(spr2096, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/oilrig_tiles_rm32bpp.png", "../graphics/industries/temperate/64/pygen/oilrig_tiles_8bpp.png") { template_spr2096(1) }
 
 //2106-2117 farm_temperate
 base_graphics spr2106(2106, "../graphics/industries/temperate/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }
+#32 alternative_sprites(spr2106, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_base_tiles_bt32bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }
 base_graphics spr2108(2108, "../graphics/industries/temperate/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }
+#32 alternative_sprites(spr2108, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_tiles_bt32bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }
 base_graphics spr2110(2110, "../graphics/industries/temperate/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(130, 0, 1, 80) }
+#32 alternative_sprites(spr2110, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_base_tiles_bt32bpp.png") { template_house_1x1(130, 0, 1, 80) }
 base_graphics spr2111(2111, "../graphics/industries/temperate/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(130, 0, 1, 80) }
+#32 alternative_sprites(spr2111, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_tiles_bt32bpp.png") { template_house_1x1(130, 0, 1, 80) }
 base_graphics spr2112(2112, "../graphics/industries/temperate/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(195, 0, 1, 80) }
+#32 alternative_sprites(spr2112, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_base_tiles_bt32bpp.png") { template_house_1x1(195, 0, 1, 80) }
 base_graphics spr2113(2113, "../graphics/industries/temperate/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(195, 0, 1, 80) }
+#32 alternative_sprites(spr2113, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_tiles_bt32bpp.png") { template_house_1x1(195, 0, 1, 80) }
 base_graphics spr2114(2114, "../graphics/industries/temperate/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(260, 0, 1, 80) }
+#32 alternative_sprites(spr2114, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_base_tiles_bt32bpp.png") { template_house_1x1(260, 0, 1, 80) }
 base_graphics spr2115(2115, "../graphics/industries/temperate/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(260, 0, 1, 80) }
+#32 alternative_sprites(spr2115, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_tiles_bt32bpp.png") { template_house_1x1(260, 0, 1, 80) }
 base_graphics spr2116(2116, "../graphics/industries/temperate/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(325, 0, 1, 80) }
+#32 alternative_sprites(spr2116, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_base_tiles_bt32bpp.png") { template_house_1x1(325, 0, 1, 80) }
 base_graphics spr2117(2117, "../graphics/industries/temperate/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(325, 0, 1, 80) }
+#32 alternative_sprites(spr2117, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/farm_tiles_bt32bpp.png") { template_house_1x1(325, 0, 1, 80) }
 
 //2118-2145 steel mill
 //TODO: Adjust for 'true' transparency?
-base_graphics spr2118(2118, "../graphics/industries/temperate/64/pygen/steelmill_combo_tiles_8bpp.png") {
-	template_house_2x2_7sprite(0, 0, 1, 80)
-	template_house_1x2_4sprite(455, 0, 1, 80)
-	template_house_2x2_7sprite(0, 81, 1, 80)
-	template_house_1x2_4sprite(455, 81, 1, 80)
-	template_house_1x1(  0, 162, 1, 80)
-	template_house_1x1(130, 162, 1, 80)
-	template_house_1x1(260, 162, 1, 80)
-	template_house_1x1(390, 162, 1, 80)
-	template_house_1x1(455, 162, 1, 80)
-	template_house_1x1(585, 162, 1, 80)
+template template_spr2118(z) {
+	template_house_2x2_7sprite(0, 0, z, 80)
+	template_house_1x2_4sprite(455, 0, z, 80)
+	template_house_2x2_7sprite(0, 81, z, 80)
+	template_house_1x2_4sprite(455, 81, z, 80)
+	template_house_1x1(  0, 162, z, 80)
+	template_house_1x1(130, 162, z, 80)
+	template_house_1x1(260, 162, z, 80)
+	template_house_1x1(390, 162, z, 80)
+	template_house_1x1(455, 162, z, 80)
+	template_house_1x1(585, 162, z, 80)
 }
+base_graphics spr2118(2118, "../graphics/industries/temperate/64/pygen/steelmill_combo_tiles_8bpp.png") { template_spr2118(1) }
+#32 alternative_sprites(spr2118, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/steelmill_combo_tiles_rm32bpp.png", "../graphics/industries/temperate/64/pygen/steelmill_combo_tiles_8bpp.png") { template_spr2118(1) }
 
 //2146-2160 factory // Recolour: RANDOM
 //TODO: Fix construction stages? Adjust for 'true' transparency?
-base_graphics spr2146(2146, "../graphics/industries/temperate/64/pygen/factory_combo_tiles_8bpp.png") {
-	template_house_1x1(  0,  0, 1, 100)
-	template_house_1x1(130,  0, 1, 100)
-	template_house_1x1(260,  0, 1, 100)
-	template_house_1x1(390,  0, 1, 100)
-	template_house_1x1_addoffs( 65, 0, 1, 100, 0, -16)
-	template_house_1x1_addoffs(195, 0, 1, 100, 0, -16)
-	template_house_1x1_addoffs(325, 0, 1, 100, 0, -16)
-	template_house_1x1(  0,202, 1, 100)
-	template_house_1x1(130,202, 1, 100)
-	template_house_1x1(260,202, 1, 100)
-	template_house_1x1(390,202, 1, 100)
-	template_house_1x1(  0,101, 1, 100)
-	template_house_1x1(130,101, 1, 100)
-	template_house_1x1(260,101, 1, 100)
-	template_house_1x1(390,101, 1, 100)
+template template_spr2146(z) {
+	template_house_1x1(  0,  0, z, 100)
+	template_house_1x1(130,  0, z, 100)
+	template_house_1x1(260,  0, z, 100)
+	template_house_1x1(390,  0, z, 100)
+	template_house_1x1_addoffs( 65, 0, z, 100, 0, -16)
+	template_house_1x1_addoffs(195, 0, z, 100, 0, -16)
+	template_house_1x1_addoffs(325, 0, z, 100, 0, -16)
+	template_house_1x1(  0,202, z, 100)
+	template_house_1x1(130,202, z, 100)
+	template_house_1x1(260,202, z, 100)
+	template_house_1x1(390,202, z, 100)
+	template_house_1x1(  0,101, z, 100)
+	template_house_1x1(130,101, z, 100)
+	template_house_1x1(260,101, z, 100)
+	template_house_1x1(390,101, z, 100)
 }
+base_graphics spr2146(2146, "../graphics/industries/temperate/64/pygen/factory_combo_tiles_8bpp.png") { template_spr2146(1) }
+#32 alternative_sprites(spr2146, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/factory_combo_tiles_rm32bpp.png", "../graphics/industries/temperate/64/pygen/factory_combo_tiles_8bpp.png") { template_spr2146(1) }
 
 //2161-2172 printworks
-base_graphics spr2161(2161, "../graphics/industries/arctic/64/pygen/printingworks_combo_tiles_8bpp.png") {
-	template_house_1x1(  0,202, 1, 100)
-	template_house_1x1( 65,202, 1, 100)
-	template_house_1x1(130,202, 1, 100)
-	template_house_1x1(195,202, 1, 100)
-	template_house_1x1(  0,101, 1, 100)
-	template_house_1x1( 65,101, 1, 100)
-	template_house_1x1(130,101, 1, 100)
-	template_house_1x1(195,101, 1, 100)
-	template_house_1x1(  0,  0, 1, 100)
-	template_house_1x1( 65,  0, 1, 100)
-	template_house_1x1(130,  0, 1, 100)
-	template_house_1x1(195,  0, 1, 100)
+template template_spr2161(z) {
+	template_house_1x1(  0,202, z, 100)
+	template_house_1x1( 65,202, z, 100)
+	template_house_1x1(130,202, z, 100)
+	template_house_1x1(195,202, z, 100)
+	template_house_1x1(  0,101, z, 100)
+	template_house_1x1( 65,101, z, 100)
+	template_house_1x1(130,101, z, 100)
+	template_house_1x1(195,101, z, 100)
+	template_house_1x1(  0,  0, z, 100)
+	template_house_1x1( 65,  0, z, 100)
+	template_house_1x1(130,  0, z, 100)
+	template_house_1x1(195,  0, z, 100)
 }
+base_graphics spr2161(2161, "../graphics/industries/arctic/64/pygen/printingworks_combo_tiles_8bpp.png") { template_spr2161(1) }
+#32 alternative_sprites(spr2161, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/printingworks_combo_tiles_rm32bpp.png", "../graphics/industries/arctic/64/pygen/printingworks_combo_tiles_8bpp.png") { template_spr2161(1) }
 
 //2173-2179 oil wells
-base_graphics spr2173(2173, "../graphics/industries/temperate/64/pygen/oilwells_base_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 64)
+base_graphics spr2173(2173, "../graphics/industries/temperate/64/pygen/oilwells_base_8bpp.png") { template_house_1x1(  0, 0, 1, 64) }
+#32 alternative_sprites(spr2173, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/oilwells_base_bt32bpp.png") { template_house_1x1(  0, 0, 1, 64) }
+template template_spr2174(z) {
+	template_house_1x1(  0, 0, z, 64)
+	template_house_1x1( 65, 0, z, 64)
+	template_house_1x1(130, 0, z, 64)
+	template_house_1x1(195, 0, z, 64)
+	template_house_1x1(260, 0, z, 64)
+	template_house_1x1(325, 0, z, 64)
 }
-base_graphics spr2174(2174, "../graphics/industries/temperate/64/pygen/oilwells_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 64)
-	template_house_1x1( 65, 0, 1, 64)
-	template_house_1x1(130, 0, 1, 64)
-	template_house_1x1(195, 0, 1, 64)
-	template_house_1x1(260, 0, 1, 64)
-	template_house_1x1(325, 0, 1, 64)
-}
+base_graphics spr2174(2174, "../graphics/industries/temperate/64/pygen/oilwells_8bpp.png") { template_spr2174(1) }
+#32 alternative_sprites(spr2174, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/oilwells_bt32bpp.png") { template_spr2174(1) }
 
 //2180-2183 temperate bank
-base_graphics spr2180(2180, "../graphics/industries/temperate/64/pygen/bank_tiles_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 80)
-	template_house_1x1( 65, 0, 1, 80)
+template template_spr2180(z) {
+	template_house_1x1(  0, 0, z, 80)
+	template_house_1x1( 65, 0, z, 80)
 }
-base_graphics spr2182(2182, "../graphics/industries/temperate/64/pygen/bank_base_tiles_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 80)
-	template_house_1x1( 65, 0, 1, 80)
+base_graphics spr2180(2180, "../graphics/industries/temperate/64/pygen/bank_tiles_8bpp.png") { template_spr2182(1) }
+#32 alternative_sprites(spr2180, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/bank_tiles_bt32bpp.png") { template_spr2180(1) }
+
+template template_spr2182(z) {
+	template_house_1x1(  0, 0, z, 80)
+	template_house_1x1( 65, 0, z, 80)
 }
+base_graphics spr2182(2182, "../graphics/industries/temperate/64/pygen/bank_base_tiles_8bpp.png") { template_spr2182(1) }
+#32 alternative_sprites(spr2182, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/bank_base_tiles_bt32bpp.png") { template_spr2182(1) }
 
 //2184-2187 arctic/tropical bank
-base_graphics spr2184(2184, "../graphics/industries/arctic/64/pygen/bank_base_tiles_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 80)
-	template_house_1x1( 65, 0, 1, 80)
+template template_spr2184(z) {
+	template_house_1x1(  0, 0, z, 80)
+	template_house_1x1( 65, 0, z, 80)
 }
-base_graphics spr2186(2186, "../graphics/industries/arctic/64/pygen/bank_tiles_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 80)
-	template_house_1x1( 65, 0, 1, 80)
+base_graphics spr2184(2184, "../graphics/industries/arctic/64/pygen/bank_base_tiles_8bpp.png") { template_spr2184(1) }
+#32 alternative_sprites(spr2184, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/bank_base_tiles_bt32bpp.png") { template_spr2184(1) }
+template template_spr2186(z) {
+	template_house_1x1(  0, 0, z, 80)
+	template_house_1x1( 65, 0, z, 80)
 }
+base_graphics spr2186(2186, "../graphics/industries/arctic/64/pygen/bank_tiles_8bpp.png") { template_spr2186(1) }
+#32 alternative_sprites(spr2186, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/bank_base_tiles_bt32bpp.png") { template_spr2186(1) }
 
 //2188-2199 food processing plant
-base_graphics spr2188(2188, "../graphics/industries/arctic/64/pygen/foodprocessingplant_combo_8bpp.png") {
-	template_house_1x1(  0, 150, 1, 74)
-	template_house_1x1(  0,  75, 1, 74)
-	template_house_1x1(  0,   0, 1, 74)
-	template_house_1x1( 65, 150, 1, 74)
-	template_house_1x1( 65,  75, 1, 74)
-	template_house_1x1( 65,   0, 1, 74)
-	template_house_1x1(130, 150, 1, 74)
-	template_house_1x1(130,  75, 1, 74)
-	template_house_1x1(130,   0, 1, 74)
-	template_house_1x1(195, 150, 1, 74)
-	template_house_1x1(195,  75, 1, 74)
-	template_house_1x1(195,   0, 1, 74)
+template template_spr2188(z) {
+	template_house_1x1(  0, 150, z, 74)
+	template_house_1x1(  0,  75, z, 74)
+	template_house_1x1(  0,   0, z, 74)
+	template_house_1x1( 65, 150, z, 74)
+	template_house_1x1( 65,  75, z, 74)
+	template_house_1x1( 65,   0, z, 74)
+	template_house_1x1(130, 150, z, 74)
+	template_house_1x1(130,  75, z, 74)
+	template_house_1x1(130,   0, z, 74)
+	template_house_1x1(195, 150, z, 74)
+	template_house_1x1(195,  75, z, 74)
+	template_house_1x1(195,   0, z, 74)
 }
+base_graphics spr2188(2188, "../graphics/industries/arctic/64/pygen/foodprocessingplant_combo_8bpp.png") { template_spr2188(1) }
+#32 alternative_sprites(spr2188, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/foodprocessingplant_combo_rm32bpp.png", "../graphics/industries/arctic/64/pygen/foodprocessingplant_combo_8bpp.png") { template_spr2188(1) }
 
 //2200-2214 paper mill
-base_graphics spr2200(2200, "../graphics/industries/arctic/64/pygen/papermill_8bpp.png") {
-	template_house_1x1(  0,168, 1, 83)
-	template_house_1x1(  0, 64, 1, 83)
-	template_house_1x1(  0,  0, 1, 83)
-	template_house_1x1( 65,168, 1, 83)
-	template_house_1x1( 65, 64, 1, 83)
-	template_house_1x1( 65,  0, 1, 83)
-	template_house_1x1(130,  0, 1, 83)
+template template_spr2200(z) {
+	template_house_1x1(  0,168, z, 83)
+	template_house_1x1(  0, 64, z, 83)
+	template_house_1x1(  0,  0, z, 83)
+	template_house_1x1( 65,168, z, 83)
+	template_house_1x1( 65, 64, z, 83)
+	template_house_1x1( 65,  0, z, 83)
+	template_house_1x1(130,  0, z, 83)
 }
-base_graphics spr2207(2207, "../graphics/industries/arctic/64/pygen/papermill_combo_8bpp.png") {
-	template_house_1x1(195, 64, 1, 83)
-	template_house_1x1(195,  0, 1, 83)
-	template_house_1x1(260,  0, 1, 83)
-	template_house_1x1(325,168, 1, 83)
-	template_house_1x1(325, 64, 1, 83)
-	template_house_1x1(325,  0, 1, 83)
-	template_house_1x1(390,  0, 1, 83)
+base_graphics spr2200(2200, "../graphics/industries/arctic/64/pygen/papermill_8bpp.png") { template_spr2200(1) }
+#32 alternative_sprites(spr2200, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/papermill_rm32bpp.png", "../graphics/industries/arctic/64/pygen/papermill_8bpp.png") { template_spr2200(1) }
+template template_spr2207(z) {
+	template_house_1x1(195, 64, z, 83)
+	template_house_1x1(195,  0, z, 83)
+	template_house_1x1(260,  0, z, 83)
+	template_house_1x1(325,168, z, 83)
+	template_house_1x1(325, 64, z, 83)
+	template_house_1x1(325,  0, z, 83)
+	template_house_1x1(390,  0, z, 83)
 }
-base_graphics spr2214(2214, "../graphics/industries/arctic/64/pygen/papermill_8bpp.png") {
-	template_house_1x1(455,  0, 1, 83)
-}
+base_graphics spr2207(2207, "../graphics/industries/arctic/64/pygen/papermill_combo_8bpp.png") { template_spr2207(1) }
+#32 alternative_sprites(spr2207, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/papermill_combo_bt32bpp.png") { template_spr2207(1) }
+base_graphics spr2214(2214, "../graphics/industries/arctic/64/pygen/papermill_8bpp.png") { template_house_1x1(455,  0, 1, 83) }
+#32 alternative_sprites(spr2214, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/papermill_bt32bpp.png") { template_house_1x1(455,  0, 1, 83) }
 
 //2215-2265 gold mine
-base_graphics spr2215(2215, "../graphics/industries/arctic/64/pygen/goldmine_combo_tiles_8bpp.png") {
-	template_house_1x1(  0,296, 1, 147)
-	template_house_1x1( 65,296, 1, 147)
-	template_house_1x1(130,296, 1, 147)
-	template_house_1x1(195,296, 1, 147)
-	template_house_1x1(260,296, 1, 147)
-	template_house_1x1(325,296, 1, 147)
-	template_house_1x1(390,296, 1, 147)
-	template_house_1x1(455,296, 1, 147)
-	template_house_1x1(520,296, 1, 147)
-	template_house_1x1(585,296, 1, 147)
-	template_house_1x1(650,296, 1, 147)
-	template_house_1x1(715,296, 1, 147)
-	template_house_1x1(780,296, 1, 147)
-	template_house_1x1(845,296, 1, 147)
-	template_house_1x1(910,296, 1, 147)
-	template_house_1x1(975,296, 1, 147)
-	template_house_1x1(  0,148, 1, 147)
-	template_house_1x1( 65,148, 1, 147)
-	template_house_1x1(130,148, 1, 147)
-	template_house_1x1(195,148, 1, 147)
-	template_house_1x1(260,148, 1, 147)
-	template_house_1x1(325,148, 1, 147)
-	template_house_1x1(390,148, 1, 147)
-	template_house_1x1(455,148, 1, 147)
-	template_house_1x1(520,148, 1, 147)
-	template_house_1x1(585,148, 1, 147)
-	template_house_1x1(650,148, 1, 147)
-	template_house_1x1(715,148, 1, 147)
-	template_house_1x1(780,148, 1, 147)
-	template_house_1x1(845,148, 1, 147)
-	template_house_1x1(910,148, 1, 147)
-	template_house_1x1(975,148, 1, 147)
-	template_house_1x1(  0,  0, 1, 147)
-	template_house_1x1( 65,  0, 1, 147)
-	template_house_1x1(130,  0, 1, 147)
-	template_house_1x1(195,  0, 1, 147)
-	template_house_1x1(260,  0, 1, 147)
-	template_house_1x1(325,  0, 1, 147)
-	template_house_1x1(390,  0, 1, 147)
-	template_house_1x1(455,  0, 1, 147)
-	template_house_1x1(520,  0, 1, 147)
-	template_house_1x1(585,  0, 1, 147)
-	template_house_1x1(650,  0, 1, 147)
-	template_house_1x1(715,  0, 1, 147)
-	template_house_1x1(780,  0, 1, 147)
-	template_house_1x1(845,  0, 1, 147)
-	template_house_1x1(910,  0, 1, 147)
-	template_house_1x1(975,  0, 1, 147)
+template template_spr2215(z) {
+	template_house_1x1(  0,296, z, 147)
+	template_house_1x1( 65,296, z, 147)
+	template_house_1x1(130,296, z, 147)
+	template_house_1x1(195,296, z, 147)
+	template_house_1x1(260,296, z, 147)
+	template_house_1x1(325,296, z, 147)
+	template_house_1x1(390,296, z, 147)
+	template_house_1x1(455,296, z, 147)
+	template_house_1x1(520,296, z, 147)
+	template_house_1x1(585,296, z, 147)
+	template_house_1x1(650,296, z, 147)
+	template_house_1x1(715,296, z, 147)
+	template_house_1x1(780,296, z, 147)
+	template_house_1x1(845,296, z, 147)
+	template_house_1x1(910,296, z, 147)
+	template_house_1x1(975,296, z, 147)
+	template_house_1x1(  0,148, z, 147)
+	template_house_1x1( 65,148, z, 147)
+	template_house_1x1(130,148, z, 147)
+	template_house_1x1(195,148, z, 147)
+	template_house_1x1(260,148, z, 147)
+	template_house_1x1(325,148, z, 147)
+	template_house_1x1(390,148, z, 147)
+	template_house_1x1(455,148, z, 147)
+	template_house_1x1(520,148, z, 147)
+	template_house_1x1(585,148, z, 147)
+	template_house_1x1(650,148, z, 147)
+	template_house_1x1(715,148, z, 147)
+	template_house_1x1(780,148, z, 147)
+	template_house_1x1(845,148, z, 147)
+	template_house_1x1(910,148, z, 147)
+	template_house_1x1(975,148, z, 147)
+	template_house_1x1(  0,  0, z, 147)
+	template_house_1x1( 65,  0, z, 147)
+	template_house_1x1(130,  0, z, 147)
+	template_house_1x1(195,  0, z, 147)
+	template_house_1x1(260,  0, z, 147)
+	template_house_1x1(325,  0, z, 147)
+	template_house_1x1(390,  0, z, 147)
+	template_house_1x1(455,  0, z, 147)
+	template_house_1x1(520,  0, z, 147)
+	template_house_1x1(585,  0, z, 147)
+	template_house_1x1(650,  0, z, 147)
+	template_house_1x1(715,  0, z, 147)
+	template_house_1x1(780,  0, z, 147)
+	template_house_1x1(845,  0, z, 147)
+	template_house_1x1(910,  0, z, 147)
+	template_house_1x1(975,  0, z, 147)
 }
-base_graphics spr2263(2263, "../graphics/industries/arctic/64/pygen/goldminewinch_8bpp.png") {
-	template_house_1x1_addoffs(  0,  0, 1, 74, -11, 12)
-	template_house_1x1_addoffs( 65,  0, 1, 74, -11, 12)
-	template_house_1x1_addoffs(130,  0, 1, 74, -11, 12)
+base_graphics spr2215(2215, "../graphics/industries/arctic/64/pygen/goldmine_combo_tiles_8bpp.png") { template_spr2215(1) }
+#32 alternative_sprites(spr2215, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/goldmine_combo_tiles_rm32bpp.png", "../graphics/industries/arctic/64/pygen/goldmine_combo_tiles_8bpp.png") { template_spr2215(1) }
+template template_spr2263(z) {
+	template_house_1x1_addoffs(  0,  0, z, 74, -11, 12)
+	template_house_1x1_addoffs( 65,  0, z, 74, -11, 12)
+	template_house_1x1_addoffs(130,  0, z, 74, -11, 12)
 }
+base_graphics spr2263(2263, "../graphics/industries/arctic/64/pygen/goldminewinch_8bpp.png") { template_spr2263(1) }
+#32 alternative_sprites(spr2263, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/goldminewinch_bt32bpp.png") { template_spr2263(1) }
 
 //2266-2292 diamond mine
-base_graphics spr2266(2266, "../graphics/industries/tropical/64/pygen/diamondmine_combo_tiles_8bpp.png") {
-	template_house_1x1(  0,192, 1, 95)
-	template_house_1x1( 65,192, 1, 95)
-	template_house_1x1(130,192, 1, 95)
-	template_house_1x1(195,192, 1, 95)
-	template_house_1x1(260,192, 1, 95)
-	template_house_1x1(325,192, 1, 95)
-	template_house_1x1(390,192, 1, 95)
-	template_house_1x1(455,192, 1, 95)
-	template_house_1x1(520,192, 1, 95)
-	template_house_1x1(  0, 96, 1, 95)
-	template_house_1x1( 65, 96, 1, 95)
-	template_house_1x1(130, 96, 1, 95)
-	template_house_1x1(195, 96, 1, 95)
-	template_house_1x1(260, 96, 1, 95)
-	template_house_1x1(325, 96, 1, 95)
-	template_house_1x1(390, 96, 1, 95)
-	template_house_1x1(455, 96, 1, 95)
-	template_house_1x1(520, 96, 1, 95)
-	template_house_1x1(  0,  0, 1, 95)
-	template_house_1x1( 65,  0, 1, 95)
-	template_house_1x1(130,  0, 1, 95)
-	template_house_1x1(195,  0, 1, 95)
-	template_house_1x1(260,  0, 1, 95)
-	template_house_1x1(325,  0, 1, 95)
-	template_house_1x1(390,  0, 1, 95)
-	template_house_1x1(455,  0, 1, 95)
-	template_house_1x1(520,  0, 1, 95)
+template template_spr2266(z) {
+	template_house_1x1(  0,192, z, 95)
+	template_house_1x1( 65,192, z, 95)
+	template_house_1x1(130,192, z, 95)
+	template_house_1x1(195,192, z, 95)
+	template_house_1x1(260,192, z, 95)
+	template_house_1x1(325,192, z, 95)
+	template_house_1x1(390,192, z, 95)
+	template_house_1x1(455,192, z, 95)
+	template_house_1x1(520,192, z, 95)
+	template_house_1x1(  0, 96, z, 95)
+	template_house_1x1( 65, 96, z, 95)
+	template_house_1x1(130, 96, z, 95)
+	template_house_1x1(195, 96, z, 95)
+	template_house_1x1(260, 96, z, 95)
+	template_house_1x1(325, 96, z, 95)
+	template_house_1x1(390, 96, z, 95)
+	template_house_1x1(455, 96, z, 95)
+	template_house_1x1(520, 96, z, 95)
+	template_house_1x1(  0,  0, z, 95)
+	template_house_1x1( 65,  0, z, 95)
+	template_house_1x1(130,  0, z, 95)
+	template_house_1x1(195,  0, z, 95)
+	template_house_1x1(260,  0, z, 95)
+	template_house_1x1(325,  0, z, 95)
+	template_house_1x1(390,  0, z, 95)
+	template_house_1x1(455,  0, z, 95)
+	template_house_1x1(520,  0, z, 95)
 }
+base_graphics spr2266(2266, "../graphics/industries/tropical/64/pygen/diamondmine_combo_tiles_8bpp.png") { template_spr2266(1) }
+#32 alternative_sprites(spr2266, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/tropical/64/pygen/diamondmine_combo_tiles_bt32bpp.png") { template_spr2266(1) }
 
 //2293-2340 iron ore mine
-base_graphics spr2293(2293, "../graphics/industries/temperate/64/pygen/ironoremine_combo_tiles_8bpp.png") {
-	template_house_1x1(  0,296, 1, 147)
-	template_house_1x1( 65,296, 1, 147)
-	template_house_1x1(130,296, 1, 147)
-	template_house_1x1(195,296, 1, 147)
-	template_house_1x1(260,296, 1, 147)
-	template_house_1x1(325,296, 1, 147)
-	template_house_1x1(390,296, 1, 147)
-	template_house_1x1(455,296, 1, 147)
-	template_house_1x1(520,296, 1, 147)
-	template_house_1x1(585,296, 1, 147)
-	template_house_1x1(650,296, 1, 147)
-	template_house_1x1(715,296, 1, 147)
-	template_house_1x1(780,296, 1, 147)
-	template_house_1x1(845,296, 1, 147)
-	template_house_1x1(910,296, 1, 147)
-	template_house_1x1(975,296, 1, 147)
-	template_house_1x1(  0,148, 1, 147)
-	template_house_1x1( 65,148, 1, 147)
-	template_house_1x1(130,148, 1, 147)
-	template_house_1x1(195,148, 1, 147)
-	template_house_1x1(260,148, 1, 147)
-	template_house_1x1(325,148, 1, 147)
-	template_house_1x1(390,148, 1, 147)
-	template_house_1x1(455,148, 1, 147)
-	template_house_1x1(520,148, 1, 147)
-	template_house_1x1(585,148, 1, 147)
-	template_house_1x1(650,148, 1, 147)
-	template_house_1x1(715,148, 1, 147)
-	template_house_1x1(780,148, 1, 147)
-	template_house_1x1(845,148, 1, 147)
-	template_house_1x1(910,148, 1, 147)
-	template_house_1x1(975,148, 1, 147)
-	template_house_1x1(  0,  0, 1, 147)
-	template_house_1x1( 65,  0, 1, 147)
-	template_house_1x1(130,  0, 1, 147)
-	template_house_1x1(195,  0, 1, 147)
-	template_house_1x1(260,  0, 1, 147)
-	template_house_1x1(325,  0, 1, 147)
-	template_house_1x1(390,  0, 1, 147)
-	template_house_1x1(455,  0, 1, 147)
-	template_house_1x1(520,  0, 1, 147)
-	template_house_1x1(585,  0, 1, 147)
-	template_house_1x1(650,  0, 1, 147)
-	template_house_1x1(715,  0, 1, 147)
-	template_house_1x1(780,  0, 1, 147)
-	template_house_1x1(845,  0, 1, 147)
-	template_house_1x1(910,  0, 1, 147)
-	template_house_1x1(975,  0, 1, 147)
+template template_spr2293(z) {
+	template_house_1x1(  0,296, z, 147)
+	template_house_1x1( 65,296, z, 147)
+	template_house_1x1(130,296, z, 147)
+	template_house_1x1(195,296, z, 147)
+	template_house_1x1(260,296, z, 147)
+	template_house_1x1(325,296, z, 147)
+	template_house_1x1(390,296, z, 147)
+	template_house_1x1(455,296, z, 147)
+	template_house_1x1(520,296, z, 147)
+	template_house_1x1(585,296, z, 147)
+	template_house_1x1(650,296, z, 147)
+	template_house_1x1(715,296, z, 147)
+	template_house_1x1(780,296, z, 147)
+	template_house_1x1(845,296, z, 147)
+	template_house_1x1(910,296, z, 147)
+	template_house_1x1(975,296, z, 147)
+	template_house_1x1(  0,148, z, 147)
+	template_house_1x1( 65,148, z, 147)
+	template_house_1x1(130,148, z, 147)
+	template_house_1x1(195,148, z, 147)
+	template_house_1x1(260,148, z, 147)
+	template_house_1x1(325,148, z, 147)
+	template_house_1x1(390,148, z, 147)
+	template_house_1x1(455,148, z, 147)
+	template_house_1x1(520,148, z, 147)
+	template_house_1x1(585,148, z, 147)
+	template_house_1x1(650,148, z, 147)
+	template_house_1x1(715,148, z, 147)
+	template_house_1x1(780,148, z, 147)
+	template_house_1x1(845,148, z, 147)
+	template_house_1x1(910,148, z, 147)
+	template_house_1x1(975,148, z, 147)
+	template_house_1x1(  0,  0, z, 147)
+	template_house_1x1( 65,  0, z, 147)
+	template_house_1x1(130,  0, z, 147)
+	template_house_1x1(195,  0, z, 147)
+	template_house_1x1(260,  0, z, 147)
+	template_house_1x1(325,  0, z, 147)
+	template_house_1x1(390,  0, z, 147)
+	template_house_1x1(455,  0, z, 147)
+	template_house_1x1(520,  0, z, 147)
+	template_house_1x1(585,  0, z, 147)
+	template_house_1x1(650,  0, z, 147)
+	template_house_1x1(715,  0, z, 147)
+	template_house_1x1(780,  0, z, 147)
+	template_house_1x1(845,  0, z, 147)
+	template_house_1x1(910,  0, z, 147)
+	template_house_1x1(975,  0, z, 147)
 }
+base_graphics spr2293(2293, "../graphics/industries/temperate/64/pygen/ironoremine_combo_tiles_8bpp.png") { template_spr2293(1) }
+#32 alternative_sprites(spr2293, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/ironoremine_combo_tiles_bt32bpp.png") { template_spr2293(1) }
 
 //2341-2343 fruit/rubber plantation
-base_graphics spr2341(2341, "../graphics/industries/tropical/64/plantations_8bpp.png") {
-	template_house_1x1(130,   0, 1, 74)
-	template_house_1x1(  0,   0, 1, 74)
-	template_house_1x1( 65,   0, 1, 74)
+template template_spr2341(z) {
+	template_house_1x1(130,   0, z, 74)
+	template_house_1x1(  0,   0, z, 74)
+	template_house_1x1( 65,   0, z, 74)
 }
+base_graphics spr2341(2341, "../graphics/industries/tropical/64/plantations_8bpp.png") { template_spr2341(1) }
+#32 alternative_sprites(spr2341, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/tropical/64/plantations_bt32bpp.png") { template_spr2341(1) }
 
 //2344-2346 water tower
-base_graphics spr2344(2344, "../graphics/industries/tropical/64/pygen/watertower_8bpp.png") {
-	template_house_1x1(  0,150, 1, 74)
-	template_house_1x1(  0, 75, 1, 74)
-	template_house_1x1(  0, 0, 1, 74)
+template template_spr2344(z) {
+	template_house_1x1(  0,150, z, 74)
+	template_house_1x1(  0, 75, z, 74)
+	template_house_1x1(  0,  0, z, 74)
 }
+base_graphics spr2344(2344, "../graphics/industries/tropical/64/pygen/watertower_8bpp.png") { template_spr2344(1) }
+#32 alternative_sprites(spr2344, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/tropical/64/pygen/watertower_rm32bpp.png", "../graphics/industries/tropical/64/pygen/watertower_8bpp.png") { template_spr2344(1) }
 
 //1347-2352 water supply
-base_graphics spr2347(2347, "../graphics/industries/tropical/64/pygen/waterprocessingplant_8bpp.png") {
-	template_house_1x1(  0,130, 1, 64)
-	template_house_1x1(  0, 65, 1, 64)
-	template_house_1x1(  0,  0, 1, 64)
-	template_house_1x1( 65,130, 1, 64)
-	template_house_1x1( 65, 65, 1, 64)
-	template_house_1x1( 65,  0, 1, 64)
+template template_spr2347(z) {
+	template_house_1x1(  0,130, z, 64)
+	template_house_1x1(  0, 65, z, 64)
+	template_house_1x1(  0,  0, z, 64)
+	template_house_1x1( 65,130, z, 64)
+	template_house_1x1( 65, 65, z, 64)
+	template_house_1x1( 65,  0, z, 64)
 }
+base_graphics spr2347(2347, "../graphics/industries/tropical/64/pygen/waterprocessingplant_8bpp.png") { template_spr2347(1) }
+#32 alternative_sprites(spr2347, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/tropical/64/pygen/waterprocessingplant_rm32bpp.png", "../graphics/industries/tropical/64/pygen/waterprocessingplant_8bpp.png") { template_spr2347(1) }
 
 //2353-2364 jack lumber's house
-base_graphics spr2353(2353, "../graphics/industries/tropical/64/pygen/lumbermill_combo_tiles_8bpp.png") {
-	template_house_1x1(  0,158, 1, 78)
-	template_house_1x1( 65,158, 1, 78)
-	template_house_1x1(130,158, 1, 78)
-	template_house_1x1(195,158, 1, 78)
-	template_house_1x1(  0, 79, 1, 78)
-	template_house_1x1( 65, 79, 1, 78)
-	template_house_1x1(130, 79, 1, 78)
-	template_house_1x1(195, 79, 1, 78)
-	template_house_1x1(  0,  0, 1, 78)
-	template_house_1x1( 65,  0, 1, 78)
-	template_house_1x1(130,  0, 1, 78)
-	template_house_1x1(195,  0, 1, 78)
+template template_spr2353(z) {
+	template_house_1x1(  0,158, z, 78)
+	template_house_1x1( 65,158, z, 78)
+	template_house_1x1(130,158, z, 78)
+	template_house_1x1(195,158, z, 78)
+	template_house_1x1(  0, 79, z, 78)
+	template_house_1x1( 65, 79, z, 78)
+	template_house_1x1(130, 79, z, 78)
+	template_house_1x1(195, 79, z, 78)
+	template_house_1x1(  0,  0, z, 78)
+	template_house_1x1( 65,  0, z, 78)
+	template_house_1x1(130,  0, z, 78)
+	template_house_1x1(195,  0, z, 78)
 }
+base_graphics spr2353(2353, "../graphics/industries/tropical/64/pygen/lumbermill_combo_tiles_8bpp.png") { template_spr2353(1) }
+#32 alternative_sprites(spr2353, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/tropical/64/pygen/lumbermill_combo_tiles_bt32bpp.png") { template_spr2353(1) }
