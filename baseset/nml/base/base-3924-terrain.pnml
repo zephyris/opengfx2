@@ -1,4 +1,4 @@
-// bare land (0% grassy) 3924 - 3942
+//3924-3942 bare land (0% grassy)
 base_graphics spr3924(3924, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 144, 1) }
 #ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 144, 2) }
 #ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 144, 4) }
@@ -6,7 +6,7 @@ base_graphics spr3924(3924, "../graphics/terrain/64/pygen/temperate_groundtiles_
 #32 #ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 144, 2) }
 #32 #ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 144, 4) }
 
-// bare land (33% grassy) 3943 - 3961
+//3943-3961 bare land (33% grassy)
 base_graphics spr3943(3943, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 96, 1) }
 #ez alternative_sprites(spr3943, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 96, 2) }
 #ez alternative_sprites(spr3943, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 96, 4) }

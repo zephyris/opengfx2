@@ -1,20 +1,21 @@
+// Catenary
 // CATENARY 0-27 catenary
-replacenew catenary_spr0(CATENARY, "../graphics/infrastructure/64/elrail_catenary_8bpp.png", 0) {
-	template_elrail_catenary(0,  0, 1) // 1 tile span
-	template_elrail_catenary(0, 40, 1) // 2 tile span, part 1
-	template_elrail_catenary(0, 80, 1) // 2 tile span, part 2
-	template_elrail_catenarytunnel(0, 120, 1) // tunnel entrance
+template template_catenary_spr0(z) {
+	template_elrail_catenary(0,  0, z) // 1 tile span
+	template_elrail_catenary(0, 40, z) // 2 tile span, part 1
+	template_elrail_catenary(0, 80, z) // 2 tile span, part 2
+	template_elrail_catenarytunnel(0, 120, z) // tunnel entrance
 }
-#ez alternative_sprites (catenary_spr0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/elrail_catenary_8bpp.png") {
-#ez 	template_elrail_catenary(0,  0, 4) // 1 tile span
-#ez 	template_elrail_catenary(0, 40, 4) // 2 tile span, part 1
-#ez 	template_elrail_catenary(0, 80, 4) // 2 tile span, part 2
-#ez 	template_elrail_catenarytunnel(0, 120, 4) // tunnel entrance
-#ez }
+replacenew catenary_spr0(CATENARY, "../graphics/infrastructure/64/elrail_catenary_8bpp.png", 0) { template_catenary_spr0(1) }
+#ez alternative_sprites (catenary_spr0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/elrail_catenary_8bpp.png") { template_catenary_spr0(4) }
+#32 alternative_sprites (catenary_spr0, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/elrail_catenary_bt32bpp.png") { template_catenary_spr0(1) }
+#32 #ez alternative_sprites (catenary_spr0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/elrail_catenary_bt32bpp.png") { template_catenary_spr0(4) }
 
 // CATENARY 28-35 masts
 replacenew catenary_spr28(CATENARY, "../graphics/infrastructure/64/elrail_masts_8bpp.png", 28) { template_elrail_masts(1) }
 #ez alternative_sprites (catenary_spr28, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/elrail_masts_8bpp.png") { template_elrail_masts(4) }
+#32 alternative_sprites (catenary_spr28, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/elrail_masts_bt32bpp.png") { template_elrail_masts(1) }
+#32 #ez alternative_sprites (catenary_spr28, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/elrail_masts_bt32bpp.png") { template_elrail_masts(4) }
 
 // CATENARY 36-39 elrail icons
 replacenew catenary_spr36(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 36) {
@@ -37,4 +38,4 @@ replacenew catenary_spr44(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 4
 replacenew catenary_spr45(CATENARY, "../graphics/cursors/1/pygen/default_8bpp.png", 45) { template_cursor_matrix(5, 9, 1) }
 
 // CATENARY 46-47 unknown empty sprites?
-replacenew catenary_spr46(CATENARY, "", 46) { template_empty() template_empty()}
+replacenew catenary_spr46(CATENARY, "", 46) { template_empty() template_empty() }

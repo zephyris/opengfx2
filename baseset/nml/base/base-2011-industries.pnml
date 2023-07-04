@@ -1,5 +1,3 @@
-//INCOMPLETE: Oil Refinery, Fruit/Rubber Plantation
-
 //2011-2364 industries
 //2011-2025 coal mine
 base_graphics spr2011(2011, "../graphics/industries/temperate/64/pygen/coalmine_8bpp.png") {

@@ -1,4 +1,4 @@
-// Arctic-specific tweaks to match terriain
+// Arctic-specific tweaks to match terrain
 // Airport ground tiles
 replace spr2634_arctic(2634, "../graphics/infrastructure/64/pygen/airport_modern_arctic_grass_8bpp.png") { template_airport_modern_groundtiles(0, 0, 1) }
 replace spr2669_arctic(2669, "../graphics/infrastructure/64/pygen/airport_old_arctic_grass_8bpp.png") { template_airport_old_groundtiles(0, 0, 1) }

@@ -126,9 +126,8 @@ base_graphics spr1263(1263, "../graphics/cursors/1/pygen/default_8bpp.png") {
 }
 
 //1275-1290 signals
-base_graphics spr1275(1275, "../graphics/signals/64/base_8bpp.png") {
-    template_signals_base(1)
-}
+base_graphics spr1275(1275, "../graphics/signals/64/base_8bpp.png") { template_signals_base(1) }
+#32 alternative_sprites (spr1275, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/base_bt32bpp.png") { template_signals_base(1) }
 
 //1291-1300 signal, depot and station gui elements
 //1291 signal icon
@@ -164,6 +163,6 @@ base_graphics spr1300(1300, "../graphics/cursors/1/pygen/default_8bpp.png") {
 base_graphics spr1301(1301, "../graphics/infrastructure/64/rail_fences_8bpp.png") { template_rail_fences(0, 0, 1) }
 #ez alternative_sprites(spr1301, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_fences_8bpp.png") { template_rail_fences(0, 0, 2) }
 #ez alternative_sprites(spr1301, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/rail_fences_8bpp.png") { template_rail_fences(0, 0, 4) }
-#ez alternative_sprites(spr1301, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/rail_fences_bt32bpp.png") { template_rail_fences(0, 0, 1) }
-#ez alternative_sprites(spr1301, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/rail_fences_bt32bpp.png") { template_rail_fences(0, 0, 2) }
-#ez alternative_sprites(spr1301, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/rail_fences_bt32bpp.png") { template_rail_fences(0, 0, 4) }
+#ez alternative_sprites(spr1301, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/rail_fences_rm32bpp.png", "../graphics/infrastructure/64/rail_fences_8bpp.png") { template_rail_fences(0, 0, 1) }
+#ez alternative_sprites(spr1301, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/rail_fences_rm32bpp.png", "../graphics/infrastructure/128/rail_fences_8bpp.png") { template_rail_fences(0, 0, 2) }
+#ez alternative_sprites(spr1301, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/rail_fences_rm32bpp.png", "../graphics/infrastructure/256/rail_fences_8bpp.png") { template_rail_fences(0, 0, 4) }

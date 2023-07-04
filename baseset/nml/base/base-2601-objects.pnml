@@ -1,5 +1,9 @@
 //2601 transmitter
-base_graphics spr2601(2601, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_house_1x1_addoffs(520,   0, 1, 96,   0, -15) }
+template template_spr2601(z) { template_house_1x1_addoffs(520,   0, z, 96,   0, -15) }
+base_graphics spr2601(2601, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_spr2601(1) }
+#32 alternative_sprites (spr2601, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/modernairport_bt32bpp.png") { template_spr2601(1) }
 
 //2602 lighthouse
-base_graphics spr2602(2602, "../graphics/towns/temperate/64/pygen/lighthouse_8bpp.png") { template_house_1x1_addoffs(  0,  0, 1, 123, 0, -9) }
+template template_spr2602(z) { template_house_1x1_addoffs(  0,  0, z, 123, 0, -9) }
+base_graphics spr2602(2602, "../graphics/towns/temperate/64/pygen/lighthouse_8bpp.png") { template_spr2602(1) }
+#32 alternative_sprites (spr2602, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/lighthouse_rm32bpp.png", "../graphics/towns/temperate/64/pygen/lighthouse_8bpp.png") { template_spr2602(1) }

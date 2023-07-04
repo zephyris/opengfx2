@@ -1,11 +1,14 @@
 //2603-2631 headquarters
-base_graphics spr2603(2603, "../graphics/towns/temperate/64/pygen/hqs_combo_tiles_8bpp.png") {
-	template_house_2x2_4sprite(   0,0, 1, 107)
-	template_house_2x2_4sprite( 260,0, 1, 107)
-	template_house_2x2_7sprite( 520,0, 1, 107)
-	template_house_2x2_7sprite( 975,0, 1, 107)
-	template_house_2x2_7sprite(1430,0, 1, 107)
+template template_spr2603(z) {
+	template_house_2x2_4sprite(   0,0, z, 107)
+	template_house_2x2_4sprite( 260,0, z, 107)
+	template_house_2x2_7sprite( 520,0, z, 107)
+	template_house_2x2_7sprite( 975,0, z, 107)
+	template_house_2x2_7sprite(1430,0, z, 107)
 }
+base_graphics spr2603(2603, "../graphics/towns/temperate/64/pygen/hqs_combo_tiles_8bpp.png") { template_spr2603(1) }
+#32 alternative_sprites(spr2603, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/hqs_combo_tiles_rm32bpp.png", "../graphics/towns/temperate/64/pygen/hqs_combo_tiles_8bpp.png") { template_spr2603(1) }
 
 //2632 company statue
 base_graphics spr2632(2632, "../graphics/towns/temperate/64/pygen/statues_8bpp.png") { template_house_short(130,0, 1) }
+#32 alternative_sprites(spr2632, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/statues_rm32bpp.png", "../graphics/towns/temperate/64/pygen/statues_8bpp.png") { template_house_short(130,0, 1) }
