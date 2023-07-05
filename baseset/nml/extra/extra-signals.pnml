@@ -51,11 +51,9 @@ template template_signals_presignal(z) {
 }
 
 // PRE_SIGNAL, used for both left and rightside traffic
-// NML BUG? Can't specify in 3 chunks, use a temporary presignal_light_combined_8bpp.png file and template_signals_presignal template
-//replacenew presignal_0(PRE_SIGNAL, "../graphics/signals/64/presignal_light_entry_8bpp.png", 0) { template_signals_base(1) } //pre-signal, entry
-//replacenew presignal_16(PRE_SIGNAL, "../graphics/signals/64/presignal_light_exit_8bpp.png", 16) { template_signals_base(1) } //pre-signal, exit
-//replacenew presignal_32(PRE_SIGNAL, "../graphics/signals/64/presignal_light_combo_8bpp.png", 32) { template_signals_base(1) } //pre-signal, combo
-replacenew presignal_0(PRE_SIGNAL, "../graphics/signals/64/presignal_light_combined_8bpp.png", 0) { template_signals_presignal(1) } //pre-signal, entry
+replacenew presignal_0(PRE_SIGNAL, "../graphics/signals/64/presignal_light_entry_8bpp.png", 0) { template_signals_base(1) } //pre-signal, entry
+replacenew presignal_16(PRE_SIGNAL, "../graphics/signals/64/presignal_light_exit_8bpp.png", 16) { template_signals_base(1) } //pre-signal, exit
+replacenew presignal_32(PRE_SIGNAL, "../graphics/signals/64/presignal_light_combo_8bpp.png", 32) { template_signals_base(1) } //pre-signal, combo
 
 // PRE_SIGNAL_SEMAPHORE_PBS
 // template_signals_base_empty and/or commented out appear unused
