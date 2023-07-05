@@ -14,7 +14,10 @@ cd baseset
 #fi
 
 # "8, 8ez, 32 or 32ez"
-alternates="ez32"
+alternates="8"
+if [ ! -z "$1" ]; then
+  alternates=$1
+fi
 
 echo "OGFX2 Base"
 python3 ../templates/nml_preprocessor.py ogfx21_base $alternates
@@ -42,11 +45,11 @@ nmlc -p DOS --quiet -c ogfx2t_toyland.nml --md5 ogfx2t_toyland.md5
 
 python3 baseset_generate_obg.py $alternates
 
-tar -cf opengfx2.tar *.grf *.obg
+tar -cf opengfx2_${alternates}.tar *.grf *.obg
 
-if [ ! -z "$1" ]; then
+if [ ! -z "$2" ]; then
   echo "Copying to install directory"
-  cp opengfx2.tar "$1"
+  cp opengfx2_${alternates}.tar "${2}/opengfx2.tar"
 fi
 
 cd ..
