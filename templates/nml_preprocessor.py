@@ -12,19 +12,26 @@ Extra zoom and 32bpp alternative sprites are controlled by removing comment stri
 "#32 " for 32bpp sprites
 (use "#32 #ez " for 32bpp extra zoom sprites)
 
-Argument:
-pnml name (without extension)
+Positional arguments:
+1. base name (base pnml name without extension)
+2. string including ez and/or 32 (if matched, include sprites of these types)
 
 Output:
 nml file with the same name as the pnml file
 """
 
+import sys
+
 comment_import = "#include"
 
 comment_alternate = ["#ez ", "#32 "]
-settings_alternate = [True, True]
+settings_alternate = [False, False]
 
-import sys
+if len(sys.argv) > 2:
+  if "ez" in sys.argv[2]:
+    settings_alternate[0] = True
+  if "32" in sys.argv[2]:
+    settings_alternate[1] = True
 
 def handle_alternates(line, options = []):
   for c in range(len(comment_alternate)):

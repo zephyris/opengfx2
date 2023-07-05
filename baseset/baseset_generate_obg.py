@@ -1,3 +1,18 @@
+import sys
+
+blitter = 8
+typelong = "8bpp"
+typeshort = "8"
+
+if len(sys.argv) > 1:
+  if "32" in sys.argv[1]:
+    blitter = 32
+    typelong = "32bpp"
+    typeshort = "32"
+  if "ez" in sys.argv[1]:
+    typeshort += "ez"
+    typelong += " ExtraZoom"
+
 def pad(string, length, character=" ", pad_left=True):
   out = string
   if pad_left:
@@ -21,8 +36,8 @@ with open("opengfx2.obg", "w") as obg:
   obg.write(pad("shortname", pad_length, pad_left=False) + "= ogfx2" + "\n")
   obg.write(pad("version", pad_length, pad_left=False) + "= 0" + "\n")
   obg.write(pad("palette", pad_length, pad_left=False) + "= DOS" + "\n")
-  obg.write(pad("blitter", pad_length, pad_left=False) + "= 8bpp" + "\n")
-  obg.write(pad("description", pad_length, pad_left=False) + "= OpenGFX2 base graphics set for OpenTTD. Freely available under the terms of the GNU General Public License version 2." + "\n")
+  obg.write(pad("blitter", pad_length, pad_left=False) + "= "+str(blitter)+"bpp" + "\n")
+  obg.write(pad("description", pad_length, pad_left=False) + "= OpenGFX2 base graphics set for OpenTTD. "+typelong+" variant. Freely available under the terms of the GNU General Public License version 2." + "\n")
   obg.write("\n");
   obg.write("[files]" + "\n")
   for file in files:
