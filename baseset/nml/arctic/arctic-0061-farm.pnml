@@ -1,11 +1,29 @@
 //61-72 arctic farm
-base_graphics spr61(61, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }
-base_graphics spr63(63, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(  0, 0, 1, 80) template_house_1x1( 65, 0, 1, 80) }
+template template_spr61(z) {
+    template_house_1x1(  0, 0, z, 80)
+    template_house_1x1( 65, 0, z, 80)
+}
+base_graphics spr61(61, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_spr61(1) }
+#32 alternative_sprites(spr61, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_base_tiles_bt32bpp.png") { template_spr61(1) }
+template template_spr63(z) {
+    template_house_1x1(  0, 0, z, 80)
+    template_house_1x1( 65, 0, z, 80)
+}
+base_graphics spr63(63, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_spr63(1) }
+#32 alternative_sprites(spr63, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_tiles_rm32bpp.png", "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_spr63(1) }
 base_graphics spr65(65, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(130, 0, 1, 80) }
+#32 alternative_sprites(spr65, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_base_tiles_bt32bpp.png") { template_house_1x1(130, 0, 1, 80) }
 base_graphics spr66(66, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(130, 0, 1, 80) }
+#32 alternative_sprites(spr66, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_tiles_rm32bpp.png", "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(130, 0, 1, 80) }
 base_graphics spr67(67, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(195, 0, 1, 80) }
+#32 alternative_sprites(spr67, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_base_tiles_bt32bpp.png") { template_house_1x1(195, 0, 1, 80) }
 base_graphics spr68(68, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(195, 0, 1, 80) }
+#32 alternative_sprites(spr68, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_tiles_rm32bpp.png", "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(195, 0, 1, 80) }
 base_graphics spr69(69, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(260, 0, 1, 80) }
+#32 alternative_sprites(spr69, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_base_tiles_bt32bpp.png") { template_house_1x1(260, 0, 1, 80) }
 base_graphics spr70(70, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(260, 0, 1, 80) }
+#32 alternative_sprites(spr70, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_tiles_rm32bpp.png", "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(260, 0, 1, 80) }
 base_graphics spr71(71, "../graphics/industries/arctic/64/pygen/farm_base_tiles_8bpp.png") { template_house_1x1(325, 0, 1, 80) }
+#32 alternative_sprites(spr71, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_base_tiles_bt32bpp.png") { template_house_1x1(325, 0, 1, 80) }
 base_graphics spr72(72, "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(325, 0, 1, 80) }
+#32 alternative_sprites(spr72, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/farm_tiles_rm32bpp.png", "../graphics/industries/arctic/64/pygen/farm_tiles_8bpp.png") { template_house_1x1(325, 0, 1, 80) }

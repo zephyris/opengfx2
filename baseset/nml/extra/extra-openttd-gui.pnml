@@ -86,6 +86,7 @@ replacenew ottd_gui77(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 
 
 // OTTD_GUI 78-81 rail waypoint (real, not GUI!)
 replacenew ottd_gui78(OTTD_GUI, "../graphics/stations/general/64/pygen/railwaypoint_8bpp.png", 78) { template_rail_waypoint(0, 0, 1) }
+#32 alternative_sprites(ottd_gui78, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/railwaypoint_rm32bpp.png", "../graphics/stations/general/64/pygen/railwaypoint_8bpp.png") { template_rail_waypoint(0, 0, 1) }
 
 // OTTD_GUI 82-83 road autoroad icon and cursor
 replacenew ottd_gui82(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 82) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 14, 1) }

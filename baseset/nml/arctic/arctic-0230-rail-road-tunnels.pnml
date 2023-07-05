@@ -1,5 +1,7 @@
 //230-237 arctic rail tunnel
 base_graphics spr230(230, "../graphics/stations/general/64/pygen/tunnels_rail_arctic_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 alternative_sprites(spr230, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_rail_arctic_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
 
 //238-245 arctic road tunnel
 base_graphics spr238(238, "../graphics/stations/general/64/pygen/tunnels_road_arctic_grass_8bpp.png") {  template_tunnels_general(0, 0, 1) }
+#32 alternative_sprites(spr238, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_road_arctic_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }

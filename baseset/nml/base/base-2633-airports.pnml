@@ -1,34 +1,47 @@
 //2633 heliport
 base_graphics spr2633(2633, "../graphics/stations/general/64/pygen/heliport_combo_8bpp.png") { template_heliport(0, 0, 1) }
+#32 alternative_sprites(spr2633, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/heliport_combo_rm32bpp.png", "../graphics/stations/general/64/pygen/heliport_combo_8bpp.png") { template_heliport(0, 0, 1) }
 
 //2633-2691 airports
 base_graphics spr2634(2634, "../graphics/infrastructure/64/pygen/airport_modern_temperate_grass_8bpp.png") { template_airport_modern_groundtiles(0, 0, 1) }
+#32 alternative_sprites(spr2634, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/airport_modern_temperate_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/airport_modern_temperate_grass_8bpp.png") { template_airport_modern_groundtiles(0, 0, 1) }
 base_graphics spr2650(2650, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_modernairport_buildings_core(0, 0, 1) }
+#32 alternative_sprites(spr2650, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/modernairport_rm32bpp.png", "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_modernairport_buildings_core(0, 0, 1) }
 base_graphics spr2655(2655, "../graphics/stations/general/64/pygen/modernairdepots_regions_8bpp.png") { template_modernairport_depot_core(0, 0, 1) }
+#32 alternative_sprites(spr2655, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/modernairdepots_regions_rm32bpp.png", "../graphics/stations/general/64/pygen/modernairdepots_regions_8bpp.png") { template_modernairport_depot_core(0, 0, 1) }
 base_graphics spr2657(2657, "../graphics/stations/general/64/pygen/oldairdepots_regions_8bpp.png") { template_modernairport_depot_core(0, 0, 1) }
+#32 alternative_sprites(spr2657, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/oldairdepots_regions_rm32bpp.png", "../graphics/stations/general/64/pygen/oldairdepots_regions_8bpp.png") { template_modernairport_depot_core(0, 0, 1) }
 base_graphics spr2659(2659, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_modernairport_walkwaysfences(0, 0, 1) }
+#32 alternative_sprites(spr2659, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/modernairport_rm32bpp.png", "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_modernairport_walkwaysfences(0, 0, 1) }
 base_graphics spr2665(2665, "../graphics/stations/general/64/pygen/oldairport_multitile_combo_tiles_8bpp.png") { template_airport_old_buildingtiles(0, 0, 1) }
+#32 alternative_sprites(spr2665, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/oldairport_multitile_combo_tiles_rm32bpp.png", "../graphics/stations/general/64/pygen/oldairport_multitile_combo_tiles_8bpp.png") { template_airport_old_buildingtiles(0, 0, 1) }
 base_graphics spr2669(2669, "../graphics/infrastructure/64/pygen/airport_old_temperate_grass_8bpp.png") { template_airport_old_groundtiles(0, 0, 1) }
+#32 alternative_sprites(spr2669, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/airport_old_temperate_grass_bt32bpp.png") { template_airport_old_groundtiles(0, 0, 1) }
 
 //2676-2679 windsock
-base_graphics spr2676(2676, "../graphics/effects/64/airport_windsock_8bpp.png") {
-    template_animation_frame(32, 32, -5, -29, 0, 1)
-    template_animation_frame(32, 32, -5, -29, 1, 1)
-    template_animation_frame(32, 32, -5, -29, 2, 1)
-    template_animation_frame(32, 32, -5, -29, 3, 1)
+template template_spr2676(z) {
+    template_animation_frame(32, 32, -5, -29, 0, z)
+    template_animation_frame(32, 32, -5, -29, 1, z)
+    template_animation_frame(32, 32, -5, -29, 2, z)
+    template_animation_frame(32, 32, -5, -29, 3, z)
 }
+base_graphics spr2676(2676, "../graphics/effects/64/airport_windsock_8bpp.png") { template_spr2676(1) }
+#32 alternative_sprites(spr2676, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/effects/64/airport_windsock_rm32bpp.png", "../graphics/effects/64/airport_windsock_8bpp.png") { template_spr2676(1) }
+
 //2680-2691 radar
-base_graphics spr2680(2680, "../graphics/effects/64/airport_radar_8bpp.png") {
-    template_animation_frame(40, 40, -20, -29, 0, 1)
-    template_animation_frame(40, 40, -20, -29, 1, 1)
-    template_animation_frame(40, 40, -20, -29, 2, 1)
-    template_animation_frame(40, 40, -20, -29, 3, 1)
-    template_animation_frame(40, 40, -20, -29, 4, 1)
-    template_animation_frame(40, 40, -20, -29, 5, 1)
-    template_animation_frame(40, 40, -20, -29, 6, 1)
-    template_animation_frame(40, 40, -20, -29, 7, 1)
-    template_animation_frame(40, 40, -20, -29, 8, 1)
-    template_animation_frame(40, 40, -20, -29, 9, 1)
-    template_animation_frame(40, 40, -20, -29, 10, 1)
-    template_animation_frame(40, 40, -20, -29, 11, 1)
+template template_spr2680(z) {
+    template_animation_frame(40, 40, -20, -29, 0, z)
+    template_animation_frame(40, 40, -20, -29, 1, z)
+    template_animation_frame(40, 40, -20, -29, 2, z)
+    template_animation_frame(40, 40, -20, -29, 3, z)
+    template_animation_frame(40, 40, -20, -29, 4, z)
+    template_animation_frame(40, 40, -20, -29, 5, z)
+    template_animation_frame(40, 40, -20, -29, 6, z)
+    template_animation_frame(40, 40, -20, -29, 7, z)
+    template_animation_frame(40, 40, -20, -29, 8, z)
+    template_animation_frame(40, 40, -20, -29, 9, z)
+    template_animation_frame(40, 40, -20, -29, 10, z)
+    template_animation_frame(40, 40, -20, -29, 11, z)
 }
+base_graphics spr2680(2680, "../graphics/effects/64/airport_radar_8bpp.png") { template_spr2680(1) }
+#32 alternative_sprites(spr2680, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/effects/64/airport_radar_bt32bpp.png") { template_spr2680(1) }

@@ -101,21 +101,33 @@ if (param_gridlines==1) {
     replace nogrid_arctic_spr4493(4493, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
     #ez alternative_sprites(nogrid_arctic_spr4493, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
     #ez alternative_sprites(nogrid_arctic_spr4493, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+    #32 alternative_sprites(nogrid_arctic_spr4493, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+    #32 #ez alternative_sprites(nogrid_arctic_spr4493, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+    #32 #ez alternative_sprites(nogrid_arctic_spr4493, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 
     //4512-4530 partial snow 2/4
     replace nogrid_arctic_spr4512(4512, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_nogridline_8bpp.png") { template_groundtiles(0, 48, 1) }
     #ez alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_nogridline_8bpp.png") { template_groundtiles(0, 48, 2) }
     #ez alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_nogridline_8bpp.png") { template_groundtiles(0, 48, 4) }
+    #32 alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_nogridline_bt32bpp.png") { template_groundtiles(0, 48, 1) }
+    #32 #ez alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_nogridline_bt32bpp.png") { template_groundtiles(0, 48, 2) }
+    #32 #ez alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_nogridline_bt32bpp.png") { template_groundtiles(0, 48, 4) }
 
     //4531-4549 partial snow 3/4
     replace nogrid_arctic_spr4531(4531, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_nogridline_8bpp.png") { template_groundtiles(0, 96, 1) }
     #ez alternative_sprites(nogrid_arctic_spr4531, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_nogridline_8bpp.png") { template_groundtiles(0, 96, 2) }
     #ez alternative_sprites(nogrid_arctic_spr4531, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_nogridline_8bpp.png") { template_groundtiles(0, 96, 4) }
+    #32 alternative_sprites(nogrid_arctic_spr4531, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_nogridline_bt32bpp.png") { template_groundtiles(0, 96, 1) }
+    #32 #ez alternative_sprites(nogrid_arctic_spr4531, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_nogridline_bt32bpp.png") { template_groundtiles(0, 96, 2) }
+    #32 #ez alternative_sprites(nogrid_arctic_spr4531, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_nogridline_bt32bpp.png") { template_groundtiles(0, 96, 4) }
 
     //4550-4568 full snow 4/4
     replace nogrid_arctic_spr4550(4550, "../graphics/terrain/64/pygen/arctic_groundtiles_snow_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
     #ez alternative_sprites(nogrid_arctic_spr4550, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
     #ez alternative_sprites(nogrid_arctic_spr4550, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snow_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+    #32 alternative_sprites(nogrid_arctic_spr4550, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_snow_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+    #32 #ez alternative_sprites(nogrid_arctic_spr4550, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+    #32 #ez alternative_sprites(nogrid_arctic_spr4550, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snow_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 
     if (climate==CLIMATE_ARCTIC) {
         // Arctic ground
@@ -123,42 +135,66 @@ if (param_gridlines==1) {
         replace nogrid_arctic_spr3943(3943, "../graphics/terrain/64/pygen/arctic_groundtiles_nogridline_8bpp.png") { template_groundtiles(0, 96, 1) }
         #ez alternative_sprites(nogrid_arctic_spr3943, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_nogridline_8bpp.png") { template_groundtiles(0, 96, 2) }
         #ez alternative_sprites(nogrid_arctic_spr3943, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_nogridline_8bpp.png") { template_groundtiles(0, 96, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr3943, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_nogridline_bt32bpp.png") { template_groundtiles(0, 96, 1) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr3943, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_nogridline_bt32bpp.png") { template_groundtiles(0, 96, 2) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr3943, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_nogridline_bt32bpp.png") { template_groundtiles(0, 96, 4) }
 
         //3962-3980 bare land (66% grassy)
         replace nogrid_arctic_spr3962(3962, "../graphics/terrain/64/pygen/arctic_groundtiles_nogridline_8bpp.png") { template_groundtiles(0, 48, 1) }
         #ez alternative_sprites(nogrid_arctic_spr3962, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_nogridline_8bpp.png") { template_groundtiles(0, 48, 2) }
         #ez alternative_sprites(nogrid_arctic_spr3962, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_nogridline_8bpp.png") { template_groundtiles(0, 48, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr3962, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_nogridline_bt32bpp.png") { template_groundtiles(0, 48, 1) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr3962, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_nogridline_bt32bpp.png") { template_groundtiles(0, 48, 2) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr3962, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_nogridline_bt32bpp.png") { template_groundtiles(0, 48, 4) }
 
         //3981-3999 arctic grass (100% grassy)
         replace nogrid_arctic_spr3981(3981, "../graphics/terrain/64/pygen/arctic_groundtiles_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
         #ez alternative_sprites(nogrid_arctic_spr3981, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
         #ez alternative_sprites(nogrid_arctic_spr3981, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr3981, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr3981, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr3981, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 
         //4000-4022 arctic rough terrain
         replace nogrid_arctic_spr4000(4000, "../graphics/terrain/64/pygen/arctic_groundtiles_rough_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) template_groundtiles_extra(0, 0, 1) }
         #ez alternative_sprites(nogrid_arctic_spr4000, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_rough_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
         #ez alternative_sprites(nogrid_arctic_spr4000, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_rough_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr4000, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_rough_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) template_groundtiles_extra(0, 0, 1) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr4000, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_rough_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr4000, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_rough_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
 
         //4023-4041 arctic rocky terrain
         replace nogrid_arctic_spr4023(4023, "../graphics/terrain/64/pygen/arctic_groundtiles_rocks_alt_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
         #ez alternative_sprites(nogrid_arctic_spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_rocks_alt_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
         #ez alternative_sprites(nogrid_arctic_spr4023, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_rocks_alt_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr4023, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_rocks_alt_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_rocks_alt_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr4023, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_rocks_alt_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 
         // 4061-4069 shore tiles
         replace nogrid_arctic_spr4062(4062, "../graphics/terrain/64/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
         #ez alternative_sprites(nogrid_arctic_spr4062, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
         #ez alternative_sprites(nogrid_arctic_spr4062, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr4062, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_grass_nogridline_shoretiles_rm32bpp.png",  "../graphics/terrain/64/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr4062, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_grass_nogridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr4062, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_grass_nogridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
 
         // Extra coasts
         // COAST_TILES_BASEGFX
         replacenew nogrid_coast_tiles_basegfx_arctic(COAST_TILES_BASEGFX, "../graphics/terrain/64/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 1) }
         #ez alternative_sprites(nogrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 2) }
         #ez alternative_sprites(nogrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 4) }
+        #32 alternative_sprites(nogrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_grass_nogridline_shoretiles_rm32bpp.png",  "../graphics/terrain/64/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 1) }
+        #32 #ez alternative_sprites(nogrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_grass_nogridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_grass_nogridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 4) }
 
         // COAST_TILES
         replacenew nogrid_coast_tiles_arctic(COAST_TILES, "../graphics/terrain/64/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 1) }
         #ez alternative_sprites(nogrid_coast_tiles_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 2) }
         #ez alternative_sprites(nogrid_coast_tiles_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 4) }
+        #32 alternative_sprites(nogrid_coast_tiles_arctic, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_grass_nogridline_shoretiles_rm32bpp.png",  "../graphics/terrain/64/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 1) }
+        #32 #ez alternative_sprites(nogrid_coast_tiles_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_grass_nogridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_coast_tiles_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_grass_nogridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/arctic_grass_nogridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 4) }
     }
 
     // Climate-specific
@@ -277,34 +313,52 @@ if (param_gridlines==2) {
     replace watergrid_temperate_spr4062(4062, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
     #ez alternative_sprites(watergrid_temperate_spr4062, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
     #ez alternative_sprites(watergrid_temperate_spr4062, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
+    #32 alternative_sprites(watergrid_temperate_spr4062, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
+    #32 #ez alternative_sprites(watergrid_temperate_spr4062, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
+    #32 #ez alternative_sprites(watergrid_temperate_spr4062, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
 
     // Extra coasts
     // COAST_TILES_BASEGFX
     replacenew watergrid_coast_tiles_basegfx_temperate(COAST_TILES_BASEGFX, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 1) }
     #ez alternative_sprites(watergrid_coast_tiles_basegfx_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 2) }
     #ez alternative_sprites(watergrid_coast_tiles_basegfx_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 4) }
+    #32 alternative_sprites(watergrid_coast_tiles_basegfx_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 1) }
+    #32 #ez alternative_sprites(watergrid_coast_tiles_basegfx_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 2) }
+    #32 #ez alternative_sprites(watergrid_coast_tiles_basegfx_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 4) }
 
     // COAST_TILES
     replacenew watergrid_coast_tiles_temperate(COAST_TILES, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 1) }
     #ez alternative_sprites(watergrid_coast_tiles_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 2) }
     #ez alternative_sprites(watergrid_coast_tiles_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 4) }
+    #32 alternative_sprites(watergrid_coast_tiles_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/64/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 1) }
+    #32 #ez alternative_sprites(watergrid_coast_tiles_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 2) }
+    #32 #ez alternative_sprites(watergrid_coast_tiles_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/temperate_grass_gridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 4) }
 
     if (climate==CLIMATE_ARCTIC) {
         // 4061-4069 shore tiles
         replace watergrid_arctic_spr4062(4062, "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
         #ez alternative_sprites(watergrid_arctic_spr4062, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
         #ez alternative_sprites(watergrid_arctic_spr4062, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
+        #32 alternative_sprites(watergrid_coast_tiles_arctic, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 1) }
+        #32 #ez alternative_sprites(watergrid_coast_tiles_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 2) }
+        #32 #ez alternative_sprites(watergrid_coast_tiles_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 4) }
 
         // Extra coasts
         // COAST_TILES_BASEGFX
         replacenew watergrid_coast_tiles_basegfx_arctic(COAST_TILES_BASEGFX, "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 1) }
         #ez alternative_sprites(watergrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 2) }
         #ez alternative_sprites(watergrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_extended(0, 0, 4) }
+        #32 alternative_sprites(watergrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 1) }
+        #32 #ez alternative_sprites(watergrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 2) }
+        #32 #ez alternative_sprites(watergrid_coast_tiles_basegfx_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_extended(0, 0, 4) }
 
         // COAST_TILES
         replacenew watergrid_coast_tiles_arctic(COAST_TILES, "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 1) }
         #ez alternative_sprites(watergrid_coast_tiles_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 2) }
         #ez alternative_sprites(watergrid_coast_tiles_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_grass_gridline_shoretiles_gridline_8bpp.png") { template_watertiles_full(0, 0, 4) }
+        #32 alternative_sprites(watergrid_coast_tiles_arctic, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/64/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 1) }
+        #32 #ez alternative_sprites(watergrid_coast_tiles_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 2) }
+        #32 #ez alternative_sprites(watergrid_coast_tiles_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/arctic_grass_gridline_shoretiles_8bpp.png") { template_watertiles_full(0, 0, 4) }
     }
 
     if (climate==CLIMATE_TROPICAL) {

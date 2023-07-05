@@ -1,6 +1,8 @@
 // 269-283 headquarters
-base_graphics spr269(269, "../graphics/towns/arctic/64/pygen/hqs_combo_tiles_8bpp.png") {
-	template_house_2x2_4sprite(   0,0, 1, 107)
-	template_house_2x2_4sprite( 260,0, 1, 107)
-	template_house_2x2_7sprite( 520,0, 1, 107)
+template template_spr269(z) {
+	template_house_2x2_4sprite(   0,0, z, 107)
+	template_house_2x2_4sprite( 260,0, z, 107)
+	template_house_2x2_7sprite( 520,0, z, 107)
 }
+base_graphics spr269(269, "../graphics/towns/arctic/64/pygen/hqs_combo_tiles_8bpp.png") { template_spr269(1) }
+#32 alternative_sprites(spr269, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/arctic/64/pygen/hqs_combo_tiles_rm32bpp.png", "../graphics/towns/arctic/64/pygen/hqs_combo_tiles_8bpp.png") { template_spr269(1) }
