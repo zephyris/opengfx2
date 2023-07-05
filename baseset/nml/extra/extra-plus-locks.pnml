@@ -1,7 +1,10 @@
 // climate, elevation & snow line-sensitive locks
 spriteset (waterfeature_locks_sealevel, "../graphics/stations/general/64/pygen/docksandlocks_sealevel_8bpp.png") { template_locks(0, 0, 1) } // sea level
+#32 alternative_sprites(waterfeature_locks_sealevel, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/docksandlocks_sealevel_rm32bpp.png", "../graphics/stations/general/64/pygen/docksandlocks_sealevel_8bpp.png") { template_locks(0, 0, 1) }
 spriteset (waterfeature_locks_general, "../graphics/stations/general/64/pygen/docksandlocks_8bpp.png") { template_locks(0, 0, 1) } // normal
+#32 alternative_sprites(waterfeature_locks_general, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/docksandlocks_rm32bpp.png", "../graphics/stations/general/64/pygen/docksandlocks_8bpp.png") { template_locks(0, 0, 1) }
 spriteset (waterfeature_locks_arctic_snow, "../graphics/stations/general/64/pygen/docksandlocks_snow_8bpp.png") { template_locks(0, 0, 1) } //snowy
+#32 alternative_sprites(waterfeature_locks_arctic_snow, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/docksandlocks_snow_rm32bpp.png", "../graphics/stations/general/64/pygen/docksandlocks_snow_8bpp.png") { template_locks(0, 0, 1) }
 
 // switch for elevation
 switch (FEAT_CANALS, SELF, switch_waterfeature_locks_elevation, tile_height) {

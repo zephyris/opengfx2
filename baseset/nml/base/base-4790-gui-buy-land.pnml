@@ -1,7 +1,6 @@
 //4790 buy land sign
-base_graphics spr4790(4790, "../graphics/towns/temperate/64/pygen/buyland_8bpp.png") {
-    template_house_1x1_addoffs(0, 0, 1, 47, 0, -17)
-}
+base_graphics spr4790(4790, "../graphics/towns/temperate/64/pygen/buyland_8bpp.png") { template_house_1x1_addoffs(0, 0, 1, 47, 0, -17) }
+#32 alternative_sprites(spr4790, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/buyland_rm32bpp.png", "../graphics/towns/temperate/64/pygen/buyland_8bpp.png") { template_house_1x1_addoffs(0, 0, 1, 47, 0, -17) }
 
 //4791 buy land icon and cursor
 base_graphics spr4791(4791, "../graphics/icons/1/icons_20px_8bpp.png") {

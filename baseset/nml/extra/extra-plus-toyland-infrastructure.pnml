@@ -2,3 +2,4 @@
 
 //2022 general industry ground tile (used for sweet factory, toy shop)
 replace spr2022_toyland(2022, "../graphics/terrain/64/toyland_towntiles_8bpp.png") { template_flattile_single(240, 0, 1) }
+#32 alternative_sprites(spr2022_toyland, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/toyland_towntiles_bt32bpp.png") { template_flattile_single(240, 0, 1) }

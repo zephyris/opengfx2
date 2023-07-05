@@ -1,2 +1,3 @@
 //11-20 high score list background
 base_graphics spr11(11, "../graphics/icons/1/scoreboard_8bpp.png") { template_highscore_background(1) }
+#32 alternative_sprites(spr11, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/icons/1/scoreboard_bt32bpp.png") { template_highscore_background(1) }
