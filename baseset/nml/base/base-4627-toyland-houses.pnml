@@ -95,4 +95,6 @@ base_graphics spr4672(4672, "../graphics/towns/toyland/64/tall_8bpp.png") {
 
 //4675-4676 toyland building/town ground tiles
 base_graphics spr4675(4675, "../graphics/terrain/64/toyland_towntiles_8bpp.png") { template_flattile_single(160, 0, 1) }
+#32 alternative_sprites(spr4675, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/toyland_towntiles_bt32bpp.png") { template_flattile_single(160, 0, 1) }
 base_graphics spr4676(4676, "../graphics/terrain/64/toyland_towntiles_8bpp.png") { template_flattile_single(80, 0, 1) }
+#32 alternative_sprites(spr4676, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/toyland_towntiles_bt32bpp.png") { template_flattile_single(80, 0, 1) }

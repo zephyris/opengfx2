@@ -1,6 +1,6 @@
 //tropic buildings
 //4588-4605 houses 1-3
-base_graphics spr4588(4588, "../graphics/towns/tropical/64/pygen/houses_combo_8bpp.png") {
+template template_spr4588(z) {
 	template_house_short(  0,96, 1)
 	template_house_short(  0,48, 1)
 	template_house_short(  0, 0, 1)
@@ -11,31 +11,43 @@ base_graphics spr4588(4588, "../graphics/towns/tropical/64/pygen/houses_combo_8b
 	template_house_short(130,48, 1)
 	template_house_short(130, 0, 1)
 }
+base_graphics spr4588(4588, "../graphics/towns/tropical/64/pygen/houses_combo_8bpp.png") { template_spr4588(1) }
+#32 alternative_sprites(spr4588, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/tropical/64/pygen/houses_combo_bt32bpp.png") { template_spr4588(1) }
+
 //4597-4600 favela/shanty houses
-base_graphics spr4597(4597, "../graphics/towns/tropical/64/pygen/shantyhouses_combo_8bpp.png") {
+template template_spr4597(z) {
 	template_house_short(  0, 0, 1)
 	template_house_short( 65, 0, 1)
 	template_house_short(130, 0, 1)
 	template_house_short(195, 0, 1)
 }
+base_graphics spr4597(4597, "../graphics/towns/tropical/64/pygen/shantyhouses_combo_8bpp.png") { template_spr4597(1) }
+#32 alternative_sprites(spr4597, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/tropical/64/pygen/shantyhouses_combo_bt32bpp.png") { template_spr4597(1) }
+
 //4601-4603 flats 1
-base_graphics spr4601(4601, "../graphics/towns/tropical/64/pygen/flats_combo_8bpp.png") {
+template template_spr4601(z) {
 	template_house_1x1(  0,226, 1, 112)
 	template_house_1x1(  0,113, 1, 112)
 	template_house_1x1(  0,  0, 1, 112)
 }
+base_graphics spr4601(4601, "../graphics/towns/tropical/64/pygen/flats_combo_8bpp.png") { template_spr4601(1) }
+#32 alternative_sprites(spr4601, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/tropical/64/pygen/flats_combo_bt32bpp.png") { template_spr4601(1) }
+
 //4604 tropic church
-base_graphics spr4604(4604, "../graphics/towns/tropical/64/pygen/churches_combo_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 64)
-}
+base_graphics spr4604(4604, "../graphics/towns/tropical/64/pygen/churches_combo_8bpp.png") { template_house_1x1(  0, 0, 1, 64) }
+#32 alternative_sprites(spr4604, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/tropical/64/pygen/churches_combo_bt32bpp.png") { template_house_1x1(  0, 0, 1, 64) }
+
 //4605-4607 house 4
-base_graphics spr4605(4605, "../graphics/towns/tropical/64/pygen/houses_combo_8bpp.png") {
+template template_spr4605(z) {
 	template_house_short(195,96, 1)
 	template_house_short(195,48, 1)
 	template_house_short(195, 0, 1)
 }
+base_graphics spr4605(4605, "../graphics/towns/tropical/64/pygen/houses_combo_8bpp.png") { template_spr4605(1) }
+#32 alternative_sprites(spr4605, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/tropical/64/pygen/houses_combo_bt32bpp.png") { template_spr4605(1) }
+
 //4608-4613 flats 2,3
-base_graphics spr4608(4608, "../graphics/towns/tropical/64/pygen/flats_combo_8bpp.png") {
+template template_spr4608(z) {
 	template_house_1x1( 65,226, 1, 112)
 	template_house_1x1( 65,113, 1, 112)
 	template_house_1x1( 65,  0, 1, 112)
@@ -43,8 +55,11 @@ base_graphics spr4608(4608, "../graphics/towns/tropical/64/pygen/flats_combo_8bp
 	template_house_1x1(130,113, 1, 112)
 	template_house_1x1(130,  0, 1, 112)
 }
+base_graphics spr4608(4608, "../graphics/towns/tropical/64/pygen/flats_combo_8bpp.png") { template_spr4608(1) }
+#32 alternative_sprites(spr4608, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/tropical/64/pygen/flats_combo_rm32bpp.png", "../graphics/towns/tropical/64/pygen/flats_combo_8bpp.png") { template_spr4608(1) }
+
 //4614-4619 1x2 office block
-base_graphics spr4614(4614, "../graphics/towns/tropical/64/pygen/1x2_tallofficeblock_combo_tiles_8bpp.png") {
+template template_spr4614(z) {
 	template_house_1x1(  0,272, 1, 135)
 	template_house_1x1( 65,272, 1, 135)
 	template_house_1x1(  0,136, 1, 135)
@@ -52,17 +67,26 @@ base_graphics spr4614(4614, "../graphics/towns/tropical/64/pygen/1x2_tallofficeb
 	template_house_1x1(  0,  0, 1, 135)
 	template_house_1x1( 65,  0, 1, 135)
 }
+base_graphics spr4614(4614, "../graphics/towns/tropical/64/pygen/1x2_tallofficeblock_combo_tiles_8bpp.png") { template_spr4614(1) }
+#32 alternative_sprites(spr4614, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/tropical/64/pygen/1x2_tallofficeblock_combo_tiles_rm32bpp.png", "../graphics/towns/tropical/64/pygen/1x2_tallofficeblock_combo_tiles_8bpp.png") { template_spr4614(1) }
+
 //4620-4622 flats 4
-base_graphics spr4620(4620, "../graphics/towns/tropical/64/pygen/flats_combo_8bpp.png") {
+template template_spr4620(z) {
 	template_house_1x1(195,226, 1, 112)
 	template_house_1x1(195,113, 1, 112)
 	template_house_1x1(195,  0, 1, 112)
 }
+base_graphics spr4620(4620, "../graphics/towns/tropical/64/pygen/flats_combo_8bpp.png") { template_spr4620(1) }
+#32 alternative_sprites(spr4620, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/tropical/64/pygen/flats_combo_bt32bpp.png") { template_spr4620(1) }
+
 //4623-4625 tall office block
-base_graphics spr4623(4623, "../graphics/towns/tropical/64/pygen/tallofficeblock_combo_8bpp.png") {
+template template_spr4623(z) {
 	template_house_1x1(  0,248, 1, 123)
 	template_house_1x1(  0,124, 1, 123)
 	template_house_1x1(  0,  0, 1, 123)
 }
+base_graphics spr4623(4623, "../graphics/towns/tropical/64/pygen/tallofficeblock_combo_8bpp.png") { template_spr4623(1) }
+#32 alternative_sprites(spr4623, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/tropical/64/pygen/tallofficeblock_combo_bt32bpp.png", "../graphics/towns/tropical/64/pygen/tallofficeblock_combo_8bpp.png") { template_spr4623(1) }
+
 //4626 city roadside tree
 base_graphics spr4626(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city(0, 0, 1) }
