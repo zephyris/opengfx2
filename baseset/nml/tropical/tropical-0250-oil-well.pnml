@@ -1,12 +1,13 @@
 // 250-256 tropical oil wells
-base_graphics spr250(250, "../graphics/industries/tropical/64/pygen/oilwells_base_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 64)
+base_graphics spr250(250, "../graphics/industries/tropical/64/pygen/oilwells_base_8bpp.png") { template_house_1x1(  0, 0, 1, 64) }
+#32 alternative_sprites(spr250, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/tropical/64/pygen/oilwells_base_bt32bpp.png") { template_house_1x1(  0, 0, 1, 64) }
+template template_spr251(z) {
+	template_house_1x1(  0, 0, z, 64)
+	template_house_1x1( 65, 0, z, 64)
+	template_house_1x1(130, 0, z, 64)
+	template_house_1x1(195, 0, z, 64)
+	template_house_1x1(260, 0, z, 64)
+	template_house_1x1(325, 0, z, 64)
 }
-base_graphics spr251(251, "../graphics/industries/temperate/64/pygen/oilwells_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 64)
-	template_house_1x1( 65, 0, 1, 64)
-	template_house_1x1(130, 0, 1, 64)
-	template_house_1x1(195, 0, 1, 64)
-	template_house_1x1(260, 0, 1, 64)
-	template_house_1x1(325, 0, 1, 64)
-}
+base_graphics spr251(251, "../graphics/industries/temperate/64/pygen/oilwells_8bpp.png") { template_spr251(1) }
+//#32 alternative_sprites(spr251, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/oilwells_bt32bpp.png") { template_spr251(1) }

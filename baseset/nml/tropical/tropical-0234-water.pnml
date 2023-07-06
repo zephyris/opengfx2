@@ -8,9 +8,13 @@ base_graphics spr234(234, "../graphics/terrain/64/universal_watertiles_8bpp.png"
 base_graphics spr235(235, "../graphics/terrain/64/pygen/tropical_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
 #ez alternative_sprites(spr235, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
 #ez alternative_sprites(spr235, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
+#32 alternative_sprites(spr235, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/64/pygen/tropical_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
+#32 #ez alternative_sprites(spr235, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/tropical_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
+#32 #ez alternative_sprites(spr235, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/tropical_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
 
 //243-248 ship depots 
 base_graphics spr243(243, "../graphics/stations/general/64/pygen/shipdepots_regions_8bpp.png") { template_ship_depot(0, 0, 1) }
+#32 alternative_sprites(spr243, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/shipdepots_regions_rm32bpp.png", "../graphics/stations/general/64/pygen/shipdepots_regions_8bpp.png") { template_ship_depot(0, 0, 1) }
 
 //249 unused buoy
 base_graphics spr249(249, "../graphics/terrain/64/universal_bouy_8bpp.png") { template_flattile_single(0, 0, 1) }

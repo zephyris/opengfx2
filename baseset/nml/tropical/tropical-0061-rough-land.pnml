@@ -2,8 +2,14 @@
 base_graphics spr61(61, "../graphics/terrain/64/pygen/tropical_groundtiles_rough_gridline_8bpp.png") { template_groundtiles(0, 0, 1) template_groundtiles_extra(0, 0, 1) }
 #ez alternative_sprites(spr61, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_rough_gridline_8bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
 #ez alternative_sprites(spr61, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_rough_gridline_8bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
+#32 alternative_sprites(spr61, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_groundtiles_rough_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) template_groundtiles_extra(0, 0, 1) }
+#32 #ez alternative_sprites(spr61, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_rough_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
+#32 #ez alternative_sprites(spr61, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_rough_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
 
 //84-102 tropical rocky terrain
 base_graphics spr84(84, "../graphics/terrain/64/pygen/tropical_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
 #ez alternative_sprites(spr84, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
 #ez alternative_sprites(spr84, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+#32 alternative_sprites(spr84, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_groundtiles_rocks_alt_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+#32 #ez alternative_sprites(spr84, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_rocks_alt_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+#32 #ez alternative_sprites(spr84, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_rocks_alt_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }

@@ -1,6 +1,8 @@
 //TODO: Climate specific variants
 //310-311 statue+fountain
-base_graphics spr310(310, "../graphics/towns/temperate/64/pygen/statues_8bpp.png") {
-	template_house_1x1_addoffs(0,0, 1,47,1,-12)
-	template_house_1x1_addoffs(65,0, 1,47,1,-5) // ANIM
+template template_spr310(z) {
+	template_house_1x1_addoffs( 0,0, 1,47,z,-12)
+	template_house_1x1_addoffs(65,0, 1,47,z, -5) // ANIM
 }
+base_graphics spr310(310, "../graphics/towns/temperate/64/pygen/statues_8bpp.png") { template_spr310(1) }
+#32 alternative_sprites(spr310, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/statues_rm32bpp.png", "../graphics/towns/temperate/64/pygen/statues_8bpp.png") { template_spr310(1) }

@@ -191,17 +191,19 @@ base_graphics spr1933(1933, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") 
 //#ez alternative_sprites(spr1933, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf3(4) }
 
 //1947-2009 toyland trees, see src/table/tree_land.h for recolour details
-base_graphics spr(1947, "../graphics/trees/64/toyland_trees_8bpp.png") {
-	template_tree_bordered(0,   0, 1) // inverted cone, company colour-like recolouring
-	template_tree_bordered(0,  81, 1) // lolly, company colour-like recolouring
-	template_tree_bordered(0, 162, 1) // parasol, company colour-like recolouring
-	template_tree_bordered(0, 243, 1) // moving cylinder, no recolouring
-	template_tree_bordered(0, 324, 1) // umbrella, company colour-like recolouring
-	template_tree_bordered(0, 405, 1) // mushroom, company colour-like recolouring
-	template_tree_bordered(0, 486, 1) // cone, company colour-like recolouring
-	template_tree_bordered(0, 567, 1) // sphere, company colour-like recolouring
-	template_tree_bordered(0, 648, 1) // stacking disks, company colour-like recolouring
+template template_spr1947(z) {
+	template_tree_bordered(0,   0, z) // inverted cone, company colour-like recolouring
+	template_tree_bordered(0,  81, z) // lolly, company colour-like recolouring
+	template_tree_bordered(0, 162, z) // parasol, company colour-like recolouring
+	template_tree_bordered(0, 243, z) // moving cylinder, no recolouring
+	template_tree_bordered(0, 324, z) // umbrella, company colour-like recolouring
+	template_tree_bordered(0, 405, z) // mushroom, company colour-like recolouring
+	template_tree_bordered(0, 486, z) // cone, company colour-like recolouring
+	template_tree_bordered(0, 567, z) // sphere, company colour-like recolouring
+	template_tree_bordered(0, 648, z) // stacking disks, company colour-like recolouring
 }
+base_graphics spr1947(1947, "../graphics/trees/64/toyland_trees_8bpp.png") { template_spr1947(1) }
+#32 alternative_sprites(spr1947, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/trees/64/toyland_trees_rm32bpp.png", "../graphics/trees/64/toyland_trees_8bpp.png") { template_spr1947(1) }
 
 //2010 tree cursor
 base_graphics spr2010( 2010, "../graphics/cursors/1/pygen/default_8bpp.png") {

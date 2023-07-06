@@ -1,4 +1,7 @@
-//433-458 monomonorail on desert ground
+//433-458 monorail on desert ground
 base_graphics spr433(433, "../graphics/infrastructure/64/pygen/monorail_tropical_desert_8bpp.png") { template_railtiles(0, 0, 1) }
 #ez alternative_sprites(spr433, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/monorail_tropical_desert_8bpp.png") { template_railtiles(0, 0, 2) }
 #ez alternative_sprites(spr433, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/monorail_tropical_desert_8bpp.png") { template_railtiles(0, 0, 4) }
+#32 alternative_sprites(spr433, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/monorail_tropical_desert_rm32bpp.png", "../graphics/infrastructure/64/pygen/monorail_tropical_desert_8bpp.png") { template_railtiles(0, 0, 1) }
+#32 #ez alternative_sprites(spr433, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/monorail_tropical_desert_rm32bpp.png", "../graphics/infrastructure/128/pygen/monorail_tropical_desert_8bpp.png") { template_railtiles(0, 0, 2) }
+#32 #ez alternative_sprites(spr433, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/monorail_tropical_desert_rm32bpp.png", "../graphics/infrastructure/256/pygen/monorail_tropical_desert_8bpp.png") { template_railtiles(0, 0, 4) }

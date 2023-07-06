@@ -1,44 +1,71 @@
 //103-108 tropical monorail overlay tracks
 base_graphics spr103(103, "../graphics/infrastructure/64/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
 #ez alternative_sprites(spr103, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 4) }
+#32 alternative_sprites(spr103, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/monorail_bits_bt32bpp.png") { template_railoverlay_base(0, 0, 1) }
+#32 #ez alternative_sprites(spr103, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/monorail_bits_bt32bpp.png") { template_railoverlay_base(0, 0, 4) }
 
 //109-134 tropical monorail track
 base_graphics spr109(109, "../graphics/infrastructure/64/pygen/monorail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 1) }
 #ez alternative_sprites(spr109, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/monorail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 2) }
 #ez alternative_sprites(spr109, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/monorail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 4) }
+#32 alternative_sprites(spr109, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/monorail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/monorail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+#32 #ez alternative_sprites(spr109, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/monorail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/monorail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+#32 #ez alternative_sprites(spr109, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/monorail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/monorail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 4) }
 
 //135-138 tropical grass monorail level crossing
 base_graphics spr135(135, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
 #ez alternative_sprites(spr135, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
 #ez alternative_sprites(spr135, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
+#32 alternative_sprites(spr135, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
+#32 #ez alternative_sprites(spr135, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
+#32 #ez alternative_sprites(spr135, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
 //139-142 tropical city monorail level crossing
 base_graphics spr139(139, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
 #ez alternative_sprites(spr139, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
 #ez alternative_sprites(spr139, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }
+#32 alternative_sprites(spr139, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_concrete_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
+#32 #ez alternative_sprites(spr139, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_concrete_rm32bpp.png", "../graphics/infrastructure/128/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
+#32 #ez alternative_sprites(spr139, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_concrete_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }
 
 //143-150 tropical monorail tunnel
 base_graphics spr143(143, "../graphics/stations/general/64/pygen/tunnels_monorail_tropical_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 alternative_sprites(spr143, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_monorail_tropical_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
 
 //151-156 tropical rail overlay tracks
 base_graphics spr151(151, "../graphics/infrastructure/64/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 1) }
 #ez alternative_sprites(spr151, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 2) }
 #ez alternative_sprites(spr151, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 4) }
+#32 alternative_sprites(spr151, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/rail_bits_masked_bt32bpp.png") { template_railoverlay_base(0, 0, 1) }
+#32 #ez alternative_sprites(spr151, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/rail_bits_masked_bt32bpp.png") { template_railoverlay_base(0, 0, 2) }
+#32 #ez alternative_sprites(spr151, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/rail_bits_masked_bt32bpp.png") { template_railoverlay_base(0, 0, 4) }
 
 //157-182 tropical rail track
 base_graphics spr157(157, "../graphics/infrastructure/64/pygen/rail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 1) }
 #ez alternative_sprites(spr157, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/rail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 2) }
 #ez alternative_sprites(spr157, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/rail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 4) }
+#32 alternative_sprites(spr157, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/rail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/rail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 1) }
+#32 #ez alternative_sprites(spr157, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/rail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/rail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+#32 #ez alternative_sprites(spr157, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/rail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/rail_tropical_grass_8bpp.png") { template_railtiles(0, 0, 4) }
 
 //183-190 fences
 base_graphics spr183(183, "../graphics/infrastructure/64/rail_fences_8bpp.png") { template_rail_fences(0, 0, 1) }
 #ez alternative_sprites(spr183, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_fences_8bpp.png") { template_rail_fences(0, 0, 2) }
 #ez alternative_sprites(spr183, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/rail_fences_8bpp.png") { template_rail_fences(0, 0, 4) }
+#ez alternative_sprites(spr183, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/rail_fences_rm32bpp.png", "../graphics/infrastructure/64/rail_fences_8bpp.png") { template_rail_fences(0, 0, 1) }
+#ez alternative_sprites(spr183, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/rail_fences_rm32bpp.png", "../graphics/infrastructure/128/rail_fences_8bpp.png") { template_rail_fences(0, 0, 2) }
+#ez alternative_sprites(spr183, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/rail_fences_rm32bpp.png", "../graphics/infrastructure/256/rail_fences_8bpp.png") { template_rail_fences(0, 0, 4) }
 
 //191-194 grass rail level crossing
 base_graphics spr191(191, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
 #ez alternative_sprites(spr191, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
 #ez alternative_sprites(spr191, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
+#32 alternative_sprites(spr191, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
+#32 #ez alternative_sprites(spr191, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
+#32 #ez alternative_sprites(spr191, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_tropical_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_tropical_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
 //195-198 city rail level crossing
 base_graphics spr195(195, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
 #ez alternative_sprites(spr195, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
 #ez alternative_sprites(spr195, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }
+#32 alternative_sprites(spr195, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_concrete_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 1) }
+#32 #ez alternative_sprites(spr195, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_concrete_rm32bpp.png", "../graphics/infrastructure/128/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 2) }
+#32 #ez alternative_sprites(spr195, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_concrete_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_concrete_8bpp.png") { template_railcrossing(0, 0, 4) }

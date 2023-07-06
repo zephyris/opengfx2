@@ -1,5 +1,7 @@
 //218-225 tropical rail tunnel
 base_graphics spr218(218, "../graphics/stations/general/64/pygen/tunnels_rail_tropical_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 alternative_sprites(spr218, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_rail_tropical_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
 
 //226-233 tropical road tunnel
 base_graphics spr226(226, "../graphics/stations/general/64/pygen/tunnels_road_tropical_grass_8bpp.png") {  template_tunnels_general(0, 0, 1) }
+#32 alternative_sprites(spr226, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_road_tropical_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
