@@ -49,12 +49,12 @@ elif mode == "watertoyland":
   terrain_list = {
     "toyland_watertile": "toyland_watertile_32bpp.png",
     "toyland_watertiles": "toyland_watertiles_32bpp.png",
-    "toyland_rivertiles": "toyland_rivertiles_32bpp.png",
+    "toyland_rivertiles": "universal_rivertiles_32bpp.png",
   }
   palmask_paths = {
     "toyland_watertile": "toyland_watertile_palmask.png",
     "toyland_watertiles": "toyland_watertiles_palmask.png",
-    "toyland_rivertiles": "toyland_rivertiles_palmask.png",
+    "toyland_rivertiles": "universal_rivertiles_palmask.png",
   }
   gridline_overlay_path = "toyland_watertiles_cornermarkers.png"
 
@@ -63,7 +63,7 @@ for terrain_key in terrain_list:
   print("  "+terrain_key)
   terrain_image_path = terrain_list[terrain_key]
   output_grid_path = os.path.join("pygen", terrain_key+"_gridline_32bpp.png")
-  if mode != "shore" and mode != "shoretoy":
+  if mode != "shore" and mode != "shoretoyland":
     palmask_path = palmask_paths[terrain_key]
   output_gridpalmask_path = os.path.join("pygen", terrain_key+"_gridline_palmask.png")
   if check_update_needed([terrain_image_path, palmask_path, gridline_overlay_path], output_grid_path):
