@@ -6,9 +6,9 @@
 bash make_graphics.sh
 
 if [ ! -z "$1" ]; then
-  bash make_newgrfs.sh 32ez "$1/newgrf/"
+  bash make_newgrfs.sh "$1/newgrf/"
 else
-  bash make_newgrfs.sh 32ez
+  bash make_newgrfs.sh
 fi
 
 if [ ! -z "$1" ]; then
