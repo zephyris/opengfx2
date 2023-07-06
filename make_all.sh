@@ -3,7 +3,7 @@
 # If given an argument, copies the base and new grfs to the appropriate subdirectories of that install once complete
 # eg. /my/install/of/openttd/
 
-bash make_graphics.sh
+#bash make_graphics.sh
 
 if [ ! -z "$1" ]; then
   bash make_newgrfs.sh 32ez "$1/newgrf/"
@@ -12,13 +12,9 @@ else
 fi
 
 if [ ! -z "$1" ]; then
-  bash make_baseset.sh 8
-  bash make_baseset.sh 8ez
-  bash make_baseset.sh 32
+  bash make_baseset.sh 8 "$1/baseset/"
   bash make_baseset.sh 32ez "$1/baseset/"
 else
   bash make_baseset.sh 8
-  bash make_baseset.sh 8ez
-  bash make_baseset.sh 32
   bash make_baseset.sh 32ez
 fi

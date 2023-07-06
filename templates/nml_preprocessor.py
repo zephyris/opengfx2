@@ -17,7 +17,7 @@ Positional arguments:
 2. string including ez and/or 32 (if matched, include sprites of these types)
 
 Output:
-nml file with the same name as the pnml file
+nml file with the same name as the pnml file appended with type (_8, _8ez, _32 or _32ez)
 """
 
 import sys
@@ -27,11 +27,14 @@ comment_import = "#include"
 comment_alternate = ["#ez ", "#32 "]
 settings_alternate = [False, False]
 
+name = "8"
 if len(sys.argv) > 2:
+  if "32" in sys.argv[2]:
+    name = "32"
+    settings_alternate[1] = True
   if "ez" in sys.argv[2]:
     settings_alternate[0] = True
-  if "32" in sys.argv[2]:
-    settings_alternate[1] = True
+    name += "ez"
 
 def handle_alternates(line, options = []):
   for c in range(len(comment_alternate)):
@@ -43,8 +46,8 @@ def handle_alternates(line, options = []):
         line = line.replace(comment, comment.replace("#", "//"))
   return line
 
-with open(sys.argv[1]+".nml", "w") as nml:
-  with open(sys.argv[1]+".pnml", "r") as pnml:
+with open(sys.argv[1] + "_" + name + ".nml", "w") as nml:
+  with open(sys.argv[1] + ".pnml", "r") as pnml:
     lines = pnml.read().splitlines()
     for line in lines:
       if line.startswith(comment_import):
