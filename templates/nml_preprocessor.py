@@ -52,11 +52,12 @@ with open(sys.argv[1] + "_" + name + ".nml", "w") as nml:
     for line in lines:
       if line.startswith(comment_import):
         path = line[len(comment_import)+2:-1]
+        print("Including", path)
         with open(path, "r") as include:
           include_lines = include.read().splitlines()
           for include_line in include_lines:
             include_line = handle_alternates(include_line)
             nml.write(include_line + "\n")
       else:
-        include_line = handle_alternates(include_line)
+        include_line = handle_alternates(line)
         nml.write(line + "\n")
