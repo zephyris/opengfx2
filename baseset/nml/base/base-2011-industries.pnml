@@ -277,7 +277,7 @@ template template_spr2186(z) {
 	template_house_1x1( 65, 0, z, 80)
 }
 base_graphics spr2186(2186, "../graphics/industries/arctic/64/pygen/bank_tiles_8bpp.png") { template_spr2186(1) }
-#32 alternative_sprites(spr2186, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/bank_base_tiles_bt32bpp.png") { template_spr2186(1) }
+#32 alternative_sprites(spr2186, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/bank_tiles_bt32bpp.png") { template_spr2186(1) }
 
 //2188-2199 food processing plant
 template template_spr2188(z) {
