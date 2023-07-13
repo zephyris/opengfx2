@@ -239,12 +239,12 @@ async def make(input_file): # one per image
         palmask = Image.new("P", (width, height), 0)
         palmask.putpalette(palimage.getpalette())
 
-        image_8bpp = make_8bpp(image, palmask, 1);
-        image_8bpp.save(name+"_8bpp.png", "PNG")
-        image_bt32bpp = bluewhite_to_transp(image)
-        image_bt32bpp.save(name+"_bt32bpp.png", "PNG")
-        image_rm32bpp = remainder_32bpp(image_8bpp, image_bt32bpp)
-        image_rm32bpp.save(name+"_rm32bpp.png", "PNG")
+      image_8bpp = make_8bpp(image, palmask, 1);
+      image_8bpp.save(name+"_8bpp.png", "PNG")
+      image_bt32bpp = bluewhite_to_transp(image)
+      image_bt32bpp.save(name+"_bt32bpp.png", "PNG")
+      image_rm32bpp = remainder_32bpp(image_8bpp, image_bt32bpp)
+      image_rm32bpp.save(name+"_rm32bpp.png", "PNG")
 
 tasks = []
 for input_file in glob.glob("*"+suffix):
