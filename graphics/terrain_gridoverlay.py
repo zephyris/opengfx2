@@ -5,6 +5,7 @@ from PIL import ImageFilter
 from random import randint
 import numpy, blend_modes # For overlay blending
 import glob, os, sys
+import asyncio
 
 from tools import check_update_needed, blend_overlay, blendmode_overlay, paste_to
 
@@ -72,5 +73,5 @@ async def grid(key):
 
 tasks = []
 for terrain_key in terrain_list:
-  tasks.append(grid(key))
+  tasks.append(grid(terrain_key))
 asyncio.gather(*tasks)
