@@ -5,6 +5,7 @@ from PIL import ImageFilter
 from random import randint
 import numpy, blend_modes # For overlay blending
 import glob, os, sys
+import asyncio
 
 from tools import openttd_palettise, check_update_needed, openttd_palette, openttd_palette_animated, openttd_palette_generalmask
 
@@ -223,7 +224,7 @@ def remainder_32bpp(src8bit, src32bit):
 
 suffix = "_32bpp.png";
 print("Converting to 8-bit")
-for input_file in glob.glob("*"+suffix):
+async def make(input_file): # one per image
   # Only process images lacking a *_8bpp output _or_ modified more recently than the *_8bpp output
   do_processing = True
   name = input_file[:-len(suffix)]
@@ -237,9 +238,15 @@ for input_file in glob.glob("*"+suffix):
       else:
         palmask = Image.new("P", (width, height), 0)
         palmask.putpalette(palimage.getpalette())
-      image_8bpp = make_8bpp(image, palmask, 1);
-      image_8bpp.save(name+"_8bpp.png", "PNG")
-      image_bt32bpp = bluewhite_to_transp(image)
-      image_bt32bpp.save(name+"_bt32bpp.png", "PNG")
-      image_rm32bpp = remainder_32bpp(image_8bpp, image_bt32bpp)
-      image_rm32bpp.save(name+"_rm32bpp.png", "PNG")
+
+        image_8bpp = make_8bpp(image, palmask, 1);
+        image_8bpp.save(name+"_8bpp.png", "PNG")
+        image_bt32bpp = bluewhite_to_transp(image)
+        image_bt32bpp.save(name+"_bt32bpp.png", "PNG")
+        image_rm32bpp = remainder_32bpp(image_8bpp, image_bt32bpp)
+        image_rm32bpp.save(name+"_rm32bpp.png", "PNG")
+
+tasks = []
+for input_file in glob.glob("*"+suffix):
+  tasks.append(make(input_file))
+asyncio.gather(*tasks)

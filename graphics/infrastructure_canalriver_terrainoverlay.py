@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import asyncio
 
 from PIL import Image
 from PIL import ImageFilter
@@ -56,37 +57,45 @@ output_height += 1
 output_height *= scale
 
 print("Running in scale "+str(scale)+" (tile size "+str(tile_size)+") "+mode+" mode")
-for terrain_key in terrain_list:
-  print(" "+terrain_key)
+
+async def river(key):
+  print(" " + terrain_key)
   # Make image containing arranged terrain backgrounds
   terrain_image_path = os.path.join("..", "..", "terrain", str(tile_size), terrain_list[terrain_key])
   terrain_image = Image.open(terrain_image_path)
   target_image = Image.new("RGBA", (output_width, output_height), (255, 255, 255, 255))
   for i in range(len(tile_positions)):
-    target_image = paste_to(terrain_image, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image, i * (tile_size // scale + 1) + 1, 1, scale)
+    target_image = paste_to(terrain_image, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2],
+                            tile_positions[i][3], target_image, i * (tile_size // scale + 1) + 1, 1, scale)
   for i in range(rows):
     target_image = paste_to(target_image, 0, 1, output_width, row_height, target_image, 0, i * row_height + 1, scale)
   # Make a plmask image from terrain background palmask images, if they exists
-  terrain_palmask_path = os.path.join("..", "..", "terrain", str(tile_size), terrain_list[terrain_key][:len("_32bpp.png")]+"_palmask.png")
+  terrain_palmask_path = os.path.join("..", "..", "terrain", str(tile_size),
+                                      terrain_list[terrain_key][:len("_32bpp.png")] + "_palmask.png")
   if os.path.isfile(terrain_palmask_path):
     terrain_image_palmask = openttd_palettise(Image.open())
     for i in range(len(tile_positions)):
-      target_image_palmask = paste_to(terrain_image_palmask, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image_palmask, i * (tile_size +1) + 1, 1, scale)
+      target_image_palmask = paste_to(terrain_image_palmask, tile_positions[i][0], tile_positions[i][1],
+                                      tile_positions[i][2], tile_positions[i][3], target_image_palmask,
+                                      i * (tile_size + 1) + 1, 1, scale)
     for i in range(rows):
-      target_image_palmask = paste_to(target_image_palmask, 0, 0, output_width, row_height, target_image_palmask, 0, i * row_height, scale)
+      target_image_palmask = paste_to(target_image_palmask, 0, 0, output_width, row_height, target_image_palmask, 0,
+                                      i * row_height, scale)
   else:
     target_image_palmask = openttd_palettise(Image.new("RGB", target_image.size, (0, 0, 255)))
   target_image_palmask = target_image_palmask.convert("RGBA")
   for infrastructure_key in infrastructure_list:
     # Overlay each infrastructure set
-    print("  "+infrastructure_key)
+    print("  " + infrastructure_key)
     # Check files for changes
-    infrastructure_alpha_path = infrastructure_list[infrastructure_key]+"_overlayalpha.png"
-    infrastructure_normal_path = infrastructure_list[infrastructure_key]+"_overlaynormal.png"
-    infrastructure_shading_path = infrastructure_list[infrastructure_key]+"_overlayshading.png"
-    output_normal_path = os.path.join("pygen", infrastructure_key+"_"+terrain_key+"_32bpp.png")
-    output_palmask_path = os.path.join("pygen", infrastructure_key+"_"+terrain_key+"_palmask.png")
-    if check_update_needed([terrain_image_path, infrastructure_alpha_path, infrastructure_normal_path, infrastructure_shading_path], output_normal_path):
+    infrastructure_alpha_path = infrastructure_list[infrastructure_key] + "_overlayalpha.png"
+    infrastructure_normal_path = infrastructure_list[infrastructure_key] + "_overlaynormal.png"
+    infrastructure_shading_path = infrastructure_list[infrastructure_key] + "_overlayshading.png"
+    output_normal_path = os.path.join("pygen", infrastructure_key + "_" + terrain_key + "_32bpp.png")
+    output_palmask_path = os.path.join("pygen", infrastructure_key + "_" + terrain_key + "_palmask.png")
+    if check_update_needed(
+            [terrain_image_path, infrastructure_alpha_path, infrastructure_normal_path, infrastructure_shading_path],
+            output_normal_path):
       # Open overlay_alpha and make cropped target to its target size
       infrastructure_alpha = Image.open(infrastructure_alpha_path).convert("RGBA")
       overlay_w, overlay_h = infrastructure_alpha.size
@@ -101,10 +110,17 @@ for terrain_key in terrain_list:
       if os.path.isfile(infrastructure_shading_path):
         print(infrastructure_shading_path)
         infrastructure_shading = Image.open(infrastructure_shading_path).convert("RGBA")
-        target_image_crop = blend_overlay(target_image_crop, infrastructure_shading, 192/255)
+        target_image_crop = blend_overlay(target_image_crop, infrastructure_shading, 192 / 255)
       # Save 32bpp
       target_image_crop.save(output_normal_path)
       # Overlay normal onto palmask image
       target_image_palmask_crop = Image.alpha_composite(target_image_palmask_crop, infrastructure_normal)
       target_image_palmask_crop = openttd_palettise(target_image_palmask_crop)
       target_image_palmask_crop.save(output_palmask_path)
+
+tasks = []
+for terrain_key in terrain_list:
+  tasks.append(river(terrain_key))
+
+asyncio.gather(*tasks)
+

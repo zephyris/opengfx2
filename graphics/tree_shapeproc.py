@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import asyncio
 
 # tree_shapeproc.py
 # Generates output images used for dithering to 8bpp
@@ -23,6 +24,7 @@
 # pip3 install pillow
 # pip3 install numpy
 # pip3 install blend-modes
+# pip3 install asyncio
 
 from tools import palette_image
 
@@ -87,8 +89,9 @@ h = 80
 cy = 6 # y position of centre of base of trunk relative to bottom of sprite
 resize = [0.45, 0.65, 0.85, 1, 1, 1, 1] # scale factor
 density = [1, 1, 1, 1, 0.8, 0.5, 0] # leaf density, random pixel removal
-for input_file in glob.glob("*"+suffix):
-  outfile = os.path.join("pygen", input_file[:-len(suffix)]+"_"+namesuffix+"32bpp.png")
+
+async def tree(input_file):
+  outfile = os.path.join("pygen", input_file[:-len(suffix)] + "_" + namesuffix + "32bpp.png")
   if check_update_needed([input_file], outfile):
     with Image.open(input_file) as image:
       # Open shape image
@@ -99,13 +102,13 @@ for input_file in glob.glob("*"+suffix):
       image_shape = openttd_palettise(image)
       # Apply colouring specified by pixel above each sprite
       image_colorised = Image.new("P", (image_shape.size))
-      image_colorised.paste(image_shape, (0,0))
+      image_colorised.paste(image_shape, (0, 0))
       image_colorised.putpalette(image_shape.getpalette())
       for column in range(columns):
         x = column * (w + 1) + 1
         for row in range(2):
           y = row * (h + 1) + 1
-          print("  bounds "+", ".join([str(x) for x in [x, y, w, h]]))
+          print("  bounds " + ", ".join([str(x) for x in [x, y, w, h]]))
           index_target = []
           if row == 0:
             print("  leaf")
@@ -116,8 +119,8 @@ for input_file in glob.glob("*"+suffix):
           for i in range(len(index_remaps)):
             index_target.append(image_shape.getpixel(((x + i) * scale, (y - 1) * scale)))
           if verbose == True:
-            print("  Source indices: "+",".join(map(str, index_remaps)))
-            print("  Target indices: "+",".join(map(str, index_target)))
+            print("  Source indices: " + ",".join(map(str, index_remaps)))
+            print("  Target indices: " + ",".join(map(str, index_target)))
           # Apply new colours
           current_r = palette_r.copy()
           current_g = palette_g.copy()
@@ -126,7 +129,7 @@ for input_file in glob.glob("*"+suffix):
             current_r[index_remaps[i]] = palette_r[index_target[i]]
             current_g[index_remaps[i]] = palette_g[index_target[i]]
             current_b[index_remaps[i]] = palette_b[index_target[i]]
-          # Override with snow colors, if in snow mode 
+          # Override with snow colors, if in snow mode
           if snow == True:
             for i in range(len(index_remaps_snow)):
               if index_remaps_snow[i] != -1:
@@ -152,13 +155,20 @@ for input_file in glob.glob("*"+suffix):
             oh = int(h * resize[outcolumn] * scale)
             xoffs = int(w / 2 - w * resize[outcolumn] / 2)
             yoffs = int(h - h * resize[outcolumn] + cy * resize[outcolumn] - cy)
-            current_spriteset=current_spriteset.resize((ow, oh), resample=Image.NEAREST)
+            current_spriteset = current_spriteset.resize((ow, oh), resample=Image.NEAREST)
             if row == 0:
               seed(0)
               for tx in range(1, ow - 1):
                 for ty in range(1, oh - 1):
                   if randint(0, 100) > density[outcolumn] * 100:
                     current_spriteset.putpixel((tx, ty), 0)
-            image_out = blue_to(current_spriteset, 0, 0, ow, oh, image_out, ((w + 1) * outcolumn + 1 + xoffs), ((h + 1) * column + 1 + yoffs), scale)
+            image_out = blue_to(current_spriteset, 0, 0, ow, oh, image_out, ((w + 1) * outcolumn + 1 + xoffs),
+                                ((h + 1) * column + 1 + yoffs), scale)
       # Save a copy of the unshaded image, as palmask
       image_out.save(outfile, "PNG")
+
+tasks = []
+for input_file in glob.glob("*"+suffix):
+  tasks.append(tree(input_file))
+asyncio.gather(*tasks)
+

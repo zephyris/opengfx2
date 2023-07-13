@@ -45,7 +45,9 @@ terrain_list = {
 gridline_opacity = 40/255
 
 print("Running in scale "+str(scale)+" (tile size "+str(tile_size)+")")
-for terrain_key in terrain_list:
+
+async def grid(key):
+
   repeat_y = 48
   if terrain_key == "farm_groundtiles":
     repeat_y += 1 # hacked, because of off by one pixel error in 'stacking' 64px field sprites
@@ -67,3 +69,8 @@ for terrain_key in terrain_list:
     target_image = blendmode_overlay(target_image, gridline_overlay, gridline_opacity, "normal")
     # Save
     target_image.save(output_grid_path)
+
+tasks = []
+for terrain_key in terrain_list:
+  tasks.append(grid(key))
+asyncio.gather(*tasks)
