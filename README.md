@@ -8,7 +8,7 @@ Features far better organisation of sprites. Extensive use of automated composit
 ## Building
 Requires `git lfs` for large file handling.
 
-Requires a system which can run `bash` shell scripts, `python3` with `PIL`, `blend-modes`, `numpy` and `nmlc`.
+Requires a system which can run `bash` shell scripts, `python3` with `PIL`, `blend-modes`, `numpy`, `asyncio` and `nmlc`.
 
 Clone the repository and run `make_all.sh`, it will take a long time...
 
