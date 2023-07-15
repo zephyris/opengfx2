@@ -1,9 +1,17 @@
 # OpenGFX2
+# ![opengfx2_titletext](https://github.com/zephyris/opengfx2/assets/2762690/1adabdf4-baf8-48b2-ae35-279c3d808d0e)
+
 Work-in-progress / development repo for an "OpenGFX v2". Or maybe that should be "OpenGFX director's edition", "refactored OpenGFX", or perhaps "OpenGFX extra zoom" or "OpenGFX 32bpp". Or some combination of all of them.
 
 Partly derived directly from OpenGFX, partly redrawn or revised from my original 32bpp sources. Almost all sprites have been updated or revised.
 
-Features far better organisation of sprites. Extensive use of automated composite sprite generation. Drawn and coded with extra zoom levels and 32bpp in mind.
+Features far better organisation of sprites. Extensive use of automated composite sprite generation using Python of bubious quality. Drawn and coded with extra zoom levels and 32bpp in mind.
+
+## Quick start
+
+Download a release from [the prebuilt grf releases](https://github.com/zephyris/opengfx2/tags) and install using the instructions below.
+
+Thease are early release previews not available in the in-game content downloader.
 
 ## Building
 Requires `git lfs` for large file handling.
