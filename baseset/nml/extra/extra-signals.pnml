@@ -76,6 +76,7 @@ replacenew presignalsemaphorepbs_224(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/sign
 //German-style for TRAFFIC_SIDE_RIGHT
 if ((traffic_side == TRAFFIC_SIDE_RIGHT)) {
 	replacenew presignalsemaphorepbs_48_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/base_semaphore_rightside_8bpp.png", 48) { template_signals_base(1) } //base/block
+	#ez alternative_sprites(presignalsemaphorepbs_48_rightside, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/signals/256/base_semaphore_rightside_8bpp.png") { template_signals_base(4) }
 	replacenew presignalsemaphorepbs_64_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/presignal_semaphore_rightside_entry_8bpp.png", 64) { template_signals_base(1) } //pre-signal, entry
 	replacenew presignalsemaphorepbs_80_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/presignal_semaphore_rightside_exit_8bpp.png", 80) { template_signals_base(1) } //pre-signal, exit
 	replacenew presignalsemaphorepbs_96_rightside(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/presignal_semaphore_rightside_combo_8bpp.png", 96) { template_signals_base(1) } //pre-signal, combo
