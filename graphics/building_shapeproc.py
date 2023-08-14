@@ -292,6 +292,7 @@ for input_file in glob.glob("*"+suffix):
         # Roof shading
         image_32bit = inout_blur(image_32bit, image_shape, index_roofs, 0, 0, 2, (0, 0, 0), 191/255, "overlay", "inset")
         # Wall shading
+        #first two lines for 'pillow' shading, bright top right. second two for 'pop' HDR-like shading, bright bottom left
         #image_32bit = inout_blur(image_32bit, image_shape, index_walls, 1, -1, 1.5, (0, 0, 0), 159/255, "overlay", "inset")
         #image_32bit = inout_blur(image_32bit, image_shape, index_walls, -1, 1, 1.5, (255, 255, 255), 223/255, "overlay", "inset")
         image_32bit = inout_blur(image_32bit, image_shape, index_walls, -1, 1, 1.5, (0, 0, 0), 159/255, "overlay", "inset")
@@ -308,8 +309,11 @@ for input_file in glob.glob("*"+suffix):
         # Roof shading
         image_32bit = inout_blur(image_32bit, image_shape, index_roofs, 0, 0, 2, (0, 0, 0), 191/255, "overlay", "inset")
         # Wall shading
-        image_32bit = inout_blur(image_32bit, image_shape, index_walls, 2, -2, 2, (0, 0, 0), 159/255, "overlay", "inset")
-        image_32bit = inout_blur(image_32bit, image_shape, index_walls, -2, 2, 2, (255, 255, 255), 223/255, "overlay", "inset")
+        #first two lines for 'pillow' shading, bright top right. second two for 'pop' HDR-like shading, bright bottom left
+        #image_32bit = inout_blur(image_32bit, image_shape, index_walls, 2, -2, 2, (0, 0, 0), 159/255, "overlay", "inset")
+        #image_32bit = inout_blur(image_32bit, image_shape, index_walls, -2, 2, 2, (255, 255, 255), 223/255, "overlay", "inset")
+        image_32bit = inout_blur(image_32bit, image_shape, index_walls, -4, 4, 4, (0, 0, 0), 159/255, "overlay", "inset")
+        image_32bit = inout_blur(image_32bit, image_shape, index_walls, 4, -4, 4, (255, 255, 255), 223/255, "overlay", "inset")
         # Wood/ironwork shading
         image_32bit = inout_blur(image_32bit, image_shape, index_woodwork, -1, 1, 1, (0, 0, 0), 127/255, "normal", "outset")
         image_32bit = inout_blur(image_32bit, image_shape, index_woodwork, -1, 1, 1, (255, 255, 255), 127/255, "overlay", "inset")
