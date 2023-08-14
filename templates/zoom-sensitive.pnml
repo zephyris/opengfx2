@@ -994,31 +994,31 @@ template template_waterfeature_flat(x, y, z) {
 template template_waterfeature_slopes(x, y, z) {
 	//Flat
 	//Straight sides
-	[  27*z+x*z,  41*z+y*z, 38*z, 19*z-1,  -5*z,   0*z ]
-	[  27*z+x*z,  14*z+y*z, 38*z, 19*z-1,  -5*z,  13*z ]
-	[   1*z+x*z,  54*z+y*z, 38*z, 19*z-1, -31*z,  13*z ]
-	[   1*z+x*z,   1*z+y*z, 38*z, 19*z-1, -31*z,   0*z ]
+	[  27*z+x*z,  41*z+y*z, 1*z, 1*z-1,  -5*z,   0*z ]
+	[  27*z+x*z,  14*z+y*z, 1*z, 1*z-1,  -5*z,  13*z ]
+	[   1*z+x*z,  54*z+y*z, 1*z, 1*z-1, -31*z,  13*z ]
+	[   1*z+x*z,   1*z+y*z, 1*z, 1*z-1, -31*z,   0*z ]
 	//Outer corners
-	[  41*z+x*z,  91*z+y*z, 24*z, 12*z-1,   9*z,  10*z ]
-	[  21*z+x*z, 101*z+y*z, 24*z, 12*z-1, -11*z,  20*z ]
-	[   1*z+x*z,  91*z+y*z, 24*z, 12*z-1, -31*z,  10*z ]
-	[  21*z+x*z,  81*z+y*z, 24*z, 12*z-1, -11*z,   0*z ]
+	[  41*z+x*z,  91*z+y*z, 1*z, 1*z-1,   9*z,  10*z ]
+	[  21*z+x*z, 101*z+y*z, 1*z, 1*z-1, -11*z,  20*z ]
+	[   1*z+x*z,  91*z+y*z, 1*z, 1*z-1, -31*z,  10*z ]
+	[  21*z+x*z,  81*z+y*z, 1*z, 1*z-1, -11*z,   0*z ]
 	//Inner corners
-	[  49*z+x*z, 133*z+y*z, 16*z,  8*z-1,  17*z,  12*z ]
-	[  25*z+x*z, 145*z+y*z, 16*z,  8*z-1,  -7*z,  24*z ]
-	[   1*z+x*z, 133*z+y*z, 16*z,  8*z-1, -31*z,  12*z ]
-	[  25*z+x*z, 121*z+y*z, 16*z,  8*z-1,  -7*z,   0*z ]
+	[  49*z+x*z, 133*z+y*z, 1*z, 1*z-1,  17*z,  12*z ]
+	[  25*z+x*z, 145*z+y*z, 1*z, 1*z-1,  -7*z,  24*z ]
+	[   1*z+x*z, 133*z+y*z, 1*z, 1*z-1, -31*z,  12*z ]
+	[  25*z+x*z, 121*z+y*z, 1*z, 1*z-1,  -7*z,   0*z ]
 	//NW down
 	//Straight sides
 	[ 223*z+x*z,  41*z+y*z, 37*z, 18*z-1,  -4*z,   0*z ]
 	[ 223*z+x*z,   7*z+y*z, 37*z, 18*z-1,  -4*z,   6*z ]
 	[ 196*z+x*z,  47*z+y*z, 37*z, 18*z-1, -31*z,   6*z ]
-	[ 196*z+x*z,   1*z+y*z, 37*z, 18*z-1, -31*z,   0*z ]
+	[ 196*z+x*z,   1*z+y*z,  1*z,  1*z-1, -31*z,   0*z ]
 	//Outer corners
 	[ 236*z+x*z,  86*z+y*z, 24*z,  9*z-1,   9*z,   5*z ]
 	[ 216*z+x*z,  96*z+y*z, 24*z,  9*z-1, -11*z,  16*z ]
-	[ 196*z+x*z,  91*z+y*z, 24*z,  9*z-1, -31*z,  10*z ]
-	[ 216*z+x*z,  81*z+y*z, 24*z,  9*z-1, -11*z,   0*z ]
+	[ 196*z+x*z,  91*z+y*z,  1*z,  1*z-1, -31*z,  10*z ]
+	[ 216*z+x*z,  81*z+y*z,  1*z,  1*z-1, -11*z,   0*z ]
 	//Inner corners
 	[ 244*z+x*z, 127*z+y*z, 16*z,  6*z-1,  17*z,   6*z ]
 	[ 220*z+x*z, 139*z+y*z, 16*z,  6*z-1,  -7*z,  18*z ]
@@ -1028,12 +1028,12 @@ template template_waterfeature_slopes(x, y, z) {
 	//Straight sides
 	[  92*z+x*z,  41*z+y*z, 38*z, 27*z-1,  -5*z,  -8*z ]
 	[  92*z+x*z,  14*z+y*z, 38*z, 27*z-1,  -5*z,   5*z ]
-	[  66*z+x*z,  54*z+y*z, 38*z, 27*z-1, -31*z,   5*z ]
+	[  66*z+x*z,  54*z+y*z,  1*z,  1*z-1, -31*z,   5*z ]
 	[  66*z+x*z,   1*z+y*z, 38*z, 27*z-1, -31*z,  -8*z ]
 	//Outer corners
 	[ 106*z+x*z,  91*z+y*z, 24*z, 15*z-1,   9*z,   2*z ]
-	[  86*z+x*z, 106*z+y*z, 24*z, 15*z-1, -11*z,  17*z ]
-	[  66*z+x*z,  96*z+y*z, 24*z, 15*z-1, -31*z,   7*z ]
+	[  86*z+x*z, 106*z+y*z,  1*z,  1*z-1, -11*z,  17*z ]
+	[  66*z+x*z,  96*z+y*z,  1*z,  1*z-1, -31*z,   7*z ]
 	[  86*z+x*z,  81*z+y*z, 24*z, 15*z-1, -11*z,  -8*z ]
 	//Inner corners
 	[ 114*z+x*z, 133*z+y*z, 16*z, 10*z-1,  17*z,   4*z ]
@@ -1042,15 +1042,15 @@ template template_waterfeature_slopes(x, y, z) {
 	[  90*z+x*z, 121*z+y*z, 16*z, 10*z-1,  -7*z,  -8*z ]
 	//NE down
 	//Straight sides
-	[ 158*z+x*z,  41*z+y*z, 37*z, 18*z-1,  -4*z,   0*z ]
+	[ 158*z+x*z,  41*z+y*z,  1*z,  1*z-1,  -4*z,   0*z ]
 	[ 158*z+x*z,   7*z+y*z, 37*z, 18*z-1,  -4*z,   6*z ]
 	[ 131*z+x*z,  47*z+y*z, 37*z, 18*z-1, -31*z,   6*z ]
 	[ 131*z+x*z,   1*z+y*z, 37*z, 18*z-1, -31*z,   0*z ]
 	//Outer corners
-	[ 171*z+x*z,  91*z+y*z, 24*z,  9*z-1,   9*z,  10*z ]
+	[ 171*z+x*z,  91*z+y*z,  1*z,  1*z-1,   9*z,  10*z ]
 	[ 151*z+x*z,  96*z+y*z, 24*z,  9*z-1, -11*z,  16*z ]
 	[ 131*z+x*z,  86*z+y*z, 24*z,  9*z-1, -31*z,   5*z ]
-	[ 151*z+x*z,  81*z+y*z, 24*z,  9*z-1, -11*z,   0*z ]
+	[ 151*z+x*z,  81*z+y*z,  1*z,  1*z-1, -11*z,   0*z ]
 	//Inner corners
 	[ 179*z+x*z, 133*z+y*z, 16*z,  6*z-1,  17*z,  12*z ]
 	[ 155*z+x*z, 139*z+y*z, 16*z,  6*z-1,  -7*z,  18*z ]
@@ -1059,17 +1059,102 @@ template template_waterfeature_slopes(x, y, z) {
 	//SE down
 	//Straight sides
 	[ 287*z+x*z,  41*z+y*z, 38*z, 27*z-1,  -5*z,  -8*z ]
-	[ 287*z+x*z,  14*z+y*z, 38*z, 27*z-1,  -5*z,   5*z ]
+	[ 287*z+x*z,  14*z+y*z,  1*z,  1*z-1,  -5*z,   5*z ]
 	[ 261*z+x*z,  54*z+y*z, 38*z, 27*z-1, -31*z,   5*z ]
 	[ 261*z+x*z,   1*z+y*z, 38*z, 27*z-1, -31*z,  -8*z ]
 	//Outer corners
-	[ 301*z+x*z,  96*z+y*z, 24*z, 15*z-1,   9*z,   7*z ]
-	[ 281*z+x*z, 106*z+y*z, 24*z, 15*z-1, -11*z,  17*z ]
+	[ 301*z+x*z,  96*z+y*z,  1*z,  1*z-1,   9*z,   7*z ]
+	[ 281*z+x*z, 106*z+y*z,  1*z,  1*z-1, -11*z,  17*z ]
 	[ 261*z+x*z,  91*z+y*z, 24*z, 15*z-1, -31*z,   2*z ]
 	[ 281*z+x*z,  81*z+y*z, 24*z, 15*z-1, -11*z,  -8*z ]
 	//Inner corners
 	[ 309*z+x*z, 139*z+y*z, 16*z, 10*z-1,  17*z,  10*z ]
 	[ 285*z+x*z, 151*z+y*z, 16*z, 10*z-1,  -7*z,  22*z ]
+	[ 261*z+x*z, 133*z+y*z, 16*z, 10*z-1, -31*z,   4*z ]
+	[ 285*z+x*z, 121*z+y*z, 16*z, 10*z-1,  -7*z,  -8*z ]
+}
+
+//Template: river/canal banks, slopes for coasts
+//1x1 dummy sprites instead of template_empty(), for better 32bpp support
+template template_waterfeature_slopes_coasts(x, y, z) {
+	//Flat
+	//Straight sides
+	[  27*z+x*z,  41*z+y*z, 1*z, 2*z-1,  -5*z,   0*z ]
+	[  27*z+x*z,  14*z+y*z, 1*z, 2*z-1,  -5*z,  13*z ]
+	[   1*z+x*z,  54*z+y*z, 1*z, 2*z-1, -31*z,  13*z ]
+	[   1*z+x*z,   1*z+y*z, 1*z, 2*z-1, -31*z,   0*z ]
+	//Outer corners
+	[  41*z+x*z,  91*z+y*z, 1*z, 2*z-1,   9*z,  10*z ]
+	[  21*z+x*z, 101*z+y*z, 1*z, 2*z-1, -11*z,  20*z ]
+	[   1*z+x*z,  91*z+y*z, 1*z, 2*z-1, -31*z,  10*z ]
+	[  21*z+x*z,  81*z+y*z, 1*z, 2*z-1, -11*z,   0*z ]
+	//Inner corners
+	[  49*z+x*z, 133*z+y*z, 1*z, 2*z-1,  17*z,  12*z ]
+	[  25*z+x*z, 145*z+y*z, 1*z, 2*z-1,  -7*z,  24*z ]
+	[   1*z+x*z, 133*z+y*z, 1*z, 2*z-1, -31*z,  12*z ]
+	[  25*z+x*z, 121*z+y*z, 1*z, 2*z-1,  -7*z,   0*z ]
+	//NW down
+	//Straight sides
+	[ 223*z+x*z,  41*z+y*z, 37*z, 18*z-1,  -4*z,   0*z ]
+	[ 223*z+x*z,   7*z+y*z, 37*z, 18*z-1,  -4*z,   6*z ]
+	[ 196*z+x*z,  47*z+y*z, 37*z, 18*z-1, -31*z,   6*z ]
+	[ 196*z+x*z,   1*z+y*z,  1*z,  2*z-1, -31*z,   0*z ]
+	//Outer corners
+	[ 236*z+x*z,  86*z+y*z, 24*z,  9*z-1,   9*z,   5*z ]
+	[ 216*z+x*z,  96*z+y*z, 24*z,  9*z-1, -11*z,  16*z ]
+	[ 196*z+x*z,  91*z+y*z,  1*z,  2*z-1, -31*z,  10*z ]
+	[ 216*z+x*z,  81*z+y*z,  1*z,  2*z-1, -11*z,   0*z ]
+	//Inner corners
+	[ 244*z+x*z, 127*z+y*z, 16*z,  6*z-1,  17*z,   6*z ]
+	[ 220*z+x*z, 139*z+y*z, 16*z,  6*z-1,  -7*z,  18*z ]
+	[ 196*z+x*z, 133*z+y*z,  1*z,  2*z-1, -31*z,  12*z ]
+	[ 220*z+x*z, 121*z+y*z,  1*z,  2*z-1,  -7*z,   0*z ]
+	//SW down
+	//Straight sides
+	[  92*z+x*z,  41*z+y*z, 38*z, 27*z-1,  -5*z,  -8*z ]
+	[  92*z+x*z,  14*z+y*z, 38*z, 27*z-1,  -5*z,   5*z ]
+	[  66*z+x*z,  54*z+y*z,  1*z,  2*z-1, -31*z,   5*z ]
+	[  66*z+x*z,   1*z+y*z, 38*z, 27*z-1, -31*z,  -8*z ]
+	//Outer corners
+	[ 106*z+x*z,  91*z+y*z, 24*z, 15*z-1,   9*z,   2*z ]
+	[  86*z+x*z, 106*z+y*z,  1*z,  2*z-1, -11*z,  17*z ]
+	[  66*z+x*z,  96*z+y*z,  1*z,  2*z-1, -31*z,   7*z ]
+	[  86*z+x*z,  81*z+y*z, 24*z, 15*z-1, -11*z,  -8*z ]
+	//Inner corners
+	[ 114*z+x*z, 133*z+y*z, 16*z, 10*z-1,  17*z,   4*z ]
+	[  90*z+x*z, 151*z+y*z,  1*z,  2*z-1,  -7*z,  22*z ]
+	[  66*z+x*z, 139*z+y*z,  1*z,  2*z-1, -31*z,  10*z ]
+	[  90*z+x*z, 121*z+y*z, 16*z, 10*z-1,  -7*z,  -8*z ]
+	//NE down
+	//Straight sides
+	[ 158*z+x*z,  41*z+y*z,  1*z,  2*z-1,  -4*z,   0*z ]
+	[ 158*z+x*z,   7*z+y*z, 37*z, 18*z-1,  -4*z,   6*z ]
+	[ 131*z+x*z,  47*z+y*z, 37*z, 18*z-1, -31*z,   6*z ]
+	[ 131*z+x*z,   1*z+y*z, 37*z, 18*z-1, -31*z,   0*z ]
+	//Outer corners
+	[ 171*z+x*z,  91*z+y*z,  1*z,  2*z-1,   9*z,  10*z ]
+	[ 151*z+x*z,  96*z+y*z, 24*z,  9*z-1, -11*z,  16*z ]
+	[ 131*z+x*z,  86*z+y*z, 24*z,  9*z-1, -31*z,   5*z ]
+	[ 151*z+x*z,  81*z+y*z,  1*z,  2*z-1, -11*z,   0*z ]
+	//Inner corners
+	[ 179*z+x*z, 133*z+y*z,  1*z,  2*z-1,  17*z,  12*z ]
+	[ 155*z+x*z, 139*z+y*z, 16*z,  6*z-1,  -7*z,  18*z ]
+	[ 131*z+x*z, 127*z+y*z, 16*z,  6*z-1, -31*z,   6*z ]
+	[ 155*z+x*z, 121*z+y*z,  1*z,  2*z-1,  -7*z,   0*z ]
+	//SE down
+	//Straight sides
+	[ 287*z+x*z,  41*z+y*z, 38*z, 27*z-1,  -5*z,  -8*z ]
+	[ 287*z+x*z,  14*z+y*z,  1*z,  2*z-1,  -5*z,   5*z ]
+	[ 261*z+x*z,  54*z+y*z, 38*z, 27*z-1, -31*z,   5*z ]
+	[ 261*z+x*z,   1*z+y*z, 38*z, 27*z-1, -31*z,  -8*z ]
+	//Outer corners
+	[ 301*z+x*z,  96*z+y*z,  1*z,  2*z-1,   9*z,   7*z ]
+	[ 281*z+x*z, 106*z+y*z,  1*z,  2*z-1, -11*z,  17*z ]
+	[ 261*z+x*z,  91*z+y*z, 24*z, 15*z-1, -31*z,   2*z ]
+	[ 281*z+x*z,  81*z+y*z, 24*z, 15*z-1, -11*z,  -8*z ]
+	//Inner corners
+	[ 309*z+x*z, 139*z+y*z,  1*z,  2*z-1,  17*z,  10*z ]
+	[ 285*z+x*z, 151*z+y*z,  1*z,  2*z-1,  -7*z,  22*z ]
 	[ 261*z+x*z, 133*z+y*z, 16*z, 10*z-1, -31*z,   4*z ]
 	[ 285*z+x*z, 121*z+y*z, 16*z, 10*z-1,  -7*z,  -8*z ]
 }
