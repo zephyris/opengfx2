@@ -44,7 +44,7 @@ for image_index in range(len(source_suffices)):
     # Setup output image
     source_image_width, source_image_height = source_image.size
     output_rows = (source_image_height - 1) // (tile_mask_height - 1)
-    output_image = Image.new("RGB", ((tile_number * (tile_size + 1) + 1) * scale, tile_mask_height * output_rows + scale), (255, 255, 255))
+    output_image = Image.new("RGB", ((tile_number * (64 + 1) + 1) * scale, tile_mask_height * output_rows + scale), (255, 255, 255))
 
     # Loop through rows
     for row in range(output_rows):
