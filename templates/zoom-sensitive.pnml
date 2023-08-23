@@ -1230,8 +1230,8 @@ template template_busstop(x, y, z) {
 template template_roadstop_throughstop(x, y, z) {
 	template_house_1x1_addoffs(260+x,  65+y, z, 64,  25, -12)
 	template_house_1x1_addoffs(260+x,   0+y, z, 64,   0,   1)
-	template_house_1x1_addoffs(195+x,  65+y, z, 64,   0,   1)
-	template_house_1x1_addoffs(195+x,   0+y, z, 64, -26, -12)
+	template_house_1x1_addoffs(195+x,   0+y, z, 64,   0,   1)
+	template_house_1x1_addoffs(195+x,  65+y, z, 64, -26, -12)
 }
 
 //Template: Modern airport, base
