@@ -67,11 +67,11 @@ for terrain_key in terrain_list:
   for i in range(rows):
     target_image = paste_to(target_image, 0, 1, output_width, row_height, target_image, 0, i * row_height + 1, scale)
   # Make a plmask image from terrain background palmask images, if they exists
-  terrain_palmask_path = os.path.join("..", "..", "terrain", str(tile_size), terrain_list[terrain_key][:len("_32bpp.png")]+"_palmask.png")
+  terrain_palmask_path = os.path.join("..", "..", "terrain", str(tile_size), terrain_list[terrain_key][:-len("_32bpp.png")]+"_palmask.png")
   if os.path.isfile(terrain_palmask_path):
-    terrain_image_palmask = openttd_palettise(Image.open())
+    terrain_image_palmask = openttd_palettise(Image.open(terrain_palmask_path))
     for i in range(len(tile_positions)):
-      target_image_palmask = paste_to(terrain_image_palmask, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image_palmask, i * (tile_size +1) + 1, 1, scale)
+      target_image_palmask = paste_to(terrain_image_palmask, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image_palmask,i * (tile_size // scale + 1) + 1, 1, scale)
     for i in range(rows):
       target_image_palmask = paste_to(target_image_palmask, 0, 0, output_width, row_height, target_image_palmask, 0, i * row_height, scale)
   else:

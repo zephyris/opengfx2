@@ -205,7 +205,7 @@ for terrain_key in terrain_list:
   for i in range(len(tile_positions)):
     target_image = paste_to(terrain_image, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image, i * (tile_size // scale + 1) + 1, 1, scale)
   target_image_width, target_image_height = target_image.size
-  # Make a palmask image from terrain background palmask images, if they exists
+  # Make a palmask image from infrastructure background palmask images, if it exists, othwise pure blue
   terrain_palmask_path = os.path.join("..", "..", "terrain", str(tile_size), terrain_list[terrain_key][:len("_32bpp.png")]+"_palmask.png")
   if os.path.isfile(terrain_palmask_path):
     terrain_image_palmask = Image.open()
@@ -213,14 +213,17 @@ for terrain_key in terrain_list:
     target_image_palmask.putpalette(palimg.getpalette())
     for i in range(len(tile_positions)):
       target_image_palmask = paste_to(terrain_image_palmask, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image_palmask,i * (tile_size // scale + 1) + 1, 1, scale)
+  else:
+      target_image_palmask = Image.new("RGBA", (output_width, output_height), (0, 0, 255, 255))
   for infrastructure_key in infrastructure_list:
     # Check if update needed
     name_overlayalpha = infrastructure_list[infrastructure_key]+"_overlayalpha.png"
     name_overlayalpha2 = infrastructure_list[infrastructure_key]+"_overlayalpha2.png"
     name_overlayshading = infrastructure_list[infrastructure_key]+"_overlayshading.png"
+    name_overlaynormal = infrastructure_list[infrastructure_key]+"_overlaynormal.png"
     output_normal_path = os.path.join("pygen", infrastructure_key+"_"+terrain_key+"_32bpp.png")
     output_palmask_path = os.path.join("pygen", infrastructure_key+"_"+terrain_key+"_palmask.png")
-    if check_update_needed([terrain_image_path, name_overlayalpha, name_overlayalpha2, name_overlayshading], output_normal_path):
+    if check_update_needed([terrain_image_path, name_overlayalpha, name_overlayalpha2, name_overlayshading, name_overlaynormal], output_normal_path):
       # Overlay each infrastructure set
       print("  "+infrastructure_key)
       output_image = target_image.copy()
@@ -244,6 +247,11 @@ for terrain_key in terrain_list:
         output_image = blend_overlay(output_image, infrastructure_image, 192/255)
       # Save 32bpp image
       output_image.save(output_normal_path)
-      # Save palmask image
-      if os.path.isfile(terrain_palmask_path):
+      # Make and save palmask image
+      # Overlay infrastructure normal overlay, if it exists
+      if os.path.isfile(name_overlaynormal):
+        infrastructure_image = Image.open(name_overlaynormal).convert("RGBA")
+        target_image_palmask = Image.alpha_composite(target_image_palmask, infrastructure_image)
+      # If either exists, then save
+      if os.path.isfile(terrain_palmask_path) or os.path.isfile(name_overlaynormal):
         target_image_palmask.save(output_palmask_path)
