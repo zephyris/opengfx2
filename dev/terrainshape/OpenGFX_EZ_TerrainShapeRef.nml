@@ -1,6 +1,7 @@
 //Define the NewGRF
 grf {
-	grfid: "OGZ\A";
+	//grfid: "OGZ\A";
+	grfid: "XXXX";
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESCRIPTION);
 	url:  string(STR_GRF_URL);
@@ -57,7 +58,13 @@ replace terrain_snowline(4493, "../../graphics/terrain/64/blends/snow_gtdev_fina
 	template_groundtiles(0,144, 1)
 }
 
-//Snowline texture reference
+//Desert texture reference
 replace terrain_desertslope(4550, "../../graphics/terrain/64/blends/desert_gtdev_duneslopes_8bpp.png") {
 	template_groundtiles(0,  0, 1)
 }
+
+//Flat colour temperate terrain
+replace terrain_temperateflat(3981, "../../graphics/terrain/64/blends/solidcolour_8bpp.png") {
+	template_groundtiles(0,  0, 1)
+}
+
