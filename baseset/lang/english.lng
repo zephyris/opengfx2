@@ -4,3 +4,19 @@ STR_GENERAL_DESC        :OpenGFX2 base graphics set for OpenTTD. Freely availabl
 STR_GRF_NAME            :OpenGFX2Base
 STR_GRF_DESCRIPTION     :{ORANGE}OpenGFX2 Base Graphics Set{BLACK}{}By Zephyris, standing on the shoulders of the OpenGFX team{}{BLACK}License: {SILVER}GPL v2+{}{BLACK}Website: {SILVER}https://github.com/zephyris/OpenGFX2
 STR_GRF_URL             :https://github.com/zephyris/opengfx2
+
+STR_PARAM_CURSOR_NAME                 :Mouse cursor
+STR_PARAM_CURSOR_DESC                 :Style and colour of the mouse cursor/pointer.
+STR_PARAM_CURSOR_VALUE_DEFAULT        :Classic-style, yellow (Default)
+STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW :OpenGFX-style, yellow
+
+STR_PARAM_GRIDLINE_NAME               :Terrain gridlines
+STR_PARAM_GRIDLINE_DESC               :Whether or not to show gridlines on the edges of ground and water tiles.
+STR_PARAM_GRIDLINE_VALUE_DEFAULT      :Ground gridlines only (Default)
+STR_PARAM_GRIDLINE_VALUE_NOGRIDLINE   :No gridlines
+STR_PARAM_GRIDLINE_VALUE_WATERGRID    :Ground and water gridlines
+
+STR_PARAM_LOGO_NAME                   :Logo style
+STR_PARAM_LOGO_DESC                   :OpenTTD logo style for the title screen.
+STR_PARAM_LOGO_VALUE_DEFAULT          :Default
+STR_PARAM_LOGO_VALUE_CABRIOLET        :Streamliner

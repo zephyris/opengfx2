@@ -5,6 +5,49 @@ grf {
 	url: string(STR_GRF_URL);
 	version: 0;
 	min_compatible_version: version_openttd(1, 3, 0);
+	param 1 {
+		param_cursors_ {
+			name: string(STR_PARAM_CURSOR_NAME);
+			desc: string(STR_PARAM_CURSOR_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 1;
+			names: {
+				0: string(STR_PARAM_CURSOR_VALUE_DEFAULT);
+				1: string(STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW);
+			};
+		}
+	}
+	param 2 {
+		param_gridlines_ {
+			name: string(STR_PARAM_GRIDLINE_NAME);
+			desc: string(STR_PARAM_GRIDLINE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_GRIDLINE_VALUE_DEFAULT);
+				1: string(STR_PARAM_GRIDLINE_VALUE_NOGRIDLINE);
+				2: string(STR_PARAM_GRIDLINE_VALUE_WATERGRID);
+			};
+		}
+	}
+	param 3 {
+		param_logos_ {
+			name: string(STR_PARAM_LOGO_NAME);
+			desc: string(STR_PARAM_LOGO_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 1;
+			names: {
+				0: string(STR_PARAM_LOGO_VALUE_DEFAULT);
+				1: string(STR_PARAM_LOGO_VALUE_CABRIOLET);
+			};
+		}
+	}
 }
 
 if (ttd_platform == PLATFORM_OPENTTD) {
@@ -17,6 +60,14 @@ if (ttd_platform != PLATFORM_OPENTTD) {
 	error(FATAL, REQUIRES_OPENTTD, "1.3.0");
 }
 
-param_cursors = param["OGZ\1", 1];
-param_gridlines = param["OGZ\1", 2];
-param_logos = param["OGZ\1", 3];
+if (grf_future_status("OGZ\1")==1) {
+	// Load parameters from settings grf, if will be loaded
+	param_cursors = param["OGZ\1", 1];
+	param_gridlines = param["OGZ\1", 2];
+	param_logos = param["OGZ\1", 3];
+} else {
+	//Otherwise use this grf's parameters
+	param_cursors = param_cursors_;
+	param_gridlines = param_gridlines_;
+	param_logos = param_logos_;
+}
