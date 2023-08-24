@@ -1,5 +1,6 @@
 grf {
-	grfid: "OGZ\0";
+	//grfid: "OGZ\0";
+	grfid: "\FFOT2"; //Adheres to "\FFOT" base set GRF ID range
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESCRIPTION);
 	url: string(STR_GRF_URL);
