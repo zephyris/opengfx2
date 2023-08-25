@@ -53,3 +53,4 @@ if (climate == CLIMATE_TOYLAND) {
 #include "nml/extra/extra-param-cursors.pnml"
 #include "nml/extra/extra-param-terrain.pnml"
 #include "nml/extra/extra-param-logos.pnml"
+#include "nml/extra/extra-param-foundations.pnml"
