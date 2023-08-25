@@ -48,6 +48,70 @@ grf {
 			};
 		}
 	}
+	param 4 {
+		param_foundations_temperate {
+			name: string(STR_PARAM_FOUNDATIONS_TEMPERATE_NAME);
+			desc: string(STR_PARAM_FOUNDATIONS_TEMPERATE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE_DEFAULT);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 5 {
+		param_foundations_arctic {
+			name: string(STR_PARAM_FOUNDATIONS_ARCTIC_NAME);
+			desc: string(STR_PARAM_FOUNDATIONS_ARCTIC_DESC);
+			type: int;
+			def_value: 1;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 6 {
+		param_foundations_tropical {
+			name: string(STR_PARAM_FOUNDATIONS_TROPICAL_NAME);
+			desc: string(STR_PARAM_FOUNDATIONS_TROPICAL_DESC);
+			type: int;
+			def_value: 2;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 7 {
+		param_foundations_toyland {
+			name: string(STR_PARAM_FOUNDATIONS_TOYLAND_NAME);
+			desc: string(STR_PARAM_FOUNDATIONS_TOYLAND_DESC);
+			type: int;
+			def_value: 3;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+			};
+		}
+	}
 }
 
 if (ttd_platform == PLATFORM_OPENTTD) {

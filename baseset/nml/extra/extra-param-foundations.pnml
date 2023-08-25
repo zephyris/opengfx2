@@ -1,0 +1,51 @@
+// temperate foundation style override
+if ((climate == CLIMATE_ARCTIC && param_foundations_arctic==0) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==0) || (climate == CLIMATE_TOYLAND && param_foundations_toyland==0)) {
+    replace customfoundations_temperate(990, "../graphics/foundations/64/foundations_temperate_8bpp.png") { template_foundations_base(0, 0, 1) }
+    #ez alternative_sprites(spr990, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_temperate_8bpp.png") { template_foundations_base(0, 0, 4) }
+    #32 alternative_sprites(spr990, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_temperate_bt32bpp.png") { template_foundations_base(0, 0, 1) }
+    #32 #ez alternative_sprites(spr990, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/foundations/256/foundations_temperate_bt32bpp.png") { template_foundations_base(0, 0, 4) }
+
+    replacenew customfoundations_temperate_slope_halftile(FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_temperate_8bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
+    #ez alternative_sprites(terrain_foundations_temperate_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_temperate_8bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
+    #32 alternative_sprites(terrain_foundations_temperate_slope_halftile, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_temperate_bt32bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
+    #32 #ez alternative_sprites(terrain_foundations_temperate_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/foundations/256/foundations_temperate_bt32bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
+}
+
+// arctic foundation style override
+if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==1) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==1) || (climate == CLIMATE_TOYLAND && param_foundations_toyland==1)) {
+    replace customfoundations_arctic(990, "../graphics/foundations/64/foundations_arctic_8bpp.png") { template_foundations_base(0, 0, 1) }
+    #ez alternative_sprites(spr990, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_arctic_8bpp.png") { template_foundations_base(0, 0, 4) }
+    #32 alternative_sprites(spr990, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_arctic_bt32bpp.png") { template_foundations_base(0, 0, 1) }
+    #32 #ez alternative_sprites(spr990, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/foundations/256/foundations_arctic_bt32bpp.png") { template_foundations_base(0, 0, 4) }
+
+    replacenew customfoundations_arctic_slope_halftile(FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_arctic_8bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
+    #ez alternative_sprites(terrain_foundations_arctic_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_arctic_8bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
+    #32 alternative_sprites(terrain_foundations_arctic_slope_halftile, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_arctic_bt32bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
+    #32 #ez alternative_sprites(terrain_foundations_arctic_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/foundations/256/foundations_arctic_bt32bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
+}
+
+// tropical foundation style override
+if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==2) || (climate == CLIMATE_ARCTIC && param_foundations_arctic==2) || (climate == CLIMATE_TOYLAND && param_foundations_toyland==2)) {
+    replace customfoundations_tropical(990, "../graphics/foundations/64/foundations_tropical_8bpp.png") { template_foundations_base(0, 0, 1) }
+    #ez alternative_sprites(spr990, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_tropical_8bpp.png") { template_foundations_base(0, 0, 4) }
+    #32 alternative_sprites(spr990, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_tropical_bt32bpp.png") { template_foundations_base(0, 0, 1) }
+    #32 #ez alternative_sprites(spr990, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/foundations/256/foundations_tropical_bt32bpp.png") { template_foundations_base(0, 0, 4) }
+
+    replacenew customfoundations_tropical_slope_halftile(FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_tropical_8bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
+    #ez alternative_sprites(terrain_foundations_tropical_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_tropical_8bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
+    #32 alternative_sprites(terrain_foundations_tropical_slope_halftile, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_tropical_bt32bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
+    #32 #ez alternative_sprites(terrain_foundations_tropical_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/foundations/256/foundations_tropical_bt32bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
+}
+
+// toyland foundation style override
+if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==3) || (climate == CLIMATE_ARCTIC && param_foundations_arctic==3) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==3)) {
+    replace customfoundations_toyland(990, "../graphics/foundations/64/foundations_toyland_8bpp.png") { template_foundations_base(0, 0, 1) }
+    #ez alternative_sprites(spr990, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_toyland_8bpp.png") { template_foundations_base(0, 0, 4) }
+    #32 alternative_sprites(spr990, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_toyland_bt32bpp.png") { template_foundations_base(0, 0, 1) }
+    #32 #ez alternative_sprites(spr990, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/foundations/256/foundations_toyland_bt32bpp.png") { template_foundations_base(0, 0, 4) }
+
+    replacenew customfoundations_toyland_slope_halftile(FOUNDATIONS_SLOPES_HALFTILES, "../graphics/foundations/64/foundations_toyland_8bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
+    #ez alternative_sprites(terrain_foundations_toyland_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_toyland_8bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
+    #32 alternative_sprites(terrain_foundations_toyland_slope_halftile, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_toyland_bt32bpp.png") { template_foundations_slope_halftile(0, 82, 1) }
+    #32 #ez alternative_sprites(terrain_foundations_toyland_slope_halftile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/foundations/256/foundations_toyland_bt32bpp.png") { template_foundations_slope_halftile(0, 82, 4) }
+}
