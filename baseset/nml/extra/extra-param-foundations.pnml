@@ -1,5 +1,5 @@
 // temperate foundation style override
-if ((climate == CLIMATE_ARCTIC && param_foundations_arctic==0) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==0) || (climate == CLIMATE_TOYLAND && param_foundations_toyland==0)) {
+if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==0) || (climate == CLIMATE_ARCTIC && param_foundations_arctic==0) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==0) || (climate == CLIMATE_TOYLAND && param_foundations_toyland==0)) {
     replace customfoundations_temperate(990, "../graphics/foundations/64/foundations_temperate_8bpp.png") { template_foundations_base(0, 0, 1) }
     #ez alternative_sprites(customfoundations_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_temperate_8bpp.png") { template_foundations_base(0, 0, 4) }
     #32 alternative_sprites(customfoundations_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_temperate_bt32bpp.png") { template_foundations_base(0, 0, 1) }
@@ -12,7 +12,7 @@ if ((climate == CLIMATE_ARCTIC && param_foundations_arctic==0) || (climate == CL
 }
 
 // arctic foundation style override
-if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==1) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==1) || (climate == CLIMATE_TOYLAND && param_foundations_toyland==1)) {
+if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==1) || (climate == CLIMATE_ARCTIC && param_foundations_arctic==1) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==1) || (climate == CLIMATE_TOYLAND && param_foundations_toyland==1)) {
     replace customfoundations_arctic(990, "../graphics/foundations/64/foundations_arctic_8bpp.png") { template_foundations_base(0, 0, 1) }
     #ez alternative_sprites(customfoundations_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_arctic_8bpp.png") { template_foundations_base(0, 0, 4) }
     #32 alternative_sprites(customfoundations_arctic, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_arctic_bt32bpp.png") { template_foundations_base(0, 0, 1) }
@@ -25,7 +25,7 @@ if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==1) || (climate
 }
 
 // tropical foundation style override
-if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==2) || (climate == CLIMATE_ARCTIC && param_foundations_arctic==2) || (climate == CLIMATE_TOYLAND && param_foundations_toyland==2)) {
+if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==2) || (climate == CLIMATE_ARCTIC && param_foundations_arctic==2) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==2) || (climate == CLIMATE_TOYLAND && param_foundations_toyland==2)) {
     replace customfoundations_tropical(990, "../graphics/foundations/64/foundations_tropical_8bpp.png") { template_foundations_base(0, 0, 1) }
     #ez alternative_sprites(customfoundations_tropical, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_tropical_8bpp.png") { template_foundations_base(0, 0, 4) }
     #32 alternative_sprites(customfoundations_tropical, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_tropical_bt32bpp.png") { template_foundations_base(0, 0, 1) }
@@ -38,7 +38,7 @@ if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==2) || (climate
 }
 
 // toyland foundation style override
-if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==3) || (climate == CLIMATE_ARCTIC && param_foundations_arctic==3) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==3)) {
+if ((climate == CLIMATE_TEMPERATE && param_foundations_temperate==3) || (climate == CLIMATE_ARCTIC && param_foundations_arctic==3) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==3) || (climate == CLIMATE_TROPICAL && param_foundations_tropical==3) ) {
     replace customfoundations_toyland(990, "../graphics/foundations/64/foundations_toyland_8bpp.png") { template_foundations_base(0, 0, 1) }
     #ez alternative_sprites(customfoundations_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/foundations/256/foundations_toyland_8bpp.png") { template_foundations_base(0, 0, 4) }
     #32 alternative_sprites(customfoundations_toyland, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/foundations/64/foundations_toyland_bt32bpp.png") { template_foundations_base(0, 0, 1) }
