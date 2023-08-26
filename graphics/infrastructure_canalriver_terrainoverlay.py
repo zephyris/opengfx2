@@ -37,12 +37,22 @@ if mode == "canal":
     "tropical_grass": os.path.join("pygen", "tropical_groundtiles_gridline_32bpp.png"),
     "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
     "temperate_grass": os.path.join("pygen", "temperate_groundtiles_gridline_32bpp.png"),
+    "arctic_grass_nogridline": os.path.join("pygen", "arctic_groundtiles_nogridline_32bpp.png"),
+    "arctic_snow_nogridline": os.path.join("pygen", "arctic_groundtiles_snow_nogridline_32bpp.png"),
+    "tropical_grass_nogridline": os.path.join("pygen", "tropical_groundtiles_nogridline_32bpp.png"),
+    "tropical_desert_nogridline": os.path.join("pygen", "tropical_groundtiles_desert_nogridline_32bpp.png"),
+    "temperate_grass_nogridline": os.path.join("pygen", "temperate_groundtiles_nogridline_32bpp.png"),
     "general_concrete": "general_concretetiles_32bpp.png",
     "toyland_grass": os.path.join("pygen", "toyland_yellowtiles_gridline_32bpp.png"),
     "arctic_grass_shores": os.path.join("pygen", "arctic_grass_gridline_shoretiles_32bpp.png"),
     "tropical_grass_shores": os.path.join("pygen", "tropical_grass_gridline_shoretiles_32bpp.png"),
     "temperate_grass_shores": os.path.join("pygen", "temperate_grass_gridline_shoretiles_32bpp.png"),
-    "toyland_grass_shores": os.path.join("pygen", "toyland_grass_gridline_shoretiles_32bpp.png")
+    "toyland_grass_shores": os.path.join("pygen", "toyland_grass_gridline_shoretiles_32bpp.png"),
+    "toyland_grass_nogridline": os.path.join("pygen", "toyland_yellowtiles_nogridline_32bpp.png"),
+    "arctic_grass_shores_nogridline": os.path.join("pygen", "arctic_grass_nogridline_shoretiles_32bpp.png"),
+    "tropical_grass_shores_nogridline": os.path.join("pygen", "tropical_grass_nogridline_shoretiles_32bpp.png"),
+    "temperate_grass_shores_nogridline": os.path.join("pygen", "temperate_grass_nogridline_shoretiles_32bpp.png"),
+    "toyland_grass_shores_nogridline": os.path.join("pygen", "toyland_grass_nogridline_shoretiles_32bpp.png")
   }
 
 # Output image properties

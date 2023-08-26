@@ -49,6 +49,12 @@ terrain_list = {
   "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
   "temperate_grass": os.path.join("pygen", "temperate_groundtiles_gridline_32bpp.png"),
   "toyland_grass": os.path.join("pygen", "toyland_groundtiles_gridline_32bpp.png"),
+  "arctic_grass_nogridline": os.path.join("pygen", "arctic_groundtiles_nogridline_32bpp.png"),
+  "arctic_snow_nogridline": os.path.join("pygen", "arctic_groundtiles_snow_nogridline_32bpp.png"),
+  "tropical_grass_nogridline": os.path.join("pygen", "tropical_groundtiles_nogridline_32bpp.png"),
+  "tropical_desert_nogridline": os.path.join("pygen", "tropical_groundtiles_desert_nogridline_32bpp.png"),
+  "temperate_grass_nogridline": os.path.join("pygen", "temperate_groundtiles_nogridline_32bpp.png"),
+  "toyland_grass_nogridline": os.path.join("pygen", "toyland_groundtiles_nogridline_32bpp.png")
 }
 # Infrastructure sprites to use
 if mode == "terrain":
