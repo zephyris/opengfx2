@@ -42,10 +42,11 @@ grf {
 			type: int;
 			def_value: 0;
 			min_value: 0;
-			max_value: 1;
+			max_value: 2;
 			names: {
 				0: string(STR_PARAM_LOGO_VALUE_DEFAULT);
-				1: string(STR_PARAM_LOGO_VALUE_CABRIOLET);
+				1: string(STR_PARAM_LOGO_VALUE_UNDERGROUND);
+				2: string(STR_PARAM_LOGO_VALUE_CABRIOLET);
 			};
 		}
 	}

@@ -19,6 +19,7 @@ STR_PARAM_GRIDLINE_VALUE_WATERGRID    :Ground and water gridlines
 STR_PARAM_LOGO_NAME                   :Logo style
 STR_PARAM_LOGO_DESC                   :OpenTTD logo style for the title screen.
 STR_PARAM_LOGO_VALUE_DEFAULT          :Default
+STR_PARAM_LOGO_VALUE_UNDERGROUND      :Underground
 STR_PARAM_LOGO_VALUE_CABRIOLET        :Streamliner
 
 STR_PARAM_VALUE_TEMPERATE             :Temperate

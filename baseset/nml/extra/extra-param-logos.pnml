@@ -1,4 +1,25 @@
 if (param_logos==1) {
+    // openttd title screen logo temperate easter egg
+    // logos 43-51 title screen characters
+    replace spr4836_temperatealt(4836, "../graphics/icons/1/title_letters_underground_8bpp.png") {
+        [   5,  63,  37,  50, -10,   0] // larger T
+        [  49,   2,  29,  50, -10,   0] // R
+        [  94,   2,  29,  50, -10,   0] // A
+        [ 141,   2,  31,  50, -10,   0] // N
+        [ 190,   2,  23,  50, -10,   0] // S
+        [ 229,   2,  26,  50, -10,   0] // P
+        [  57,  63,  62,  50, -10,   0] // larger O
+        [ 321,   2,  33,  50, -10,   0] // Y
+        [ 370,   2,  29,  50, -10,   0] // C
+    }
+
+    replacenew ottd_gui12_temperatealt(OTTD_GUI, "../graphics/icons/1/title_letters_underground_8bpp.png", 12) {
+        [ 415,   2,  23,  50, -10,   0] // E
+        [ 127,  63,  43,  50, -10,   0] // larger D
+    }
+}
+
+if (param_logos==2) {
     // openttd title screen logo arctic easter egg
     // logos 43-51 title screen characters
     replace spr4836_arcticalt(4836, "../graphics/icons/1/title_letters_cabriolet_8bpp.png") {
