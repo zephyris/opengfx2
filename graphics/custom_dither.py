@@ -185,6 +185,79 @@ def make_dithered(src, pal, dither_factor):
   # Return result
   return res
 
+def make_output_parallel_handler(input=input):
+  # input is: image, palmask, dither factor, x, y
+  image_8bpp = make_8bpp(input[0], input[1], input[2])
+  image_bt32bpp = bluewhite_to_transp(input[0])
+  image_rm32bpp = remainder_32bpp(image_8bpp, image_bt32bpp)
+  return [image_8bpp, image_bt32bpp, image_rm32bpp, input[3], input[4]]
+
+def make_output_parallel(image, palmask, factor):
+  import concurrent, multiprocessing
+  from tqdm.auto import tqdm
+  sprites = find_sprites(image)
+  #setup worklist by cropping sprites from input image
+  worklist = []
+  for i in range(len(sprites)):
+    # each entry is: image, palmask, dither factor, x, y
+    worklist.append([image.crop((sprites[i][0], sprites[i][1], sprites[i][2], sprites[i][3])), palmask.crop((sprites[i][0], sprites[i][1], sprites[i][2], sprites[i][3])), factor, sprites[i][0], sprites[i][1]])
+  #setup workers based on multiprocess mode
+  multiprocess_mode = "process" # process seems to give easily the highest performance
+  workers = multiprocessing.cpu_count()
+  if multiprocess_mode is None:
+    # run in a single thread, still use the ThreadPoolExecutor since that's equivalent
+    Executor = concurrent.futures.ThreadPoolExecutor
+    workers = 1
+  elif multiprocess_mode == "process":
+    # setup executor as a process pool
+    Executor = concurrent.futures.ProcessPoolExecutor
+  elif multiprocess_mode == "thread":
+    # setup executor as a thread pool
+    Executor = concurrent.futures.ThreadPoolExecutor
+  #process
+  with Executor(workers) as executor:
+    futures = [executor.submit(make_output_parallel_handler, input=input) for input in worklist]
+    results = [future.result() for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), smoothing=0)]
+  #recombine cropped sprites into spritesheets
+  image_8bpp = Image.new("P", (image.size), 255)
+  image_8bpp.putpalette(palimage.getpalette())
+  image_bt32bpp = Image.new("RGBA", (image.size), (255, 255, 255, 255))
+  image_rm32bpp = Image.new("RGB", (image.size), (255, 255, 255))
+  for i in range(len(results)):
+    image_8bpp.paste(results[i][0], (results[i][3], results[i][4]))
+    image_bt32bpp.paste(results[i][1], (results[i][3], results[i][4]))
+    image_rm32bpp.paste(results[i][2], (results[i][3], results[i][4]))
+  return image_8bpp, image_bt32bpp, image_rm32bpp
+
+def make_output(image, palmask, factor):
+  image_8bpp = make_8bpp(image, palmask, 1);
+  image_bt32bpp = bluewhite_to_transp(image)
+  image_rm32bpp = remainder_32bpp(image_8bpp, image_bt32bpp)
+  return image_8bpp, image_bt32bpp, image_rm32bpp
+
+def find_sprites(src):
+  """
+  Find sprites within a 32bpp spritesheet. Assumes sprite background is (255, 255, 255) and sprites are rectangular with entirely non-(255, 255, 255) in the left column and top row.
+  Returns a list of (x, y, x+w, y+h) bounds per sprite.
+  """
+  import numpy, skimage
+  w, h = src.size
+  r, g, b = src.convert("RGB").split()
+  # make numpy image with (255, 255, 255)->0 else 1
+  tmp = numpy.asarray(r).astype("int32") + numpy.asarray(g) + numpy.asarray(b)
+  tmp[tmp != 255 * 3] = 0
+  tmp[tmp == 255 * 3] = 255
+  tmp = 255 - tmp
+  # use skimage to find the objects (sprites)
+  lab = skimage.measure.label(tmp)
+  table = skimage.measure.regionprops_table(lab, tmp, properties=("bbox", "area_bbox"))
+  # parse and return
+  sprites = []
+  for i in range(len(table["bbox-0"])):
+    sprites.append([table["bbox-1"][i], table["bbox-0"][i], table["bbox-3"][i], table["bbox-2"][i]])
+  return sprites
+
+
 def bluewhite_to_transp(src):
   # Make sure src is RGB
   src = src.convert("RGB")
@@ -229,6 +302,7 @@ for input_file in glob.glob("*"+suffix):
   name = input_file[:-len(suffix)]
   if verbose == True:
     print(" "+name)
+  find_sprites(Image.open(input_file))
   if check_update_needed([input_file, input_file+"_palmask.png"], name+"_8bpp.png") or check_update_needed([input_file, input_file+"_palmask.png"], name+"_bt32bpp.png") or check_update_needed([input_file, input_file+"_palmask.png"], name+"_rm32bpp.png"):
     with Image.open(input_file) as image:
       width, height = image.size
@@ -237,9 +311,8 @@ for input_file in glob.glob("*"+suffix):
       else:
         palmask = Image.new("P", (width, height), 0)
         palmask.putpalette(palimage.getpalette())
-      image_8bpp = make_8bpp(image, palmask, 1);
+      image_8bpp, image_bt32bpp, image_rm32bpp = make_output_parallel(image, palmask, 1);
+      #image_8bpp, image_bt32bpp, image_rm32bpp = make_output(image, palmask, 1)
       image_8bpp.save(name+"_8bpp.png", "PNG")
-      image_bt32bpp = bluewhite_to_transp(image)
       image_bt32bpp.save(name+"_bt32bpp.png", "PNG")
-      image_rm32bpp = remainder_32bpp(image_8bpp, image_bt32bpp)
       image_rm32bpp.save(name+"_rm32bpp.png", "PNG")
