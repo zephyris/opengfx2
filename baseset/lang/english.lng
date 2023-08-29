@@ -39,3 +39,12 @@ STR_PARAM_FOUNDATIONS_TROPICAL_NAME   :Tropical foundations
 STR_PARAM_FOUNDATIONS_TROPICAL_DESC   :Foundation style to use in the tropical climate.
 STR_PARAM_FOUNDATIONS_TOYLAND_NAME    :Toyland foundations
 STR_PARAM_FOUNDATIONS_TOYLAND_DESC    :Foundation style to use in the toyland climate.
+
+STR_PARAM_GRASS_TEMPERATE_NAME  :Temperate grass
+STR_PARAM_GRASS_TEMPERATE_DESC  :Grass style to use in the temperate climate.
+STR_PARAM_GRASS_ARCTIC_NAME     :Arctic grass
+STR_PARAM_GRASS_ARCTIC_DESC     :Grass style to use in the arctic climate.
+STR_PARAM_GRASS_TROPICAL_NAME   :Tropical grass
+STR_PARAM_GRASS_TROPICAL_DESC   :Grass style to use in the tropical climate.
+STR_PARAM_GRASS_TOYLAND_NAME    :Toyland grass
+STR_PARAM_GRASS_TOYLAND_DESC    :Grass style to use in the toyland climate.

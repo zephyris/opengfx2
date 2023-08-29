@@ -113,6 +113,70 @@ grf {
 			};
 		}
 	}
+	param 8 {
+		param_grass_temperate_ {
+			name: string(STR_PARAM_GRASS_TEMPERATE_NAME);
+			desc: string(STR_PARAM_GRASS_TEMPERATE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE_DEFAULT);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 9 {
+		param_grass_arctic_ {
+			name: string(STR_PARAM_GRASS_ARCTIC_NAME);
+			desc: string(STR_PARAM_GRASS_ARCTIC_DESC);
+			type: int;
+			def_value: 1;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 10 {
+		param_grass_tropical_ {
+			name: string(STR_PARAM_GRASS_TROPICAL_NAME);
+			desc: string(STR_PARAM_GRASS_TROPICAL_DESC);
+			type: int;
+			def_value: 2;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 11 {
+		param_grass_toyland_ {
+			name: string(STR_PARAM_GRASS_TOYLAND_NAME);
+			desc: string(STR_PARAM_GRASS_TOYLAND_DESC);
+			type: int;
+			def_value: 3;
+			min_value: 3;
+			max_value: 3;
+			names: {
+				//0: string(STR_PARAM_VALUE_TEMPERATE);
+				//1: string(STR_PARAM_VALUE_ARCTIC);
+				//2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+			};
+		}
+	}
 }
 
 if (ttd_platform == PLATFORM_OPENTTD) {
@@ -134,6 +198,10 @@ if (grf_future_status("OGZ\1")==1) {
 	param_foundations_arctic = param["OGZ\1", 5];
 	param_foundations_tropical = param["OGZ\1", 6];
 	param_foundations_toyland = param["OGZ\1", 7];
+	param_grass_temperate = param["OGZ\1", 8];
+	param_grass_arctic = param["OGZ\1", 9];
+	param_grass_tropical = param["OGZ\1", 10];
+	param_grass_toyland = param["OGZ\1", 11];
 } else {
 	//Otherwise use this grf's parameters
 	param_cursors = param_cursors_;
@@ -143,4 +211,8 @@ if (grf_future_status("OGZ\1")==1) {
 	param_foundations_arctic = param_foundations_arctic_;
 	param_foundations_tropical = param_foundations_tropical_;
 	param_foundations_toyland = param_foundations_toyland_;
+	param_grass_temperate = param_grass_temperate_;
+	param_grass_arctic = param_grass_arctic_;
+	param_grass_tropical = param_grass_tropical_;
+	param_grass_toyland = param_grass_toyland_;
 }

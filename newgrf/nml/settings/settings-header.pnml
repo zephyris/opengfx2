@@ -6,7 +6,7 @@ grf {
 	version: 1;
 	min_compatible_version: version_openttd(1, 3, 0);
 	param 1 {
-		param_cursors {
+		param_cursors_ {
 			name: string(STR_PARAM_CURSOR_NAME);
 			desc: string(STR_PARAM_CURSOR_DESC);
 			type: int;
@@ -20,7 +20,7 @@ grf {
 		}
 	}
 	param 2 {
-		param_gridlines {
+		param_gridlines_ {
 			name: string(STR_PARAM_GRIDLINE_NAME);
 			desc: string(STR_PARAM_GRIDLINE_DESC);
 			type: int;
@@ -35,7 +35,7 @@ grf {
 		}
 	}
 	param 3 {
-		param_gridlines {
+		param_logo_ {
 			name: string(STR_PARAM_LOGO_NAME);
 			desc: string(STR_PARAM_LOGO_DESC);
 			type: int;
@@ -49,7 +49,7 @@ grf {
 		}
 	}
 	param 4 {
-		param_foundations_temperate {
+		param_foundations_temperate_ {
 			name: string(STR_PARAM_FOUNDATIONS_TEMPERATE_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_TEMPERATE_DESC);
 			type: int;
@@ -65,7 +65,7 @@ grf {
 		}
 	}
 	param 5 {
-		param_foundations_arctic {
+		param_foundations_arctic_ {
 			name: string(STR_PARAM_FOUNDATIONS_ARCTIC_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_ARCTIC_DESC);
 			type: int;
@@ -81,7 +81,7 @@ grf {
 		}
 	}
 	param 6 {
-		param_foundations_tropical {
+		param_foundations_tropical_ {
 			name: string(STR_PARAM_FOUNDATIONS_TROPICAL_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_TROPICAL_DESC);
 			type: int;
@@ -97,7 +97,7 @@ grf {
 		}
 	}
 	param 7 {
-		param_foundations_toyland {
+		param_foundations_toyland_ {
 			name: string(STR_PARAM_FOUNDATIONS_TOYLAND_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_TOYLAND_DESC);
 			type: int;
@@ -108,6 +108,70 @@ grf {
 				0: string(STR_PARAM_VALUE_TEMPERATE);
 				1: string(STR_PARAM_VALUE_ARCTIC);
 				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+			};
+		}
+	}
+	param 8 {
+		param_grass_temperate_ {
+			name: string(STR_PARAM_GRASS_TEMPERATE_NAME);
+			desc: string(STR_PARAM_GRASS_TEMPERATE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE_DEFAULT);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 9 {
+		param_grass_arctic_ {
+			name: string(STR_PARAM_GRASS_ARCTIC_NAME);
+			desc: string(STR_PARAM_GRASS_ARCTIC_DESC);
+			type: int;
+			def_value: 1;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 10 {
+		param_grass_tropical_ {
+			name: string(STR_PARAM_GRASS_TROPICAL_NAME);
+			desc: string(STR_PARAM_GRASS_TROPICAL_DESC);
+			type: int;
+			def_value: 2;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 11 {
+		param_grass_toyland_ {
+			name: string(STR_PARAM_GRASS_TOYLAND_NAME);
+			desc: string(STR_PARAM_GRASS_TOYLAND_DESC);
+			type: int;
+			def_value: 3;
+			min_value: 3;
+			max_value: 3;
+			names: {
+				//0: string(STR_PARAM_VALUE_TEMPERATE);
+				//1: string(STR_PARAM_VALUE_ARCTIC);
+				//2: string(STR_PARAM_VALUE_TROPICAL);
 				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
 			};
 		}

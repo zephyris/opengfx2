@@ -76,7 +76,6 @@ base_graphics spr1175(1175, "../graphics/infrastructure/64/pygen/maglev_temperat
 #32 #ez alternative_sprites(spr1175, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/maglev_temperate_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/maglev_temperate_grass_8bpp.png") { template_railtiles(0, 0, 2) }
 #32 #ez alternative_sprites(spr1175, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/maglev_temperate_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/maglev_temperate_grass_8bpp.png") { template_railtiles(0, 0, 4) }
 
-
 // 1201 - 1226 Maglev track snowy terrain
 base_graphics spr1201(1201, "../graphics/infrastructure/64/pygen/maglev_arctic_snow_8bpp.png") { template_railtiles(0, 0, 1) }
 #ez alternative_sprites(spr1201, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_arctic_snow_8bpp.png") { template_railtiles(0, 0, 2) }
