@@ -57,25 +57,25 @@ if [ ! -d pygen ]; then
   mkdir pygen
 fi
 building_baseshapeproc.py 1 toyland
-cp fizzy_drink_factory_32bpp.png pygen/
-cp fizzy_drink_factory_palmask.png pygen/
+cp -p fizzy_drink_factory_32bpp.png pygen/
+cp -p fizzy_drink_factory_palmask.png pygen/
 mask_tiles.py pygen/fizzy_drink_factory fizzy_drink_factory_tilemask.png 1
-cp toy_shop_32bpp.png pygen/
+cp -p toy_shop_32bpp.png pygen/
 building_base_flatten.py toy_shop 1
 mask_tiles.py pygen/toy_shop toy_shop_tilemask.png 1
-cp toy_factory_32bpp.png pygen/
-cp toy_factory_constr_32bpp.png pygen/
+cp -p toy_factory_32bpp.png pygen/
+cp -p toy_factory_constr_32bpp.png pygen/
 mask_tiles.py pygen/toy_factory toy_factory_tilemask.png 1
 mask_tiles.py pygen/toy_factory_constr toy_factory_constr_tilemask.png 1
-cp sweet_factory_32bpp.png pygen/
+cp -p sweet_factory_32bpp.png pygen/
 mask_tiles.py pygen/sweet_factory toy_shop_tilemask.png 1
-cp toffee_quarry_32bpp.png pygen/
+cp -p toffee_quarry_32bpp.png pygen/
 mask_tiles.py pygen/toffee_quarry toffee_quarry_tilemask.png 1
-cp bubble_generator_32bpp.png pygen/
-cp bubble_generator_palmask.png pygen/
+cp -p bubble_generator_32bpp.png pygen/
+cp -p bubble_generator_palmask.png pygen/
 mask_tiles.py pygen/bubble_generator bubble_generator_tilemask.png 1
-cp sugar_mine_stand_32bpp.png pygen/
-cp sugar_mine_stockpile_32bpp.png pygen/
+cp -p sugar_mine_stand_32bpp.png pygen/
+cp -p sugar_mine_stockpile_32bpp.png pygen/
 mask_tiles.py pygen/sugar_mine_stand sugar_mine_stand_tilemask.png 1
 mask_tiles.py pygen/sugar_mine_stockpile sugar_mine_stockpile_tilemask.png 1
 custom_dither.py
