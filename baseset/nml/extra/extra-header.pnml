@@ -205,15 +205,15 @@ if (grf_future_status("OGZ\1")==1) {
 	param_grass_toyland = param["OGZ\1", 11];
 } else {
 	//Otherwise use this grf's parameters
-	param_cursors = param_cursors_;
-	param_gridlines = param_gridlines_;
-	param_logos = param_logos_;
-	param_foundations_temperate = param_foundations_temperate_;
-	param_foundations_arctic = param_foundations_arctic_;
-	param_foundations_tropical = param_foundations_tropical_;
-	param_foundations_toyland = param_foundations_toyland_;
-	param_grass_temperate = param_grass_temperate_;
-	param_grass_arctic = param_grass_arctic_;
-	param_grass_tropical = param_grass_tropical_;
-	param_grass_toyland = param_grass_toyland_;
+	param_cursors = 0;//param_cursors_;
+	param_gridlines = 0;//param_gridlines_;
+	param_logos = 0;//param_logos_;
+	param_foundations_temperate = 0;//param_foundations_temperate_;
+	param_foundations_arctic = 1;//param_foundations_arctic_;
+	param_foundations_tropical = 2;//param_foundations_tropical_;
+	param_foundations_toyland = 3;//param_foundations_toyland_;
+	param_grass_temperate = 0;//param_grass_temperate_;
+	param_grass_arctic = 1;//param_grass_arctic_;
+	param_grass_tropical = 2;//param_grass_tropical_;
+	param_grass_toyland = 3;//param_grass_toyland_;
 }
