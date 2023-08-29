@@ -1,0 +1,161 @@
+grf {
+	grfid: "OGZ\2";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	url:  string(STR_GRF_URL);
+	version: 1;
+	min_compatible_version: version_openttd(1, 3, 0);
+	param 2 {
+		param_gridlines {
+			name: string(STR_PARAM_GRIDLINE_NAME);
+			desc: string(STR_PARAM_GRIDLINE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_GRIDLINE_VALUE_DEFAULT);
+				1: string(STR_PARAM_GRIDLINE_VALUE_NOGRIDLINE);
+				2: string(STR_PARAM_GRIDLINE_VALUE_WATERGRID);
+			};
+		}
+	}
+	param 4 {
+		param_foundations_temperate {
+			name: string(STR_PARAM_FOUNDATIONS_TEMPERATE_NAME);
+			desc: string(STR_PARAM_FOUNDATIONS_TEMPERATE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE_DEFAULT);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 5 {
+		param_foundations_arctic {
+			name: string(STR_PARAM_FOUNDATIONS_ARCTIC_NAME);
+			desc: string(STR_PARAM_FOUNDATIONS_ARCTIC_DESC);
+			type: int;
+			def_value: 1;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 6 {
+		param_foundations_tropical {
+			name: string(STR_PARAM_FOUNDATIONS_TROPICAL_NAME);
+			desc: string(STR_PARAM_FOUNDATIONS_TROPICAL_DESC);
+			type: int;
+			def_value: 2;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 7 {
+		param_foundations_toyland {
+			name: string(STR_PARAM_FOUNDATIONS_TOYLAND_NAME);
+			desc: string(STR_PARAM_FOUNDATIONS_TOYLAND_DESC);
+			type: int;
+			def_value: 3;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+			};
+		}
+	}
+	param 8 {
+		param_grass_temperate {
+			name: string(STR_PARAM_GRASS_TEMPERATE_NAME);
+			desc: string(STR_PARAM_GRASS_TEMPERATE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE_DEFAULT);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 9 {
+		param_grass_arctic {
+			name: string(STR_PARAM_GRASS_ARCTIC_NAME);
+			desc: string(STR_PARAM_GRASS_ARCTIC_DESC);
+			type: int;
+			def_value: 1;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 10 {
+		param_grass_tropical {
+			name: string(STR_PARAM_GRASS_TROPICAL_NAME);
+			desc: string(STR_PARAM_GRASS_TROPICAL_DESC);
+			type: int;
+			def_value: 2;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 11 {
+		param_grass_toyland {
+			name: string(STR_PARAM_GRASS_TOYLAND_NAME);
+			desc: string(STR_PARAM_GRASS_TOYLAND_DESC);
+			type: int;
+			def_value: 3;
+			min_value: 3;
+			max_value: 3;
+			names: {
+				//0: string(STR_PARAM_VALUE_TEMPERATE);
+				//1: string(STR_PARAM_VALUE_ARCTIC);
+				//2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+			};
+		}
+	}
+}
+
+if (ttd_platform == PLATFORM_OPENTTD) {
+	if (openttd_version < version_openttd(1, 3, 0)) {
+		error(FATAL, REQUIRES_OPENTTD, "1.3.0");
+	}
+}
+
+if (ttd_platform != PLATFORM_OPENTTD) {
+	error(FATAL, REQUIRES_OPENTTD, "1.3.0");
+}

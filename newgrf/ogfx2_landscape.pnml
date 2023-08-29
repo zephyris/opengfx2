@@ -1,0 +1,4 @@
+#include "nml/landscape/landscape-header.pnml"
+#include "../templates/zoom-sensitive.pnml"
+#include "../baseset/nml/extra/extra-param-foundations.pnml"
+#include "../baseset/nml/extra/extra-param-terrain.pnml"
