@@ -1,4 +1,4 @@
-// Arctic-specific cargo appearance variants, rail
+// Tropical-specific cargo appearance variants, rail
 // rail
 replace tropical_spr2733(2733, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) } // temperate rail passenger wagon (full + empty)
 replace tropical_spr2741(2741, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 2, 1) } // temperate rail mail wagon (full + empty)
@@ -31,4 +31,4 @@ replace tropical_spr3033(3033, "../graphics/vehicles/64/rail_engines_tropical_8b
 replace tropical_spr3049(3049, "../graphics/vehicles/64/rail_engines_tropical_8bpp.png") { template_vehicle_rail_4view(0, 4, 1) } // Kelling 3100 (Diesel)
 replace tropical_spr3053(3053, "../graphics/vehicles/64/rail_engines_tropical_8bpp.png") { template_vehicle_rail_8view(0, 5, 1) } // Turner Turbo (Diesel)
 replace tropical_spr3061(3061, "../graphics/vehicles/64/rail_engines_tropical_8bpp.png") { template_vehicle_rail_4view(0, 6, 1) } // MJS 1000 (Diesel)
-replace tropical_spr3065(3065, "../graphics/vehicles/64/rail_engines_tropical_8bpp.png") { template_vehicle_rail_8view(0, 6, 1) } // MJS 250 (Steam)
+replace tropical_spr3065(3065, "../graphics/vehicles/64/rail_engines_tropical_8bpp.png") { template_vehicle_rail_8view(0, 7, 1) } // MJS 250 (Diesel)
