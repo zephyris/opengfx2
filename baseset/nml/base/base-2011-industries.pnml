@@ -112,28 +112,28 @@ base_graphics spr2072(2072, "../graphics/industries/arctic/64/forest_8bpp.png") 
 
 //2078-2095 oil refinery
 template template_spr2078(z) {
-	template_house_1x1(  0, 259, z, 128)
-	template_house_1x1(  0, 130, z, 128)
+	template_house_1x1(  0, 258, z, 128)
+	template_house_1x1(  0, 129, z, 128)
 	template_house_1x1(  0,   0, z, 128)
-	template_house_1x1( 65, 259, z, 128)
-	template_house_1x1( 65, 130, z, 128)
+	template_house_1x1( 65, 258, z, 128)
+	template_house_1x1( 65, 129, z, 128)
 	template_house_1x1( 65,   0, z, 128)
-	template_house_1x1(130, 259, z, 128)
-	template_house_1x1(130, 130, z, 128)
+	template_house_1x1(130, 258, z, 128)
+	template_house_1x1(130, 129, z, 128)
 	template_house_1x1(130,   0, z, 128)
-	template_house_1x1(195, 259, z, 128)
-	template_house_1x1(195, 130, z, 128)
+	template_house_1x1(195, 258, z, 128)
+	template_house_1x1(195, 129, z, 128)
 	template_house_1x1(195,   0, z, 128)
-	template_house_1x1(260, 259, z, 128)
-	template_house_1x1(260, 130, z, 128)
+	template_house_1x1(260, 258, z, 128)
+	template_house_1x1(260, 129, z, 128)
 	template_house_1x1(260,   0, z, 128)
 }
 base_graphics spr2078(2078, "../graphics/industries/temperate/64/pygen/oil_refinery_8bpp.png") { template_spr2078(1) }
 #32 alternative_sprites(spr2078, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/oil_refinery_rm32bpp.png", "../graphics/industries/temperate/64/pygen/oil_refinery_8bpp.png") { template_spr2078(1) }
 //2093-2094 construction stages of building...
 template template_spr2093(z) {
-	template_house_1x1_addoffs(455, 195, z, 96, 0, -7)
-	template_house_1x1_addoffs(455,  98, z, 96, 0, -7)
+	template_house_1x1_addoffs(455, 194, z, 96, 0, -7)
+	template_house_1x1_addoffs(455,  97, z, 96, 0, -7)
 }
 base_graphics spr2093(2093, "../graphics/stations/general/64/pygen/modernairport_8bpp.png") { template_spr2093(1) }
 #32 alternative_sprites(spr2093, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/modernairport_bt32bpp.png") { template_spr2093(1) }
@@ -300,21 +300,21 @@ base_graphics spr2188(2188, "../graphics/industries/arctic/64/pygen/foodprocessi
 //2200-2214 paper mill
 template template_spr2200(z) {
 	template_house_1x1(  0,168, z, 83)
-	template_house_1x1(  0, 64, z, 83)
+	template_house_1x1(  0, 84, z, 83)
 	template_house_1x1(  0,  0, z, 83)
 	template_house_1x1( 65,168, z, 83)
-	template_house_1x1( 65, 64, z, 83)
+	template_house_1x1( 65, 84, z, 83)
 	template_house_1x1( 65,  0, z, 83)
 	template_house_1x1(130,  0, z, 83)
 }
 base_graphics spr2200(2200, "../graphics/industries/arctic/64/pygen/papermill_8bpp.png") { template_spr2200(1) }
 #32 alternative_sprites(spr2200, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/pygen/papermill_rm32bpp.png", "../graphics/industries/arctic/64/pygen/papermill_8bpp.png") { template_spr2200(1) }
 template template_spr2207(z) {
-	template_house_1x1(195, 64, z, 83)
+	template_house_1x1(195, 84, z, 83)
 	template_house_1x1(195,  0, z, 83)
 	template_house_1x1(260,  0, z, 83)
 	template_house_1x1(325,168, z, 83)
-	template_house_1x1(325, 64, z, 83)
+	template_house_1x1(325, 84, z, 83)
 	template_house_1x1(325,  0, z, 83)
 	template_house_1x1(390,  0, z, 83)
 }

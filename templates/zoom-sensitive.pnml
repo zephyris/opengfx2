@@ -730,7 +730,7 @@ template template_bridge_onespan_front_rev(x, y, z) {
 
 template template_bridge_extralegs(x, y, z) {
 	template_bridge_single_front_swne(x+0, y, z)
-	template_bridge_single_front_swne(x+135, y, z)
+	template_bridge_single_front_swne(x+130, y, z)
 	template_bridge_single_front_swne(x+260, y, z)
 	template_bridge_single_front_nwse(x+65, y, z)
 	template_bridge_single_front_nwse(x+195, y, z)
