@@ -881,6 +881,17 @@ template template_tree_bordered(x, y, z) {
 	[217*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
 }
 
+//Template tree_alt: For new, alt folder, sprite layout
+template template_tree_alt(x, y, z) {
+	[  1*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[ 47*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[ 93*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[139*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[185*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[231*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[277*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+}
+
 //Template infrastructure: city trees
 template template_tree_city(x, y, z) {
 	[	 1*z+x*z, 1*z+y*z, 19*z, 41*z, -9*z, -36*z-int((z-1)/2)]

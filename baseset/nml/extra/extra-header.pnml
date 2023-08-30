@@ -162,7 +162,7 @@ grf {
 			};
 		}
 	}
-	param 11 {
+	param 12 {
 		param_grass_toyland_ {
 			name: string(STR_PARAM_GRASS_TOYLAND_NAME);
 			desc: string(STR_PARAM_GRASS_TOYLAND_DESC);
@@ -174,6 +174,70 @@ grf {
 				//0: string(STR_PARAM_VALUE_TEMPERATE);
 				//1: string(STR_PARAM_VALUE_ARCTIC);
 				//2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+			};
+		}
+	}
+	param 12 {
+		param_trees_temperate_ {
+			name: string(STR_PARAM_TREES_TEMPERATE_NAME);
+			desc: string(STR_PARAM_TREES_TEMPERATE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE_DEFAULT);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 13 {
+		param_trees_arctic_ {
+			name: string(STR_PARAM_TREES_ARCTIC_NAME);
+			desc: string(STR_PARAM_TREES_ARCTIC_DESC);
+			type: int;
+			def_value: 1;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 14 {
+		param_trees_tropical_ {
+			name: string(STR_PARAM_TREES_TROPICAL_NAME);
+			desc: string(STR_PARAM_TREES_TROPICAL_DESC);
+			type: int;
+			def_value: 2;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 15 {
+		param_trees_toyland_ {
+			name: string(STR_PARAM_TREES_TOYLAND_NAME);
+			desc: string(STR_PARAM_TREES_TOYLAND_DESC);
+			type: int;
+			def_value: 3;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
 				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
 			};
 		}
@@ -203,8 +267,13 @@ if (grf_future_status("OGZ\1")==1) {
 	param_grass_arctic = param["OGZ\1", 9];
 	param_grass_tropical = param["OGZ\1", 10];
 	param_grass_toyland = param["OGZ\1", 11];
+	param_trees_temperate = param["OGZ\1", 12];
+	param_trees_arctic = param["OGZ\1", 13];
+	param_trees_tropical = param["OGZ\1", 14];
+	param_trees_toyland = param["OGZ\1", 15];
 } else {
 	//Otherwise use this grf's parameters
+	//BUG/PROBLEM: Non-true variables mean inheritance of values like this doesn't work...
 	param_cursors = 0;//param_cursors_;
 	param_gridlines = 0;//param_gridlines_;
 	param_logos = 0;//param_logos_;
@@ -216,4 +285,8 @@ if (grf_future_status("OGZ\1")==1) {
 	param_grass_arctic = 1;//param_grass_arctic_;
 	param_grass_tropical = 2;//param_grass_tropical_;
 	param_grass_toyland = 3;//param_grass_toyland_;
+	param_trees_temperate = 0;//param_trees_temperate_;
+	param_trees_arctic = 1;//param_trees_arctic_;
+	param_trees_tropical = 2;//param_trees_tropical_;
+	param_trees_toyland = 3;//param_trees_toyland_;
 }

@@ -177,6 +177,70 @@ grf {
 			};
 		}
 	}
+	param 12 {
+		param_trees_temperate_ {
+			name: string(STR_PARAM_TREES_TEMPERATE_NAME);
+			desc: string(STR_PARAM_TREES_TEMPERATE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE_DEFAULT);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 13 {
+		param_trees_arctic_ {
+			name: string(STR_PARAM_TREES_ARCTIC_NAME);
+			desc: string(STR_PARAM_TREES_ARCTIC_DESC);
+			type: int;
+			def_value: 1;
+			min_value: 0;
+			max_value: 2;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 14 {
+		param_trees_tropical_ {
+			name: string(STR_PARAM_TREES_TROPICAL_NAME);
+			desc: string(STR_PARAM_TREES_TROPICAL_DESC);
+			type: int;
+			def_value: 2;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 15 {
+		param_trees_toyland_ {
+			name: string(STR_PARAM_TREES_TOYLAND_NAME);
+			desc: string(STR_PARAM_TREES_TOYLAND_DESC);
+			type: int;
+			def_value: 3;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+			};
+		}
+	}
 }
 
 if (ttd_platform == PLATFORM_OPENTTD) {

@@ -49,3 +49,12 @@ STR_PARAM_GRASS_TROPICAL_NAME   :Tropical grass
 STR_PARAM_GRASS_TROPICAL_DESC   :Grass style to use in the tropical climate.
 STR_PARAM_GRASS_TOYLAND_NAME    :Toyland grass
 STR_PARAM_GRASS_TOYLAND_DESC    :Grass style to use in the toyland climate.
+
+STR_PARAM_TREES_TEMPERATE_NAME  :Temperate trees
+STR_PARAM_TREES_TEMPERATE_DESC  :Tree style to use in the temperate climate.
+STR_PARAM_TREES_ARCTIC_NAME     :Arctic trees
+STR_PARAM_TREES_ARCTIC_DESC     :Tree style to use in the arctic climate.
+STR_PARAM_TREES_TROPICAL_NAME   :Tropical trees
+STR_PARAM_TREES_TROPICAL_DESC   :Tree style to use in the tropical climate (does not replace the palm trees and cacti).
+STR_PARAM_TREES_TOYLAND_NAME    :Toyland trees
+STR_PARAM_TREES_TOYLAND_DESC    :Tree style to use in the toyland climate.
