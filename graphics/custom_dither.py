@@ -181,6 +181,9 @@ def make_dithered(src, pal, dither_factor):
                 pcg = int(pcg + error[1] * dither_factor * da[b][a] / df)
                 pcb = int(pcb + error[2] * dither_factor * da[b][a] / df)
                 src.putpixel((x + a - dox, y + b - doy), (pcr, pcg, pcb))
+                # Clamp propagated error to a maximum of 16 per channel
+                maxerror = 16
+                error = [min(error[0], maxerror), min(error[1], maxerror), min(error[2], maxerror)]
 
   # Return result
   return res
@@ -237,7 +240,7 @@ def make_output(image, palmask, factor):
 
 def find_sprites(src):
   """
-  Find sprites within a 32bpp spritesheet. Assumes sprite background is (255, 255, 255) and sprites are rectangular with entirely non-(255, 255, 255) in the left column and top row.
+  Find sprites within a 32bpp spritesheet. Assumes sprite background is (255, 255, 255). Identifies sprites as bounding rectangles of non-(255, 255, 255) areas.
   Returns a list of (x, y, x+w, y+h) bounds per sprite.
   """
   import numpy, skimage
@@ -251,12 +254,11 @@ def find_sprites(src):
   # use skimage to find the objects (sprites)
   lab = skimage.measure.label(tmp)
   table = skimage.measure.regionprops_table(lab, tmp, properties=("bbox", "area_bbox"))
-  # parse and return
+  # parse and return (swapped x and y in skimage)
   sprites = []
   for i in range(len(table["bbox-0"])):
     sprites.append([table["bbox-1"][i], table["bbox-0"][i], table["bbox-3"][i], table["bbox-2"][i]])
   return sprites
-
 
 def bluewhite_to_transp(src):
   # Make sure src is RGB
