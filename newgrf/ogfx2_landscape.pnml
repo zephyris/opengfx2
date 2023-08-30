@@ -2,3 +2,5 @@
 #include "../templates/zoom-sensitive.pnml"
 #include "../baseset/nml/extra/extra-param-foundations.pnml"
 #include "../baseset/nml/extra/extra-param-terrain.pnml"
+#include "../baseset/nml/extra/extra-plus-canals.pnml"
+#include "../baseset/nml/extra/extra-plus-rivers.pnml"

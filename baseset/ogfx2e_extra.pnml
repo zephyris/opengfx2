@@ -51,6 +51,6 @@ if (climate == CLIMATE_TOYLAND) {
 
 // Parameter-switchable graphics
 #include "nml/extra/extra-param-cursors.pnml"
-#include "nml/extra/extra-param-terrain.pnml"
 #include "nml/extra/extra-param-logos.pnml"
 #include "nml/extra/extra-param-foundations.pnml"
+#include "nml/extra/extra-param-terrain.pnml"
