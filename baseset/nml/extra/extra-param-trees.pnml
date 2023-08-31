@@ -89,7 +89,6 @@ if (climate==CLIMATE_TEMPERATE && param_trees_temperate==1) {
 }
 
 //Arctic in tropical
-//Temperate in tropical
 template template_tree_arctic_in_tropical_1(z) {
 	template_tree_alt(0, 1, z)
 	template_tree_alt(0, 82, z)
