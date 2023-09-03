@@ -18,12 +18,14 @@ replacenew catenary_spr28(CATENARY, "../graphics/infrastructure/64/elrail_masts_
 #32 #ez alternative_sprites (catenary_spr28, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/elrail_masts_bt32bpp.png") { template_elrail_masts(4) }
 
 // CATENARY 36-39 elrail icons
-replacenew catenary_spr36(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 36) {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 10, 1)
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 10, 1)
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 10, 1)
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 10, 1)
+template template_catenary_spr36(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 10, z)
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 10, z)
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 10, z)
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 10, z)
 }
+replacenew catenary_spr36(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 36) { template_catenary_spr36(1) }
+alternative_sprites (catenary_spr36, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_catenary_spr36(2) }
 
 // CATENARY 40-43 elrail cursors
 replacenew catenary_spr40(CATENARY, "../graphics/cursors/1/pygen/default_8bpp.png", 40) {
@@ -34,7 +36,11 @@ replacenew catenary_spr40(CATENARY, "../graphics/cursors/1/pygen/default_8bpp.pn
 }
 
 // CATENARY 44-45 tunnel icon and cursor
-replacenew catenary_spr44(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 44) { template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 10, 1) }
+template template_catenary_spr44(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 10, z)
+}
+replacenew catenary_spr44(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 44) { template_catenary_spr44(1) }
+alternative_sprites (catenary_spr44, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_catenary_spr44(2) }
 replacenew catenary_spr45(CATENARY, "../graphics/cursors/1/pygen/default_8bpp.png", 45) { template_cursor_matrix(5, 9, 1) }
 
 // CATENARY 46-47 unknown empty sprites?

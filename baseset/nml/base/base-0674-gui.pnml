@@ -9,40 +9,50 @@ base_graphics spr674( 674, "../graphics/icons/1/company_colour_swatches_8bpp.png
 
 //icons and cursors
 //679-681 toolbar icons
-base_graphics spr679( 679, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 0, 1) // main toolbar: subsidies
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 0, 1) // main toolbar: news settings
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 0, 1) // unused(?): bin
+template template_spr679(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 0, z) // main toolbar: subsidies
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 0, z) // main toolbar: news settings
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 0, z) // unused(?): bin
 }
+base_graphics spr679( 679, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr679(1) }
+alternative_sprites(spr679, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr679(2) }
 //682 window maximise icon
 base_graphics spr682( 682, "../graphics/icons/1/icons_8px_8bpp.png") {
     template_sprite_matrix_nocrop(8, 8, 0, 0, 7, 1, 1) // window titlebar: maximise
 }
 //683 vehicle window icons
-base_graphics spr683( 683, "../graphics/icons/1/icons_16px_8bpp.png") {
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 0, 0, 1) // vehicle window: centre map on vehicle
+template template_spr683(z) {
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 0, 0, z) // vehicle window: centre map on vehicle
 }
+base_graphics spr683( 683, "../graphics/icons/1/icons_16px_8bpp.png") { template_spr683(1) }
+alternative_sprites(spr683, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_16px_8bpp.png") { template_spr683(2) }
 //684 toolbar icons
-base_graphics spr684( 684, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 0, 1) // main toolbar: company league table
+template template_spr684(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 0, z) // main toolbar: company league table
 }
+base_graphics spr684( 684, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr684(1) }
+alternative_sprites(spr684, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr684(2) }
 //685-692 vehicle window icons
-base_graphics spr685( 685, "../graphics/icons/1/icons_16px_8bpp.png") {
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 1, 0, 1) // vehicle window: send to rail depot
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 2, 0, 1) // vehicle window: send to road depot
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 3, 0, 1) // vehicle window: send to hangar
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 4, 0, 1) // vehicle window: send to ship depot
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 5, 0, 1) // vehicle window: ignore signals
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 6, 0, 1) // vehicle window: set orders
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 7, 0, 1) // vehicle window: details
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 8, 0, 1) // vehicle window: refit
+template template_spr685(z) {
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 1, 0, z) // vehicle window: send to rail depot
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 2, 0, z) // vehicle window: send to road depot
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 3, 0, z) // vehicle window: send to hangar
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 4, 0, z) // vehicle window: send to ship depot
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 5, 0, z) // vehicle window: ignore signals
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 6, 0, z) // vehicle window: set orders
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 7, 0, z) // vehicle window: details
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 8, 0, z) // vehicle window: refit
 }
+base_graphics spr685( 685, "../graphics/icons/1/icons_16px_8bpp.png") { template_spr685(1) }
+alternative_sprites(spr685, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_16px_8bpp.png") { template_spr685(2) }
 //693-695 toolbar icons
-base_graphics spr693( 693, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 2, 1) // construction toolbar: bouy
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 2, 1) // landscaping toolbar: raise land
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 2, 1) // landscaping toolbar: lower land
+template template_spr693(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 2, z) // construction toolbar: bouy
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 2, z) // landscaping toolbar: raise land
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 2, z) // landscaping toolbar: lower land
 }
+base_graphics spr693( 693, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr693(1) }
+alternative_sprites(spr693, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr693(2) }
 //696-702 cursors
 base_graphics spr696( 696, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(0, 2, 1) // raise land: 1/3
@@ -53,11 +63,12 @@ base_graphics spr696( 696, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(5, 2, 1) // lower land: 3/3
     template_cursor_matrix(4, 13, 1) // buoy
 }
-
 //703 toolbar icons
-base_graphics spr703( 703, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 2, 1) // construction toolbar: dynamite
+template template_spr703(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 2, z) // construction toolbar: dynamite
 }
+base_graphics spr703( 703, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr703(1) }
+alternative_sprites(spr703, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr703(2) }
 //704-707 cursors
 base_graphics spr704( 704, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(0, 3, 1) // dynamite: 1/4
@@ -66,22 +77,28 @@ base_graphics spr704( 704, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(3, 3, 1) // dynamite: 4/4
 }
 //708 toolbar icons
-base_graphics spr708( 708, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 0, 1) // main toolbar: map
+template template_spr708(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 0, z) // main toolbar: map
 }
+base_graphics spr708( 708, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr708(1) }
+alternative_sprites(spr708, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr708(2) }
 //709-714 toolbar icons
-base_graphics spr709( 709, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 3, 1) // jukebox: skip to previous track
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 3, 1) // jukebox: skip to next track
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 3, 1) // jukebox: stop
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 3, 1) // jukebox: play
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 0, 1) // main toolbar: jukebox
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 2, 1) // construction toolbar: remove
+template template_spr709(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 3, z) // jukebox: skip to previous track
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 3, z) // jukebox: skip to next track
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 3, z) // jukebox: stop
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 3, z) // jukebox: play
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 0, z) // main toolbar: jukebox
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 2, z) // construction toolbar: remove
 }
+base_graphics spr709( 709, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr709(1) }
+alternative_sprites(spr709, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr709(2) }
 //715 vehicle window icons
-base_graphics spr715( 715, "../graphics/icons/1/icons_16px_8bpp.png") {
-    template_sprite_matrix_nocrop(16, 16, 0, 0, 9, 0, 1) // vehicle view: turn around
+template template_spr715(z) {
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 9, 0, z) // vehicle view: turn around
 }
+base_graphics spr715( 715, "../graphics/icons/1/icons_16px_8bpp.png") { template_spr715(1) }
+alternative_sprites(spr715, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_16px_8bpp.png") { template_spr715(2) }
 //716-722 cursors
 base_graphics spr716( 716, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(0, 4, 1) // vehicle orders: 1/3
@@ -93,43 +110,47 @@ base_graphics spr716( 716, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(2, 1, 1) // cursor: place sign
 }
 //723-746 toolbar icons
-base_graphics spr723( 723, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 0, 1) // main toolbar: information
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 1, 1) // main toolbar: save 1/2
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 1, 1) // main toolbar: save 2/2
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 1, 1) // main toolbar: pause
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 4, 1) // main toolbar: build rail
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 4, 1) // main toolbar: build road
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 4, 1) // main toolbar: build water
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 4, 1) // main toolbar: build air
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 5, 1) // main toolbar: manage trains
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 5, 1) // main toolbar: manage road
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 5, 1) // main toolbar: manage ships
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 5, 1) // main toolbar: manage air
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 1, 1) // main toolbar: zoom in
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 1, 1) // main toolbar: zoom out
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 1, 1) // main toolbar: finance
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 6, 1) // minimap: elevation
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 6, 1) // minimap: vehicles
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 6, 1) // minimap: infrastructure
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 6, 1) // main toolbar/minimap: industries
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 6, 1) // main toolbar/minimap: trees
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 6, 1) // main toolbar/minimap: companies
-    template_general(64, 148, 39, 20, 0, 0, 1) // construction toolbar: build airport
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 1, 1) // main toolbar: graphs
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 7, 1) // construction toolbar: build dock
+template template_spr723(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 0, z) // main toolbar: information
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 1, z) // main toolbar: save 1/2
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 1, z) // main toolbar: save 2/2
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 1, z) // main toolbar: pause
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 4, z) // main toolbar: build rail
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 4, z) // main toolbar: build road
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 4, z) // main toolbar: build water
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 4, z) // main toolbar: build air
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 5, z) // main toolbar: manage trains
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 5, z) // main toolbar: manage road
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 5, z) // main toolbar: manage ships
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 5, z) // main toolbar: manage air
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 1, z) // main toolbar: zoom in
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 1, z) // main toolbar: zoom out
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 1, z) // main toolbar: finance
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 6, z) // minimap: elevation
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 6, z) // minimap: vehicles
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 6, z) // minimap: infrastructure
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 6, z) // main toolbar/minimap: industries
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 6, z) // main toolbar/minimap: trees
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 6, z) // main toolbar/minimap: companies
+    template_general(64, 148, 39, 20, 0, 0, z) // construction toolbar: build airport
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 1, z) // main toolbar: graphs
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 7, z) // construction toolbar: build dock
 }
+base_graphics spr723( 723, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr723(1) }
+alternative_sprites(spr723, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr723(2) }
 //727 company list company colour blob
 base_graphics spr747( 747, "../graphics/icons/1/company_colour_swatches_8bpp.png") {
     [ 1, 9, 14, 8, 0, 0] // company cover oval
 }
-//748- toolbar icons
-base_graphics spr748( 748, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 8, 1) // construction toolbar: build ship depot
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 7, 1) // construction toolbar: build bus stop
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 7, 1) // construction toolbar: build lorry stop
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 1, 1) // main toolbar: options
+//748-751 toolbar icons
+template template_spr748(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 8, z) // construction toolbar: build ship depot
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 7, z) // construction toolbar: build bus stop
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 7, z) // construction toolbar: build lorry stop
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 1, z) // main toolbar: options
 }
+base_graphics spr748( 748, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr748(1) }
+alternative_sprites(spr748, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr748(2) }
 
 //752-770 tile selectors
 base_graphics spr752(752, "../graphics/selectors/64/selector_tile_8bpp.png") { template_selectors_tile(0, 0, 1) }

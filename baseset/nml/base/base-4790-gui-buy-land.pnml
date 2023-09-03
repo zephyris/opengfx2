@@ -3,9 +3,11 @@ base_graphics spr4790(4790, "../graphics/towns/temperate/64/pygen/buyland_8bpp.p
 #32 alternative_sprites(spr4790, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/buyland_rm32bpp.png", "../graphics/towns/temperate/64/pygen/buyland_8bpp.png") { template_house_1x1_addoffs(0, 0, 1, 47, 0, -17) }
 
 //4791 buy land icon and cursor
-base_graphics spr4791(4791, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 15, 1) // construction toolbar: buy land
+template template_spr4791(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 15, z) // construction toolbar: buy land
 }
+base_graphics spr4791(4791, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr4791(1) }
+alternative_sprites(spr4790, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr4791(2) }
 //4793 buy land cursor
 base_graphics spr4792(4792, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(8, 1, 1) // buy land

@@ -93,20 +93,22 @@ base_graphics spr1233(1233, "../graphics/stations/general/64/pygen/maglevstation
 #32 alternative_sprites (spr1233, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/maglevstations_rm32bpp.png", "../graphics/stations/general/64/pygen/maglevstations_8bpp.png") { template_rail_station(0, 0, 1) }
 
 //1251-1262 rail gui buttons
-base_graphics spr1251(1251, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix(20, 20, 0, 0, 0, 9, 1) // Rail N-S
-	template_sprite_matrix(20, 20, 0, 0, 1, 9, 1) // Rail SW-NE
-	template_sprite_matrix(20, 20, 0, 0, 2, 9, 1) // Rail W-E
-	template_sprite_matrix(20, 20, 0, 0, 3, 9, 1) // Rail NW-SE
-    template_sprite_matrix(20, 20, 0, 0, 0, 11, 1) // Monorail
-	template_sprite_matrix(20, 20, 0, 0, 1, 11, 1)
-	template_sprite_matrix(20, 20, 0, 0, 2, 11, 1)
-	template_sprite_matrix(20, 20, 0, 0, 3, 11, 1)
-    template_sprite_matrix(20, 20, 0, 0, 0, 12, 1) // Maglev
-	template_sprite_matrix(20, 20, 0, 0, 1, 12, 1)
-	template_sprite_matrix(20, 20, 0, 0, 2, 12, 1)
-	template_sprite_matrix(20, 20, 0, 0, 3, 12, 1)
+template template_spr1251(z) {
+	template_sprite_matrix(20, 20, 0, 0, 0, 9, z) // Rail N-S
+	template_sprite_matrix(20, 20, 0, 0, 1, 9, z) // Rail SW-NE
+	template_sprite_matrix(20, 20, 0, 0, 2, 9, z) // Rail W-E
+	template_sprite_matrix(20, 20, 0, 0, 3, 9, z) // Rail NW-SE
+    template_sprite_matrix(20, 20, 0, 0, 0, 11, z) // Monorail
+	template_sprite_matrix(20, 20, 0, 0, 1, 11, z)
+	template_sprite_matrix(20, 20, 0, 0, 2, 11, z)
+	template_sprite_matrix(20, 20, 0, 0, 3, 11, z)
+    template_sprite_matrix(20, 20, 0, 0, 0, 12, z) // Maglev
+	template_sprite_matrix(20, 20, 0, 0, 1, 12, z)
+	template_sprite_matrix(20, 20, 0, 0, 2, 12, z)
+	template_sprite_matrix(20, 20, 0, 0, 3, 12, z)
 }
+base_graphics spr1251(1251, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr1251(1) }
+alternative_sprites(spr1251, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr1251(2) }
 
 //1263-1274 rail gui cursors
 base_graphics spr1263(1263, "../graphics/cursors/1/pygen/default_8bpp.png") {
@@ -130,29 +132,35 @@ base_graphics spr1275(1275, "../graphics/signals/64/base_8bpp.png") { template_s
 
 //1291-1300 signal, depot and station gui elements
 //1291 signal icon
-base_graphics spr1291(1291, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix(20, 20, 0, 0, 5, 8, 1)
+template template_spr1291(z) {
+	template_sprite_matrix(20, 20, 0, 0, 5, 8, z)
 }
+base_graphics spr1291(1291, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr1291(1) }
+alternative_sprites(spr1291, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr1291(2) }
 //1292-1293 signal cursors
 base_graphics spr1292(1292, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(0, 5, 1) // signal 1/2
     template_cursor_matrix(1, 5, 1) // signal 2/2
 }
 //1294-1295 rail and road depot icons
-base_graphics spr1294(1294, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix(20, 20, 0, 0, 0, 8, 1) // rail
-    template_sprite_matrix(20, 20, 0, 0, 1, 8, 1) // road
+template template_spr1294(z) {
+	template_sprite_matrix(20, 20, 0, 0, 0, 8, z) // rail
+    template_sprite_matrix(20, 20, 0, 0, 1, 8, z) // road
 }
+base_graphics spr1294(1294, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr1294(1) }
+alternative_sprites(spr1294, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr1294(2) }
 //1296-1297 rail and road depot cursors
 base_graphics spr1296(1296, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(0, 8, 1) // rail
     template_cursor_matrix(0, 6, 1) // road
 }
 //1298-1299 rail station icons
-base_graphics spr1298(1298, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_general(1, 148, 40, 20, 0, 0, 1) // wide
-    template_sprite_matrix(20, 20, 0, 0, 7, 7, 1) // square
+template template_spr1298(z) {
+    template_general(1, 148, 40, 20, 0, 0, z) // wide
+    template_sprite_matrix(20, 20, 0, 0, 7, 7, z) // square
 }
+base_graphics spr1298(1298, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr1298(1) }
+alternative_sprites(spr1298, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr1298(2) }
 //1300 rail station cursor
 base_graphics spr1300(1300, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(8, 8, 1) // rail

@@ -6,19 +6,21 @@ base_graphics spr885(885, "../graphics/cursors/1/pygen/default_8bpp.png") {
 }
 
 //888-901 toolbar icons
-base_graphics spr888(888, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix(20, 20, 0, 0, 1, 8, 1) // construction toolbar: build road depot
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 7, 1) // construction toolbar: build docks
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 7, 1) // construction toolbar: build road stop
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 7, 1) // construction toolbar: build lorry stop
-    template_general(1, 148, 40, 20, 0, 0, 1) // construction toolbar: build rail station, wide
-    template_sprite_matrix(20, 20, 0, 0, 7, 7, 1) // construction toolbar: build rail station, square
-    template_sprite_matrix(20, 20, 0, 0, 0, 12, 1) // Monorail N-S
-	template_sprite_matrix(20, 20, 0, 0, 1, 12, 1) // Monorail SW-NE
-	template_sprite_matrix(20, 20, 0, 0, 2, 12, 1) // Monorail W-E
-	template_sprite_matrix(20, 20, 0, 0, 3, 12, 1) // Monorail NW-SE
-    template_sprite_matrix(20, 20, 0, 0, 0, 11, 1) // Maglev
-	template_sprite_matrix(20, 20, 0, 0, 1, 11, 1)
-	template_sprite_matrix(20, 20, 0, 0, 2, 11, 1)
-	template_sprite_matrix(20, 20, 0, 0, 3, 11, 1)
+template template_spr888(z) {
+    template_sprite_matrix(20, 20, 0, 0, 1, 8, z) // construction toolbar: build road depot
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 7, z) // construction toolbar: build docks
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 7, z) // construction toolbar: build road stop
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 7, z) // construction toolbar: build lorry stop
+    template_general(1, 148, 40, 20, 0, 0, z) // construction toolbar: build rail station, wide
+    template_sprite_matrix(20, 20, 0, 0, 7, 7, z) // construction toolbar: build rail station, square
+    template_sprite_matrix(20, 20, 0, 0, 0, 12, z) // Monorail N-S
+	template_sprite_matrix(20, 20, 0, 0, 1, 12, z) // Monorail SW-NE
+	template_sprite_matrix(20, 20, 0, 0, 2, 12, z) // Monorail W-E
+	template_sprite_matrix(20, 20, 0, 0, 3, 12, z) // Monorail NW-SE
+    template_sprite_matrix(20, 20, 0, 0, 0, 11, z) // Maglev
+	template_sprite_matrix(20, 20, 0, 0, 1, 11, z)
+	template_sprite_matrix(20, 20, 0, 0, 2, 11, z)
+	template_sprite_matrix(20, 20, 0, 0, 3, 11, z)
 }
+base_graphics spr888(888, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr888(1) }
+alternative_sprites(spr888, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr888(2) }

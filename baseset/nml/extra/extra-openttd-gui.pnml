@@ -42,46 +42,98 @@ replacenew ottd_gui44(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 44) {
 }
 
 // OTTD_GUI 53-54 rail autorail icon and cursor
-replacenew ottd_gui53(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 53) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 9, 1) }
+template template_ottd_gui53(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 9, z)
+}
+replacenew ottd_gui53(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 53) { template_ottd_gui53(1) }
+alternative_sprites (ottd_gui53, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui53(2) }
 replacenew ottd_gui54(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 54) { template_cursor_matrix(6, 8, 1) }
 // OTTD_GUI 55-56 replace with rail icon and cursor
-replacenew ottd_gui55(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 55) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 9, 1) }
+template template_ottd_gui55(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 9, z)
+}
+replacenew ottd_gui55(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 55) { template_ottd_gui55(1) }
+alternative_sprites (ottd_gui55, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui55(2) }
 replacenew ottd_gui56(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 56) { template_cursor_matrix(7, 8, 1) }
 // OTTD_GUI 57-58 electric rail autorail icon and cursor
-replacenew ottd_gui57(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 57) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 10, 1) }
+template template_ottd_gui57(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 10, z)
+}
+replacenew ottd_gui57(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 57) { template_ottd_gui57(1) }
+alternative_sprites (ottd_gui57, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui57(2) }
 replacenew ottd_gui58(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 58) { template_cursor_matrix(6, 9, 1) }
 // OTTD_GUI 59-60 replace with electric rail icon and cursor
-replacenew ottd_gui59(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 59) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 10, 1) }
+template template_ottd_gui59(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 10, z)
+}
+replacenew ottd_gui59(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 59) { template_ottd_gui59(1) }
+alternative_sprites (ottd_gui59, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui59(2) }
 replacenew ottd_gui60(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 60) { template_cursor_matrix(7, 9, 1) }
 // OTTD_GUI 61-62 rail depot icon and cursor
-replacenew ottd_gui61(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 61) { template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 9, 1) }
+template template_ottd_gui61(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 9, z)
+}
+replacenew ottd_gui61(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 61) { template_ottd_gui61(1) }
+alternative_sprites (ottd_gui61, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui61(2) }
 replacenew ottd_gui62(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 62) { template_cursor_matrix(0, 8, 1) }
 
 // OTTD_GUI 63-64 monorail autorail icon and cursor
-replacenew ottd_gui63(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 63) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 11, 1) }
+template template_ottd_gui63(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 11, z)
+}
+replacenew ottd_gui63(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 63) { template_ottd_gui63(1) }
+alternative_sprites (ottd_gui63, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui63(2) }
 replacenew ottd_gui64(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 64) { template_cursor_matrix(6, 10, 1) }
 // OTTD_GUI 65-66 replace with monorail icon and cursor
-replacenew ottd_gui65(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 65) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 11, 1) }
+template template_ottd_gui65(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 11, z)
+}
+replacenew ottd_gui65(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 65) { template_ottd_gui65(1) }
+alternative_sprites (ottd_gui65, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui65(2) }
 replacenew ottd_gui66(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 66) { template_cursor_matrix(7, 10, 1) }
 // OTTD_GUI 67-68 monorail depot icon and cursor
-replacenew ottd_gui67(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 67) { template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 11, 1) }
+template template_ottd_gui67(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 11, z)
+}
+replacenew ottd_gui67(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 67) { template_ottd_gui67(1) }
+alternative_sprites (ottd_gui67, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui67(2) }
 replacenew ottd_gui68(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 68) { template_cursor_matrix(0, 10, 1) }
 
 // OTTD_GUI 69-70 maglev autorail icon and cursor
-replacenew ottd_gui69(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 69) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 12, 1) }
+template template_ottd_gui69(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 12, z)
+}
+replacenew ottd_gui69(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 69) { template_ottd_gui69(1) }
+alternative_sprites (ottd_gui69, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui69(2) }
 replacenew ottd_gui70(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 70) { template_cursor_matrix(6, 11, 1) }
 // OTTD_GUI 71-72 replace with maglev icon and cursor
-replacenew ottd_gui71(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 71) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 12, 1) }
+template template_ottd_gui71(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 12, z)
+}
+replacenew ottd_gui71(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 71) { template_ottd_gui71(1) }
+alternative_sprites (ottd_gui71, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui71(2) }
 replacenew ottd_gui72(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 72) { template_cursor_matrix(7, 11, 1) }
 // OTTD_GUI 73-74 maglev depot icon and cursor
-replacenew ottd_gui73(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 73) { template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 12, 1) }
+template template_ottd_gui73(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 12, z)
+}
+replacenew ottd_gui73(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 73) { template_ottd_gui73(1) }
+alternative_sprites (ottd_gui73, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui73(2) }
 replacenew ottd_gui74(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 74) { template_cursor_matrix(0, 11, 1) }
 
 // OTTD_GUI 75 semaphore signal icon
-replacenew ottd_gui75(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 75) { template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 8, 1) }
+template template_ottd_gui75(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 8, z)
+}
+replacenew ottd_gui75(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 75) { template_ottd_gui75(1) }
+alternative_sprites (ottd_gui75, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui75(2) }
 
 // OTTD_GUI 76-77 rail waypoint icon and cursor
-replacenew ottd_gui76(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 76) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 8, 1) }
+template template_ottd_gui76(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 8, z)
+}
+replacenew ottd_gui76(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 76) { template_ottd_gui76(1) }
+alternative_sprites (ottd_gui76, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui76(2) }
 replacenew ottd_gui77(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 77) { template_cursor_matrix(9, 8, 1) }
 
 // OTTD_GUI 78-81 rail waypoint (real, not GUI!)
@@ -89,10 +141,18 @@ replacenew ottd_gui78(OTTD_GUI, "../graphics/stations/general/64/pygen/railwaypo
 #32 alternative_sprites(ottd_gui78, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/railwaypoint_rm32bpp.png", "../graphics/stations/general/64/pygen/railwaypoint_8bpp.png") { template_rail_waypoint(0, 0, 1) }
 
 // OTTD_GUI 82-83 road autoroad icon and cursor
-replacenew ottd_gui82(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 82) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 14, 1) }
+template template_ottd_gui82(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 14, z)
+}
+replacenew ottd_gui82(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 82) { template_ottd_gui82(1) }
+alternative_sprites (ottd_gui82, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui82(2) }
 replacenew ottd_gui83(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 83) { template_cursor_matrix(6, 6, 1) }
 // OTTD_GUI 84-85 tram autoroad icon and cursor
-replacenew ottd_gui84(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 84) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 13, 1) }
+template template_ottd_gui84(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 13, z)
+}
+replacenew ottd_gui84(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 84) { template_ottd_gui84(1) }
+alternative_sprites (ottd_gui84, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui84(2) }
 replacenew ottd_gui85(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 85) { template_cursor_matrix(6, 7, 1) }
 
 // OTTD_GUI 86 heliport pad ground tile
@@ -102,40 +162,56 @@ replacenew ottd_gui86(OTTD_GUI, "../graphics/infrastructure/64/pygen/airport_mod
 replacenew ottd_gui87(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 87) { template_cursor_matrix(1, 13, 1) }
 
 // OTTD_GUI 88-89 canal icon and cursor
-replacenew ottd_gui88(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 88) { template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 8, 1) }
+template template_ottd_gui88(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 8, z)
+}
+replacenew ottd_gui88(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 88) { template_ottd_gui88(1) }
+alternative_sprites (ottd_gui88, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui88(2) }
 replacenew ottd_gui89(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 89) { template_cursor_matrix(2, 13, 1) }
 
 // OTTD_GUI 90 main toolbar: fast forward icon
-replacenew ottd_gui90(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 90) { template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 0, 1) }
+template template_ottd_gui90(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 0, z)
+}
+replacenew ottd_gui90(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 90) { template_ottd_gui90(1) }
+alternative_sprites (ottd_gui90, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui90(2) }
 
 // OTTD_GUI 91-92 level land icon and cursor
-replacenew ottd_gui91(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 91) { template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 2, 1) }
+template template_ottd_gui91(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 2, z)
+}
+replacenew ottd_gui91(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 91) { template_ottd_gui91(1) }
+alternative_sprites (ottd_gui91, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui91(2) }
 replacenew ottd_gui92(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 92) { template_cursor_matrix(6, 2, 1) }
 
 // OTTD_GUI 93-105 depot view new vehicle management icons controls
-replacenew ottd_gui93(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 93) {
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 16, 1) // depot view: sell single train
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 16, 1) // depot view: sell single road vehicle
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 16, 1) // depot view: sell single ship
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 16, 1) // depot view: sell single plane
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 16, 1) // depot view: sell all trains
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 16, 1) // depot view: sell all road vehicles
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 16, 1) // depot view: sell all ships
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 16, 1) // depot view: sell all aircraft
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 17, 1) // depot view: autoreplace all trains in depot
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 17, 1) // depot view: autoreplace all road vehicles in depot
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 17, 1) // depot view: autoreplace all ships in depot
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 17, 1) // depot view: autoreplace all aircrafts in hangar
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 16, 1) // depot view: sell whole train
+template template_ottd_gui93(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 16, z) // depot view: sell single train
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 16, z) // depot view: sell single road vehicle
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 16, z) // depot view: sell single ship
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 16, z) // depot view: sell single plane
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 16, z) // depot view: sell all trains
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 16, z) // depot view: sell all road vehicles
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 16, z) // depot view: sell all ships
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 16, z) // depot view: sell all aircraft
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 17, z) // depot view: autoreplace all trains in depot
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 17, z) // depot view: autoreplace all road vehicles in depot
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 17, z) // depot view: autoreplace all ships in depot
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 17, z) // depot view: autoreplace all aircrafts in hangar
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 16, z) // depot view: sell whole train
 }
+replacenew ottd_gui93(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 93) { template_ottd_gui93(1) }
+alternative_sprites (ottd_gui93, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui93(2) }
 
 // OTTD_GUI 93-105 vehicle view new vehicle management controls
-replacenew ottd_gui106(OTTD_GUI, "../graphics/icons/1/icons_16px_8bpp.png", 106) {
-	template_sprite_matrix_nocrop(16, 16, 0, 0, 0, 1, 1) // vehicle view: clone train
-	template_sprite_matrix_nocrop(16, 16, 0, 0, 1, 1, 1) // vehicle view: clone road vehicle
-	template_sprite_matrix_nocrop(16, 16, 0, 0, 2, 1, 1) // vehicle view: clone ship
-	template_sprite_matrix_nocrop(16, 16, 0, 0, 3, 1, 1) // vehicle view: clone aircraft
+template template_ottd_gui106(z) {
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 0, 1, z) // vehicle view: clone train
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 1, 1, z) // vehicle view: clone road vehicle
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 2, 1, z) // vehicle view: clone ship
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 3, 1, z) // vehicle view: clone aircraft
 }
+replacenew ottd_gui106(OTTD_GUI, "../graphics/icons/1/icons_16px_8bpp.png", 106) { template_ottd_gui106(1) }
+alternative_sprites(ottd_gui106, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui106(2) }
 
 // OTTD_GUI 110-103 vehicle clone cursors
 replacenew ottd_gui110(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 110) {
@@ -146,31 +222,33 @@ replacenew ottd_gui110(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png",
 }
 
 // OTTD_GUI 114-136 many icons
-replacenew ottd_gui114(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 114) {
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 17, 1) // vehicle groups: create new train group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 17, 1) // vehicle groups: create new road vehicles group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 17, 1) // vehicle groups: create new ships group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 17, 1) // vehicle groups: create new aircrafts group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 16, 1) // vehicle groups: delete train group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 16, 1) // vehicle groups: delete road vehicles group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 16, 1) // vehicle groups: delete ships group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 16, 1) // vehicle groups: delete aircrafts group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 18, 1) // vehicle groups: rename train group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 18, 1) // vehicle groups: rename road vehicles group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 18, 1) // vehicle groups: rename ship group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 18, 1) // vehicle groups: rename aircrafts group
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 18, 1) // vehicle groups: don't autoreplace this group of trains
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 18, 1) // vehicle groups: don't autoreplace this group of road vehicles
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 18, 1) // vehicle groups: don't autoreplace this group of ships
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 18, 1) // vehicle groups: don't autoreplace this group of aircrafts
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 19, 1) // vehicle groups: select no autoreplace for this group of trains
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 19, 1) // vehicle groups: select no autoreplace for this group of road vehicles
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 19, 1) // vehicle groups: select no autoreplace for this group of ships
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 19, 1) // vehicle groups: select no autoreplace for this group of aircrafts
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 15, 1) // road toolbar: build one-way roads
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 18, 1) // signal toolbar: convert signals
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 15, 1) // waterways toolbar: build rivers
+template template_ottd_gui114(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 17, z) // vehicle groups: create new train group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 17, z) // vehicle groups: create new road vehicles group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 17, z) // vehicle groups: create new ships group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 17, z) // vehicle groups: create new aircrafts group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 16, z) // vehicle groups: delete train group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 16, z) // vehicle groups: delete road vehicles group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 16, z) // vehicle groups: delete ships group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 16, z) // vehicle groups: delete aircrafts group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 18, z) // vehicle groups: rename train group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 18, z) // vehicle groups: rename road vehicles group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 18, z) // vehicle groups: rename ship group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 18, z) // vehicle groups: rename aircrafts group
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 18, z) // vehicle groups: don't autoreplace this group of trains
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 18, z) // vehicle groups: don't autoreplace this group of road vehicles
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 18, z) // vehicle groups: don't autoreplace this group of ships
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 18, z) // vehicle groups: don't autoreplace this group of aircrafts
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 19, z) // vehicle groups: select no autoreplace for this group of trains
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 19, z) // vehicle groups: select no autoreplace for this group of road vehicles
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 19, z) // vehicle groups: select no autoreplace for this group of ships
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 19, z) // vehicle groups: select no autoreplace for this group of aircrafts
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 15, z) // road toolbar: build one-way roads
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 18, z) // signal toolbar: convert signals
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 15, z) // waterways toolbar: build rivers
 }
+replacenew ottd_gui114(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 114) { template_ottd_gui114(1) }
+alternative_sprites (ottd_gui114, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui114(2) }
 
 // OTTD_GUI 137 build river cursor
 replacenew ottd_gui137(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 137) {
@@ -188,10 +266,12 @@ replacenew ottd_gui138(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 138) 
 }
 
 // OTTD_GUI 144-145 more icons
-replacenew ottd_gui144(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 144) {
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 1, 1) // main toolbar: switch toolbars
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 8, 1) // waterways toolbar: build aquaduct
+template template_ottd_gui144(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 1, z) // main toolbar: switch toolbars
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 8, 8, z) // waterways toolbar: build aquaduct
 }
+replacenew ottd_gui144(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 144) { template_ottd_gui144(1) }
+alternative_sprites (ottd_gui144, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui144(2) }
 
 // OTTD_GUI 146 build aqueduct cursor
 replacenew ottd_gui146(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 146) {
@@ -210,9 +290,11 @@ replacenew ottd_gui149(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 149) 
 }
 
 // OTTD_GUI 150 right to left language jukebox play
-replacenew ottd_gui150(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 150) {
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 3, 1) // juke box: play (rtl languages)
+template template_ottd_gui150(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 3, z) // juke box: play (rtl languages)
 }
+replacenew ottd_gui150(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 150) { template_ottd_gui150(1) }
+alternative_sprites (ottd_gui150, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui150(2) }
 
 // OTTD_GUI 151 small icons
 replacenew ottd_gui151(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 151) {
@@ -253,26 +335,36 @@ replacenew ottd_gui168(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 168) 
 }
 
 // OTTD_GUI 169-174 storybook and cargo flow toolbar icons, vehicle group livery, build tram icons
-replacenew ottd_gui169(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 169) {
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 20, 1) // story book main toolbar button
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 20, 1) // story book: inspect place
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 20, 1) // story book: incomplete goal
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 20, 1) // story book: completed goal
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 20, 1) // story book: un-accessible goal
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 20, 1) // minimap: cargoflow icon
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 21, 1) // train group livery icon
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 21, 1) // road vehicle group livery icon
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 21, 1) // boat group livery icon
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 21, 1) // aircraft group livery icon
-	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 4, 1) // main toolbar build tram
+template template_ottd_gui169(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 20, z) // story book main toolbar button
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 20, z) // story book: inspect place
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 20, z) // story book: incomplete goal
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 20, z) // story book: completed goal
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 20, z) // story book: un-accessible goal
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 20, z) // minimap: cargoflow icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 21, z) // train group livery icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 21, z) // road vehicle group livery icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 21, z) // boat group livery icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 21, z) // aircraft group livery icon
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 4, z) // main toolbar build tram
 }
+replacenew ottd_gui169(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 169) { template_ottd_gui169(1) }
+alternative_sprites (ottd_gui169, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui169(2) }
 
 // OTTD_GUI 180-181 road convert icon and cursor
-replacenew ottd_gui180(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 180) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 14, 1) }
+template template_ottd_gui180(z) {
+	 template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 14, z)
+}
+replacenew ottd_gui180(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 180) { template_ottd_gui180(1) }
+alternative_sprites (ottd_gui180, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui180(2) }
 replacenew ottd_gui181(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 181) { template_cursor_matrix(7, 6, 1) }
 
 // OTTD_GUI 182-183 tram convert icon and cursor
-replacenew ottd_gui182(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 182) { template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 13, 1) }
+template template_ottd_gui182(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 13, z)
+}
+replacenew ottd_gui182(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 182) { template_ottd_gui182(1) }
+alternative_sprites (ottd_gui182, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui182(2) }
 replacenew ottd_gui183(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 183) { template_cursor_matrix(7, 7, 1) }
 
 // OTTD_GUI 184-185 rename and go to location mini icons

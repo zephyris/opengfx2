@@ -1,7 +1,9 @@
 //555 build desert icon
-base_graphics spr555( 555, "../graphics/icons/1/icons_20px_8bpp.png") {
-    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 15, 1) // lanscaping: desert
+template template_spr555(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 15, 1) // landscaping: desert
 }
+base_graphics spr555( 555, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr555(1) }
+alternative_sprites(spr555, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr555(2) }
 
 //556 build desert cursor
 base_graphics spr556( 556, "../graphics/cursors/1/pygen/default_8bpp.png") {
