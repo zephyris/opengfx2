@@ -19,27 +19,31 @@ replacenew ottd_gui14(OTTD_GUI, "../graphics/bridges/64/extra_legs_8bpp.png", 14
 }
 
 // OTTD_GUI 38-43
-replacenew ottd_gui38(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 38) {
-    template_sprite_matrix_nocrop(10, 10, 0, 0, 0, 0, 1) //newgrf settings: square status icon
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 0, 1) //server join menu: circle status icon
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 0, 1) //server join menu: password protected icon
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 0, 1) //content download menu: empty check box
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 0, 1) //content download menu: checked check box
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 0, 1) //newgrf settings: warning icon
+template template_ottd_gui38(z) {
+    template_sprite_matrix_nocrop(10, 10, 0, 0, 0, 0, z) //newgrf settings: square status icon
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 0, z) //server join menu: circle status icon
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 0, z) //server join menu: password protected icon
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 0, z) //content download menu: empty check box
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 0, z) //content download menu: checked check box
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 0, z) //newgrf settings: warning icon
 }
+replacenew ottd_gui38(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 38) { template_ottd_gui38(1) }
+alternative_sprites (ottd_gui38, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_10px_8bpp.png") { template_ottd_gui38(2) }
 
 // OTTD_GUI 44-52
-replacenew ottd_gui44(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 44) {
-    template_sprite_matrix_nocrop(8, 8, 0, 0, 0, 1, 1) // window decoration: resize
-	template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, 1) // window decoration: arrow up
-	template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, 1) // window decoration: arrow down
-	template_sprite_matrix_nocrop(8, 8, 1, 1, 5, 0, 1) // window decoration: arrow left
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 6, 0, 1) // window decoration: arrow right
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 1, 1) // window decoration: go to default directory
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 1, 1) // window decoration: list (?)
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 1, 1) // window decoration: pin/sticky
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 4, 1, 1) // window decoration: unpin/unstick
+template template_ottd_gui44(z) {
+    template_sprite_matrix_nocrop(8, 8, 0, 0, 0, 1, z) // window decoration: resize
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, z) // window decoration: arrow up
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, z) // window decoration: arrow down
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 5, 0, z) // window decoration: arrow left
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 6, 0, z) // window decoration: arrow right
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 1, z) // window decoration: go to default directory
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 1, z) // window decoration: list (?)
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 1, z) // window decoration: pin/sticky
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 4, 1, z) // window decoration: unpin/unstick
 }
+replacenew ottd_gui44(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 44) { template_ottd_gui44(1) }
+alternative_sprites (ottd_gui44, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_ottd_gui44(2) }
 
 // OTTD_GUI 53-54 rail autorail icon and cursor
 template template_ottd_gui53(z) {
@@ -256,14 +260,16 @@ replacenew ottd_gui137(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png",
 }
 
 // OTTD_GUI 148-143 small icons (unknown use?)
-replacenew ottd_gui138(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 138) {
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 2, 1) // (?) arrow left
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 2, 1) // (?) arrow right
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 3, 1) // (?) open arrow down
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 3, 1) // (?) open arrow up
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 0, 3, 1) // (?) open arrow left
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 4, 3, 1) // (?) command symbol
+template template_ottd_gui138(z) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 2, z) // (?) arrow left
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 2, z) // (?) arrow right
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 3, z) // (?) open arrow down
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 3, z) // (?) open arrow up
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 0, 3, z) // (?) open arrow left
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 4, 3, z) // (?) command symbol
 }
+replacenew ottd_gui138(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 138) { template_ottd_gui138(1) }
+alternative_sprites (ottd_gui138, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_ottd_gui138(2) }
 
 // OTTD_GUI 144-145 more icons
 template template_ottd_gui144(z) {
@@ -279,15 +285,19 @@ replacenew ottd_gui146(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png",
 }
 
 // OTTD_GUI 147-148 settings tree menu icons
-replacenew ottd_gui147(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 147) {
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 6, 0, 1) // settings: tree menu +
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 7, 0, 1) // settings: tree menu -
+template template_ottd_gui147(z) {
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 6, 0, z) // settings: tree menu +
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 7, 0, z) // settings: tree menu -
 }
+replacenew ottd_gui147(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 147) { template_ottd_gui147(1) }
+alternative_sprites (ottd_gui147, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_10px_8bpp.png") { template_ottd_gui147(2) }
 
 // OTTD_GUI 149 right to left language resize window
-replacenew ottd_gui149(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 149) {
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 5, 1, 1) // window decorations: resize window (rtl languages)
+template template_ottd_gui149(z) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 5, 1, z) // window decorations: resize window (rtl languages)
 }
+replacenew ottd_gui149(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 149) { template_ottd_gui149(1) }
+alternative_sprites (ottd_gui149, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_ottd_gui149(2) }
 
 // OTTD_GUI 150 right to left language jukebox play
 template template_ottd_gui150(z) {
@@ -297,31 +307,37 @@ replacenew ottd_gui150(OTTD_GUI, "../graphics/icons/1/icons_20px_8bpp.png", 150)
 alternative_sprites (ottd_gui150, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui150(2) }
 
 // OTTD_GUI 151 small icons
-replacenew ottd_gui151(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 151) {
-	template_sprite_matrix_nocrop(8, 8, 1, 1, 4, 2, 1) // (?) to bottom
-	template_sprite_matrix_nocrop(8, 8, 1, 1, 5, 2, 1) // (?) to top
-	template_sprite_matrix_nocrop(8, 8, 1, 1, 6, 1, 1) // window decorations: debugging icon
+template template_ottd_gui151(z) {
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 4, 2, z) // (?) to bottom
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 5, 2, z) // (?) to top
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 6, 1, z) // window decorations: debugging icon
 }
+replacenew ottd_gui151(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 151) { template_ottd_gui151(1) }
+alternative_sprites (ottd_gui151, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_ottd_gui151(2) }
 
 // OTTD_GUI 154-161 vehicle status mini icons
-replacenew ottd_gui154(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 154) {
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 1, 1)  // Profit not applicable
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 1, 1)  // Profit negative
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 1, 1)  // Profit some
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 1, 1)  // Profit lots
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 8, 1, 1)  // Unread news
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 7, 1, 1)  // Exclusive transport rights
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 2, 1)  // vehicle groups: Autoreplace protection
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 2, 1)  // vehicle groups: Autoreplace defined
+template template_ottd_gui154(z) {
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 1, z)  // Profit not applicable
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 1, z)  // Profit negative
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 1, z)  // Profit some
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 1, z)  // Profit lots
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 8, 1, z)  // Unread news
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 7, 1, z)  // Exclusive transport rights
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 2, z)  // vehicle groups: Autoreplace protection
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 2, z)  // vehicle groups: Autoreplace defined
 }
+replacenew ottd_gui154(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 154) { template_ottd_gui154(1) }
+alternative_sprites (ottd_gui154, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_10px_8bpp.png") { template_ottd_gui154(2) }
 
 // OTTD_GUI 162-165 town status mini icons
-replacenew ottd_gui162(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 162) {
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 1, 1)  // awaiting town rating
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 2, 1)  // appalling town rating, sad, red smily
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 2, 1)  // mediocre town rating, yellow smily
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 2, 1)  // very good town rating, happy, green smily
+template template_ottd_gui164(z) {
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 1, z)  // awaiting town rating
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 2, z)  // appalling town rating, sad, red smily
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 2, z)  // mediocre town rating, yellow smily
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 2, z)  // very good town rating, happy, green smily
 }
+replacenew ottd_gui162(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 162) { template_ottd_gui164(1) }
+alternative_sprites (ottd_gui162, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_10px_8bpp.png") { template_ottd_gui164(2) }
 
 // OTTD_GUI 166-167 text clear mini icons
 replacenew ottd_gui166(OTTD_GUI, "../graphics/icons/1/icons_textdelete_8bpp.png", 166) {
@@ -330,9 +346,11 @@ replacenew ottd_gui166(OTTD_GUI, "../graphics/icons/1/icons_textdelete_8bpp.png"
 }
 
 // OTTD_GUI 168 window decoration
-replacenew ottd_gui168(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 168) {
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 7, 1, 1) // Window decorations: default size
+template template_ottd_gui168(z) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 7, 1, z) // Window decorations: default size
 }
+replacenew ottd_gui168(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 168) { template_ottd_gui168(1) }
+alternative_sprites (ottd_gui168, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_ottd_gui168(2) }
 
 // OTTD_GUI 169-174 storybook and cargo flow toolbar icons, vehicle group livery, build tram icons
 template template_ottd_gui169(z) {
@@ -368,10 +386,12 @@ alternative_sprites (ottd_gui182, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics
 replacenew ottd_gui183(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 183) { template_cursor_matrix(7, 7, 1) }
 
 // OTTD_GUI 184-185 rename and go to location mini icons
-replacenew ottd_gui184(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 184) {
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 5, 3, 1) // rename entity
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 6, 3, 1) // go to location
+template template_ottd_gui184(z) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 5, 3, z) // rename entity
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 6, 3, z) // go to location
 }
+replacenew ottd_gui184(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 184) { template_ottd_gui184(1) }
+alternative_sprites (ottd_gui184, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_ottd_gui184(2) }
 
 // OTTD_GUI 186-190 network mini icons
 replacenew ottd_gui186(OTTD_GUI, "../graphics/icons/1/icons_network_8bpp.png", 186) {

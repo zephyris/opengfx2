@@ -32,7 +32,9 @@ template template_spr3084(z) {
 base_graphics spr3084(3084, "../graphics/effects/64/vehicle_running_sparks_8bpp.png") { template_spr3084(1) }
 
 //3090-3091 stop/go vehicle/depot gui
-base_graphics spr3090(3090, "../graphics/icons/1/icons_7px_8bpp.png") {
+template template_spr3090(z) {
     template_sprite_matrix(7, 7, 0, 0, 1, 1, 1) // stop/red
     template_sprite_matrix(7, 7, 0, 0, 2, 0, 1) // go/green
 }
+base_graphics spr3090(3090, "../graphics/icons/1/icons_7px_8bpp.png") { template_spr3090(1) }
+alternative_sprites (spr3090, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_7px_8bpp.png") { template_spr3090(2) }

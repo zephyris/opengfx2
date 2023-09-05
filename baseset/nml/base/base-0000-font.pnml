@@ -134,7 +134,13 @@ base_graphics spr126( 126, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   
 base_graphics spr127( 127, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
 base_graphics spr128( 128, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
 base_graphics spr129( 129, "../graphics/fonts/fonts_8bpp.png") { [ 290,  130,   9,  13,   0,  -2] }
-base_graphics spr130( 130, "../graphics/icons/1/icons_8px_8bpp.png") { template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, 1) } // window: up
+
+template template_spr130(z) {
+    template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, z) // window: up
+}
+base_graphics spr130( 130, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr130(1) }
+alternative_sprites (spr130, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr130(2) }
+
 base_graphics spr131( 131, "../graphics/fonts/fonts_8bpp.png") { [ 330,  130,   3,  13,   0,  -2] }
 base_graphics spr132( 132, "../graphics/fonts/fonts_8bpp.png") { [ 350,  130,   6,  13,   0,  -2] }
 base_graphics spr133( 133, "../graphics/fonts/fonts_8bpp.png") { [ 370,  130,   8,  13,   0,  -2] }
@@ -144,12 +150,36 @@ base_graphics spr136( 136, "../graphics/fonts/fonts_8bpp.png") { [ 430,  130,   
 base_graphics spr137( 137, "../graphics/fonts/fonts_8bpp.png") { [ 450,  130,   7,  13,   0,  -2] }
 base_graphics spr138( 138, "../graphics/fonts/fonts_8bpp.png") { [ 470,  130,   6,  13,   0,  -2] }
 base_graphics spr139( 139, "../graphics/fonts/fonts_8bpp.png") { [ 490,  130,  10,  13,   0,  -2] }
-base_graphics spr140( 140, "../graphics/icons/1/icons_8px_8bpp.png") { template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, 1) } // window: down
+
+template template_spr140(z) {
+    template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, z) // window: down
+}
+base_graphics spr140( 140, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr140(1) }
+alternative_sprites (spr140, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr140(2) }
+
+
 base_graphics spr141( 141, "../graphics/fonts/fonts_8bpp.png") { [ 530,  130,   8,  13,   0,  -2] }
-base_graphics spr142( 142, "../graphics/icons/1/icons_8px_8bpp.png") { template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 0, 1) } // window: tick
-base_graphics spr143( 143, "../graphics/icons/1/icons_8px_8bpp.png") { template_sprite_matrix_nocrop(8, 8, -1, 0, 4, 0, 1) } // window: cross/close
+
+template template_spr142(z) {
+    template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 0, z) // window: tick
+}
+base_graphics spr142( 142, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr142(1) }
+alternative_sprites (spr142, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr142(2) }
+
+template template_spr143(z) {
+    template_sprite_matrix_nocrop(8, 8, -1, 0, 4, 0, z) // window: cross/close
+}
+base_graphics spr143( 143, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr143(1) }
+alternative_sprites (spr143, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr143(2) }
+
 base_graphics spr144( 144, "../graphics/fonts/fonts_8bpp.png") { [ 590,  130,  10,  13,   0,  -2] }
-base_graphics spr145( 145, "../graphics/icons/1/icons_8px_8bpp.png") { template_sprite_matrix_nocrop(8, 8, 1, 1, 6, 0, 1) } // window: right
+
+template template_spr145(z) {
+    template_sprite_matrix_nocrop(8, 8, 1, 1, 6, 0, z) // window: right
+}
+base_graphics spr145( 145, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr145(1) }
+alternative_sprites (spr145, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr145(2) }
+
 base_graphics spr146( 146, "../graphics/fonts/fonts_8bpp.png") { [ 630,  130,   6,  13,   0,  -2] }
 base_graphics spr147( 147, "../graphics/fonts/fonts_8bpp.png") { [ 650,  130,   7,  13,   0,  -2] }
 base_graphics spr148( 148, "../graphics/fonts/fonts_8bpp.png") { [ 670,  130,   5,  13,   0,  -2] }
