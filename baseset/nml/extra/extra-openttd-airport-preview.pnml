@@ -1,14 +1,16 @@
 //TODO: Update based on finalised airport sprites
 
 // AIRPORT_PREVIEW
-replacenew(AIRPORT_PREVIEW, "../graphics/icons/1/airports_8bpp.png") {
-	template_sprite_matrix(230, 140, 0, 0, 0, 0, 1)
-	template_sprite_matrix(230, 140, 0, 0, 1, 0, 1)
-	template_sprite_matrix(230, 140, 0, 0, 2, 0, 1)
-	template_sprite_matrix(230, 140, 0, 0, 0, 1, 1)
-	template_sprite_matrix(230, 140, 0, 0, 1, 1, 1)
-	template_sprite_matrix(230, 140, 0, 0, 2, 1, 1)
-	template_sprite_matrix(230, 140, 0, 0, 0, 2, 1)
-	template_sprite_matrix(230, 140, 0, 0, 1, 2, 1)
-	template_sprite_matrix(230, 140, 0, 0, 2, 2, 1)
+template template_airport_preview0(z) {
+	template_sprite_matrix(230, 140, 0, 0, 0, 0, z)
+	template_sprite_matrix(230, 140, 0, 0, 1, 0, z)
+	template_sprite_matrix(230, 140, 0, 0, 2, 0, z)
+	template_sprite_matrix(230, 140, 0, 0, 0, 1, z)
+	template_sprite_matrix(230, 140, 0, 0, 1, 1, z)
+	template_sprite_matrix(230, 140, 0, 0, 2, 1, z)
+	template_sprite_matrix(230, 140, 0, 0, 0, 2, z)
+	template_sprite_matrix(230, 140, 0, 0, 1, 2, z)
+	template_sprite_matrix(230, 140, 0, 0, 2, 2, z)
 }
+replacenew airport_preview0(AIRPORT_PREVIEW, "../graphics/icons/1/airports_8bpp.png") { template_airport_preview0(1) }
+alternative_sprites (airport_preview0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/airports_8bpp.png") { template_airport_preview0(2) }
