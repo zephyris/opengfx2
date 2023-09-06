@@ -215,7 +215,7 @@ template template_ottd_gui106(z) {
 	template_sprite_matrix_nocrop(16, 16, 0, 0, 3, 1, z) // vehicle view: clone aircraft
 }
 replacenew ottd_gui106(OTTD_GUI, "../graphics/icons/1/icons_16px_8bpp.png", 106) { template_ottd_gui106(1) }
-alternative_sprites(ottd_gui106, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_ottd_gui106(2) }
+alternative_sprites(ottd_gui106, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_16px_8bpp.png") { template_ottd_gui106(2) }
 
 // OTTD_GUI 110-103 vehicle clone cursors
 replacenew ottd_gui110(OTTD_GUI, "../graphics/cursors/1/pygen/default_8bpp.png", 110) {
