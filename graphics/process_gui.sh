@@ -1,7 +1,15 @@
 export PATH=$PATH:$(pwd)
 
 cd fonts
+
+cd 1
 font_convert.py
+cd ..
+
+cd 2
+font_convert.py
+cd ..
+
 cd ..
 
 cd cursors

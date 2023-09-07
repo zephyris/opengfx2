@@ -1,5 +1,6 @@
 //52-88 classic map generation height map sprites
-base_graphics spr52(  52, "../graphics/fonts/mapgen_8bpp.png") {
+//DO NOT provide extra zoom alternates, will mess up classic map generation!
+base_graphics spr52(  52, "../graphics/fonts/1/mapgen_8bpp.png") {
     [  34,    8,  11,   8,   0,   0]
     [  50,    8,  19,   6,   0,   0]
     [  82,    8,   2,  12,   0,   0]

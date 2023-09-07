@@ -4,136 +4,238 @@ base_graphics spr0(   0, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(1, 0, 1)
 }
 
-// OPENGFX1 COPY
-//2-225 regular font
-base_graphics spr2(   2, "../graphics/fonts/fonts_8bpp.png") { [  10,   10,   2,   1,   0,  -2, NOCROP] }
-base_graphics spr3(   3, "../graphics/fonts/fonts_8bpp.png") { [  30,   10,   3,  13,   0,  -2] }
-base_graphics spr4(   4, "../graphics/fonts/fonts_8bpp.png") { [  50,   10,   5,  13,   0,  -2] }
-base_graphics spr5(   5, "../graphics/fonts/fonts_8bpp.png") { [  70,   10,  10,  13,   0,  -2] }
-base_graphics spr6(   6, "../graphics/fonts/fonts_8bpp.png") { [  90,   10,   9,  13,   0,  -2] }
-base_graphics spr7(   7, "../graphics/fonts/fonts_8bpp.png") { [ 110,   10,  12,  13,   0,  -2] }
-base_graphics spr8(   8, "../graphics/fonts/fonts_8bpp.png") { [ 130,   10,   9,  13,   0,  -2] }
-base_graphics spr9(   9, "../graphics/fonts/fonts_8bpp.png") { [ 150,   10,   3,  13,   0,  -2] }
-base_graphics spr10(  10, "../graphics/fonts/fonts_8bpp.png") { [ 170,   10,   5,  13,   0,  -2] }
-base_graphics spr11(  11, "../graphics/fonts/fonts_8bpp.png") { [ 190,   10,   5,  13,   0,  -2] }
-base_graphics spr12(  12, "../graphics/fonts/fonts_8bpp.png") { [ 210,   10,   7,  13,   0,  -2] }
-base_graphics spr13(  13, "../graphics/fonts/fonts_8bpp.png") { [ 230,   10,   7,  13,   0,  -2] }
-base_graphics spr14(  14, "../graphics/fonts/fonts_8bpp.png") { [ 250,   10,   3,  13,   0,  -2] }
-base_graphics spr15(  15, "../graphics/fonts/fonts_8bpp.png") { [ 270,   10,   5,  13,   0,  -2] }
-base_graphics spr16(  16, "../graphics/fonts/fonts_8bpp.png") { [ 290,   10,   3,  13,   0,  -2] }
-base_graphics spr17(  17, "../graphics/fonts/fonts_8bpp.png") { [ 310,   10,   5,  13,   0,  -2] }
-base_graphics spr18(  18, "../graphics/fonts/fonts_8bpp.png") { [ 330,   10,   7,  13,   0,  -2] }
-base_graphics spr19(  19, "../graphics/fonts/fonts_8bpp.png") { [ 350,   10,   7,  13,   0,  -2] }
-base_graphics spr20(  20, "../graphics/fonts/fonts_8bpp.png") { [ 370,   10,   7,  13,   0,  -2] }
-base_graphics spr21(  21, "../graphics/fonts/fonts_8bpp.png") { [ 390,   10,   7,  13,   0,  -2] }
-base_graphics spr22(  22, "../graphics/fonts/fonts_8bpp.png") { [ 410,   10,   7,  13,   0,  -2] }
-base_graphics spr23(  23, "../graphics/fonts/fonts_8bpp.png") { [ 430,   10,   7,  13,   0,  -2] }
-base_graphics spr24(  24, "../graphics/fonts/fonts_8bpp.png") { [ 450,   10,   7,  13,   0,  -2] }
-base_graphics spr25(  25, "../graphics/fonts/fonts_8bpp.png") { [ 470,   10,   7,  13,   0,  -2] }
-base_graphics spr26(  26, "../graphics/fonts/fonts_8bpp.png") { [ 490,   10,   7,  13,   0,  -2] }
-base_graphics spr27(  27, "../graphics/fonts/fonts_8bpp.png") { [ 510,   10,   7,  13,   0,  -2] }
-base_graphics spr28(  28, "../graphics/fonts/fonts_8bpp.png") { [ 530,   10,   3,  13,   0,  -2] }
-base_graphics spr29(  29, "../graphics/fonts/fonts_8bpp.png") { [ 550,   10,   3,  13,   0,  -2] }
-base_graphics spr30(  30, "../graphics/fonts/fonts_8bpp.png") { [ 570,   10,   7,  13,   0,  -2] }
-base_graphics spr31(  31, "../graphics/fonts/fonts_8bpp.png") { [ 590,   10,   7,  13,   0,  -2] }
-base_graphics spr32(  32, "../graphics/fonts/fonts_8bpp.png") { [ 610,   10,   7,  13,   0,  -2] }
-base_graphics spr33(  33, "../graphics/fonts/fonts_8bpp.png") { [ 630,   10,   7,  13,   0,  -2] }
-base_graphics spr34(  34, "../graphics/fonts/fonts_8bpp.png") { [ 650,   10,  11,  13,   0,  -2] }
-base_graphics spr35(  35, "../graphics/fonts/fonts_8bpp.png") { [ 670,   10,   9,  13,   0,  -2] }
-base_graphics spr36(  36, "../graphics/fonts/fonts_8bpp.png") { [ 690,   10,   8,  13,   0,  -2] }
-base_graphics spr37(  37, "../graphics/fonts/fonts_8bpp.png") { [ 710,   10,   9,  13,   0,  -2] }
-base_graphics spr38(  38, "../graphics/fonts/fonts_8bpp.png") { [ 730,   10,   8,  13,   0,  -2] }
-base_graphics spr39(  39, "../graphics/fonts/fonts_8bpp.png") { [ 750,   10,   8,  13,   0,  -2] }
-base_graphics spr40(  40, "../graphics/fonts/fonts_8bpp.png") { [ 770,   10,   8,  13,   0,  -2] }
-base_graphics spr41(  41, "../graphics/fonts/fonts_8bpp.png") { [  10,   70,   9,  13,   0,  -2] }
-base_graphics spr42(  42, "../graphics/fonts/fonts_8bpp.png") { [  30,   70,   8,  13,   0,  -2] }
-base_graphics spr43(  43, "../graphics/fonts/fonts_8bpp.png") { [  50,   70,   3,  13,   0,  -2] }
-base_graphics spr44(  44, "../graphics/fonts/fonts_8bpp.png") { [  70,   70,   7,  13,   0,  -2] }
-base_graphics spr45(  45, "../graphics/fonts/fonts_8bpp.png") { [  90,   70,   8,  13,   0,  -2] }
-base_graphics spr46(  46, "../graphics/fonts/fonts_8bpp.png") { [ 110,   70,   7,  13,   0,  -2] }
-base_graphics spr47(  47, "../graphics/fonts/fonts_8bpp.png") { [ 130,   70,   9,  13,   0,  -2] }
-base_graphics spr48(  48, "../graphics/fonts/fonts_8bpp.png") { [ 150,   70,   8,  13,   0,  -2] }
-base_graphics spr49(  49, "../graphics/fonts/fonts_8bpp.png") { [ 170,   70,   9,  13,   0,  -2] }
-base_graphics spr50(  50, "../graphics/fonts/fonts_8bpp.png") { [ 190,   70,   8,  13,   0,  -2] }
-base_graphics spr51(  51, "../graphics/fonts/fonts_8bpp.png") { [ 210,   70,   9,  13,   0,  -2] }
-base_graphics spr52(  52, "../graphics/fonts/fonts_8bpp.png") { [ 230,   70,   8,  13,   0,  -2] }
-base_graphics spr53(  53, "../graphics/fonts/fonts_8bpp.png") { [ 250,   70,   8,  13,   0,  -2] }
-base_graphics spr54(  54, "../graphics/fonts/fonts_8bpp.png") { [ 270,   70,   9,  13,   0,  -2] }
-base_graphics spr55(  55, "../graphics/fonts/fonts_8bpp.png") { [ 290,   70,   8,  13,   0,  -2] }
-base_graphics spr56(  56, "../graphics/fonts/fonts_8bpp.png") { [ 310,   70,   9,  13,   0,  -2] }
-base_graphics spr57(  57, "../graphics/fonts/fonts_8bpp.png") { [ 330,   70,  12,  13,   0,  -2] }
-base_graphics spr58(  58, "../graphics/fonts/fonts_8bpp.png") { [ 350,   70,   9,  13,   0,  -2] }
-base_graphics spr59(  59, "../graphics/fonts/fonts_8bpp.png") { [ 370,   70,   9,  13,   0,  -2] }
-base_graphics spr60(  60, "../graphics/fonts/fonts_8bpp.png") { [ 390,   70,   8,  13,   0,  -2] }
-base_graphics spr61(  61, "../graphics/fonts/fonts_8bpp.png") { [ 410,   70,   4,  13,   0,  -2] }
-base_graphics spr62(  62, "../graphics/fonts/fonts_8bpp.png") { [ 430,   70,   5,  13,   0,  -2] }
-base_graphics spr63(  63, "../graphics/fonts/fonts_8bpp.png") { [ 450,   70,   4,  13,   0,  -2] }
-base_graphics spr64(  64, "../graphics/fonts/fonts_8bpp.png") { [ 470,   70,   6,  13,   0,  -2] }
-base_graphics spr65(  65, "../graphics/fonts/fonts_8bpp.png") { [ 490,   70,   8,  13,   0,  -2] }
-base_graphics spr66(  66, "../graphics/fonts/fonts_8bpp.png") { [ 510,   70,   4,  13,   0,  -2] }
-base_graphics spr67(  67, "../graphics/fonts/fonts_8bpp.png") { [ 530,   70,   7,  13,   0,  -2] }
-base_graphics spr68(  68, "../graphics/fonts/fonts_8bpp.png") { [ 550,   70,   6,  13,   0,  -2] }
-base_graphics spr69(  69, "../graphics/fonts/fonts_8bpp.png") { [ 570,   70,   6,  13,   0,  -2] }
-base_graphics spr70(  70, "../graphics/fonts/fonts_8bpp.png") { [ 590,   70,   6,  13,   0,  -2] }
-base_graphics spr71(  71, "../graphics/fonts/fonts_8bpp.png") { [ 610,   70,   6,  13,   0,  -2] }
-base_graphics spr72(  72, "../graphics/fonts/fonts_8bpp.png") { [ 630,   70,   5,  13,   0,  -2] }
-base_graphics spr73(  73, "../graphics/fonts/fonts_8bpp.png") { [ 650,   70,   6,  13,   0,  -2] }
-base_graphics spr74(  74, "../graphics/fonts/fonts_8bpp.png") { [ 670,   70,   6,  13,   0,  -2] }
-base_graphics spr75(  75, "../graphics/fonts/fonts_8bpp.png") { [ 690,   70,   3,  13,   0,  -2] }
-base_graphics spr76(  76, "../graphics/fonts/fonts_8bpp.png") { [ 710,   70,   4,  13,   0,  -2] }
-base_graphics spr77(  77, "../graphics/fonts/fonts_8bpp.png") { [ 730,   70,   7,  13,   0,  -2] }
-base_graphics spr78(  78, "../graphics/fonts/fonts_8bpp.png") { [ 750,   70,   3,  13,   0,  -2] }
-base_graphics spr79(  79, "../graphics/fonts/fonts_8bpp.png") { [ 770,   70,   9,  13,   0,  -2] }
-base_graphics spr80(  80, "../graphics/fonts/fonts_8bpp.png") { [  10,  130,   6,  13,   0,  -2] }
-base_graphics spr81(  81, "../graphics/fonts/fonts_8bpp.png") { [  30,  130,   6,  13,   0,  -2] }
-base_graphics spr82(  82, "../graphics/fonts/fonts_8bpp.png") { [  50,  130,   6,  13,   0,  -2] }
-base_graphics spr83(  83, "../graphics/fonts/fonts_8bpp.png") { [  70,  130,   6,  13,   0,  -2] }
-base_graphics spr84(  84, "../graphics/fonts/fonts_8bpp.png") { [  90,  130,   5,  13,   0,  -2] }
-base_graphics spr85(  85, "../graphics/fonts/fonts_8bpp.png") { [ 110,  130,   6,  13,   0,  -2] }
-base_graphics spr86(  86, "../graphics/fonts/fonts_8bpp.png") { [ 130,  130,   5,  13,   0,  -2] }
-base_graphics spr87(  87, "../graphics/fonts/fonts_8bpp.png") { [ 150,  130,   6,  13,   0,  -2] }
-base_graphics spr88(  88, "../graphics/fonts/fonts_8bpp.png") { [ 170,  130,   7,  13,   0,  -2] }
-base_graphics spr89(  89, "../graphics/fonts/fonts_8bpp.png") { [ 190,  130,  10,  13,   0,  -2] }
-base_graphics spr90(  90, "../graphics/fonts/fonts_8bpp.png") { [ 210,  130,   7,  13,   0,  -2] }
-base_graphics spr91(  91, "../graphics/fonts/fonts_8bpp.png") { [ 230,  130,   7,  13,   0,  -2] }
-base_graphics spr92(  92, "../graphics/fonts/fonts_8bpp.png") { [ 250,  130,   7,  13,   0,  -2] }
-base_graphics spr93(  93, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr94(  94, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr95(  95, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr96(  96, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr97(  97, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr98(  98, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr99(  99, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr100( 100, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr101( 101, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr102( 102, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr103( 103, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr104( 104, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr105( 105, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr106( 106, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr107( 107, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr108( 108, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr109( 109, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr110( 110, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr111( 111, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr112( 112, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr113( 113, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr114( 114, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr115( 115, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr116( 116, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr117( 117, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr118( 118, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr119( 119, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr120( 120, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr121( 121, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr122( 122, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr123( 123, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr124( 124, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr125( 125, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr126( 126, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr127( 127, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr128( 128, "../graphics/fonts/fonts_8bpp.png") { [ 270,  130,   1,   1,   0,  -2] }
-base_graphics spr129( 129, "../graphics/fonts/fonts_8bpp.png") { [ 290,  130,   9,  13,   0,  -2] }
+//2-225 regular font and window button icons
+template template_font_normal_base1(z) {
+    [  10*z,   10*z,   2*z,   1*z,   0*z,  -2*z, NOCROP]
+    [  30*z,   10*z,   3*z,  13*z,   0*z,  -2*z]
+    [  50*z,   10*z,   5*z,  13*z,   0*z,  -2*z]
+    [  70*z,   10*z,  10*z,  13*z,   0*z,  -2*z]
+    [  90*z,   10*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 110*z,   10*z,  12*z,  13*z,   0*z,  -2*z]
+    [ 130*z,   10*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 150*z,   10*z,   3*z,  13*z,   0*z,  -2*z]
+    [ 170*z,   10*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 190*z,   10*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 210*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 230*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 250*z,   10*z,   3*z,  13*z,   0*z,  -2*z]
+    [ 270*z,   10*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 290*z,   10*z,   3*z,  13*z,   0*z,  -2*z]
+    [ 310*z,   10*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 330*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 350*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 370*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 390*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 410*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 430*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 450*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 470*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 490*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 510*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 530*z,   10*z,   3*z,  13*z,   0*z,  -2*z]
+    [ 550*z,   10*z,   3*z,  13*z,   0*z,  -2*z]
+    [ 570*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 590*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 610*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 630*z,   10*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 650*z,   10*z,  11*z,  13*z,   0*z,  -2*z]
+    [ 670*z,   10*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 690*z,   10*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 710*z,   10*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 730*z,   10*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 750*z,   10*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 770*z,   10*z,   8*z,  13*z,   0*z,  -2*z]
+    [  10*z,   70*z,   9*z,  13*z,   0*z,  -2*z]
+    [  30*z,   70*z,   8*z,  13*z,   0*z,  -2*z]
+    [  50*z,   70*z,   3*z,  13*z,   0*z,  -2*z]
+    [  70*z,   70*z,   7*z,  13*z,   0*z,  -2*z]
+    [  90*z,   70*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 110*z,   70*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 130*z,   70*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 150*z,   70*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 170*z,   70*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 190*z,   70*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 210*z,   70*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 230*z,   70*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 250*z,   70*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 270*z,   70*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 290*z,   70*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 310*z,   70*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 330*z,   70*z,  12*z,  13*z,   0*z,  -2*z]
+    [ 350*z,   70*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 370*z,   70*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 390*z,   70*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 410*z,   70*z,   4*z,  13*z,   0*z,  -2*z]
+    [ 430*z,   70*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 450*z,   70*z,   4*z,  13*z,   0*z,  -2*z]
+    [ 470*z,   70*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 490*z,   70*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 510*z,   70*z,   4*z,  13*z,   0*z,  -2*z]
+    [ 530*z,   70*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 550*z,   70*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 570*z,   70*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 590*z,   70*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 610*z,   70*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 630*z,   70*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 650*z,   70*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 670*z,   70*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 690*z,   70*z,   3*z,  13*z,   0*z,  -2*z]
+    [ 710*z,   70*z,   4*z,  13*z,   0*z,  -2*z]
+    [ 730*z,   70*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 750*z,   70*z,   3*z,  13*z,   0*z,  -2*z]
+    [ 770*z,   70*z,   9*z,  13*z,   0*z,  -2*z]
+    [  10*z,  130*z,   6*z,  13*z,   0*z,  -2*z]
+    [  30*z,  130*z,   6*z,  13*z,   0*z,  -2*z]
+    [  50*z,  130*z,   6*z,  13*z,   0*z,  -2*z]
+    [  70*z,  130*z,   6*z,  13*z,   0*z,  -2*z]
+    [  90*z,  130*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 110*z,  130*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 130*z,  130*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 150*z,  130*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 170*z,  130*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 190*z,  130*z,  10*z,  13*z,   0*z,  -2*z]
+    [ 210*z,  130*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 230*z,  130*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 250*z,  130*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 270*z,  130*z,   1*z,   1*z,   0*z,  -2*z]
+    [ 290*z,  130*z,   9*z,  13*z,   0*z,  -2*z]
+}
+template template_font_normal_base2(z) {
+    [ 330*z,  130*z,   3*z,  13*z,   0*z,  -2*z]
+    [ 350*z,  130*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 370*z,  130*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 390*z,  130*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 410*z,  130*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 430*z,  130*z,   3*z,  13*z,   0*z,  -2*z]
+    [ 450*z,  130*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 470*z,  130*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 490*z,  130*z,  10*z,  13*z,   0*z,  -2*z]
+}
+template template_font_normal_base3(z) {
+    [ 530*z,  130*z,   8*z,  13*z,   0*z,  -2*z]
+}
+template template_font_normal_base4(z) {
+    [ 590*z,  130*z,  10*z,  13*z,   0*z,  -2*z]
+}
+template template_font_normal_base5(z) {
+    [ 630*z,  130*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 650*z,  130*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 670*z,  130*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 690*z,  130*z,   5*z,  13*z,   0*z,  -2*z]
+    [ 710*z,  130*z,  13*z,  13*z,   0*z,  -2*z]
+    [ 730*z,  130*z,  13*z,  13*z,   0*z,  -2*z]
+    [ 750*z,  130*z,  13*z,  13*z,   0*z,  -2*z]
+    [ 770*z,  130*z,  13*z,  13*z,   0*z,  -2*z]
+    [  10*z,  190*z,  13*z,  13*z,   0*z,  -2*z]
+    [  30*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [  50*z,  190*z,   6*z,  13*z,   0*z,  -2*z]
+    [  70*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [  90*z,  190*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 110*z,  190*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 130*z,  190*z,  12*z,  13*z,   0*z,  -2*z]
+    [ 150*z,  190*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 170*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 190*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 210*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 230*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 250*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 270*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 290*z,  190*z,  12*z,  13*z,   0*z,  -2*z]
+    [ 310*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 330*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 350*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 370*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 390*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 410*z,  190*z,   4*z,  13*z,   0*z,  -2*z]
+    [ 430*z,  190*z,   4*z,  13*z,   0*z,  -2*z]
+    [ 450*z,  190*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 470*z,  190*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 490*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 510*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 530*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 550*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 570*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 590*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 610*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 630*z,  190*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 650*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 670*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 690*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 710*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 730*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [ 750*z,  190*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 770*z,  190*z,   8*z,  13*z,   0*z,  -2*z]
+    [  10*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [  30*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [  50*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [  70*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [  90*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 110*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 130*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 150*z,  250*z,   9*z,  13*z,   0*z,  -2*z]
+    [ 170*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 190*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 210*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 230*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 250*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 270*z,  250*z,   4*z,  13*z,   0*z,  -2*z]
+    [ 290*z,  250*z,   4*z,  13*z,   0*z,  -2*z]
+    [ 310*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 330*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 350*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 370*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 390*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 410*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 430*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 450*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 470*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 490*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 510*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 530*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 550*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 570*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 590*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 610*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+    [ 630*z,  250*z,   6*z,  13*z,   0*z,  -2*z]
+    [ 650*z,  250*z,   7*z,  13*z,   0*z,  -2*z]
+}
+
+base_graphics spr2(   2, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base1(1) } //Normal font part 1
 
 template template_spr130(z) {
     template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, z) // window: up
@@ -141,15 +243,7 @@ template template_spr130(z) {
 base_graphics spr130( 130, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr130(1) }
 alternative_sprites (spr130, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr130(2) }
 
-base_graphics spr131( 131, "../graphics/fonts/fonts_8bpp.png") { [ 330,  130,   3,  13,   0,  -2] }
-base_graphics spr132( 132, "../graphics/fonts/fonts_8bpp.png") { [ 350,  130,   6,  13,   0,  -2] }
-base_graphics spr133( 133, "../graphics/fonts/fonts_8bpp.png") { [ 370,  130,   8,  13,   0,  -2] }
-base_graphics spr134( 134, "../graphics/fonts/fonts_8bpp.png") { [ 390,  130,   7,  13,   0,  -2] }
-base_graphics spr135( 135, "../graphics/fonts/fonts_8bpp.png") { [ 410,  130,   9,  13,   0,  -2] }
-base_graphics spr136( 136, "../graphics/fonts/fonts_8bpp.png") { [ 430,  130,   3,  13,   0,  -2] }
-base_graphics spr137( 137, "../graphics/fonts/fonts_8bpp.png") { [ 450,  130,   7,  13,   0,  -2] }
-base_graphics spr138( 138, "../graphics/fonts/fonts_8bpp.png") { [ 470,  130,   6,  13,   0,  -2] }
-base_graphics spr139( 139, "../graphics/fonts/fonts_8bpp.png") { [ 490,  130,  10,  13,   0,  -2] }
+base_graphics spr131( 131, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base2(1) } //Normal font part 2
 
 template template_spr140(z) {
     template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, z) // window: down
@@ -157,8 +251,7 @@ template template_spr140(z) {
 base_graphics spr140( 140, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr140(1) }
 alternative_sprites (spr140, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr140(2) }
 
-
-base_graphics spr141( 141, "../graphics/fonts/fonts_8bpp.png") { [ 530,  130,   8,  13,   0,  -2] }
+base_graphics spr141( 141, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base3(1) } //NOrmal font part 3
 
 template template_spr142(z) {
     template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 0, z) // window: tick
@@ -172,7 +265,7 @@ template template_spr143(z) {
 base_graphics spr143( 143, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr143(1) }
 alternative_sprites (spr143, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr143(2) }
 
-base_graphics spr144( 144, "../graphics/fonts/fonts_8bpp.png") { [ 590,  130,  10,  13,   0,  -2] }
+base_graphics spr144( 144, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base4(1) } //Normal font part 4
 
 template template_spr145(z) {
     template_sprite_matrix_nocrop(8, 8, 1, 1, 6, 0, z) // window: right
@@ -180,535 +273,462 @@ template template_spr145(z) {
 base_graphics spr145( 145, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr145(1) }
 alternative_sprites (spr145, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr145(2) }
 
-base_graphics spr146( 146, "../graphics/fonts/fonts_8bpp.png") { [ 630,  130,   6,  13,   0,  -2] }
-base_graphics spr147( 147, "../graphics/fonts/fonts_8bpp.png") { [ 650,  130,   7,  13,   0,  -2] }
-base_graphics spr148( 148, "../graphics/fonts/fonts_8bpp.png") { [ 670,  130,   5,  13,   0,  -2] }
-base_graphics spr149( 149, "../graphics/fonts/fonts_8bpp.png") { [ 690,  130,   5,  13,   0,  -2] }
-base_graphics spr150( 150, "../graphics/fonts/fonts_8bpp.png") { [ 710,  130,  13,  13,   0,  -2] }
-base_graphics spr151( 151, "../graphics/fonts/fonts_8bpp.png") { [ 730,  130,  13,  13,   0,  -2] }
-base_graphics spr152( 152, "../graphics/fonts/fonts_8bpp.png") { [ 750,  130,  13,  13,   0,  -2] }
-base_graphics spr153( 153, "../graphics/fonts/fonts_8bpp.png") { [ 770,  130,  13,  13,   0,  -2] }
-base_graphics spr154( 154, "../graphics/fonts/fonts_8bpp.png") { [  10,  190,  13,  13,   0,  -2] }
-base_graphics spr155( 155, "../graphics/fonts/fonts_8bpp.png") { [  30,  190,   9,  13,   0,  -2] }
-base_graphics spr156( 156, "../graphics/fonts/fonts_8bpp.png") { [  50,  190,   6,  13,   0,  -2] }
-base_graphics spr157( 157, "../graphics/fonts/fonts_8bpp.png") { [  70,  190,   8,  13,   0,  -2] }
-base_graphics spr158( 158, "../graphics/fonts/fonts_8bpp.png") { [  90,  190,   7,  13,   0,  -2] }
-base_graphics spr159( 159, "../graphics/fonts/fonts_8bpp.png") { [ 110,  190,   7,  13,   0,  -2] }
-base_graphics spr160( 160, "../graphics/fonts/fonts_8bpp.png") { [ 130,  190,  12,  13,   0,  -2] }
-base_graphics spr161( 161, "../graphics/fonts/fonts_8bpp.png") { [ 150,  190,   7,  13,   0,  -2] }
-base_graphics spr162( 162, "../graphics/fonts/fonts_8bpp.png") { [ 170,  190,   9,  13,   0,  -2] }
-base_graphics spr163( 163, "../graphics/fonts/fonts_8bpp.png") { [ 190,  190,   9,  13,   0,  -2] }
-base_graphics spr164( 164, "../graphics/fonts/fonts_8bpp.png") { [ 210,  190,   9,  13,   0,  -2] }
-base_graphics spr165( 165, "../graphics/fonts/fonts_8bpp.png") { [ 230,  190,   9,  13,   0,  -2] }
-base_graphics spr166( 166, "../graphics/fonts/fonts_8bpp.png") { [ 250,  190,   9,  13,   0,  -2] }
-base_graphics spr167( 167, "../graphics/fonts/fonts_8bpp.png") { [ 270,  190,   9,  13,   0,  -2] }
-base_graphics spr168( 168, "../graphics/fonts/fonts_8bpp.png") { [ 290,  190,  12,  13,   0,  -2] }
-base_graphics spr169( 169, "../graphics/fonts/fonts_8bpp.png") { [ 310,  190,   9,  13,   0,  -2] }
-base_graphics spr170( 170, "../graphics/fonts/fonts_8bpp.png") { [ 330,  190,   8,  13,   0,  -2] }
-base_graphics spr171( 171, "../graphics/fonts/fonts_8bpp.png") { [ 350,  190,   8,  13,   0,  -2] }
-base_graphics spr172( 172, "../graphics/fonts/fonts_8bpp.png") { [ 370,  190,   8,  13,   0,  -2] }
-base_graphics spr173( 173, "../graphics/fonts/fonts_8bpp.png") { [ 390,  190,   8,  13,   0,  -2] }
-base_graphics spr174( 174, "../graphics/fonts/fonts_8bpp.png") { [ 410,  190,   4,  13,   0,  -2] }
-base_graphics spr175( 175, "../graphics/fonts/fonts_8bpp.png") { [ 430,  190,   4,  13,   0,  -2] }
-base_graphics spr176( 176, "../graphics/fonts/fonts_8bpp.png") { [ 450,  190,   6,  13,   0,  -2] }
-base_graphics spr177( 177, "../graphics/fonts/fonts_8bpp.png") { [ 470,  190,   6,  13,   0,  -2] }
-base_graphics spr178( 178, "../graphics/fonts/fonts_8bpp.png") { [ 490,  190,   9,  13,   0,  -2] }
-base_graphics spr179( 179, "../graphics/fonts/fonts_8bpp.png") { [ 510,  190,   8,  13,   0,  -2] }
-base_graphics spr180( 180, "../graphics/fonts/fonts_8bpp.png") { [ 530,  190,   9,  13,   0,  -2] }
-base_graphics spr181( 181, "../graphics/fonts/fonts_8bpp.png") { [ 550,  190,   9,  13,   0,  -2] }
-base_graphics spr182( 182, "../graphics/fonts/fonts_8bpp.png") { [ 570,  190,   9,  13,   0,  -2] }
-base_graphics spr183( 183, "../graphics/fonts/fonts_8bpp.png") { [ 590,  190,   9,  13,   0,  -2] }
-base_graphics spr184( 184, "../graphics/fonts/fonts_8bpp.png") { [ 610,  190,   9,  13,   0,  -2] }
-base_graphics spr185( 185, "../graphics/fonts/fonts_8bpp.png") { [ 630,  190,   7,  13,   0,  -2] }
-base_graphics spr186( 186, "../graphics/fonts/fonts_8bpp.png") { [ 650,  190,   9,  13,   0,  -2] }
-base_graphics spr187( 187, "../graphics/fonts/fonts_8bpp.png") { [ 670,  190,   8,  13,   0,  -2] }
-base_graphics spr188( 188, "../graphics/fonts/fonts_8bpp.png") { [ 690,  190,   8,  13,   0,  -2] }
-base_graphics spr189( 189, "../graphics/fonts/fonts_8bpp.png") { [ 710,  190,   8,  13,   0,  -2] }
-base_graphics spr190( 190, "../graphics/fonts/fonts_8bpp.png") { [ 730,  190,   8,  13,   0,  -2] }
-base_graphics spr191( 191, "../graphics/fonts/fonts_8bpp.png") { [ 750,  190,   9,  13,   0,  -2] }
-base_graphics spr192( 192, "../graphics/fonts/fonts_8bpp.png") { [ 770,  190,   8,  13,   0,  -2] }
-base_graphics spr193( 193, "../graphics/fonts/fonts_8bpp.png") { [  10,  250,   7,  13,   0,  -2] }
-base_graphics spr194( 194, "../graphics/fonts/fonts_8bpp.png") { [  30,  250,   7,  13,   0,  -2] }
-base_graphics spr195( 195, "../graphics/fonts/fonts_8bpp.png") { [  50,  250,   7,  13,   0,  -2] }
-base_graphics spr196( 196, "../graphics/fonts/fonts_8bpp.png") { [  70,  250,   7,  13,   0,  -2] }
-base_graphics spr197( 197, "../graphics/fonts/fonts_8bpp.png") { [  90,  250,   7,  13,   0,  -2] }
-base_graphics spr198( 198, "../graphics/fonts/fonts_8bpp.png") { [ 110,  250,   7,  13,   0,  -2] }
-base_graphics spr199( 199, "../graphics/fonts/fonts_8bpp.png") { [ 130,  250,   7,  13,   0,  -2] }
-base_graphics spr200( 200, "../graphics/fonts/fonts_8bpp.png") { [ 150,  250,   9,  13,   0,  -2] }
-base_graphics spr201( 201, "../graphics/fonts/fonts_8bpp.png") { [ 170,  250,   6,  13,   0,  -2] }
-base_graphics spr202( 202, "../graphics/fonts/fonts_8bpp.png") { [ 190,  250,   6,  13,   0,  -2] }
-base_graphics spr203( 203, "../graphics/fonts/fonts_8bpp.png") { [ 210,  250,   6,  13,   0,  -2] }
-base_graphics spr204( 204, "../graphics/fonts/fonts_8bpp.png") { [ 230,  250,   6,  13,   0,  -2] }
-base_graphics spr205( 205, "../graphics/fonts/fonts_8bpp.png") { [ 250,  250,   6,  13,   0,  -2] }
-base_graphics spr206( 206, "../graphics/fonts/fonts_8bpp.png") { [ 270,  250,   4,  13,   0,  -2] }
-base_graphics spr207( 207, "../graphics/fonts/fonts_8bpp.png") { [ 290,  250,   4,  13,   0,  -2] }
-base_graphics spr208( 208, "../graphics/fonts/fonts_8bpp.png") { [ 310,  250,   6,  13,   0,  -2] }
-base_graphics spr209( 209, "../graphics/fonts/fonts_8bpp.png") { [ 330,  250,   6,  13,   0,  -2] }
-base_graphics spr210( 210, "../graphics/fonts/fonts_8bpp.png") { [ 350,  250,   6,  13,   0,  -2] }
-base_graphics spr211( 211, "../graphics/fonts/fonts_8bpp.png") { [ 370,  250,   6,  13,   0,  -2] }
-base_graphics spr212( 212, "../graphics/fonts/fonts_8bpp.png") { [ 390,  250,   6,  13,   0,  -2] }
-base_graphics spr213( 213, "../graphics/fonts/fonts_8bpp.png") { [ 410,  250,   6,  13,   0,  -2] }
-base_graphics spr214( 214, "../graphics/fonts/fonts_8bpp.png") { [ 430,  250,   6,  13,   0,  -2] }
-base_graphics spr215( 215, "../graphics/fonts/fonts_8bpp.png") { [ 450,  250,   6,  13,   0,  -2] }
-base_graphics spr216( 216, "../graphics/fonts/fonts_8bpp.png") { [ 470,  250,   6,  13,   0,  -2] }
-base_graphics spr217( 217, "../graphics/fonts/fonts_8bpp.png") { [ 490,  250,   7,  13,   0,  -2] }
-base_graphics spr218( 218, "../graphics/fonts/fonts_8bpp.png") { [ 510,  250,   7,  13,   0,  -2] }
-base_graphics spr219( 219, "../graphics/fonts/fonts_8bpp.png") { [ 530,  250,   6,  13,   0,  -2] }
-base_graphics spr220( 220, "../graphics/fonts/fonts_8bpp.png") { [ 550,  250,   6,  13,   0,  -2] }
-base_graphics spr221( 221, "../graphics/fonts/fonts_8bpp.png") { [ 570,  250,   6,  13,   0,  -2] }
-base_graphics spr222( 222, "../graphics/fonts/fonts_8bpp.png") { [ 590,  250,   6,  13,   0,  -2] }
-base_graphics spr223( 223, "../graphics/fonts/fonts_8bpp.png") { [ 610,  250,   7,  13,   0,  -2] }
-base_graphics spr224( 224, "../graphics/fonts/fonts_8bpp.png") { [ 630,  250,   6,  13,   0,  -2] }
-base_graphics spr225( 225, "../graphics/fonts/fonts_8bpp.png") { [ 650,  250,   7,  13,   0,  -2] }
+base_graphics spr146( 146, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base5(1) } //Normal font part 5
 
 //226-449 small font
-base_graphics spr226( 226, "../graphics/fonts/fonts_8bpp.png") { [  10,   30,   1,   1,   0,   0, NOCROP] }
-base_graphics spr227( 227, "../graphics/fonts/fonts_8bpp.png") { [  30,   30,   1,   8,   0,   0] }
-base_graphics spr228( 228, "../graphics/fonts/fonts_8bpp.png") { [  50,   30,   3,   8,   0,   0] }
-base_graphics spr229( 229, "../graphics/fonts/fonts_8bpp.png") { [  70,   30,   5,   8,   0,   0] }
-base_graphics spr230( 230, "../graphics/fonts/fonts_8bpp.png") { [  90,   30,   5,   8,   0,   0] }
-base_graphics spr231( 231, "../graphics/fonts/fonts_8bpp.png") { [ 110,   30,   3,   8,   0,   0] }
-base_graphics spr232( 232, "../graphics/fonts/fonts_8bpp.png") { [ 130,   30,   4,   8,   0,   0] }
-base_graphics spr233( 233, "../graphics/fonts/fonts_8bpp.png") { [ 150,   30,   1,   8,   0,   0] }
-base_graphics spr234( 234, "../graphics/fonts/fonts_8bpp.png") { [ 170,   30,   2,   8,   0,   0] }
-base_graphics spr235( 235, "../graphics/fonts/fonts_8bpp.png") { [ 190,   30,   2,   8,   0,   0] }
-base_graphics spr236( 236, "../graphics/fonts/fonts_8bpp.png") { [ 210,   30,   3,   8,   0,   0] }
-base_graphics spr237( 237, "../graphics/fonts/fonts_8bpp.png") { [ 230,   30,   3,   8,   0,   0] }
-base_graphics spr238( 238, "../graphics/fonts/fonts_8bpp.png") { [ 250,   30,   1,   8,   0,   0] }
-base_graphics spr239( 239, "../graphics/fonts/fonts_8bpp.png") { [ 270,   30,   2,   8,   0,   0] }
-base_graphics spr240( 240, "../graphics/fonts/fonts_8bpp.png") { [ 290,   30,   1,   8,   0,   0] }
-base_graphics spr241( 241, "../graphics/fonts/fonts_8bpp.png") { [ 310,   30,   3,   8,   0,   0] }
-base_graphics spr242( 242, "../graphics/fonts/fonts_8bpp.png") { [ 330,   30,   3,   8,   0,   0] }
-base_graphics spr243( 243, "../graphics/fonts/fonts_8bpp.png") { [ 350,   30,   2,   8,   0,   0] }
-base_graphics spr244( 244, "../graphics/fonts/fonts_8bpp.png") { [ 370,   30,   3,   8,   0,   0] }
-base_graphics spr245( 245, "../graphics/fonts/fonts_8bpp.png") { [ 390,   30,   3,   8,   0,   0] }
-base_graphics spr246( 246, "../graphics/fonts/fonts_8bpp.png") { [ 410,   30,   4,   8,   0,   0] }
-base_graphics spr247( 247, "../graphics/fonts/fonts_8bpp.png") { [ 430,   30,   3,   8,   0,   0] }
-base_graphics spr248( 248, "../graphics/fonts/fonts_8bpp.png") { [ 450,   30,   3,   8,   0,   0] }
-base_graphics spr249( 249, "../graphics/fonts/fonts_8bpp.png") { [ 470,   30,   3,   8,   0,   0] }
-base_graphics spr250( 250, "../graphics/fonts/fonts_8bpp.png") { [ 490,   30,   3,   8,   0,   0] }
-base_graphics spr251( 251, "../graphics/fonts/fonts_8bpp.png") { [ 510,   30,   3,   8,   0,   0] }
-base_graphics spr252( 252, "../graphics/fonts/fonts_8bpp.png") { [ 530,   30,   1,   8,   0,   0] }
-base_graphics spr253( 253, "../graphics/fonts/fonts_8bpp.png") { [ 550,   30,   1,   8,   0,   0] }
-base_graphics spr254( 254, "../graphics/fonts/fonts_8bpp.png") { [ 570,   30,   4,   8,   0,   0] }
-base_graphics spr255( 255, "../graphics/fonts/fonts_8bpp.png") { [ 590,   30,   3,   8,   0,   0] }
-base_graphics spr256( 256, "../graphics/fonts/fonts_8bpp.png") { [ 610,   30,   4,   8,   0,   0] }
-base_graphics spr257( 257, "../graphics/fonts/fonts_8bpp.png") { [ 630,   30,   3,   8,   0,   0] }
-base_graphics spr258( 258, "../graphics/fonts/fonts_8bpp.png") { [ 650,   30,   4,   8,   0,   0] }
-base_graphics spr259( 259, "../graphics/fonts/fonts_8bpp.png") { [ 670,   30,   3,   8,   0,   0] }
-base_graphics spr260( 260, "../graphics/fonts/fonts_8bpp.png") { [ 690,   30,   3,   8,   0,   0] }
-base_graphics spr261( 261, "../graphics/fonts/fonts_8bpp.png") { [ 710,   30,   3,   8,   0,   0] }
-base_graphics spr262( 262, "../graphics/fonts/fonts_8bpp.png") { [ 730,   30,   3,   8,   0,   0] }
-base_graphics spr263( 263, "../graphics/fonts/fonts_8bpp.png") { [ 750,   30,   3,   8,   0,   0] }
-base_graphics spr264( 264, "../graphics/fonts/fonts_8bpp.png") { [ 770,   30,   3,   8,   0,   0] }
-base_graphics spr265( 265, "../graphics/fonts/fonts_8bpp.png") { [  10,   90,   3,   8,   0,   0] }
-base_graphics spr266( 266, "../graphics/fonts/fonts_8bpp.png") { [  30,   90,   3,   8,   0,   0] }
-base_graphics spr267( 267, "../graphics/fonts/fonts_8bpp.png") { [  50,   90,   1,   8,   0,   0] }
-base_graphics spr268( 268, "../graphics/fonts/fonts_8bpp.png") { [  70,   90,   2,   8,   0,   0] }
-base_graphics spr269( 269, "../graphics/fonts/fonts_8bpp.png") { [  90,   90,   3,   8,   0,   0] }
-base_graphics spr270( 270, "../graphics/fonts/fonts_8bpp.png") { [ 110,   90,   3,   8,   0,   0] }
-base_graphics spr271( 271, "../graphics/fonts/fonts_8bpp.png") { [ 130,   90,   5,   8,   0,   0] }
-base_graphics spr272( 272, "../graphics/fonts/fonts_8bpp.png") { [ 150,   90,   4,   8,   0,   0] }
-base_graphics spr273( 273, "../graphics/fonts/fonts_8bpp.png") { [ 170,   90,   3,   8,   0,   0] }
-base_graphics spr274( 274, "../graphics/fonts/fonts_8bpp.png") { [ 190,   90,   3,   8,   0,   0] }
-base_graphics spr275( 275, "../graphics/fonts/fonts_8bpp.png") { [ 210,   90,   3,   8,   0,   0] }
-base_graphics spr276( 276, "../graphics/fonts/fonts_8bpp.png") { [ 230,   90,   3,   8,   0,   0] }
-base_graphics spr277( 277, "../graphics/fonts/fonts_8bpp.png") { [ 250,   90,   3,   8,   0,   0] }
-base_graphics spr278( 278, "../graphics/fonts/fonts_8bpp.png") { [ 270,   90,   3,   8,   0,   0] }
-base_graphics spr279( 279, "../graphics/fonts/fonts_8bpp.png") { [ 290,   90,   3,   8,   0,   0] }
-base_graphics spr280( 280, "../graphics/fonts/fonts_8bpp.png") { [ 310,   90,   3,   8,   0,   0] }
-base_graphics spr281( 281, "../graphics/fonts/fonts_8bpp.png") { [ 330,   90,   5,   8,   0,   0] }
-base_graphics spr282( 282, "../graphics/fonts/fonts_8bpp.png") { [ 350,   90,   3,   8,   0,   0] }
-base_graphics spr283( 283, "../graphics/fonts/fonts_8bpp.png") { [ 370,   90,   3,   8,   0,   0] }
-base_graphics spr284( 284, "../graphics/fonts/fonts_8bpp.png") { [ 390,   90,   3,   8,   0,   0] }
-base_graphics spr285( 285, "../graphics/fonts/fonts_8bpp.png") { [ 410,   90,   2,   8,   0,   0] }
-base_graphics spr286( 286, "../graphics/fonts/fonts_8bpp.png") { [ 430,   90,   3,   8,   0,   0] }
-base_graphics spr287( 287, "../graphics/fonts/fonts_8bpp.png") { [ 450,   90,   2,   8,   0,   0] }
-base_graphics spr288( 288, "../graphics/fonts/fonts_8bpp.png") { [ 470,   90,   3,   8,   0,   0] }
-base_graphics spr289( 289, "../graphics/fonts/fonts_8bpp.png") { [ 490,   90,   4,   8,   0,   0] }
-base_graphics spr290( 290, "../graphics/fonts/fonts_8bpp.png") { [ 510,   90,   2,   8,   0,   0] }
-base_graphics spr291( 291, "../graphics/fonts/fonts_8bpp.png") { [ 530,   90,   3,   8,   0,   0] }
-base_graphics spr292( 292, "../graphics/fonts/fonts_8bpp.png") { [ 550,   90,   3,   8,   0,   0] }
-base_graphics spr293( 293, "../graphics/fonts/fonts_8bpp.png") { [ 570,   90,   3,   8,   0,   0] }
-base_graphics spr294( 294, "../graphics/fonts/fonts_8bpp.png") { [ 590,   90,   3,   8,   0,   0] }
-base_graphics spr295( 295, "../graphics/fonts/fonts_8bpp.png") { [ 610,   90,   3,   8,   0,   0] }
-base_graphics spr296( 296, "../graphics/fonts/fonts_8bpp.png") { [ 630,   90,   2,   8,   0,   0] }
-base_graphics spr297( 297, "../graphics/fonts/fonts_8bpp.png") { [ 650,   90,   3,   8,   0,   0] }
-base_graphics spr298( 298, "../graphics/fonts/fonts_8bpp.png") { [ 670,   90,   3,   8,   0,   0] }
-base_graphics spr299( 299, "../graphics/fonts/fonts_8bpp.png") { [ 690,   90,   1,   8,   0,   0] }
-base_graphics spr300( 300, "../graphics/fonts/fonts_8bpp.png") { [ 710,   90,   2,   8,   0,   0] }
-base_graphics spr301( 301, "../graphics/fonts/fonts_8bpp.png") { [ 730,   90,   3,   8,   0,   0] }
-base_graphics spr302( 302, "../graphics/fonts/fonts_8bpp.png") { [ 750,   90,   1,   8,   0,   0] }
-base_graphics spr303( 303, "../graphics/fonts/fonts_8bpp.png") { [ 770,   90,   5,   8,   0,   0] }
-base_graphics spr304( 304, "../graphics/fonts/fonts_8bpp.png") { [  10,  150,   3,   8,   0,   0] }
-base_graphics spr305( 305, "../graphics/fonts/fonts_8bpp.png") { [  30,  150,   3,   8,   0,   0] }
-base_graphics spr306( 306, "../graphics/fonts/fonts_8bpp.png") { [  50,  150,   3,   8,   0,   0] }
-base_graphics spr307( 307, "../graphics/fonts/fonts_8bpp.png") { [  70,  150,   3,   8,   0,   0] }
-base_graphics spr308( 308, "../graphics/fonts/fonts_8bpp.png") { [  90,  150,   3,   8,   0,   0] }
-base_graphics spr309( 309, "../graphics/fonts/fonts_8bpp.png") { [ 110,  150,   3,   8,   0,   0] }
-base_graphics spr310( 310, "../graphics/fonts/fonts_8bpp.png") { [ 130,  150,   2,   8,   0,   0] }
-base_graphics spr311( 311, "../graphics/fonts/fonts_8bpp.png") { [ 150,  150,   3,   8,   0,   0] }
-base_graphics spr312( 312, "../graphics/fonts/fonts_8bpp.png") { [ 170,  150,   3,   8,   0,   0] }
-base_graphics spr313( 313, "../graphics/fonts/fonts_8bpp.png") { [ 190,  150,   5,   8,   0,   0] }
-base_graphics spr314( 314, "../graphics/fonts/fonts_8bpp.png") { [ 210,  150,   3,   8,   0,   0] }
-base_graphics spr315( 315, "../graphics/fonts/fonts_8bpp.png") { [ 230,  150,   3,   8,   0,   0] }
-base_graphics spr316( 316, "../graphics/fonts/fonts_8bpp.png") { [ 250,  150,   3,   8,   0,   0] }
-base_graphics spr317( 317, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr318( 318, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr319( 319, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr320( 320, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr321( 321, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr322( 322, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr323( 323, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr324( 324, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr325( 325, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr326( 326, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr327( 327, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr328( 328, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr329( 329, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr330( 330, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr331( 331, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr332( 332, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr333( 333, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr334( 334, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr335( 335, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr336( 336, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr337( 337, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr338( 338, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr339( 339, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr340( 340, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr341( 341, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr342( 342, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr343( 343, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr344( 344, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr345( 345, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr346( 346, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr347( 347, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr348( 348, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr349( 349, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr350( 350, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr351( 351, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr352( 352, "../graphics/fonts/fonts_8bpp.png") { [ 270,  150,   1,   1,   0,   0] }
-base_graphics spr353( 353, "../graphics/fonts/fonts_8bpp.png") { [ 290,  150,   3,   8,   0,   0] }
-base_graphics spr354( 354, "../graphics/fonts/fonts_8bpp.png") { [ 310,  150,   3,   8,   0,   0] }
-base_graphics spr355( 355, "../graphics/fonts/fonts_8bpp.png") { [ 330,  150,   1,   8,   0,   0] }
-base_graphics spr356( 356, "../graphics/fonts/fonts_8bpp.png") { [ 350,  150,   4,   8,   0,   0] }
-base_graphics spr357( 357, "../graphics/fonts/fonts_8bpp.png") { [ 370,  150,   4,   8,   0,   0] }
-base_graphics spr358( 358, "../graphics/fonts/fonts_8bpp.png") { [ 390,  150,   5,   8,   0,   0] }
-base_graphics spr359( 359, "../graphics/fonts/fonts_8bpp.png") { [ 410,  150,   3,   8,   0,   0] }
-base_graphics spr360( 360, "../graphics/fonts/fonts_8bpp.png") { [ 430,  150,   1,   8,   0,   0] }
-base_graphics spr361( 361, "../graphics/fonts/fonts_8bpp.png") { [ 450,  150,   3,   8,   0,   0] }
-base_graphics spr362( 362, "../graphics/fonts/fonts_8bpp.png") { [ 470,  150,   3,   8,   0,   0] }
-base_graphics spr363( 363, "../graphics/fonts/fonts_8bpp.png") { [ 490,  150,   6,   8,   0,   0] }
-base_graphics spr364( 364, "../graphics/fonts/fonts_8bpp.png") { [ 510,  150,   3,   8,   0,   0] }
-base_graphics spr365( 365, "../graphics/fonts/fonts_8bpp.png") { [ 530,  150,   4,   8,   0,   0] }
-base_graphics spr366( 366, "../graphics/fonts/fonts_8bpp.png") { [ 550,  150,   2,   8,   0,   0] }
-base_graphics spr367( 367, "../graphics/fonts/fonts_8bpp.png") { [ 570,  150,   4,   8,   0,   0] }
-base_graphics spr368( 368, "../graphics/fonts/fonts_8bpp.png") { [ 590,  150,   6,   8,   0,   0] }
-base_graphics spr369( 369, "../graphics/fonts/fonts_8bpp.png") { [ 610,  150,   5,   8,   0,   0] }
-base_graphics spr370( 370, "../graphics/fonts/fonts_8bpp.png") { [ 630,  150,   3,   8,   0,   0] }
-base_graphics spr371( 371, "../graphics/fonts/fonts_8bpp.png") { [ 650,  150,   3,   8,   0,   0] }
-base_graphics spr372( 372, "../graphics/fonts/fonts_8bpp.png") { [ 670,  150,   2,   8,   0,   0] }
-base_graphics spr373( 373, "../graphics/fonts/fonts_8bpp.png") { [ 690,  150,   2,   8,   0,   0] }
-base_graphics spr374( 374, "../graphics/fonts/fonts_8bpp.png") { [ 710,  150,   1,   1,   0,   0] }
-base_graphics spr375( 375, "../graphics/fonts/fonts_8bpp.png") { [ 730,  150,   1,   1,   0,   0] }
-base_graphics spr376( 376, "../graphics/fonts/fonts_8bpp.png") { [ 750,  150,   1,   1,   0,   0] }
-base_graphics spr377( 377, "../graphics/fonts/fonts_8bpp.png") { [ 770,  150,   1,   1,   0,   0] }
-base_graphics spr378( 378, "../graphics/fonts/fonts_8bpp.png") { [  10,  210,   1,   1,   0,   0] }
-base_graphics spr379( 379, "../graphics/fonts/fonts_8bpp.png") { [  30,  210,   5,   8,   0,   0] }
-base_graphics spr380( 380, "../graphics/fonts/fonts_8bpp.png") { [  50,  210,   3,   8,   0,   0] }
-base_graphics spr381( 381, "../graphics/fonts/fonts_8bpp.png") { [  70,  210,   4,   8,   0,   0] }
-base_graphics spr382( 382, "../graphics/fonts/fonts_8bpp.png") { [  90,  210,   1,   1,   0,   0] }
-base_graphics spr383( 383, "../graphics/fonts/fonts_8bpp.png") { [ 110,  210,   1,   1,   0,   0] }
-base_graphics spr384( 384, "../graphics/fonts/fonts_8bpp.png") { [ 130,  210,   9,   8,   0,   0] }
-base_graphics spr385( 385, "../graphics/fonts/fonts_8bpp.png") { [ 150,  210,   3,   8,   0,   0] }
-base_graphics spr386( 386, "../graphics/fonts/fonts_8bpp.png") { [ 170,  210,   3,   8,   0,   0] }
-base_graphics spr387( 387, "../graphics/fonts/fonts_8bpp.png") { [ 190,  210,   3,   8,   0,   0] }
-base_graphics spr388( 388, "../graphics/fonts/fonts_8bpp.png") { [ 210,  210,   3,   8,   0,   0] }
-base_graphics spr389( 389, "../graphics/fonts/fonts_8bpp.png") { [ 230,  210,   3,   8,   0,   0] }
-base_graphics spr390( 390, "../graphics/fonts/fonts_8bpp.png") { [ 250,  210,   3,   8,   0,   0] }
-base_graphics spr391( 391, "../graphics/fonts/fonts_8bpp.png") { [ 270,  210,   3,   8,   0,   0] }
-base_graphics spr392( 392, "../graphics/fonts/fonts_8bpp.png") { [ 290,  210,   5,   8,   0,   0] }
-base_graphics spr393( 393, "../graphics/fonts/fonts_8bpp.png") { [ 310,  210,   3,   8,   0,   0] }
-base_graphics spr394( 394, "../graphics/fonts/fonts_8bpp.png") { [ 330,  210,   3,   8,   0,   0] }
-base_graphics spr395( 395, "../graphics/fonts/fonts_8bpp.png") { [ 350,  210,   3,   8,   0,   0] }
-base_graphics spr396( 396, "../graphics/fonts/fonts_8bpp.png") { [ 370,  210,   3,   8,   0,   0] }
-base_graphics spr397( 397, "../graphics/fonts/fonts_8bpp.png") { [ 390,  210,   3,   8,   0,   0] }
-base_graphics spr398( 398, "../graphics/fonts/fonts_8bpp.png") { [ 410,  210,   2,   8,   0,   0] }
-base_graphics spr399( 399, "../graphics/fonts/fonts_8bpp.png") { [ 430,  210,   2,   8,   0,   0] }
-base_graphics spr400( 400, "../graphics/fonts/fonts_8bpp.png") { [ 450,  210,   3,   8,   0,   0] }
-base_graphics spr401( 401, "../graphics/fonts/fonts_8bpp.png") { [ 470,  210,   3,   8,   0,   0] }
-base_graphics spr402( 402, "../graphics/fonts/fonts_8bpp.png") { [ 490,  210,   4,   8,   0,   0] }
-base_graphics spr403( 403, "../graphics/fonts/fonts_8bpp.png") { [ 510,  210,   4,   8,   0,   0] }
-base_graphics spr404( 404, "../graphics/fonts/fonts_8bpp.png") { [ 530,  210,   3,   8,   0,   0] }
-base_graphics spr405( 405, "../graphics/fonts/fonts_8bpp.png") { [ 550,  210,   3,   8,   0,   0] }
-base_graphics spr406( 406, "../graphics/fonts/fonts_8bpp.png") { [ 570,  210,   3,   8,   0,   0] }
-base_graphics spr407( 407, "../graphics/fonts/fonts_8bpp.png") { [ 590,  210,   3,   8,   0,   0] }
-base_graphics spr408( 408, "../graphics/fonts/fonts_8bpp.png") { [ 610,  210,   3,   8,   0,   0] }
-base_graphics spr409( 409, "../graphics/fonts/fonts_8bpp.png") { [ 630,  210,   3,   8,   0,   0] }
-base_graphics spr410( 410, "../graphics/fonts/fonts_8bpp.png") { [ 650,  210,   5,   8,   0,   0] }
-base_graphics spr411( 411, "../graphics/fonts/fonts_8bpp.png") { [ 670,  210,   3,   8,   0,   0] }
-base_graphics spr412( 412, "../graphics/fonts/fonts_8bpp.png") { [ 690,  210,   3,   8,   0,   0] }
-base_graphics spr413( 413, "../graphics/fonts/fonts_8bpp.png") { [ 710,  210,   3,   8,   0,   0] }
-base_graphics spr414( 414, "../graphics/fonts/fonts_8bpp.png") { [ 730,  210,   3,   8,   0,   0] }
-base_graphics spr415( 415, "../graphics/fonts/fonts_8bpp.png") { [ 750,  210,   3,   8,   0,   0] }
-base_graphics spr416( 416, "../graphics/fonts/fonts_8bpp.png") { [ 770,  210,   3,   8,   0,   0] }
-base_graphics spr417( 417, "../graphics/fonts/fonts_8bpp.png") { [  10,  270,   4,   8,   0,   0] }
-base_graphics spr418( 418, "../graphics/fonts/fonts_8bpp.png") { [  30,  270,   3,   8,   0,   0] }
-base_graphics spr419( 419, "../graphics/fonts/fonts_8bpp.png") { [  50,  270,   3,   8,   0,   0] }
-base_graphics spr420( 420, "../graphics/fonts/fonts_8bpp.png") { [  70,  270,   3,   8,   0,   0] }
-base_graphics spr421( 421, "../graphics/fonts/fonts_8bpp.png") { [  90,  270,   3,   8,   0,   0] }
-base_graphics spr422( 422, "../graphics/fonts/fonts_8bpp.png") { [ 110,  270,   3,   8,   0,   0] }
-base_graphics spr423( 423, "../graphics/fonts/fonts_8bpp.png") { [ 130,  270,   3,   8,   0,   0] }
-base_graphics spr424( 424, "../graphics/fonts/fonts_8bpp.png") { [ 150,  270,   5,   8,   0,   0] }
-base_graphics spr425( 425, "../graphics/fonts/fonts_8bpp.png") { [ 170,  270,   3,   8,   0,   0] }
-base_graphics spr426( 426, "../graphics/fonts/fonts_8bpp.png") { [ 190,  270,   3,   8,   0,   0] }
-base_graphics spr427( 427, "../graphics/fonts/fonts_8bpp.png") { [ 210,  270,   3,   8,   0,   0] }
-base_graphics spr428( 428, "../graphics/fonts/fonts_8bpp.png") { [ 230,  270,   3,   8,   0,   0] }
-base_graphics spr429( 429, "../graphics/fonts/fonts_8bpp.png") { [ 250,  270,   3,   8,   0,   0] }
-base_graphics spr430( 430, "../graphics/fonts/fonts_8bpp.png") { [ 270,  270,   2,   8,   0,   0] }
-base_graphics spr431( 431, "../graphics/fonts/fonts_8bpp.png") { [ 290,  270,   2,   8,   0,   0] }
-base_graphics spr432( 432, "../graphics/fonts/fonts_8bpp.png") { [ 310,  270,   3,   8,   0,   0] }
-base_graphics spr433( 433, "../graphics/fonts/fonts_8bpp.png") { [ 330,  270,   3,   8,   0,   0] }
-base_graphics spr434( 434, "../graphics/fonts/fonts_8bpp.png") { [ 350,  270,   3,   8,   0,   0] }
-base_graphics spr435( 435, "../graphics/fonts/fonts_8bpp.png") { [ 370,  270,   3,   8,   0,   0] }
-base_graphics spr436( 436, "../graphics/fonts/fonts_8bpp.png") { [ 390,  270,   3,   8,   0,   0] }
-base_graphics spr437( 437, "../graphics/fonts/fonts_8bpp.png") { [ 410,  270,   3,   8,   0,   0] }
-base_graphics spr438( 438, "../graphics/fonts/fonts_8bpp.png") { [ 430,  270,   3,   8,   0,   0] }
-base_graphics spr439( 439, "../graphics/fonts/fonts_8bpp.png") { [ 450,  270,   3,   8,   0,   0] }
-base_graphics spr440( 440, "../graphics/fonts/fonts_8bpp.png") { [ 470,  270,   3,   8,   0,   0] }
-base_graphics spr441( 441, "../graphics/fonts/fonts_8bpp.png") { [ 490,  270,   3,   8,   0,   0] }
-base_graphics spr442( 442, "../graphics/fonts/fonts_8bpp.png") { [ 510,  270,   4,   8,   0,   0] }
-base_graphics spr443( 443, "../graphics/fonts/fonts_8bpp.png") { [ 530,  270,   3,   8,   0,   0] }
-base_graphics spr444( 444, "../graphics/fonts/fonts_8bpp.png") { [ 550,  270,   3,   8,   0,   0] }
-base_graphics spr445( 445, "../graphics/fonts/fonts_8bpp.png") { [ 570,  270,   3,   8,   0,   0] }
-base_graphics spr446( 446, "../graphics/fonts/fonts_8bpp.png") { [ 590,  270,   3,   8,   0,   0] }
-base_graphics spr447( 447, "../graphics/fonts/fonts_8bpp.png") { [ 610,  270,   3,   8,   0,   0] }
-base_graphics spr448( 448, "../graphics/fonts/fonts_8bpp.png") { [ 630,  270,   3,   8,   0,   0] }
-base_graphics spr449( 449, "../graphics/fonts/fonts_8bpp.png") { [ 650,  270,   3,   8,   0,   0] }
+template template_font_small_base(z) {
+    [  10*z,   30*z,   1*z,   1*z,   0*z,   0*z, NOCROP]
+    [  30*z,   30*z,   1*z,   8*z,   0*z,   0*z]
+    [  50*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [  70*z,   30*z,   5*z,   8*z,   0*z,   0*z]
+    [  90*z,   30*z,   5*z,   8*z,   0*z,   0*z]
+    [ 110*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 130*z,   30*z,   4*z,   8*z,   0*z,   0*z]
+    [ 150*z,   30*z,   1*z,   8*z,   0*z,   0*z]
+    [ 170*z,   30*z,   2*z,   8*z,   0*z,   0*z]
+    [ 190*z,   30*z,   2*z,   8*z,   0*z,   0*z]
+    [ 210*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 230*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 250*z,   30*z,   1*z,   8*z,   0*z,   0*z]
+    [ 270*z,   30*z,   2*z,   8*z,   0*z,   0*z]
+    [ 290*z,   30*z,   1*z,   8*z,   0*z,   0*z]
+    [ 310*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 330*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 350*z,   30*z,   2*z,   8*z,   0*z,   0*z]
+    [ 370*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 390*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 410*z,   30*z,   4*z,   8*z,   0*z,   0*z]
+    [ 430*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 450*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 470*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 490*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 510*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 530*z,   30*z,   1*z,   8*z,   0*z,   0*z]
+    [ 550*z,   30*z,   1*z,   8*z,   0*z,   0*z]
+    [ 570*z,   30*z,   4*z,   8*z,   0*z,   0*z]
+    [ 590*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 610*z,   30*z,   4*z,   8*z,   0*z,   0*z]
+    [ 630*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 650*z,   30*z,   4*z,   8*z,   0*z,   0*z]
+    [ 670*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 690*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 710*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 730*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 750*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [ 770*z,   30*z,   3*z,   8*z,   0*z,   0*z]
+    [  10*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [  30*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [  50*z,   90*z,   1*z,   8*z,   0*z,   0*z]
+    [  70*z,   90*z,   2*z,   8*z,   0*z,   0*z]
+    [  90*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 110*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 130*z,   90*z,   5*z,   8*z,   0*z,   0*z]
+    [ 150*z,   90*z,   4*z,   8*z,   0*z,   0*z]
+    [ 170*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 190*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 210*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 230*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 250*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 270*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 290*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 310*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 330*z,   90*z,   5*z,   8*z,   0*z,   0*z]
+    [ 350*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 370*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 390*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 410*z,   90*z,   2*z,   8*z,   0*z,   0*z]
+    [ 430*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 450*z,   90*z,   2*z,   8*z,   0*z,   0*z]
+    [ 470*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 490*z,   90*z,   4*z,   8*z,   0*z,   0*z]
+    [ 510*z,   90*z,   2*z,   8*z,   0*z,   0*z]
+    [ 530*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 550*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 570*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 590*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 610*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 630*z,   90*z,   2*z,   8*z,   0*z,   0*z]
+    [ 650*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 670*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 690*z,   90*z,   1*z,   8*z,   0*z,   0*z]
+    [ 710*z,   90*z,   2*z,   8*z,   0*z,   0*z]
+    [ 730*z,   90*z,   3*z,   8*z,   0*z,   0*z]
+    [ 750*z,   90*z,   1*z,   8*z,   0*z,   0*z]
+    [ 770*z,   90*z,   5*z,   8*z,   0*z,   0*z]
+    [  10*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [  30*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [  50*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [  70*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [  90*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 110*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 130*z,  150*z,   2*z,   8*z,   0*z,   0*z]
+    [ 150*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 170*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 190*z,  150*z,   5*z,   8*z,   0*z,   0*z]
+    [ 210*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 230*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 250*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 270*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 290*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 310*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 330*z,  150*z,   1*z,   8*z,   0*z,   0*z]
+    [ 350*z,  150*z,   4*z,   8*z,   0*z,   0*z]
+    [ 370*z,  150*z,   4*z,   8*z,   0*z,   0*z]
+    [ 390*z,  150*z,   5*z,   8*z,   0*z,   0*z]
+    [ 410*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 430*z,  150*z,   1*z,   8*z,   0*z,   0*z]
+    [ 450*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 470*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 490*z,  150*z,   6*z,   8*z,   0*z,   0*z]
+    [ 510*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 530*z,  150*z,   4*z,   8*z,   0*z,   0*z]
+    [ 550*z,  150*z,   2*z,   8*z,   0*z,   0*z]
+    [ 570*z,  150*z,   4*z,   8*z,   0*z,   0*z]
+    [ 590*z,  150*z,   6*z,   8*z,   0*z,   0*z]
+    [ 610*z,  150*z,   5*z,   8*z,   0*z,   0*z]
+    [ 630*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 650*z,  150*z,   3*z,   8*z,   0*z,   0*z]
+    [ 670*z,  150*z,   2*z,   8*z,   0*z,   0*z]
+    [ 690*z,  150*z,   2*z,   8*z,   0*z,   0*z]
+    [ 710*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 730*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 750*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [ 770*z,  150*z,   1*z,   1*z,   0*z,   0*z]
+    [  10*z,  210*z,   1*z,   1*z,   0*z,   0*z]
+    [  30*z,  210*z,   5*z,   8*z,   0*z,   0*z]
+    [  50*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [  70*z,  210*z,   4*z,   8*z,   0*z,   0*z]
+    [  90*z,  210*z,   1*z,   1*z,   0*z,   0*z]
+    [ 110*z,  210*z,   1*z,   1*z,   0*z,   0*z]
+    [ 130*z,  210*z,   9*z,   8*z,   0*z,   0*z]
+    [ 150*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 170*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 190*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 210*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 230*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 250*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 270*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 290*z,  210*z,   5*z,   8*z,   0*z,   0*z]
+    [ 310*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 330*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 350*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 370*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 390*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 410*z,  210*z,   2*z,   8*z,   0*z,   0*z]
+    [ 430*z,  210*z,   2*z,   8*z,   0*z,   0*z]
+    [ 450*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 470*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 490*z,  210*z,   4*z,   8*z,   0*z,   0*z]
+    [ 510*z,  210*z,   4*z,   8*z,   0*z,   0*z]
+    [ 530*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 550*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 570*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 590*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 610*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 630*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 650*z,  210*z,   5*z,   8*z,   0*z,   0*z]
+    [ 670*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 690*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 710*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 730*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 750*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [ 770*z,  210*z,   3*z,   8*z,   0*z,   0*z]
+    [  10*z,  270*z,   4*z,   8*z,   0*z,   0*z]
+    [  30*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [  50*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [  70*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [  90*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 110*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 130*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 150*z,  270*z,   5*z,   8*z,   0*z,   0*z]
+    [ 170*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 190*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 210*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 230*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 250*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 270*z,  270*z,   2*z,   8*z,   0*z,   0*z]
+    [ 290*z,  270*z,   2*z,   8*z,   0*z,   0*z]
+    [ 310*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 330*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 350*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 370*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 390*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 410*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 430*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 450*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 470*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 490*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 510*z,  270*z,   4*z,   8*z,   0*z,   0*z]
+    [ 530*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 550*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 570*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 590*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 610*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 630*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+    [ 650*z,  270*z,   3*z,   8*z,   0*z,   0*z]
+}
+base_graphics spr226( 226, "../graphics/fonts/1/fonts_8bpp.png") { template_font_small_base(1) }
 
 //450-673 newspaper font
-base_graphics spr450( 450, "../graphics/fonts/fonts_8bpp.png") { [  10,   40,   5,   1,   0,  -2, NOCROP] }
-base_graphics spr451( 451, "../graphics/fonts/fonts_8bpp.png") { [  30,   40,   3,  21,   0,  -2] }
-base_graphics spr452( 452, "../graphics/fonts/fonts_8bpp.png") { [  50,   40,   7,  21,   0,  -2] }
-base_graphics spr453( 453, "../graphics/fonts/fonts_8bpp.png") { [  70,   40,  11,  21,   0,  -2] }
-base_graphics spr454( 454, "../graphics/fonts/fonts_8bpp.png") { [  90,   40,   8,  21,   0,  -2] }
-base_graphics spr455( 455, "../graphics/fonts/fonts_8bpp.png") { [ 110,   40,  11,  21,   0,  -2] }
-base_graphics spr456( 456, "../graphics/fonts/fonts_8bpp.png") { [ 130,   40,  14,  21,   0,  -2] }
-base_graphics spr457( 457, "../graphics/fonts/fonts_8bpp.png") { [ 150,   40,   3,  21,   0,  -2] }
-base_graphics spr458( 458, "../graphics/fonts/fonts_8bpp.png") { [ 170,   40,   5,  21,   0,  -2] }
-base_graphics spr459( 459, "../graphics/fonts/fonts_8bpp.png") { [ 190,   40,   5,  21,   0,  -2] }
-base_graphics spr460( 460, "../graphics/fonts/fonts_8bpp.png") { [ 210,   40,   7,  21,   0,  -2] }
-base_graphics spr461( 461, "../graphics/fonts/fonts_8bpp.png") { [ 230,   40,  11,  21,   0,  -2] }
-base_graphics spr462( 462, "../graphics/fonts/fonts_8bpp.png") { [ 250,   40,   4,  21,   0,  -2] }
-base_graphics spr463( 463, "../graphics/fonts/fonts_8bpp.png") { [ 270,   40,   6,  21,   0,  -2] }
-base_graphics spr464( 464, "../graphics/fonts/fonts_8bpp.png") { [ 290,   40,   3,  21,   0,  -2] }
-base_graphics spr465( 465, "../graphics/fonts/fonts_8bpp.png") { [ 310,   40,   6,  21,   0,  -2] }
-base_graphics spr466( 466, "../graphics/fonts/fonts_8bpp.png") { [ 330,   40,   8,  21,   0,  -2] }
-base_graphics spr467( 467, "../graphics/fonts/fonts_8bpp.png") { [ 350,   40,   7,  21,   0,  -2] }
-base_graphics spr468( 468, "../graphics/fonts/fonts_8bpp.png") { [ 370,   40,   9,  21,   0,  -2] }
-base_graphics spr469( 469, "../graphics/fonts/fonts_8bpp.png") { [ 390,   40,   9,  21,   0,  -2] }
-base_graphics spr470( 470, "../graphics/fonts/fonts_8bpp.png") { [ 410,   40,   9,  21,   0,  -2] }
-base_graphics spr471( 471, "../graphics/fonts/fonts_8bpp.png") { [ 430,   40,   7,  21,   0,  -2] }
-base_graphics spr472( 472, "../graphics/fonts/fonts_8bpp.png") { [ 450,   40,   8,  21,   0,  -2] }
-base_graphics spr473( 473, "../graphics/fonts/fonts_8bpp.png") { [ 470,   40,   7,  21,   0,  -2] }
-base_graphics spr474( 474, "../graphics/fonts/fonts_8bpp.png") { [ 490,   40,   8,  21,   0,  -2] }
-base_graphics spr475( 475, "../graphics/fonts/fonts_8bpp.png") { [ 510,   40,   8,  21,   0,  -2] }
-base_graphics spr476( 476, "../graphics/fonts/fonts_8bpp.png") { [ 530,   40,   3,  21,   0,  -2] }
-base_graphics spr477( 477, "../graphics/fonts/fonts_8bpp.png") { [ 550,   40,   4,  21,   0,  -2] }
-base_graphics spr478( 478, "../graphics/fonts/fonts_8bpp.png") { [ 570,   40,  11,  21,   0,  -2] }
-base_graphics spr479( 479, "../graphics/fonts/fonts_8bpp.png") { [ 590,   40,  11,  21,   0,  -2] }
-base_graphics spr480( 480, "../graphics/fonts/fonts_8bpp.png") { [ 610,   40,  11,  21,   0,  -2] }
-base_graphics spr481( 481, "../graphics/fonts/fonts_8bpp.png") { [ 630,   40,   7,  21,   0,  -2] }
-base_graphics spr482( 482, "../graphics/fonts/fonts_8bpp.png") { [ 650,   40,  16,  21,   0,  -2] }
-base_graphics spr483( 483, "../graphics/fonts/fonts_8bpp.png") { [ 670,   40,  14,  21,   0,  -2] }
-base_graphics spr484( 484, "../graphics/fonts/fonts_8bpp.png") { [ 690,   40,  11,  21,   0,  -2] }
-base_graphics spr485( 485, "../graphics/fonts/fonts_8bpp.png") { [ 710,   40,  12,  21,   0,  -2] }
-base_graphics spr486( 486, "../graphics/fonts/fonts_8bpp.png") { [ 730,   40,  14,  21,   0,  -2] }
-base_graphics spr487( 487, "../graphics/fonts/fonts_8bpp.png") { [ 750,   40,  13,  21,   0,  -2] }
-base_graphics spr488( 488, "../graphics/fonts/fonts_8bpp.png") { [ 770,   40,  11,  21,   0,  -2] }
-base_graphics spr489( 489, "../graphics/fonts/fonts_8bpp.png") { [  10,  100,  13,  21,   0,  -2] }
-base_graphics spr490( 490, "../graphics/fonts/fonts_8bpp.png") { [  30,  100,  15,  21,   0,  -2] }
-base_graphics spr491( 491, "../graphics/fonts/fonts_8bpp.png") { [  50,  100,   7,  21,   0,  -2] }
-base_graphics spr492( 492, "../graphics/fonts/fonts_8bpp.png") { [  70,  100,   8,  21,   0,  -2] }
-base_graphics spr493( 493, "../graphics/fonts/fonts_8bpp.png") { [  90,  100,  14,  21,   0,  -2] }
-base_graphics spr494( 494, "../graphics/fonts/fonts_8bpp.png") { [ 110,  100,  12,  21,   0,  -2] }
-base_graphics spr495( 495, "../graphics/fonts/fonts_8bpp.png") { [ 130,  100,  17,  21,   0,  -2] }
-base_graphics spr496( 496, "../graphics/fonts/fonts_8bpp.png") { [ 150,  100,  16,  21,   0,  -2] }
-base_graphics spr497( 497, "../graphics/fonts/fonts_8bpp.png") { [ 170,  100,  13,  21,   0,  -2] }
-base_graphics spr498( 498, "../graphics/fonts/fonts_8bpp.png") { [ 190,  100,  12,  21,   0,  -2] }
-base_graphics spr499( 499, "../graphics/fonts/fonts_8bpp.png") { [ 210,  100,  13,  21,   0,  -2] }
-base_graphics spr500( 500, "../graphics/fonts/fonts_8bpp.png") { [ 230,  100,  12,  21,   0,  -2] }
-base_graphics spr501( 501, "../graphics/fonts/fonts_8bpp.png") { [ 250,  100,   9,  21,   0,  -2] }
-base_graphics spr502( 502, "../graphics/fonts/fonts_8bpp.png") { [ 270,  100,  13,  21,   0,  -2] }
-base_graphics spr503( 503, "../graphics/fonts/fonts_8bpp.png") { [ 290,  100,  14,  21,   0,  -2] }
-base_graphics spr504( 504, "../graphics/fonts/fonts_8bpp.png") { [ 310,  100,  13,  21,   0,  -2] }
-base_graphics spr505( 505, "../graphics/fonts/fonts_8bpp.png") { [ 330,  100,  18,  21,   0,  -2] }
-base_graphics spr506( 506, "../graphics/fonts/fonts_8bpp.png") { [ 350,  100,  13,  21,   0,  -2] }
-base_graphics spr507( 507, "../graphics/fonts/fonts_8bpp.png") { [ 370,  100,  13,  21,   0,  -2] }
-base_graphics spr508( 508, "../graphics/fonts/fonts_8bpp.png") { [ 390,  100,  12,  21,   0,  -2] }
-base_graphics spr509( 509, "../graphics/fonts/fonts_8bpp.png") { [ 410,  100,   5,  21,   0,  -2] }
-base_graphics spr510( 510, "../graphics/fonts/fonts_8bpp.png") { [ 430,  100,   6,  21,   0,  -2] }
-base_graphics spr511( 511, "../graphics/fonts/fonts_8bpp.png") { [ 450,  100,   5,  21,   0,  -2] }
-base_graphics spr512( 512, "../graphics/fonts/fonts_8bpp.png") { [ 470,  100,   7,  21,   0,  -2] }
-base_graphics spr513( 513, "../graphics/fonts/fonts_8bpp.png") { [ 490,  100,  10,  21,   0,  -2] }
-base_graphics spr514( 514, "../graphics/fonts/fonts_8bpp.png") { [ 510,  100,   4,  21,   0,  -2] }
-base_graphics spr515( 515, "../graphics/fonts/fonts_8bpp.png") { [ 530,  100,   8,  21,   0,  -2] }
-base_graphics spr516( 516, "../graphics/fonts/fonts_8bpp.png") { [ 550,  100,   9,  21,   0,  -2] }
-base_graphics spr517( 517, "../graphics/fonts/fonts_8bpp.png") { [ 570,  100,   8,  21,   0,  -2] }
-base_graphics spr518( 518, "../graphics/fonts/fonts_8bpp.png") { [ 590,  100,   9,  21,   0,  -2] }
-base_graphics spr519( 519, "../graphics/fonts/fonts_8bpp.png") { [ 610,  100,   8,  21,   0,  -2] }
-base_graphics spr520( 520, "../graphics/fonts/fonts_8bpp.png") { [ 630,  100,   8,  21,   0,  -2] }
-base_graphics spr521( 521, "../graphics/fonts/fonts_8bpp.png") { [ 650,  100,  10,  21,   0,  -2] }
-base_graphics spr522( 522, "../graphics/fonts/fonts_8bpp.png") { [ 670,  100,  10,  21,   0,  -2] }
-base_graphics spr523( 523, "../graphics/fonts/fonts_8bpp.png") { [ 690,  100,   4,  21,   0,  -2] }
-base_graphics spr524( 524, "../graphics/fonts/fonts_8bpp.png") { [ 710,  100,   3,  21,   0,  -2] }
-base_graphics spr525( 525, "../graphics/fonts/fonts_8bpp.png") { [ 730,  100,  10,  21,   0,  -2] }
-base_graphics spr526( 526, "../graphics/fonts/fonts_8bpp.png") { [ 750,  100,   4,  21,   0,  -2] }
-base_graphics spr527( 527, "../graphics/fonts/fonts_8bpp.png") { [ 770,  100,  15,  21,   0,  -2] }
-base_graphics spr528( 528, "../graphics/fonts/fonts_8bpp.png") { [  10,  160,  10,  21,   0,  -2] }
-base_graphics spr529( 529, "../graphics/fonts/fonts_8bpp.png") { [  30,  160,   9,  21,   0,  -2] }
-base_graphics spr530( 530, "../graphics/fonts/fonts_8bpp.png") { [  50,  160,   9,  21,   0,  -2] }
-base_graphics spr531( 531, "../graphics/fonts/fonts_8bpp.png") { [  70,  160,  10,  21,   0,  -2] }
-base_graphics spr532( 532, "../graphics/fonts/fonts_8bpp.png") { [  90,  160,   6,  21,   0,  -2] }
-base_graphics spr533( 533, "../graphics/fonts/fonts_8bpp.png") { [ 110,  160,   6,  21,   0,  -2] }
-base_graphics spr534( 534, "../graphics/fonts/fonts_8bpp.png") { [ 130,  160,   5,  21,   0,  -2] }
-base_graphics spr535( 535, "../graphics/fonts/fonts_8bpp.png") { [ 150,  160,   9,  21,   0,  -2] }
-base_graphics spr536( 536, "../graphics/fonts/fonts_8bpp.png") { [ 170,  160,   9,  21,   0,  -2] }
-base_graphics spr537( 537, "../graphics/fonts/fonts_8bpp.png") { [ 190,  160,  13,  21,   0,  -2] }
-base_graphics spr538( 538, "../graphics/fonts/fonts_8bpp.png") { [ 210,  160,  10,  21,   0,  -2] }
-base_graphics spr539( 539, "../graphics/fonts/fonts_8bpp.png") { [ 230,  160,   9,  21,   0,  -2] }
-base_graphics spr540( 540, "../graphics/fonts/fonts_8bpp.png") { [ 250,  160,   7,  21,   0,  -2] }
-base_graphics spr541( 541, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr542( 542, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr543( 543, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr544( 544, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr545( 545, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr546( 546, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr547( 547, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr548( 548, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr549( 549, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr550( 550, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr551( 551, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr552( 552, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr553( 553, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr554( 554, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr555( 555, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr556( 556, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr557( 557, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr558( 558, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr559( 559, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr560( 560, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr561( 561, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr562( 562, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr563( 563, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr564( 564, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr565( 565, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr566( 566, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr567( 567, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr568( 568, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr569( 569, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr570( 570, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr571( 571, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr572( 572, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr573( 573, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr574( 574, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr575( 575, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr576( 576, "../graphics/fonts/fonts_8bpp.png") { [ 270,  160,   1,   1,   0,  -2] }
-base_graphics spr577( 577, "../graphics/fonts/fonts_8bpp.png") { [ 290,  160,  13,  21,   0,  -2] }
-base_graphics spr578( 578, "../graphics/fonts/fonts_8bpp.png") { [ 310,  160,   1,   1,   0,  -2] }
-base_graphics spr579( 579, "../graphics/fonts/fonts_8bpp.png") { [ 330,  160,   3,  21,   0,  -2] }
-base_graphics spr580( 580, "../graphics/fonts/fonts_8bpp.png") { [ 350,  160,   7,  21,   0,  -2] }
-base_graphics spr581( 581, "../graphics/fonts/fonts_8bpp.png") { [ 370,  160,  11,  21,   0,  -2] }
-base_graphics spr582( 582, "../graphics/fonts/fonts_8bpp.png") { [ 390,  160,  10,  21,   0,  -2] }
-base_graphics spr583( 583, "../graphics/fonts/fonts_8bpp.png") { [ 410,  160,  13,  21,   0,  -2] }
-base_graphics spr584( 584, "../graphics/fonts/fonts_8bpp.png") { [ 430,  160,   2,  21,   0,  -2] }
-base_graphics spr585( 585, "../graphics/fonts/fonts_8bpp.png") { [ 450,  160,   7,  21,   0,  -2] }
-base_graphics spr586( 586, "../graphics/fonts/fonts_8bpp.png") { [ 470,  160,   6,  21,   0,  -2] }
-base_graphics spr587( 587, "../graphics/fonts/fonts_8bpp.png") { [ 490,  160,  16,  21,   0,  -2] }
-base_graphics spr588( 588, "../graphics/fonts/fonts_8bpp.png") { [ 510,  160,   1,   1,   0,  -2] }
-base_graphics spr589( 589, "../graphics/fonts/fonts_8bpp.png") { [ 530,  160,   9,  21,   0,  -2] }
-base_graphics spr590( 590, "../graphics/fonts/fonts_8bpp.png") { [ 550,  160,   1,   1,   0,  -2] }
-base_graphics spr591( 591, "../graphics/fonts/fonts_8bpp.png") { [ 570,  160,   1,   1,   0,  -2] }
-base_graphics spr592( 592, "../graphics/fonts/fonts_8bpp.png") { [ 590,  160,  16,  21,   0,  -2] }
-base_graphics spr593( 593, "../graphics/fonts/fonts_8bpp.png") { [ 610,  160,   1,   1,   0,  -2] }
-base_graphics spr594( 594, "../graphics/fonts/fonts_8bpp.png") { [ 630,  160,   6,  21,   0,  -2] }
-base_graphics spr595( 595, "../graphics/fonts/fonts_8bpp.png") { [ 650,  160,  11,  21,   0,  -2] }
-base_graphics spr596( 596, "../graphics/fonts/fonts_8bpp.png") { [ 670,  160,   4,  21,   0,  -2] }
-base_graphics spr597( 597, "../graphics/fonts/fonts_8bpp.png") { [ 690,  160,   4,  21,   0,  -2] }
-base_graphics spr598( 598, "../graphics/fonts/fonts_8bpp.png") { [ 710,  160,   1,   1,   0,  -2] }
-base_graphics spr599( 599, "../graphics/fonts/fonts_8bpp.png") { [ 730,  160,   1,   1,   0,  -2] }
-base_graphics spr600( 600, "../graphics/fonts/fonts_8bpp.png") { [ 750,  160,   1,   1,   0,  -2] }
-base_graphics spr601( 601, "../graphics/fonts/fonts_8bpp.png") { [ 770,  160,   1,   1,   0,  -2] }
-base_graphics spr602( 602, "../graphics/fonts/fonts_8bpp.png") { [  10,  220,   1,   1,   0,  -2] }
-base_graphics spr603( 603, "../graphics/fonts/fonts_8bpp.png") { [  30,  220,   8,  21,   0,  -2] }
-base_graphics spr604( 604, "../graphics/fonts/fonts_8bpp.png") { [  50,  220,   6,  21,   0,  -2] }
-base_graphics spr605( 605, "../graphics/fonts/fonts_8bpp.png") { [  70,  220,   9,  21,   0,  -2] }
-base_graphics spr606( 606, "../graphics/fonts/fonts_8bpp.png") { [  90,  220,   1,   1,   0,  -2] }
-base_graphics spr607( 607, "../graphics/fonts/fonts_8bpp.png") { [ 110,  220,   1,   1,   0,  -2] }
-base_graphics spr608( 608, "../graphics/fonts/fonts_8bpp.png") { [ 130,  220,  11,  21,   0,  -2] }
-base_graphics spr609( 609, "../graphics/fonts/fonts_8bpp.png") { [ 150,  220,   7,  21,   0,  -2] }
-base_graphics spr610( 610, "../graphics/fonts/fonts_8bpp.png") { [ 170,  220,  14,  21,   0,  -2] }
-base_graphics spr611( 611, "../graphics/fonts/fonts_8bpp.png") { [ 190,  220,  14,  21,   0,  -2] }
-base_graphics spr612( 612, "../graphics/fonts/fonts_8bpp.png") { [ 210,  220,  14,  21,   0,  -2] }
-base_graphics spr613( 613, "../graphics/fonts/fonts_8bpp.png") { [ 230,  220,  14,  21,   0,  -2] }
-base_graphics spr614( 614, "../graphics/fonts/fonts_8bpp.png") { [ 250,  220,  14,  21,   0,  -2] }
-base_graphics spr615( 615, "../graphics/fonts/fonts_8bpp.png") { [ 270,  220,  14,  21,   0,  -2] }
-base_graphics spr616( 616, "../graphics/fonts/fonts_8bpp.png") { [ 290,  220,  18,  21,   0,  -2] }
-base_graphics spr617( 617, "../graphics/fonts/fonts_8bpp.png") { [ 310,  220,  12,  21,   0,  -2] }
-base_graphics spr618( 618, "../graphics/fonts/fonts_8bpp.png") { [ 330,  220,  13,  21,   0,  -2] }
-base_graphics spr619( 619, "../graphics/fonts/fonts_8bpp.png") { [ 350,  220,  13,  21,   0,  -2] }
-base_graphics spr620( 620, "../graphics/fonts/fonts_8bpp.png") { [ 370,  220,  13,  21,   0,  -2] }
-base_graphics spr621( 621, "../graphics/fonts/fonts_8bpp.png") { [ 390,  220,  13,  21,   0,  -2] }
-base_graphics spr622( 622, "../graphics/fonts/fonts_8bpp.png") { [ 410,  220,   7,  21,   0,  -2] }
-base_graphics spr623( 623, "../graphics/fonts/fonts_8bpp.png") { [ 430,  220,   7,  21,   0,  -2] }
-base_graphics spr624( 624, "../graphics/fonts/fonts_8bpp.png") { [ 450,  220,   7,  21,   0,  -2] }
-base_graphics spr625( 625, "../graphics/fonts/fonts_8bpp.png") { [ 470,  220,   7,  21,   0,  -2] }
-base_graphics spr626( 626, "../graphics/fonts/fonts_8bpp.png") { [ 490,  220,  14,  21,   0,  -2] }
-base_graphics spr627( 627, "../graphics/fonts/fonts_8bpp.png") { [ 510,  220,  16,  21,   0,  -2] }
-base_graphics spr628( 628, "../graphics/fonts/fonts_8bpp.png") { [ 530,  220,  13,  21,   0,  -2] }
-base_graphics spr629( 629, "../graphics/fonts/fonts_8bpp.png") { [ 550,  220,  13,  21,   0,  -2] }
-base_graphics spr630( 630, "../graphics/fonts/fonts_8bpp.png") { [ 570,  220,  13,  21,   0,  -2] }
-base_graphics spr631( 631, "../graphics/fonts/fonts_8bpp.png") { [ 590,  220,  13,  21,   0,  -2] }
-base_graphics spr632( 632, "../graphics/fonts/fonts_8bpp.png") { [ 610,  220,  13,  21,   0,  -2] }
-base_graphics spr633( 633, "../graphics/fonts/fonts_8bpp.png") { [ 630,  220,  10,  21,   0,  -2] }
-base_graphics spr634( 634, "../graphics/fonts/fonts_8bpp.png") { [ 650,  220,  13,  21,   0,  -2] }
-base_graphics spr635( 635, "../graphics/fonts/fonts_8bpp.png") { [ 670,  220,  14,  21,   0,  -2] }
-base_graphics spr636( 636, "../graphics/fonts/fonts_8bpp.png") { [ 690,  220,  14,  21,   0,  -2] }
-base_graphics spr637( 637, "../graphics/fonts/fonts_8bpp.png") { [ 710,  220,  14,  21,   0,  -2] }
-base_graphics spr638( 638, "../graphics/fonts/fonts_8bpp.png") { [ 730,  220,  14,  21,   0,  -2] }
-base_graphics spr639( 639, "../graphics/fonts/fonts_8bpp.png") { [ 750,  220,  13,  21,   0,  -2] }
-base_graphics spr640( 640, "../graphics/fonts/fonts_8bpp.png") { [ 770,  220,  11,  21,   0,  -2] }
-base_graphics spr641( 641, "../graphics/fonts/fonts_8bpp.png") { [  10,  280,   9,  21,   0,  -2] }
-base_graphics spr642( 642, "../graphics/fonts/fonts_8bpp.png") { [  30,  280,   8,  21,   0,  -2] }
-base_graphics spr643( 643, "../graphics/fonts/fonts_8bpp.png") { [  50,  280,   8,  21,   0,  -2] }
-base_graphics spr644( 644, "../graphics/fonts/fonts_8bpp.png") { [  70,  280,   8,  21,   0,  -2] }
-base_graphics spr645( 645, "../graphics/fonts/fonts_8bpp.png") { [  90,  280,   8,  21,   0,  -2] }
-base_graphics spr646( 646, "../graphics/fonts/fonts_8bpp.png") { [ 110,  280,   8,  21,   0,  -2] }
-base_graphics spr647( 647, "../graphics/fonts/fonts_8bpp.png") { [ 130,  280,   8,  21,   0,  -2] }
-base_graphics spr648( 648, "../graphics/fonts/fonts_8bpp.png") { [ 150,  280,  13,  21,   0,  -2] }
-base_graphics spr649( 649, "../graphics/fonts/fonts_8bpp.png") { [ 170,  280,   8,  21,   0,  -2] }
-base_graphics spr650( 650, "../graphics/fonts/fonts_8bpp.png") { [ 190,  280,   8,  21,   0,  -2] }
-base_graphics spr651( 651, "../graphics/fonts/fonts_8bpp.png") { [ 210,  280,   8,  21,   0,  -2] }
-base_graphics spr652( 652, "../graphics/fonts/fonts_8bpp.png") { [ 230,  280,   8,  21,   0,  -2] }
-base_graphics spr653( 653, "../graphics/fonts/fonts_8bpp.png") { [ 250,  280,   8,  21,   0,  -2] }
-base_graphics spr654( 654, "../graphics/fonts/fonts_8bpp.png") { [ 270,  280,   4,  21,   0,  -2] }
-base_graphics spr655( 655, "../graphics/fonts/fonts_8bpp.png") { [ 290,  280,   4,  21,   0,  -2] }
-base_graphics spr656( 656, "../graphics/fonts/fonts_8bpp.png") { [ 310,  280,   5,  21,   0,  -2] }
-base_graphics spr657( 657, "../graphics/fonts/fonts_8bpp.png") { [ 330,  280,   5,  21,   0,  -2] }
-base_graphics spr658( 658, "../graphics/fonts/fonts_8bpp.png") { [ 350,  280,   9,  21,   0,  -2] }
-base_graphics spr659( 659, "../graphics/fonts/fonts_8bpp.png") { [ 370,  280,  10,  21,   0,  -2] }
-base_graphics spr660( 660, "../graphics/fonts/fonts_8bpp.png") { [ 390,  280,   9,  21,   0,  -2] }
-base_graphics spr661( 661, "../graphics/fonts/fonts_8bpp.png") { [ 410,  280,   9,  21,   0,  -2] }
-base_graphics spr662( 662, "../graphics/fonts/fonts_8bpp.png") { [ 430,  280,   9,  21,   0,  -2] }
-base_graphics spr663( 663, "../graphics/fonts/fonts_8bpp.png") { [ 450,  280,   9,  21,   0,  -2] }
-base_graphics spr664( 664, "../graphics/fonts/fonts_8bpp.png") { [ 470,  280,   9,  21,   0,  -2] }
-base_graphics spr665( 665, "../graphics/fonts/fonts_8bpp.png") { [ 490,  280,  11,  21,   0,  -2] }
-base_graphics spr666( 666, "../graphics/fonts/fonts_8bpp.png") { [ 510,  280,   9,  21,   0,  -2] }
-base_graphics spr667( 667, "../graphics/fonts/fonts_8bpp.png") { [ 530,  280,   9,  21,   0,  -2] }
-base_graphics spr668( 668, "../graphics/fonts/fonts_8bpp.png") { [ 550,  280,   9,  21,   0,  -2] }
-base_graphics spr669( 669, "../graphics/fonts/fonts_8bpp.png") { [ 570,  280,   9,  21,   0,  -2] }
-base_graphics spr670( 670, "../graphics/fonts/fonts_8bpp.png") { [ 590,  280,   9,  21,   0,  -2] }
-base_graphics spr671( 671, "../graphics/fonts/fonts_8bpp.png") { [ 610,  280,   9,  21,   0,  -2] }
-base_graphics spr672( 672, "../graphics/fonts/fonts_8bpp.png") { [ 630,  280,   9,  21,   0,  -2] }
-base_graphics spr673( 673, "../graphics/fonts/fonts_8bpp.png") { [ 650,  280,   9,  21,   0,  -2] }
+template template_font_newspaper_base(z) {
+    [  10*z,   40*z,   5*z,   1*z,   0*z,  -2*z, NOCROP] // [space]
+    [  30*z,   40*z,   4*z,  21*z,   0*z,  -2*z] // !
+    [  50*z,   40*z,   7*z,  21*z,   0*z,  -2*z] // "
+    [  70*z,   40*z,  11*z,  21*z,   0*z,  -2*z] // #
+    [  90*z,   40*z,   8*z,  21*z,   0*z,  -2*z] // $
+    [ 110*z,   40*z,  11*z,  21*z,   0*z,  -2*z] // %
+    [ 130*z,   40*z,  14*z,  21*z,   0*z,  -2*z] // &
+    [ 150*z,   40*z,   3*z,  21*z,   0*z,  -2*z] // '
+    [ 170*z,   40*z,   5*z,  21*z,   0*z,  -2*z] // (
+    [ 190*z,   40*z,   5*z,  21*z,   0*z,  -2*z] // )
+    [ 210*z,   40*z,   7*z,  21*z,   0*z,  -2*z] // *
+    [ 230*z,   40*z,  11*z,  21*z,   0*z,  -2*z] // +
+    [ 250*z,   40*z,   4*z,  21*z,   0*z,  -2*z] // ,
+    [ 270*z,   40*z,   6*z,  21*z,   0*z,  -2*z] // -
+    [ 290*z,   40*z,   4*z,  21*z,   0*z,  -2*z] // .
+    [ 310*z,   40*z,   7*z,  21*z,   0*z,  -2*z] // /
+    [ 330*z,   40*z,   9*z,  21*z,   0*z,  -2*z] // 0
+    [ 350*z,   40*z,   6*z,  21*z,   0*z,  -2*z] // 1
+    [ 370*z,   40*z,   9*z,  21*z,   0*z,  -2*z] // 2
+    [ 390*z,   40*z,   9*z,  21*z,   0*z,  -2*z] // 3
+    [ 410*z,   40*z,   9*z,  21*z,   0*z,  -2*z] // 4
+    [ 430*z,   40*z,   7*z,  21*z,   0*z,  -2*z] // 5
+    [ 450*z,   40*z,   8*z,  21*z,   0*z,  -2*z] // 6
+    [ 470*z,   40*z,   7*z,  21*z,   0*z,  -2*z] // 7
+    [ 490*z,   40*z,   8*z,  21*z,   0*z,  -2*z] // 8
+    [ 510*z,   40*z,   8*z,  21*z,   0*z,  -2*z] // 9
+    [ 530*z,   40*z,   3*z,  21*z,   0*z,  -2*z] // :
+    [ 550*z,   40*z,   5*z,  21*z,   0*z,  -2*z] // ;
+    [ 570*z,   40*z,  11*z,  21*z,   0*z,  -2*z] // <
+    [ 590*z,   40*z,  11*z,  21*z,   0*z,  -2*z] // =
+    [ 610*z,   40*z,  11*z,  21*z,   0*z,  -2*z] // >
+    [ 630*z,   40*z,   7*z,  21*z,   0*z,  -2*z] // ?
+    [ 650*z,   40*z,  16*z,  21*z,   0*z,  -2*z] // @
+    [ 670*z,   40*z,  14*z,  21*z,   0*z,  -2*z] // A
+    [ 690*z,   40*z,  11*z,  21*z,   0*z,  -2*z] // B
+    [ 710*z,   40*z,  12*z,  21*z,   0*z,  -2*z] // C
+    [ 730*z,   40*z,  14*z,  21*z,   0*z,  -2*z] // D
+    [ 750*z,   40*z,  13*z,  21*z,   0*z,  -2*z] // E
+    [ 770*z,   40*z,  11*z,  21*z,   0*z,  -2*z] // F
+    [  10*z,  100*z,  13*z,  21*z,   0*z,  -2*z] // G
+    [  30*z,  100*z,  15*z,  21*z,   0*z,  -2*z] // H
+    [  50*z,  100*z,   7*z,  21*z,   0*z,  -2*z] // I
+    [  70*z,  100*z,   8*z,  21*z,   0*z,  -2*z] // J
+    [  90*z,  100*z,  14*z,  21*z,   0*z,  -2*z] // K
+    [ 110*z,  100*z,  12*z,  21*z,   0*z,  -2*z] // L
+    [ 130*z,  100*z,  17*z,  21*z,   0*z,  -2*z] // M
+    [ 150*z,  100*z,  16*z,  21*z,   0*z,  -2*z] // N
+    [ 170*z,  100*z,  13*z,  21*z,   0*z,  -2*z] // O
+    [ 190*z,  100*z,  12*z,  21*z,   0*z,  -2*z] // P
+    [ 210*z,  100*z,  13*z,  21*z,   0*z,  -2*z] // Q
+    [ 230*z,  100*z,  12*z,  21*z,   0*z,  -2*z] // R
+    [ 250*z,  100*z,   9*z,  21*z,   0*z,  -2*z] // S
+    [ 270*z,  100*z,  13*z,  21*z,   0*z,  -2*z] // T
+    [ 290*z,  100*z,  14*z,  21*z,   0*z,  -2*z] // U
+    [ 310*z,  100*z,  13*z,  21*z,   0*z,  -2*z] // V
+    [ 330*z,  100*z,  18*z,  21*z,   0*z,  -2*z] // W
+    [ 350*z,  100*z,  13*z,  21*z,   0*z,  -2*z] // X
+    [ 370*z,  100*z,  13*z,  21*z,   0*z,  -2*z] // Y
+    [ 390*z,  100*z,  11*z,  21*z,   0*z,  -2*z] // Z
+    [ 410*z,  100*z,   5*z,  21*z,   0*z,  -2*z] // [
+    [ 430*z,  100*z,   7*z,  21*z,   0*z,  -2*z] // \
+    [ 450*z,  100*z,   5*z,  21*z,   0*z,  -2*z] // ]
+    [ 470*z,  100*z,   7*z,  21*z,   0*z,  -2*z] // ^
+    [ 490*z,  100*z,  10*z,  21*z,   0*z,  -2*z] // _
+    [ 510*z,  100*z,   4*z,  21*z,   0*z,  -2*z] // `
+    [ 530*z,  100*z,   8*z,  21*z,   0*z,  -2*z] // a
+    [ 550*z,  100*z,   9*z,  21*z,   0*z,  -2*z] // b
+    [ 570*z,  100*z,   8*z,  21*z,   0*z,  -2*z] // c
+    [ 590*z,  100*z,   9*z,  21*z,   0*z,  -2*z] // d
+    [ 610*z,  100*z,   8*z,  21*z,   0*z,  -2*z] // e
+    [ 630*z,  100*z,   7*z,  21*z,   0*z,  -2*z] // f
+    [ 650*z,  100*z,  10*z,  21*z,   0*z,  -2*z] // g
+    [ 670*z,  100*z,  10*z,  21*z,   0*z,  -2*z] // h
+    [ 690*z,  100*z,   4*z,  21*z,   0*z,  -2*z] // i
+    [ 710*z,  100*z,   3*z,  21*z,   0*z,  -2*z] // j
+    [ 730*z,  100*z,  10*z,  21*z,   0*z,  -2*z] // k
+    [ 750*z,  100*z,   4*z,  21*z,   0*z,  -2*z] // l
+    [ 770*z,  100*z,  16*z,  21*z,   0*z,  -2*z] // m
+    [  10*z,  160*z,  10*z,  21*z,   0*z,  -2*z] // n
+    [  30*z,  160*z,   9*z,  21*z,   0*z,  -2*z] // o
+    [  50*z,  160*z,   9*z,  21*z,   0*z,  -2*z] // p
+    [  70*z,  160*z,  10*z,  21*z,   0*z,  -2*z] // q
+    [  90*z,  160*z,   7*z,  21*z,   0*z,  -2*z] // r
+    [ 110*z,  160*z,   6*z,  21*z,   0*z,  -2*z] // s
+    [ 130*z,  160*z,   5*z,  21*z,   0*z,  -2*z] // t
+    [ 150*z,  160*z,   9*z,  21*z,   0*z,  -2*z] // u
+    [ 170*z,  160*z,   9*z,  21*z,   0*z,  -2*z] // v
+    [ 190*z,  160*z,  13*z,  21*z,   0*z,  -2*z] // w
+    [ 210*z,  160*z,  10*z,  21*z,   0*z,  -2*z] // x
+    [ 230*z,  160*z,   9*z,  21*z,   0*z,  -2*z] // y
+    [ 250*z,  160*z,   7*z,  21*z,   0*z,  -2*z] // z
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 290*z,  160*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 310*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 330*z,  160*z,   3*z,  21*z,   0*z,  -2*z] // 
+    [ 350*z,  160*z,   7*z,  21*z,   0*z,  -2*z] // 
+    [ 370*z,  160*z,  11*z,  21*z,   0*z,  -2*z] // 
+    [ 390*z,  160*z,  10*z,  21*z,   0*z,  -2*z] // 
+    [ 410*z,  160*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 430*z,  160*z,   2*z,  21*z,   0*z,  -2*z] // 
+    [ 450*z,  160*z,   7*z,  21*z,   0*z,  -2*z] // 
+    [ 470*z,  160*z,   6*z,  21*z,   0*z,  -2*z] // 
+    [ 490*z,  160*z,  16*z,  21*z,   0*z,  -2*z] // 
+    [ 510*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 530*z,  160*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 550*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 570*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 590*z,  160*z,  16*z,  21*z,   0*z,  -2*z] // 
+    [ 610*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 630*z,  160*z,   6*z,  21*z,   0*z,  -2*z] // 
+    [ 650*z,  160*z,  11*z,  21*z,   0*z,  -2*z] // 
+    [ 670*z,  160*z,   4*z,  21*z,   0*z,  -2*z] // 
+    [ 690*z,  160*z,   4*z,  21*z,   0*z,  -2*z] // 
+    [ 710*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 730*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 750*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 770*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [  10*z,  220*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [  30*z,  220*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [  50*z,  220*z,   6*z,  21*z,   0*z,  -2*z] // 
+    [  70*z,  220*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [  90*z,  220*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 110*z,  220*z,   1*z,   1*z,   0*z,  -2*z] // 
+    [ 130*z,  220*z,  11*z,  21*z,   0*z,  -2*z] // 
+    [ 150*z,  220*z,   7*z,  21*z,   0*z,  -2*z] // 
+    [ 170*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 190*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 210*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 230*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 250*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 270*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 290*z,  220*z,  18*z,  21*z,   0*z,  -2*z] // 
+    [ 310*z,  220*z,  12*z,  21*z,   0*z,  -2*z] // 
+    [ 330*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 350*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 370*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 390*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 410*z,  220*z,   7*z,  21*z,   0*z,  -2*z] // 
+    [ 430*z,  220*z,   7*z,  21*z,   0*z,  -2*z] // 
+    [ 450*z,  220*z,   7*z,  21*z,   0*z,  -2*z] // 
+    [ 470*z,  220*z,   7*z,  21*z,   0*z,  -2*z] // 
+    [ 490*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 510*z,  220*z,  16*z,  21*z,   0*z,  -2*z] // 
+    [ 530*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 550*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 570*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 590*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 610*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 630*z,  220*z,  10*z,  21*z,   0*z,  -2*z] // 
+    [ 650*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 670*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 690*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 710*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 730*z,  220*z,  14*z,  21*z,   0*z,  -2*z] // 
+    [ 750*z,  220*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 770*z,  220*z,  11*z,  21*z,   0*z,  -2*z] // 
+    [  10*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [  30*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [  50*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [  70*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [  90*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [ 110*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [ 130*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [ 150*z,  280*z,  13*z,  21*z,   0*z,  -2*z] // 
+    [ 170*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [ 190*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [ 210*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [ 230*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [ 250*z,  280*z,   8*z,  21*z,   0*z,  -2*z] // 
+    [ 270*z,  280*z,   4*z,  21*z,   0*z,  -2*z] // 
+    [ 290*z,  280*z,   4*z,  21*z,   0*z,  -2*z] // 
+    [ 310*z,  280*z,   5*z,  21*z,   0*z,  -2*z] // 
+    [ 330*z,  280*z,   5*z,  21*z,   0*z,  -2*z] // 
+    [ 350*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 370*z,  280*z,  10*z,  21*z,   0*z,  -2*z] // 
+    [ 390*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 410*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 430*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 450*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 470*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 490*z,  280*z,  11*z,  21*z,   0*z,  -2*z] // 
+    [ 510*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 530*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 550*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 570*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 590*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 610*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 630*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+    [ 650*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
+}
+base_graphics spr450( 450, "../graphics/fonts/1/fonts_8bpp.png") { template_font_newspaper_base(1) }

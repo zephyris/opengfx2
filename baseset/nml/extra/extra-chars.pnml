@@ -13,19 +13,19 @@ template font_mono(x, y)          { [x, y, 7,     13, 0,  0, NOCROP] }
 // U+007C: Vertical Line
 // U+007D: Right Curly Bracket
 // U+007E: Tilde
-font_glyph(NORMAL, 0x007B, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x007B, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(10, 10, 5)
 	font_normal(30, 10, 3)
 	font_normal(50, 10, 5)
 	font_normal(70, 10, 7)
 }
-font_glyph(SMALL, 0x007B, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x007B, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(10, 30, 3)
 	font_small(30, 30, 1)
 	font_small(50, 30, 3)
 	font_small(70, 30, 4)
 }
-font_glyph(LARGE, 0x007B, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x007B, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(10, 40, 7)
 	font_large(30, 40, 2)
 	font_large(50, 40, 7)
@@ -34,53 +34,53 @@ font_glyph(LARGE, 0x007B, "../graphics/fonts/fonts_extra_8bpp.png") {
 
 
 // U+007F: No-Break Space
-font_glyph(NORMAL, 0x007F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x007F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(90, 10, 2)
 }
-font_glyph(SMALL, 0x007F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x007F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(90, 30, 1)
 }
-font_glyph(LARGE, 0x007F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x007F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(90, 40, 5)
 }
 
 
 // U+00AA: Feminine Ordinal Indicator
-font_glyph(NORMAL, 0x00AA, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x00AA, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(110, 10, 6)
 }
-font_glyph(SMALL, 0x00AA, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x00AA, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(110, 30, 3)
 }
-font_glyph(LARGE, 0x00AA, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x00AA, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(110, 40, 6)
 }
 
 
 // U+00AC: Not Sign
 // U+00AD: Soft Hyphen
-font_glyph(NORMAL, 0x00AC, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x00AC, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(130, 10, 7)
 	font_normal(150, 10, 5)
 }
-font_glyph(SMALL, 0x00AC, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x00AC, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(130, 30, 3)
 	font_small(150, 30, 2)
 }
-font_glyph(LARGE, 0x00AC, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x00AC, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(130, 40, 11)
 	font_large(150, 40, 6)
 }
 
 
 // U+00AF: Macron
-font_glyph(NORMAL, 0x00AF, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x00AF, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(170, 10, 8)
 }
-font_glyph(SMALL, 0x00AF, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x00AF, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(170, 30, 4)
 }
-font_glyph(LARGE, 0x00AF, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x00AF, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(170, 40, 10)
 }
 
@@ -91,7 +91,7 @@ font_glyph(LARGE, 0x00AF, "../graphics/fonts/fonts_extra_8bpp.png") {
 // U+00B7: Middle Dot
 // U+00B8: Cedilla
 // U+00B9: Superscript One
-font_glyph(NORMAL, 0x00B4, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x00B4, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(190, 10, 4)
 	font_normal(210, 10, 6)
 	font_normal(230, 10, 8)
@@ -99,7 +99,7 @@ font_glyph(NORMAL, 0x00B4, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_normal(270, 10, 4)
 	font_normal(290, 10, 5)
 }
-font_glyph(SMALL, 0x00B4, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x00B4, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(190, 30, 2)
 	font_small(210, 30, 3)
 	font_small(230, 30, 5)
@@ -107,7 +107,7 @@ font_glyph(SMALL, 0x00B4, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_small(270, 30, 1)
 	font_small(290, 30, 2)
 }
-font_glyph(LARGE, 0x00B4, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x00B4, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(190, 40, 4)
 	font_large(210, 40, 9)
 	font_large(230, 40, 9)
@@ -119,15 +119,15 @@ font_glyph(LARGE, 0x00B4, "../graphics/fonts/fonts_extra_8bpp.png") {
 
 // U+00BC: Vulgar Fraction One Quarter
 // U+00BD: Vulgar Fraction One Half
-font_glyph(NORMAL, 0x00BC, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x00BC, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(310, 10, 12)
 	font_normal(330, 10, 12)
 }
-font_glyph(SMALL, 0x00BC, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x00BC, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(310, 30, 9)
 	font_small(330, 30, 9)
 }
-font_glyph(LARGE, 0x00BC, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x00BC, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(310, 40, 11)
 	font_large(330, 40, 11)
 }
@@ -136,7 +136,7 @@ font_glyph(LARGE, 0x00BC, "../graphics/fonts/fonts_extra_8bpp.png") {
 // All fonts
 
 // U+0100 ... U+017F: Latin Extended-A
-font_glyph(NORMAL, 0x0100, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x0100, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(350, 10, 9)
 	font_normal(370, 10, 7)
 	font_normal(390, 10, 9)
@@ -258,7 +258,7 @@ font_glyph(NORMAL, 0x0100, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_normal(370, 190, 9)
 	font_normal(390, 190, 7)
 }
-font_glyph(NORMAL, 0x0179, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x0179, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(410, 190, 8)
 	font_normal(430, 190, 7)
 	font_normal(450, 190, 8)
@@ -267,7 +267,7 @@ font_glyph(NORMAL, 0x0179, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_normal(510, 190, 7)
 	font_normal(530, 190, 4)
 }
-font_glyph(SMALL, 0x0100, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x0100, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(350, 30, 3)
 	font_small(370, 30, 3)
 	font_small(390, 30, 3)
@@ -389,7 +389,7 @@ font_glyph(SMALL, 0x0100, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_small(370, 210, 3)
 	font_small(390, 210, 3)
 }
-font_glyph(SMALL, 0x0179, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x0179, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(410, 210, 3)
 	font_small(430, 210, 3)
 	font_small(450, 210, 3)
@@ -398,7 +398,7 @@ font_glyph(SMALL, 0x0179, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_small(510, 210, 3)
 	font_small(530, 210, 2)
 }
-font_glyph(LARGE, 0x0100, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x0100, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(350, 40, 14)
 	font_large(370, 40, 8)
 	font_large(390, 40, 14)
@@ -520,7 +520,7 @@ font_glyph(LARGE, 0x0100, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_large(370, 220, 13)
 	font_large(390, 220, 9)
 }
-font_glyph(LARGE, 0x0179, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x0179, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(410, 220, 12)
 	font_large(430, 220, 7)
 	font_large(450, 220, 12)
@@ -529,7 +529,7 @@ font_glyph(LARGE, 0x0179, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_large(510, 220, 7)
 	font_large(530, 220, 8)
 }
-font_glyph(MONO, 0x0100, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x0100, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(10, 170)
 	font_mono(25, 170)
 	font_mono(40, 170)
@@ -662,50 +662,50 @@ font_glyph(MONO, 0x0100, "../graphics/fonts/fonts_mono_8bpp.png") {
 
 
 // U+018F: Latin Capital Letter Schwa
-font_glyph(NORMAL, 0x018F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x018F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(550, 190, 9)
 }
-font_glyph(SMALL, 0x018F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x018F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(550, 210, 4)
 }
-font_glyph(LARGE, 0x018F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x018F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(550, 220, 13)
 }
-font_glyph(MONO, 0x018F, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x018F, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(10, 250)
 }
 
 
 // U+0192: Latin Small Letter F With Hook
-font_glyph(NORMAL, 0x0192, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x0192, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(570, 190, 9)
 }
-font_glyph(SMALL, 0x0192, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x0192, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(570, 210, 6)
 }
-font_glyph(LARGE, 0x0192, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x0192, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(570, 220, 14)
 }
-font_glyph(MONO, 0x0192, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x0192, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(25, 250)
 }
 
 
 // U+01B5: Latin Capital Letter Z With Stroke
 // U+01B6: Latin Small Letter Z With Stroke
-font_glyph(NORMAL, 0x01B5, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x01B5, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(590, 190, 8)
 	font_normal(610, 190, 7)
 }
-font_glyph(SMALL, 0x01B5, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x01B5, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(590, 210, 4)
 	font_small(610, 210, 4)
 }
-font_glyph(LARGE, 0x01B5, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x01B5, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(590, 220, 12)
 	font_large(610, 220, 7)
 }
-font_glyph(MONO, 0x01B5, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x01B5, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(40, 250)
 	font_mono(55, 250)
 }
@@ -715,25 +715,25 @@ font_glyph(MONO, 0x01B5, "../graphics/fonts/fonts_mono_8bpp.png") {
 // U+0219: Latin Small Letter S With Comma Below
 // U+021A: Latin Capital Letter T With Comma Below
 // U+021B: Latin Small Letter T With Comma Below
-font_glyph(NORMAL, 0x0218, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x0218, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(630, 190, 8)
 	font_normal(650, 190, 6)
 	font_normal(670, 190, 9)
 	font_normal(690, 190, 5)
 }
-font_glyph(SMALL, 0x0218, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x0218, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(630, 210, 3)
 	font_small(650, 210, 3)
 	font_small(670, 210, 3)
 	font_small(690, 210, 2)
 }
-font_glyph(LARGE, 0x0218, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x0218, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(630, 220, 9)
 	font_large(650, 220, 6)
 	font_large(670, 220, 13)
 	font_large(690, 220, 5)
 }
-font_glyph(MONO, 0x0218, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x0218, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(70, 250)
 	font_mono(85, 250)
 	font_mono(100, 250)
@@ -742,113 +742,113 @@ font_glyph(MONO, 0x0218, "../graphics/fonts/fonts_mono_8bpp.png") {
 
 
 // U+0259: Latin Small Letter Schwa
-font_glyph(NORMAL, 0x0259, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x0259, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(710, 190, 6)
 }
-font_glyph(SMALL, 0x0259, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x0259, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(710, 210, 3)
 }
-font_glyph(LARGE, 0x0259, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x0259, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(710, 220, 8)
 }
-font_glyph(MONO, 0x0259, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x0259, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(130, 250)
 }
 
 
 // U+02BB: Modifier Letter Turned Comma
-font_glyph(NORMAL, 0x02BB, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x02BB, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(730, 190, 3)
 }
-font_glyph(SMALL, 0x02BB, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x02BB, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(730, 210, 1)
 }
-font_glyph(LARGE, 0x02BB, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x02BB, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(730, 220, 4)
 }
-font_glyph(MONO, 0x02BB, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x02BB, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(145, 250)
 }
 
 
 // U+02C7: Caron
-font_glyph(NORMAL, 0x02C7, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x02C7, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(590, 250, 6)
 }
-font_glyph(SMALL, 0x02C7, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x02C7, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(590, 270, 3)
 }
-font_glyph(LARGE, 0x02C7, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x02C7, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(590, 280, 5)
 }
-font_glyph(MONO, 0x02C7, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x02C7, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(130, 270)
 }
 
 
 // U+058F: Armenian Dram Sign
-font_glyph(NORMAL, 0x058F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x058F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(750, 190, 9)
 }
-font_glyph(SMALL, 0x058F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x058F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(750, 210, 4)
 }
-font_glyph(LARGE, 0x058F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x058F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(750, 220, 15)
 }
-font_glyph(MONO, 0x058F, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x058F, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(160, 250)
 }
 
 
 // U+0E3F: Thai Currency Symbol Baht
-font_glyph(NORMAL, 0x0E3F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x0E3F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(770, 190, 8)
 }
-font_glyph(SMALL, 0x0E3F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x0E3F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(770, 210, 5)
 }
-font_glyph(LARGE, 0x0E3F, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x0E3F, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(770, 220, 11)
 }
-font_glyph(MONO, 0x0E3F, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x0E3F, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(175, 250)
 }
 
 
 // U+2010: Hyphen
-font_glyph(NORMAL, 0x2010, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x2010, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(630, 250, 5)
 }
-font_glyph(SMALL, 0x2010, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x2010, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(630, 270, 2)
 }
-font_glyph(LARGE, 0x2010, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x2010, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(630, 280, 6)
 }
-font_glyph(MONO, 0x2010, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x2010, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(160, 270)
 }
 
 // U+2013: En Dash
 // U+2014: Em Dash
 // U+2015: Horizontal Bar
-font_glyph(NORMAL, 0x2013, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x2013, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(10, 250, 7)
 	font_normal(610, 250, 11)
 	font_normal(650, 250, 9)
 }
-font_glyph(SMALL, 0x2013, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x2013, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(10, 270, 4)
 	font_small(610, 270, 6)
 	font_small(650, 270, 5)
 }
-font_glyph(LARGE, 0x2013, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x2013, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(10, 280, 11)
 	font_large(610, 280, 15)
 	font_large(650, 280, 13)
 }
-font_glyph(MONO, 0x2013, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x2013, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(190, 250)
 	font_mono(145, 270)
 	font_mono(175, 270)
@@ -863,7 +863,7 @@ font_glyph(MONO, 0x2013, "../graphics/fonts/fonts_mono_8bpp.png") {
 // U+201D: Right Double Quotation Mark
 // U+201E: Double Low-9 Quotation Mark
 // U+201F: Double High-Reversed-9 Quotation Mark
-font_glyph(NORMAL, 0x2018, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x2018, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(670, 250, 3)
 	font_normal(30, 250, 3)
 	font_normal(690, 250, 3)
@@ -873,7 +873,7 @@ font_glyph(NORMAL, 0x2018, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_normal(70, 250, 5)
 	font_normal(750, 250, 5)
 }
-font_glyph(SMALL, 0x2018, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x2018, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(670, 270, 1)
 	font_small(30, 270, 1)
 	font_small(690, 270, 1)
@@ -883,7 +883,7 @@ font_glyph(SMALL, 0x2018, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_small(70, 270, 3)
 	font_small(750, 270, 3)
 }
-font_glyph(LARGE, 0x2018, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x2018, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(670, 280, 4)
 	font_large(30, 280, 4)
 	font_large(690, 280, 4)
@@ -893,7 +893,7 @@ font_glyph(LARGE, 0x2018, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_large(70, 280, 8)
 	font_large(750, 280, 8)
 }
-font_glyph(MONO, 0x2018, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x2018, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(190, 270)
 	font_mono(205, 250)
 	font_mono(205, 270)
@@ -906,35 +906,35 @@ font_glyph(MONO, 0x2018, "../graphics/fonts/fonts_mono_8bpp.png") {
 
 
 // U+2026: Horizontal Ellipsis
-font_glyph(NORMAL, 0x2026, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x2026, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(770, 250, 11)
 }
-font_glyph(SMALL, 0x2026, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x2026, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(770, 270, 5)
 }
-font_glyph(LARGE, 0x2026, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x2026, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(770, 280, 15)
 }
-font_glyph(MONO, 0x2026, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x2026, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(265, 270)
 }
 
 
 // U+2039: Single Left-Pointing Angle Quotation Mark
 // U+203A: Single Right-Pointing Angle Quotation Mark
-font_glyph(NORMAL, 0x203A, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x203A, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(10, 310, 4)
 	font_normal(90, 250, 4)
 }
-font_glyph(SMALL, 0x203A, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x203A, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(10, 330, 2)
 	font_small(90, 270, 2)
 }
-font_glyph(LARGE, 0x203A, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x203A, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(10, 340, 5)
 	font_large(90, 280, 5)
 }
-font_glyph(MONO, 0x203A, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x203A, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(250, 250)
 	font_mono(280, 270)
 }
@@ -944,25 +944,25 @@ font_glyph(MONO, 0x203A, "../graphics/fonts/fonts_mono_8bpp.png") {
 // U+20A2: Cruzeiro Sign
 // U+20A3: French Franc Sign
 // U+20A4: Lira Sign
-font_glyph(NORMAL, 0x20A1, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x20A1, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(110, 250, 9)
 	font_normal(130, 250, 9)
 	font_normal(150, 250, 9)
 	font_normal(170, 250, 8)
 }
-font_glyph(SMALL, 0x20A1, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x20A1, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(110, 270, 4)
 	font_small(130, 270, 4)
 	font_small(150, 270, 4)
 	font_small(170, 270, 4)
 }
-font_glyph(LARGE, 0x20A1, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x20A1, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(110, 280, 12)
 	font_large(130, 280, 12)
 	font_large(150, 280, 11)
 	font_large(170, 280, 11)
 }
-font_glyph(MONO, 0x20A1, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x20A1, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(265, 250)
 	font_mono(280, 250)
 	font_mono(295, 250)
@@ -971,16 +971,16 @@ font_glyph(MONO, 0x20A1, "../graphics/fonts/fonts_mono_8bpp.png") {
 
 
 // U+20A6: Naira Sign
-font_glyph(NORMAL, 0x20A6, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x20A6, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(190, 250, 10)
 }
-font_glyph(SMALL, 0x20A6, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x20A6, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(190, 270, 6)
 }
-font_glyph(LARGE, 0x20A6, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x20A6, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(190, 280, 16)
 }
-font_glyph(MONO, 0x20A6, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x20A6, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(325, 250)
 }
 
@@ -993,7 +993,7 @@ font_glyph(MONO, 0x20A6, "../graphics/fonts/fonts_mono_8bpp.png") {
 // U+20AD: Kip Sign
 // U+20AE: Tugrik Sign
 // U+20AF: Drachma Sign
-font_glyph(NORMAL, 0x20A8, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x20A8, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(210, 250, 13)
 	font_normal(230, 250, 14)
 	font_normal(250, 250, 12)
@@ -1003,7 +1003,7 @@ font_glyph(NORMAL, 0x20A8, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_normal(330, 250, 8)
 	font_normal(350, 250, 14)
 }
-font_glyph(SMALL, 0x20A8, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x20A8, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(210, 270, 7)
 	font_small(230, 270, 7)
 	font_small(250, 270, 7)
@@ -1013,7 +1013,7 @@ font_glyph(SMALL, 0x20A8, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_small(330, 270, 3)
 	font_small(350, 270, 7)
 }
-font_glyph(LARGE, 0x20A8, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x20A8, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(210, 280, 16)
 	font_large(230, 280, 18)
 	font_large(250, 280, 13)
@@ -1023,7 +1023,7 @@ font_glyph(LARGE, 0x20A8, "../graphics/fonts/fonts_extra_8bpp.png") {
 	font_large(330, 280, 13)
 	font_large(350, 280, 19)
 }
-font_glyph(MONO, 0x20A8, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x20A8, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(340, 250)
 	font_mono(355, 250)
 	font_mono(370, 250)
@@ -1040,28 +1040,28 @@ font_glyph(MONO, 0x20A8, "../graphics/fonts/fonts_mono_8bpp.png") {
 // U+20B3: Austral Sign
 // U+20B4: Hryvnia Sign
 // U+20B5: Cedi Sign
-font_glyph(NORMAL, 0x20B1, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x20B1, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(370, 250, 10)
 	font_normal(390, 250, 9)
 	font_normal(410, 250, 11)
 	font_normal(430, 250, 9)
 	font_normal(450, 250, 9)
 }
-font_glyph(SMALL, 0x20B1, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x20B1, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(370, 270, 5)
 	font_small(390, 270, 5)
 	font_small(410, 270, 5)
 	font_small(430, 270, 5)
 	font_small(450, 270, 4)
 }
-font_glyph(LARGE, 0x20B1, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x20B1, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(370, 280, 13)
 	font_large(390, 280, 13)
 	font_large(410, 280, 14)
 	font_large(430, 280, 11)
 	font_large(450, 280, 12)
 }
-font_glyph(MONO, 0x20B1, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x20B1, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(460, 250)
 	font_mono(475, 250)
 	font_mono(10, 270)
@@ -1073,22 +1073,22 @@ font_glyph(MONO, 0x20B1, "../graphics/fonts/fonts_mono_8bpp.png") {
 // U+20B7: Spesmilo Sign
 // U+20B8: Tenge Sign
 // U+20B9: Indian Rupee Sign
-font_glyph(NORMAL, 0x20B7, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x20B7, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(470, 250, 12)
 	font_normal(490, 250, 9)
 	font_normal(510, 250, 8)
 }
-font_glyph(SMALL, 0x20B7, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x20B7, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(470, 270, 6)
 	font_small(490, 270, 3)
 	font_small(510, 270, 4)
 }
-font_glyph(LARGE, 0x20B7, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x20B7, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(470, 280, 12)
 	font_large(490, 280, 13)
 	font_large(510, 280, 11)
 }
-font_glyph(MONO, 0x20B7, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x20B7, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(55, 270)
 	font_mono(70, 270)
 	font_mono(85, 270)
@@ -1097,69 +1097,69 @@ font_glyph(MONO, 0x20B7, "../graphics/fonts/fonts_mono_8bpp.png") {
 
 // U+2116: Numero Sign
 // U+2117: Sound Recording Copyright
-font_glyph(NORMAL, 0x2116, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x2116, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(530, 250, 14)
 	font_normal(30, 310, 10)
 }
-font_glyph(SMALL, 0x2116, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x2116, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(530, 270, 8)
 	font_small(30, 330, 6)
 }
-font_glyph(LARGE, 0x2116, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x2116, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(530, 280, 21)
 	font_large(30, 340, 16)
 }
-font_glyph(MONO, 0x2116, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x2116, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(100, 270)
 	font_mono(295, 270)
 }
 
 
 // U+2122: Trade Mark Sign
-font_glyph(NORMAL, 0x2122, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x2122, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(570, 250, 13)
 }
-font_glyph(SMALL, 0x2122, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x2122, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(570, 270, 9)
 }
-font_glyph(LARGE, 0x2122, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x2122, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(570, 280, 19)
 }
-font_glyph(MONO, 0x2122, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x2122, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(115, 270)
 }
 
 
 // U+2212: Minus Sign
-font_glyph(NORMAL, 0x2212, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x2212, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(50, 310, 7)
 }
-font_glyph(SMALL, 0x2212, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x2212, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(50, 330, 3)
 }
-font_glyph(LARGE, 0x2212, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x2212, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(50, 340, 11)
 }
-font_glyph(MONO, 0x2212, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x2212, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(310, 270)
 }
 
 
 // U+27E8: Mathematical Left Angle Bracket
 // U+27E9: Mathematical Right Angle Bracket
-font_glyph(NORMAL, 0x27E8, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(NORMAL, 0x27E8, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_normal(70, 310, 5)
 	font_normal(90, 310, 5)
 }
-font_glyph(SMALL, 0x27E8, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(SMALL, 0x27E8, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_small(70, 330, 3)
 	font_small(90, 330, 3)
 }
-font_glyph(LARGE, 0x27E8, "../graphics/fonts/fonts_extra_8bpp.png") {
+font_glyph(LARGE, 0x27E8, "../graphics/fonts/1/fonts_extra_8bpp.png") {
 	font_large(70, 340, 6)
 	font_large(90, 340, 6)
 }
-font_glyph(MONO, 0x27E8, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x27E8, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(325, 270)
 	font_mono(340, 270)
 }
@@ -1169,7 +1169,7 @@ font_glyph(MONO, 0x27E8, "../graphics/fonts/fonts_mono_8bpp.png") {
 /* Monospaced characters (Liberation Mono) */
 /* ======================================= */
 
-font_glyph(MONO, 0x0020, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x0020, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(10, 30)
 	font_mono(25, 30)
 	font_mono(40, 30)
@@ -1268,7 +1268,7 @@ font_glyph(MONO, 0x0020, "../graphics/fonts/fonts_mono_8bpp.png") {
 	font_mono(475, 70)
 }
 
-font_glyph(MONO, 0x0080, "../graphics/fonts/fonts_mono_8bpp.png") {
+font_glyph(MONO, 0x0080, "../graphics/fonts/1/fonts_mono_8bpp.png") {
 	font_mono(10, 90)
 	font_mono(25, 90)
 	font_mono(40, 90)
