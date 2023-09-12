@@ -1,4 +1,5 @@
 //climate-sensitive rivers
+//Includes parameter support for different grass appearance in different climates
 //water (32bpp gray sprites with 8bpp animated mask for slope shading)
 spriteset (waterfeature_river_waterslopes, "../graphics/terrain/64/universal_rivertiles_8bpp.png") { template_waterslopes(80, 0, 1) }
 alternative_sprites(waterfeature_river_waterslopes, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/universal_rivertiles_cbt32bpp.png", "../graphics/terrain/64/universal_rivertiles_8bpp.png") { template_waterslopes(80, 0, 1) }
@@ -171,32 +172,43 @@ spriteset (nogrid_waterfeature_river_toyland_shores, "../graphics/infrastructure
 #32 #ez alternative_sprites(nogrid_waterfeature_river_toyland_shores, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/river_toyland_grass_shores_rm32bpp.png", "../graphics/infrastructure/128/pygen/river_toyland_grass_shores_nogridline_8bpp.png") { template_waterfeature_slopes_coasts(0, 0, 2) }
 #32 #ez alternative_sprites(nogrid_waterfeature_river_toyland_shores, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/river_toyland_grass_shores_rm32bpp.png", "../graphics/infrastructure/256/pygen/river_toyland_grass_shores_nogridline_8bpp.png") { template_waterfeature_slopes_coasts(0, 0, 4) }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_river_temperate_elevation, tile_height) {
-	0: waterfeature_river_temperate_shores;
-	waterfeature_river_temperate;
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_temperate_tiletype, terrain_type) {
+	TILETYPE_NORMAL: waterfeature_river_temperate;
+	TILETYPE_DESERT: waterfeature_river_tropical_desert;
+	TILETYPE_SNOW: waterfeature_river_arctic_snow;
+	waterfeature_river_arctic;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_river_arctic_snowline, terrain_type) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_temperate_elevation, tile_height) {
+	0: waterfeature_river_temperate_shores;
+	switch_waterfeature_river_temperate_tiletype;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_arctic_tiletype, terrain_type) {
 	TILETYPE_NORMAL: waterfeature_river_arctic;
+	TILETYPE_DESERT: waterfeature_river_tropical_desert;
 	TILETYPE_SNOW: waterfeature_river_arctic_snow;
 	waterfeature_river_arctic;
 }
 
 switch (FEAT_CANALS, SELF, switch_waterfeature_river_arctic_elevation, tile_height) {
 	0: waterfeature_river_arctic_shores;
-	switch_waterfeature_river_arctic_snowline;
+	switch_waterfeature_river_arctic_tiletype;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_river_tropical_desert, terrain_type) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_tropical_tiletype, terrain_type) {
 	TILETYPE_NORMAL: waterfeature_river_tropical;
 	TILETYPE_DESERT: waterfeature_river_tropical_desert;
+	TILETYPE_SNOW: waterfeature_river_arctic_snow;
 	waterfeature_river_tropical;
 }
 
 switch (FEAT_CANALS, SELF, switch_waterfeature_river_tropical_elevation, tile_height) {
 	0: waterfeature_river_tropical_shores;
-	switch_waterfeature_river_tropical_desert;
+	switch_waterfeature_river_tropical_tiletype;
 }
+
+//[Terrain tile type-specific toyland ground sprites not available]
 
 switch (FEAT_CANALS, SELF, switch_waterfeature_river_toyland_elevation, tile_height) {
 	0: waterfeature_river_toyland_shores;
@@ -216,32 +228,43 @@ switch (FEAT_CANALS, SELF, switch_waterfeature_river_climate, [
 	switch_waterfeature_river_temperate_elevation;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_river_temperate_elevation_nogridline, tile_height) {
-	0: nogrid_waterfeature_river_temperate_shores;
-	nogrid_waterfeature_river_temperate;
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_temperate_tiletype_nogridline, terrain_type) {
+	TILETYPE_NORMAL: nogrid_waterfeature_river_temperate;
+	TILETYPE_DESERT: nogrid_waterfeature_river_tropical_desert;
+	TILETYPE_SNOW: nogrid_waterfeature_river_arctic_snow;
+	nogrid_waterfeature_river_arctic;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_river_arctic_snowline_nogridline, terrain_type) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_temperate_elevation_nogridline, tile_height) {
+	0: nogrid_waterfeature_river_temperate_shores;
+	switch_waterfeature_river_temperate_tiletype_nogridline;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_arctic_tiletype_nogridline, terrain_type) {
 	TILETYPE_NORMAL: nogrid_waterfeature_river_arctic;
+	TILETYPE_DESERT: nogrid_waterfeature_river_tropical_desert;
 	TILETYPE_SNOW: nogrid_waterfeature_river_arctic_snow;
 	nogrid_waterfeature_river_arctic;
 }
 
 switch (FEAT_CANALS, SELF, switch_waterfeature_river_arctic_elevation_nogridline, tile_height) {
 	0: nogrid_waterfeature_river_arctic_shores;
-	switch_waterfeature_river_arctic_snowline_nogridline;
+	switch_waterfeature_river_arctic_tiletype_nogridline;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_river_tropical_desert_nogridline, terrain_type) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_river_tropical_tiletype_nogridline, terrain_type) {
 	TILETYPE_NORMAL: nogrid_waterfeature_river_tropical;
 	TILETYPE_DESERT: nogrid_waterfeature_river_tropical_desert;
+	TILETYPE_SNOW: nogrid_waterfeature_river_arctic_snow;
 	nogrid_waterfeature_river_tropical;
 }
 
 switch (FEAT_CANALS, SELF, switch_waterfeature_river_tropical_elevation_nogridline, tile_height) {
 	0: nogrid_waterfeature_river_tropical_shores;
-	switch_waterfeature_river_tropical_desert_nogridline;
+	switch_waterfeature_river_tropical_tiletype_nogridline;
 }
+
+//[Terrain tile type-specific toyland ground sprites not available]
 
 switch (FEAT_CANALS, SELF, switch_waterfeature_river_toyland_elevation_nogridline, tile_height) {
 	0: nogrid_waterfeature_river_toyland_shores;
