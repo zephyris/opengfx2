@@ -236,6 +236,7 @@ template template_font_normal_base5(z) {
 }
 
 base_graphics spr2(   2, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base1(1) } //Normal font part 1
+alternative_sprites (spr2, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/fonts/2/fonts_8bpp.png") { template_font_normal_base1(2) }
 
 template template_spr130(z) {
     template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, z) // window: up
@@ -244,6 +245,7 @@ base_graphics spr130( 130, "../graphics/icons/1/icons_8px_8bpp.png") { template_
 alternative_sprites (spr130, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr130(2) }
 
 base_graphics spr131( 131, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base2(1) } //Normal font part 2
+alternative_sprites (spr131, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/fonts/2/fonts_8bpp.png") { template_font_normal_base2(2) }
 
 template template_spr140(z) {
     template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, z) // window: down
@@ -251,7 +253,8 @@ template template_spr140(z) {
 base_graphics spr140( 140, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr140(1) }
 alternative_sprites (spr140, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr140(2) }
 
-base_graphics spr141( 141, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base3(1) } //NOrmal font part 3
+base_graphics spr141( 141, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base3(1) } //Normal font part 3
+alternative_sprites (spr141, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/fonts/2/fonts_8bpp.png") { template_font_normal_base3(2) }
 
 template template_spr142(z) {
     template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 0, z) // window: tick
@@ -266,6 +269,7 @@ base_graphics spr143( 143, "../graphics/icons/1/icons_8px_8bpp.png") { template_
 alternative_sprites (spr143, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr143(2) }
 
 base_graphics spr144( 144, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base4(1) } //Normal font part 4
+alternative_sprites (spr144, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/fonts/2/fonts_8bpp.png") { template_font_normal_base4(2) }
 
 template template_spr145(z) {
     template_sprite_matrix_nocrop(8, 8, 1, 1, 6, 0, z) // window: right
@@ -274,6 +278,7 @@ base_graphics spr145( 145, "../graphics/icons/1/icons_8px_8bpp.png") { template_
 alternative_sprites (spr145, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr145(2) }
 
 base_graphics spr146( 146, "../graphics/fonts/1/fonts_8bpp.png") { template_font_normal_base5(1) } //Normal font part 5
+alternative_sprites (spr146, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/fonts/2/fonts_8bpp.png") { template_font_normal_base5(2) }
 
 //226-449 small font
 template template_font_small_base(z) {
@@ -503,6 +508,7 @@ template template_font_small_base(z) {
     [ 650*z,  270*z,   3*z,   8*z,   0*z,   0*z]
 }
 base_graphics spr226( 226, "../graphics/fonts/1/fonts_8bpp.png") { template_font_small_base(1) }
+alternative_sprites (spr226, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/fonts/2/fonts_8bpp.png") { template_font_small_base(2) }
 
 //450-673 newspaper font
 template template_font_newspaper_base(z) {
