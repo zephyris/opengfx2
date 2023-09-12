@@ -40,37 +40,37 @@ spriteset (waterfeature_canal_temperate, "../graphics/infrastructure/64/pygen/ca
 spriteset (waterfeature_canal_arctic, "../graphics/infrastructure/64/pygen/canal_arctic_grass_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(waterfeature_canal_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_arctic_grass_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(waterfeature_canal_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_arctic_grass_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_arctic_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_arctic_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_arctic_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(waterfeature_canal_arctic, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_arctic_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(waterfeature_canal_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_arctic_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(waterfeature_canal_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_arctic_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (waterfeature_canal_arctic_snow, "../graphics/infrastructure/64/pygen/canal_arctic_snow_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(waterfeature_canal_arctic_snow, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_arctic_snow_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(waterfeature_canal_arctic_snow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_arctic_snow_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_arctic_snow_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_arctic_snow_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_arctic_snow_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(waterfeature_canal_arctic_snow, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_arctic_snow_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(waterfeature_canal_arctic_snow, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_arctic_snow_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(waterfeature_canal_arctic_snow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_arctic_snow_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (waterfeature_canal_tropical, "../graphics/infrastructure/64/pygen/canal_tropical_grass_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(waterfeature_canal_tropical, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_tropical_grass_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(waterfeature_canal_tropical, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_tropical_grass_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_tropical_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_tropical_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_tropical_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(waterfeature_canal_tropical, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_tropical_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(waterfeature_canal_tropical, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_tropical_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(waterfeature_canal_tropical, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_tropical_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (waterfeature_canal_tropical_desert, "../graphics/infrastructure/64/pygen/canal_tropical_desert_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_tropical_desert_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_tropical_desert_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/ccanal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/ccanal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/ccanal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/ccanal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/ccanal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/ccanal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (waterfeature_canal_toyland, "../graphics/infrastructure/64/pygen/canal_toyland_grass_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_toyland_grass_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_toyland_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_toyland_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_toyland_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_toyland_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 //banks
 spriteset (nogrid_waterfeature_canal_temperate, "../graphics/infrastructure/64/pygen/canal_temperate_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
@@ -83,47 +83,56 @@ spriteset (nogrid_waterfeature_canal_temperate, "../graphics/infrastructure/64/p
 spriteset (nogrid_waterfeature_canal_arctic, "../graphics/infrastructure/64/pygen/canal_arctic_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(nogrid_waterfeature_canal_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_arctic_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(nogrid_waterfeature_canal_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_arctic_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_arctic_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_arctic_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_arctic_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(nogrid_waterfeature_canal_arctic, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_arctic_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_arctic, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_arctic_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_arctic_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (nogrid_waterfeature_canal_arctic_snow, "../graphics/infrastructure/64/pygen/canal_arctic_snow_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(nogrid_waterfeature_canal_arctic_snow, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_arctic_snow_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(nogrid_waterfeature_canal_arctic_snow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_arctic_snow_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_arctic_snow_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_arctic_snow_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_arctic_snow_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(nogrid_waterfeature_canal_arctic_snow, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_arctic_snow_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_arctic_snow, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_arctic_snow_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_arctic_snow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_arctic_snow_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (nogrid_waterfeature_canal_tropical, "../graphics/infrastructure/64/pygen/canal_tropical_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(nogrid_waterfeature_canal_tropical, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_tropical_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(nogrid_waterfeature_canal_tropical, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_tropical_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_tropical_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_tropical_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_tropical_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(nogrid_waterfeature_canal_tropical, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_tropical_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_tropical, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_tropical_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_tropical, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_tropical_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (nogrid_waterfeature_canal_tropical_desert, "../graphics/infrastructure/64/pygen/canal_tropical_desert_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_tropical_desert_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_tropical_desert_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/ccanal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/ccanal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/ccanal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/ccanal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/ccanal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/ccanal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (nogrid_waterfeature_canal_toyland, "../graphics/infrastructure/64/pygen/canal_toyland_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(nogrid_waterfeature_canal_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(nogrid_waterfeature_canal_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_toyland_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_toyland_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_toyland_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(nogrid_waterfeature_canal_toyland, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_toyland_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_toyland_grass_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_canal_arctic_snowline, terrain_type) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_temperate_tiletype, terrain_type) {
+	TILETYPE_NORMAL: waterfeature_canal_temperate;
+	TILETYPE_DESERT: waterfeature_canal_tropical_desert;
+	TILETYPE_SNOW: waterfeature_canal_arctic_snow;
+	waterfeature_canal_temperate;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_arctic_tiletype, terrain_type) {
 	TILETYPE_NORMAL: waterfeature_canal_arctic;
+	TILETYPE_DESERT: waterfeature_canal_tropical_desert;
 	TILETYPE_SNOW: waterfeature_canal_arctic_snow;
 	waterfeature_canal_arctic;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_canal_tropical_desert, terrain_type) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_tropical_tiletype, terrain_type) {
 	TILETYPE_NORMAL: waterfeature_canal_tropical;
 	TILETYPE_DESERT: waterfeature_canal_tropical_desert;
+	TILETYPE_SNOW: waterfeature_canal_arctic_snow;
 	waterfeature_canal_tropical;
 }
 
@@ -133,22 +142,31 @@ switch (FEAT_CANALS, SELF, switch_waterfeature_canal_climate, [
 	3 * ((climate==CLIMATE_TEMPERATE && param_grass_temperate==2) || (climate==CLIMATE_ARCTIC && param_grass_arctic==2) || (climate==CLIMATE_TROPICAL && param_grass_tropical==2) || (climate==CLIMATE_TOYLAND && param_grass_toyland==2)) +
 	4 * ((climate==CLIMATE_TEMPERATE && param_grass_temperate==3) || (climate==CLIMATE_ARCTIC && param_grass_arctic==3) || (climate==CLIMATE_TROPICAL && param_grass_tropical==3) || (climate==CLIMATE_TOYLAND && param_grass_toyland==3))
 ]) {
-	1: waterfeature_canal_temperate;
-	2: switch_waterfeature_canal_arctic_snowline;
-	3: switch_waterfeature_canal_tropical_desert;
-	4: waterfeature_canal_toyland;
+	1: switch_waterfeature_canal_temperate_tiletype;
+	2: switch_waterfeature_canal_arctic_tiletype;
+	3: switch_waterfeature_canal_tropical_tiletype;
+	4: waterfeature_canal_toyland; //[no terrain tile type-specific sprites available]
 	waterfeature_canal_temperate;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_canal_arctic_snowline_nogridline, terrain_type) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_temperate_tiletype_nogridline, terrain_type) {
+	TILETYPE_NORMAL: nogrid_waterfeature_canal_temperate;
+	TILETYPE_DESERT: nogrid_waterfeature_canal_tropical_desert;
+	TILETYPE_SNOW: nogrid_waterfeature_canal_arctic_snow;
+	nogrid_waterfeature_canal_temperate;
+}
+
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_arctic_tiletype_nogridline, terrain_type) {
 	TILETYPE_NORMAL: nogrid_waterfeature_canal_arctic;
+	TILETYPE_DESERT: nogrid_waterfeature_canal_tropical_desert;
 	TILETYPE_SNOW: nogrid_waterfeature_canal_arctic_snow;
 	nogrid_waterfeature_canal_arctic;
 }
 
-switch (FEAT_CANALS, SELF, switch_waterfeature_canal_tropical_desert_nogridline, terrain_type) {
+switch (FEAT_CANALS, SELF, switch_waterfeature_canal_tropical_tiletype_nogridline, terrain_type) {
 	TILETYPE_NORMAL: nogrid_waterfeature_canal_tropical;
 	TILETYPE_DESERT: nogrid_waterfeature_canal_tropical_desert;
+	TILETYPE_SNOW: nogrid_waterfeature_canal_arctic_snow;
 	waterfeature_canal_tropical;
 }
 
@@ -158,10 +176,10 @@ switch (FEAT_CANALS, SELF, switch_waterfeature_canal_climate_nogridline, [
 	3 * ((climate==CLIMATE_TEMPERATE && param_grass_temperate==2) || (climate==CLIMATE_ARCTIC && param_grass_arctic==2) || (climate==CLIMATE_TROPICAL && param_grass_tropical==2) || (climate==CLIMATE_TOYLAND && param_grass_toyland==2)) +
 	4 * ((climate==CLIMATE_TEMPERATE && param_grass_temperate==3) || (climate==CLIMATE_ARCTIC && param_grass_arctic==3) || (climate==CLIMATE_TROPICAL && param_grass_tropical==3) || (climate==CLIMATE_TOYLAND && param_grass_toyland==3))
 ]) {
-	1: nogrid_waterfeature_canal_temperate;
-	2: switch_waterfeature_canal_arctic_snowline_nogridline;
-	3: switch_waterfeature_canal_tropical_desert_nogridline;
-	4: nogrid_waterfeature_canal_toyland;
+	1: switch_waterfeature_canal_temperate_tiletype_nogridline;
+	2: switch_waterfeature_canal_arctic_tiletype_nogridline;
+	3: switch_waterfeature_canal_tropical_tiletype_nogridline;
+	4: nogrid_waterfeature_canal_toyland; //[no terrain tile type-specific sprites available]
 	nogrid_waterfeature_canal_temperate;
 }
 
