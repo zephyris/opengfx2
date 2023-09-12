@@ -171,7 +171,7 @@ template template_spr4477(z) {
 	template_house_1x1(130,  0, z, 95)
 }
 base_graphics spr4477(4477, "../graphics/towns/arctic/64/pygen/shopsandoffices_8bpp.png") { template_spr4477(1) }
-#32 alternative_sprites(spr4477, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/arctic/64/pygen/shopsandoffices_bt32bpp.png") { template_spr4477(1) }
+#32 alternative_sprites(spr4477, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/arctic/64/pygen/shopsandoffices_rm32bpp.png", "../graphics/towns/arctic/64/pygen/shopsandoffices_8bpp.png") { template_spr4477(1) }
 
 //4480-4484 tall office block
 base_graphics spr4480(4480, "../graphics/towns/arctic/64/pygen/tallofficeblock_base_8bpp.png") { template_house_1x1(195,124, 1, 123) }
