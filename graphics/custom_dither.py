@@ -225,7 +225,7 @@ def make_output_parallel(image, palmask, factor):
   image_8bpp = Image.new("P", (image.size), 255)
   image_8bpp.putpalette(palimage.getpalette())
   image_bt32bpp = Image.new("RGBA", (image.size), (255, 255, 255, 255))
-  image_rm32bpp = Image.new("RGB", (image.size), (255, 255, 255))
+  image_rm32bpp = Image.new("RGBA", (image.size), (255, 255, 255))
   for i in range(len(results)):
     image_8bpp.paste(results[i][0], (results[i][3], results[i][4]))
     image_bt32bpp.paste(results[i][1], (results[i][3], results[i][4]))
@@ -293,7 +293,10 @@ def remainder_32bpp(src8bit, src32bit):
       pr8, pg8, pb8, pa8 = src8bit.getpixel((x, y))
       pr32, pg32, pb32, pa32 = src32bit.getpixel((x, y))
       deltav = v(pr32, pg32, pb32) - v(pr8, pg8, pb8) + 128
-      out32bit.putpixel((x, y), (deltav, deltav, deltav, pa32))
+      alpha = 255
+      if pr8 == 0 and pg8 == 0 and pb8 == 255:
+        alpha = 0
+      out32bit.putpixel((x, y), (deltav, deltav, deltav, alpha))
   return out32bit
 
 suffix = "_32bpp.png";
