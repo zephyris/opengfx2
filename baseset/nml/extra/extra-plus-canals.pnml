@@ -61,9 +61,9 @@ spriteset (waterfeature_canal_tropical, "../graphics/infrastructure/64/pygen/can
 spriteset (waterfeature_canal_tropical_desert, "../graphics/infrastructure/64/pygen/canal_tropical_desert_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_tropical_desert_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_tropical_desert_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/ccanal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/ccanal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/ccanal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_tropical_desert_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (waterfeature_canal_toyland, "../graphics/infrastructure/64/pygen/canal_toyland_grass_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(waterfeature_canal_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
@@ -104,9 +104,9 @@ spriteset (nogrid_waterfeature_canal_tropical, "../graphics/infrastructure/64/py
 spriteset (nogrid_waterfeature_canal_tropical_desert, "../graphics/infrastructure/64/pygen/canal_tropical_desert_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_tropical_desert_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_tropical_desert_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
-#32 alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/ccanal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/ccanal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
-#32 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/ccanal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
+#32 alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
+#32 #ez alternative_sprites(nogrid_waterfeature_canal_tropical_desert, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_tropical_desert_nogridline_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 spriteset (nogrid_waterfeature_canal_toyland, "../graphics/infrastructure/64/pygen/canal_toyland_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 1) }
 #ez alternative_sprites(nogrid_waterfeature_canal_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_toyland_grass_nogridline_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
