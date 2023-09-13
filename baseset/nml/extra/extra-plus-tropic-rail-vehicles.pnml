@@ -11,7 +11,7 @@ replace tropical_spr2773(2773, "../graphics/vehicles/64/rail_wagons_tropical_8bp
 replace tropical_spr2777(2777, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 11, 1) } // temperate rail valuables wagon (full + empty)
 replace tropical_spr2785(2785, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(1, 7, 1) } // temperate rail grain wagon (full)
 replace tropical_spr2789(2789, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(1, 8, 1) } // temperate rail wood wagon (full)
-replace tropical_spr2805(2805, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(1, 10, 1) } // tropical rail copper ore wagon (full)
+replace tropical_spr2805(2805, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(2, 10, 1) } // tropical rail copper ore wagon (full)
 
 // monolev
 replace tropical_spr2841(2841, "../graphics/vehicles/64/monolev_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 3, 1) } // monorail oil (empty + full)
