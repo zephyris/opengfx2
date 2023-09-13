@@ -41,7 +41,9 @@ mask_regions.py pygen/nonetunnels nonetunnels_regionmask.png 1
 mask_regions.py pygen/nonetunnels_snow nonetunnels_regionmask.png 1
 # overlay tunnels onto terrain sprites
 infrastructure_tunnels_infrastructureoverlay.py 1 road
+infrastructure_tunnels_infrastructureoverlay.py 1 road_toyland
 infrastructure_tunnels_infrastructureoverlay.py 1 rail
+infrastructure_tunnels_infrastructureoverlay.py 1 rail_toyland
 infrastructure_tunnels_infrastructureoverlay.py 1 terrain
 # handle old airport
 building_base_flatten.py oldairport_multitile 1

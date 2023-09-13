@@ -22,10 +22,22 @@ if mode == "rail":
     "monorail": "monorail",
     "maglev": "maglev"
   }
+elif mode == "rail_toyland":
+  # Infrastructure sprites to use
+  infrastructure_list = {
+    "rail": "rail_toyland",
+    "monorail": "monorail_toyland",
+    "maglev": "maglev_toyland"
+  }
 elif mode == "road":
   # Infrastructure sprites to use
   infrastructure_list = {
     "road": "road"
+  }
+elif mode == "road_toyland":
+  # Infrastructure sprites to use
+  infrastructure_list = {
+    "road": "road_toyland"
   }
 elif mode == "terrain":
   # Infrastructure sprites to use
@@ -41,21 +53,41 @@ terrain_tile_positions = [
 ]
 # Terrain extra offset
 terrain_tile_voffs = [0, 0, -7, -7]
-# Terrain list to process
-terrain_list = {
-  "arctic_grass": os.path.join("pygen", "arctic_groundtiles_gridline_32bpp.png"),
-  "arctic_snow": os.path.join("pygen", "arctic_groundtiles_snow_gridline_32bpp.png"),
-  "tropical_grass": os.path.join("pygen", "tropical_groundtiles_gridline_32bpp.png"),
-  "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
-  "temperate_grass": os.path.join("pygen", "temperate_groundtiles_gridline_32bpp.png"),
-  "toyland_grass": os.path.join("pygen", "toyland_groundtiles_gridline_32bpp.png"),
-  "arctic_grass_nogridline": os.path.join("pygen", "arctic_groundtiles_nogridline_32bpp.png"),
-  "arctic_snow_nogridline": os.path.join("pygen", "arctic_groundtiles_snow_nogridline_32bpp.png"),
-  "tropical_grass_nogridline": os.path.join("pygen", "tropical_groundtiles_nogridline_32bpp.png"),
-  "tropical_desert_nogridline": os.path.join("pygen", "tropical_groundtiles_desert_nogridline_32bpp.png"),
-  "temperate_grass_nogridline": os.path.join("pygen", "temperate_groundtiles_nogridline_32bpp.png"),
-  "toyland_grass_nogridline": os.path.join("pygen", "toyland_groundtiles_nogridline_32bpp.png")
-}
+if mode == "rail_toyland" or mode == "road_toyland":
+  terrain_list = {
+    "toyland_grass": os.path.join("pygen", "toyland_groundtiles_gridline_32bpp.png"),
+    "toyland_grass_nogridline": os.path.join("pygen", "toyland_groundtiles_nogridline_32bpp.png")
+  }
+elif mode == "rail" or mode == "road":
+  # Terrain list to process
+  terrain_list = {
+    "arctic_grass": os.path.join("pygen", "arctic_groundtiles_gridline_32bpp.png"),
+    "arctic_snow": os.path.join("pygen", "arctic_groundtiles_snow_gridline_32bpp.png"),
+    "tropical_grass": os.path.join("pygen", "tropical_groundtiles_gridline_32bpp.png"),
+    "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
+    "temperate_grass": os.path.join("pygen", "temperate_groundtiles_gridline_32bpp.png"),
+    "arctic_grass_nogridline": os.path.join("pygen", "arctic_groundtiles_nogridline_32bpp.png"),
+    "arctic_snow_nogridline": os.path.join("pygen", "arctic_groundtiles_snow_nogridline_32bpp.png"),
+    "tropical_grass_nogridline": os.path.join("pygen", "tropical_groundtiles_nogridline_32bpp.png"),
+    "tropical_desert_nogridline": os.path.join("pygen", "tropical_groundtiles_desert_nogridline_32bpp.png"),
+    "temperate_grass_nogridline": os.path.join("pygen", "temperate_groundtiles_nogridline_32bpp.png")
+  }
+else:
+  # Terrain list to process
+  terrain_list = {
+    "arctic_grass": os.path.join("pygen", "arctic_groundtiles_gridline_32bpp.png"),
+    "arctic_snow": os.path.join("pygen", "arctic_groundtiles_snow_gridline_32bpp.png"),
+    "tropical_grass": os.path.join("pygen", "tropical_groundtiles_gridline_32bpp.png"),
+    "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
+    "temperate_grass": os.path.join("pygen", "temperate_groundtiles_gridline_32bpp.png"),
+    "toyland_grass": os.path.join("pygen", "toyland_groundtiles_gridline_32bpp.png"),
+    "arctic_grass_nogridline": os.path.join("pygen", "arctic_groundtiles_nogridline_32bpp.png"),
+    "arctic_snow_nogridline": os.path.join("pygen", "arctic_groundtiles_snow_nogridline_32bpp.png"),
+    "tropical_grass_nogridline": os.path.join("pygen", "tropical_groundtiles_nogridline_32bpp.png"),
+    "tropical_desert_nogridline": os.path.join("pygen", "tropical_groundtiles_desert_nogridline_32bpp.png"),
+    "temperate_grass_nogridline": os.path.join("pygen", "temperate_groundtiles_nogridline_32bpp.png"),
+    "toyland_grass_nogridline": os.path.join("pygen", "toyland_groundtiles_nogridline_32bpp.png")
+  }
 # Infrastructure sprites to use
 if mode == "terrain":
   infrastructure_tile_positions = [
@@ -88,11 +120,11 @@ for terrain_key in terrain_list:
     else:
       infrastructure_image_path = os.path.join("..", "..", "..", "infrastructure", str(tile_size), infrastructure_list[infrastructure_key]+"_overlayalpha.png")
     if terrain_key == "arctic_snow":
-      name_overlay = os.path.join("pygen", infrastructure_list[infrastructure_key]+"tunnels_snow_regions_32bpp.png")
+      name_overlay = os.path.join("pygen", infrastructure_key+"tunnels_snow_regions_32bpp.png")
     else:
-      name_overlay = os.path.join("pygen", infrastructure_list[infrastructure_key]+"tunnels_regions_32bpp.png")
+      name_overlay = os.path.join("pygen", infrastructure_key+"tunnels_regions_32bpp.png")
     name_overlayshading = infrastructure_list[infrastructure_key]+"tunnels_regions_overlayshading.png"
-    output_normal_path = os.path.join("pygen", "tunnels_"+infrastructure_list[infrastructure_key]+"_"+terrain_key+"_32bpp.png")
+    output_normal_path = os.path.join("pygen", "tunnels_"+infrastructure_key+"_"+terrain_key+"_32bpp.png")
     # Check if update needed
     if check_update_needed([terrain_image_path, infrastructure_image_path, name_overlay, name_overlayshading], output_normal_path):
       # Make image containing arranged infrastructure on and slope backgrounds
