@@ -34,7 +34,11 @@ encode ogfx2t_toyland $alternates
 
 python3 baseset_generate_obg.py $alternates
 
-tar -cf opengfx2_${alternates}.tar *_${alternates}.grf *_${alternates}.obg
+cp ../README.md readme.txt
+cp ../LICENSE license.txt
+cp ../CHANGELOG.md changelog.txt
+tar -cf opengfx2_${alternates}.tar *_${alternates}.grf *_${alternates}.obg readme.txt license.txt changelog.txt
+rm readme.txt license.txt changelog.txt
 
 if [ ! -z "$2" ]; then
   echo "Copying to install directory"
