@@ -173,12 +173,12 @@ if (param_gridlines==0 || param_gridlines==2) {
         if (climate==CLIMATE_TROPICAL) {
             // Terrain
             //4512-4530 partial desert 2/4
-            //replace grid_temperate_spr4512(4512, "../graphics/terrain/64/pygen/temperate_groundtiles_deserttransition_8bpp.png") { template_groundtiles(0, 0, 1) }
-            //#ez alternative_sprites(grid_temperate_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_deserttransition_8bpp.png") { template_groundtiles(0, 0, 2) }
-            //#ez alternative_sprites(grid_temperate_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_deserttransition_8bpp.png") { template_groundtiles(0, 0, 4) }
-            //#32 alternative_sprites(grid_temperate_spr4512, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_deserttransition_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-            //#32 #ez alternative_sprites(grid_temperate_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_deserttransition_bt32bpp.png") { template_groundtiles(0, 0, 2) }
-            //#32 #ez alternative_sprites(grid_temperate_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_deserttransition_bt32bpp.png") { template_groundtiles(0, 0, 4) }
+            replace grid_temperate_spr4512d(4512, "../graphics/terrain/64/pygen/temperate_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
+            #ez alternative_sprites(grid_temperate_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+            #ez alternative_sprites(grid_temperate_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+            #32 alternative_sprites(grid_temperate_spr4512d, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+            #32 #ez alternative_sprites(grid_temperate_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+            #32 #ez alternative_sprites(grid_temperate_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
         }
     }
 
@@ -342,12 +342,12 @@ if (param_gridlines==0 || param_gridlines==2) {
         if (climate==CLIMATE_TROPICAL) {
             // Terrain
             //4512-4530 partial desert 2/4
-            //replace grid_arctic_spr4512(4512, "../graphics/terrain/64/pygen/arctic_groundtiles_deserttransition_8bpp.png") { template_groundtiles(0, 0, 1) }
-            //#ez alternative_sprites(grid_arctic_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_deserttransition_8bpp.png") { template_groundtiles(0, 0, 2) }
-            //#ez alternative_sprites(grid_arctic_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_deserttransition_8bpp.png") { template_groundtiles(0, 0, 4) }
-            //#32 alternative_sprites(grid_arctic_spr4512, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_deserttransition_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-            //#32 #ez alternative_sprites(grid_arctic_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_deserttransition_bt32bpp.png") { template_groundtiles(0, 0, 2) }
-            //#32 #ez alternative_sprites(grid_arctic_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_deserttransition_bt32bpp.png") { template_groundtiles(0, 0, 4) }
+            replace grid_arctic_spr4512d(4512, "../graphics/terrain/64/pygen/arctic_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
+            #ez alternative_sprites(grid_arctic_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+            #ez alternative_sprites(grid_arctic_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+            #32 alternative_sprites(grid_arctic_spr4512d, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+            #32 #ez alternative_sprites(grid_arctic_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+            #32 #ez alternative_sprites(grid_arctic_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
         }
     }
 
@@ -511,12 +511,12 @@ if (param_gridlines==0 || param_gridlines==2) {
         if (climate==CLIMATE_TROPICAL) {
             // Terrain
             //4512-4530 partial desert 2/4
-            //replace grid_tropical_spr4512(4512, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_8bpp.png") { template_groundtiles(0, 0, 1) }
-            //#ez alternative_sprites(grid_tropical_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_8bpp.png") { template_groundtiles(0, 0, 2) }
-            //#ez alternative_sprites(grid_tropical_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_8bpp.png") { template_groundtiles(0, 0, 4) }
-            //#32 alternative_sprites(grid_tropical_spr4512, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-            //#32 #ez alternative_sprites(grid_tropical_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_bt32bpp.png") { template_groundtiles(0, 0, 2) }
-            //#32 #ez alternative_sprites(grid_tropical_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_bt32bpp.png") { template_groundtiles(0, 0, 4) }
+            replace grid_tropical_spr4512d(4512, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
+            #ez alternative_sprites(grid_tropical_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+            #ez alternative_sprites(grid_tropical_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+            #32 alternative_sprites(grid_tropical_spr4512d, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+            #32 #ez alternative_sprites(grid_tropical_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+            #32 #ez alternative_sprites(grid_tropical_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
         }
     }
 
@@ -793,12 +793,12 @@ if (param_gridlines==1) {
         if (climate==CLIMATE_TROPICAL) {
             // Terrain
             //4512-4530 partial desert 2/4
-            //replace nogrid_temperate_spr4512(4512, "../graphics/terrain/64/pygen/temperate_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-            //#ez alternative_sprites(nogrid_temperate_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
-            //#ez alternative_sprites(nogrid_temperate_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
-            //#32 alternative_sprites(nogrid_temperate_spr4512, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-            //#32 #ez alternative_sprites(nogrid_temperate_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
-            //#32 #ez alternative_sprites(nogrid_temperate_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
+            replace nogrid_temperate_spr4512d(4512, "../graphics/terrain/64/pygen/temperate_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
+            #ez alternative_sprites(nogrid_temperate_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+            #ez alternative_sprites(nogrid_temperate_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+            #32 alternative_sprites(nogrid_temperate_spr4512d, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+            #32 #ez alternative_sprites(nogrid_temperate_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+            #32 #ez alternative_sprites(nogrid_temperate_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
         }
     }
 
@@ -962,12 +962,12 @@ if (param_gridlines==1) {
         if (climate==CLIMATE_TROPICAL) {
             // Terrain
             //4512-4530 partial desert 2/4
-            //replace nogrid_arctic_spr4512(4512, "../graphics/terrain/64/pygen/arctic_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-            //#ez alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
-            //#ez alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
-            //#32 alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-            //#32 #ez alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
-            //#32 #ez alternative_sprites(nogrid_arctic_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
+            replace nogrid_arctic_spr4512d(4512, "../graphics/terrain/64/pygen/arctic_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
+            #ez alternative_sprites(nogrid_arctic_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+            #ez alternative_sprites(nogrid_arctic_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+            #32 alternative_sprites(nogrid_arctic_spr4512d, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+            #32 #ez alternative_sprites(nogrid_arctic_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+            #32 #ez alternative_sprites(nogrid_arctic_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
         }
     }
 
@@ -1131,12 +1131,12 @@ if (param_gridlines==1) {
         if (climate==CLIMATE_TROPICAL) {
             // Terrain
             //4512-4530 partial desert 2/4
-            //replace nogrid_tropical_spr4512(4512, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-            //#ez alternative_sprites(nogrid_tropical_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
-            //#ez alternative_sprites(nogrid_tropical_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
-            //#32 alternative_sprites(nogrid_tropical_spr4512, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-            //#32 #ez alternative_sprites(nogrid_tropical_spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
-            //#32 #ez alternative_sprites(nogrid_tropical_spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
+            replace nogrid_tropical_spr4512d(4512, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 1) }
+            #ez alternative_sprites(nogrid_tropical_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+            #ez alternative_sprites(nogrid_tropical_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_nogridline_8bpp.png") { template_groundtiles(0, 0, 4) }
+            #32 alternative_sprites(nogrid_tropical_spr4512d, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
+            #32 #ez alternative_sprites(nogrid_tropical_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+            #32 #ez alternative_sprites(nogrid_tropical_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_nogridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
         }
     }
 
