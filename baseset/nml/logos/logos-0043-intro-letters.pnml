@@ -1,12 +1,14 @@
 // 43-51 title screen characters (E and D are defined in extra/extra-openttd-gui.pnml)
-base_graphics spr43( 43, "../graphics/icons/1/title_letters_alt_8bpp.png") {
-    [   1,  62,  41,  49,   0,  -3] // larger T
-    [  48,   1,  48,  39,   0,   0] // R
-    [  92,   1,  39,  39,   0,   0] // A
-    [ 142,   1,  37,  39,   0,   0] // N
-    [ 190,   1,  34,  39,   0,   0] // S
-    [ 237,   1,  32,  39,   0,   0] // P
-    [ 148,  57, 100,  54,   0,  -8] // larger O
-    [ 239,   1,  34,  40,   0,   0] // Y
-    [ 239,   1,  34,  39,   0,   0] // C
+template template_spr43(z) {
+    [   1*z,  62*z,  41*z,  49*z,   0*z,  -3*z] // larger T
+    [  48*z,   1*z,  48*z,  39*z,   0*z,   0*z] // R
+    [  92*z,   1*z,  39*z,  39*z,   0*z,   0*z] // A
+    [ 142*z,   1*z,  37*z,  39*z,   0*z,   0*z] // N
+    [ 190*z,   1*z,  34*z,  39*z,   0*z,   0*z] // S
+    [ 237*z,   1*z,  32*z,  39*z,   0*z,   0*z] // P
+    [ 148*z,  57*z, 100*z,  54*z,   0*z,  -8*z] // larger O
+    [ 239*z,   1*z,  34*z,  40*z,   0*z,   0*z] // Y
+    [ 239*z,   1*z,  34*z,  39*z,   0*z,   0*z] // C
 }
+base_graphics spr43( 43, "../graphics/icons/1/title_letters_alt_8bpp.png") { template_spr43(1) }
+alternative_sprites (spr43, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_alt_8bpp.png") { template_spr43(2) }

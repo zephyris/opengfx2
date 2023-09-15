@@ -4,10 +4,12 @@ replacenew ottd_gui0(OTTD_GUI,  "../graphics/selectors/64/selector_halftile_8bpp
 #ez alternative_sprites (ottd_gui0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/selectors/256/selector_halftile_8bpp.png") { template_selectors_halftile(0, 0, 4) }
 
 // OTTD_GUI 12-13 title screen letters
-replacenew ottd_gui12(OTTD_GUI, "../graphics/icons/1/title_letters_alt_8bpp.png", 12) {
-	[ 426,   1,  33,  39,   0,   0] // E
-    [ 106,  62,  43,  49,  -7,  -3] // larger D
+template template_ottd_gui12(z) {
+	[ 426*z,   1*z,  33*z,  39*z,   0*z,   0*z] // E
+    [ 106*z,  62*z,  43*z,  49*z,  -7*z,  -3*z] // larger D
 }
+replacenew ottd_gui12(OTTD_GUI, "../graphics/icons/1/title_letters_alt_8bpp.png", 12) { template_ottd_gui12(1) }
+alternative_sprites (ottd_gui12, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_alt_8bpp.png") { template_ottd_gui12(2) }
 
 // TODO: Aligned correctly? Where are these used?
 // OTTD_GUI 14-37 ottd bridge piers
