@@ -1,10 +1,18 @@
 # OpenGFX2 Changelog
 
-# v0.1
+## v0.2
 Base set:
-* First OpenGFX-independent baseset
-* 8bpp 1x zoom 'Classic' variant
-* 32bpp 4x zoom 'High Def' variant
+* Bug fixes from v0.1, including a few game-breaking missing (white box) sprites.
+* Initial support for 2x GUI scaling (including in 'Classic' variant).
+
+Settings NewGRF:
+* Parameter control of grass (terrain tile), foundation and tree style per climate. Almost fully mix-and-match.
+
+## v0.1
+Base set:
+* First OpenGFX-independent baseset.
+* 8bpp 1x zoom 'Classic' variant.
+* 32bpp 4x zoom 'High Def' variant.
 'Classic' is a complete baseset. 'High Def' 32bpp and 4x zoom sprites are not universally complete, and uses 8bpp 1x zoom fallbacks.
 
 Settings NewGRF:
