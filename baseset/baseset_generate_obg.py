@@ -52,7 +52,7 @@ with open("opengfx2_" + typeshort + ".obg", "w") as obg:
   pad_length = 12
   obg.write(pad("name", pad_length, pad_left=False) + "= OpenGFX2 " + namesuffix + "\n")
   obg.write(pad("shortname", pad_length, pad_left=False) + "=" + namelookup[typeshort] + "\n")
-  obg.write(pad("version", pad_length, pad_left=False) + "= 0" + "\n")
+  obg.write(pad("version", pad_length, pad_left=False) + "= 0.2" + "\n")
   obg.write(pad("palette", pad_length, pad_left=False) + "= DOS" + "\n")
   obg.write(pad("blitter", pad_length, pad_left=False) + "= "+str(blitter)+"bpp" + "\n")
   obg.write(pad("description", pad_length, pad_left=False) + "= OpenGFX2 "+description+" base graphics set for OpenTTD. Freely available under the terms of the GNU General Public License version 2." + "\n")
@@ -71,4 +71,4 @@ with open("opengfx2_" + typeshort + ".obg", "w") as obg:
     obg.write(pad(file["name"] + ".grf", 26, pad_left=False) + "= " + md5)
   obg.write("\n")
   obg.write("[origin]" + "\n")
-  obg.write("default = Development version, blame Zephyris.")
+  obg.write("default = From the in-game content download system (BaNaNaS) or https://github.com/zephyris/opengfx2/")

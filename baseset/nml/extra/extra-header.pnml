@@ -255,6 +255,11 @@ if (ttd_platform != PLATFORM_OPENTTD) {
 }
 
 if (grf_future_status("OGZ\1")==1) {
+	// Check version, and warn if it's not the expected version to match this version of the base set
+	if (param["OGZ\1", 254]!=2) {
+		error(WARNING, string(STR_WARN_SETTINGSGRF_VERSIONMISMATCH));
+	}
+
 	// Load parameters from settings grf, if will be loaded
 	param_cursors = param["OGZ\1", 1];
 	param_gridlines = param["OGZ\1", 2];

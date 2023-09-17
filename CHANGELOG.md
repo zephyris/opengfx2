@@ -8,6 +8,9 @@ Base set:
 Settings NewGRF:
 * Parameter control of grass (terrain tile), foundation and tree style per climate. Almost fully mix-and-match.
 
+Backend:
+* Multithreading for much faster 32bpp to 8bpp sprite conversion.
+
 ## v0.1
 Base set:
 * First OpenGFX-independent baseset.
