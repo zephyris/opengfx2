@@ -1,0 +1,348 @@
+# WIP pnml, ultimately for GUI element size control by parameter
+# GUI elements, grouped by sprite size, collected where 2x sprites exist
+
+###20px
+//679-681 toolbar icons
+template template_spr679(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 0, 1) // main toolbar: subsidies
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 0, 1) // main toolbar: news settings
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 0, 1) // unused(?): bin
+}
+//684 toolbar icons
+base_graphics spr679( 679, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr679(1) }
+template template_spr684(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 0, z) // main toolbar: company league table
+}
+base_graphics spr684( 684, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr684(1) }
+//693-695 toolbar icons
+template template_spr693(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 2, z) // construction toolbar: bouy
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 2, z) // landscaping toolbar: raise land
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 2, z) // landscaping toolbar: lower land
+}
+base_graphics spr693( 693, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr693(1) }
+//703 toolbar icons
+template template_spr703(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 2, z) // construction toolbar: dynamite
+}
+base_graphics spr703( 703, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr703(z) }
+//708 toolbar icons
+template template_spr708(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 0, z) // main toolbar: map
+}
+base_graphics spr708( 708, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr708(1) }
+//709-714 toolbar icons
+template template_spr709(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 3, z) // jukebox: skip to previous track
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 3, z) // jukebox: skip to next track
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 3, z) // jukebox: stop
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 3, z) // jukebox: play
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 0, z) // main toolbar: jukebox
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 2, z) // construction toolbar: remove
+}
+base_graphics spr709( 709, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr709(1) }
+//723-746 toolbar icons
+template template_spr723(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 0, z) // main toolbar: information
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 1, z) // main toolbar: save 1/2
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 1, z) // main toolbar: save 2/2
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 1, z) // main toolbar: pause
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 4, z) // main toolbar: build rail
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 4, z) // main toolbar: build road
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 4, z) // main toolbar: build water
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 4, z) // main toolbar: build air
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 5, z) // main toolbar: manage trains
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 5, z) // main toolbar: manage road
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 5, z) // main toolbar: manage ships
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 5, z) // main toolbar: manage air
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 1, z) // main toolbar: zoom in
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 1, z) // main toolbar: zoom out
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 1, z) // main toolbar: finance
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 6, z) // minimap: elevation
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 6, z) // minimap: vehicles
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 6, z) // minimap: infrastructure
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 6, z) // main toolbar/minimap: industries
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 6, z) // main toolbar/minimap: trees
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 5, 6, z) // main toolbar/minimap: companies
+    template_general(64, 148, 39, 20, 0, 0, z) // construction toolbar: build airport
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 1, z) // main toolbar: graphs
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 7, z) // construction toolbar: build dock
+}
+base_graphics spr723( 723, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr723(1) }
+//1251-1262 rail gui buttons
+template template_spr1251(z) {
+	template_sprite_matrix(20, 20, 0, 0, 0, 9, z) // Rail N-S
+	template_sprite_matrix(20, 20, 0, 0, 1, 9, z) // Rail SW-NE
+	template_sprite_matrix(20, 20, 0, 0, 2, 9, z) // Rail W-E
+	template_sprite_matrix(20, 20, 0, 0, 3, 9, z) // Rail NW-SE
+    template_sprite_matrix(20, 20, 0, 0, 0, 11, z) // Monorail
+	template_sprite_matrix(20, 20, 0, 0, 1, 11, z)
+	template_sprite_matrix(20, 20, 0, 0, 2, 11, z)
+	template_sprite_matrix(20, 20, 0, 0, 3, 11, z)
+    template_sprite_matrix(20, 20, 0, 0, 0, 12, z) // Maglev
+	template_sprite_matrix(20, 20, 0, 0, 1, 12, z)
+	template_sprite_matrix(20, 20, 0, 0, 2, 12, z)
+	template_sprite_matrix(20, 20, 0, 0, 3, 12, z)
+}
+base_graphics spr1251(1251, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr1251(1) }
+//1291 signal icon
+template template_spr1291(z) {
+	template_sprite_matrix(20, 20, 0, 0, 5, 8, z)
+}
+base_graphics spr1291(1291, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr1291(1) }
+//1294-1295 rail and road depot icons
+template template_spr1294(z) {
+	template_sprite_matrix(20, 20, 0, 0, 0, 8, z) // rail
+    template_sprite_matrix(20, 20, 0, 0, 1, 8, z) // road
+}
+base_graphics spr1294(1294, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr1294(1) }
+//1298-1299 rail station icons
+template template_spr1298(z) {
+    template_general(1, 148, 40, 20, 0, 0, z) // wide
+    template_sprite_matrix(20, 20, 0, 0, 7, 7, z) // square
+}
+base_graphics spr1298(1298, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr1298(1) }
+//1309-1310 road icons
+template template_spr1309(z) {
+    template_sprite_matrix(20, 20, 0, 0, 3, 14, z) // SW-NE
+    template_sprite_matrix(20, 20, 0, 0, 1, 14, z) // NW-SE
+}
+base_graphics spr1309(1309, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr1309(1) }
+//2429-2432 tunnel icons
+template template_spr2429(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 14, z) // construction toolbar: road tunnel
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 9, z) // construction toolbar: rail tunnel
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 11, z) // construction toolbar: monorail tunnel
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 12, z) // construction toolbar: maglev tunnel
+}
+base_graphics spr2429(2429, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr2429(1) }
+//4077 town icon
+template template_spr4077(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 6, z) // main toolbar\minimap: towns
+}
+base_graphics spr4077(4077, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr4077(1) }
+//4082-4086 landscape-associated icons
+template template_spr4082(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 6, z) // main toolbar: sign
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 7, 0, z) // main toolbar: landscape
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 15, z) // scenario editor: rocky land
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 15, z) // scenario editor: lighthouse
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 15, z) // scenario editor: transmitter
+}
+base_graphics spr4082(4082, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr4082(1) }
+//4791 buy land icon and cursor
+template template_spr4790(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 15, z) // construction toolbar: buy land
+}
+base_graphics spr4791(4791, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr4791(1) }
+
+//Tropical 555 build desert icon
+template template_spr555(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 6, 15, 1) // landscaping: desert
+}
+base_graphics spr555( 555, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr555(1) }
+
+//Extra
+//CANALS 64 icons
+template template_canals_spr64(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 8, z) // construction toolbar: canal
+}
+replacenew canals_spr64(CANALS, "../graphics/icons/1/icons_20px_8bpp.png", 64) { template_canals_spr64(z) }
+// CATENARY 36-39 elrail icons
+template template_catenary_spr36(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 0, 10, z)
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 10, z)
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 10, z)
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 10, z)
+}
+replacenew catenary_spr36(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 36) { template_catenary_spr36(1) }
+// CATENARY 44-45 tunnel icon and cursor
+template template_catenary_spr44(z) {
+	template_sprite_matrix_nocrop(20, 20, 0, 0, 4, 10, z)
+}
+replacenew catenary_spr44(CATENARY, "../graphics/icons/1/icons_20px_8bpp.png", 44) { template_catenary_spr44(1) }
+// TRAMWAY 0-1 build tram track icons
+template template_tramway_spr0(z) {
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 3, 13, z)
+    template_sprite_matrix_nocrop(20, 20, 0, 0, 1, 13, z)
+}
+replacenew tramway_spr0(TRAMWAY, "../graphics/icons/1/icons_20px_8bpp.png", 0) { template_tramway_spr0(1) }
+
+
+
+
+###16px
+//683 vehicle window icons
+template template_spr683(z) {
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 0, 0, z) // vehicle window: centre map on vehicle
+}
+base_graphics spr683( 683, "../graphics/icons/1/icons_16px_8bpp.png") { template_spr683(1) }
+//685-692 vehicle window icons
+template template_spr685(z) {
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 1, 0, z) // vehicle window: send to rail depot
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 2, 0, z) // vehicle window: send to road depot
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 3, 0, z) // vehicle window: send to hangar
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 4, 0, z) // vehicle window: send to ship depot
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 5, 0, z) // vehicle window: ignore signals
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 6, 0, z) // vehicle window: set orders
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 7, 0, z) // vehicle window: details
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 8, 0, z) // vehicle window: refit
+}
+base_graphics spr685( 685, "../graphics/icons/1/icons_16px_8bpp.png") { template_spr685(1) }
+//715 vehicle window icons
+template template_spr715(z) {
+    template_sprite_matrix_nocrop(16, 16, 0, 0, 9, 0, z) // vehicle view: turn around
+}
+base_graphics spr715( 715, "../graphics/icons/1/icons_16px_8bpp.png") { template_spr715(1) }
+
+// OTTD_GUI 93-105 vehicle view new vehicle management controls
+template template_ottd_gui106(z) {
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 0, 1, z) // vehicle view: clone train
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 1, 1, z) // vehicle view: clone road vehicle
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 2, 1, z) // vehicle view: clone ship
+	template_sprite_matrix_nocrop(16, 16, 0, 0, 3, 1, z) // vehicle view: clone aircraft
+}
+replacenew ottd_gui106(OTTD_GUI, "../graphics/icons/1/icons_16px_8bpp.png", 106) { template_ottd_gui106(1) }
+
+
+###3px
+//4079 small teraform dot, for scenario editor landscaping
+template template_spr4079(z) {
+    template_sprite_matrix_nocrop(3, 3, 0, 0, 1, 0, z)
+}
+base_graphics spr4079(4079, "../graphics/icons/1/icons_3px_8bpp.png") { template_spr4079(z) }
+
+
+###7px
+//3090-3091 stop/go vehicle/depot gui
+template template_spr3090(z) {
+    template_sprite_matrix(7, 7, 0, 0, 1, 1, 1) // stop/red
+    template_sprite_matrix(7, 7, 0, 0, 2, 0, 1) // go/green
+}
+base_graphics spr3090(3090, "../graphics/icons/1/icons_7px_8bpp.png") { template_spr3090(1) }
+
+
+###8px
+template template_spr130(z) {
+    template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, z) // window: up
+}
+base_graphics spr130( 130, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr130(1) }
+
+template template_spr140(z) {
+    template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, z) // window: down
+}
+base_graphics spr140( 140, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr140(1) }
+
+template template_spr142(z) {
+    template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 0, z) // window: tick
+}
+base_graphics spr142( 142, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr142(1) }
+
+template template_spr143(z) {
+    template_sprite_matrix_nocrop(8, 8, -1, 0, 4, 0, z) // window: cross/close
+}
+base_graphics spr143( 143, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr143(1) }
+
+template template_spr145(z) {
+    template_sprite_matrix_nocrop(8, 8, 1, 1, 6, 0, z) // window: right
+}
+base_graphics spr145( 145, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr145(1) }
+
+//682 window maximise icon
+template template_spr682(z) {
+    template_sprite_matrix_nocrop(8, 8, 0, 0, 7, 1, z) // window titlebar: maximise
+}
+base_graphics spr682( 682, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr682(1) }
+
+// OTTD_GUI 44-52
+template template_ottd_gui44(z) {
+    template_sprite_matrix_nocrop(8, 8, 0, 0, 0, 1, z) // window decoration: resize
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, z) // window decoration: arrow up
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, z) // window decoration: arrow down
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 5, 0, z) // window decoration: arrow left
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 6, 0, z) // window decoration: arrow right
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 1, z) // window decoration: go to default directory
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 1, z) // window decoration: list (?)
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 1, z) // window decoration: pin/sticky
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 4, 1, z) // window decoration: unpin/unstick
+}
+replacenew ottd_gui44(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 44) { template_ottd_gui44(1) }
+
+template template_ottd_gui138(z) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 2, z) // (?) arrow left
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 2, z) // (?) arrow right
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 3, z) // (?) open arrow down
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 3, z) // (?) open arrow up
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 0, 3, z) // (?) open arrow left
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 4, 3, z) // (?) command symbol
+}
+replacenew ottd_gui138(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 138) { template_ottd_gui138(1) }
+
+// OTTD_GUI 149 right to left language resize window
+template template_ottd_gui149(z) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 5, 1, z) // window decorations: resize window (rtl languages)
+}
+replacenew ottd_gui149(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 149) { template_ottd_gui149(1) }
+
+// OTTD_GUI 151 small icons
+template template_ottd_gui151(z) {
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 4, 2, 1) // (?) to bottom
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 5, 2, 1) // (?) to top
+	template_sprite_matrix_nocrop(8, 8, 1, 1, 6, 1, 1) // window decorations: debugging icon
+}
+replacenew ottd_gui151(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 151) { template_ottd_gui151(1) }
+
+// OTTD_GUI 168 window decoration
+template template_ottd_gui168(z) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 7, 1, 1) // Window decorations: default size
+}
+replacenew ottd_gui168(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 168) { template_ottd_gui168(1) }
+
+// OTTD_GUI 184-185 rename and go to location mini icons
+template template_ottd_gui184(z) {
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 5, 3, z) // rename entity
+	template_sprite_matrix_nocrop(8, 8, 0, 0, 6, 3, z) // go to location
+}
+replacenew ottd_gui184(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 184) { template_ottd_gui184(1) }
+
+
+###10px
+// OTTD_GUI 38-43
+template template_ottd_gui38(z) {
+    template_sprite_matrix_nocrop(10, 10, 0, 0, 0, 0, z) //newgrf settings: square status icon
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 0, z) //server join menu: circle status icon
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 0, z) //server join menu: password protected icon
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 0, z) //content download menu: empty check box
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 0, z) //content download menu: checked check box
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 0, z) //newgrf settings: warning icon
+}
+replacenew ottd_gui38(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 38) { template_ottd_gui38(1) }
+
+// OTTD_GUI 147-148 settings tree menu icons
+template template_ottd_gui147(z) {
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 6, 0, z) // settings: tree menu +
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 7, 0, z) // settings: tree menu -
+}
+replacenew ottd_gui147(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 147) { template_ottd_gui147(1) }
+
+// OTTD_GUI 154-161 vehicle status mini icons
+template template_ottd_gui154(z) {
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 1, z)  // Profit not applicable
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 1, z)  // Profit negative
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 1, z)  // Profit some
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 1, z)  // Profit lots
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 8, 1, z)  // Unread news
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 7, 1, z)  // Exclusive transport rights
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 2, z)  // vehicle groups: Autoreplace protection
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 2, z)  // vehicle groups: Autoreplace defined
+}
+replacenew ottd_gui154(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 154) { template_ottd_gui154(1) }
+
+// OTTD_GUI 162-165 town status mini icons
+template template_ottd_gui164(z) {
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 1, z)  // awaiting town rating
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 1, 2, z)  // appalling town rating, sad, red smily
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 2, 2, z)  // mediocre town rating, yellow smily
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 3, 2, z)  // very good town rating, happy, green smily
+}
+replacenew ottd_gui162(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 162) { template_ottd_gui164(1) }

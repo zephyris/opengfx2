@@ -58,6 +58,7 @@ These notes are to help development. If you are just downloading or building Ope
 Remember to bump the versions: 
 * Base set version in `baseset/baseset_generate_obg.py`
 * NewGRF versions in `newgrf/nml/<newgrf_name>/<newgrf_name>-header.pmnl`
+* `extra.grf` version in `baseset/nml/extra-header.pnml`
 * `extra.grf`/`opengfx2_settings.grf` co-compatibility check in `baseset/nml/extra-header.pnml`
 
 For better or worse, base set currently uses fractional (0.1, 0.2, ...) versioning and NewGRFs use integer (1, 2, ...) versioning.

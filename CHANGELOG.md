@@ -1,5 +1,12 @@
 # OpenGFX2 Changelog
 
+## v0.21
+Minor bugfix release.
+
+Base set:
+* Switch to integer version numbering for internal use, decimal not supported by OpenTTD for version comparisons.
+* Minor bug fixes.
+
 ## v0.2
 Base set:
 * Bug fixes from v0.1, including a few game-breaking missing (white box) sprites.
@@ -7,6 +14,9 @@ Base set:
 
 Settings NewGRF:
 * Parameter control of grass (terrain tile), foundation and tree style per climate. Almost fully mix-and-match.
+
+NewGRFs:
+* New standalone landscape NewGRF.
 
 Backend:
 * Multithreading for much faster 32bpp to 8bpp sprite conversion.
