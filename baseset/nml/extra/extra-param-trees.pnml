@@ -9,7 +9,7 @@ template template_tree_temperate_in_arctic(z) {
 	template_tree_alt(0, 487, z)
 	template_tree_alt(0, 568, z)
 }
-if (climate==CLIMATE_ARCTIC && param_trees_arctic==0) {
+if (param_trees_arctic==0) {
     replace trees_temperate_in_arctic(1709, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_arctic(1) }
     #ez alternative_sprites(trees_temperate_in_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_arctic(4) }
     replace trees_temperate_in_arctic_snow(1765, "../graphics/trees/64_alt/pygen/temperate_snow_8bpp.png") { template_tree_temperate_in_arctic(1) }
@@ -37,7 +37,7 @@ template template_tree_temperate_in_tropical_2(z) {
 	template_tree_alt(0, 1135, z)
     template_tree_alt(0, 1216, z)
 }
-if (climate==CLIMATE_TROPICAL && param_trees_tropical==0) {
+if (param_trees_tropical==0) {
     replace trees_temperate_in_tropical_1(1821, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_tropical_1(1) }
     #ez alternative_sprites(trees_temperate_in_tropical_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_tropical_1(4) }
     replace trees_temperate_in_tropical_2(1926, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_tropical_2(1) }
@@ -56,7 +56,7 @@ template template_tree_temperate_in_toyland(z) {
 	template_tree_alt(0, 568, z)
 	template_tree_alt(0, 649, z)
 }
-if (climate==CLIMATE_TOYLAND && param_trees_toyland==0) {
+if (param_trees_toyland==0) {
     replace trees_temperate_in_toyland(1947, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_toyland(1) }
     #ez alternative_sprites(trees_temperate_in_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_toyland(1) }
 }
@@ -83,7 +83,7 @@ template template_tree_arctic_in_temperate(z) {
 	template_tree_alt(0, 82, z)
 	template_tree_alt(0, 163, z)
 }
-if (climate==CLIMATE_TEMPERATE && param_trees_temperate==1) {
+if (param_trees_temperate==1) {
     replace trees_arctic_in_temperate(1576, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_temperate(1) }
     #ez alternative_sprites(trees_arctic_in_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_temperate(4) }
 }
@@ -109,7 +109,7 @@ template template_tree_arctic_in_tropical_2(z) {
 	template_tree_alt(0, 487, z)
 	template_tree_alt(0, 568, z)
 }
-if (climate==CLIMATE_TROPICAL && param_trees_tropical==1) {
+if (param_trees_tropical==1) {
     replace trees_arctic_in_tropical_1(1821, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_tropical_1(1) }
     #ez alternative_sprites(trees_temperate_in_tropical_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_tropical_1(4) }
     replace trees_arctic_in_tropical_2(1926, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_tropical_2(1) }
@@ -128,7 +128,7 @@ template template_tree_arctic_in_toyland(z) {
 	template_tree_alt(0, 568, z)
 	template_tree_alt(0, 1, z)
 }
-if (climate==CLIMATE_TOYLAND && param_trees_toyland==1) {
+if (param_trees_toyland==1) {
     replace trees_arctic_in_toyland(1947, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_toyland(1) }
     #ez alternative_sprites(trees_arctic_in_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_toyland(1) }
 }
@@ -155,7 +155,7 @@ template template_tree_tropical_in_temperate(z) {
 	template_tree_alt(0, 243, z)
 	template_tree_alt(0, 324, z)
 }
-if (climate==CLIMATE_TEMPERATE && param_trees_temperate==2) {
+if (param_trees_temperate==2) {
     replace trees_tropical_in_temperate(1576, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_temperate(1) }
     //#ez alternative_sprites(trees_tropical_in_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_temperate(4) }
 }
@@ -171,7 +171,7 @@ template template_tree_tropical_in_arctic(z) {
 	template_tree_alt(0, 486, z)
     template_tree_alt(0,   0, z)
 }
-if (climate==CLIMATE_ARCTIC && param_trees_arctic==2) {
+if (param_trees_arctic==2) {
     replace trees_tropical_in_arctic(1709, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_arctic(1) }
     //#ez alternative_sprites(trees_tropical_in_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_arctic(4) }
     replace trees_tropical_in_arctic_snow(1765, "../graphics/trees/64_alt/pygen/tropical_snow_8bpp.png") { template_tree_tropical_in_arctic(1) }
@@ -190,7 +190,7 @@ template template_tree_tropical_in_toyland(z) {
 	template_tree_alt(0,   0, z)
 	template_tree_alt(0,  81, z)
 }
-if (climate==CLIMATE_TOYLAND && param_trees_toyland==2) {
+if (param_trees_toyland==2) {
     replace trees_tropical_in_toyland(1947, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_toyland(1) }
     //#ez alternative_sprites(trees_tropical_in_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_toyland(1) }
 }
@@ -217,7 +217,7 @@ template template_tree_toyland_in_temperate(z) {
 	template_tree_bordered(0, 648, z)
 	template_tree_bordered(0,   0, z)
 }
-if (climate==CLIMATE_TEMPERATE && param_trees_temperate==3) {
+if (param_trees_temperate==3) {
     replace trees_toyland_in_temperate(1576, "../graphics/trees/64/toyland_trees_8bpp.png") { template_tree_toyland_in_temperate(1) }
     #32 alternative_sprites(trees_toyland_in_temperate, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/trees/64/toyland_trees_bt32bpp.png") { template_tree_toyland_in_temperate(1) }
 }
@@ -234,7 +234,7 @@ template template_tree_toyland_in_arctic(z) {
 	template_tree_bordered(0, 486, z)
 	template_tree_bordered(0, 567, z)
 }
-if (climate==CLIMATE_ARCTIC && param_trees_arctic==3) {
+if (param_trees_arctic==3) {
     replace trees_toyland_in_arctic(1709, "../graphics/trees/64/toyland_trees_8bpp.png") { template_tree_toyland_in_arctic(1) }
     #32 alternative_sprites(trees_toyland_in_arctic, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/trees/64/toyland_trees_bt32bpp.png") { template_tree_toyland_in_arctic(1) }
     replace trees_toyland_in_arctic_snow(1765, "../graphics/trees/64/toyland_trees_8bpp.png") { template_tree_toyland_in_arctic(1) }
@@ -266,7 +266,7 @@ template template_tree_toyland_in_tropical_2(z) {
 	template_tree_bordered(0, 243, z)
 	template_tree_bordered(0, 405, z)
 }
-if (climate==CLIMATE_TROPICAL && param_trees_tropical==3) {
+if (param_trees_tropical==3) {
     replace trees_toyland_in_tropical_1(1821, "../graphics/trees/64/toyland_trees_8bpp.png") { template_tree_toyland_in_tropical_1(1) }
     #32 alternative_sprites(trees_toyland_in_tropical_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/trees/64/toyland_trees_bt32bpp.png") { template_tree_toyland_in_tropical_1(1) }
     replace trees_toyland_in_tropical_cacti(1821, "../graphics/trees/64/toyland_trees_8bpp.png") { template_tree_toyland_in_tropical_cacti(1) }
