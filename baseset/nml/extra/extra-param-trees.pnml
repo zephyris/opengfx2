@@ -274,3 +274,14 @@ if (param_trees_tropical==3) {
     replace trees_toyland_in_tropical_2(1926, "../graphics/trees/64/toyland_trees_8bpp.png") { template_tree_toyland_in_tropical_2(1) }
     #32 alternative_sprites(trees_toyland_in_tropical_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/trees/64/toyland_trees_bt32bpp.png") { template_tree_toyland_in_tropical_2(1) }
 }
+
+// Roadside trees
+if ((climate == CLIMATE_ARCTIC && param_trees_arctic==0) || (climate == CLIMATE_TROPICAL && param_trees_tropical==0)) {
+	replace spr4626_temperate(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city( 0, 0, 1) }
+}
+if ((climate == CLIMATE_TEMPERATE && param_trees_arctic==1) || (climate == CLIMATE_TROPICAL && param_trees_tropical==1)) {
+	replace spr4626_arctic(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city(20, 0, 1) }
+}
+if ((climate == CLIMATE_TEMPERATE && param_trees_arctic==2) || (climate == CLIMATE_ARCTIC && param_trees_tropical==2)) {
+	replace spr4626_tropical(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city(40, 0, 1) }
+}
