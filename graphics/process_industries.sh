@@ -20,6 +20,7 @@ mask_tiles.py pygen/oilrig oilrig_tilemask.png 1
 custom_dither.py
 cd pygen
 custom_dither.py
+identical_regions.py coalmine ../coalmine_idmap.png
 cd ../../../
 
 cd arctic/64/
@@ -50,6 +51,7 @@ mask_tiles.py pygen/lumbermill_combo lumbermill_tilemask.png 1
 custom_dither.py
 cd pygen
 custom_dither.py
+identical_regions.py copperoremine ../copperoremine_idmap.png
 cd ../../../
 
 cd toyland/64/
