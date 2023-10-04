@@ -103,14 +103,14 @@ grf {
 			name: string(STR_PARAM_GRASS_ARCTIC_NAME);
 			desc: string(STR_PARAM_GRASS_ARCTIC_DESC);
 			type: int;
-			def_value: 1;
+			def_value: 0;
 			min_value: 0;
 			max_value: 2;
 			names: {
-				0: string(STR_PARAM_VALUE_TEMPERATE);
-				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
-				2: string(STR_PARAM_VALUE_TROPICAL);
-				//3: string(STR_PARAM_VALUE_TOYLAND);
+				3: string(STR_PARAM_VALUE_TEMPERATE);
+				0: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				1: string(STR_PARAM_VALUE_TROPICAL);
+				//2: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -119,14 +119,14 @@ grf {
 			name: string(STR_PARAM_FOUNDATIONS_ARCTIC_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_ARCTIC_DESC);
 			type: int;
-			def_value: 1;
+			def_value: 0;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				0: string(STR_PARAM_VALUE_TEMPERATE);
-				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
-				2: string(STR_PARAM_VALUE_TROPICAL);
-				3: string(STR_PARAM_VALUE_TOYLAND);
+				3: string(STR_PARAM_VALUE_TEMPERATE);
+				0: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				1: string(STR_PARAM_VALUE_TROPICAL);
+				2: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -135,14 +135,14 @@ grf {
 			name: string(STR_PARAM_TREES_ARCTIC_NAME);
 			desc: string(STR_PARAM_TREES_ARCTIC_DESC);
 			type: int;
-			def_value: 1;
+			def_value: 0;
 			min_value: 0;
 			max_value: 2;
 			names: {
-				0: string(STR_PARAM_VALUE_TEMPERATE);
-				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
-				2: string(STR_PARAM_VALUE_TROPICAL);
-				//3: string(STR_PARAM_VALUE_TOYLAND);
+				3: string(STR_PARAM_VALUE_TEMPERATE);
+				0: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				1: string(STR_PARAM_VALUE_TROPICAL);
+				//2: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -151,14 +151,14 @@ grf {
 			name: string(STR_PARAM_GRASS_TROPICAL_NAME);
 			desc: string(STR_PARAM_GRASS_TROPICAL_DESC);
 			type: int;
-			def_value: 2;
+			def_value: 0;
 			min_value: 0;
 			max_value: 2;
 			names: {
-				0: string(STR_PARAM_VALUE_TEMPERATE);
-				1: string(STR_PARAM_VALUE_ARCTIC);
-				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
-				//3: string(STR_PARAM_VALUE_TOYLAND);
+				2: string(STR_PARAM_VALUE_TEMPERATE);
+				3: string(STR_PARAM_VALUE_ARCTIC);
+				0: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				//1: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -167,14 +167,14 @@ grf {
 			name: string(STR_PARAM_FOUNDATIONS_TROPICAL_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_TROPICAL_DESC);
 			type: int;
-			def_value: 2;
+			def_value: 0;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				0: string(STR_PARAM_VALUE_TEMPERATE);
-				1: string(STR_PARAM_VALUE_ARCTIC);
-				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
-				3: string(STR_PARAM_VALUE_TOYLAND);
+				2: string(STR_PARAM_VALUE_TEMPERATE);
+				3: string(STR_PARAM_VALUE_ARCTIC);
+				0: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				1: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -183,14 +183,14 @@ grf {
 			name: string(STR_PARAM_TREES_TROPICAL_NAME);
 			desc: string(STR_PARAM_TREES_TROPICAL_DESC);
 			type: int;
-			def_value: 2;
+			def_value: 0;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				0: string(STR_PARAM_VALUE_TEMPERATE);
-				1: string(STR_PARAM_VALUE_ARCTIC);
-				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
-				3: string(STR_PARAM_VALUE_TOYLAND);
+				2: string(STR_PARAM_VALUE_TEMPERATE);
+				3: string(STR_PARAM_VALUE_ARCTIC);
+				0: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				1: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -199,14 +199,14 @@ grf {
 			name: string(STR_PARAM_GRASS_TOYLAND_NAME);
 			desc: string(STR_PARAM_GRASS_TOYLAND_DESC);
 			type: int;
-			def_value: 3;
+			def_value: 0;
 			min_value: 3;
 			max_value: 3;
 			names: {
-				//0: string(STR_PARAM_VALUE_TEMPERATE);
-				//1: string(STR_PARAM_VALUE_ARCTIC);
-				//2: string(STR_PARAM_VALUE_TROPICAL);
-				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+				//1: string(STR_PARAM_VALUE_TEMPERATE);
+				//2: string(STR_PARAM_VALUE_ARCTIC);
+				//3: string(STR_PARAM_VALUE_TROPICAL);
+				0: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
 			};
 		}
 	}
@@ -215,14 +215,14 @@ grf {
 			name: string(STR_PARAM_FOUNDATIONS_TOYLAND_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_TOYLAND_DESC);
 			type: int;
-			def_value: 3;
+			def_value: 0;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				0: string(STR_PARAM_VALUE_TEMPERATE);
-				1: string(STR_PARAM_VALUE_ARCTIC);
-				2: string(STR_PARAM_VALUE_TROPICAL);
-				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+				1: string(STR_PARAM_VALUE_TEMPERATE);
+				2: string(STR_PARAM_VALUE_ARCTIC);
+				3: string(STR_PARAM_VALUE_TROPICAL);
+				0: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
 			};
 		}
 	}
@@ -231,14 +231,14 @@ grf {
 			name: string(STR_PARAM_TREES_TOYLAND_NAME);
 			desc: string(STR_PARAM_TREES_TOYLAND_DESC);
 			type: int;
-			def_value: 3;
+			def_value: 0;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				0: string(STR_PARAM_VALUE_TEMPERATE);
-				1: string(STR_PARAM_VALUE_ARCTIC);
-				2: string(STR_PARAM_VALUE_TROPICAL);
-				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+				1: string(STR_PARAM_VALUE_TEMPERATE);
+				2: string(STR_PARAM_VALUE_ARCTIC);
+				3: string(STR_PARAM_VALUE_TROPICAL);
+				0: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
 			};
 		}
 	}
@@ -253,6 +253,27 @@ if (ttd_platform == PLATFORM_OPENTTD) {
 if (ttd_platform != PLATFORM_OPENTTD) {
 	error(FATAL, REQUIRES_OPENTTD, "1.3.0");
 }
+
+//Inherit functional parameters from `grf` block temporary values
+//BUG: Default values for baseset extra grf parameters are 0
+//     For nice behaviour, requires temperate, arctic, tropical, toyland settings to default to 0
+//     Internally, checks use temperate=0, arctic=1, tropical=2, toyland=3, so adjust using + offset % 4
+//In the future, with base set parameter, hardcode defaults for openttd versions not supporting base set parameters
+param_cursors = param_cursors_;
+param_gridlines = param_gridlines_;
+param_logos = param_logos_;
+param_foundations_temperate = (param_foundations_temperate_ + 0) % 4;
+param_foundations_arctic = (param_foundations_arctic_ + 1) % 4;
+param_foundations_tropical = (param_foundations_tropical_ + 2) % 4;
+param_foundations_toyland = (param_foundations_toyland_ + 3) % 4;
+param_grass_temperate = (param_grass_temperate_ + 0) % 4;
+param_grass_arctic = (param_grass_arctic_ + 1) % 4;
+param_grass_tropical = (param_grass_tropical_ + 2) % 4;
+param_grass_toyland = (param_grass_toyland_ + 3) % 4;
+param_trees_temperate = (param_trees_temperate_ + 0) % 4;
+param_trees_arctic = (param_trees_arctic_ + 1) % 4;
+param_trees_tropical = (param_trees_tropical_ + 2) % 4;
+param_trees_toyland = (param_trees_toyland_ + 3) % 4;
 
 if (grf_future_status("OGZ\1")==1) {
 	// Check version, and warn if it's not the expected version to match this version of the base set
@@ -276,22 +297,4 @@ if (grf_future_status("OGZ\1")==1) {
 	param_trees_arctic = param["OGZ\1", 22];
 	param_trees_tropical = param["OGZ\1", 32];
 	param_trees_toyland = param["OGZ\1", 42];
-} else {
-	//Otherwise use this grf's parameters
-	//NML BUG?: `param_cursors = param_cursors_` is not accepted by `nmlc`, `param_cursors = 0 + param_cursors_` is (and seems to work).
-	param_cursors = 0 + param_cursors_;
-	param_gridlines = 0 + param_gridlines_;
-	param_logos = 0 + param_logos_;
-	param_foundations_temperate = 0 + param_foundations_temperate_;
-	param_foundations_arctic = 0 + param_foundations_arctic_;
-	param_foundations_tropical = 0 + param_foundations_tropical_;
-	param_foundations_toyland = 0 + param_foundations_toyland_;
-	param_grass_temperate = 0 + param_grass_temperate_;
-	param_grass_arctic = 0 + param_grass_arctic_;
-	param_grass_tropical = 0 + param_grass_tropical_;
-	param_grass_toyland = 0 + param_grass_toyland_;
-	param_trees_temperate = 0 + param_trees_temperate_;
-	param_trees_arctic = 0 + param_trees_arctic_;
-	param_trees_tropical = 0 + param_trees_tropical_;
-	param_trees_toyland = 0 + param_trees_toyland_;
 }
