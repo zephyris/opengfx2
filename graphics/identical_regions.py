@@ -40,6 +40,6 @@ for suffix in suffices:
       # take first entry as master copy, and do masked copy to all other positions
       for i in range(1, count):
         print("  Pasting to:", mask_props["bbox-1"][i], mask_props["bbox-0"][i], mask_props["bbox-3"][i], mask_props["bbox-2"][i])
-        source_image.paste(source_image.crop((refy1, refx1, refy2, refx2)), (mask_props["bbox-1"][i], mask_props["bbox-0"][i]))
+        source_image.paste(source_image.crop((refy1, refx1, refy2, refx2)), (mask_props["bbox-1"][i], mask_props["bbox-0"][i]), mask)
     # save modified source_image as output
     source_image.save(out_path)
