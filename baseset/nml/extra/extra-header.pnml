@@ -278,20 +278,20 @@ if (grf_future_status("OGZ\1")==1) {
 	param_trees_toyland = param["OGZ\1", 42];
 } else {
 	//Otherwise use this grf's parameters
-	//BUG/PROBLEM: Non-true variables mean inheritance of values like this doesn't work...
-	param_cursors = 0;//param_cursors_;
-	param_gridlines = 0;//param_gridlines_;
-	param_logos = 0;//param_logos_;
-	param_foundations_temperate = 0;//param_foundations_temperate_;
-	param_foundations_arctic = 1;//param_foundations_arctic_;
-	param_foundations_tropical = 2;//param_foundations_tropical_;
-	param_foundations_toyland = 3;//param_foundations_toyland_;
-	param_grass_temperate = 0;//param_grass_temperate_;
-	param_grass_arctic = 1;//param_grass_arctic_;
-	param_grass_tropical = 2;//param_grass_tropical_;
-	param_grass_toyland = 3;//param_grass_toyland_;
-	param_trees_temperate = 0;//param_trees_temperate_;
-	param_trees_arctic = 1;//param_trees_arctic_;
-	param_trees_tropical = 2;//param_trees_tropical_;
-	param_trees_toyland = 3;//param_trees_toyland_;
+	//NML BUG?: `param_cursors = param_cursors_` is not accepted by `nmlc`, `param_cursors = 0 + param_cursors_` is (and seems to work).
+	param_cursors = 0 + param_cursors_;
+	param_gridlines = 0 + param_gridlines_;
+	param_logos = 0 + param_logos_;
+	param_foundations_temperate = 0 + param_foundations_temperate_;
+	param_foundations_arctic = 0 + param_foundations_arctic_;
+	param_foundations_tropical = 0 + param_foundations_tropical_;
+	param_foundations_toyland = 0 + param_foundations_toyland_;
+	param_grass_temperate = 0 + param_grass_temperate_;
+	param_grass_arctic = 0 + param_grass_arctic_;
+	param_grass_tropical = 0 + param_grass_tropical_;
+	param_grass_toyland = 0 + param_grass_toyland_;
+	param_trees_temperate = 0 + param_trees_temperate_;
+	param_trees_arctic = 0 + param_trees_arctic_;
+	param_trees_tropical = 0 + param_trees_tropical_;
+	param_trees_toyland = 0 + param_trees_toyland_;
 }
