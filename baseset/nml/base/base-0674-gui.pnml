@@ -21,7 +21,7 @@ template template_spr682(z) {
     template_sprite_matrix_nocrop(8, 8, 0, 0, 7, 1, 1) // window titlebar: maximise
 }
 base_graphics spr682( 682, "../graphics/icons/1/icons_8px_8bpp.png") { template_spr682(1) }
-alternative_sprites(spr682, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr682(2) }
+alternative_sprites(spr682, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_spr682(2) }
 //683 vehicle window icons
 template template_spr683(z) {
     template_sprite_matrix_nocrop(16, 16, 0, 0, 0, 0, z) // vehicle window: centre map on vehicle

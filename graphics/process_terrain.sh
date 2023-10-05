@@ -47,6 +47,10 @@ cd foundations
 
 cd 64
 custom_dither.py
+identical_regions.py foundations_temperate foundations_idmap.png
+identical_regions.py foundations_arctic foundations_idmap.png
+identical_regions.py foundations_tropical foundations_idmap.png
+identical_regions.py foundations_toyland foundations_idmap.png
 cd ..
 
 #cd 128
@@ -55,6 +59,10 @@ cd ..
 
 cd 256
 custom_dither.py
+identical_regions.py foundations_temperate foundations_idmap.png
+identical_regions.py foundations_arctic foundations_idmap.png
+identical_regions.py foundations_tropical foundations_idmap.png
+identical_regions.py foundations_toyland foundations_idmap.png
 cd ..
 
 cd ..
