@@ -17,7 +17,7 @@ mask_path = sys.argv[2]
 for suffix in suffices:
   source_path = base_path + suffix
   out_path = base_path + "_idmap" + suffix
-  if os.file.isfile(source_path):
+  if os.path.isfile(source_path):
     if check_update_needed([source_path, mask_path], out_path):
       source_image = Image.open(source_path)
       # 8-bit indexed or grayscale image, each value indicates a rectangular region
