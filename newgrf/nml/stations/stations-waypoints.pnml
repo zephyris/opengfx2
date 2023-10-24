@@ -1,0 +1,217 @@
+//Templates
+template template_rail_waypoint_front(x, y, z) {
+	template_house_1x1_addoffs( 65,   0, z, 64, -26, -13)
+	template_house_1x1_addoffs( 65,  65, z, 64,  26, -13)
+}
+template template_rail_waypoint_rear(x, y, z) {
+	template_house_1x1_addoffs(  0,   0, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,   0)
+}
+
+//Rail
+spriteset (sprites_wayp_rail_rear, "../graphics/stations/general/64/pygen/railwaypoint_8bpp.png") { template_rail_waypoint_rear(0, 0, 1) }
+#32 alternative_sprites(sprites_wayp_rail_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/railwaypoint_rm32bpp.png", "../graphics/stations/general/64/pygen/railwaypoint_8bpp.png") { template_rail_waypoint_rear(0, 0, 1) }
+spriteset (sprites_wayp_rail_front, "../graphics/stations/general/64/pygen/railwaypoint_8bpp.png") { template_rail_waypoint_front(0, 0, 1) }
+#32 alternative_sprites(sprites_wayp_rail_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/railwaypoint_rm32bpp.png", "../graphics/stations/general/64/pygen/railwaypoint_8bpp.png") { template_rail_waypoint_front(0, 0, 1) }
+
+spritelayout layout_wayp_rail_x {
+	ground {
+		sprite: GROUNDSPRITE_RAIL_X;
+	}
+	building {
+		sprite: sprites_wayp_rail_rear(0);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 16;
+		yextent: 3;
+	}
+	building {
+		sprite: sprites_wayp_rail_front(0);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 16;
+		yextent: 3;
+		xoffset: 0;
+		yoffset: 13;
+	}
+}
+
+spritelayout layout_wayp_rail_y {
+	ground {
+		sprite: GROUNDSPRITE_RAIL_Y;
+	}
+	building {
+		sprite: sprites_wayp_rail_rear(1);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 3;
+		yextent: 16;
+	}
+	building {
+		sprite: sprites_wayp_rail_front(1);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 3;
+		yextent: 16;
+		xoffset: 13;
+		yoffset: 0;
+	}
+}
+
+item(FEAT_STATIONS, item_wayp_rail) {
+	property {
+		class: "WAYP";
+		classname: string(STR_WAYP_CLASS);
+		name: string(STR_WAYP_RAIL);
+		draw_pylon_tiles: STAT_ALL_TILES;
+		hide_wire_tiles: 0;
+		non_traversable_tiles: 0;
+	}
+	graphics {
+		sprite_layouts: [layout_wayp_rail_x, layout_wayp_rail_y];
+		default: sprites_wayp_rail_rear;
+	}
+}
+
+
+//Monorail
+spriteset (sprites_wayp_monorail_rear, "../graphics/stations/general/64/pygen/monorailwaypoint_8bpp.png") { template_rail_waypoint_rear(0, 0, 1) }
+#32 alternative_sprites(sprites_wayp_monorail_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/monorailwaypoint_rm32bpp.png", "../graphics/stations/general/64/pygen/monorailwaypoint_8bpp.png") { template_rail_waypoint_rear(0, 0, 1) }
+spriteset (sprites_wayp_monorail_front, "../graphics/stations/general/64/pygen/monorailwaypoint_8bpp.png") { template_rail_waypoint_front(0, 0, 1) }
+#32 alternative_sprites(sprites_wayp_monorail_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/monorailwaypoint_rm32bpp.png", "../graphics/stations/general/64/pygen/monorailwaypoint_8bpp.png") { template_rail_waypoint_front(0, 0, 1) }
+
+spritelayout layout_wayp_monorail_x {
+	ground {
+		sprite: GROUNDSPRITE_RAIL_X;
+	}
+	building {
+		sprite: sprites_wayp_monorail_rear(0);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 16;
+		yextent: 3;
+	}
+	building {
+		sprite: sprites_wayp_monorail_front(0);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 16;
+		yextent: 3;
+		xoffset: 0;
+		yoffset: 13;
+	}
+}
+
+spritelayout layout_wayp_monorail_y {
+	ground {
+		sprite: GROUNDSPRITE_RAIL_Y;
+	}
+	building {
+		sprite: sprites_wayp_monorail_rear(1);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 3;
+		yextent: 16;
+	}
+	building {
+		sprite: sprites_wayp_monorail_front(1);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 3;
+		yextent: 16;
+		xoffset: 13;
+		yoffset: 0;
+	}
+}
+
+item(FEAT_STATIONS, item_wayp_monorail) {
+	property {
+		class: "WAYP";
+		classname: string(STR_WAYP_CLASS);
+		name: string(STR_WAYP_MONORAIL);
+		draw_pylon_tiles: STAT_ALL_TILES;
+		hide_wire_tiles: 0;
+		non_traversable_tiles: 0;
+	}
+	graphics {
+		sprite_layouts: [layout_wayp_monorail_x, layout_wayp_monorail_y];
+		default: sprites_wayp_monorail_rear;
+	}
+}
+
+//Maglev
+spriteset (sprites_wayp_maglev_rear, "../graphics/stations/general/64/pygen/maglevwaypoint_8bpp.png") { template_rail_waypoint_rear(0, 0, 1) }
+#32 alternative_sprites(sprites_wayp_maglev_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/maglevwaypoint_rm32bpp.png", "../graphics/stations/general/64/pygen/maglevwaypoint_8bpp.png") { template_rail_waypoint_rear(0, 0, 1) }
+spriteset (sprites_wayp_maglev_front, "../graphics/stations/general/64/pygen/maglevwaypoint_8bpp.png") { template_rail_waypoint_front(0, 0, 1) }
+#32 alternative_sprites(sprites_wayp_maglev_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/maglevwaypoint_rm32bpp.png", "../graphics/stations/general/64/pygen/maglevwaypoint_8bpp.png") { template_rail_waypoint_front(0, 0, 1) }
+
+spritelayout layout_wayp_maglev_x {
+	ground {
+		sprite: GROUNDSPRITE_RAIL_X;
+	}
+	building {
+		sprite: sprites_wayp_maglev_rear(0);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 16;
+		yextent: 3;
+	}
+	building {
+		sprite: sprites_wayp_maglev_front(0);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 16;
+		yextent: 3;
+		xoffset: 0;
+		yoffset: 13;
+	}
+}
+
+spritelayout layout_wayp_maglev_y {
+	ground {
+		sprite: GROUNDSPRITE_RAIL_Y;
+	}
+	building {
+		sprite: sprites_wayp_maglev_rear(1);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 3;
+		yextent: 16;
+	}
+	building {
+		sprite: sprites_wayp_maglev_front(1);
+		recolour_mode: RECOLOUR_REMAP;
+		palette: PALETTE_USE_DEFAULT;
+		zextent: 16;
+		xextent: 3;
+		yextent: 16;
+		xoffset: 13;
+		yoffset: 0;
+	}
+}
+
+item(FEAT_STATIONS, item_wayp_maglev) {
+	property {
+		class: "WAYP";
+		classname: string(STR_WAYP_CLASS);
+		name: string(STR_WAYP_MAGLEV);
+		draw_pylon_tiles: STAT_ALL_TILES;
+		hide_wire_tiles: 0;
+		non_traversable_tiles: 0;
+	}
+	graphics {
+		sprite_layouts: [layout_wayp_maglev_x, layout_wayp_maglev_y];
+		default: sprites_wayp_maglev_rear;
+	}
+}
