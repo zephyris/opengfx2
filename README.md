@@ -5,7 +5,7 @@
 
 Partly derived directly from OpenGFX, partly redrawn or revised from my original 32bpp sources. Almost all sprites have been updated or revised.
 
-Features far better organisation of sprites. Extensive use of automated composite sprite generation using Python of bubious quality. Drawn and coded with extra zoom levels and 32bpp in mind.
+Features far better organisation of sprites. Extensive use of automated composite sprite generation using Python of dubious quality. Drawn and coded with extra zoom levels and 32bpp in mind.
 
 ## Quick start
 
@@ -44,7 +44,7 @@ Clone the repository, navigate to the repository root directory and run `make_al
 
 The built baseset will be in `baseset/`, making different versions called `opengfx2_<version>.tar`.
 
-The build newgrf(s) will be in `newgrf/`, making various `.grf` files.
+The built newgrf(s) will be in `newgrf/`, making various `.grf` files.
 
 ### Build process notes
 Image processing makes a bunch of intermediate files, particularly `*_8bpp.png` and things in `pygen` directories. Others are `_bt32bpp`, `_rm32bpp.png`. These files are assumed to be temporary intermediates, and any user-modified versions will be blindly overwritten. Make sure you look at `.gitignore` see which files this applies to.
