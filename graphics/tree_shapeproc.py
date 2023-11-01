@@ -155,10 +155,18 @@ for input_file in glob.glob("*"+suffix):
             current_spriteset=current_spriteset.resize((ow, oh), resample=Image.NEAREST)
             if row == 0:
               seed(0)
-              for tx in range(1, ow - 1):
-                for ty in range(1, oh - 1):
-                  if randint(0, 100) > density[outcolumn] * 100:
-                    current_spriteset.putpixel((tx, ty), 0)
-            image_out = blue_to(current_spriteset, 0, 0, ow, oh, image_out, ((w + 1) * outcolumn + 1 + xoffs), ((h + 1) * column + 1 + yoffs), scale)
+              if density[outcolumn] < 1: # if pixels should be erased
+                for tx in range(scale, ow - scale): # for all pixels, with padding of scale
+                  for ty in range(scale, oh - scale):
+                    if randint(0, 100) > density[outcolumn] * 100: # remove pixels to target density
+                      if randint(1, scale ** 2) == 1: # removing in clumps, so 1 per scale^2
+                        for oa in range(-int(scale / 2) - 1, int(scale / 2) + 1): # for offsets in clump size
+                          for ob in range(-int(scale / 2) - 1, int(scale / 2) + 1):
+                            if (oa ** 2 + ob ** 2) ** 0.5 < (scale / 2) * 1.3 or randint(0, 1) == 0: # circle + random pixels, not square
+                              current_spriteset.putpixel((tx + oa, ty + ob), 0)
+            if row !=0 or density[outcolumn] > 0: # only draw if the trunk (row 1) or density is non-zero
+              image_out = blue_to(current_spriteset, 0, 0, ow, oh, image_out, ((w + 1) * outcolumn + 1 + xoffs), ((h + 1) * column + 1 + yoffs), scale)
+            if row == 1: # draw rectangle after drawing
+              draw.rectangle((((w + 1) * outcolumn) * scale, ((h + 1) * column) * scale, ((w + 1) * outcolumn) * scale + (w + 2) * scale - 1, ((h + 1) * column) * scale + (h + 2) * scale - 1), fill=None, outline=(255, 255, 255), width=scale)
       # Save a copy of the unshaded image, as palmask
       image_out.save(outfile, "PNG")
