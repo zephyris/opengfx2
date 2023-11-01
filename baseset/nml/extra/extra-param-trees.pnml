@@ -1,13 +1,13 @@
 //Temperate in arctic
 template template_tree_temperate_in_arctic(z) {
-	template_tree_alt(0, 1, z)
-	template_tree_alt(0, 82, z)
-	template_tree_alt(0, 163, z)
-	template_tree_alt(0, 244, z)
-	template_tree_alt(0, 325, z)
-	template_tree_alt(0, 406, z)
-	template_tree_alt(0, 487, z)
-	template_tree_alt(0, 568, z)
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
 }
 if (param_trees_arctic==0) {
     replace trees_temperate_in_arctic(1709, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_arctic(1) }
@@ -18,24 +18,24 @@ if (param_trees_arctic==0) {
 
 //Temperate in tropical
 template template_tree_temperate_in_tropical_1(z) {
-	template_tree_alt(0, 1, z)
-	template_tree_alt(0, 82, z)
-	template_tree_alt(0, 163, z)
-	template_tree_alt(0, 244, z)
-	template_tree_alt(0, 325, z)
-	template_tree_alt(0, 406, z)
-	template_tree_alt(0, 487, z)
-	template_tree_alt(0, 568, z)
-	template_tree_alt(0, 649, z)
-	template_tree_alt(0, 730, z)
-	template_tree_alt(0, 811, z)
-	template_tree_alt(0, 892, z)
-	template_tree_alt(0, 973, z)
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
+	template_tree_alt(0, 648, z)
+	template_tree_alt(0, 729, z)
+	template_tree_alt(0, 810, z)
+	template_tree_alt(0, 891, z)
+	template_tree_alt(0, 972, z)
 }
 template template_tree_temperate_in_tropical_2(z) {
-	template_tree_alt(0, 1054, z)
-	template_tree_alt(0, 1135, z)
-    template_tree_alt(0, 1216, z)
+	template_tree_alt(0, 1053, z)
+	template_tree_alt(0, 1134, z)
+    template_tree_alt(0, 1215, z)
 }
 if (param_trees_tropical==0) {
     replace trees_temperate_in_tropical_1(1821, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_tropical_1(1) }
@@ -46,15 +46,15 @@ if (param_trees_tropical==0) {
 
 //Temperate in toyland
 template template_tree_temperate_in_toyland(z) {
-	template_tree_alt(0, 1, z)
-	template_tree_alt(0, 82, z)
-	template_tree_alt(0, 163, z)
-	template_tree_alt(0, 244, z)
-	template_tree_alt(0, 325, z)
-	template_tree_alt(0, 406, z)
-	template_tree_alt(0, 487, z)
-	template_tree_alt(0, 568, z)
-	template_tree_alt(0, 649, z)
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
+	template_tree_alt(0, 648, z)
 }
 if (param_trees_toyland==0) {
     replace trees_temperate_in_toyland(1947, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_toyland(1) }
