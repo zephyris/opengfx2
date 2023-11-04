@@ -103,14 +103,14 @@ grf {
 			name: string(STR_PARAM_GRASS_ARCTIC_NAME);
 			desc: string(STR_PARAM_GRASS_ARCTIC_DESC);
 			type: int;
-			def_value: 0;
+			def_value: 1;
 			min_value: 0;
 			max_value: 2;
 			names: {
-				3: string(STR_PARAM_VALUE_TEMPERATE);
-				0: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
-				1: string(STR_PARAM_VALUE_TROPICAL);
-				//2: string(STR_PARAM_VALUE_TOYLAND);
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -119,14 +119,14 @@ grf {
 			name: string(STR_PARAM_FOUNDATIONS_ARCTIC_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_ARCTIC_DESC);
 			type: int;
-			def_value: 0;
+			def_value: 1;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				3: string(STR_PARAM_VALUE_TEMPERATE);
-				0: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
-				1: string(STR_PARAM_VALUE_TROPICAL);
-				2: string(STR_PARAM_VALUE_TOYLAND);
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -135,14 +135,14 @@ grf {
 			name: string(STR_PARAM_TREES_ARCTIC_NAME);
 			desc: string(STR_PARAM_TREES_ARCTIC_DESC);
 			type: int;
-			def_value: 0;
+			def_value: 1;
 			min_value: 0;
 			max_value: 2;
 			names: {
-				3: string(STR_PARAM_VALUE_TEMPERATE);
-				0: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
-				1: string(STR_PARAM_VALUE_TROPICAL);
-				//2: string(STR_PARAM_VALUE_TOYLAND);
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -151,14 +151,14 @@ grf {
 			name: string(STR_PARAM_GRASS_TROPICAL_NAME);
 			desc: string(STR_PARAM_GRASS_TROPICAL_DESC);
 			type: int;
-			def_value: 0;
+			def_value: 2;
 			min_value: 0;
 			max_value: 2;
 			names: {
-				2: string(STR_PARAM_VALUE_TEMPERATE);
-				3: string(STR_PARAM_VALUE_ARCTIC);
-				0: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
-				//1: string(STR_PARAM_VALUE_TOYLAND);
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				//3: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -167,14 +167,14 @@ grf {
 			name: string(STR_PARAM_FOUNDATIONS_TROPICAL_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_TROPICAL_DESC);
 			type: int;
-			def_value: 0;
+			def_value: 2;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				2: string(STR_PARAM_VALUE_TEMPERATE);
-				3: string(STR_PARAM_VALUE_ARCTIC);
-				0: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
-				1: string(STR_PARAM_VALUE_TOYLAND);
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				3: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -183,14 +183,14 @@ grf {
 			name: string(STR_PARAM_TREES_TROPICAL_NAME);
 			desc: string(STR_PARAM_TREES_TROPICAL_DESC);
 			type: int;
-			def_value: 0;
+			def_value: 2;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				2: string(STR_PARAM_VALUE_TEMPERATE);
-				3: string(STR_PARAM_VALUE_ARCTIC);
-				0: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
-				1: string(STR_PARAM_VALUE_TOYLAND);
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				3: string(STR_PARAM_VALUE_TOYLAND);
 			};
 		}
 	}
@@ -199,14 +199,14 @@ grf {
 			name: string(STR_PARAM_GRASS_TOYLAND_NAME);
 			desc: string(STR_PARAM_GRASS_TOYLAND_DESC);
 			type: int;
-			def_value: 0;
+			def_value: 3;
 			min_value: 3;
 			max_value: 3;
 			names: {
-				//1: string(STR_PARAM_VALUE_TEMPERATE);
-				//2: string(STR_PARAM_VALUE_ARCTIC);
-				//3: string(STR_PARAM_VALUE_TROPICAL);
-				0: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+				//0: string(STR_PARAM_VALUE_TEMPERATE);
+				//1: string(STR_PARAM_VALUE_ARCTIC);
+				//2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
 			};
 		}
 	}
@@ -215,14 +215,14 @@ grf {
 			name: string(STR_PARAM_FOUNDATIONS_TOYLAND_NAME);
 			desc: string(STR_PARAM_FOUNDATIONS_TOYLAND_DESC);
 			type: int;
-			def_value: 0;
+			def_value: 3;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				1: string(STR_PARAM_VALUE_TEMPERATE);
-				2: string(STR_PARAM_VALUE_ARCTIC);
-				3: string(STR_PARAM_VALUE_TROPICAL);
-				0: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
 			};
 		}
 	}
@@ -231,57 +231,84 @@ grf {
 			name: string(STR_PARAM_TREES_TOYLAND_NAME);
 			desc: string(STR_PARAM_TREES_TOYLAND_DESC);
 			type: int;
-			def_value: 0;
+			def_value: 3;
 			min_value: 0;
 			max_value: 3;
 			names: {
-				1: string(STR_PARAM_VALUE_TEMPERATE);
-				2: string(STR_PARAM_VALUE_ARCTIC);
-				3: string(STR_PARAM_VALUE_TROPICAL);
-				0: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
 			};
 		}
 	}
 }
 
+// Tested, largely glitch-free and functional in 1.3.0
 if (ttd_platform == PLATFORM_OPENTTD) {
 	if (openttd_version < version_openttd(1, 3, 0)) {
 		error(FATAL, REQUIRES_OPENTTD, "1.3.0");
 	}
 }
 
+// Not designed with TTDPatch compatibility in mind!
 if (ttd_platform != PLATFORM_OPENTTD) {
 	error(FATAL, REQUIRES_OPENTTD, "1.3.0");
 }
 
-//Inherit functional parameters from `grf` block temporary values
-//BUG: Default values for baseset extra grf parameters are 0
-//     For nice behaviour, requires temperate, arctic, tropical, toyland settings to default to 0
-//     Internally, checks use temperate=0, arctic=1, tropical=2, toyland=3, so adjust using + offset % 4
-//In the future, with base set parameter, hardcode defaults for openttd versions not supporting base set parameters
-param_cursors = param_cursors_;
-param_gridlines = param_gridlines_;
-param_logos = param_logos_;
-param_foundations_temperate = (param_foundations_temperate_ + 0) % 4;
-param_foundations_arctic = (param_foundations_arctic_ + 1) % 4;
-param_foundations_tropical = (param_foundations_tropical_ + 2) % 4;
-param_foundations_toyland = (param_foundations_toyland_ + 3) % 4;
-param_grass_temperate = (param_grass_temperate_ + 0) % 4;
-param_grass_arctic = (param_grass_arctic_ + 1) % 4;
-param_grass_tropical = (param_grass_tropical_ + 2) % 4;
-param_grass_toyland = (param_grass_toyland_ + 3) % 4;
-param_trees_temperate = (param_trees_temperate_ + 0) % 4;
-param_trees_arctic = (param_trees_arctic_ + 1) % 4;
-param_trees_tropical = (param_trees_tropical_ + 2) % 4;
-param_trees_toyland = (param_trees_toyland_ + 3) % 4;
+//Inherit functional parameters from hard-coded values, `grf` block temporary values, or settings grf
+// Base set defined values
+if (openttd_version < version_openttd(14, 0)) {
+	//error(WARNING, string(STR_WARN_SETTINGSGRF_HARDCODED));
+	// No base set parameter support prior to 13.4, and defaults from `grf` block not respected, so use hard-code values
+	param_cursors = 0;
+	param_gridlines = 0;
+	param_logos = 0;
+	param_foundations_temperate = 0;
+	param_foundations_arctic = 1;
+	param_foundations_tropical = 2;
+	param_foundations_toyland = 3;
+	param_grass_temperate = 0;
+	param_grass_arctic = 1;
+	param_grass_tropical = 2;
+	param_grass_toyland = 3;
+	param_trees_temperate = 0;
+	param_trees_arctic = 1;
+	param_trees_tropical = 2;
+	param_trees_toyland = 3;
+} else if (openttd_version >= version_openttd(14, 0)) {
+	//error(WARNING, string(STR_WARN_SETTINGSGRF_BASESETPARAM));
+	// Base set parameter support for versions 14.0 onward, load from `grf` block temporary values
+	// Actually nightlies from 30/10/2023 / from Github commit e81313e
+	param_cursors = param_cursors_;
+	param_gridlines = param_gridlines_;
+	param_logos = param_logos_;
+	param_foundations_temperate = param_foundations_temperate_;
+	param_foundations_arctic = param_foundations_arctic_;
+	param_foundations_tropical = param_foundations_tropical_;
+	param_foundations_toyland = param_foundations_toyland_;
+	param_grass_temperate = param_grass_temperate_;
+	param_grass_arctic = param_grass_arctic_;
+	param_grass_tropical = param_grass_tropical_;
+	param_grass_toyland = param_grass_toyland_;
+	param_trees_temperate = param_trees_temperate_;
+	param_trees_arctic = param_trees_arctic_;
+	param_trees_tropical = param_trees_tropical_;
+	param_trees_toyland = param_trees_toyland_;
+}
 
+// Check if the settings grf will be loaded, and load from its parameter values
 if (grf_future_status("OGZ\1")==1) {
-	// Check version, and warn if it's not the expected version to match this version of the base set
+	//error(WARNING, string(STR_WARN_SETTINGSGRF_SETTINGSGRFPARAM));
+	// Check settings grf version, and warn if it's not the expected version to match this version of the base set
 	if (param["OGZ\1", 254]!=2) {
 		error(WARNING, string(STR_WARN_SETTINGSGRF_VERSIONMISMATCH));
 	}
-
-	// Load parameters from settings grf, if will be loaded
+	// Check OpenTTD version, and warn if it's recommended to use base set parameters instead of the settings grf
+	if (openttd_version >= version_openttd(14, 0)) {
+		error(WARNING, string(STR_WARN_SETTINGSGRF_NOTRECOMMENDED));
+	}
+	// Load parameters from settings grf
 	param_cursors = param["OGZ\1", 1];
 	param_gridlines = param["OGZ\1", 2];
 	param_logos = param["OGZ\1", 3];

@@ -28,7 +28,9 @@ Install the newgrfs by copying each `.grf` file into the `newgrf` directory for 
 
 To set as the base graphics set, go to `Game Options>(Graphics)>Base Graphics` Set and select `OpenGFX2 Classic` (8bpp 1x zoom version) or `OpenGFX2 High Def` (32bpp 4x zoom version).
 
-To set OpenGFX2 settings, go to `NewGRF Settings`, find `OpenGFX2 Settings` and add to `Active NewGRF files`. Then, select `OpenGFX2 Settings` in the `Active NewGRF files list` and select `Set parameters` then adjust the settings. This is a bit of a hack, and will hopefully change in the future.
+OpenGFX2 has graphical user preferences. These can be configured in `Game Options>(Graphics)>Base graphics set>Set parameters`. These settings are local graphical changes only, ant can be freely changed, used with any save-game, used on any server, etc.
+
+Prior to OpenTTD 14.0 (specifically nightlies prior to 30/10/2023 or before Github commit e81313e) OpenTTD did not have a way to configure base set parameters. The `OpenGFX2 Settings` NewGRF provides a workaround: Go to `NewGRF Settings`, find `OpenGFX2 Settings` and add to `Active NewGRF files`. Then, select `OpenGFX2 Settings` in the `Active NewGRF files list` and select `Set parameters` then adjust the settings.
 
 Install other NewGRFs as normal using `NewGRF settings`.
 
