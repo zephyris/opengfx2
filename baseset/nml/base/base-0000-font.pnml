@@ -641,7 +641,7 @@ template template_font_newspaper_base(z) {
     [ 270*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // A circumflex
     [ 290*z,  160*z,  13*z,  21*z,   0*z,  -2*z] // A tilde
     [ 310*z,  160*z,   1*z,   1*z,   0*z,  -2*z] // A umlaut
-    [ 330*z,  160*z,   3*z,  21*z,   0*z,  -2*z] // A ring
+    [ 330*z,  160*z,   4*z,  21*z,   0*z,  -2*z] // A ring
     [ 350*z,  160*z,   7*z,  21*z,   0*z,  -2*z] // AE
     [ 370*z,  160*z,  11*z,  21*z,   0*z,  -2*z] // C cedila
     [ 390*z,  160*z,  10*z,  21*z,   0*z,  -2*z] // E grave
@@ -738,3 +738,4 @@ template template_font_newspaper_base(z) {
     [ 650*z,  280*z,   9*z,  21*z,   0*z,  -2*z] // 
 }
 base_graphics spr450( 450, "../graphics/fonts/1/fonts_8bpp.png") { template_font_newspaper_base(1) }
+alternative_sprites (spr450, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/fonts/2/fonts_8bpp.png") { template_font_newspaper_base(2) }
