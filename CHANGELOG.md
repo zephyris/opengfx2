@@ -1,5 +1,23 @@
 # OpenGFX2 Changelog
 
+## v0.3
+Base set:
+* Baseset parameters, for baseset parameter support when OpenTTD 14.0 arrives.
+* Removed pixel jitter in animated industries, and similar tweaks.
+* Expanded 2x scale GUI scaling support.
+* Prototype pixel art 4x zoom trees for Arctic.
+* Various bug fixes.
+
+Settings NewGRF:
+* Preparation for depreciation when OpenTTD 14.0 arrives.
+
+NewGRFs:
+* New rail stations and waypoints NewGRF, just waypoints for now.
+* Fixes for standalone behaviour of the landscape NewGRF.
+
+Known issues:
+* If you're using a nightly, make sure you're using one from later than 29/10/2023, otherwise all climates will end up looking like temperate!
+
 ## v0.21
 Minor bugfix release.
 
