@@ -1,3 +1,30 @@
+//Temperate in temperate
+template template_tree_temperate_in_temperate(z) {
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
+	template_tree_alt(0, 648, z)
+	template_tree_alt(0, 729, z)
+	template_tree_alt(0, 810, z)
+	template_tree_alt(0, 972, z)
+	template_tree_alt(0, 891, z)
+	template_tree_alt(0, 1053, z)
+	template_tree_alt(0, 1134, z)
+	template_tree_alt(0, 1215, z)
+	template_tree_alt(0, 1296, z)
+	template_tree_alt(0, 1377, z)
+	template_tree_alt(0, 1458, z)
+}
+if (param_trees_arctic==0) {
+	replace trees_temperate_in_temperate(1576, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_temperate(1) }
+	#ez alternative_sprites(trees_temperate_in_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_temperate(4) }
+}
+
 //Temperate in arctic
 template template_tree_temperate_in_arctic(z) {
 	template_tree_alt(0, 0, z)
@@ -88,6 +115,24 @@ if (param_trees_temperate==1) {
     #ez alternative_sprites(trees_arctic_in_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_temperate(4) }
 }
 
+//Arctic in arctic
+template template_tree_arctic_in_arctic(z) {
+	template_tree_alt(0,  81, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0,   0, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
+}
+if (param_trees_arctic==1) {
+	replace trees_arctic_in_arctic(1709, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_arctic(1) }
+	#ez alternative_sprites(trees_arctic_in_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_arctic(4) }
+	replace trees_arctic_in_arctic_snow(1765, "../graphics/trees/64_alt/pygen/arctic_snow_8bpp.png") { template_tree_arctic_in_arctic(1) }
+	#ez alternative_sprites(trees_arctic_in_arctic_snow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/arctic_snow_8bpp.png") { template_tree_arctic_in_arctic(4) }
+}
+
 //Arctic in tropical
 template template_tree_arctic_in_tropical_1(z) {
 	template_tree_alt(0, 1, z)
@@ -176,6 +221,29 @@ if (param_trees_arctic==2) {
     //#ez alternative_sprites(trees_tropical_in_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_arctic(4) }
     replace trees_tropical_in_arctic_snow(1765, "../graphics/trees/64_alt/pygen/tropical_snow_8bpp.png") { template_tree_tropical_in_arctic(1) }
     //#ez alternative_sprites(trees_tropical_in_arctic_snow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_snow_8bpp.png") { template_tree_tropical_in_arctic(4) }
+}
+
+//Tropical in tropical
+template template_tree_tropical_setleaf1(z) {
+	template_tree_alt(0,   0, z)
+	template_tree_alt(0,  81, z)
+}
+template template_tree_tropical_setleaf2(z) {
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+}
+template template_tree_tropical_setleaf3(z) {
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+}
+if (param_trees_tropical==2) {
+	replace trees_tropical_in_tropical_1(1835, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf1(1) }
+	//#ez alternative_sprites(trees_tropical_in_tropical_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf1(4) }
+	replace trees_tropical_in_tropical_2(1863, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf2(1) }
+	//#ez alternative_sprites(trees_tropical_in_tropical_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf2(4) }
+	replace trees_tropical_in_tropical_3(1933, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf3(1) }
+	//#ez alternative_sprites(trees_tropical_in_tropical_3, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf3(4) }
 }
 
 //Tropical in toyland
@@ -273,6 +341,23 @@ if (param_trees_tropical==3) {
     #32 alternative_sprites(trees_toyland_in_tropical_cacti, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/trees/64/toyland_trees_bt32bpp.png") { template_tree_toyland_in_tropical_cacti(1) }
     replace trees_toyland_in_tropical_2(1926, "../graphics/trees/64/toyland_trees_8bpp.png") { template_tree_toyland_in_tropical_2(1) }
     #32 alternative_sprites(trees_toyland_in_tropical_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/trees/64/toyland_trees_bt32bpp.png") { template_tree_toyland_in_tropical_2(1) }
+}
+
+//Toyland in toyland
+template template_tree_toyland_in_toyland(z) {
+	template_tree_bordered(0,   0, z) // inverted cone, company colour-like recolouring
+	template_tree_bordered(0,  81, z) // lolly, company colour-like recolouring
+	template_tree_bordered(0, 162, z) // parasol, company colour-like recolouring
+	template_tree_bordered(0, 243, z) // moving cylinder, no recolouring
+	template_tree_bordered(0, 324, z) // umbrella, company colour-like recolouring
+	template_tree_bordered(0, 405, z) // mushroom, company colour-like recolouring
+	template_tree_bordered(0, 486, z) // cone, company colour-like recolouring
+	template_tree_bordered(0, 567, z) // sphere, company colour-like recolouring
+	template_tree_bordered(0, 648, z) // stacking disks, company colour-like recolouring
+}
+if (param_trees_toyland==3) {
+	replace trees_toyland_in_toyland(1947, "../graphics/trees/64/toyland_trees_8bpp.png") { template_tree_toyland_in_toyland(1) }
+	#32 alternative_sprites(trees_toyland_in_toyland, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/trees/64/toyland_trees_rm32bpp.png", "../graphics/trees/64/toyland_trees_8bpp.png") { template_tree_toyland_in_toyland(1) }
 }
 
 // Roadside trees
