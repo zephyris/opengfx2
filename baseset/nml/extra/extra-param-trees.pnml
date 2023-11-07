@@ -90,25 +90,25 @@ if (param_trees_toyland==0) {
 
 //Arctic in temperate
 template template_tree_arctic_in_temperate(z) {
-	template_tree_alt(0, 1, z)
-	template_tree_alt(0, 82, z)
-	template_tree_alt(0, 163, z)
-	template_tree_alt(0, 244, z)
-	template_tree_alt(0, 325, z)
-	template_tree_alt(0, 406, z)
-	template_tree_alt(0, 487, z)
-	template_tree_alt(0, 568, z)
-	template_tree_alt(0, 1, z)
-	template_tree_alt(0, 82, z)
-	template_tree_alt(0, 163, z)
-	template_tree_alt(0, 244, z)
-	template_tree_alt(0, 325, z)
-	template_tree_alt(0, 406, z)
-	template_tree_alt(0, 487, z)
-	template_tree_alt(0, 568, z)
-	template_tree_alt(0, 1, z)
-	template_tree_alt(0, 82, z)
-	template_tree_alt(0, 163, z)
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 162, z)
 }
 if (param_trees_temperate==1) {
     replace trees_arctic_in_temperate(1576, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_temperate(1) }
@@ -135,24 +135,24 @@ if (param_trees_arctic==1) {
 
 //Arctic in tropical
 template template_tree_arctic_in_tropical_1(z) {
-	template_tree_alt(0, 1, z)
-	template_tree_alt(0, 82, z)
-	template_tree_alt(0, 163, z)
-	template_tree_alt(0, 244, z)
-	template_tree_alt(0, 325, z)
-	template_tree_alt(0, 406, z)
-	template_tree_alt(0, 487, z)
-	template_tree_alt(0, 568, z)
-	template_tree_alt(0, 1, z)
-	template_tree_alt(0, 82, z)
-	template_tree_alt(0, 163, z)
-	template_tree_alt(0, 244, z)
-	template_tree_alt(0, 325, z)
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
 }
 template template_tree_arctic_in_tropical_2(z) {
-	template_tree_alt(0, 406, z)
-	template_tree_alt(0, 487, z)
-	template_tree_alt(0, 568, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
 }
 if (param_trees_tropical==1) {
     replace trees_arctic_in_tropical_1(1821, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_tropical_1(1) }
@@ -163,15 +163,15 @@ if (param_trees_tropical==1) {
 
 //Arctic in toyland
 template template_tree_arctic_in_toyland(z) {
-	template_tree_alt(0, 1, z)
-	template_tree_alt(0, 82, z)
-	template_tree_alt(0, 163, z)
-	template_tree_alt(0, 244, z)
-	template_tree_alt(0, 325, z)
-	template_tree_alt(0, 406, z)
-	template_tree_alt(0, 487, z)
-	template_tree_alt(0, 568, z)
-	template_tree_alt(0, 1, z)
+	template_tree_alt(0, 0, z)
+	template_tree_alt(0, 81, z)
+	template_tree_alt(0, 162, z)
+	template_tree_alt(0, 243, z)
+	template_tree_alt(0, 324, z)
+	template_tree_alt(0, 405, z)
+	template_tree_alt(0, 486, z)
+	template_tree_alt(0, 567, z)
+	template_tree_alt(0, 0, z)
 }
 if (param_trees_toyland==1) {
     replace trees_arctic_in_toyland(1947, "../graphics/trees/64_alt/pygen/arctic_8bpp.png") { template_tree_arctic_in_toyland(1) }
