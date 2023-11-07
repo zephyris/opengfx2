@@ -218,9 +218,9 @@ template template_tree_tropical_in_arctic(z) {
 }
 if (param_trees_arctic==2) {
     replace trees_tropical_in_arctic(1709, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_arctic(1) }
-    //#ez alternative_sprites(trees_tropical_in_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_arctic(4) }
+    #ez alternative_sprites(trees_tropical_in_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_arctic(4) }
     replace trees_tropical_in_arctic_snow(1765, "../graphics/trees/64_alt/pygen/tropical_snow_8bpp.png") { template_tree_tropical_in_arctic(1) }
-    //#ez alternative_sprites(trees_tropical_in_arctic_snow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_snow_8bpp.png") { template_tree_tropical_in_arctic(4) }
+    #ez alternative_sprites(trees_tropical_in_arctic_snow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_snow_8bpp.png") { template_tree_tropical_in_arctic(4) }
 }
 
 //Tropical in tropical
@@ -239,11 +239,11 @@ template template_tree_tropical_setleaf3(z) {
 }
 if (param_trees_tropical==2) {
 	replace trees_tropical_in_tropical_1(1835, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf1(1) }
-	//#ez alternative_sprites(trees_tropical_in_tropical_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf1(4) }
+	#ez alternative_sprites(trees_tropical_in_tropical_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf1(4) }
 	replace trees_tropical_in_tropical_2(1863, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf2(1) }
-	//#ez alternative_sprites(trees_tropical_in_tropical_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf2(4) }
+	#ez alternative_sprites(trees_tropical_in_tropical_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf2(4) }
 	replace trees_tropical_in_tropical_3(1933, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf3(1) }
-	//#ez alternative_sprites(trees_tropical_in_tropical_3, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf3(4) }
+	#ez alternative_sprites(trees_tropical_in_tropical_3, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/tropical_8bpp.png") { template_tree_tropical_setleaf3(4) }
 }
 
 //Tropical in toyland
@@ -260,7 +260,7 @@ template template_tree_tropical_in_toyland(z) {
 }
 if (param_trees_toyland==2) {
     replace trees_tropical_in_toyland(1947, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_toyland(1) }
-    //#ez alternative_sprites(trees_tropical_in_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_toyland(1) }
+    #ez alternative_sprites(trees_tropical_in_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/64_alt/pygen/tropical_8bpp.png") { template_tree_tropical_in_toyland(1) }
 }
 
 //Toyland in temperate
