@@ -24,10 +24,10 @@ base_graphics spr312( 312, "") { spr312_template() }
 
 //331-349 desert transition, 2/4
 base_graphics spr331(331, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-#ez alternative_sprites(spr331, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+//#ez alternative_sprites(spr331, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
 #ez alternative_sprites(spr331, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 #32 alternative_sprites(spr331, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-#32 #ez alternative_sprites(spr331, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+//#32 #ez alternative_sprites(spr331, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
 #32 #ez alternative_sprites(spr331, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 
 //350-368 unused (would be desert transition 3/4)
@@ -35,8 +35,8 @@ base_graphics spr350( 350, "") { spr312_template() }
 
 //369-387 desert, 4/4
 base_graphics spr369(369, "../graphics/terrain/64/pygen/tropical_groundtiles_desert_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-#ez alternative_sprites(spr369, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_desert_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+//#ez alternative_sprites(spr369, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_desert_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
 #ez alternative_sprites(spr369, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_desert_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 #32 alternative_sprites(spr369, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_groundtiles_desert_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-#32 #ez alternative_sprites(spr369, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_desert_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+//#32 #ez alternative_sprites(spr369, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_desert_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
 #32 #ez alternative_sprites(spr369, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_desert_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }

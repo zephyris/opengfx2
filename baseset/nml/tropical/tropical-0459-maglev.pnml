@@ -1,7 +1,7 @@
 //459-484 maglev on desert ground
 base_graphics spr459(459, "../graphics/infrastructure/64/pygen/maglev_tropical_desert_8bpp.png") { template_railtiles(0, 0, 1) }
-#ez alternative_sprites(spr459, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_tropical_desert_8bpp.png") { template_railtiles(0, 0, 2) }
+//#ez alternative_sprites(spr459, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_tropical_desert_8bpp.png") { template_railtiles(0, 0, 2) }
 #ez alternative_sprites(spr459, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/maglev_tropical_desert_8bpp.png") { template_railtiles(0, 0, 4) }
 #32 alternative_sprites(spr459, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/maglev_tropical_desert_bt32bpp.png") { template_railtiles(0, 0, 1) }
-#32 #ez alternative_sprites(spr459, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/maglev_tropical_desert_bt32bpp.png") { template_railtiles(0, 0, 2) }
+//#32 #ez alternative_sprites(spr459, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/maglev_tropical_desert_bt32bpp.png") { template_railtiles(0, 0, 2) }
 #32 #ez alternative_sprites(spr459, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/maglev_tropical_desert_bt32bpp.png") { template_railtiles(0, 0, 4) }

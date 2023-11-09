@@ -1,17 +1,17 @@
 //284-310 maglev track
 base_graphics spr284(284, "../graphics/infrastructure/64/pygen/maglev_arctic_grass_8bpp.png") { template_railtiles(0, 0, 1) }
-#ez alternative_sprites(spr284, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_arctic_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+//#ez alternative_sprites(spr284, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_arctic_grass_8bpp.png") { template_railtiles(0, 0, 2) }
 #ez alternative_sprites(spr284, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/maglev_arctic_grass_8bpp.png") { template_railtiles(0, 0, 4) }
 #32 alternative_sprites(spr284, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/maglev_arctic_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/maglev_arctic_grass_8bpp.png") { template_railtiles(0, 0, 1) }
-#32 #ez alternative_sprites(spr284, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/maglev_arctic_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/maglev_arctic_grass_8bpp.png") { template_railtiles(0, 0, 2) }
+//#32 #ez alternative_sprites(spr284, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/maglev_arctic_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/maglev_arctic_grass_8bpp.png") { template_railtiles(0, 0, 2) }
 #32 #ez alternative_sprites(spr284, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/maglev_arctic_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/maglev_arctic_grass_8bpp.png") { template_railtiles(0, 0, 4) }
 
 //310-313 arctic maglev level crossings
 base_graphics spr310(310, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
-#ez alternative_sprites(spr310, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_arctic_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
+//#ez alternative_sprites(spr310, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_arctic_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
 #ez alternative_sprites(spr310, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
 #32 alternative_sprites(spr310, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
-#32 #ez alternative_sprites(spr310, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_arctic_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_arctic_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
+//#32 #ez alternative_sprites(spr310, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_arctic_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/levelcrossing_road_maglev_arctic_grass_8bpp.png") { template_railcrossing(0, 0, 2) }
 #32 #ez alternative_sprites(spr310, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
 
 //314-321 arctic maglev tunnel

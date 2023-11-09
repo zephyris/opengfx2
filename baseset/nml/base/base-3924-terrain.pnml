@@ -1,49 +1,49 @@
 //3924-3942 bare land (0% grassy)
 base_graphics spr3924(3924, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 144, 1) }
-#ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 144, 2) }
+//#ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 144, 2) }
 #ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 144, 4) }
 #32 alternative_sprites(spr3924, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 144, 1) }
-#32 #ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 144, 2) }
+//#32 #ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 144, 2) }
 #32 #ez alternative_sprites(spr3924, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 144, 4) }
 
 //3943-3961 bare land (33% grassy)
 base_graphics spr3943(3943, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 96, 1) }
-#ez alternative_sprites(spr3943, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 96, 2) }
+//#ez alternative_sprites(spr3943, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 96, 2) }
 #ez alternative_sprites(spr3943, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 96, 4) }
 #32 alternative_sprites(spr3943, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 96, 1) }
-#32 #ez alternative_sprites(spr3943, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 96, 2) }
+//#32 #ez alternative_sprites(spr3943, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 96, 2) }
 #32 #ez alternative_sprites(spr3943, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 96, 4) }
 
 //3962-3980 bare land (66% grassy)
 base_graphics spr3962(3962, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 48, 1) }
-#ez alternative_sprites(spr3962, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 48, 2) }
+//#ez alternative_sprites(spr3962, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 48, 2) }
 #ez alternative_sprites(spr3962, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 48, 4) }
 #32 alternative_sprites(spr3962, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 48, 1) }
-#32 #ez alternative_sprites(spr3962, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 48, 2) }
+//#32 #ez alternative_sprites(spr3962, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 48, 2) }
 #32 #ez alternative_sprites(spr3962, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 48, 4) }
 
 //3981-3999 temperate grass (100% grassy)
 base_graphics spr3981(3981, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-#ez alternative_sprites(spr3981, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+//#ez alternative_sprites(spr3981, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
 #ez alternative_sprites(spr3981, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 #32 alternative_sprites(spr3981, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-#32 #ez alternative_sprites(spr3981, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+//#32 #ez alternative_sprites(spr3981, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
 #32 #ez alternative_sprites(spr3981, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 
 //4000-4022 temperate rough terrain
 base_graphics spr4000(4000, "../graphics/terrain/64/pygen/temperate_groundtiles_rough_gridline_8bpp.png") { template_groundtiles(0, 0, 1) template_groundtiles_extra(0, 0, 1) }
-#ez alternative_sprites(spr4000, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rough_gridline_8bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
+//#ez alternative_sprites(spr4000, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rough_gridline_8bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
 #ez alternative_sprites(spr4000, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_rough_gridline_8bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
 #32 alternative_sprites(spr4000, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_rough_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) template_groundtiles_extra(0, 0, 1) }
-#32 #ez alternative_sprites(spr4000, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rough_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
+//#32 #ez alternative_sprites(spr4000, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rough_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) template_groundtiles_extra(0, 0, 2) }
 #32 #ez alternative_sprites(spr4000, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_rough_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) template_groundtiles_extra(0, 0, 4) }
 
 //4023-4041 temperate rocky terrain
 base_graphics spr4023(4023, "../graphics/terrain/64/pygen/temperate_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-#ez alternative_sprites(spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+//#ez alternative_sprites(spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
 #ez alternative_sprites(spr4023, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_rocks_alt_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 #32 alternative_sprites(spr4023, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_rocks_alt_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-#32 #ez alternative_sprites(spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rocks_alt_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+//#32 #ez alternative_sprites(spr4023, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_rocks_alt_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
 #32 #ez alternative_sprites(spr4023, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_rocks_alt_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 
 //4042-4060 fully rocky ground (not used in OpenTTD or even TTD)

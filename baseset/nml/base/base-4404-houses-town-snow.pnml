@@ -208,31 +208,31 @@ base_graphics spr4487(4487, "../graphics/towns/arctic/64/pygen/1x2_tallofficeblo
 //Arctic snow terrain
 //4493-4511 partial snow 1/4
 base_graphics spr4493(4493, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-#ez alternative_sprites(spr4493, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+//#ez alternative_sprites(spr4493, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
 #ez alternative_sprites(spr4493, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 #32 alternative_sprites(spr4493, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-#32 #ez alternative_sprites(spr4493, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+//#32 #ez alternative_sprites(spr4493, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
 #32 #ez alternative_sprites(spr4493, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 //4512-4530 partial snow 2/4
 base_graphics spr4512(4512, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 48, 1) }
-#ez alternative_sprites(spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 48, 2) }
+//#ez alternative_sprites(spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 48, 2) }
 #ez alternative_sprites(spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 48, 4) }
 #32 alternative_sprites(spr4512, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 48, 1) }
-#32 #ez alternative_sprites(spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 48, 2) }
+//#32 #ez alternative_sprites(spr4512, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 48, 2) }
 #32 #ez alternative_sprites(spr4512, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 48, 4) }
 //4531-4549 partial snow 3/4
 base_graphics spr4531(4531, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 96, 1) }
-#ez alternative_sprites(spr4531, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 96, 2) }
+//#ez alternative_sprites(spr4531, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 96, 2) }
 #ez alternative_sprites(spr4531, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_gridline_8bpp.png") { template_groundtiles(0, 96, 4) }
 #32 alternative_sprites(spr4531, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 96, 1) }
-#32 #ez alternative_sprites(spr4531, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 96, 2) }
+//#32 #ez alternative_sprites(spr4531, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 96, 2) }
 #32 #ez alternative_sprites(spr4531, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snowtransition_gridline_bt32bpp.png") { template_groundtiles(0, 96, 4) }
 //4550-4568 full snow 4/4
 base_graphics spr4550(4550, "../graphics/terrain/64/pygen/arctic_groundtiles_snow_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-#ez alternative_sprites(spr4550, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+//#ez alternative_sprites(spr4550, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
 #ez alternative_sprites(spr4550, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snow_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 #32 alternative_sprites(spr4550, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_snow_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-#32 #ez alternative_sprites(spr4550, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+//#32 #ez alternative_sprites(spr4550, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
 #32 #ez alternative_sprites(spr4550, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snow_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 
 //Snowy houses

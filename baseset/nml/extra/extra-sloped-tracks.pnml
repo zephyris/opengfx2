@@ -1,9 +1,9 @@
 // SLOPED_RAILS 0-3 rail
 replacenew sloped_rails0(SLOPED_RAILS, "../graphics/infrastructure/64/rail_bits_masked_8bpp.png", 0) { template_railoverlay_extra(0, 0, 1) }
-#ez alternative_sprites(sloped_rails0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_bits_masked_8bpp.png") { template_railoverlay_extra(0, 0, 2) }
+//#ez alternative_sprites(sloped_rails0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_bits_masked_8bpp.png") { template_railoverlay_extra(0, 0, 2) }
 #ez alternative_sprites(sloped_rails0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/rail_bits_masked_8bpp.png") { template_railoverlay_extra(0, 0, 4) }
 #32 alternative_sprites(sloped_rails0, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/rail_bits_masked_bt32bpp.png") { template_railoverlay_extra(0, 0, 1) }
-#32 #ez alternative_sprites(sloped_rails0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/rail_bits_masked_bt32bpp.png") { template_railoverlay_extra(0, 0, 2) }
+//#32 #ez alternative_sprites(sloped_rails0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/rail_bits_masked_bt32bpp.png") { template_railoverlay_extra(0, 0, 2) }
 #32 #ez alternative_sprites(sloped_rails0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/rail_bits_masked_bt32bpp.png") { template_railoverlay_extra(0, 0, 4) }
 
 // SLOPED_RAILS 4-7 monorail
