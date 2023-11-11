@@ -63,7 +63,11 @@ for terrain_key in terrain_list:
     # Check if update needed
     terrain_image_path = os.path.join("pygen", infrastructure_list[infrastructure_key]+"_"+terrain_list[terrain_key]+"_32bpp.png")
     road_image_path = "road_overlayalpha.png"
+    if "toyland" in terrain_key:
+      road_image_path = "road_toyland_overlayalpha.png"
     overlay_alpha_path = infrastructure_list[infrastructure_key]+"_levelcrossing_overlayalpha.png"
+    if "toyland" in terrain_key:
+      overlay_alpha_path = "toyland_" + overlay_alpha_path
     overlay_normal_path = "levelcrossing_overlaynormal.png"
     output_normal_path = os.path.join("pygen", "levelcrossing_road_"+infrastructure_key+"_"+terrain_key+"_32bpp.png")
     output_palmask_path = os.path.join("pygen", "levelcrossing_road_"+infrastructure_key+"_"+terrain_key+"_palmask.png")
