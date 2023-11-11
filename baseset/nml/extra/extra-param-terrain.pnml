@@ -118,9 +118,9 @@ if (param_gridlines==0 || param_gridlines==2) {
         replace grid_temperate_spr1332(1332, "../graphics/infrastructure/64/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
         //#ez alternative_sprites(grid_temperate_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
         #ez alternative_sprites(grid_temperate_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
-        #32 alternative_sprites(grid_temperate_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_temperate_grass_bt32bpp.png") { template_roadtiles(0, 0, 1) }
-        //#32 #ez alternative_sprites(grid_temperate_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_bt32bpp.png") { template_roadtiles(0, 0, 2) }
-        #32 #ez alternative_sprites(grid_temperate_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(grid_temperate_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_temperate_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
+        //#32 #ez alternative_sprites(grid_temperate_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(grid_temperate_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/road_temperate_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
 
         //2365-2371 tunnels grass rail
         replace grid_temperate_spr2365(2365, "../graphics/stations/general/64/pygen/tunnels_rail_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
@@ -287,9 +287,9 @@ if (param_gridlines==0 || param_gridlines==2) {
         replace grid_arctic_spr1332(1332, "../graphics/infrastructure/64/pygen/road_arctic_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
         //#ez alternative_sprites(grid_arctic_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_arctic_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
         #ez alternative_sprites(grid_arctic_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_arctic_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
-        #32 alternative_sprites(grid_arctic_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_arctic_grass_bt32bpp.png") { template_roadtiles(0, 0, 1) }
-        //#32 #ez alternative_sprites(grid_arctic_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_arctic_grass_bt32bpp.png") { template_roadtiles(0, 0, 2) }
-        #32 #ez alternative_sprites(grid_arctic_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_arctic_grass_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(grid_arctic_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_arctic_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/road_arctic_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
+        //#32 #ez alternative_sprites(grid_arctic_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_arctic_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/road_arctic_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(grid_arctic_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_arctic_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/road_arctic_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
 
         //2365-2371 tunnels grass rail
         replace grid_arctic_spr2365(2365, "../graphics/stations/general/64/pygen/tunnels_rail_arctic_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
@@ -456,9 +456,9 @@ if (param_gridlines==0 || param_gridlines==2) {
         replace grid_tropical_spr1332(1332, "../graphics/infrastructure/64/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
         //#ez alternative_sprites(grid_tropical_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
         #ez alternative_sprites(grid_tropical_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
-        #32 alternative_sprites(grid_tropical_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_tropical_grass_bt32bpp.png") { template_roadtiles(0, 0, 1) }
-        //#32 #ez alternative_sprites(grid_tropical_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_tropical_grass_bt32bpp.png") { template_roadtiles(0, 0, 2) }
-        #32 #ez alternative_sprites(grid_tropical_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_tropical_grass_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(grid_tropical_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_tropical_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
+        //#32 #ez alternative_sprites(grid_tropical_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_tropical_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(grid_tropical_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_tropical_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/road_tropical_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
 
         //2365-2371 tunnels grass rail
         replace grid_tropical_spr2365(2365, "../graphics/stations/general/64/pygen/tunnels_rail_tropical_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
@@ -625,9 +625,9 @@ if (param_gridlines==0 || param_gridlines==2) {
         replace grid_toyland_spr1332(1332, "../graphics/infrastructure/64/pygen/road_toyland_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
         //#ez alternative_sprites(grid_toyland_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_toyland_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
         #ez alternative_sprites(grid_toyland_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_toyland_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
-        #32 alternative_sprites(grid_toyland_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_toyland_grass_bt32bpp.png") { template_roadtiles(0, 0, 1) }
-        //#32 #ez alternative_sprites(grid_toyland_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_toyland_grass_bt32bpp.png") { template_roadtiles(0, 0, 2) }
-        #32 #ez alternative_sprites(grid_toyland_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_toyland_grass_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(grid_toyland_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_toyland_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/road_toyland_grass_8bpp.png") { template_roadtiles(0, 0, 1) }
+        //#32 #ez alternative_sprites(grid_toyland_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_toyland_grass_rm32bpp.png", "../graphics/infrastructure/128/pygen/road_toyland_grass_8bpp.png") { template_roadtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(grid_toyland_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_toyland_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/road_toyland_grass_8bpp.png") { template_roadtiles(0, 0, 4) }
     }
 }
 
@@ -738,9 +738,9 @@ if (param_gridlines==1) {
         replace nogrid_temperate_spr1332(1332, "../graphics/infrastructure/64/pygen/road_temperate_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
         //#ez alternative_sprites(nogrid_temperate_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 2) }
         #ez alternative_sprites(nogrid_temperate_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
-        #32 alternative_sprites(nogrid_temperate_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_temperate_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 1) }
-        //#32 #ez alternative_sprites(nogrid_temperate_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 2) }
-        #32 #ez alternative_sprites(nogrid_temperate_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(nogrid_temperate_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_temperate_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/road_temperate_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
+        //#32 #ez alternative_sprites(nogrid_temperate_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_temperate_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/128/pygen/road_temperate_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_temperate_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_temperate_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/road_temperate_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
 
         //2365-2371 tunnels grass rail
         replace nogrid_temperate_spr2365(2365, "../graphics/stations/general/64/pygen/tunnels_rail_temperate_grass_nogridline_8bpp.png") { template_tunnels_general(0, 0, 1) }
@@ -907,9 +907,9 @@ if (param_gridlines==1) {
         replace nogrid_arctic_spr1332(1332, "../graphics/infrastructure/64/pygen/road_arctic_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
         //#ez alternative_sprites(nogrid_arctic_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_arctic_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 2) }
         #ez alternative_sprites(nogrid_arctic_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_arctic_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
-        #32 alternative_sprites(nogrid_arctic_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_arctic_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 1) }
-        //#32 #ez alternative_sprites(nogrid_arctic_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_arctic_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 2) }
-        #32 #ez alternative_sprites(nogrid_arctic_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_arctic_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_arctic_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/road_arctic_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
+        //#32 #ez alternative_sprites(nogrid_arctic_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_arctic_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/128/pygen/road_arctic_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_arctic_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/road_arctic_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
 
         //2365-2371 tunnels grass rail
         replace nogrid_arctic_spr2365(2365, "../graphics/stations/general/64/pygen/tunnels_rail_arctic_grass_nogridline_8bpp.png") { template_tunnels_general(0, 0, 1) }
@@ -1076,9 +1076,9 @@ if (param_gridlines==1) {
         replace nogrid_tropical_spr1332(1332, "../graphics/infrastructure/64/pygen/road_tropical_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
         //#ez alternative_sprites(nogrid_tropical_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_tropical_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 2) }
         #ez alternative_sprites(nogrid_tropical_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_tropical_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
-        #32 alternative_sprites(nogrid_tropical_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_tropical_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 1) }
-        //#32 #ez alternative_sprites(nogrid_tropical_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_tropical_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 2) }
-        #32 #ez alternative_sprites(nogrid_tropical_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_tropical_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(nogrid_tropical_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_tropical_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/road_tropical_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
+        //#32 #ez alternative_sprites(nogrid_tropical_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_tropical_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/128/pygen/road_tropical_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_tropical_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_tropical_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/road_tropical_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
 
         //2365-2371 tunnels grass rail
         replace nogrid_tropical_spr2365(2365, "../graphics/stations/general/64/pygen/tunnels_rail_tropical_grass_nogridline_8bpp.png") { template_tunnels_general(0, 0, 1) }
@@ -1245,9 +1245,9 @@ if (param_gridlines==1) {
         replace nogrid_toyland_spr1332(1332, "../graphics/infrastructure/64/pygen/road_toyland_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
         //#ez alternative_sprites(nogrid_toyland_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_toyland_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 2) }
         #ez alternative_sprites(nogrid_toyland_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_toyland_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
-        #32 alternative_sprites(nogrid_toyland_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_toyland_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 1) }
-        //#32 #ez alternative_sprites(nogrid_toyland_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_toyland_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 2) }
-        #32 #ez alternative_sprites(nogrid_toyland_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_toyland_grass_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(nogrid_toyland_spr1332, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_toyland_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/road_toyland_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
+        //#32 #ez alternative_sprites(nogrid_toyland_spr1332, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_toyland_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/128/pygen/road_toyland_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 2) }
+        #32 #ez alternative_sprites(nogrid_toyland_spr1332, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_toyland_grass_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/road_toyland_grass_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
 
         //2365-2371 tunnels grass rail
         replace nogrid_toyland_spr2365(2365, "../graphics/stations/general/64/pygen/tunnels_rail_toyland_grass_nogridline_8bpp.png") { template_tunnels_general(0, 0, 1) }
