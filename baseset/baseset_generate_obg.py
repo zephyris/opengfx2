@@ -22,7 +22,7 @@ if typeshort == "8":
   namesuffix = "Classic"
 elif typeshort == "32ez":
   description = "(High definition version, "+typelong+")"
-  namesuffix = " High Def"
+  namesuffix = "High Def"
 else:
   description = "("+typelong+")"
   namesuffix = typelong
