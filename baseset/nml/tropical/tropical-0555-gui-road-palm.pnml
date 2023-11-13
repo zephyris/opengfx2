@@ -12,3 +12,4 @@ base_graphics spr556( 556, "../graphics/cursors/1/pygen/default_8bpp.png") {
 
 //557 tropical city roadside tree
 base_graphics spr557(557, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city(40, 0, 1) }
+#ez alternative_sprites(spr557, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/streetfurniture/256/town_tree_8bpp.png") { template_tree_city(40, 0, 4) }

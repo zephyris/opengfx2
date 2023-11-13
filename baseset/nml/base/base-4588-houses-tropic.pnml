@@ -90,3 +90,4 @@ base_graphics spr4623(4623, "../graphics/towns/tropical/64/pygen/tallofficeblock
 
 //4626 city roadside tree
 base_graphics spr4626(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city(0, 0, 1) }
+#ez alternative_sprites(spr4626, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/streetfurniture/256/town_tree_8bpp.png") { template_tree_city(0, 0, 4) }

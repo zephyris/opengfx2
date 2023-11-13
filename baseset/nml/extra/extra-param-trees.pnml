@@ -20,7 +20,7 @@ template template_tree_temperate_in_temperate(z) {
 	template_tree_alt(0, 1377, z)
 	template_tree_alt(0, 1458, z)
 }
-if (param_trees_arctic==0) {
+if (param_trees_temperate==0) {
 	replace trees_temperate_in_temperate(1576, "../graphics/trees/64_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_temperate(1) }
 	#ez alternative_sprites(trees_temperate_in_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256_alt/pygen/temperate_8bpp.png") { template_tree_temperate_in_temperate(4) }
 }
@@ -361,12 +361,15 @@ if (param_trees_toyland==3) {
 }
 
 // Roadside trees
-if ((climate == CLIMATE_ARCTIC && param_trees_arctic==0) || (climate == CLIMATE_TROPICAL && param_trees_tropical==0)) {
+if ((climate==CLIMATE_TEMPERATE && param_trees_temperate==0) || (climate==CLIMATE_ARCTIC && param_trees_arctic==0) || (climate==CLIMATE_TROPICAL && param_trees_tropical==0)) {
 	replace spr4626_temperate(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city( 0, 0, 1) }
+	#ez alternative_sprites(spr4626_temperate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/streetfurniture/256/town_tree_8bpp.png") { template_tree_city(0, 0, 4) }
 }
-if ((climate == CLIMATE_TEMPERATE && param_trees_arctic==1) || (climate == CLIMATE_TROPICAL && param_trees_tropical==1)) {
+if ((climate==CLIMATE_TEMPERATE && param_trees_temperate==1) || (climate==CLIMATE_ARCTIC && param_trees_arctic==1) || (climate==CLIMATE_TROPICAL && param_trees_tropical==1)) {
 	replace spr4626_arctic(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city(20, 0, 1) }
+	#ez alternative_sprites(spr4626_arctic, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/streetfurniture/256/town_tree_8bpp.png") { template_tree_city(20, 0, 4) }
 }
-if ((climate == CLIMATE_TEMPERATE && param_trees_arctic==2) || (climate == CLIMATE_ARCTIC && param_trees_tropical==2)) {
+if ((climate==CLIMATE_TEMPERATE && param_trees_temperate==2) || (climate==CLIMATE_ARCTIC && param_trees_arctic==2) || (climate==CLIMATE_TROPICAL && param_trees_tropical==2)) {
 	replace spr4626_tropical(4626, "../graphics/towns/streetfurniture/64/town_tree_8bpp.png") { template_tree_city(40, 0, 1) }
+	#ez alternative_sprites(spr4626_tropical, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/streetfurniture/256/town_tree_8bpp.png") { template_tree_city(40, 0, 4) }
 }
