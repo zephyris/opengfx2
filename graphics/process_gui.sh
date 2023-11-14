@@ -21,6 +21,13 @@ cd pygen
 custom_dither.py
 cd ../..
 
+cd 2
+custom_dither.py
+gui_cursoroverlay.py 2
+cd pygen
+custom_dither.py
+cd ../..
+
 cd ..
 
 cd icons

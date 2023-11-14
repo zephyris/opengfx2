@@ -10,8 +10,8 @@ if os.path.isdir("pygen") == False: os.mkdir("pygen")
 verbose = True
 scale = int(sys.argv[1])
 
-tile_width = scale * 48
-tile_height = scale * 32
+tile_width = 48
+tile_height = 32
 
 cursor_list = {
   "default": "classic_yellow",
@@ -38,7 +38,7 @@ for cursor_key in cursor_list:
     for x in range(int(w / ((tile_width + 1) * scale))):
       for y in range(int(h / ((tile_height + 1) * scale))):
         if x != 1 or y != 0: # not the special (1, 0) sleepy icon!
-          r, g, b = icons_image.getpixel((x * (tile_width + 1) + 1, y * (tile_height + 1) + 1))
+          r, g, b = icons_image.getpixel(((x * (tile_width + 1) + 1) * scale, (y * (tile_height + 1) + 1) * scale))
           if r != 255 or g != 255 or b != 255: # if not a white, ie. not an icon, pixel
             print(x, y)
             icons_image = blue_to(cursor_image, 0, 0, tile_width, tile_height, icons_image, x * (tile_width + 1) + 1, y * (tile_height + 1) + 1, scale)
