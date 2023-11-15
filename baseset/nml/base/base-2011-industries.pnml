@@ -479,6 +479,8 @@ template template_spr2341(z) {
 }
 base_graphics spr2341(2341, "../graphics/industries/tropical/64/plantations_8bpp.png") { template_spr2341(1) }
 #32 alternative_sprites(spr2341, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/tropical/64/plantations_bt32bpp.png") { template_spr2341(1) }
+#ez alternative_sprites(spr2341, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/industries/tropical/256/plantations_8bpp.png") { template_spr2341(4) }
+#ez #32 alternative_sprites(spr2341, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/industries/tropical/256/plantations_bt32bpp.png") { template_spr2341(4) }
 
 //2344-2346 water tower
 template template_spr2344(z) {
