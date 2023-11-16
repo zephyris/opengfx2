@@ -109,6 +109,8 @@ template template_spr2072(z) {
 }
 base_graphics spr2072(2072, "../graphics/industries/arctic/64/forest_8bpp.png") { template_spr2072(1) }
 #32 alternative_sprites(spr2072, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/forest_bt32bpp.png") { template_spr2072(1) }
+#ez alternative_sprites(spr2072, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/industries/arctic/256/forest_8bpp.png") { template_spr2072(4) }
+#ez #32 alternative_sprites(spr2072, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/industries/arctic/256/forest_bt32bpp.png") { template_spr2072(4) }
 
 //2078-2095 oil refinery
 template template_spr2078(z) {

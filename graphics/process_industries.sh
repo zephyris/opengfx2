@@ -54,9 +54,6 @@ custom_dither.py
 identical_regions.py copperoremine ../copperoremine_idmap.png
 cd ../../../
 
-cd tropical/256/
-custom_dither.py
-
 cd toyland/64/
 if [ ! -d pygen ]; then
   mkdir pygen
@@ -87,5 +84,13 @@ custom_dither.py
 cd pygen
 custom_dither.py
 cd ../../../
+
+cd tropical/256/
+custom_dither.py
+cd ../..
+
+cd arctic/256/
+custom_dither.py
+cd ../..
 
 cd ..
