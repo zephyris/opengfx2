@@ -8,16 +8,13 @@
 #    Encodes recolouring information (per column of sprites) in pixel colours on row 0
 # Outputs:
 #  *_32bpp.png (RGB)
-#    Recoloured and textured shape image, including overlays
-#  *_palmask.png (8bpp, OpenTTD palette)
-#    Recoloured shape image, overlaid with _overlaynormal
-#    Used for restricting colour ranges during dithering
+#    Recoloured shape image
 
 # Run in directory with images to process
 # python3 tree_shapeproc.py <scale>
 #   scale: 1 or 4
 #    64px or 256px tiles respective
-#    Defines shading scheme and textures to use
+#    Defines generation of 'dying' stages
 
 # Dependencies
 # pip3 install pillow
@@ -74,16 +71,29 @@ suffices = {
   "_leaf_shape.png": {
     "name": "",
     "resize": [0.45, 0.65, 0.85, 1, 1, 1, 1], # scale factor
-    "density": [1, 1, 1, 1, 0.8, 0.5, 0], # leaf density, random pixel removal
+    "density": [1, 1, 1, 1, 1, 1, 1], # leaf density, random pixel removal
     "browning": [1, 1, 1, 1, 1, 1, 1], # leaf browning, random pixel brownout
     "trunkshift": [0, 0, 0, 0, 0, 0, 0], # trunk index darkening shift
+    "rearleafrem": [0, 0, 0, 0, 1, 3, 8], # leaf indices (from lowest) to remove (rear layer)
+    "frontleafrem": [0, 0, 0, 0, 4, 6, 8], # leaf indices (from lowest) to remove (rear layer)
   },
   "_nonleaf_shape.png": {
     "name": "nonleaf_",
     "resize": [0.45, 0.65, 0.85, 1, 0.92, 0.82, 0.67], # scale factor
     "density": [1, 1, 1, 1, 1, 1, 1], # leaf density, random pixel removal
     "browning": [1, 1, 1, 1, 0.75, 0.5, 0], # leaf browning, random pixel brownout
-    "trunkshift": [0, 0, 0, 0, 0, 1, 2], # trunk index darkening shift
+    "trunkshift": [0, 0, 0, 0, 0, 2, 4], # trunk index darkening shift
+    "rearleafrem": [0, 0, 0, 0, 0, 0, 0], # leaf indices (from lowest) to remove (rear layer)
+    "frontleafrem": [0, 0, 0, 0, 0, 0, 0], # leaf indices (from lowest) to remove (rear layer)
+  },
+  "_pineleaf_shape.png": {
+    "name": "nonleaf_",
+    "resize": [0.45, 0.65, 0.85, 1, 1, 1, 1], # scale factor
+    "density": [1, 1, 1, 1, 1, 1, 0], # leaf density, random pixel removal
+    "browning": [1, 1, 1, 1, 0.5, 0, 0], # leaf browning, random pixel brownout
+    "trunkshift": [0, 0, 0, 0, 0, 0, 0], # trunk index darkening shift
+    "rearleafrem": [0, 0, 0, 0, 0, 0, 0], # leaf indices (from lowest) to remove (rear layer)
+    "frontleafrem": [0, 0, 0, 0, 0, 0, 0], # leaf indices (from lowest) to remove (rear layer)
   }
 }
 for suffix in suffices:
@@ -94,7 +104,7 @@ for suffix in suffices:
   # Source indices for remapping:
   index_leaf_remaps = [80, 81, 82, 83, 84, 85, 86, 87]
   index_trunk_remaps = [104, 105, 106, 107, 108, 109, 110, 111]
-  index_remaps_snow = [-1, -1, -1, 213, 212, 211, 210, 210]
+  index_remaps_snow = [-1, -1, -1, 214, 213, 212, 211, 210]
   index_browning = [104, 105, 106, 107, 108, 109, 110, 111]
   #index_remaps_snow = index_leaf_remaps[4:] + index_trunk_remaps[4:]
   # Tree sprite sizes
@@ -106,6 +116,8 @@ for suffix in suffices:
   density = suffices[suffix]["density"] # leaf density, random pixel removal
   browning = suffices[suffix]["browning"] # leaf browning, random pixel brownout
   trunkshift = suffices[suffix]["trunkshift"] # trunk index darkening shift
+  rearleafrem = suffices[suffix]["rearleafrem"]
+  frontleafrem = suffices[suffix]["frontleafrem"]
   for input_file in glob.glob("*"+suffix):
     outfile = os.path.join("pygen", input_file[:-len(suffix)]+"_"+suffices[suffix]["name"]+namesuffix+"32bpp.png")
     if check_update_needed([input_file], outfile):
@@ -120,7 +132,11 @@ for suffix in suffices:
         image_colorised = Image.new("P", (image_shape.size))
         image_colorised.paste(image_shape, (0,0))
         image_colorised.putpalette(image_shape.getpalette())
+        # Output image
+        image_out = Image.new("RGBA", (((w + 1) * 7 + 1) * scale, ((h + 1) * columns + 1) * scale), (0, 0, 255))
+        draw = ImageDraw.Draw(image_out)
         for column in range(columns):
+          seed(0)
           x = column * (w + 1) + 1
           for row in range(2):
             y = row * (h + 1) + 1
@@ -161,14 +177,10 @@ for suffix in suffices:
             current_spriteset.putpalette(current_palimg.getpalette())
             current_spriteset = openttd_palettise(current_spriteset)
             image_colorised.paste(current_spriteset, (x * scale, (y - 1) * scale))
-        # Generate tree growth and death sprites
-        current_palimg = palette_image(current_r, current_g, current_b)
-        image_out = Image.new("RGBA", (((w + 1) * 7 + 1) * scale, ((h + 1) * columns + 1) * scale), (0, 0, 255))
-        draw = ImageDraw.Draw(image_out)
-        for column in range(columns):
+          # Generate tree growth and death sprites
           x = column * (w + 1) + 1
           for outcolumn in range(7):
-            for row in [0, 1, 0, 2]:
+            for rowindex, row in enumerate([0, 1, 0, 2]):
               if height >= (h + 1) * (row + 1) * scale:
                 y = row * (h + 1) + 1
                 current_spriteset = image_colorised.crop((x * scale, y * scale, (x + w) * scale, (y + h) * scale))
@@ -184,7 +196,6 @@ for suffix in suffices:
                   xoffs = 0
                   yoffs = 0
                 if row == 0: # erase some leaf pixels for patchy apperance
-                  seed(0)
                   if density[outcolumn] < 1: # if pixels should be erased
                     for tx in range(scale, ow - scale): # for all pixels, with padding of scale
                       for ty in range(scale, oh - scale):
@@ -194,23 +205,41 @@ for suffix in suffices:
                               for ob in range(-int(scale / 2) - 1, int(scale / 2) + 1):
                                 if (oa ** 2 + ob ** 2) ** 0.5 < (scale / 2) * 1.3 or randint(0, 1) == 0: # circle + random pixels, not square
                                   current_spriteset.putpixel((tx + oa, ty + ob), 0)
+                if row == 0: # erase some leaf indices for dying effect
+                  if rowindex == 0:
+                    leafrem = rearleafrem
+                  elif rowindex == 2:
+                    leafrem = frontleafrem
+                  #print(row, rowindex, column, leafrem[outcolumn], index_target_leaf)
+                  if leafrem[outcolumn] > 0:
+                    for tx in range(0, ow): # for all pixels
+                      for ty in range(0, oh):
+                        cpv = current_spriteset.getpixel((tx, ty))
+                        if cpv in index_target_leaf: # if a leaf pixel
+                          if index_target_leaf.index(cpv) < leafrem[outcolumn]:
+                            current_spriteset.putpixel((tx, ty), 0)
+                        if cpv in index_remaps_snow: # if a snowy leaf pixel
+                          if index_remaps_snow.index(cpv) <= leafrem[outcolumn]:
+                            current_spriteset.putpixel((tx, ty), 0)
                 if row == 0: # brown-out some leaf pixels for dead appearance
                   if browning[outcolumn] < 1: # if pixels should be browned
-                    for tx in range(scale, ow): # for all pixels
-                      for ty in range(scale, oh):
-                        v = current_spriteset.getpixel((tx, ty))
-                        if randint(0, 100) > browning[outcolumn] * 100 and v != 0: # brown pixels to target density
+                    for tx in range(0, ow): # for all pixels
+                      for ty in range(0, oh):
+                        cpv = current_spriteset.getpixel((tx, ty))
+                        if randint(0, 100) > browning[outcolumn] * 100 and cpv != 0: # brown pixels to target density
                           for i in range(len(index_target_leaf)):
-                            if v == index_target_leaf[i]:
+                            if cpv == index_target_leaf[i]:
                               current_spriteset.putpixel((tx, ty), index_browning[i])
                 if row == 1: # index-shift darker some trunk pixels
                   if trunkshift[outcolumn] != 0: # if pixel indices should be shifted
-                    for tx in range(scale, ow): # for all pixels
-                      for ty in range(scale, oh):
-                        v = current_spriteset.getpixel((tx, ty))
-                        if v in index_target_trunk: # trunk pixels to value shift
-                          if index_target_trunk.index(v) > trunkshift[outcolumn]:
-                            current_spriteset.putpixel((tx, ty), index_target_trunk[index_target_trunk.index(v) - trunkshift[outcolumn]])
+                    for tx in range(0, ow): # for all pixels
+                      for ty in range(0, oh):
+                        cpv = current_spriteset.getpixel((tx, ty))
+                        if cpv in index_target_trunk: # trunk pixels to value shift
+                          if index_target_trunk.index(cpv) > trunkshift[outcolumn]:
+                            current_spriteset.putpixel((tx, ty), index_target_trunk[index_target_trunk.index(cpv) - trunkshift[outcolumn]])
+                          else:
+                            current_spriteset.putpixel((tx, ty), index_target_trunk[0])
                 if row !=0 or density[outcolumn] > 0: # only draw if the trunk (row 1) or density is non-zero
                   image_out = blue_to(current_spriteset, 0, 0, ow, oh, image_out, ((w + 1) * outcolumn + 1 + xoffs), ((h + 1) * column + 1 + yoffs), scale)
             draw.rectangle((((w + 1) * outcolumn) * scale, ((h + 1) * column) * scale, ((w + 1) * outcolumn) * scale + (w + 2) * scale - 1, ((h + 1) * column) * scale + (h + 2) * scale - 1), fill=None, outline=(255, 255, 255), width=scale)
