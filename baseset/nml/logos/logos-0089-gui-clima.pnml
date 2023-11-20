@@ -1,11 +1,17 @@
 //89-96 main menu climate previews88
-base_graphics spr89(89, "../graphics/icons/1/climate_previews_8bpp.png") {
-    template_sprite_matrix(71, 49, 0, 0, 0, 0, 1)
-    template_sprite_matrix(71, 49, 0, 0, 0, 1, 1)
-    template_sprite_matrix(71, 49, 0, 0, 1, 0, 1)
-    template_sprite_matrix(71, 49, 0, 0, 1, 1, 1)
-    template_sprite_matrix(71, 49, 0, 0, 2, 0, 1)
-    template_sprite_matrix(71, 49, 0, 0, 2, 1, 1)
-    template_sprite_matrix(71, 49, 0, 0, 3, 0, 1)
-    template_sprite_matrix(71, 49, 0, 0, 3, 1, 1)
+template template_spr89(z) {
+    template_sprite_matrix(71, 49, 0, 0, 0, 0, z)
+    template_sprite_matrix(71, 49, 0, 0, 0, 1, z)
+    template_sprite_matrix(71, 49, 0, 0, 1, 0, z)
+    template_sprite_matrix(71, 49, 0, 0, 1, 1, z)
+    template_sprite_matrix(71, 49, 0, 0, 2, 0, z)
+    template_sprite_matrix(71, 49, 0, 0, 2, 1, z)
+    template_sprite_matrix(71, 49, 0, 0, 3, 0, z)
+    template_sprite_matrix(71, 49, 0, 0, 3, 1, z)
 }
+base_graphics spr89(89, "../graphics/icons/1/climate_previews_8bpp.png") { template_spr89(1) }
+#32 alternative_sprites(spr89, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/icons/1/climate_previews_rm32bpp.png", "../graphics/icons/1/climate_previews_8bpp.png") { template_spr89(1) }
+#ez alternative_sprites(spr89, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/climate_previews_8bpp.png") { template_spr89(2) }
+#32 #ez alternative_sprites(spr89, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/icons/2/climate_previews_rm32bpp.png", "../graphics/icons/2/climate_previews_8bpp.png") { template_spr89(2) }
+#ez alternative_sprites(spr89, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/climate_previews_8bpp.png") { template_spr89(4) }
+#32 #ez alternative_sprites(spr89, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/icons/4/climate_previews_rm32bpp.png", "../graphics/icons/4/climate_previews_8bpp.png") { template_spr89(4) }

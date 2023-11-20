@@ -40,4 +40,12 @@ cd 2
 custom_dither.py
 cd ..
 
+cd 4
+custom_dither.py
+cd ..
+
+cd climates
+custom_dither.py
+cd ..
+
 cd ..
