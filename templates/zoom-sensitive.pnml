@@ -881,7 +881,7 @@ template template_tree_bordered(x, y, z) {
 	[217*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
 }
 
-//Template tree_alt: For new, alt folder, sprite layout
+//Template tree_alt: For synchronised layout
 template template_tree_alt(x, y, z) {
 	[  1*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
 	[ 47*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
@@ -892,9 +892,14 @@ template template_tree_alt(x, y, z) {
 	[277*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
 }
 
-//Template infrastructure: city trees
+//Template infrastructure: City trees
 template template_tree_city(x, y, z) {
 	[	 1*z+x*z, 1*z+y*z, 19*z, 41*z, -9*z, -36*z-int((z-1)/2)]
+}
+
+//Template infrastructure: Normal trees as city trees
+template template_tree_bordered_as_city(x, y, z) {
+	[ 37*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
 }
 
 //Vehicle templates assume a standardised sprite size for each vehicle type
