@@ -1,0 +1,83 @@
+grf {
+	grfid: "OGZ\4";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	url:  string(STR_GRF_URL);
+	version: 3;
+	min_compatible_version: version_openttd(1, 3, 0);
+	param 12 {
+		param_trees_temperate {
+			name: string(STR_PARAM_TREES_TEMPERATE_NAME);
+			desc: string(STR_PARAM_TREES_TEMPERATE_DESC);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE_DEFAULT);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 22 {
+		param_trees_arctic {
+			name: string(STR_PARAM_TREES_ARCTIC_NAME);
+			desc: string(STR_PARAM_TREES_ARCTIC_DESC);
+			type: int;
+			def_value: 1;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC_DEFAULT);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 32 {
+		param_trees_tropical {
+			name: string(STR_PARAM_TREES_TROPICAL_NAME);
+			desc: string(STR_PARAM_TREES_TROPICAL_DESC);
+			type: int;
+			def_value: 2;
+			min_value: 0;
+			max_value: 3;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL_DEFAULT);
+				3: string(STR_PARAM_VALUE_TOYLAND);
+			};
+		}
+	}
+	param 42 {
+		param_trees_toyland {
+			name: string(STR_PARAM_TREES_TOYLAND_NAME);
+			desc: string(STR_PARAM_TREES_TOYLAND_DESC);
+			type: int;
+			def_value: 3;
+			min_value: 0;
+			max_value: 4;
+			names: {
+				0: string(STR_PARAM_VALUE_TEMPERATE);
+				1: string(STR_PARAM_VALUE_ARCTIC);
+				2: string(STR_PARAM_VALUE_TROPICAL);
+				3: string(STR_PARAM_VALUE_TOYLAND_DEFAULT);
+				4: string(STR_PARAM_VALUE_TOYLAND_ALTERNATE);
+			};
+		}
+	}
+}
+
+if (ttd_platform == PLATFORM_OPENTTD) {
+	if (openttd_version < version_openttd(1, 3, 0)) {
+		error(FATAL, REQUIRES_OPENTTD, "1.3.0");
+	}
+}
+
+if (ttd_platform != PLATFORM_OPENTTD) {
+	error(FATAL, REQUIRES_OPENTTD, "1.3.0");
+}
