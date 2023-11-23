@@ -1,4 +1,4 @@
-OpenGFX2 is created by:
+OpenGFX2 was created by:
 
 | Name              | Realname              |
 | ----------------- | --------------------- |

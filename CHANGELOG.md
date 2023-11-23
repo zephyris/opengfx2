@@ -1,5 +1,16 @@
 # OpenGFX2 Changelog
 
+## v0.4
+Base set:
+* 4x zoom trees for normal climates, including improved growth/death stages.
+* 4x zoom tree/plantation industries.
+* Improved pixel art detailing of terrain.
+* Improved maglev level crossings.
+* Various bug fixes.
+
+NewGRFs:
+* New standalone trees NewGRF.
+
 ## v0.3
 Base set:
 * Baseset parameters, for baseset parameter support when OpenTTD 14.0 arrives.

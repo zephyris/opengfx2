@@ -1,14 +1,14 @@
 import sys
 
 blitter = 8
-typelong = "8bpp"
+typelong = "8-bit"
 typeshort = "8"
 
 if len(sys.argv) > 1:
   # settings
   if "32" in sys.argv[1]:
     blitter = 32
-    typelong = "32bpp"
+    typelong = "32-bit"
     typeshort = "32"
   if "ez" in sys.argv[1]:
     typeshort += "ez"
@@ -18,13 +18,13 @@ if len(sys.argv) > 1:
 
 # catch specific variant cases, release cases (8, 32ez)
 if typeshort == "8":
-  description = "(Classic version, "+typelong+")"
+  description = "Classic version (" + typelong + ")"
   namesuffix = "Classic"
 elif typeshort == "32ez":
-  description = "(High definition version, "+typelong+")"
+  description = "High definition version (" + typelong + ")"
   namesuffix = "High Def"
 else:
-  description = "("+typelong+")"
+  description = typelong + " version"
   namesuffix = typelong
 
 # define unique short (4 character) names
@@ -55,7 +55,7 @@ with open("opengfx2_" + typeshort + ".obg", "w") as obg:
   obg.write(pad("version", pad_length, pad_left=False) + "= 3" + "\n")
   obg.write(pad("palette", pad_length, pad_left=False) + "= DOS" + "\n")
   obg.write(pad("blitter", pad_length, pad_left=False) + "= "+str(blitter)+"bpp" + "\n")
-  obg.write(pad("description", pad_length, pad_left=False) + "= OpenGFX2 "+description+" base graphics set for OpenTTD. Freely available under the terms of the GNU General Public License version 2." + "\n")
+  obg.write(pad("description", pad_length, pad_left=False) + "= OpenGFX2, a pixel art style base graphics set for OpenTTD. "+description+". Freely available under the terms of the GNU General Public License version 2." + "\n")
   obg.write("\n");
   obg.write("[files]" + "\n")
   for file in files:
