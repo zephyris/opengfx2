@@ -55,15 +55,17 @@ base_graphics spr1058(1058, "../graphics/cursors/1/pygen/default_8bpp.png") {
 }
 
 //1059-1065 bridge icons
-base_graphics spr1059(1059, "../graphics/icons/1/bridges_toyland_8bpp.png") {
-    template_sprite_matrix(43, 20, 0, 0, 0, 0, 1)
-    template_sprite_matrix(43, 20, 0, 0, 0, 1, 1)
-    template_sprite_matrix(43, 20, 0, 0, 0, 2, 1)
-    template_sprite_matrix(43, 20, 0, 0, 0, 3, 1)
-    template_sprite_matrix(43, 20, 0, 0, 0, 4, 1)
-    template_sprite_matrix(43, 20, 0, 0, 0, 5, 1)
-    template_sprite_matrix(43, 20, 0, 0, 0, 6, 1)
+template template_spr1059(z) {
+    template_sprite_matrix(43, 20, 0, 0, 0, 0, z)
+    template_sprite_matrix(43, 20, 0, 0, 0, 1, z)
+    template_sprite_matrix(43, 20, 0, 0, 0, 2, z)
+    template_sprite_matrix(43, 20, 0, 0, 0, 3, z)
+    template_sprite_matrix(43, 20, 0, 0, 0, 4, z)
+    template_sprite_matrix(43, 20, 0, 0, 0, 5, z)
+    template_sprite_matrix(43, 20, 0, 0, 0, 6, z)
 }
+base_graphics spr1059(1059, "../graphics/icons/1/bridges_toyland_8bpp.png") { template_spr1059(1) }
+alternative_sprites(spr1059, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/bridges_toyland_8bpp.png") { template_spr1059(2) }
 
 //1066-1145 monorail and maglev bridges
 //1066-1067 slow steel monorail
