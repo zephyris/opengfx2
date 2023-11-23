@@ -1,32 +1,32 @@
 # OpenGFX2
 # ![opengfx2_titletext](https://github.com/zephyris/opengfx2/assets/2762690/1adabdf4-baf8-48b2-ae35-279c3d808d0e)
 
-"OpenGFX2" graphics base set for [OpenTTD](https://github.com/OpenTTD/OpenTTD). This is a spiritual successor to [OpenGFX](https://github.com/OpenTTD/OpenGFX). Think of it as "OpenGFX version 2", or maybe that should be "OpenGFX director's edition", "refactored OpenGFX", or perhaps "OpenGFX extra zoom" or "OpenGFX 32bpp". Or some combination of all of them.
+"OpenGFX2" graphics base set for [OpenTTD](https://github.com/OpenTTD/OpenTTD). It is drawn in a classic 8-bit pixel art style and trys to capture the feel of the original Transport Tycoon graphics by using similar colour schemes, building and object designs, etc. There are two variants:
+* `OpenGFX2 Classic`: An original graphics-style base set, 8-bit at 1x zoom (64 px wide tiles).
+* `OpenGFX2 High Def`: An enhanced base set, using 32-bit images for smoother shading at 4x zoom (256 px wide tiles) for more detail when zooming in.
 
-Partly derived directly from OpenGFX, partly redrawn or revised from my original 32bpp sources. Almost all sprites have been updated or revised.
-
-Features far better organisation of sprites. Extensive use of automated composite sprite generation using Python of dubious quality. Drawn and coded with extra zoom levels and 32bpp in mind.
+OpenGFX2 is a spiritual successor to [OpenGFX](https://github.com/OpenTTD/OpenGFX). Think of it as "OpenGFX version 2", or maybe that should be "OpenGFX director's edition", "refactored OpenGFX", or perhaps "OpenGFX extra zoom" or "OpenGFX 32-bit". Or some combination of all of them. OpenGFX2 is derived from OpenGFX, but extensively redrawn or revised from my original 32-bit sources. Almost all sprites have been updated or revised. It features far better organisation of sprites, extensive use of automated composite sprite generation (using Python of dubious quality) and is drawn and coded with extra zoom levels and 32-bit in mind.
 
 ## Quick start
 
 ### In-game content downloader / BaNaNaS
 It is easiest to use the in-game content downloader (`Check Online Content` in the OpenTTD main menu).
 
-To install, search for `OpenGFX2`, tick the checkbox next to OpenGFX2 Base graphics, and hit `Download`.
+To install, search for `OpenGFX2`, tick the checkbox next to "OpenGFX2 Classic" Base graphics, and hit `Download`.
 
 To set as the base graphics set, go to `Game Options > (Graphics) > Base Graphics` from the OpenTTD main menu. Select `OpenGFX2 Classic`, then close the `Game Options` window.
 
 ### Manual download
-Download a release from [the prebuilt grf releases](https://github.com/zephyris/opengfx2/tags) and install using the instructions below.
+Download a release from [the prebuilt GRF releases](https://github.com/zephyris/opengfx2/tags) and install using the instructions below.
 
-These are early release previews not available in the in-game content downloader. This includes base set versions (the "High Def" 32bpp 4x zoom version) and NewGRFs not yet available through the in-game downloader.
+These are early release previews not available in the in-game content downloader. This includes base set versions (the "High Def" 32-bit 4x zoom version) and NewGRFs not yet available through the in-game downloader.
 
 ### Installation
 Install the baseset by copying `opengfx2_8.tar` and/or `opengfx2_32ez.tar` into the `baseset` directory for your OpenTTD installation.
 
 Install the newgrfs by copying each `.grf` file into the `newgrf` directory for your OpenTTD installation.
 
-To set as the base graphics set, go to `Game Options>(Graphics)>Base Graphics` Set and select `OpenGFX2 Classic` (8bpp 1x zoom version) or `OpenGFX2 High Def` (32bpp 4x zoom version).
+To set as the base graphics set, go to `Game Options>(Graphics)>Base Graphics` Set and select `OpenGFX2 Classic` (8-bit 1x zoom version) or `OpenGFX2 High Def` (32-bit 4x zoom version).
 
 OpenGFX2 has graphical user preferences. These can be configured in `Game Options>(Graphics)>Base graphics set>Set parameters`. These settings are local graphical changes only, ant can be freely changed, used with any save-game, used on any server, etc.
 
@@ -49,7 +49,7 @@ The built baseset will be in `baseset/`, making different versions called `openg
 The built newgrf(s) will be in `newgrf/`, making various `.grf` files.
 
 ### Build process notes
-Image processing makes a bunch of intermediate files, particularly `*_8bpp.png` and things in `pygen` directories. Others are `_bt32bpp`, `_rm32bpp.png`. These files are assumed to be temporary intermediates, and any user-modified versions will be blindly overwritten. Make sure you look at `.gitignore` see which files this applies to.
+Image processing makes a bunch of intermediate files, particularly `*_8-bit.png` and things in `pygen` directories. Others are `_bt32-bit`, `_rm32-bit.png`. These files are assumed to be temporary intermediates, and any user-modified versions will be blindly overwritten. Make sure you look at `.gitignore` see which files this applies to.
 
 Files processed by `python` and encoded by `nml` are `.png` files, but those may be derived from other sources. Raw sprites were variously drawn\generated in Paint.NET, Aseprite, Blender and more. Conversion from those raw sources to `.png` files is not part of the build process - it must be done manually.
 
