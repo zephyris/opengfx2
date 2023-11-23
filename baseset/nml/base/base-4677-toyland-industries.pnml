@@ -113,10 +113,10 @@ base_graphics spr4743(4743, "../graphics/industries/toyland/64/pygen/bubble_gene
 	template_house_1x1_addoffs(0, 0, 1, 137, 0, 0)
 	template_house_1x1_addoffs(65, 0, 1, 137, 0, 16)
 	template_house_1x1_addoffs(130, 0, 1, 137, -32, -16)
-	template_general(196, 1, 64, 137, -5, -79, 1)
+	template_general(196, 1, 64, 137, -38, -79, 1)
 }
 base_graphics spr4747(4747, "../graphics/industries/toyland/64/bubble_generator_plunger_8bpp.png") {
-	template_general(1, 1, 22, 22, 31, -3, 1)
+	template_general(1, 1, 22, 22, -2, -3, 1)
 }
 
 //4748-4762 bubbles
