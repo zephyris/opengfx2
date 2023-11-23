@@ -110,45 +110,44 @@ base_graphics spr4737(4737, "../graphics/industries/toyland/64/pygen/fizzy_drink
 
 //4743-4762 bubble generator
 base_graphics spr4743(4743, "../graphics/industries/toyland/64/pygen/bubble_generator_tiles_8bpp.png") {
-	template_empty()
-	template_house_1x1_addoffs(0, 0, 1, 137, 17, 17)
-	template_house_1x1_addoffs(65, 0, 1, 137, -14, 1)
-	template_general(131, 1, 64, 137, -24, -109, 1)
+	template_house_1x1_addoffs(0, 0, 1, 137, 0, 0)
+	template_house_1x1_addoffs(65, 0, 1, 137, 0, 16)
+	template_house_1x1_addoffs(130, 0, 1, 137, -32, -16)
+	template_general(196, 1, 64, 137, -5, -79, 1)
 }
 base_graphics spr4747(4747, "../graphics/industries/toyland/64/bubble_generator_plunger_8bpp.png") {
-	template_general(1, 1, 22, 22, -7, -16, 1)
+	template_general(1, 1, 22, 22, 31, -3, 1)
 }
 
 //4748-4762 bubbles
 base_graphics spr4748(4748, "../graphics/effects/64/industries_bubblegenerator_bubbles_8bpp.png") {
-	template_animation_frame(64, 64, 0, 0,  0, 1) // bobbling
-	template_animation_frame(64, 64, 0, 0,  1, 1)
-	template_animation_frame(64, 64, 0, 0,  2, 1)
-	template_animation_frame(64, 64, 0, 0,  3, 1) // blowing
-	template_animation_frame(64, 64, 0, 0,  4, 1)
-	template_animation_frame(64, 64, 0, 0,  5, 1)
-	template_animation_frame(64, 64, 0, 0,  6, 1)
-	template_animation_frame(64, 64, 0, 0,  7, 1) // popping
-	template_animation_frame(64, 64, 0, 0,  8, 1)
-	template_animation_frame(64, 64, 0, 0,  9, 1)
-	template_animation_frame(64, 64, 0, 0, 10, 1) // sucking
-	template_animation_frame(64, 64, 0, 0, 11, 1)
-	template_animation_frame(64, 64, 0, 0, 12, 1)
-	template_animation_frame(64, 64, 0, 0, 13, 1)
-	template_animation_frame(64, 64, 0, 0, 14, 1)
+	template_animation_frame(64, 64, -31, -23,  0, 1) // bobbling
+	template_animation_frame(64, 64, -31, -23,  1, 1)
+	template_animation_frame(64, 64, -31, -23,  2, 1)
+	template_animation_frame(64, 64, -31, -23,  3, 1) // blowing
+	template_animation_frame(64, 64, -31, -23,  4, 1)
+	template_animation_frame(64, 64, -31, -23,  5, 1)
+	template_animation_frame(64, 64, -31, -23,  6, 1)
+	template_animation_frame(64, 64, -31, -23,  7, 1) // popping
+	template_animation_frame(64, 64, -31, -23,  8, 1)
+	template_animation_frame(64, 64, -31, -23,  9, 1)
+	template_animation_frame(64, 64, -31, -23, 10, 1) // sucking
+	template_animation_frame(64, 64, -31, -23, 11, 1)
+	template_animation_frame(64, 64, -31, -23, 12, 1)
+	template_animation_frame(64, 64, -31, -23, 13, 1)
+	template_animation_frame(64, 64, -31, -23, 14, 1)
 }
 
 //4763-4767 toffee quarry
 base_graphics spr4763(4763, "../graphics/industries/toyland/64/pygen/toffee_quarry_tiles_8bpp.png") {
 	template_house_1x1(0, 0, 1, 128)
-	template_house_1x1_addoffs(195, 0, 1, 128, -32, -12)
+	template_house_1x1_addoffs(65, 0, 1, 128, 0, 0)
 	template_house_1x1(130, 0, 1, 128)
-	template_house_1x1_addoffs(65, 0, 1, 128, 16, -22)
+	template_house_1x1_addoffs(65, 0, 1, 128, 25, 25)
 }
 base_graphics spr4767(4767, "../graphics/industries/toyland/64/toffee_quarry_cutter_8bpp.png") {
-	template_general(1, 1, 30, 30, -31, -38, 1)
+	template_general(1, 1, 30, 30, 4, -12, 1)
 }
-
 
 //4768-4789 sugar mine
 base_graphics spr4768(4768, "../graphics/industries/toyland/64/pygen/sugar_mine_stockpile_tiles_8bpp.png") {
