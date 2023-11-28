@@ -4,12 +4,15 @@
 Base set:
 * 4x zoom trees for normal climates, including improved growth/death stages.
 * 4x zoom tree/plantation industries.
-* Improved pixel art detailing of terrain.
+* 4x zoom improved pixel art detailing of terrain.
 * Improved maglev level crossings.
 * Various bug fixes.
 
 NewGRFs:
 * New standalone trees NewGRF.
+
+Known issues:
+* If you're using a nightly, make sure you're using one from later than 29/10/2023, otherwise all climates will end up looking like temperate!
 
 ## v0.3
 Base set:
