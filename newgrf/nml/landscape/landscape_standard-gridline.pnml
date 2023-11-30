@@ -3,11 +3,11 @@ if (param_gridlines==0 || param_gridlines==1) {
 	// 4061 flat water tile
 	if (climate != CLIMATE_TOYLAND) {
 		replace gridline_water_tile(4061, "../graphics/terrain/64/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 1) }
-		#ez alternative_sprites(gridline_water_tile, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 2) }
+		//#ez alternative_sprites(gridline_water_tile, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 2) }
 		#ez alternative_sprites(gridline_water_tile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 4) }
 	} else if (climate == CLIMATE_TOYLAND) {
 		replace gridline_water_tile_toyland(4061, "../graphics/terrain/64/toyland_watertiles_8bpp.png") { template_flattile_single(0, 0, 1) }
-		#ez alternative_sprites(gridline_water_tile_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_watertiles_8bpp.png") { template_flattile_single(0, 0, 2) }
+		//#ez alternative_sprites(gridline_water_tile_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_watertiles_8bpp.png") { template_flattile_single(0, 0, 2) }
 		#ez alternative_sprites(gridline_water_tile_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_watertiles_8bpp.png") { template_flattile_single(0, 0, 4) }
 	}
 }
@@ -27,27 +27,27 @@ template template_gridline_field_tiles(z) {
 if (param_gridlines==0 || param_gridlines==2) {
 	//4126-4296 farm field tiles
 	replace gridline_field_tiles(4126, "../graphics/terrain/64/pygen/farm_groundtiles_gridline_8bpp.png") { template_gridline_field_tiles(1) }
-	#ez alternative_sprites(gridline_field_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/farm_groundtiles_gridline_8bpp.png") { template_gridline_field_tiles(2) }
+	//#ez alternative_sprites(gridline_field_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/farm_groundtiles_gridline_8bpp.png") { template_gridline_field_tiles(2) }
 	#ez alternative_sprites(gridline_field_tiles, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/farm_groundtiles_gridline_8bpp.png") { template_gridline_field_tiles(4) }
 	#32 alternative_sprites(gridline_field_tiles, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/farm_groundtiles_gridline_bt32bpp.png") { template_gridline_field_tiles(1) }
-	#32 #ez alternative_sprites(gridline_field_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/farm_groundtiles_gridline_bt32bpp.png") { template_gridline_field_tiles(2) }
+	//#32 #ez alternative_sprites(gridline_field_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/farm_groundtiles_gridline_bt32bpp.png") { template_gridline_field_tiles(2) }
 	#32 #ez alternative_sprites(gridline_field_tiles, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/farm_groundtiles_gridline_bt32bpp.png") { template_gridline_field_tiles(4) }
 
 	if (climate == CLIMATE_ARCTIC) {
 		//4550-4568 full snow 4/4
 		replace gridline_snow_tiles(4550, "../graphics/terrain/64/pygen/arctic_groundtiles_snow_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-		#ez alternative_sprites(gridline_snow_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+		//#ez alternative_sprites(gridline_snow_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
 		#ez alternative_sprites(gridline_snow_tiles, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snow_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 		#32 alternative_sprites(gridline_snow_tiles, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/arctic_groundtiles_snow_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-		#32 #ez alternative_sprites(gridline_snow_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+		//#32 #ez alternative_sprites(gridline_snow_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/arctic_groundtiles_snow_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
 		#32 #ez alternative_sprites(gridline_snow_tiles, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/arctic_groundtiles_snow_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 	} else if (climate == CLIMATE_TROPICAL) {
 		//369-387 desert, 4/4
 		replace gridline_desert_tiles(4550, "../graphics/terrain/64/pygen/tropical_groundtiles_desert_gridline_8bpp.png") { template_groundtiles(0, 0, 1) }
-		#ez alternative_sprites(gridline_desert_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_desert_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
+		//#ez alternative_sprites(gridline_desert_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_desert_gridline_8bpp.png") { template_groundtiles(0, 0, 2) }
 		#ez alternative_sprites(gridline_desert_tiles, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_desert_gridline_8bpp.png") { template_groundtiles(0, 0, 4) }
 		#32 alternative_sprites(gridline_desert_tiles, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/tropical_groundtiles_desert_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
-		#32 #ez alternative_sprites(gridline_desert_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_desert_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
+		//#32 #ez alternative_sprites(gridline_desert_tiles, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/tropical_groundtiles_desert_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
 		#32 #ez alternative_sprites(gridline_desert_tiles, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/tropical_groundtiles_desert_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
 	}
 }
