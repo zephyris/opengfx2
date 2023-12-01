@@ -1,7 +1,7 @@
 //902-1057 bridges, mostly road and rail
 //NB. Custom recolouring of blue shades given in extra-plus-toyland-bridge-recolouring
 //902-909 bridge ramps rail
-base_graphics spr902(902, "../graphics/bridges/64/pygen/ramps_general_toyland_rail_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+base_graphics spr902(902, "../graphics/bridges/64/pygen/ramps_norecolour_toyland_rail_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
 //910-917 bridge ramps road
 base_graphics spr910(910, "../graphics/bridges/64/pygen/ramps_general_toyland_road_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
 //918-933 suspension road, part 1, bridge front

@@ -116,11 +116,13 @@ elif mode == "railramps" or mode == "roadramps" or mode == "railramps_toyland" o
   if mode == "roadramps" or mode == "railramps":
     bridge_list = {
       "ramps_general": "bridgeramps_general_32bpp.png",
+      "ramps_norecolour": "bridgeramps_norecolour_32bpp.png",
       "ramps_wood": "bridgeramps_wood_32bpp.png",
     }
   elif mode == "roadramps_toyland" or mode == "railramps_toyland":
     bridge_list = {
       "ramps_general_toyland": "bridgeramps_general_toyland_32bpp.png",
+      "ramps_norecolour_toyland": "bridgeramps_norecolour_32bpp.png",
       "ramps_wood_toyland": "bridgeramps_wood_toyland_32bpp.png",
     }
   bridgemask = "bridgeramps_deckmask.png"

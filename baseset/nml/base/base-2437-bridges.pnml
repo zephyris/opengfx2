@@ -1,6 +1,6 @@
 //bridges
 //2437-2444 bridge ramps rail
-base_graphics spr2437(2437, "../graphics/bridges/64/pygen/ramps_general_rail_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+base_graphics spr2437(2437, "../graphics/bridges/64/pygen/ramps_norecolour_rail_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
 //2445-2452 bridge ramps road
 base_graphics spr2445(2445, "../graphics/bridges/64/pygen/ramps_general_road_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
 //2453-2468 suspension road, part 1, bridge front
