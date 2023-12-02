@@ -35,10 +35,10 @@ alternative_sprites (ottd_gui38, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/
 // OTTD_GUI 44-52
 template template_ottd_gui44(z) {
     template_sprite_matrix_nocrop(8, 8, 0, 0, 0, 1, z) // window decoration: resize
-	template_sprite_matrix_nocrop(8, 8, 1, 1, 1, 0, z) // window decoration: arrow up
-	template_sprite_matrix_nocrop(8, 8, 1, 1, 2, 0, z) // window decoration: arrow down
-	template_sprite_matrix_nocrop(8, 8, 1, 1, 5, 0, z) // window decoration: arrow left
-	template_sprite_matrix_nocrop(8, 8, 0, 0, 6, 0, z) // window decoration: arrow right
+	template_sprite_matrix(8, 8, 1, 1, 1, 0, z) // window decoration: arrow up
+	template_sprite_matrix(8, 8, 1, 1, 2, 0, z) // window decoration: arrow down
+	template_sprite_matrix(8, 8, 1, 1, 5, 0, z) // window decoration: arrow left
+	template_sprite_matrix(8, 8, 0, 0, 6, 0, z) // window decoration: arrow right
 	template_sprite_matrix_nocrop(8, 8, 0, 0, 1, 1, z) // window decoration: go to default directory
 	template_sprite_matrix_nocrop(8, 8, 0, 0, 2, 1, z) // window decoration: list (?)
 	template_sprite_matrix_nocrop(8, 8, 0, 0, 3, 1, z) // window decoration: pin/sticky
