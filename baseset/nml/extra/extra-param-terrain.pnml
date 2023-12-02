@@ -124,7 +124,7 @@ if (param_gridlines==0 || param_gridlines==2) {
 
         //2365-2371 tunnels grass rail
         replace grid_temperate_spr2365(2365, "../graphics/stations/general/64/pygen/tunnels_rail_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
-        #32 alternative_sprites(grid_temperate_spr2365, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_rail_temperate_grass_b32bpp.png") { template_tunnels_general(0, 0, 1) }
+        #32 alternative_sprites(grid_temperate_spr2365, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_rail_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
         //2373-2379 tunnels grass monorail
         replace grid_temperate_spr2373(2373, "../graphics/stations/general/64/pygen/tunnels_monorail_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
         #32 alternative_sprites(grid_temperate_spr2373, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_monorail_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
