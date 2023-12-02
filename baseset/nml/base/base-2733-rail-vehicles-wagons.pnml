@@ -1,5 +1,6 @@
 //2733-2828 rail wagons
 base_graphics spr2733(2733, "../graphics/vehicles/64/rail_wagons_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) } // temperate rail passenger wagon (full + empty)
+#ez alternative_sprites(spr2733, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/vehicles/256/rail_wagons_8bpp.png") { template_vehicle_rail_4view(0, 0, 4) }
 base_graphics spr2737(2737, "../graphics/vehicles/64/rail_wagons_8bpp.png") { template_vehicle_rail_4view(0, 1, 1) } // temperate rail coal wagon (empty)
 base_graphics spr2741(2741, "../graphics/vehicles/64/rail_wagons_8bpp.png") { template_vehicle_rail_4view(0, 2, 1) } // temperate rail mail wagon (full + empty)
 base_graphics spr2745(2745, "../graphics/vehicles/64/rail_wagons_8bpp.png") { template_vehicle_rail_4view(0, 3, 1) } // temperate rail oil wagon (full + empty)
