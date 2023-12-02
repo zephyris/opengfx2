@@ -1,0 +1,25 @@
+//1821-1946 cacti and palm trees
+template template_tree_tropical_setnonleaf1(z) {
+	template_tree_alt(0,   0, z) // palm, banana
+	template_tree_alt(0,  81, z) // palm, banana
+}
+template template_tree_tropical_setnonleaf2(z) {
+	template_tree_alt(0, 162, z) // scrub, agave
+	template_tree_alt(0, 243, z) // scrub, agave
+}
+template template_tree_tropical_setnonleaf3(z) {
+	template_tree_alt(0, 324, z) // palm
+	template_tree_alt(0, 405, z) // palm, coconut
+	template_tree_alt(0, 486, z) // palm, large
+	template_tree_alt(0, 567, z) // palm
+	template_tree_alt(0, 648, z) // saguaro cactus, large
+	template_tree_alt(0, 729, z) // cactus, small
+	template_tree_alt(0, 810, z) // palm
+}
+
+replace spr1821(1821, "../graphics/trees/64/pygen/tropical_nonleaf_8bpp.png") { template_tree_tropical_setnonleaf1(1) }
+#ez alternative_sprites(spr1821, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/pygen/tropical_nonleaf_8bpp.png") { template_tree_tropical_setnonleaf1(4) }
+replace spr1849(1849, "../graphics/trees/64/pygen/tropical_nonleaf_8bpp.png") { template_tree_tropical_setnonleaf2(1) }
+#ez alternative_sprites(spr1849, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/pygen/tropical_nonleaf_8bpp.png") { template_tree_tropical_setnonleaf2(4) }
+replace spr1884(1884, "../graphics/trees/64/pygen/tropical_nonleaf_8bpp.png") { template_tree_tropical_setnonleaf3(1) }
+#ez alternative_sprites(spr1884, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/trees/256/pygen/tropical_nonleaf_8bpp.png") { template_tree_tropical_setnonleaf3(4) }

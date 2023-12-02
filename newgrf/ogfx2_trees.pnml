@@ -1,5 +1,8 @@
 #include "nml/trees/trees-header.pnml"
 #include "../templates/zoom-sensitive.pnml"
 
+//Simple graphics replacement
+#include "nml/trees/trees-standard-tropical.pnml"
+
 //Parameter-controlled replacement, from baseset extra NewGRF
 #include "../baseset/nml/extra/extra-param-trees.pnml"
