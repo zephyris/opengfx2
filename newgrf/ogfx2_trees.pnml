@@ -3,6 +3,7 @@
 
 //Simple graphics replacement
 #include "nml/trees/trees-standard-tropical.pnml"
+#include "nml/trees/tree-industries.pnml"
 
 //Parameter-controlled replacement, from baseset extra NewGRF
 #include "../baseset/nml/extra/extra-param-trees.pnml"

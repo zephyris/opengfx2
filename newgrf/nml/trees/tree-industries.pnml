@@ -1,0 +1,24 @@
+//2072-2077 forest
+template template_spr2072(z) {
+	template_house_1x1(  0,   0, z, 74)
+	template_house_1x1( 65,   0, z, 74)
+	template_house_1x1(130,   0, z, 74)
+	template_house_1x1(195,   0, z, 74)
+	template_house_1x1(260,   0, z, 74)
+	template_house_1x1(325,   0, z, 74)
+}
+replace spr2072(2072, "../graphics/industries/arctic/64/forest_8bpp.png") { template_spr2072(1) }
+#32 alternative_sprites(spr2072, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/forest_bt32bpp.png") { template_spr2072(1) }
+#ez alternative_sprites(spr2072, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/industries/arctic/256/forest_8bpp.png") { template_spr2072(4) }
+#ez #32 alternative_sprites(spr2072, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/industries/arctic/256/forest_bt32bpp.png") { template_spr2072(4) }
+
+//2341-2343 fruit/rubber plantation
+template template_spr2341(z) {
+	template_house_1x1(130,   0, z, 74)
+	template_house_1x1(  0,   0, z, 74)
+	template_house_1x1( 65,   0, z, 74)
+}
+replace spr2341(2341, "../graphics/industries/tropical/64/plantations_8bpp.png") { template_spr2341(1) }
+#32 alternative_sprites(spr2341, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/tropical/64/plantations_bt32bpp.png") { template_spr2341(1) }
+#ez alternative_sprites(spr2341, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/industries/tropical/256/plantations_8bpp.png") { template_spr2341(4) }
+#ez #32 alternative_sprites(spr2341, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/industries/tropical/256/plantations_bt32bpp.png") { template_spr2341(4) }
