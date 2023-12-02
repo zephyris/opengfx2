@@ -28,7 +28,9 @@ Install the newgrfs by copying each `.grf` file into the `newgrf` directory for 
 
 To set as the base graphics set, go to `Game Options>(Graphics)>Base Graphics` Set and select `OpenGFX2 Classic` (8-bit 1x zoom version) or `OpenGFX2 High Def` (32-bit 4x zoom version).
 
-OpenGFX2 has graphical user preferences. These can be configured in `Game Options>(Graphics)>Base graphics set>Set parameters`. These settings are local graphical changes only, ant can be freely changed, used with any save-game, used on any server, etc.
+OpenGFX2 has graphical user preferences. These can be configured in `Game Options>(Graphics)>Base graphics set>Set parameters`. These settings are local graphical changes only. You can freely change them and use them with any save-game, use any server, etc.
+
+If you instead want for force a game or server to use OpenGFX2 graphics you can use the OpenGFX2 NewGRFs.
 
 Prior to OpenTTD 14.0 (specifically nightlies prior to 30/10/2023 or before Github commit e81313e) OpenTTD did not have a way to configure base set parameters. The `OpenGFX2 Settings` NewGRF provides a workaround: Go to `NewGRF Settings`, find `OpenGFX2 Settings` and add to `Active NewGRF files`. Then, select `OpenGFX2 Settings` in the `Active NewGRF files list` and select `Set parameters` then adjust the settings.
 
@@ -49,7 +51,7 @@ The built baseset will be in `baseset/`, making different versions called `openg
 The built newgrf(s) will be in `newgrf/`, making various `.grf` files.
 
 ### Build process notes
-Image processing makes a bunch of intermediate files, particularly `*_8-bit.png` and things in `pygen` directories. Others are `_bt32-bit`, `_rm32-bit.png`. These files are assumed to be temporary intermediates, and any user-modified versions will be blindly overwritten. Make sure you look at `.gitignore` see which files this applies to.
+Image processing makes a bunch of intermediate files, particularly `*_8bpp.png` and things in `pygen` directories. Others are `_bt32bpp.png`, `_rm32bpp.png`. These files are assumed to be temporary intermediates, and any user-modified versions will be blindly overwritten. Make sure you look at `.gitignore` see which files this applies to.
 
 Files processed by `python` and encoded by `nml` are `.png` files, but those may be derived from other sources. Raw sprites were variously drawn\generated in Paint.NET, Aseprite, Blender and more. Conversion from those raw sources to `.png` files is not part of the build process - it must be done manually.
 
