@@ -987,6 +987,15 @@ template template_waterslopes_slopesonly(x, y, z) {
 	[   1*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
 	[ 161*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
 }
+template template_waterslopes_sealevel(x, y, z) {
+	//Flat tile
+	[ -79*z+x*z,   1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	//Sloped tiles
+	[  81*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 241*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[   1*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 161*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
 
 //Template: river/canal banks, flat
 template template_waterfeature_flat(x, y, z) {
