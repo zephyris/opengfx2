@@ -20,7 +20,7 @@ alternative_sprites (spr4079, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/ico
 //4080-4081 town and industry cursors
 base_graphics spr4080(4080, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(3, 1, 1) // build town cursor
-    template_cursor_matrix(0, 4, 1) // build industry cursor
+    template_cursor_matrix(4, 1, 1) // build industry cursor
 }
 
 //4082-4086 landscape-associated icons

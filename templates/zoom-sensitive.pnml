@@ -107,7 +107,7 @@ template template_animation_frame(w, h, ox, oy, f, z) {
 
 // GUI templates: Cursors, with 1px border
 template template_cursor_matrix(xindex, yindex, z) {
-	template_sprite_matrix(48, 32, 0, 0, xindex, yindex, z)
+	template_sprite_matrix(36, 36, 0, 0, xindex, yindex, z)
 }
 
 // Templates for handling general sprite sheets with 0px borders
