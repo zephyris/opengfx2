@@ -1,13 +1,13 @@
 //89-96 main menu climate previews88
 template template_spr89(z) {
-    template_sprite_matrix(71, 49, 0, 0, 0, 0, z)
-    template_sprite_matrix(71, 49, 0, 0, 0, 1, z)
-    template_sprite_matrix(71, 49, 0, 0, 1, 0, z)
-    template_sprite_matrix(71, 49, 0, 0, 1, 1, z)
-    template_sprite_matrix(71, 49, 0, 0, 2, 0, z)
-    template_sprite_matrix(71, 49, 0, 0, 2, 1, z)
-    template_sprite_matrix(71, 49, 0, 0, 3, 0, z)
-    template_sprite_matrix(71, 49, 0, 0, 3, 1, z)
+    template_sprite_matrix(72, 50, 0, 0, 0, 0, z)
+    template_sprite_matrix(72, 50, 0, 0, 0, 1, z)
+    template_sprite_matrix(72, 50, 0, 0, 1, 0, z)
+    template_sprite_matrix(72, 50, 0, 0, 1, 1, z)
+    template_sprite_matrix(72, 50, 0, 0, 2, 0, z)
+    template_sprite_matrix(72, 50, 0, 0, 2, 1, z)
+    template_sprite_matrix(72, 50, 0, 0, 3, 0, z)
+    template_sprite_matrix(72, 50, 0, 0, 3, 1, z)
 }
 base_graphics spr89(89, "../graphics/icons/1/climate_previews_8bpp.png") { template_spr89(1) }
 #32 alternative_sprites(spr89, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/icons/1/climate_previews_rm32bpp.png", "../graphics/icons/1/climate_previews_8bpp.png") { template_spr89(1) }

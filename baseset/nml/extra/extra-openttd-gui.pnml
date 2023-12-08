@@ -342,10 +342,12 @@ replacenew ottd_gui162(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 162)
 alternative_sprites (ottd_gui162, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_10px_8bpp.png") { template_ottd_gui164(2) }
 
 // OTTD_GUI 166-167 text clear mini icons
-replacenew ottd_gui166(OTTD_GUI, "../graphics/icons/1/icons_textdelete_8bpp.png", 166) {
-	template_sprite_matrix_nocrop(14, 8, 0, 1, 0, 0, 1)  // delete/clear text (left to right language)
-	template_sprite_matrix_nocrop(14, 8, 0, 1, 1, 0, 1)  // delete/clear (right to left language)
+template template_ottd_gui166(z) {
+	template_sprite_matrix_nocrop(14, 8, 0, 1, 0, 0, z)  // delete/clear text (left to right language)
+	template_sprite_matrix_nocrop(14, 8, 0, 1, 1, 0, z)  // delete/clear (right to left language)
 }
+replacenew ottd_gui166(OTTD_GUI, "../graphics/icons/1/icons_textdelete_8bpp.png", 166) { template_ottd_gui166(1) }
+alternative_sprites (ottd_gui166, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_textdelete_8bpp.png") { template_ottd_gui166(2) }
 
 // OTTD_GUI 168 window decoration
 template template_ottd_gui168(z) {
@@ -396,10 +398,12 @@ replacenew ottd_gui184(OTTD_GUI, "../graphics/icons/1/icons_8px_8bpp.png", 184) 
 alternative_sprites (ottd_gui184, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_8px_8bpp.png") { template_ottd_gui184(2) }
 
 // OTTD_GUI 186-190 network mini icons
-replacenew ottd_gui186(OTTD_GUI, "../graphics/icons/1/icons_network_8bpp.png", 186) {
-	template_sprite_matrix_nocrop(12, 10, 0, 0, 0, 0, 1) // network chat icon
-	template_sprite_matrix_nocrop(12, 10, 0, 0, 1, 0, 1) // network settings icon
-	template_sprite_matrix_nocrop(12, 10, 0, 0, 2, 0, 1) // network join icon
-	template_sprite_matrix_nocrop(12, 10, 0, 0, 1, 1, 1) // network player icon
-	template_sprite_matrix_nocrop(12, 10, 0, 0, 2, 1, 1) // network crown icon
+template template_ottd_gui186(z) {
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 0, 0, z) // network chat icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 1, 0, z) // network settings icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 2, 0, z) // network join icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 1, 1, z) // network player icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 2, 1, z) // network crown icon
 }
+replacenew ottd_gui186(OTTD_GUI, "../graphics/icons/1/icons_network_8bpp.png", 186) { template_ottd_gui186(1) }
+alternative_sprites (ottd_gui186, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_network_8bpp.png") { template_ottd_gui186(2) }

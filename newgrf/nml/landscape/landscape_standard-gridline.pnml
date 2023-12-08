@@ -2,13 +2,13 @@
 if (param_gridlines==0 || param_gridlines==1) {
 	// 4061 flat water tile
 	if (climate != CLIMATE_TOYLAND) {
-		replace gridline_water_tile(4061, "../graphics/terrain/64/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 1) }
-		//#ez alternative_sprites(gridline_water_tile, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 2) }
-		#ez alternative_sprites(gridline_water_tile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_flattile_single(0, 0, 4) }
+		replace gridline_water_tile(4061, "../graphics/terrain/64/universal_watertile_8bpp.png") { template_flattile_single(0, 0, 1) }
+		//#ez alternative_sprites(gridline_water_tile, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertile_8bpp.png") { template_flattile_single(0, 0, 2) }
+		#ez alternative_sprites(gridline_water_tile, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertile_8bpp.png") { template_flattile_single(0, 0, 4) }
 	} else if (climate == CLIMATE_TOYLAND) {
-		replace gridline_water_tile_toyland(4061, "../graphics/terrain/64/toyland_watertiles_8bpp.png") { template_flattile_single(0, 0, 1) }
-		//#ez alternative_sprites(gridline_water_tile_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_watertiles_8bpp.png") { template_flattile_single(0, 0, 2) }
-		#ez alternative_sprites(gridline_water_tile_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_watertiles_8bpp.png") { template_flattile_single(0, 0, 4) }
+		replace gridline_water_tile_toyland(4061, "../graphics/terrain/64/toyland_watertile_8bpp.png") { template_flattile_single(0, 0, 1) }
+		//#ez alternative_sprites(gridline_water_tile_toyland, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/toyland_watertile_8bpp.png") { template_flattile_single(0, 0, 2) }
+		#ez alternative_sprites(gridline_water_tile_toyland, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/toyland_watertile_8bpp.png") { template_flattile_single(0, 0, 4) }
 	}
 }
 

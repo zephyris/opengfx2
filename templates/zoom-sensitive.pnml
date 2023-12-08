@@ -107,7 +107,7 @@ template template_animation_frame(w, h, ox, oy, f, z) {
 
 // GUI templates: Cursors, with 1px border
 template template_cursor_matrix(xindex, yindex, z) {
-	template_sprite_matrix(48, 32, 0, 0, xindex, yindex, z)
+	template_sprite_matrix(36, 36, 0, 0, xindex, yindex, z)
 }
 
 // Templates for handling general sprite sheets with 0px borders
@@ -981,6 +981,15 @@ template template_waterslopes(x, y, z) {
 	[ 161*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
 }
 template template_waterslopes_slopesonly(x, y, z) {
+	//Sloped tiles
+	[  81*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 241*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[   1*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 161*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+}
+template template_waterslopes_sealevel(x, y, z) {
+	//Flat tile
+	[ -79*z+x*z,   1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
 	//Sloped tiles
 	[  81*z+x*z,   1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
 	[ 241*z+x*z,   1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]

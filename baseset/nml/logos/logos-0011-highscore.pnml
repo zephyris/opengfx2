@@ -1,3 +1,7 @@
 //11-20 high score list background
-base_graphics spr11(11, "../graphics/icons/1/scoreboard_8bpp.png") { template_highscore_background(1) }
-#32 alternative_sprites(spr11, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/icons/1/scoreboard_bt32bpp.png") { template_highscore_background(1) }
+base_graphics spr11(11, "../graphics/icons/1/highscore_8bpp.png") { template_highscore_background(1) }
+#32 alternative_sprites(spr11, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/icons/1/highscore_bt32bpp.png") { template_highscore_background(1) }
+alternative_sprites(spr11, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/highscore_8bpp.png") { template_highscore_background(2) }
+#ez #32 alternative_sprites(spr11, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/icons/2/highscore_bt32bpp.png") { template_highscore_background(2) }
+alternative_sprites(spr11, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/highscore_8bpp.png") { template_highscore_background(4) }
+#ez #32 alternative_sprites(spr11, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/icons/4/highscore_bt32bpp.png") { template_highscore_background(4) }

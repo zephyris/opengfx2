@@ -1,11 +1,13 @@
 //674-678 company colour swatches
-base_graphics spr674( 674, "../graphics/icons/1/company_colour_swatches_8bpp.png") {
-    [ 1,      1,  34,   1,   0,   0]
-    [ 49,     1,  16,  16,   0,   0]
-    [ 81,     1,  16,  20,   0,   0]
-    [ 113,    1,  20,  20,   0,   0]
-    [ 145,    1,  40,  20,   0,   0]
+template template_spr674(z) {
+    [ 1*z,      1*z,  34*z,   1*z,   0,   0]
+    [ 49*z,     1*z,  16*z,  16*z,   0,   0]
+    [ 81*z,     1*z,  16*z,  20*z,   0,   0]
+    [ 113*z,    1*z,  20*z,  20*z,   0,   0]
+    [ 145*z,    1*z,  40*z,  20*z,   0,   0]
 }
+base_graphics spr674( 674, "../graphics/icons/1/company_colour_swatches_8bpp.png") { template_spr674(1) }
+alternative_sprites(spr674, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/company_colour_swatches_8bpp.png") { template_spr674(2) }
 
 //icons and cursors
 //679-681 toolbar icons
@@ -141,9 +143,11 @@ template template_spr723(z) {
 base_graphics spr723( 723, "../graphics/icons/1/icons_20px_8bpp.png") { template_spr723(1) }
 alternative_sprites(spr723, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_20px_8bpp.png") { template_spr723(2) }
 //727 company list company colour blob
-base_graphics spr747( 747, "../graphics/icons/1/company_colour_swatches_8bpp.png") {
-    [ 1, 9, 14, 8, 0, 0] // company cover oval
+template template_spr747(z) {
+    [ 1*z, 9*z, 14*z, 8*z, 0, 0] // company cover oval
 }
+base_graphics spr747( 747, "../graphics/icons/1/company_colour_swatches_8bpp.png") { template_spr747(1) }
+alternative_sprites(spr747, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/company_colour_swatches_8bpp.png") { template_spr747(2) }
 //748-751 toolbar icons
 template template_spr748(z) {
     template_sprite_matrix_nocrop(20, 20, 0, 0, 2, 8, z) // construction toolbar: build ship depot
