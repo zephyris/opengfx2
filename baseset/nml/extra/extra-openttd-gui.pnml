@@ -325,8 +325,8 @@ template template_ottd_gui154(z) {
 	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 1, z)  // Profit lots
 	template_sprite_matrix_nocrop(10, 10, 0, 0, 8, 1, z)  // Unread news
 	template_sprite_matrix_nocrop(10, 10, 0, 0, 7, 1, z)  // Exclusive transport rights
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 2, z)  // vehicle groups: Autoreplace protection
-	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 2, z)  // vehicle groups: Autoreplace defined
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 5, 2, z)  // Vehicle groups: Autoreplace defined
+	template_sprite_matrix_nocrop(10, 10, 0, 0, 4, 2, z)  // Vehicle groups: Autoreplace protection
 }
 replacenew ottd_gui154(OTTD_GUI, "../graphics/icons/1/icons_10px_8bpp.png", 154) { template_ottd_gui154(1) }
 alternative_sprites (ottd_gui154, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_10px_8bpp.png") { template_ottd_gui154(2) }
