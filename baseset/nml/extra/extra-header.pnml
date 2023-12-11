@@ -13,10 +13,12 @@ grf {
 			type: int;
 			def_value: 0;
 			min_value: 0;
-			max_value: 1;
+			max_value: 3;
 			names: {
 				0: string(STR_PARAM_CURSOR_VALUE_DEFAULT);
-				1: string(STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW);
+				1: string(STR_PARAM_CURSOR_VALUE_CLASSIC_GRAY);
+				2: string(STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW);
+				3: string(STR_PARAM_CURSOR_VALUE_WIN_WHITE);
 			};
 		}
 	}

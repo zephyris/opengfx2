@@ -17,16 +17,22 @@ icon_height = 20
 
 cursor_list = {
   "default": "classic_yellow",
-  "opengfx_yellow": "opengfx_yellow"
+  "opengfx_yellow": "opengfx_yellow",
+  "classic_gray": "classic_gray",
+  "windows_white": "windows_white"
 }
 
 xoffset_list = {
   "classic_yellow": 8,
-  "opengfx_yellow": 7
+  "opengfx_yellow": 7,
+  "classic_gray": 8,
+  "windows_white": 7
 }
 yoffset_list = {
   "classic_yellow": 9,
-  "opengfx_yellow": 16
+  "opengfx_yellow": 16,
+  "classic_gray": 9,
+  "windows_white": 16,
 }
 
 icon_images_base = os.path.join("..", "..", "icons", str(scale), "icons_20px")
