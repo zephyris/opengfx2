@@ -10,6 +10,7 @@ base_graphics spr2941(2941, "../graphics/vehicles/64/rail_engines_temperate_8bpp
 #ez alternative_sprites(spr2941, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/vehicles/256/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 6, 4) }
 base_graphics spr2949(2949, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 7, 1) } // Manley-Morel VT (Diesel)
 base_graphics spr2957(2957, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 8, 1) } // Dash (Diesel)
+#ez alternative_sprites(spr2957, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/vehicles/256/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 8, 4) }
 base_graphics spr2965(2965, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 9, 1) } // Asia Star (Electric)
 base_graphics spr2973(2973, "../graphics/vehicles/64/rail_engines_temperate_8bpp.png") { template_vehicle_rail_8view(0, 10, 1) } // T.I.M. (Electric)
 
