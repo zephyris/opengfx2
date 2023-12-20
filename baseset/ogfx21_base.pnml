@@ -1,6 +1,8 @@
 #include "../templates/zoom-sensitive.pnml"
 
-#include "nml/base/base-0000-font.pnml"
+#include "nml/base/base-0000-cursors.pnml"
+//#include "nml/base/base-0002-font.pnml"
+#include "../graphics/fonts/pygen/base-0002-font.pnml"
 #include "nml/base/base-0674-gui.pnml"
 #include "nml/base/base-0771-recolor-gui.pnml"
 #include "nml/base/base-0774-gui-terraform.pnml"

@@ -5,7 +5,7 @@
 #include "nml/extra/extra-2ccmap.pnml"
 #include "nml/extra/extra-aqueduct.pnml"
 #include "nml/extra/extra-canals.pnml"
-#include "nml/extra/extra-chars.pnml"
+#include "../graphics/fonts/pygen/extra-chars.pnml"
 #include "nml/extra/extra-erails.pnml"
 #include "nml/extra/extra-rail-tunnels.pnml"
 #include "nml/extra/extra-foundations.pnml"
