@@ -76,13 +76,26 @@ charsets = [
       {"start": 160, "end": 255, "name": "Latin-1 Supplement"},
       {"start": 256, "end": 383, "name": "Latin Extended-A"},
       {"start": 900, "end": 983, "name": "Greek, from Greek and Coptic"},
+      {"start": 1024, "end": 1119, "name": "Cyrillic"},
       {"start": 8352, "end": 8383, "name": "Currency Symbols"},
       # Select additional characters
+      # Latin
       {"start": 399, "end": 399}, # Latin Extended-B
       {"start": 401, "end": 402}, # Latin Extended-B
       {"start": 437, "end": 438}, # Latin Extended-B
       {"start": 536, "end": 539}, # Latin Extended-B
       {"start": 601, "end": 601}, # Latin Extended-B
+      # Cyrillic
+      {"start": 1168, "end": 1169}, # Cyrillic
+      {"start": 1194, "end": 1195}, # Cyrillic
+      {"start": 1232, "end": 1233}, # Cyrillic
+      {"start": 1238, "end": 1239}, # Cyrillic
+      {"start": 1266, "end": 1267}, # Cyrillic
+      # Other
+      {"start": 699, "end": 700}, # Diacritics
+      {"start": 710, "end": 712}, # Diacritics
+      {"start": 713, "end": 715}, # Diacritics
+      {"start": 728, "end": 732}, # Diacritics
       {"start": 1423, "end": 1423}, # Currency
       {"start": 3647, "end": 3647}, # Currency
       {"start": 8208, "end": 8213}, # Punctuation
