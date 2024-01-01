@@ -35,7 +35,7 @@ fonts = [
     "size": 18,
     "ascent": 14,
     "descent": 4,
-    "space": 5,
+    "space": 6,
     "yoffs": -4,
     "basesetoffs": 450
   }
@@ -117,30 +117,40 @@ def get_glyph(font, scale, code):
   shadowoffset = 0
   if font["name"] == "medium":
     shadowoffset = 1
-  image = Image.new("RGBA", (font["size"] * scale * maxwidthfactor, ((font["ascent"] + font["descent"] + shadowoffset) * scale)), (0, 0, 0, 0))
+  additionalyoffs = 0
+  additionalstring = ""
+  additionalheight = 0
+  if font["name"] == "medium":
+    additionalyoffs = 1 # hack: top pixel can be lost, noticed for i and j tittle.
+    additionalstring = "                i" # hack: characters can be one off in vertical direction unless forced with presence of i in the string.
+  if font["name"] == "large":
+    additionalyoffs = 2 # hack: top pixels can be lost, noticed for capitals with diacritics.
+    additionalstring = "                O" # hack: characters can be one off in vertical direction unless forced with presence of O (or other tall, rounded, character) in the string, noticed for eg. N vs O.
+    additionalheight = 1 # hack: to make sure long descenders aren't lost
+  image = Image.new("RGBA", (font["size"] * scale * maxwidthfactor, (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale), (0, 0, 0, 0))
   draw = ImageDraw.Draw(image)
   draw.fontmode = "1" # aliased
   if font["name"] == "medium":
-    draw.text((shadowoffset * scale, shadowoffset * scale), chr(code), font=font["imfont"], fill=(32, 32, 32, 255))
-  draw.text((0, 0), chr(code), font=font["imfont"], fill=(16, 16, 16, 255))
+    draw.text((shadowoffset * scale, shadowoffset * scale + additionalyoffs), chr(code) + additionalstring, font=font["imfont"], fill=(32, 32, 32, 255))
+  draw.text((0, 0 + additionalyoffs), chr(code) + additionalstring, font=font["imfont"], fill=(16, 16, 16, 255))
   imagebox = image.getbbox()
   if imagebox is None:
     # if no bounding box then no glyph
     if code == 32 or code == 160:
       # handle spaces
-      imagebox = (0, 0, font["space"] * scale, (font["ascent"] + font["descent"]) * scale)
+      imagebox = (0, 0, font["space"] * scale, (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale)
     else:
       # width 1 and force blank
-      draw.rectangle((0, 0, font["size"] * scale * maxwidthfactor, (font["ascent"] + font["descent"] + shadowoffset) * scale), fill=(0, 0, 0, 0), outline=None)
+      draw.rectangle((0, 0, font["size"] * scale * maxwidthfactor, (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale), fill=(0, 0, 0, 0), outline=None)
       imagebox = (0, 0, 1 * scale, (font["ascent"] + font["descent"]) * scale)
   else:
     # force width 1 for control characters and force blank
     if code in range(0, 31 + 1) or code in range(127, 159 + 1):
-      draw.rectangle((0, 0, font["size"] * scale * maxwidthfactor, (font["ascent"] + font["descent"] + shadowoffset) * scale), fill=(0, 0, 0, 0), outline=None)
-      imagebox = (0, 0, 1 * scale, (font["ascent"] + font["descent"]) * scale)
-  imagebox = (0, 0, imagebox[2], (font["ascent"] + font["descent"]) * scale)
+      draw.rectangle((0, 0, font["size"] * scale * maxwidthfactor, (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale), fill=(0, 0, 0, 0), outline=None)
+      imagebox = (0, 0, 1 * scale, (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale)
+  imagebox = (0, 0, imagebox[2], (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale)
   crop = image.crop(imagebox)
-  return crop, imagebox[2] # return width-cropped glyph sprite and width
+  return crop, imagebox[2], imagebox[3] # return width-cropped glyph sprite, width and height
 
 for charset in charsets:
   print("", charset["name"], "charset")
@@ -186,15 +196,11 @@ for charset in charsets:
             nml.write("template " + templatename + "(z) {\n")
           for code in range(codeset["start"], codeset["end"] + 1):
             index += 1
-            sprite, w = get_glyph(font, scale, code)
+            sprite, w, h = get_glyph(font, scale, code)
             if scale != 1:
               w += scale # Hack: Increases glyph width for 2x and 4x zooms, to account for any rounding error in glyph width when scaled up
             x = (index % outputcolumns) * (outputpadding + font["size"] * maxwidthfactor) + outputpadding
             y = floor(index / outputcolumns) * (outputpadding + font["ascent"] + font["descent"]) + outputpadding
-            shadowoffset = 0
-            if font["name"] == "medium":
-              shadowoffset = 1
-            h = font["ascent"] + font["descent"] + shadowoffset
             sprites.append({"sprite": sprite, "w": w, "h": h, "x": x, "y": y})
             if printnml:
               nml.write("    [" + str(x) + "*z, "+str(y) + "*z, " + str(w) + "*z, " + str(h) + "*z, 0," + str(font["yoffs"]) + "*z] // " + str(code) + "\n")
