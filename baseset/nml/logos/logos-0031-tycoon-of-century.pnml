@@ -1,7 +1,7 @@
-//31-40 image 2, newspaper
+//31-40 image 2, magazine
 base_graphics spr31(31, "../graphics/icons/1/magazine_8bpp.png") { template_highscore_background(1) }
-#32 alternative_sprites(spr21, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/icons/1/magazine_bt32bpp.png") { template_highscore_background(1) }
-alternative_sprites(spr21, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/magazine_8bpp.png") { template_highscore_background(2) }
-#ez #32 alternative_sprites(spr21, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/icons/2/magazine_bt32bpp.png") { template_highscore_background(2) }
-alternative_sprites(spr21, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/magazine_8bpp.png") { template_highscore_background(4) }
-#ez #32 alternative_sprites(spr21, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/icons/4/magazine_bt32bpp.png") { template_highscore_background(4) }
+#32 alternative_sprites(spr31, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/icons/1/magazine_bt32bpp.png") { template_highscore_background(1) }
+alternative_sprites(spr31, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/magazine_8bpp.png") { template_highscore_background(2) }
+#ez #32 alternative_sprites(spr31, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/icons/2/magazine_bt32bpp.png") { template_highscore_background(2) }
+alternative_sprites(spr31, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/magazine_8bpp.png") { template_highscore_background(4) }
+#ez #32 alternative_sprites(spr31, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/icons/4/magazine_bt32bpp.png") { template_highscore_background(4) }
