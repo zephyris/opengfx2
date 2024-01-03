@@ -1439,8 +1439,10 @@ if (param_gridlines==1) {
 if (param_gridlines==2) {
     // 4061 flat water tile
     replace watergrid_temperate_spr4061(4061, "../graphics/terrain/64/pygen/universal_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 1) }
+    alternative_sprites(watergrid_temperate_spr4061, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/universalnocc_watertile_gridline_cbt32bpp.png", "../graphics/terrain/64/universalnocc_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 1)}
     //#ez alternative_sprites(watergrid_temperate_spr4061, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/universal_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 2) }
     #ez alternative_sprites(watergrid_temperate_spr4061, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/universal_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 4) }
+    #ez alternative_sprites(watergrid_temperate_spr4061, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/universal_watertiles_cbt32bpp.png", "../graphics/terrain/256/pygen/universal_watertile_gridline_8bpp.png") { template_flattile_single(0, 0, 4) }
 
     // Temperate grass //
     if ((climate==CLIMATE_TEMPERATE && param_grass_temperate==0) || (climate==CLIMATE_ARCTIC && param_grass_arctic==0) || (climate==CLIMATE_TROPICAL && param_grass_tropical==0) || (climate==CLIMATE_TOYLAND && param_grass_toyland==0)) {
