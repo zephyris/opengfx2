@@ -237,8 +237,8 @@ base_graphics spr4550(4550, "../graphics/terrain/64/pygen/arctic_groundtiles_sno
 
 //Snowy houses
 //4569 snow version of 1442
-base_graphics spr4569(4569, "../graphics/towns/arctic/64/pygen/largeofficeblock_snow_8bpp.png") { template_house_1x1(0,196, 1, 97) }
-#32 alternative_sprites(spr4569, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/arctic/64/pygen/largeofficeblock_snow_bt32bpp.png") { template_house_1x1(0,196, 1, 97) }
+base_graphics spr4569(4569, "../graphics/towns/arctic/64/pygen/largeofficeblock_snow_8bpp.png") { template_house_1x1(0,  0, 1, 97) }
+#32 alternative_sprites(spr4569, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/arctic/64/pygen/largeofficeblock_snow_bt32bpp.png") { template_house_1x1(0,  0, 1, 97) }
 
 //4570-4571 snow version of 1566
 base_graphics spr4570(4570, "../graphics/towns/arctic/64/pygen/houses_snow_base_8bpp.png") { template_house_short(260,  0, 1) }
