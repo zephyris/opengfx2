@@ -7,37 +7,59 @@ from tools import check_update_needed
 
 fonts = [
   {
-    "name": "medium",
-    "code": "NORMAL",
-    "path": "openttd-ttf/openttd-sans/OpenTTD-Sans.ttf",
-    "size": 10,
-    "ascent": 8,
-    "descent": 2,
-    "space": 3,
-    "yoffs": 0,
-    "basesetoffs": 2
+    "name": "medium", # human readable name
+    "code": "NORMAL", # name for NML font_glyph coding
+    "mono": False, # monospace (force character width to equal space)
+    "base": True, # base set font
+    "basesetoffs": 2, # sprite number offset for base set
+    "path": "openttd-ttf/openttd-sans/OpenTTD-Sans.ttf", # TTF path
+    "size": 10, # font size for rendering
+    "ascent": 8, # ascent (px at 1x)
+    "descent": 2, # descent (px at 1x)
+    "space": 3, # space width (px at 1x)
+    "yoffs": 0, # vertical position for NML
+    "ydrawoffs": 1
   },
   {
     "name": "small",
     "code": "SMALL",
+    "mono": False,
+    "base": True,
+    "basesetoffs": 226,
     "path": "openttd-ttf/openttd-small/OpenTTD-Small.ttf",
     "size": 6,
     "ascent": 6,
     "descent": 1,
     "space": 2,
     "yoffs": -1,
-    "basesetoffs": 226
+    "ydrawoffs": 0
   },
   {
     "name": "large",
     "code": "LARGE",
+    "mono": False,
+    "base": True,
+    "basesetoffs": 450,
     "path": "openttd-ttf/openttd-serif/OpenTTD-Serif.ttf",
     "size": 18,
     "ascent": 14,
     "descent": 4,
     "space": 6,
     "yoffs": -4,
-    "basesetoffs": 450
+    "ydrawoffs": 2
+  },
+  {
+    "name": "mono",
+    "code": "MONO",
+    "mono": True,
+    "base": False,
+    "path": "openttd-ttf/openttd-mono/OpenTTD-Mono.ttf",
+    "size": 10,
+    "ascent": 8, #11,
+    "descent": 2,
+    "space": 7,
+    "yoffs": 0,
+    "ydrawoffs": 0 #3
   }
 ]
 
@@ -109,14 +131,16 @@ charsets = [
   },
 ]
 
-maxwidthfactor = 2 # max glyph width, as a factor of font size
+defaultmaxwidthfactor = 2 # max glyph width, as a factor of font size
 outputpadding = 8
 outputcolumns = 32
 
 def get_glyph(font, scale, code):
+  # setup shadow
   shadowoffset = 0
   if font["name"] == "medium":
     shadowoffset = 1
+  # alignment hacks
   additionalyoffs = 0
   additionalstring = ""
   additionalheight = 0
@@ -127,12 +151,13 @@ def get_glyph(font, scale, code):
     additionalyoffs = 2 # hack: top pixels can be lost, noticed for capitals with diacritics.
     additionalstring = "                O" # hack: characters can be one off in vertical direction unless forced with presence of O (or other tall, rounded, character) in the string, noticed for eg. N vs O.
     additionalheight = 1 # hack: to make sure long descenders aren't lost
+  # make output image and setup font
   image = Image.new("RGBA", (font["size"] * scale * maxwidthfactor, (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale), (0, 0, 0, 0))
   draw = ImageDraw.Draw(image)
   draw.fontmode = "1" # aliased
   if font["name"] == "medium":
-    draw.text((shadowoffset * scale, shadowoffset * scale + additionalyoffs), chr(code) + additionalstring, font=font["imfont"], fill=(32, 32, 32, 255))
-  draw.text((0, 0 + additionalyoffs), chr(code) + additionalstring, font=font["imfont"], fill=(16, 16, 16, 255))
+    draw.text((shadowoffset * scale, shadowoffset * scale + font["ydrawoffs"]), chr(code) + additionalstring, font=font["imfont"], fill=(32, 32, 32, 255))
+  draw.text((0, 0 + font["ydrawoffs"]), chr(code) + additionalstring, font=font["imfont"], fill=(16, 16, 16, 255))
   imagebox = image.getbbox()
   if imagebox is None:
     # if no bounding box then no glyph
@@ -149,6 +174,9 @@ def get_glyph(font, scale, code):
       draw.rectangle((0, 0, font["size"] * scale * maxwidthfactor, (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale), fill=(0, 0, 0, 0), outline=None)
       imagebox = (0, 0, 1 * scale, (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale)
   imagebox = (0, 0, imagebox[2], (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale)
+  if font["mono"]:
+    # override with constant width for monospace fonts
+    imagebox = (0, 0, font["space"] * scale, (font["ascent"] + font["descent"] + shadowoffset + additionalheight) * scale)
   crop = image.crop(imagebox)
   return crop, imagebox[2], imagebox[3] # return width-cropped glyph sprite, width and height
 
@@ -157,69 +185,81 @@ for charset in charsets:
   if check_update_needed([fonts[0]["path"], fonts[1]["path"], fonts[2]["path"]], charset["path"]):
     nml = open(charset["path"], "w")
     for font in fonts:
-      nml.write("// " + font["name"] + "\n")
-      print(font["name"], "size", font["size"])
-      for scale in scales:
-        outpath = os.path.join(str(scale), "pygen", font["name"] + "_" + charset["name"] + "_32bpp.png")
-        nml.write("// Scale " + str(scale) + "x\n")
-        print("", "", str(scale) + "x scale\n")
-        font["imfont"] = ImageFont.truetype(font["path"], font["size"] * scale)
-        printnml = False
-        if scale == 1:
-          printnml = True
-        # generate sprites and record where they'll be placed in the sprite sheet, and write nml
-        sprites = []
-        index = -1
-        for codeset in charset["codesets"]:
-          if codeset["start"] == codeset["end"]:
-            charrange = font["name"] + "_extra_codes_" + str(codeset["start"])
-            blockname = "extra_" + font["name"] + "char_code_" + charrange
-            templatename = "template_font_" + font ["name"] + "extra_code_" + charrange
-            summary = "\"" + chr(codeset["start"]) + "\""
-            characters = chr(codeset["start"])
-          else:
-            charrange =  str(codeset["start"]) + "to" + str(codeset["end"])
-            blockname = "extra_" + font["name"] + "char_codes_" + charrange
-            templatename = "template_font_" + font ["name"] + "extra_codes_" + charrange
-            summary =  "\"" + chr(codeset["start"]) + "\" to \"" + chr(codeset["end"]) + "\""
-            characters = "".join([chr(x) for x in range(codeset["start"], codeset["end"] - 1)])
-          firstindex = index + 1
-          if charset["name"] == "base":
-            templatename = "template_spr" + str(firstindex + font["basesetoffs"])
-            blockname = "spr" + str(firstindex + font["basesetoffs"])
-          print("", "", "", codeset["end"] - codeset["start"] + 1, "characters:", summary)
-          if printnml:
-            nml.write("// Unicode " + str(codeset["start"]) + " to " + str(codeset["end"]) + "\n")
-            #nml.write("// Characters \"" + characters + "\"\n")
-            if "name" in codeset:
-              nml.write("// " + codeset["name"] + "\n")
-            nml.write("template " + templatename + "(z) {\n")
-          for code in range(codeset["start"], codeset["end"] + 1):
-            index += 1
-            sprite, w, h = get_glyph(font, scale, code)
-            if scale != 1:
-              w += scale # Hack: Increases glyph width for 2x and 4x zooms, to account for any rounding error in glyph width when scaled up
-            x = (index % outputcolumns) * (outputpadding + font["size"] * maxwidthfactor) + outputpadding
-            y = floor(index / outputcolumns) * (outputpadding + font["ascent"] + font["descent"]) + outputpadding
-            sprites.append({"sprite": sprite, "w": w, "h": h, "x": x, "y": y})
-            if printnml:
-              nml.write("    [" + str(x) + "*z, "+str(y) + "*z, " + str(w) + "*z, " + str(h) + "*z, 0," + str(font["yoffs"]) + "*z] // " + str(code) + "\n")
-          if printnml:
-            nml.write("}\n\n")
-            if charset["name"] == "base":
-              nml.write("base_graphics " + blockname + "(" + str(firstindex + font["basesetoffs"]) + ", \"../graphics/fonts/" + str(scale) + "/pygen/" + font["name"] + "_" + charset["name"] + "_8bpp.png\") {\n")
+      # skip non-baseset fonts for base charset
+      if charset["name"] != "base" or font["base"]:
+        currentcodesets = charset["codesets"]
+        # for non-baseset fonts, prepend base charset
+        if not font["base"]:
+          currentcodesets = charsets[0]["codesets"] + currentcodesets
+        # for monospace fonts, override maxwidthfactor
+        maxwidthfactor = defaultmaxwidthfactor
+        if font["mono"]:
+          maxwidthfactor = 1
+        # start output
+        nml.write("// " + font["name"] + "\n")
+        print(font["name"], "size", font["size"])
+        for scale in scales:
+          outpath = os.path.join(str(scale), "pygen", font["name"] + "_" + charset["name"] + "_32bpp.png")
+          nml.write("// Scale " + str(scale) + "x\n")
+          print("", "", str(scale) + "x scale\n")
+          font["imfont"] = ImageFont.truetype(font["path"], font["size"] * scale)
+          printnml = False
+          if scale == 1:
+            # only print nml for 1x zoom
+            printnml = True
+          # generate sprites and record where they'll be placed in the sprite sheet, and write nml
+          sprites = []
+          index = -1
+          for codeset in currentcodesets:
+            if codeset["start"] == codeset["end"]:
+              charrange = font["name"] + "_extra_codes_" + str(codeset["start"])
+              blockname = "extra_" + font["name"] + "char_code_" + charrange
+              templatename = "template_font_" + font ["name"] + "extra_code_" + charrange
+              summary = "\"" + chr(codeset["start"]) + "\""
+              characters = chr(codeset["start"])
             else:
-              nml.write("font_glyph " + blockname + "(" + font["code"] + ", " + hex(codeset["start"]) + ", \"../graphics/fonts/" + str(scale) + "/pygen/" + font["name"] + "_" + charset["name"] + "_8bpp.png\") {\n")
-          else:
-            nml.write("alternative_sprites(" + blockname + ", ZOOM_LEVEL_IN_" + str(scale) + "X, BIT_DEPTH_8BPP, \"../graphics/fonts/" + str(scale) + "/pygen/" + font["name"] + "_" + charset["name"] + "_8bpp.png\") {\n")
-          nml.write("    " + templatename + "(" + str(scale) + ")\n")
-          nml.write("}\n\n")
-        # generate spritesheet
-        rows = ceil(len(sprites) / outputcolumns)
-        image = Image.new("RGBA", ((outputcolumns * (font["size"] * maxwidthfactor + outputpadding) + outputpadding) * scale, (rows * (font["ascent"] + font["descent"] + outputpadding) + outputpadding) * scale), (255, 255, 255, 255))
-        draw = ImageDraw.Draw(image)
-        for sprite in sprites:
-          draw.rectangle((sprite["x"] * scale, sprite["y"] * scale, sprite["x"] * scale + sprite["w"] - 1, (sprite["y"] + sprite["h"]) * scale - 1), fill=(0, 0, 255, 255), outline=None)
-          image.paste(sprite["sprite"], (sprite["x"] * scale, sprite["y"] * scale), sprite["sprite"])
-        image.save(outpath)
+              charrange =  str(codeset["start"]) + "to" + str(codeset["end"])
+              blockname = "extra_" + font["name"] + "char_codes_" + charrange
+              templatename = "template_font_" + font ["name"] + "extra_codes_" + charrange
+              summary =  "\"" + chr(codeset["start"]) + "\" to \"" + chr(codeset["end"]) + "\""
+              characters = "".join([chr(x) for x in range(codeset["start"], codeset["end"] - 1)])
+            firstindex = index + 1
+            if charset["name"] == "base":
+              templatename = "template_spr" + str(firstindex + font["basesetoffs"])
+              blockname = "spr" + str(firstindex + font["basesetoffs"])
+            print("", "", "", codeset["end"] - codeset["start"] + 1, "characters:", summary)
+            if printnml:
+              nml.write("// Unicode " + str(codeset["start"]) + " to " + str(codeset["end"]) + "\n")
+              #nml.write("// Characters \"" + characters + "\"\n")
+              if "name" in codeset:
+                nml.write("// " + codeset["name"] + "\n")
+              nml.write("template " + templatename + "(z) {\n")
+            for code in range(codeset["start"], codeset["end"] + 1):
+              index += 1
+              sprite, w, h = get_glyph(font, scale, code)
+              if scale != 1:
+                w += scale # Hack: Increases glyph width for 2x and 4x zooms, to account for any rounding error in glyph width when scaled up
+              x = (index % outputcolumns) * (outputpadding + font["size"] * maxwidthfactor) + outputpadding
+              y = floor(index / outputcolumns) * (outputpadding + font["ascent"] + font["descent"]) + outputpadding
+              sprites.append({"sprite": sprite, "w": w, "h": h, "x": x, "y": y})
+              if printnml:
+                nml.write("    [" + str(x) + "*z, "+str(y) + "*z, " + str(w) + "*z, " + str(h) + "*z, 0," + str(font["yoffs"]) + "*z, NOCROP] // " + str(code) + "\n")
+            if printnml:
+              nml.write("}\n\n")
+              if charset["name"] == "base":
+                nml.write("base_graphics " + blockname + "(" + str(firstindex + font["basesetoffs"]) + ", \"../graphics/fonts/" + str(scale) + "/pygen/" + font["name"] + "_" + charset["name"] + "_8bpp.png\") {\n")
+              else:
+                nml.write("font_glyph " + blockname + "(" + font["code"] + ", " + hex(codeset["start"]) + ", \"../graphics/fonts/" + str(scale) + "/pygen/" + font["name"] + "_" + charset["name"] + "_8bpp.png\") {\n")
+            else:
+              nml.write("alternative_sprites(" + blockname + ", ZOOM_LEVEL_IN_" + str(scale) + "X, BIT_DEPTH_8BPP, \"../graphics/fonts/" + str(scale) + "/pygen/" + font["name"] + "_" + charset["name"] + "_8bpp.png\") {\n")
+            nml.write("    " + templatename + "(" + str(scale) + ")\n")
+            nml.write("}\n\n")
+          # generate spritesheet
+          rows = ceil(len(sprites) / outputcolumns)
+          image = Image.new("RGBA", ((outputcolumns * (font["size"] * maxwidthfactor + outputpadding) + outputpadding) * scale, (rows * (font["ascent"] + font["descent"] + outputpadding) + outputpadding) * scale), (255, 255, 255, 255))
+          draw = ImageDraw.Draw(image)
+          for sprite in sprites:
+            draw.rectangle((sprite["x"] * scale, sprite["y"] * scale, sprite["x"] * scale + sprite["w"] - 1, sprite["y"] * scale + sprite["h"] - 1), fill=(0, 0, 255, 255), outline=None)
+            image.paste(sprite["sprite"], (sprite["x"] * scale, sprite["y"] * scale), sprite["sprite"])
+          image.save(outpath)
     nml.close()
