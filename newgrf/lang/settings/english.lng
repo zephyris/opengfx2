@@ -12,7 +12,7 @@ STR_PARAM_CURSOR_DESC                 :Style and colour of the mouse cursor/poin
 STR_PARAM_CURSOR_VALUE_DEFAULT        :Classic-style, yellow (Default)
 STR_PARAM_CURSOR_VALUE_CLASSIC_GRAY   :Classic-style, gray
 STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW :OpenGFX-style, yellow
-STR_PARAM_CURSOR_VALUE_WIN_WHITE      :Windows-sstyle, white
+STR_PARAM_CURSOR_VALUE_WIN_WHITE      :Windows-style, white
 
 STR_PARAM_GRIDLINE_NAME               :Terrain gridlines
 STR_PARAM_GRIDLINE_DESC               :Whether or not to show gridlines on the edges of ground and water tiles.
