@@ -25,6 +25,11 @@ python3 ../templates/nml_preprocessor.py ogfx2_trees 32ez
 mv ogfx2_trees_32ez.nml ogfx2_trees.nml
 nmlc ogfx2_trees.nml --quiet -c -l lang/trees
 
+# Objects
+python3 ../templates/nml_preprocessor.py ogfx2_objects 32ez
+mv ogfx2_objects_32ez.nml ogfx2_objects.nml
+nmlc ogfx2_objects.nml --quiet -c -l lang/objects
+
 if [ ! -z "$1" ]; then
   cp *.grf "$1"
 fi
