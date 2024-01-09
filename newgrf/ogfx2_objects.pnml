@@ -2,3 +2,4 @@
 #include "../templates/zoom-sensitive.pnml"
 
 #include "nml/objects/objects-rocks.pnml"
+#include "nml/objects/objects-fields.pnml"

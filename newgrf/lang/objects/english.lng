@@ -12,3 +12,12 @@ STR_OBJECT_ROCKS_DARKGRAY:Dark gray rocks
 STR_OBJECT_ROCKS_BROWN1 :Red-brown rocks
 STR_OBJECT_ROCKS_BROWN2 :Brown rocks
 STR_OBJECT_ROCKS_BUY    :Rocky terrain tile. Can be built on land, coasts or sea. Slope and snow-aware.
+
+STR_CLASS_FLD_          :Fields
+STR_OBJECT_FIELD        :Field
+STR_OBJECT_FIELD_BUY    :Field terrain tile. Slope and snow-aware, with automatic fences or hedges around areas of the same field type.
+STR_OBJECT_COMPANY_BARE :Bare earth
+STR_OBJECT_COMPANY_PART1:Little grass
+STR_OBJECT_COMPANY_PART2:More grass
+STR_OBJECT_COMPANY_GRASS:Grass
+STR_OBJECT_COMPANY_BUY  :Fenced terrain tile. Slope and snow-aware, with automatic company colour fences around areas of the same tile type.
