@@ -122,23 +122,38 @@ switch (FEAT_OBJECTS, SELF, switch_object_rock_elevation, nearby_tile_height(0, 
     switch_object_rock_snow;
 }
 
+// get base index of ground tile set
+switch (FEAT_OBJECTS, SELF, procedure_ground_tile_base_index, [
+    terrain_type
+]) {
+    TILETYPE_DESERT: GROUNDSPRITE_DESERT;
+    TILETYPE_SNOW: GROUNDSPRITE_SNOW;
+    GROUNDSPRITE_NORMAL;
+}
+
+
+// translate slope index of ground tile to cost tile
+switch (FEAT_OBJECTS, SELF, procedure_slope_to_coast_index, [
+    LOAD_TEMP(0)
+]) {
+    0: 0;
+    1: 2;
+    2: 3;
+    3: 7;
+    4: 1;
+    6: 5;
+    8: 4;
+    9: 8;
+    12: 6;
+    0;
+}
+
 // record index and offset of ground tile base and slope
 // slope index offset -> 0, ground sprite base index -> 1, coast index offset -> 2, hide snow -> 3
 switch (FEAT_OBJECTS, SELF, switch_object_rock_slopes, [
     STORE_TEMP(slope_to_sprite_offset(tile_slope), 0), // slope index offset -> 0
-    STORE_TEMP(GROUNDSPRITE_NORMAL, 1), // ground sprite base index -> 1
-    STORE_TEMP(terrain_type == TILETYPE_DESERT ? GROUNDSPRITE_DESERT : LOAD_TEMP(1), 1), // ...
-    STORE_TEMP(terrain_type == TILETYPE_SNOW ? GROUNDSPRITE_SNOW : LOAD_TEMP(1), 1),
-    STORE_TEMP(0, 2), // default coast index offset -> 2
-    STORE_TEMP(LOAD_TEMP(0) == 0 ? 0 : LOAD_TEMP(2), 2), // coast index offset for slope index offset 0
-    STORE_TEMP(LOAD_TEMP(0) == 1 ? 2 : LOAD_TEMP(2), 2), // ... offset 1
-    STORE_TEMP(LOAD_TEMP(0) == 2 ? 3 : LOAD_TEMP(2), 2), // ...
-    STORE_TEMP(LOAD_TEMP(0) == 3 ? 7 : LOAD_TEMP(2), 2),
-    STORE_TEMP(LOAD_TEMP(0) == 4 ? 1 : LOAD_TEMP(2), 2),
-    STORE_TEMP(LOAD_TEMP(0) == 6 ? 5 : LOAD_TEMP(2), 2),
-    STORE_TEMP(LOAD_TEMP(0) == 8 ? 4 : LOAD_TEMP(2), 2),
-    STORE_TEMP(LOAD_TEMP(0) == 9 ? 8 : LOAD_TEMP(2), 2),
-    STORE_TEMP(LOAD_TEMP(0) == 12 ? 6 : LOAD_TEMP(2), 2)
+    STORE_TEMP(procedure_ground_tile_base_index(), 1), // ground sprite base index -> 1
+    STORE_TEMP(procedure_slope_to_coast_index(), 2), // coast index offset -> 2
 ]) {
     switch_object_rock_elevation;
 }
@@ -219,7 +234,7 @@ item (FEAT_OBJECTS, object_rocks, 10) {
         introduction_date: 0x00000000;
         end_of_life_date: 0xFFFFFFFF;
         object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ON_WATER, OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
-        height: 1;
+        height: 0;
         num_views: 1;
     }
     graphics {
@@ -243,7 +258,7 @@ item (FEAT_OBJECTS, object_rocks_darkgray, 11) {
         introduction_date: 0x00000000;
         end_of_life_date: 0xFFFFFFFF;
         object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ON_WATER, OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
-        height: 1;
+        height: 0;
         num_views: 1;
     }
     graphics {
@@ -267,7 +282,7 @@ item (FEAT_OBJECTS, object_rocks_black, 12) {
         introduction_date: 0x00000000;
         end_of_life_date: 0xFFFFFFFF;
         object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ON_WATER, OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
-        height: 1;
+        height: 0;
         num_views: 1;
     }
     graphics {
@@ -291,7 +306,7 @@ item (FEAT_OBJECTS, object_rocks_brown1, 13) {
         introduction_date: 0x00000000;
         end_of_life_date: 0xFFFFFFFF;
         object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ON_WATER, OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
-        height: 1;
+        height: 0;
         num_views: 1;
     }
     graphics {
@@ -315,7 +330,7 @@ item (FEAT_OBJECTS, object_rocks_brown2, 14) {
         introduction_date: 0x00000000;
         end_of_life_date: 0xFFFFFFFF;
         object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ON_WATER, OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
-        height: 1;
+        height: 0;
         num_views: 1;
     }
     graphics {
