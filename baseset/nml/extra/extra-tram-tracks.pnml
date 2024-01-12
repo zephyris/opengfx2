@@ -13,6 +13,8 @@ replacenew tramway_spr2(TRAMWAY, "../graphics/cursors/1/pygen/default_8bpp.png",
 // TRAMWAY 4-22 tram track road overlay
 replacenew tramway_spr4(TRAMWAY, "../graphics/infrastructure/64/tram_road_8bpp.png", 4) { template_tramtiles(0, 0, 1) }
 #32 alternative_sprites(tramway_spr4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_road_bt32bpp.png") { template_tramtiles(0, 0, 1) }
+#ez alternative_sprites(tramway_spr4, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_road_8bpp.png") { template_tramtiles(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr4, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_road_bt32bpp.png") { template_tramtiles(0, 0, 4) }
 // TRAMWAY 23-26 (?) unused
 replacenew tramway_spr22(TRAMWAY, "", 23) {
 	template_empty()
@@ -23,6 +25,8 @@ replacenew tramway_spr22(TRAMWAY, "", 23) {
 // TRAMWAY 27-45 tram track grass overlay
 replacenew tramway_spr27(TRAMWAY, "../graphics/infrastructure/64/tram_grass_8bpp.png", 27) { template_tramtiles(0, 0, 1) }
 #32 alternative_sprites(tramway_spr27, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_grass_bt32bpp.png") { template_tramtiles(0, 0, 1) }
+#ez alternative_sprites(tramway_spr27, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_grass_8bpp.png") { template_tramtiles(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr27, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_grass_bt32bpp.png") { template_tramtiles(0, 0, 4) }
 // TRAMWAY 46-48 (?) unused
 replacenew tramway_spr46(TRAMWAY, "", 46) {
 	template_empty()
@@ -85,6 +89,8 @@ replacenew tramway_spr103(TRAMWAY, "../graphics/infrastructure/64/tram_bridgecat
 // TRAMWAY 107-112 tram tracks for bridge decks
 replacenew tramway_spr107(TRAMWAY, "../graphics/infrastructure/64/tram_bridge_8bpp.png", 107) { template_trambridgetiles(0, 0, 1) }
 #32 alternative_sprites(tramway_spr107, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_bridge_bt32bpp.png") {  template_trambridgetiles(0, 0, 1) }
+#ez alternative_sprites(tramway_spr107, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_bridge_bt32bpp.png") { template_trambridgetiles(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr107, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_bridge_8bpp.png") { template_trambridgetiles(0, 0, 4) }
 // TRAMWAY 113-118 depots, with no tram track on ground
 replacenew tramway_spr113(TRAMWAY, "../graphics/stations/general/64/pygen/tramdepots_regions_8bpp.png", 113) { template_road_depot(0, 0, 1) }
 #32 alternative_sprites(tramway_spr113, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tramdepots_regions_rm32bpp.png", "../graphics/stations/general/64/pygen/tramdepots_regions_8bpp.png") {  template_road_depot(0, 0, 1) }
