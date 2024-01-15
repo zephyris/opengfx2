@@ -1412,15 +1412,15 @@ template template_tram_catenary_tunnels(x, y, z) {
 
 // Infrastructure: tram catenary, bridge level
 template template_tram_catenary_bridge(x, y, z) {
-	[   1*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -23*z ]
-	[  66*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -23*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 57*z-1, -31*z, -25*z ]
 }
 
 // Infrastructure: tram catenary, bridge slopes
 template template_tram_catenary_bridgeslopes(x, y, z) {
-	[ 976*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -32*z ]
+	[ 976*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
 	[1106*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
-	[1171*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -32*z ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
 	[1041*z+x*z, 1*z+y*z, 64*z, 49*z-1, -31*z, -25*z ]
 }
 
