@@ -259,6 +259,8 @@ template template_spr2180(z) {
 }
 base_graphics spr2180(2180, "../graphics/industries/temperate/64/pygen/bank_tiles_8bpp.png") { template_spr2182(1) }
 #32 alternative_sprites(spr2180, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/bank_tiles_bt32bpp.png") { template_spr2180(1) }
+#ez alternative_sprites(spr2180, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/industries/temperate/256/pygen/bank_tiles_8bpp.png") { template_spr2180(4) }
+#32 #ez alternative_sprites(spr2180, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/industries/temperate/256/pygen/bank_tiles_bt32bpp.png") { template_spr2180(4) }
 
 template template_spr2182(z) {
 	template_house_1x1(  0, 0, z, 80)
@@ -266,6 +268,8 @@ template template_spr2182(z) {
 }
 base_graphics spr2182(2182, "../graphics/industries/temperate/64/pygen/bank_base_tiles_8bpp.png") { template_spr2182(1) }
 #32 alternative_sprites(spr2182, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/bank_base_tiles_bt32bpp.png") { template_spr2182(1) }
+#ez alternative_sprites(spr2182, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/industries/temperate/256/pygen/bank_base_tiles_8bpp.png") { template_spr2182(4) }
+#32 #ez alternative_sprites(spr2182, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/industries/temperate/256/pygen/bank_base_tiles_bt32bpp.png") { template_spr2182(4) }
 
 //2184-2187 arctic/tropical bank
 template template_spr2184(z) {
