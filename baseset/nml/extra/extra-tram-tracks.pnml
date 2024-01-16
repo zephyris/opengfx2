@@ -13,6 +13,8 @@ replacenew tramway_spr2(TRAMWAY, "../graphics/cursors/1/pygen/default_8bpp.png",
 // TRAMWAY 4-22 tram track road overlay
 replacenew tramway_spr4(TRAMWAY, "../graphics/infrastructure/64/tram_road_8bpp.png", 4) { template_tramtiles(0, 0, 1) }
 #32 alternative_sprites(tramway_spr4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_road_bt32bpp.png") { template_tramtiles(0, 0, 1) }
+#ez alternative_sprites(tramway_spr4, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_road_8bpp.png") { template_tramtiles(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr4, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_road_bt32bpp.png") { template_tramtiles(0, 0, 4) }
 // TRAMWAY 23-26 (?) unused
 replacenew tramway_spr22(TRAMWAY, "", 23) {
 	template_empty()
@@ -23,6 +25,8 @@ replacenew tramway_spr22(TRAMWAY, "", 23) {
 // TRAMWAY 27-45 tram track grass overlay
 replacenew tramway_spr27(TRAMWAY, "../graphics/infrastructure/64/tram_grass_8bpp.png", 27) { template_tramtiles(0, 0, 1) }
 #32 alternative_sprites(tramway_spr27, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_grass_bt32bpp.png") { template_tramtiles(0, 0, 1) }
+#ez alternative_sprites(tramway_spr27, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_grass_8bpp.png") { template_tramtiles(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr27, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_grass_bt32bpp.png") { template_tramtiles(0, 0, 4) }
 // TRAMWAY 46-48 (?) unused
 replacenew tramway_spr46(TRAMWAY, "", 46) {
 	template_empty()
@@ -43,17 +47,25 @@ replacenew tramway_spr55(TRAMWAY, "", 55) { template_empty() }
 // TRAMWAY 56-62 flat ground catenary (foreground) straight and junctions
 replacenew tramway_spr56(TRAMWAY, "../graphics/infrastructure/64/tram_catenary_8bpp.png", 56) { template_tram_catenary_straightjunctions(0, 0, 1) }
 #32 alternative_sprites(tramway_spr56, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") { template_tram_catenary_straightjunctions(0, 0, 1) }
+#ez alternative_sprites(tramway_spr56, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_catenary_8bpp.png") { template_tram_catenary_straightjunctions(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr56, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_catenary_bt32bpp.png") { template_tram_catenary_straightjunctions(0, 0, 4) }
 // TRAMWAY 63 (?) unused
 replacenew tramway_spr63(TRAMWAY, "", 63) { template_empty() }
 // TRAMWAY 64-67 flat ground catenary (foreground) corners
 replacenew tramway_spr64(TRAMWAY, "../graphics/infrastructure/64/tram_catenary_8bpp.png", 64) { template_tram_catenary_corners(0, 0, 1) }
-#32 alternative_sprites(tramway_spr64, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") {  template_tram_catenary_corners(0, 0, 1) }
+#32 alternative_sprites(tramway_spr64, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") { template_tram_catenary_corners(0, 0, 1) }
+#ez alternative_sprites(tramway_spr64, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_catenary_8bpp.png") { template_tram_catenary_corners(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr64, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_catenary_bt32bpp.png") { template_tram_catenary_corners(0, 0, 4) }
 // TRAMWAY 68-71 sloped ground catenary (background)
 replacenew tramway_spr68(TRAMWAY, "../graphics/infrastructure/64/tram_catenary_8bpp.png", 68) { template_tram_catenary_slopes(0, 66, 1) }
-#32 alternative_sprites(tramway_spr68, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") {  template_tram_catenary_slopes(0, 66, 1) }
+#32 alternative_sprites(tramway_spr68, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") { template_tram_catenary_slopes(0, 66, 1) }
+#ez alternative_sprites(tramway_spr68, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_catenary_8bpp.png") { template_tram_catenary_slopes(0, 66, 4) }
+#32 #ez alternative_sprites(tramway_spr68, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_catenary_bt32bpp.png") { template_tram_catenary_slopes(0, 66, 4) }
 // TRAMWAY 72-75 sloped ground catenary (background)
 replacenew tramway_spr72(TRAMWAY, "../graphics/infrastructure/64/tram_catenary_8bpp.png", 72) { template_tram_catenary_slopes(0, 0, 1) }
-#32 alternative_sprites(tramway_spr72, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") {  template_tram_catenary_slopes(0, 0, 1) }
+#32 alternative_sprites(tramway_spr72, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") { template_tram_catenary_slopes(0, 0, 1) }
+#ez alternative_sprites(tramway_spr72, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_catenary_8bpp.png") { template_tram_catenary_slopes(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr72, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_catenary_bt32bpp.png") { template_tram_catenary_slopes(0, 0, 4) }
 // TRAMWAY 76-79 tram track half-tiles for tunnels (unused)
 replacenew tramway_spr76(TRAMWAY, "", 76) {
 	template_empty()
@@ -63,28 +75,44 @@ replacenew tramway_spr76(TRAMWAY, "", 76) {
 }
 // TRAMWAY 80-83 half-tile catenary for tunnels
 replacenew tramway_spr80(TRAMWAY, "../graphics/infrastructure/64/tram_catenary_8bpp.png", 80) { template_tram_catenary_tunnels(0, 0, 1) }
-#32 alternative_sprites(tramway_spr80, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") {  template_tram_catenary_tunnels(0, 0, 1) }
+#32 alternative_sprites(tramway_spr80, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") { template_tram_catenary_tunnels(0, 0, 1) }
+#ez alternative_sprites(tramway_spr80, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_catenary_8bpp.png") { template_tram_catenary_tunnels(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr80, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_catenary_bt32bpp.png") { template_tram_catenary_tunnels(0, 0, 4) }
 // TRAMWAY 84-90 flat ground catenary (background) straight and junctions
 replacenew tramway_spr84(TRAMWAY, "../graphics/infrastructure/64/tram_catenary_8bpp.png", 84) { template_tram_catenary_straightjunctions(0, 66, 1) }
-#32 alternative_sprites(tramway_spr84, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") {  template_tram_catenary_straightjunctions(0, 66, 1) }
+#32 alternative_sprites(tramway_spr84, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") { template_tram_catenary_straightjunctions(0, 66, 1) }
+#ez alternative_sprites(tramway_spr84, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_catenary_8bpp.png") { template_tram_catenary_straightjunctions(0, 66, 4) }
+#32 #ez alternative_sprites(tramway_spr84, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_catenary_bt32bpp.png") { template_tram_catenary_straightjunctions(0, 66, 4) }
 // TRAMWAY 91-94 flat ground catenary (background) corners
 replacenew tramway_spr91(TRAMWAY, "../graphics/infrastructure/64/tram_catenary_8bpp.png", 91) { template_tram_catenary_corners(0, 66, 1) }
-#32 alternative_sprites(tramway_spr91, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") {  template_tram_catenary_corners(0, 66, 1) }
+#32 alternative_sprites(tramway_spr91, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_catenary_bt32bpp.png") { template_tram_catenary_corners(0, 66, 1) }
+#ez alternative_sprites(tramway_spr91, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_catenary_8bpp.png") { template_tram_catenary_corners(0, 66, 4) }
+#32 #ez alternative_sprites(tramway_spr91, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_catenary_bt32bpp.png") { template_tram_catenary_corners(0, 66, 4) }
 // TRAMWAY 95-96 level bridge catenary (background)
 replacenew tramway_spr95(TRAMWAY, "../graphics/infrastructure/64/tram_bridgecatenary_8bpp.png", 95) { template_tram_catenary_bridge(0, 66, 1) }
-#32 alternative_sprites(tramway_spr95, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_bridgecatenary_bt32bpp.png") {  template_tram_catenary_bridge(0, 66, 1) }
+#32 alternative_sprites(tramway_spr95, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_bridgecatenary_bt32bpp.png") { template_tram_catenary_bridge(0, 66, 1) }
+#ez alternative_sprites(tramway_spr95, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_bridgecatenary_8bpp.png") { template_tram_catenary_bridge(0, 66, 4) }
+#32 #ez alternative_sprites(tramway_spr95, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_bridgecatenary_bt32bpp.png") { template_tram_catenary_bridge(0, 66, 4) }
 // TRAMWAY 97-98 level bridge catenary (foreground)
 replacenew tramway_spr97(TRAMWAY, "../graphics/infrastructure/64/tram_bridgecatenary_8bpp.png", 97) { template_tram_catenary_bridge(0, 0, 1) }
 #32 alternative_sprites(tramway_spr97, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_bridgecatenary_bt32bpp.png") {  template_tram_catenary_bridge(0, 0, 1) }
+#ez alternative_sprites(tramway_spr97, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_bridgecatenary_8bpp.png") { template_tram_catenary_bridge(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr97, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_bridgecatenary_bt32bpp.png") { template_tram_catenary_bridge(0, 0, 4) }
 // TRAMWAY 99-102 bridge slopes catenary (background)
 replacenew tramway_spr99(TRAMWAY, "../graphics/infrastructure/64/tram_bridgecatenary_8bpp.png", 99) { template_tram_catenary_bridgeslopes(0, 66, 1) }
 #32 alternative_sprites(tramway_spr99, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_bridgecatenary_bt32bpp.png") {  template_tram_catenary_bridgeslopes(0, 66, 1) }
+#ez alternative_sprites(tramway_spr99, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_bridgecatenary_8bpp.png") { template_tram_catenary_bridgeslopes(0, 66, 4) }
+#32 #ez alternative_sprites(tramway_spr99, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_bridgecatenary_bt32bpp.png") { template_tram_catenary_bridgeslopes(0, 66, 4) }
 // TRAMWAY 103-106 bridge slopes catenary (foreground)
 replacenew tramway_spr103(TRAMWAY, "../graphics/infrastructure/64/tram_bridgecatenary_8bpp.png", 103) { template_tram_catenary_bridgeslopes(0, 0, 1) }
 #32 alternative_sprites(tramway_spr103, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_bridgecatenary_bt32bpp.png") {  template_tram_catenary_bridgeslopes(0, 0, 1) }
+#ez alternative_sprites(tramway_spr103, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_bridgecatenary_8bpp.png") { template_tram_catenary_bridgeslopes(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr103, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_bridgecatenary_bt32bpp.png") { template_tram_catenary_bridgeslopes(0, 0, 4) }
 // TRAMWAY 107-112 tram tracks for bridge decks
 replacenew tramway_spr107(TRAMWAY, "../graphics/infrastructure/64/tram_bridge_8bpp.png", 107) { template_trambridgetiles(0, 0, 1) }
 #32 alternative_sprites(tramway_spr107, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/tram_bridge_bt32bpp.png") {  template_trambridgetiles(0, 0, 1) }
+#ez alternative_sprites(tramway_spr107, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/tram_bridge_8bpp.png") { template_trambridgetiles(0, 0, 4) }
+#32 #ez alternative_sprites(tramway_spr107, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/tram_bridge_bt32bpp.png") { template_trambridgetiles(0, 0, 4) }
 // TRAMWAY 113-118 depots, with no tram track on ground
 replacenew tramway_spr113(TRAMWAY, "../graphics/stations/general/64/pygen/tramdepots_regions_8bpp.png", 113) { template_road_depot(0, 0, 1) }
 #32 alternative_sprites(tramway_spr113, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tramdepots_regions_rm32bpp.png", "../graphics/stations/general/64/pygen/tramdepots_regions_8bpp.png") {  template_road_depot(0, 0, 1) }

@@ -1,2 +1,4 @@
 // AUTORAIL
 replacenew autorail(AUTORAIL, "../graphics/selectors/64/selector_autorail_8bpp.png", 0) { template_selectors_autorail(0, 0, 1) }
+#ez alternative_sprites(autorail, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/selectors/128/selector_autorail_8bpp.png") { template_selectors_autorail(0, 0, 2) }
+#ez alternative_sprites(autorail, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/selectors/256/selector_autorail_8bpp.png") { template_selectors_autorail(0, 0, 4) }
