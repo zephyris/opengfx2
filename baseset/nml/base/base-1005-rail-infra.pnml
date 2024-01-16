@@ -31,6 +31,8 @@ base_graphics spr1063(1063, "../graphics/stations/general/64/pygen/raildepots_re
 //1069-1086 rail station
 base_graphics spr1069(1069, "../graphics/stations/general/64/pygen/railstations_8bpp.png") { template_rail_station(0, 0, 1) }
 #32 alternative_sprites (spr1069, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/railstations_rm32bpp.png", "../graphics/stations/general/64/pygen/railstations_8bpp.png") { template_rail_station(0, 0, 1) }
+#ez alternative_sprites (spr1069, ZOOM_LEVEL_NORMAL, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/railstations_8bpp.png") { template_rail_station(0, 0, 4) }
+#32 #ez alternative_sprites (spr1069, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/railstations_rm32bpp.png", "../graphics/stations/general/256/pygen/railstations_8bpp.png") { template_rail_station(0, 0, 4) }
 
 //1087-1092 monorail overlays
 base_graphics spr1087(1087, "../graphics/infrastructure/64/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
