@@ -9,6 +9,8 @@ template template_spr4090(z) {
 }
 base_graphics spr4090(4090, "../graphics/terrain/64/farm_fences_8bpp.png") { template_spr4090(1) }
 #32 alternative_sprites(spr4090, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/farm_fences_bt32bpp.png") { template_spr4090(1) }
+#ez alternative_sprites(spr4090, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/farm_fences_8bpp.png") { template_spr4090(4) }
+#32 #ez alternative_sprites(spr4090, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/farm_fences_bt32bpp.png") { template_spr4090(4) }
 
 //4126-4296 farm field tiles
 template template_spr4126(z) {
