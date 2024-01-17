@@ -3,3 +3,6 @@
 
 #include "nml/objects/objects-rocks.pnml"
 #include "nml/objects/objects-fields.pnml"
+#include "nml/objects/objects-forests.pnml"
+
+#include "nml/objects/objects-buildings.pnml"

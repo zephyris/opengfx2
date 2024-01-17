@@ -1,0 +1,255 @@
+//Building-type objects
+
+// for general use
+spritelayout object_baseset_simple {
+    ground {
+        sprite: LOAD_TEMP(0);
+    }
+    building {
+        sprite: LOAD_TEMP(1);
+        recolour_mode: RECOLOUR_REMAP;
+        palette: LOAD_TEMP(5);
+        xextent: 16;
+        yextent: 16;
+        zextent: 64;
+        xoffset: LOAD_TEMP(2);
+        yoffset: LOAD_TEMP(3);
+    }
+}
+
+// change ground sprite, based on snow -> 0
+switch (FEAT_OBJECTS, SELF, switch_simple_snow, [
+    STORE_TEMP(terrain_type == TILETYPE_SNOW ? TILETYPE_SNOW : LOAD_TEMP(0), 0)
+]) {
+    object_baseset_simple;
+}
+
+// ground sprite -> 0, building sprite -> 1, offset x -> 2 offset y -> 3, recolour -> 4
+switch (FEAT_OBJECTS, SELF, procedure_object_lighthouse, [
+    STORE_TEMP(GROUNDSPRITE_CLEARED + 19 * 2, 0),
+    STORE_TEMP(2602, 1),
+    STORE_TEMP(0, 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4)
+]) {
+    0;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_lighthouse_object, [
+    procedure_object_lighthouse()
+]) {
+    switch_simple_snow;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_lighthouse_purchase, [
+    procedure_object_lighthouse()
+]) {
+    object_baseset_simple;
+}
+
+item (FEAT_OBJECTS, object_lighthouse, 100) {
+    property {
+        class: "BLDG";
+        classname: string(STR_CLASS_BLDG);
+        name: string(STR_OBJECT_LIGHTHOUSE);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 16;
+        remove_cost_multiplier: 16;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask();
+        height: 12;
+        num_views: 1;
+    }
+    graphics {
+        autoslope: return(CB_RESULT_AUTOSLOPE);
+        tile_check: CB_RESULT_LOCATION_ALLOW;
+        purchase: switch_object_lighthouse_purchase;
+        default: switch_object_lighthouse_object;
+    }
+}
+
+// ground sprite -> 0, building sprite -> 1, offset x -> 2 offset y -> 3, recolour -> 4
+switch (FEAT_OBJECTS, SELF, procedure_object_transmitter, [
+    STORE_TEMP(GROUNDSPRITE_CLEARED + 19 * 2, 0),
+    STORE_TEMP(2601, 1),
+    STORE_TEMP(0, 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4)
+]) {
+    0;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_transmitter_object, [
+    procedure_object_transmitter()
+]) {
+    switch_simple_snow;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_transmitter_purchase, [
+    procedure_object_transmitter()
+]) {
+    object_baseset_simple;
+}
+
+item (FEAT_OBJECTS, object_transmitter, 101) {
+    property {
+        class: "BLDG";
+        classname: string(STR_CLASS_BLDG);
+        name: string(STR_OBJECT_TRANSMITTER);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 16;
+        remove_cost_multiplier: 16;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask();
+        height: 12;
+        num_views: 1;
+    }
+    graphics {
+        autoslope: return(CB_RESULT_AUTOSLOPE);
+        tile_check: CB_RESULT_LOCATION_ALLOW;
+        purchase: switch_object_transmitter_purchase;
+        default: switch_object_transmitter_object;
+    }
+}
+
+// ground sprite -> 0, building sprite -> 1, offset x -> 2 offset y -> 3, recolour -> 4
+switch (FEAT_OBJECTS, SELF, procedure_object_substation1, [
+    STORE_TEMP(GROUNDSPRITE_CLEARED + 19 * 0, 0),
+    STORE_TEMP(2053, 1),
+    STORE_TEMP(0, 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4)
+]) {
+    0;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_substation1_object, [
+    procedure_object_substation1()
+]) {
+    switch_simple_snow;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_substation1_purchase, [
+    procedure_object_substation1()
+]) {
+    object_baseset_simple;
+}
+
+item (FEAT_OBJECTS, object_substation1, 102) {
+    property {
+        class: "BLDG";
+        classname: string(STR_CLASS_BLDG);
+        name: string(STR_OBJECT_SUBSTATION);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 16;
+        remove_cost_multiplier: 16;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask();
+        height: 12;
+        num_views: 1;
+    }
+    graphics {
+        autoslope: return(CB_RESULT_AUTOSLOPE);
+        tile_check: CB_RESULT_LOCATION_ALLOW;
+        purchase: switch_object_substation1_purchase;
+        default: switch_object_substation1_object;
+    }
+}
+
+// ground sprite -> 0, building sprite -> 1, offset x -> 2 offset y -> 3, recolour -> 4
+switch (FEAT_OBJECTS, SELF, procedure_object_substation2, [
+    STORE_TEMP(GROUNDSPRITE_CLEARED + 19 * 0, 0),
+    STORE_TEMP(2054, 1),
+    STORE_TEMP(0, 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4)
+]) {
+    0;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_substation2_object, [
+    procedure_object_substation2()
+]) {
+    switch_simple_snow;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_substation2_purchase, [
+    procedure_object_substation2()
+]) {
+    object_baseset_simple;
+}
+
+item (FEAT_OBJECTS, object_substation2, 103) {
+    property {
+        class: "BLDG";
+        classname: string(STR_CLASS_BLDG);
+        name: string(STR_OBJECT_SUBSTATION);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 16;
+        remove_cost_multiplier: 16;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask();
+        height: 12;
+        num_views: 1;
+    }
+    graphics {
+        autoslope: return(CB_RESULT_AUTOSLOPE);
+        tile_check: CB_RESULT_LOCATION_ALLOW;
+        purchase: switch_object_substation2_purchase;
+        default: switch_object_substation2_object;
+    }
+}
+
+// ground sprite -> 0, building sprite -> 1, offset x -> 2 offset y -> 3, recolour -> 4
+switch (FEAT_OBJECTS, SELF, procedure_object_gasometer, [
+    STORE_TEMP(GROUNDSPRITE_CONCRETE, 0),
+    STORE_TEMP(2080, 1),
+    STORE_TEMP(0, 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4)
+]) {
+    0;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_gasometer_object, [
+    procedure_object_gasometer()
+]) {
+    switch_simple_snow;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_gasometer_purchase, [
+    procedure_object_gasometer()
+]) {
+    object_baseset_simple;
+}
+
+item (FEAT_OBJECTS, object_gasometer, 104) {
+    property {
+        class: "BLDG";
+        classname: string(STR_CLASS_BLDG);
+        name: string(STR_OBJECT_GASOMETER);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 16;
+        remove_cost_multiplier: 16;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask();
+        height: 12;
+        num_views: 1;
+    }
+    graphics {
+        autoslope: return(CB_RESULT_AUTOSLOPE);
+        tile_check: CB_RESULT_LOCATION_ALLOW;
+        purchase: switch_object_gasometer_purchase;
+        default: switch_object_gasometer_object;
+    }
+}

@@ -1,0 +1,340 @@
+//Forests
+
+// uses the same fences as fields
+
+// blank sprite for use as a building.
+forest_height = 96;
+forest_blank_start = reserve_sprites(1);
+template template_forest_blank(h, z) {
+	[0, 0, 64*z, h*z-1, -31*z, (32-h)*z, NOCROP ]
+}
+replace objects_forestblank(forest_blank_start, "../graphics/icons/1/blankblue_8bpp.png") { template_forest_blank(96, 1) }
+
+// trees
+forest_tree_start = 1709;
+
+// TODO: Currently, tree offsets copy corner offsets. They should be positioned more intelligently, but this is probably good enough.
+// TODO: Currently, fences are drawn as ground tile children. The front fence should be drawn as a building child, and the back fence as a ground tile child.
+
+// no fence
+spritelayout object_forest_tiles_nofence {
+    ground {
+        sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+    }
+    building {
+        sprite: forest_blank_start;
+    }
+    childsprite { // N tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 34;
+        yoffset: forest_height - 24 - 4;
+    }
+    childsprite { // W tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 16;
+        yoffset: forest_height - 16 - 4;
+    }
+    childsprite { // E tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 48;
+        yoffset: forest_height - 16 - 4;
+    }
+    childsprite { // S tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 30;
+        yoffset: forest_height - 8 - 4;
+    }
+}
+
+// fence (any number), normal slopes
+spritelayout object_forest_tiles_fence {
+    ground {
+        sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+    }
+    childsprite { // NE fence
+        sprite: LOAD_TEMP(4) + 0 + ((((LOAD_TEMP(3) >> CORNER_E) & 0x01) << 1 | ((LOAD_TEMP(3) >> CORNER_N ) & 0x01) << 2) % 3) * 2;
+        always_draw: 1;
+        hide_sprite: !((LOAD_TEMP(2) >> 0) & 0x01);
+        xoffset: 32;
+        yoffset: 16 - ((LOAD_TEMP(3) >> CORNER_E) & 0x01) * 8;
+    }
+    childsprite { // NW fence
+        sprite: LOAD_TEMP(4) + 1 + ((((LOAD_TEMP(3) >> CORNER_W) & 0x01) << 1 | ((LOAD_TEMP(3) >> CORNER_N) & 0x01) << 2) % 3) * 2;
+        always_draw: 1;
+        hide_sprite: !((LOAD_TEMP(2) >> 1) & 0x01);
+        xoffset: 0;
+        yoffset: 16 - ((LOAD_TEMP(3) >> CORNER_W) & 0x01) * 8;
+    }
+    childsprite { // SE fence
+        sprite: LOAD_TEMP(4) + 1 + ((((LOAD_TEMP(3) >> CORNER_S) & 0x01) << 1 | ((LOAD_TEMP(3) >> CORNER_E) & 0x01) << 2) % 3) * 2;
+        always_draw: 1;
+        hide_sprite: !((LOAD_TEMP(2) >> 2) & 0x01);
+        xoffset: 32;
+        yoffset: 32 - ((LOAD_TEMP(3) >> CORNER_S) & 0x01) * 8;
+    }
+    childsprite { // SW fence
+        sprite: LOAD_TEMP(4) + 0 + ((((LOAD_TEMP(3) >> CORNER_S) & 0x01) << 1 | ((LOAD_TEMP(3) >> CORNER_W) & 0x01) << 2) % 3) * 2;
+        always_draw: 1;
+        hide_sprite: !((LOAD_TEMP(2) >> 3) & 0x01);
+        xoffset: 0;
+        yoffset: 32 - ((LOAD_TEMP(3) >> CORNER_S) & 0x01) * 8;
+    }
+    building {
+        sprite: forest_blank_start;
+    }
+    childsprite { // N tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 34;
+        yoffset: forest_height - 24 - 4 - ((LOAD_TEMP(3) >> CORNER_N) & 0x01) * 8;
+    }
+    childsprite { // W tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 16;
+        yoffset: forest_height - 16 - 4 - ((LOAD_TEMP(3) >> CORNER_W) & 0x01) * 8;
+    }
+    childsprite { // E tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 48;
+        yoffset: forest_height - 16 - 4 - ((LOAD_TEMP(3) >> CORNER_E) & 0x01) * 8;
+    }
+    childsprite { // S tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 30;
+        yoffset: forest_height - 8 - 4 - ((LOAD_TEMP(3) >> CORNER_S) & 0x01) * 8;
+    }
+}
+
+// fence (any number), steep slopes
+spritelayout object_forest_tiles_fence_steep {
+    ground {
+        sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+    }
+    childsprite { // NE fence
+        sprite: LOAD_TEMP(4) + 0 + (((~LOAD_TEMP(3) >> CORNER_S | ~LOAD_TEMP(3) >> CORNER_E) & 0x01) << 0 | ((~LOAD_TEMP(3) >> CORNER_N | ~LOAD_TEMP(3) >> CORNER_W) & 0x01) << 1) * 2;
+        always_draw: 1;
+        hide_sprite: !((LOAD_TEMP(2) >> 0) & 0x01);
+        xoffset: 32;
+        yoffset: 16 - ((LOAD_TEMP(3) >> CORNER_E) & 0x01) * 8 - ((~LOAD_TEMP(3) >> CORNER_W) & 0x01) * 8;
+    }
+    childsprite { // NW fence
+        sprite: LOAD_TEMP(4) + 1 + (((~LOAD_TEMP(3) >> CORNER_S | ~LOAD_TEMP(3) >> CORNER_W) & 0x01) << 0 | ((~LOAD_TEMP(3) >> CORNER_N | ~LOAD_TEMP(3) >> CORNER_E) & 0x01) << 1) * 2;
+        always_draw: 1;
+        hide_sprite: !((LOAD_TEMP(2) >> 1) & 0x01);
+        xoffset: 0;
+        yoffset: 16 - ((LOAD_TEMP(3) >> CORNER_W ) & 0x01) * 8 - ((~LOAD_TEMP(3) >> CORNER_E) & 0x01) * 8;
+    }
+    childsprite { // SE fence
+        sprite: LOAD_TEMP(4) + 1 + (((~LOAD_TEMP(3) >> CORNER_S | ~LOAD_TEMP(3) >> CORNER_W) & 0x01) << 0 | ((~LOAD_TEMP(3) >> CORNER_N | ~LOAD_TEMP(3) >> CORNER_E) & 0x01) << 1) * 2;
+        always_draw: 1;
+        hide_sprite: !((LOAD_TEMP(2) >> 2) & 0x01);
+        xoffset: 32;
+        yoffset: 32 - ((LOAD_TEMP(3) >> CORNER_S) & 0x01) * 8 - ((~LOAD_TEMP(3) >> CORNER_N) & 0x01) * 8;
+    }
+    childsprite { // SW fence
+        sprite: LOAD_TEMP(4) + 0 + (((~LOAD_TEMP(3) >> CORNER_S | ~LOAD_TEMP(3) >> CORNER_E) & 0x01) << 0 | ((~LOAD_TEMP(3) >> CORNER_N | ~LOAD_TEMP(3) >> CORNER_W) & 0x01) << 1) * 2;
+        always_draw: 1;
+        hide_sprite: !((LOAD_TEMP(2) >> 3) & 0x01);
+        xoffset: 0;
+        yoffset: 32 - ((LOAD_TEMP(3) >> CORNER_S) & 0x01) * 8 - ((~LOAD_TEMP(3) >> CORNER_N) & 0x01) * 8;
+    }
+    building {
+        sprite: forest_blank_start;
+    }
+    childsprite { // N tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 34;
+        yoffset: forest_height - 24 - 4;
+    }
+    childsprite { // W tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 16;
+        yoffset: forest_height - 16 - 4;
+    }
+    childsprite { // E tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 48;
+        yoffset: forest_height - 16 - 4;
+    }
+    childsprite { // S tree
+        sprite: forest_tree_start + LOAD_TEMP(5) + LOAD_TEMP(6) * 7 + LOAD_TEMP(7) * (7 * 8);
+        xoffset: 30;
+        yoffset: forest_height - 8 - 4;
+    }
+}
+
+// select normal vs steep slopes
+switch (FEAT_OBJECTS, SELF, switch_object_forest_steep, [
+    (LOAD_TEMP(3) >> IS_STEEP_SLOPE) & 0x01
+]) {
+    1: object_forest_tiles_fence_steep;
+    object_forest_tiles_fence;
+}
+
+// check groundsprite based on snow
+switch (FEAT_OBJECTS, SELF, procedure_object_forest_snowline, [
+    terrain_type == TILETYPE_SNOW
+]) {
+    1: GROUNDSPRITE_SNOW_2_4;
+    GROUNDSPRITE_CLEARED + 19 * 2;
+}
+
+// slope index offset -> 0, _not_ identical neigbouring objects bitmask -> 2, slope bitmask -> 3, above snowline -> 7
+// select some vs no fences
+switch (FEAT_OBJECTS, SELF, switch_object_forest_slopes, [
+    STORE_TEMP(slope_to_sprite_offset(tile_slope), 0), // slope index offset -> 0
+    STORE_TEMP(tile_slope, 3), // tile slope -> 3
+    STORE_TEMP((nearby_tile_object_type(-1, 0) != nearby_tile_object_type(0, 0)) << 0 | (nearby_tile_object_type(0, -1) != nearby_tile_object_type(0, 0)) << 1 | (nearby_tile_object_type(0, 1) != nearby_tile_object_type(0, 0)) << 2 | (nearby_tile_object_type(1, 0) != nearby_tile_object_type(0, 0)) << 3, 2), // _not_ identical neigbouring objects bitmask > 2
+    STORE_TEMP(terrain_type == TILETYPE_SNOW, 7),
+    LOAD_TEMP(2) == 0
+]) {
+    1: object_forest_tiles_nofence;
+    switch_object_forest_steep;
+}
+
+switch (FEAT_OBJECTS, SELF, procedure_object_forest_defaultproperties, [
+    STORE_TEMP(0, 0), // slope index offset 0 -> 0
+    STORE_TEMP(GROUNDSPRITE_CLEARED + 19 * 2, 1), // groundtile base index -> 1
+    STORE_TEMP(0, 3), // slope bitmask 0 -> 3
+    STORE_TEMP(15, 2), // _not_ identical neighbouring objects bitmask 15 -> 2
+    STORE_TEMP(0, 7) // above snowline -> 7
+]) {
+    0;
+}
+
+switch (FEAT_OBJECTS, SELF, procedure_object_forest_properties1, [
+    STORE_TEMP(procedure_object_forest_snowline(), 1),
+    STORE_TEMP(field_fence_start + 6 * 2, 4),
+    STORE_TEMP(3, 5), // tree growth stage -> 5
+    STORE_TEMP(0, 6) // tree set -> 6
+]) {
+    0;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_forest_object1, [
+    procedure_object_forest_properties1()
+]) {
+    switch_object_forest_slopes;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_forest_purchase1, [
+    procedure_object_forest_properties1(),
+    procedure_object_forest_defaultproperties()
+]) {
+    object_forest_tiles_fence;
+}
+
+item (FEAT_OBJECTS, object_forest, 50) {
+    property {
+        class: "FRST";
+        classname: string(STR_CLASS_FRST);
+        name: string(STR_OBJECT_FOREST);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 3;
+        remove_cost_multiplier: 3;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ANYTHING_REMOVE);
+        height: 6;
+        num_views: 1;
+    }
+    graphics {
+        purchase: switch_object_forest_purchase1;
+        autoslope: return(CB_RESULT_AUTOSLOPE);
+        additional_text: string(STR_OBJECT_FOREST_BUY);
+        tile_check: CB_RESULT_LOCATION_ALLOW;
+        default: switch_object_forest_object1;
+    }
+}
+
+switch (FEAT_OBJECTS, SELF, procedure_object_forest_properties2, [
+    STORE_TEMP(procedure_object_forest_snowline(), 1),
+    STORE_TEMP(field_fence_start + 6 * 2, 4),
+    STORE_TEMP(2, 5), // tree growth stage -> 5
+    STORE_TEMP(0, 6) // tree set -> 6
+]) {
+    0;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_forest_object2, [
+    procedure_object_forest_properties2()
+]) {
+    switch_object_forest_slopes;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_forest_purchase2, [
+    procedure_object_forest_properties2(),
+    procedure_object_forest_defaultproperties()
+]) {
+    object_forest_tiles_fence;
+}
+
+item (FEAT_OBJECTS, object_forest2, 51) {
+    property {
+        class: "FRST";
+        classname: string(STR_CLASS_FRST);
+        name: string(STR_OBJECT_FOREST);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 3;
+        remove_cost_multiplier: 3;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ANYTHING_REMOVE);
+        height: 6;
+        num_views: 1;
+    }
+    graphics {
+        purchase: switch_object_forest_purchase2;
+        autoslope: return(CB_RESULT_AUTOSLOPE);
+        additional_text: string(STR_OBJECT_FOREST_BUY);
+        tile_check: CB_RESULT_LOCATION_ALLOW;
+        default: switch_object_forest_object2;
+    }
+}
+
+switch (FEAT_OBJECTS, SELF, procedure_object_forest_properties3, [
+    STORE_TEMP(procedure_object_forest_snowline(), 1),
+    STORE_TEMP(field_fence_start + 6 * 2, 4),
+    STORE_TEMP(1, 5), // tree growth stage -> 5
+    STORE_TEMP(0, 6) // tree set -> 6
+]) {
+    0;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_forest_object3, [
+    procedure_object_forest_properties3()
+]) {
+    switch_object_forest_slopes;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_forest_purchase3, [
+    procedure_object_forest_properties3(),
+    procedure_object_forest_defaultproperties()
+]) {
+    object_forest_tiles_fence;
+}
+
+item (FEAT_OBJECTS, object_forest3, 52) {
+    property {
+        class: "FRST";
+        classname: string(STR_CLASS_FRST);
+        name: string(STR_OBJECT_FOREST);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 3;
+        remove_cost_multiplier: 3;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ANYTHING_REMOVE);
+        height: 6;
+        num_views: 1;
+    }
+    graphics {
+        purchase: switch_object_forest_purchase3;
+        autoslope: return(CB_RESULT_AUTOSLOPE);
+        additional_text: string(STR_OBJECT_FOREST_BUY);
+        tile_check: CB_RESULT_LOCATION_ALLOW;
+        default: switch_object_forest_object3;
+    }
+}
