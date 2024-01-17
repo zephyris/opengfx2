@@ -50,6 +50,17 @@ rm bank_palmask.png # remove bank palmask to allow patina roof effects
 custom_dither.py
 cd ../../../
 
+cd temperate/256/
+building_shapeproc.py 4 temperate
+building_baseshapeproc.py 4 temperate
+mask_tiles.py pygen/bank bank_tilemask.png 4
+mask_tiles.py pygen/bank_base bank_tilemask.png 4
+custom_dither.py
+cd pygen
+rm bank_palmask.png # remove bank palmask to allow patina roof effects
+custom_dither.py
+cd ../../../
+
 cd arctic/64/
 building_shapeproc.py 1 arctic
 building_baseshapeproc.py 1 arctic
