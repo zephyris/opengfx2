@@ -1,9 +1,9 @@
 //1420 plain paved tile
 base_graphics spr1420(1420, "../graphics/terrain/64/general_concretetiles_8bpp.png") { template_flattile_single(0, 0, 1) }
-#ez alternative_sprites(spr1420, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/general_concretetiles_8bpp.png") { template_flattile_single(0, 0, 2) }
+//#ez alternative_sprites(spr1420, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/general_concretetiles_8bpp.png") { template_flattile_single(0, 0, 2) }
 #ez alternative_sprites(spr1420, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/general_concretetiles_8bpp.png") { template_flattile_single(0, 0, 4) }
 #32 alternative_sprites(spr1420, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/general_concretetiles_bt32bpp.png") { template_flattile_single(0, 0, 1) }
-#32 #ez alternative_sprites(spr1420, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/general_concretetiles_bt32bpp.png") { template_flattile_single(0, 0, 2) }
+//#32 #ez alternative_sprites(spr1420, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/general_concretetiles_bt32bpp.png") { template_flattile_single(0, 0, 2) }
 #32 #ez alternative_sprites(spr1420, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/general_concretetiles_bt32bpp.png") { template_flattile_single(0, 0, 4) }
 
 //1421-1437 bunch'o'buildings
