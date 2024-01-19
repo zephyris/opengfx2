@@ -424,10 +424,10 @@ template template_rail_station(x, y, z) {
 	template_house_1x1_addoffs(130,  65, z, 64,   0,   0)
 	template_house_1x1_addoffs(130, 130, z, 64,   0,   0)
 	template_house_1x1_addoffs(130, 195, z, 64, -22, -11)
-	template_house_1x1_addoffs(195,  65, z, 64,   0,  16)
-	template_house_1x1_addoffs(195, 130, z, 64,   0,  16)
-	template_house_1x1_addoffs(195, 195, z, 64,   0,  16)
-	template_house_1x1_addoffs(195,   0, z, 64,   0,  16)
+	template_house_1x1_addoffs_nocrop(195,  65, z, 64,   0,  16)
+	template_house_1x1_addoffs_nocrop(195, 130, z, 64,   0,  16)
+	template_house_1x1_addoffs_nocrop(195, 195, z, 64,   0,  16)
+	template_house_1x1_addoffs_nocrop(195,   0, z, 64,   0,  16)
 	[ 261*z+x*z,  66*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
 	[ 261*z+x*z, 131*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
 	[ 261*z+x*z, 196*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
