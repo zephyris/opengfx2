@@ -1,5 +1,23 @@
 # OpenGFX2 Changelog
 
+## v0.5
+Base set:
+* All GUI icons at 1x and 2x zoom, with some at 4x.
+* Improved cursors, all at 1x and 2x zoom.
+* Additional cursor styles.
+* Build sprite font from TTFs, for full sprite font at 2x and 4x zoom.
+* TTD-style custom monospaced sprite font, from TTF.
+* Extended sprite font range to also cover Cyrillic and Greek alphabets.
+* Prototype/first 4x rail vehicle sprites.
+* Various additional bug fixes, including:
+* Fix bridge colour, recolour and leg glitches.
+* Fix/tweak town tree graphics.
+* Fix Various rock and slope shading glitches.
+
+NewGRFs:
+* New standalone objects NewGRF, with fields, forests, rocks and building objects.
+* Fix tree NewGRF to also replace cacti and palm trees.
+
 ## v0.4
 Base set:
 * 4x zoom trees for normal climates, including improved growth/death stages.
