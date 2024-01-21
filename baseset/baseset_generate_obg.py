@@ -164,14 +164,19 @@ with open("opengfx2_" + typeshort + ".obg", "w") as obg:
       descriptionmain = lngs[lng]["STR_OBG_DESCRIPTION_MAIN"] if "STR_OBG_DESCRIPTION_MAIN" in lngs[lng] else lngs[defaultlngid]["STR_OBG_DESCRIPTION_MAIN"]
       descriptionvariant = lngs[lng][descriptionstrid] if descriptionstrid in lngs[lng] else lngs[defaultlngid][descriptionstrid]
       descriptionextra = lngs[lng]["STR_OBG_DESCRIPTION_EXTRA"] if "STR_OBG_DESCRIPTION_EXTRA" in lngs[lng] else lngs[defaultlngid]["STR_OBG_DESCRIPTION_EXTRA"]
-      obg.write(pad("description." + lngids[lng], pad_length, pad_left=False) + "= " + descriptionmain + descriptionvariant + " (" + typelong + "). " + descriptionextra + "\n")
+      descriptionversion = lngs[defaultlngid]["STR_OBG_DESCRIPTION_VERSION"]
+      if lng == "0x56" or lng == "0x0c":
+        # Some languages' punctuations are different. They don't have spaces after commas and periods. In this case it's zh_CN and zh_TW.
+        obg.write(pad("description." + lngids[lng], pad_length, pad_left=False) + "= " + descriptionmain + descriptionvariant + descriptionextra + "(" + typelong + ")" + descriptionversion + "\n")
+      else:
+        obg.write(pad("description." + lngids[lng], pad_length, pad_left=False) + "= " + descriptionmain + " " + descriptionvariant + " " + descriptionextra + "(" + typelong + ")" + descriptionversion + "\n")
   # write default language as special case
-  obg.write(pad("description", pad_length, pad_left=False) + "= " + lngs[defaultlngid]["STR_OBG_DESCRIPTION_MAIN"] + lngs[defaultlngid][descriptionstrid] + " (" + typelong + "). " + lngs[defaultlngid]["STR_OBG_DESCRIPTION_EXTRA"] + "\n")
-  obg.write("\n");
+  obg.write(pad("description", pad_length, pad_left=False) + "= " + lngs[defaultlngid]["STR_OBG_DESCRIPTION_MAIN"] + " " + lngs[defaultlngid][descriptionstrid] + " " + lngs[defaultlngid]["STR_OBG_DESCRIPTION_EXTRA"] + "(" + typelong + ")" + lngs[defaultlngid]["STR_OBG_DESCRIPTION_VERSION"] + "\n")
+  obg.write("\n")
   obg.write("[files]" + "\n")
   for file in files:
     obg.write(pad(file["type"], 12, pad_left=False) + "= " + file["name"] + ".grf" + "\n")
-  obg.write("\n");
+  obg.write("\n")
   obg.write("[md5s]" + "\n")
   for file in files:
     if "md5" in file:
