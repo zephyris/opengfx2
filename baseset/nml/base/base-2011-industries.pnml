@@ -65,18 +65,18 @@ template template_spr2045(z) {
 	template_house_1x1(130, 150, z, 74)
 	template_house_1x1(130,  75, z, 74)
 	template_house_1x1(130,   0, z, 74)
-	template_house_1x1(195,   0, z, 74)
+	template_house_1x1_nocrop(195,   0, z, 74)
 }
 base_graphics spr2045(2045, "../graphics/industries/temperate/64/pygen/powerstation_8bpp.png") { template_spr2045(1) }
 #32 alternative_sprites(spr2045, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/temperate/64/pygen/powerstation_bt32bpp.png") { template_spr2045(1) }
 //2055-2060 power plant spark effect
 template template_spr2055(z) {
-	template_animation_frame(48, 48, -14, -16, 0, z)
-	template_animation_frame(48, 48, -14, -16, 1, z)
-	template_animation_frame(48, 48, -14, -16, 2, z)
-	template_animation_frame(48, 48, -14, -16, 3, z)
-	template_animation_frame(48, 48, -14, -16, 4, z)
-	template_animation_frame(48, 48, -14, -16, 4, z)
+	template_animation_frame(48, 48, -3, 4, 0, z)
+	template_animation_frame(48, 48, -3, 4, 1, z)
+	template_animation_frame(48, 48, -3, 4, 2, z)
+	template_animation_frame(48, 48, -3, 4, 3, z)
+	template_animation_frame(48, 48, -3, 4, 4, z)
+	template_animation_frame(48, 48, -3, 4, 4, z)
 }
 base_graphics spr2055(2055, "../graphics/effects/64/industries_powerstation_sparks_8bpp.png") { template_spr2055(1) }
 #32 alternative_sprites(spr2055, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/effects/64/industries_powerstation_sparks_bt32bpp.png") { template_spr2055(1) }
