@@ -1,52 +1,76 @@
 //bridges
 //2437-2444 bridge ramps rail
 base_graphics spr2437(2437, "../graphics/bridges/64/pygen/ramps_norecolour_rail_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+#ez alternative_sprites(spr2437, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_norecolour_rail_8bpp.png") { template_bridgeramps_general(0, 0, 4) }
 //2445-2452 bridge ramps road
 base_graphics spr2445(2445, "../graphics/bridges/64/pygen/ramps_general_road_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+#ez alternative_sprites(spr2445, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_road_8bpp.png") { template_bridgeramps_general(0, 0, 4) }
 //2453-2468 suspension road, part 1, bridge front
 base_graphics spr2453(2453, "../graphics/bridges/64/pygen/suspension_road_8bpp.png") { template_suspension_road_1(0, 0, 1) }
+#ez alternative_sprites(spr2453, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_road_8bpp.png") { template_suspension_road_1(0, 0, 4) }
 //2469-2476 suspension rail, part 1
 base_graphics spr2469(2469, "../graphics/bridges/64/pygen/suspension_rail_8bpp.png") { template_suspension_rail_1(0, 0, 1) }
+#ez alternative_sprites(spr2469, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_rail_8bpp.png") { template_suspension_rail_1(0, 0, 4) }
 //2477-2484 suspension road, part 2, legs
 base_graphics spr2477(2477, "../graphics/bridges/64/pygen/suspension_road_8bpp.png") { template_suspension_road_2(0, 0, 1) }
+#ez alternative_sprites(spr2477, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_road_8bpp.png") { template_suspension_road_2(0, 0, 4) }
 //2485-2486 suspension rail, part 3
 base_graphics spr2485(2485, "../graphics/bridges/64/pygen/suspension_rail_8bpp.png") { template_suspension_rail_3(0, 0, 1) }
+#ez alternative_sprites(spr2485, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_rail_8bpp.png") { template_suspension_rail_3(0, 0, 4) }
 //2487-2492 suspension road, part 3, bridge front
 base_graphics spr2487(2487, "../graphics/bridges/64/pygen/suspension_road_8bpp.png") { template_suspension_road_3(0, 0, 1) }
+#ez alternative_sprites(spr2487, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_road_8bpp.png") { template_suspension_road_3(0, 0, 4) }
 //2493-2494 suspension rail, part 4
 base_graphics spr2493(2493, "../graphics/bridges/64/pygen/suspension_rail_8bpp.png") { template_suspension_rail_4(0, 0, 1) }
+#ez alternative_sprites(spr2493, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_rail_8bpp.png") { template_suspension_rail_4(0, 0, 4) }
 //2495-2489 suspension road, part 4, bridge front
 base_graphics spr2495(2495, "../graphics/bridges/64/pygen/suspension_road_8bpp.png") { template_suspension_road_4(0, 0, 1) }
+#ez alternative_sprites(spr2495, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_road_8bpp.png") { template_suspension_road_4(0, 0, 4) }
 //2499-2500 slow steel rail
 base_graphics spr2499(2499, "../graphics/bridges/64/pygen/steelslow_rail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr2499, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelslow_rail_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //2501-2506 slow steel road, bridge front and legs
 base_graphics spr2501(2501, "../graphics/bridges/64/pygen/steelslow_road_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) template_bridge_onespan_front(0, 129, 1) template_bridge_onespan_front(0, 259, 1) }
+#ez alternative_sprites(spr2501, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelslow_road_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) template_bridge_onespan_front(0, 129, 4) template_bridge_onespan_front(0, 259, 4) }
 //2507-2512 girder rail
 base_graphics spr2507(2507, "../graphics/bridges/64/pygen/girder_rail_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr2507, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/girder_rail_8bpp.png") { template_girder(0, 0, 4) }
 //2513-2529 girder road, bridge front and legs
 base_graphics spr2513(2513, "../graphics/bridges/64/pygen/girder_road_8bpp.png") { template_girder(0, 0, 1) template_girder_front(0, 0, 1) }
+#ez alternative_sprites(spr2513, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/girder_road_8bpp.png") { template_girder(0, 0, 4) template_girder_front(0, 0, 4) }
 //2529-2536 wood ramps road
 base_graphics spr2529(2529, "../graphics/bridges/64/pygen/ramps_wood_road_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
+#ez alternative_sprites(spr2529, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_road_8bpp.png") { template_bridgeramps_wood(0, 0, 4) }
 //2529-2536 wood ramps rail
 base_graphics spr2537(2537, "../graphics/bridges/64/pygen/ramps_wood_rail_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
+#ez alternative_sprites(spr2537, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_rail_8bpp.png") { template_bridgeramps_wood(0, 0, 4) }
 //2545-2546 wood rail
 base_graphics spr2545(2545, "../graphics/bridges/64/pygen/wood_rail_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) }
+#ez alternative_sprites(spr2545, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/wood_rail_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 4) }
 //2547-2552 wood road
 base_graphics spr2547(2547, "../graphics/bridges/64/pygen/wood_road_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) template_bridge_onespan_front_rev(0, 129, 1) template_bridge_onespan_front_rev(0, 259, 1) }
+#ez alternative_sprites(spr2547, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/wood_road_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 4) template_bridge_onespan_front_rev(0, 129, 4) template_bridge_onespan_front_rev(0, 259, 4) }
 //2553-2554 fast steel rail
 base_graphics spr2553(2553, "../graphics/bridges/64/pygen/steelfast_rail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr2553, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelfast_rail_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //2555-2558 fast steel road, bridge front and legs
 base_graphics spr2555(2555, "../graphics/bridges/64/pygen/steelfast_road_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) template_bridge_onespan_front(0, 129, 1) }
+#ez alternative_sprites(spr2555, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelfast_road_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) template_bridge_onespan_front(0, 129, 4) }
 //2559-2568 tubular road, bridge front
 base_graphics spr2559(2559, "../graphics/bridges/64/pygen/tubular_road_8bpp.png") { template_girder_front(0, 0, 1) }
+#ez alternative_sprites(spr2559, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_road_8bpp.png") { template_girder_front(0, 0, 4) }
 //2559-2568 tubular rail
 base_graphics spr2569(2569, "../graphics/bridges/64/pygen/tubular_rail_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr2569, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_rail_8bpp.png") { template_girder(0, 0, 4) }
 //2575-2580 tubular road
 base_graphics spr2575(2575, "../graphics/bridges/64/pygen/tubular_road_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr2575, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_road_8bpp.png") { template_girder(0, 0, 4) }
 //2581-2586 tubular monorail
 base_graphics spr2581(2581, "../graphics/bridges/64/pygen/tubular_monorail_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr2581, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_monorail_8bpp.png") { template_girder(0, 0, 4) }
 //2587-2592 tubular maglev
 base_graphics spr2587(2587, "../graphics/bridges/64/pygen/tubular_maglev_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr2587, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_maglev_8bpp.png") { template_girder(0, 0, 4) }
 
 //2593 bridge cursor
 base_graphics spr2593(2593, "../graphics/cursors/1/pygen/default_8bpp.png") {

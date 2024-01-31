@@ -2,52 +2,76 @@
 //NB. Custom recolouring of blue shades given in extra-plus-toyland-bridge-recolouring
 //902-909 bridge ramps rail
 base_graphics spr902(902, "../graphics/bridges/64/pygen/ramps_norecolour_toyland_rail_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+#ez alternative_sprites(spr902, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_norecolour_toyland_rail_8bpp.png") { template_bridgeramps_general(0, 0, 4) }
 //910-917 bridge ramps road
 base_graphics spr910(910, "../graphics/bridges/64/pygen/ramps_general_toyland_road_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+#ez alternative_sprites(spr910, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_toyland_road_8bpp.png") { template_bridgeramps_general(0, 0, 4) }
 //918-933 suspension road, part 1, bridge front
 base_graphics spr918(918, "../graphics/bridges/64/pygen/suspension_toyland_road_8bpp.png") { template_suspension_road_1(0, 0, 1) }
+#ez alternative_sprites(spr918, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_toyland_road_8bpp.png") { template_suspension_road_1(0, 0, 4) }
 //934-949 suspension rail, part 1
 base_graphics spr934(934, "../graphics/bridges/64/pygen/suspension_toyland_rail_8bpp.png") { template_suspension_rail_1(0, 0, 1) }
+#ez alternative_sprites(spr934, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_toyland_rail_8bpp.png") { template_suspension_rail_1(0, 0, 4) }
 //942-949 suspension road, part 2, legs
 base_graphics spr942(942, "../graphics/bridges/64/pygen/suspension_toyland_road_8bpp.png") { template_suspension_road_2(0, 0, 1) }
+#ez alternative_sprites(spr942, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_toyland_road_8bpp.png") { template_suspension_road_2(0, 0, 4) }
 //950-951 suspension rail, part 3
 base_graphics spr950(950, "../graphics/bridges/64/pygen/suspension_toyland_rail_8bpp.png") { template_suspension_rail_3(0, 0, 1) }
+#ez alternative_sprites(spr950, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_toyland_rail_8bpp.png") { template_suspension_rail_3(0, 0, 4) }
 //952-957 suspension road, part 3, bridge front
 base_graphics spr952(952, "../graphics/bridges/64/pygen/suspension_toyland_road_8bpp.png") { template_suspension_road_3(0, 0, 1) }
+#ez alternative_sprites(spr952, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_toyland_road_8bpp.png") { template_suspension_road_3(0, 0, 4) }
 //958-959 suspension rail, part 4
 base_graphics spr958(958, "../graphics/bridges/64/pygen/suspension_toyland_rail_8bpp.png") { template_suspension_rail_4(0, 0, 1) }
+#ez alternative_sprites(spr958, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_toyland_rail_8bpp.png") { template_suspension_rail_4(0, 0, 4) }
 //960-963 suspension road, part 4, bridge front
 base_graphics spr960(960, "../graphics/bridges/64/pygen/suspension_toyland_road_8bpp.png") { template_suspension_road_4(0, 0, 1) }
+#ez alternative_sprites(spr960, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_toyland_road_8bpp.png") { template_suspension_road_4(0, 0, 4) }
 //964-965 slow steel rail
 base_graphics spr964(964, "../graphics/bridges/64/pygen/steelslow_toyland_rail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr964, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelslow_toyland_rail_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //966-971 slow steel road, bridge front and legs
 base_graphics spr966(966, "../graphics/bridges/64/pygen/steelslow_toyland_road_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) template_bridge_onespan_front(0, 129, 1) template_bridge_onespan_front(0, 259, 1) }
+#ez alternative_sprites(spr966, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelslow_toyland_road_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) template_bridge_onespan_front(0, 129, 4) template_bridge_onespan_front(0, 259, 4) }
 //972-977 girder rail
 base_graphics spr972(972, "../graphics/bridges/64/pygen/girder_toyland_rail_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr972, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/girder_toyland_rail_8bpp.png") { template_girder(0, 0, 4) }
 //978-993 girder road, bridge front and legs
 base_graphics spr978(978, "../graphics/bridges/64/pygen/girder_toyland_road_8bpp.png") { template_girder(0, 0, 1) template_girder_front(0, 0, 1) }
+#ez alternative_sprites(spr978, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/girder_toyland_road_8bpp.png") { template_girder(0, 0, 4) template_girder_front(0, 0, 4) }
 //994-1001 wood ramps road
 base_graphics spr994(994, "../graphics/bridges/64/pygen/ramps_wood_toyland_road_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
+#ez alternative_sprites(spr994, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_toyland_road_8bpp.png") { template_bridgeramps_wood(0, 0, 4) }
 //1002-1009 wood ramps rail
 base_graphics spr1002(1002, "../graphics/bridges/64/pygen/ramps_wood_toyland_rail_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
+#ez alternative_sprites(spr1002, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_toyland_rail_8bpp.png") { template_bridgeramps_wood(0, 0, 4) }
 //1010-1011 wood rail
 base_graphics spr1010(1010, "../graphics/bridges/64/pygen/wood_toyland_rail_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) }
+#ez alternative_sprites(spr1010, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/wood_toyland_rail_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 4) }
 //1012-1017 wood road
 base_graphics spr1012(1012, "../graphics/bridges/64/pygen/wood_toyland_road_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) template_bridge_onespan_front_rev(0, 129, 1) template_bridge_onespan_front_rev(0, 259, 1) }
+#ez alternative_sprites(spr1012, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/wood_toyland_road_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 4) template_bridge_onespan_front_rev(0, 129, 4) template_bridge_onespan_front_rev(0, 259, 4) }
 //1018-1019 fast steel rail
 base_graphics spr1018(1018, "../graphics/bridges/64/pygen/steelfast_toyland_rail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr1018, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelfast_toyland_rail_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //1020-1023 fast steel road, bridge front and legs
 base_graphics spr1020(1020, "../graphics/bridges/64/pygen/steelfast_toyland_road_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) template_bridge_onespan_front(0, 129, 1) }
+#ez alternative_sprites(spr1020, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelfast_toyland_road_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) template_bridge_onespan_front(0, 129, 4) }
 //1024-1033 tubular road, bridge front
 base_graphics spr1024(1024, "../graphics/bridges/64/pygen/tubular_toyland_road_8bpp.png") { template_girder_front(0, 0, 1) }
+#ez alternative_sprites(spr1024, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_toyland_road_8bpp.png") { template_girder_front(0, 0, 4) }
 //1034-1039 tubular rail
 base_graphics spr1034(1034, "../graphics/bridges/64/pygen/tubular_toyland_rail_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr1034, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_toyland_rail_8bpp.png") { template_girder(0, 0, 4) }
 //1040-1045 tubular road
 base_graphics spr1040(1040, "../graphics/bridges/64/pygen/tubular_toyland_road_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr1040, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_toyland_road_8bpp.png") { template_girder(0, 0, 4) }
 //1046-1051 tubular monorail
 base_graphics spr1046(1046, "../graphics/bridges/64/pygen/tubular_toyland_monorail_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr1046, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_toyland_monorail_8bpp.png") { template_girder(0, 0, 4) }
 //1052-1057 tubular maglev
 base_graphics spr1052(1052, "../graphics/bridges/64/pygen/tubular_toyland_maglev_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr1052, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/tubular_toyland_maglev_8bpp.png") { template_girder(0, 0, 4) }
 
 //1058 bridge cursor
 base_graphics spr1058(1058, "../graphics/cursors/1/pygen/default_8bpp.png") {
@@ -70,29 +94,43 @@ alternative_sprites(spr1059, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icon
 //1066-1145 monorail and maglev bridges
 //1066-1067 slow steel monorail
 base_graphics spr1066(1066, "../graphics/bridges/64/pygen/steelslow_toyland_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr1066, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelslow_toyland_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //1068-1075 ramps monorail
 base_graphics spr1068(1068, "../graphics/bridges/64/pygen/ramps_general_toyland_monorail_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+#ez alternative_sprites(spr1068, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_toyland_monorail_8bpp.png") { template_bridgeramps_general(0, 0, 4) }
 //1076-1087 suspension monorail
 base_graphics spr1076(1076, "../graphics/bridges/64/pygen/suspension_toyland_monorail_8bpp.png") { template_suspension_other(0, 0, 1) }
+#ez alternative_sprites(spr1076, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_toyland_monorail_8bpp.png") { template_suspension_other(0, 0, 4) }
 //1088-1093 girder monorail
 base_graphics spr1088(1088, "../graphics/bridges/64/pygen/girder_toyland_monorail_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr1088, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/girder_toyland_monorail_8bpp.png") { template_girder(0, 0, 4) }
 //1094-1103 wood ramps monorail
 base_graphics spr1094(1094, "../graphics/bridges/64/pygen/ramps_wood_toyland_monorail_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
+#ez alternative_sprites(spr1094, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_toyland_monorail_8bpp.png") { template_bridgeramps_wood(0, 0, 4) }
 //1102-1103 wood monorail
 base_graphics spr1102(1102, "../graphics/bridges/64/pygen/wood_toyland_monorail_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) }
+#ez alternative_sprites(spr1102, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/wood_toyland_monorail_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 4) }
 //1104-1105 fast steel monorail
 base_graphics spr1104(1104, "../graphics/bridges/64/pygen/steelfast_toyland_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr1104, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelfast_toyland_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //1106-1107 slow steel maglev
 base_graphics spr1106(1106, "../graphics/bridges/64/pygen/steelslow_toyland_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr1106, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelslow_toyland_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //1108-1115 ramps maglev
 base_graphics spr1108(1108, "../graphics/bridges/64/pygen/ramps_general_toyland_maglev_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+#ez alternative_sprites(spr1108, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_toyland_maglev_8bpp.png") { template_bridgeramps_general(0, 0, 4) }
 //1116-1127 suspension maglev
 base_graphics spr1116(1116, "../graphics/bridges/64/pygen/suspension_toyland_maglev_8bpp.png") { template_suspension_other(0, 0, 1) }
+#ez alternative_sprites(spr1116, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_toyland_maglev_8bpp.png") { template_suspension_other(0, 0, 4) }
 //1128-1133 girder maglev
 base_graphics spr1128(1128, "../graphics/bridges/64/pygen/girder_toyland_maglev_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr1128, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/girder_toyland_maglev_8bpp.png") { template_girder(0, 0, 4) }
 //1134-1141 wood ramps maglev
 base_graphics spr1134(1134, "../graphics/bridges/64/pygen/ramps_wood_toyland_maglev_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
+#ez alternative_sprites(spr1134, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_toyland_maglev_8bpp.png") { template_bridgeramps_wood(0, 0, 4) }
 //1142-1143 wood maglev
 base_graphics spr1142(1142, "../graphics/bridges/64/pygen/wood_toyland_maglev_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) }
+#ez alternative_sprites(spr1142, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/wood_toyland_maglev_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 4) }
 //1144-1145 fast steel maglev
 base_graphics spr1144(1144, "../graphics/bridges/64/pygen/steelfast_toyland_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr1144, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelfast_toyland_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
