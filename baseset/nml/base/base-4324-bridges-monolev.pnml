@@ -1,29 +1,43 @@
 //4324-4403 monorail and maglev bridges
 //4324-4325 slow steel monorail
 base_graphics spr4324(4324, "../graphics/bridges/64/pygen/steelslow_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr4324, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelslow_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //4326-4333 ramps monorail
 base_graphics spr4326(4326, "../graphics/bridges/64/pygen/ramps_general_monorail_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+#ez alternative_sprites(spr4326, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_monorail_8bpp.png") { template_bridgeramps_general(0, 0, 4) }
 //4334-4345 suspension monorail
 base_graphics spr4334(4334, "../graphics/bridges/64/pygen/suspension_monorail_8bpp.png") { template_suspension_other(0, 0, 1) }
+#ez alternative_sprites(spr4334, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_monorail_8bpp.png") { template_suspension_other(0, 0, 4) }
 //4346-4351 girder monorail
 base_graphics spr4346(4346, "../graphics/bridges/64/pygen/girder_monorail_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr4346, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/girder_monorail_8bpp.png") { template_girder(0, 0, 4) }
 //4352-4359 wood ramps monorail
 base_graphics spr4352(4352, "../graphics/bridges/64/pygen/ramps_wood_monorail_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
+#ez alternative_sprites(spr4352, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_monorail_8bpp.png") { template_bridgeramps_wood(0, 0, 4) }
 //4360-4361 wood monorail
 base_graphics spr4360(4360, "../graphics/bridges/64/pygen/wood_monorail_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) }
+#ez alternative_sprites(spr4360, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/wood_monorail_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 4) }
 //4362-4363 fast steel monorail
 base_graphics spr4362(4362, "../graphics/bridges/64/pygen/steelfast_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr4362, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelfast_monorail_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //4364-4365 slow steel maglev
 base_graphics spr4364(4364, "../graphics/bridges/64/pygen/steelslow_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr4364, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelslow_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }
 //4366-4373 ramps maglev
 base_graphics spr4366(4366, "../graphics/bridges/64/pygen/ramps_general_maglev_8bpp.png") { template_bridgeramps_general(0, 0, 1) }
+#ez alternative_sprites(spr4366, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_general_maglev_8bpp.png") { template_bridgeramps_general(0, 0, 4) }
 //4374-4385 suspension maglev
 base_graphics spr4374(4374, "../graphics/bridges/64/pygen/suspension_maglev_8bpp.png") { template_suspension_other(0, 0, 1) }
+#ez alternative_sprites(spr4374, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/suspension_maglev_8bpp.png") { template_suspension_other(0, 0, 4) }
 //4386-4391 girder maglev
 base_graphics spr4386(4386, "../graphics/bridges/64/pygen/girder_maglev_8bpp.png") { template_girder(0, 0, 1) }
+#ez alternative_sprites(spr4386, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/girder_maglev_8bpp.png") { template_girder(0, 0, 4) }
 //4392-4399 wood ramps maglev
 base_graphics spr4392(4392, "../graphics/bridges/64/pygen/ramps_wood_maglev_8bpp.png") { template_bridgeramps_wood(0, 0, 1) }
+#ez alternative_sprites(spr4392, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/ramps_wood_maglev_8bpp.png") { template_bridgeramps_wood(0, 0, 4) }
 //4400-4401 wood maglev
 base_graphics spr4400(4400, "../graphics/bridges/64/pygen/wood_maglev_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 1) }
+#ez alternative_sprites(spr4400, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/wood_maglev_8bpp.png") { template_bridge_onespan_rear_rev(0, 0, 4) }
 //4402-4403 fast steel maglev
 base_graphics spr4402(4402, "../graphics/bridges/64/pygen/steelfast_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 1) }
+#ez alternative_sprites(spr4402, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/bridges/256/pygen/steelfast_maglev_8bpp.png") { template_bridge_onespan_rear(0, 0, 4) }

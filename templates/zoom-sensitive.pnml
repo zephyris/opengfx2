@@ -702,10 +702,10 @@ template template_bridge_single_rear(x, y, z) {
 	[  1*z+x*z, 1*z+y*z, 64*z, 128*z-1, -31*z, -84*z ]
 }
 template template_bridge_single_front_nwse(x, y, z) {
-	[  1*z+x*z, 1*z+y*z, 64*z, 128*z-1, -55*z, -95*z ]
+	[  1*z+x*z, 1*z+y*z, 64*z, 128*z-1, -55*z, -96*z ]
 }
 template template_bridge_single_front_swne(x, y, z) {
-	[   1*z+x*z, 1*z+y*z, 64*z, 128*z-1,  -7*z, -95*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 128*z-1,  -7*z, -96*z ]
 }
 
 template template_bridge_onespan_rear(x, y, z) {
