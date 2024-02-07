@@ -29,9 +29,9 @@
      inkscape:document-units="px"
      showgrid="true"
      showguides="true"
-     inkscape:zoom="4.0000001"
-     inkscape:cx="60.999999"
-     inkscape:cy="194.5"
+     inkscape:zoom="5.6568544"
+     inkscape:cx="-0.17677669"
+     inkscape:cy="143.3659"
      inkscape:window-width="3840"
      inkscape:window-height="2066"
      inkscape:window-x="-11"
@@ -3255,4 +3255,12 @@
        y="0"
        xlink:href="#use56350"
        id="use56352"
-       transform="translate(-2.1166668,-1.0583334)" /></g></svg>
+       transform="translate(-2.1166668,-1.0583334)" /><path
+       style="display:inline;fill:#0000ff;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.198438;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       d="m 18.256251,27.252085 10.583333,-5.291667 4.7625,2.38125 -10.583333,5.291668 z"
+       id="path1-4"
+       sodipodi:nodetypes="ccccc" /><path
+       style="display:inline;fill:#0000ff;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.198438;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       d="m 16.404167,27.252084 -10.5833336,-5.291667 -4.7625,2.38125 10.5833336,5.291668 z"
+       id="path1-4-2"
+       sodipodi:nodetypes="ccccc" /></g></svg>
