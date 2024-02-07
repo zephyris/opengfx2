@@ -10,6 +10,7 @@ template template_ottd_gui12(z) {
 }
 replacenew ottd_gui12(OTTD_GUI, "../graphics/icons/1/title_letters_alt_8bpp.png", 12) { template_ottd_gui12(1) }
 alternative_sprites (ottd_gui12, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_alt_8bpp.png") { template_ottd_gui12(2) }
+alternative_sprites (ottd_gui12, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_alt_8bpp.png") { template_ottd_gui12(4) }
 
 // TODO: Aligned correctly? Where are these used?
 // OTTD_GUI 14-37 ottd bridge piers

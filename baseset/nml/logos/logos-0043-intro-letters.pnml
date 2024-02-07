@@ -12,3 +12,4 @@ template template_spr43(z) {
 }
 base_graphics spr43( 43, "../graphics/icons/1/title_letters_alt_8bpp.png") { template_spr43(1) }
 alternative_sprites (spr43, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_alt_8bpp.png") { template_spr43(2) }
+alternative_sprites(spr43, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_alt_8bpp.png") { template_spr43(4) }
