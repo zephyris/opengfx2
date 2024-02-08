@@ -6,7 +6,7 @@ from random import randint
 import numpy, blend_modes # For overlay blending
 import glob, os, sys
 
-from tools import check_update_needed, paste_to, overlay_bluetransp, bluewhite_to_transp, mask_image
+from tools import check_update_needed, paste_to, overlay_bluetransp, bluewhite_to_transp, mask_image, openttd_palettise
 
 if os.path.isdir("pygen") == False: os.mkdir("pygen")
 
@@ -137,7 +137,7 @@ for bridge_key in bridge_list:
     bridge_image_path = bridge_list[bridge_key]
     bridgemask_image_path = bridgemask
     infrastructure_image_path = os.path.join("..", "..", "infrastructure", str(tile_size), "pygen", infrastructure_list[infrastructure_key])
-    bridge_palmask_path = os.path.join(infrastructure_list[infrastructure_key][:len("_32bpp.png")]+"_palmask.png")
+    bridge_palmask_path = bridge_list[bridge_key][:-len("_32bpp.png")]+"_palmask.png"
     image_output_path = os.path.join("pygen", bridge_key+"_"+infrastructure_key+"_32bpp.png")
     palmask_output_path = os.path.join("pygen", bridge_key+"_"+infrastructure_key+"_palmask.png")
     # main image
@@ -167,6 +167,6 @@ for bridge_key in bridge_list:
       # if update is needed
       # Load palmask image, if it exists
       if os.path.isfile(bridge_palmask_path):
-        bridge_image_palmask = Image.open()
-        target_image_palmask.putpalette(palimg.getpalette())
-        target_image_palmask.save(palmask_output_path)
+        bridge_image_palmask = Image.open(bridge_palmask_path)
+        bridge_image_palmask = openttd_palettise(bridge_image_palmask)
+        bridge_image_palmask.save(palmask_output_path)
