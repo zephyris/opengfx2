@@ -129,8 +129,10 @@ base_graphics spr1263(1263, "../graphics/cursors/1/pygen/default_8bpp.png") {
 }
 
 //1275-1290 signals
-base_graphics spr1275(1275, "../graphics/signals/64/base_8bpp.png") { template_signals_base(1) }
-#32 alternative_sprites (spr1275, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/base_bt32bpp.png") { template_signals_base(1) }
+base_graphics spr1275(1275, "../graphics/signals/64/base_8bpp.png") { template_signals_base(1, 0) }
+#32 alternative_sprites(spr1275, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/base_bt32bpp.png") { template_signals_base(1, 0) }
+#ez alternative_sprites(spr1275, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/signals/256/base_8bpp.png") { template_signals_base(4, 0) }
+#32 #ez alternative_sprites(spr1275, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/signals/256/base_bt32bpp.png") { template_signals_base(4, 0) }
 
 //1291-1300 signal, depot and station gui elements
 //1291 signal icon

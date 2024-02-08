@@ -470,23 +470,23 @@ template template_tunnels_general(x, y, z) {
 }
 
 // Infrastructure: signals base
-template template_signals_base(z) {
-	template_sprite_matrix(22, 30, -7, -28, 0, 0, z)
-	template_sprite_matrix(22, 30, -7, -28, 1, 0, z)
-	template_sprite_matrix(22, 30, -7, -28, 0, 1, z)
-	template_sprite_matrix(22, 30, -7, -28, 1, 1, z)
-	template_sprite_matrix(22, 30, -7, -28, 0, 2, z)
-	template_sprite_matrix(22, 30, -7, -28, 1, 2, z)
-	template_sprite_matrix(22, 30, -7, -28, 0, 3, z)
-	template_sprite_matrix(22, 30, -7, -28, 1, 3, z)
-	template_sprite_matrix(22, 30, -7, -28, 0, 4, z)
-	template_sprite_matrix(22, 30, -7, -28, 1, 4, z)
-	template_sprite_matrix(22, 30, -7, -28, 0, 5, z)
-	template_sprite_matrix(22, 30, -7, -28, 1, 5, z)
-	template_sprite_matrix(22, 30, -7, -28, 0, 6, z)
-	template_sprite_matrix(22, 30, -7, -28, 1, 6, z)
-	template_sprite_matrix(22, 30, -7, -28, 0, 7, z)
-	template_sprite_matrix(22, 30, -7, -28, 1, 7, z)
+template template_signals_base(z, x) {
+	template_sprite_matrix(22, 30, -7, -28, x+0, 0, z)
+	template_sprite_matrix(22, 30, -7, -28, x+1, 0, z)
+	template_sprite_matrix(22, 30, -7, -28, x+0, 1, z)
+	template_sprite_matrix(22, 30, -7, -28, x+1, 1, z)
+	template_sprite_matrix(22, 30, -7, -28, x+0, 2, z)
+	template_sprite_matrix(22, 30, -7, -28, x+1, 2, z)
+	template_sprite_matrix(22, 30, -7, -28, x+0, 3, z)
+	template_sprite_matrix(22, 30, -7, -28, x+1, 3, z)
+	template_sprite_matrix(22, 30, -7, -28, x+0, 4, z)
+	template_sprite_matrix(22, 30, -7, -28, x+1, 4, z)
+	template_sprite_matrix(22, 30, -7, -28, x+0, 5, z)
+	template_sprite_matrix(22, 30, -7, -28, x+1, 5, z)
+	template_sprite_matrix(22, 30, -7, -28, x+0, 6, z)
+	template_sprite_matrix(22, 30, -7, -28, x+1, 6, z)
+	template_sprite_matrix(22, 30, -7, -28, x+0, 7, z)
+	template_sprite_matrix(22, 30, -7, -28, x+1, 7, z)
 }
 
 // Infrastructure: empty/dummy signals base
