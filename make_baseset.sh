@@ -22,6 +22,9 @@ fi
 function encode() {
   echo $1 $2
   python3 ../templates/nml_preprocessor.py $1 $2
+  if [ -f $1_$2.grf ]; then
+    rm $1_$2.grf
+  fi
   nmlc -p DOS --quiet -c $1_$2.nml --md5 $1_$2.md5
 }
 

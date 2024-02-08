@@ -14,15 +14,15 @@ replacenew presignalsemaphorepbs_80(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signa
 replacenew presignalsemaphorepbs_96(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/presignal_semaphore_leftside_combo_8bpp.png", 96) { template_signals_base(1, 0) } //pre-signal, combo
 
 replacenew presignalsemaphorepbs_112(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/path_light_base_8bpp.png", 112) { template_signals_base(1, 0) } // PBS (two way)
-//#32 alternative_sprites(presignalsemaphorepbs_112, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/path_light_base_bt32bpp.png") { template_signals_base(1, 0) }
+#32 alternative_sprites(presignalsemaphorepbs_112, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/path_light_base_bt32bpp.png") { template_signals_base(1, 0) }
 #ez alternative_sprites(presignalsemaphorepbs_112, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/signals/256/path_light_base_8bpp.png") { template_signals_base(4, 0) }
 #32 #ez alternative_sprites(presignalsemaphorepbs_112, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/signals/256/path_light_base_bt32bpp.png") { template_signals_base(4, 0) }
 replacenew presignalsemaphorepbs_128(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/path_light_base_8bpp.png", 128) { template_signals_base(1, 2) } //PBS (one way)
-//#32 alternative_sprites(presignalsemaphorepbs_128, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/path_light_base_bt32bpp.png") { template_signals_base(1, 2) }
+#32 alternative_sprites(presignalsemaphorepbs_128, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/path_light_base_bt32bpp.png") { template_signals_base(1, 2) }
 #ez alternative_sprites(presignalsemaphorepbs_128, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/signals/256/path_light_base_8bpp.png") { template_signals_base(4, 2) }
 #32 #ez alternative_sprites(presignalsemaphorepbs_128, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/signals/256/path_light_base_bt32bpp.png") { template_signals_base(4, 2) }
-replacenew presignalsemaphorepbs_144(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_basealt_8bpp.png", 144) { template_signals_base_empty() } //unused
-replacenew presignalsemaphorepbs_160(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_light_toyland_onewayalt_8bpp.png", 160) { template_signals_base_empty() } //unused
+replacenew presignalsemaphorepbs_144(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/path_light_base_8bpp.png", 144) { template_signals_base_empty() } //unused
+replacenew presignalsemaphorepbs_160(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/path_light_base_8bpp.png", 160) { template_signals_base_empty() } //unused
 
 replacenew presignalsemaphorepbs_176(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_leftside_twoway_8bpp.png", 176) { template_signals_base(1, 0) } //PBS semaphore (two way)
 replacenew presignalsemaphorepbs_192(PRE_SIGNAL_SEMAPHORE_PBS, "../graphics/signals/64/pbs_semaphore_leftside_oneway_8bpp.png", 192) { template_signals_base(1, 0) } //PBS semaphore (one way)
