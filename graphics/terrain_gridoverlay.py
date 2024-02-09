@@ -2,7 +2,7 @@
 
 from PIL import Image
 from PIL import ImageFilter
-from random import randint
+from random import randint, uniform
 import numpy, blend_modes # For overlay blending
 import glob, os, sys
 
@@ -46,6 +46,10 @@ terrain_list = {
 
 gridline_opacity = 40/255
 
+# Dithering borders of terrain tiles for smoothing of slopes
+do_dithering = False
+dither_range = 4
+
 print("Running in scale "+str(scale)+" (tile size "+str(tile_size)+")")
 for terrain_key in terrain_list:
   repeat_y = 48
@@ -58,10 +62,24 @@ for terrain_key in terrain_list:
   output_nogrid_path = os.path.join("pygen", terrain_key+"_nogridline_32bpp.png")
   if check_update_needed([terrain_image_path, gridline_overlay_path], output_grid_path):
     terrain_image = Image.open(terrain_list[terrain_key]).convert("RGB")
-    terrain_image.save(output_nogrid_path)
+    # Smooth/dither top edges
+    if "toyland" not in terrain_key and do_dithering == True:
+      terrain_image_smooth = terrain_image.copy()
+      for x in range(0, terrain_image_smooth.width):
+        for y in range(0, terrain_image_smooth.height):
+            for d in range(0, dither_range * scale):
+              if y + d < terrain_image_smooth.height:
+                if terrain_image_smooth.getpixel((x, y)) == (0, 0, 255):
+                  if uniform(0, 1) < 1/(dither_range * scale):
+                    v = terrain_image_smooth.getpixel((x, y + d))
+                    if v != (0, 0, 255) and v != (255, 255, 255):
+                      terrain_image_smooth.putpixel((x, y), v)
+      terrain_image_smooth.save(output_nogrid_path)
+    else:
+      terrain_image.save(output_nogrid_path)
+    # Overlay gridlines
     target_w, target_h = terrain_image.size
     target_image = terrain_image.crop((0, 0, target_w, target_h)).convert("RGBA")
-    # Overlay gridlines
     gridline_image = Image.open(gridline_overlay_path).convert("RGBA")
     gridline_overlay = target_image.copy()
     for i in range(0, int(target_h / (repeat_y * scale)) + 1):
