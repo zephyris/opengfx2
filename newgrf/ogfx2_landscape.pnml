@@ -6,7 +6,7 @@
 #include "../baseset/nml/extra/extra-param-terrain.pnml"
 #include "../baseset/nml/extra/extra-plus-canals.pnml"
 #include "../baseset/nml/extra/extra-plus-rivers.pnml"
-//#include "../baseset/nml/extra/extra-param-trees.pnml"
+#include "../baseset/nml/extra/extra-rail-tunnels.pnml"
 
 //Standard gridlined replacements, extends baseset extra for complete landscape replacement
 #include "nml/landscape/landscape_standard-gridline.pnml"
