@@ -1,9 +1,18 @@
 // Infrastructure: signals
 
 // PRE_SIGNAL, used for both left and rightside traffic
-replacenew presignal_0(PRE_SIGNAL, "../graphics/signals/64/presignal_light_entry_8bpp.png", 0) { template_signals_base(1, 0) } //pre-signal, entry
-replacenew presignal_16(PRE_SIGNAL, "../graphics/signals/64/presignal_light_exit_8bpp.png", 16) { template_signals_base(1, 0) } //pre-signal, exit
-replacenew presignal_32(PRE_SIGNAL, "../graphics/signals/64/presignal_light_combo_8bpp.png", 32) { template_signals_base(1, 0) } //pre-signal, combo
+replacenew presignal_0(PRE_SIGNAL, "../graphics/signals/64/pre_light_base_8bpp.png", 0) { template_signals_base(1, 0) } //pre-signal, entry
+#32 alternative_sprites(presignal_0, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/pre_light_base_bt32bpp.png") { template_signals_base(1, 0) }
+#ez alternative_sprites(presignal_0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/signals/256/pre_light_base_8bpp.png") { template_signals_base(4, 0) }
+#32 #ez alternative_sprites(presignal_0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/signals/256/pre_light_base_bt32bpp.png") { template_signals_base(4, 0) }
+replacenew presignal_16(PRE_SIGNAL, "../graphics/signals/64/pre_light_base_8bpp.png", 16) { template_signals_base(1, 2) } //pre-signal, exit
+#32 alternative_sprites(presignal_16, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/pre_light_base_bt32bpp.png") { template_signals_base(1, 2) }
+#ez alternative_sprites(presignal_16, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/signals/256/pre_light_base_8bpp.png") { template_signals_base(4, 2) }
+#32 #ez alternative_sprites(presignal_16, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/signals/256/pre_light_base_bt32bpp.png") { template_signals_base(4, 2) }
+replacenew presignal_32(PRE_SIGNAL, "../graphics/signals/64/pre_light_base_8bpp.png", 32) { template_signals_base(1, 4) } //pre-signal, combo
+#32 alternative_sprites(presignal_32, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/signals/64/pre_light_base_bt32bpp.png") { template_signals_base(1, 4) }
+#ez alternative_sprites(presignal_32, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/signals/256/pre_light_base_8bpp.png") { template_signals_base(4, 4) }
+#32 #ez alternative_sprites(presignal_32, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/signals/256/pre_light_base_bt32bpp.png") { template_signals_base(4, 4) }
 
 // PRE_SIGNAL_SEMAPHORE_PBS
 // template_signals_base_empty and/or commented out appear unused
