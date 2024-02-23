@@ -1,15 +1,23 @@
 //485-492 tropical desert rail tunnel
 base_graphics spr485(485, "../graphics/stations/general/64/pygen/tunnels_rail_tropical_desert_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr485, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_rail_tropical_desert_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr485, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_rail_tropical_desert_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr485, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_rail_tropical_desert_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 
 //493-500 tropical desert monorail tunnel
 base_graphics spr493(493, "../graphics/stations/general/64/pygen/tunnels_monorail_tropical_desert_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr493, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_monorail_tropical_desert_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr493, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_monorail_tropical_desert_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr493, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_monorail_tropical_desert_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 
 //501-508 tropical desert maglev tunnel
 base_graphics spr501(501, "../graphics/stations/general/64/pygen/tunnels_maglev_tropical_desert_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr501, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_maglev_tropical_desert_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr501, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_maglev_tropical_desert_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr501, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_maglev_tropical_desert_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 
 //509-516 tropical desert road tunnel
 base_graphics spr509(509, "../graphics/stations/general/64/pygen/tunnels_road_tropical_desert_8bpp.png") {  template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr509, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_road_tropical_desert_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr509, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_road_tropical_desert_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr509, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_road_tropical_desert_bt32bpp.png") { template_tunnels_general(0, 0, 4) }

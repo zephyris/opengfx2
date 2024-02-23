@@ -46,13 +46,14 @@ elif mode == "terrain":
   }
 # Terrain sprites to use
 terrain_tile_positions = [
-  [719, 1, 64, 39],
-  [959, 1, 64, 39],
-  [479, 1, 64, 24],
-  [241, 1, 64, 24]
+  [719, 1, 64, 40],
+  [959, 1, 64, 40],
+  [479, 1, 64, 25],
+  [241, 1, 64, 25]
 ]
 # Terrain extra offset
-terrain_tile_voffs = [0, 0, -7, -7]
+terrain_tile_voffs = [2, 2, -5, -5]
+infra_tile_voffs = [2, 2, 2, 2]
 if mode == "rail_toyland" or mode == "road_toyland":
   terrain_list = {
     "toyland_grass": os.path.join("pygen", "toyland_groundtiles_gridline_32bpp.png"),
@@ -91,17 +92,17 @@ else:
 # Infrastructure sprites to use
 if mode == "terrain":
   infrastructure_tile_positions = [
-    [1, 1, 64, 31],
-    [1, 1, 64, 31],
-    [1, 1, 64, 31],
-    [1, 1, 64, 31]
+    [1, 1, 64, 32],
+    [1, 1, 64, 32],
+    [1, 1, 64, 32],
+    [1, 1, 64, 32]
   ]
 else:
   infrastructure_tile_positions = [
-    [1, 1, 64, 31],
-    [66, 1, 64, 31],
-    [1, 1, 64, 31],
-    [66, 1, 64, 31]
+    [1, 1, 64, 32],
+    [66, 1, 64, 32],
+    [1, 1, 64, 32],
+    [66, 1, 64, 32]
   ]
 col_width = 64
 row_height = 64
@@ -132,10 +133,10 @@ for terrain_key in terrain_list:
       infrastructure_image = blue_to_alpha(Image.open(infrastructure_image_path))
       target_image = Image.new("RGBA", (output_width, output_height), (255, 255, 255, 255))
       for i in range(len(infrastructure_tile_positions)):
-        target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 0 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - terrain_tile_positions[i][3] + terrain_tile_voffs[i]) * scale, scale)
-        target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 1 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - terrain_tile_positions[i][3] + terrain_tile_voffs[i]) * scale, scale)
-        target_image = alpha_to(infrastructure_image, infrastructure_tile_positions[i][0], infrastructure_tile_positions[i][1], infrastructure_tile_positions[i][2], infrastructure_tile_positions[i][3], target_image, 1 * (tile_size // scale + 1) + 1, i * (tile_size // scale + 1) + (tile_size - infrastructure_tile_positions[i][3]) * scale, scale)
-        # Overlay each infrastructure set
+        target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 0 * (64 + 1) + 1, i * (64 + 1) + (64 - terrain_tile_positions[i][3] + terrain_tile_voffs[i]), scale)
+        target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 1 * (64 + 1) + 1, i * (64+ 1) + (64 - terrain_tile_positions[i][3] + terrain_tile_voffs[i]), scale)
+        target_image = alpha_to(infrastructure_image, infrastructure_tile_positions[i][0], infrastructure_tile_positions[i][1], infrastructure_tile_positions[i][2], infrastructure_tile_positions[i][3], target_image, 1 * (64 + 1) + 1, i * (64 + 1) + (64 - infrastructure_tile_positions[i][3] + infra_tile_voffs[i]), scale)
+        # Overlay each infrastructure set11
         print("  "+infrastructure_key)
         # Overlay overlay_alpha
         print(name_overlay)

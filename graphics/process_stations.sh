@@ -68,6 +68,23 @@ mask_regions.py pygen/roaddepots roaddepots_regionmask.png 4
 mask_regions.py pygen/roaddepots_toyland roaddepots_regionmask.png 4
 mask_regions.py pygen/raildepots raildepots_regionmask.png 4
 mask_regions.py pygen/raildepots_toyland raildepots_regionmask.png 4
+# mask regions of tunnels (ie. back wall and roadway from rest of tunnel/sloped tile)
+mask_regions.py pygen/railtunnels railtunnels_regionmask.png 4
+mask_regions.py pygen/railtunnels_snow railtunnels_regionmask.png 4
+mask_regions.py pygen/monorailtunnels monorailtunnels_regionmask.png 4
+mask_regions.py pygen/monorailtunnels_snow monorailtunnels_regionmask.png 4
+mask_regions.py pygen/maglevtunnels maglevtunnels_regionmask.png 4
+mask_regions.py pygen/maglevtunnels_snow maglevtunnels_regionmask.png 4
+mask_regions.py pygen/roadtunnels roadtunnels_regionmask.png 4
+mask_regions.py pygen/roadtunnels_snow roadtunnels_regionmask.png 4
+mask_regions.py pygen/nonetunnels nonetunnels_regionmask.png 4
+mask_regions.py pygen/nonetunnels_snow nonetunnels_regionmask.png 4
+# overlay tunnels onto terrain sprites
+infrastructure_tunnels_infrastructureoverlay.py 4 road
+infrastructure_tunnels_infrastructureoverlay.py 4 road_toyland
+infrastructure_tunnels_infrastructureoverlay.py 4 rail
+infrastructure_tunnels_infrastructureoverlay.py 4 rail_toyland
+infrastructure_tunnels_infrastructureoverlay.py 4 terrain
 custom_dither.py
 cd pygen
 custom_dither.py

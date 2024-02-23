@@ -456,17 +456,17 @@ template template_rail_waypoint(x, y, z) {
 
 //Template: Tunnels
 template template_tunnels_general(x, y, z) {
-	[66*z+x*z,  66*z+y*z, 64*z, 64*z-1, -31*z, -32*z ]
-	[ 1*z+x*z,  66*z+y*z, 64*z, 64*z-1, -31*z, -62*z ]
+	[66*z+x*z,  66*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+	[ 1*z+x*z,  66*z+y*z, 64*z, 65*z-1, -31*z, -63*z ]
 
-	[66*z+x*z, 131*z+y*z, 64*z, 64*z-1, -31*z, -32*z ]
-	[ 1*z+x*z, 131*z+y*z, 64*z, 64*z-1, -31*z, -62*z ]
+	[66*z+x*z, 131*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+	[ 1*z+x*z, 131*z+y*z, 64*z, 65*z-1, -31*z, -63*z ]
 
-	[66*z+x*z, 196*z+y*z, 64*z, 64*z-1, -31*z, -32*z ]
-	[ 1*z+x*z, 196*z+y*z, 64*z, 64*z-1, -31*z, -62*z ]
+	[66*z+x*z, 196*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+	[ 1*z+x*z, 196*z+y*z, 64*z, 65*z-1, -31*z, -63*z ]
 
-	[66*z+x*z,   1*z+y*z, 64*z, 64*z-1, -31*z, -32*z ]
-	[ 1*z+x*z,   1*z+y*z, 64*z, 64*z-1, -31*z, -62*z ]
+	[66*z+x*z,   1*z+y*z, 64*z, 65*z-1, -31*z, -33*z ]
+	[ 1*z+x*z,   1*z+y*z, 64*z, 65*z-1, -31*z, -63*z ]
 }
 
 // Infrastructure: signals base

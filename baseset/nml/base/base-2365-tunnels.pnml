@@ -1,30 +1,46 @@
 // grass tunnels
 //2365-2371 tunnels grass rail
 base_graphics spr2365(2365, "../graphics/stations/general/64/pygen/tunnels_rail_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr2365, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_rail_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr2365, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_rail_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr2365, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_rail_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 //2373-2379 tunnels grass monorail
 base_graphics spr2373(2373, "../graphics/stations/general/64/pygen/tunnels_monorail_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr2373, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_monorail_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr2373, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_monorail_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr2373, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_monorail_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 //2381-2388 tunnels grass maglev
 base_graphics spr2381(2381, "../graphics/stations/general/64/pygen/tunnels_maglev_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr2381, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_maglev_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr2381, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_maglev_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr2381, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_maglev_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 //2389-2396 tunnels grass road
 base_graphics spr2389(2389, "../graphics/stations/general/64/pygen/tunnels_road_temperate_grass_8bpp.png") {  template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr2389, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_road_temperate_grass_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr2389, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_road_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr2389, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_road_temperate_grass_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 
 // snow tunnels
 //2397-2404 tunnels snow rail
 base_graphics spr2397(2397, "../graphics/stations/general/64/pygen/tunnels_rail_arctic_snow_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr2397, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_rail_arctic_snow_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr2397, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_rail_arctic_snow_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr2397, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_rail_arctic_snow_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 //2405-2412 tunnels snow monorail
 base_graphics spr2405(2405, "../graphics/stations/general/64/pygen/tunnels_monorail_arctic_snow_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr2405, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_monorail_arctic_snow_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr2405, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_monorail_arctic_snow_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr2405, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_monorail_arctic_snow_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 //2413-2420 tunnels snow maglev
 base_graphics spr2413(2413, "../graphics/stations/general/64/pygen/tunnels_maglev_arctic_snow_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr2413, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_maglev_arctic_snow_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr2413, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_maglev_arctic_snow_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr2413, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_maglev_arctic_snow_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 //2421-2428 tunnels snow road
 base_graphics spr2421(2421, "../graphics/stations/general/64/pygen/tunnels_road_arctic_snow_8bpp.png") {  template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr2421, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_road_arctic_snow_8bpp.png") { template_tunnels_general(0, 0, 4) }
 #32 alternative_sprites(spr2421, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_road_arctic_snow_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr2421, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_road_arctic_snow_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 
 //2429-2432 tunnel icons
 template template_spr2429(z) {

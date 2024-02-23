@@ -1,12 +1,24 @@
 //1146-1177 tunnels
 //1146-1153 toyland rail tunnel
 base_graphics spr1146(1146, "../graphics/stations/general/64/pygen/tunnels_rail_toyland_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr1146, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_rail_toyland_grass_8bpp.png") { template_tunnels_general(0, 0, 4) }
+#32 alternative_sprites(spr1146, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_rail_toyland_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr1146, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_rail_toyland_grass_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 
 //1154-1161 toyland monorail tunnel
 base_graphics spr1154(1154, "../graphics/stations/general/64/pygen/tunnels_monorail_toyland_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr1154, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_monorail_toyland_grass_8bpp.png") { template_tunnels_general(0, 0, 4) }
+#32 alternative_sprites(spr1154, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_monorail_toyland_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr1154, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_monorail_toyland_grass_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 
 //1162-1169 toyland maglev tunnel
 base_graphics spr1162(1162, "../graphics/stations/general/64/pygen/tunnels_maglev_toyland_grass_8bpp.png") { template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr1162, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_maglev_toyland_grass_8bpp.png") { template_tunnels_general(0, 0, 4) }
+#32 alternative_sprites(spr1162, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_maglev_toyland_grass_bt32bpp.png") { template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr1162, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_maglev_toyland_grass_bt32bpp.png") { template_tunnels_general(0, 0, 4) }
 
 //1170-1177 toyland road tunnel
 base_graphics spr1170(1170, "../graphics/stations/general/64/pygen/tunnels_road_toyland_grass_8bpp.png") {  template_tunnels_general(0, 0, 1) }
+#ez alternative_sprites(spr1170, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/tunnels_road_toyland_grass_8bpp.png") {  template_tunnels_general(0, 0, 4) }
+#32 alternative_sprites(spr1170, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/tunnels_road_toyland_grass_bt32bpp.png") {  template_tunnels_general(0, 0, 1) }
+#32 #ez alternative_sprites(spr1170, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/tunnels_road_toyland_grass_bt32bpp.png") {  template_tunnels_general(0, 0, 4) }

@@ -63,16 +63,16 @@ for image_index in range(len(source_suffices)):
         current_mask.putpalette(palette)
         current_mask = current_mask.convert("L")
         # define bounds
-        bounds = 1, 1, tile_size + 1, region_mask_height + 1
+        bounds = scale, scale, tile_size + scale, region_mask_height + scale
         print("   ", "Mask position  ", tile, bounds)
         # Fill background of sprite blue
         sprite_x = scale + tile * (tile_size + scale)
-        sprite_y = scale + row * (region_mask_height)
+        sprite_y = scale + row * (region_mask_height + scale)
         drawing = ImageDraw.Draw(output_image)
-        drawing.rectangle((sprite_x, sprite_y, sprite_x + tile_size, sprite_y + region_mask_height - scale), fill="#0000ff", outline=None)
+        drawing.rectangle((sprite_x, sprite_y, sprite_x + tile_size - 1, sprite_y + region_mask_height - scale + 1), fill="#0000ff", outline=None)
         # Paste into output using mask
         source_x = bounds[0]
         source_y = bounds[1] + row * region_mask_height
         print("   ", "Source position", tile, (source_x, source_y, source_x + bounds[2], source_y + bounds[3]))
-        output_image.paste(source_image.crop((source_x, source_y, source_x + bounds[2] - bounds[0], source_y + bounds[3] - bounds[1])), (sprite_x, sprite_y - (bounds[3] - bounds[1]) + region_mask_height - 1), current_mask.crop(bounds))
+        output_image.paste(source_image.crop((source_x, source_y, source_x + bounds[2] - bounds[0], source_y + bounds[3] - bounds[1])), (sprite_x, sprite_y - (bounds[3] - bounds[1]) + region_mask_height), current_mask.crop(bounds))
     output_image.save(out_path)
