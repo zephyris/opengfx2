@@ -69,7 +69,7 @@ for image_index in range(len(source_suffices)):
         sprite_x = scale + tile * (tile_size + scale)
         sprite_y = scale + row * (region_mask_height + scale)
         drawing = ImageDraw.Draw(output_image)
-        drawing.rectangle((sprite_x, sprite_y, sprite_x + tile_size - 1, sprite_y + region_mask_height - scale + 1), fill="#0000ff", outline=None)
+        drawing.rectangle((sprite_x, sprite_y, sprite_x + tile_size - 1, sprite_y + region_mask_height - scale + 2), fill="#0000ff", outline=None)
         # Paste into output using mask
         source_x = bounds[0]
         source_y = bounds[1] + row * region_mask_height
