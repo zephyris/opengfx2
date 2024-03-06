@@ -653,12 +653,12 @@ template template_watertiles_full(x, y, z) {
 
 // Terrain: Farm fences
 template template_farms_fences(x, y, z) {
-	[  35*z+x*z, 1*z+y*z, 33*z, 22*z-1, -30*z,  10*z ]
-	[   1*z+x*z, 1*z+y*z, 33*z, 22*z-1,   0*z,  10*z ]
-	[ 171*z+x*z, 1*z+y*z, 33*z, 30*z-1, -30*z,   2*z ]
-	[ 137*z+x*z, 1*z+y*z, 33*z, 30*z-1,   0*z,   2*z ]
-	[ 103*z+x*z, 1*z+y*z, 33*z, 14*z-1, -30*z,  18*z ]
-	[  69*z+x*z, 1*z+y*z, 33*z, 14*z-1,   0*z,  18*z ]
+	[  35*z+x*z, 1*z+y*z, 33*z, 22*z-1, -32*z,  11*z ]
+	[   1*z+x*z, 1*z+y*z, 33*z, 22*z-1,   0*z,  11*z ]
+	[ 171*z+x*z, 1*z+y*z, 33*z, 30*z-1, -32*z,   3*z ]
+	[ 137*z+x*z, 1*z+y*z, 33*z, 30*z-1,   0*z,   3*z ]
+	[ 103*z+x*z, 1*z+y*z, 33*z, 14*z-1, -32*z,  19*z ]
+	[  69*z+x*z, 1*z+y*z, 33*z, 14*z-1,   0*z,  19*z ]
 }
 
 //Template infrastructure building: Ship depots
