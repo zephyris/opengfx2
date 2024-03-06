@@ -1,3 +1,5 @@
 //Road stops
 replacenew roadstops(ROAD_STOPS, "../graphics/stations/general/64/pygen/roadstops_8bpp.png") { template_roadstop_throughstop(325, 0, 1) template_roadstop_throughstop(0, 0, 1) }
 #32 alternative_sprites(roadstops, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/roadstops_rm32bpp.png", "../graphics/stations/general/64/pygen/roadstops_8bpp.png") { template_roadstop_throughstop(325, 0, 1) template_roadstop_throughstop(0, 0, 1) }
+#ez alternative_sprites(roadstops, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/roadstops_8bpp.png") { template_roadstop_throughstop(325, 0, 4) template_roadstop_throughstop(0, 0, 4) }
+#32 #ez alternative_sprites(roadstops, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/roadstops_rm32bpp.png", "../graphics/stations/general/256/pygen/roadstops_8bpp.png") { template_roadstop_throughstop(325, 0, 4) template_roadstop_throughstop(0, 0, 4) }
