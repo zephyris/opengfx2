@@ -187,4 +187,4 @@ with open("opengfx2_" + typeshort + ".obg", "w") as obg:
     obg.write(pad(file["name"] + ".grf", 26, pad_left=False) + "= " + md5)
   obg.write("\n")
   obg.write("[origin]" + "\n")
-  obg.write("default = From the in-game content download system (BaNaNaS) or https://github.com/zephyris/opengfx2/")
+  obg.write("default = Available from the in-game content download system (BaNaNaS) or https://github.com/zephyris/opengfx2/")
