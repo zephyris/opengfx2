@@ -63,6 +63,8 @@ base_graphics spr1145(1145, "../graphics/stations/general/64/pygen/monoraildepot
 //1151-1168 monorail station
 base_graphics spr1151(1151, "../graphics/stations/general/64/pygen/monorailstations_8bpp.png") { template_rail_station(0, 0, 1) }
 #32 alternative_sprites (spr1151, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/monorailstations_rm32bpp.png", "../graphics/stations/general/64/pygen/monorailstations_8bpp.png") { template_rail_station(0, 0, 1) }
+#ez alternative_sprites (spr1151, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/monorailstations_8bpp.png") { template_rail_station(0, 0, 4) }
+#ez #32 alternative_sprites (spr1151, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/monorailstations_rm32bpp.png", "../graphics/stations/general/256/pygen/monorailstations_8bpp.png") { template_rail_station(0, 0, 4) }
 
 // 1169 - 1174 Maglev overlay tracks
 base_graphics spr1169(1169, "../graphics/infrastructure/64/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
