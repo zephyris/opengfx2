@@ -428,10 +428,10 @@ template template_rail_station(x, y, z) {
 	template_house_1x1_addoffs_nocrop(195, 130, z, 64,   0,  16)
 	template_house_1x1_addoffs_nocrop(195, 195, z, 64,   0,  16)
 	template_house_1x1_addoffs_nocrop(195,   0, z, 64,   0,  16)
-	[ 261*z+x*z,  66*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
-	[ 261*z+x*z, 131*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
-	[ 261*z+x*z, 196*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
-	[ 261*z+x*z,   1*z+y*z, 64*z, 64*z-1, 0, 0, NOCROP]
+	[ 261*z+x*z,  66*z+y*z, 64*z, 64*z+z-1, 0, 0, NOCROP]
+	[ 261*z+x*z, 131*z+y*z, 64*z, 64*z+z-1, 0, 0, NOCROP]
+	[ 261*z+x*z, 196*z+y*z, 64*z, 64*z+z-1, 0, 0, NOCROP]
+	[ 261*z+x*z,   1*z+y*z, 64*z, 64*z+z-1, 0, 0, NOCROP]
 }
 template template_rail_station_platformsonly(x, y, z) {
 	template_house_1x1_addoffs(  0,   0, z, 64,  22, -11)
@@ -1341,27 +1341,27 @@ template template_airport_old_groundtiles(x, y, z) {
 
 // Infrastructure: tram tiles
 template template_tramtiles(x, y, z) {
-	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 131*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 261*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 326*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 391*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 456*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 521*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 586*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 651*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP ]
+	[  66*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 131*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 196*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 261*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 326*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 391*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 456*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 521*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 586*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 651*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
 
-	[ 976*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
-	[1041*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
-	[1106*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
-	[1171*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 976*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z, NOCROP  ]
+	[1041*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z, NOCROP  ]
+	[1106*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z, NOCROP  ]
+	[1171*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z, NOCROP  ]
 
-	[ 846*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 911*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 716*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
-	[ 781*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 846*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 911*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 716*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
+	[ 781*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z, NOCROP  ]
 }
 
 // Infrastructure: tram bridge tiles
