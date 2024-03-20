@@ -1,9 +1,9 @@
 //128-133 toyland (candyfloss) forest
 base_graphics spr128(128, "../graphics/industries/toyland/64/forest_8bpp.png") {
-	template_house_1x1(  0, 0, 1, 73)
-	template_house_1x1( 65, 0, 1, 73)
-	template_house_1x1(130, 0, 1, 73)
-	template_house_1x1(195, 0, 1, 73)
-	template_house_1x1(260, 0, 1, 73)
-	template_house_1x1(325, 0, 1, 73)
+	template_house_1x1(  0, 0, 1, 74)
+	template_house_1x1( 65, 0, 1, 74)
+	template_house_1x1(130, 0, 1, 74)
+	template_house_1x1(195, 0, 1, 74)
+	template_house_1x1(260, 0, 1, 74)
+	template_house_1x1(325, 0, 1, 74)
 }

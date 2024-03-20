@@ -100,12 +100,12 @@ base_graphics spr2061(2061, "../graphics/industries/temperate/64/pygen/sawmill_8
 
 //2072-2077 forest
 template template_spr2072(z) {
-	template_house_1x1(  0,   0, z, 73)
-	template_house_1x1( 65,   0, z, 73)
-	template_house_1x1(130,   0, z, 73)
-	template_house_1x1(195,   0, z, 73)
-	template_house_1x1(260,   0, z, 73)
-	template_house_1x1(325,   0, z, 73)
+	template_house_1x1(  0,   0, z, 74)
+	template_house_1x1( 65,   0, z, 74)
+	template_house_1x1(130,   0, z, 74)
+	template_house_1x1(195,   0, z, 74)
+	template_house_1x1(260,   0, z, 74)
+	template_house_1x1(325,   0, z, 74)
 }
 base_graphics spr2072(2072, "../graphics/industries/arctic/64/forest_8bpp.png") { template_spr2072(1) }
 #32 alternative_sprites(spr2072, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/industries/arctic/64/forest_bt32bpp.png") { template_spr2072(1) }
