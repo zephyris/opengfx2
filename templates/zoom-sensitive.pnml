@@ -15,7 +15,7 @@ template template_empty() {
 
 // Template for simple zoom-sensitive sprite
 template template_general(x, y, w, h, ox, oy, z) {
-	[ x*z, y*z, w*z, h*z, ox*z, oy*z]
+	[ x*z, y*z, w*z, h*z, ox*z, oy*z ]
 }
 
 // Templates for handling building sprites
@@ -93,7 +93,7 @@ template template_house_short_anim(x, y, z) {
 // xindex: horizontal position in matrix
 // yindex: vertical position in matrix
 template template_sprite_matrix(w, h, ox, oy, xindex, yindex, z) {
-	[(1+xindex*(1+w))*z, (1+yindex*(1+h))*z, w*z, h*z, ox*z, oy*z]
+	[(1+xindex*(1+w))*z, (1+yindex*(1+h))*z, w*z, h*z, ox*z, oy*z ]
 }
 template template_sprite_matrix_nocrop(w, h, ox, oy, xindex, yindex, z) {
 	[(1+xindex*(1+w))*z, (1+yindex*(1+h))*z, w*z, h*z, ox*z, oy*z, NOCROP]
@@ -102,7 +102,7 @@ template template_sprite_matrix_nocrop(w, h, ox, oy, xindex, yindex, z) {
 //Template for an (0, 0) animation frame series or similar, with 1px border
 // f: Frame number
 template template_animation_frame(w, h, ox, oy, f, z) {
-	[1*z+f*(1+w)*z, 1*z, w*z, h*z, ox*z, oy*z]
+	[1*z+f*(1+w)*z, 1*z, w*z, h*z, ox*z, oy*z ]
 }
 
 // GUI templates: Cursors, with 1px border
@@ -112,7 +112,7 @@ template template_cursor_matrix(xindex, yindex, z) {
 
 // Templates for handling general sprite sheets with 0px borders
 template template_sprite_borderlessmatrix(w, h, ox, oy, xindex, yindex, z) {
-	[xindex*w*z, yindex*h*z, w*z, h*z, ox*z, oy*z]
+	[xindex*w*z, yindex*h*z, w*z, h*z, ox*z, oy*z ]
 }
 
 // Sprite sets
@@ -850,46 +850,46 @@ template template_girder_front(x, y, z) {
 
 //Template trees: Wide
 template template_tree_wide(x, y, z) {
-	[  0*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
-	[ 50*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
-	[100*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
-	[150*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
-	[200*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
-	[250*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
-	[300*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z]
+	[  0*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z ]
+	[ 50*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z ]
+	[100*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z ]
+	[150*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z ]
+	[200*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z ]
+	[250*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z ]
+	[300*z+x*z, 0*z+y*z, 45*z, 80*z, -24*z, -69*z ]
 }
 
 //Template trees: Narrow
 template template_tree_narrow(x, y, z) {
-	[  0*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[ 40*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[ 80*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[120*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[160*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[200*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[240*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[  0*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[ 40*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[ 80*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[120*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[160*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[200*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[240*z+x*z, 0*z+y*z, 35*z, 80*z, -19*z, -69*z ]
 }
 
 //Template trees: 1px border
 template template_tree_bordered(x, y, z) {
-	[  1*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[ 37*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[ 73*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[109*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[145*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[181*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
-	[217*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[  1*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[ 37*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[ 73*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[109*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[145*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[181*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z ]
+	[217*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z ]
 }
 
 //Template tree_alt: For synchronised layout
 template template_tree_alt(x, y, z) {
-	[  1*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
-	[ 47*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
-	[ 93*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
-	[139*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
-	[185*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
-	[231*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
-	[277*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z]
+	[  1*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z ]
+	[ 47*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z ]
+	[ 93*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z ]
+	[139*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z ]
+	[185*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z ]
+	[231*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z ]
+	[277*z+x*z, 1*z+y*z, 45*z, 80*z, -23*z, -69*z ]
 }
 
 //Template infrastructure: City trees
@@ -899,7 +899,7 @@ template template_tree_city(x, y, z) {
 
 //Template infrastructure: Normal trees as city trees
 template template_tree_bordered_as_city(x, y, z) {
-	[ 37*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z]
+	[ 37*z+x*z, 1*z+y*z, 35*z, 80*z, -19*z, -69*z ]
 }
 
 //Vehicle templates assume a standardised sprite size for each vehicle type
@@ -908,63 +908,63 @@ template template_tree_bordered_as_city(x, y, z) {
 
 //Template vehicles: road
 template template_vehicle_road_8view(xindex, yindex, z) {
-	[(1+  0+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -15*z]
-	[(2+  8+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -10*z]
-	[(3+ 30+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -15*z,  -9*z]
-	[(4+ 61+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -10*z]
-	[(5+ 83+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -15*z]
-	[(6+ 91+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -10*z]
-	[(7+113+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -15*z,  -9*z]
-	[(8+144+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -10*z]
+	[(1+  0+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -15*z ]
+	[(2+  8+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -10*z ]
+	[(3+ 30+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -15*z,  -9*z ]
+	[(4+ 61+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -10*z ]
+	[(5+ 83+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -15*z ]
+	[(6+ 91+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -10*z ]
+	[(7+113+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -15*z,  -9*z ]
+	[(8+144+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -10*z ]
 }
 
 //Template vehicles: rail
 //Horizontal views have zoom-specific optimisation for perfect depot window alignment
 template template_vehicle_rail_4view(xindex, yindex, z) {
-	[(1+  0+xindex*87)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z]
-	[(2+  8+xindex*87)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z]
-	[(3+ 30+xindex*87)*z, (1+yindex*24)*z, 31*z, 15*z, -16*z+z/2,  -9*z]
-	[(4+ 61+xindex*87)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z]
+	[(1+  0+xindex*87)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z ]
+	[(2+  8+xindex*87)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z ]
+	[(3+ 30+xindex*87)*z, (1+yindex*24)*z, 31*z, 15*z, -16*z+z/2,  -9*z ]
+	[(4+ 61+xindex*87)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z ]
 }
 template template_vehicle_rail_8view(xindex, yindex, z) {
-	[(1+  0+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z]
-	[(2+  8+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z]
-	[(3+ 30+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -16*z+z/2,  -9*z]
-	[(4+ 61+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z]
-	[(5+ 83+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z]
-	[(6+ 91+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z]
-	[(7+113+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -16*z+z/2,  -9*z]
-	[(8+144+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z]
+	[(1+  0+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z ]
+	[(2+  8+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z ]
+	[(3+ 30+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -16*z+z/2,  -9*z ]
+	[(4+ 61+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z ]
+	[(5+ 83+xindex*174)*z, (1+yindex*24)*z,  8*z, 23*z,  -3*z, -13*z ]
+	[(6+ 91+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z, -15*z, -12*z ]
+	[(7+113+xindex*174)*z, (1+yindex*24)*z, 31*z, 15*z, -16*z+z/2,  -9*z ]
+	[(8+144+xindex*174)*z, (1+yindex*24)*z, 22*z, 19*z,  -7*z, -12*z ]
 }
 
 //Template vehicles: air
 template template_vehicle_air_4view(xindex, yindex, z) {
-	[(1+  0+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(2+ 80+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(3+160+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(4+240+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(1+  0+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(2+ 80+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(3+160+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(4+240+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
 }
 template template_vehicle_air_8view(xindex, yindex, z) {
-	[(1+  0+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(2+ 80+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(3+160+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(4+240+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(5+320+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(6+400+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(7+480+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
-	[(8+560+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z]
+	[(1+  0+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(2+ 80+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(3+160+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(4+240+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(5+320+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(6+400+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(7+480+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
+	[(8+560+xindex*650)*z, (1+yindex*81)*z, 80*z, 80*z, -40*z, -40*z ]
 }
 
 //Template vehicles: water
 template template_vehicle_water_8view(xindex, yindex, z) {
-	[(1+  0+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
-	[(2+ 96+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -74*z, -32*z]
-	[(3+192+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
-	[(4+288+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -22*z, -32*z]
-	[(5+384+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
-	[(6+480+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -74*z, -32*z]
-	[(7+576+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z]
-	[(8+672+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -22*z, -32*z]
+	[(1+  0+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z ]
+	[(2+ 96+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -74*z, -32*z ]
+	[(3+192+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z ]
+	[(4+288+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -22*z, -32*z ]
+	[(5+384+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z ]
+	[(6+480+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -74*z, -32*z ]
+	[(7+576+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -48*z, -48*z ]
+	[(8+672+xindex*778)*z, (1+yindex*97)*z, 96*z, 96*z, -22*z, -32*z ]
 }
 
 
