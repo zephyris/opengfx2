@@ -95,6 +95,8 @@ base_graphics spr1227(1227, "../graphics/stations/general/64/pygen/maglevdepots_
 //1233-1250 maglev station
 base_graphics spr1233(1233, "../graphics/stations/general/64/pygen/maglevstations_8bpp.png") { template_rail_station(0, 0, 1) }
 #32 alternative_sprites (spr1233, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/maglevstations_rm32bpp.png", "../graphics/stations/general/64/pygen/maglevstations_8bpp.png") { template_rail_station(0, 0, 1) }
+#ez alternative_sprites (spr1233, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/maglevstations_8bpp.png") { template_rail_station(0, 0, 4) }
+#32 #ez alternative_sprites (spr1233, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/maglevstations_rm32bpp.png", "../graphics/stations/general/256/pygen/maglevstations_8bpp.png") { template_rail_station(0, 0, 4) }
 
 //1251-1262 rail gui buttons
 template template_spr1251(z) {
