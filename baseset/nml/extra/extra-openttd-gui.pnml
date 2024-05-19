@@ -403,8 +403,8 @@ template template_ottd_gui186(z) {
 	template_sprite_matrix_nocrop(12, 10, 0, 0, 0, 0, z) // network chat icon
 	template_sprite_matrix_nocrop(12, 10, 0, 0, 1, 0, z) // network settings icon
 	template_sprite_matrix_nocrop(12, 10, 0, 0, 2, 0, z) // network join icon
-	template_sprite_matrix_nocrop(12, 10, 0, 0, 1, 1, z) // network player icon
-	template_sprite_matrix_nocrop(12, 10, 0, 0, 2, 1, z) // network crown icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 0, 1, z) // network player icon
+	template_sprite_matrix_nocrop(12, 10, 0, 0, 1, 1, z) // network crown icon
 }
 replacenew ottd_gui186(OTTD_GUI, "../graphics/icons/1/icons_network_8bpp.png", 186) { template_ottd_gui186(1) }
 alternative_sprites (ottd_gui186, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/icons_network_8bpp.png") { template_ottd_gui186(2) }
