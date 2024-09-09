@@ -7,6 +7,14 @@
 
 OpenGFX2 is a spiritual successor to [OpenGFX](https://github.com/OpenTTD/OpenGFX). Think of it as "OpenGFX version 2", or maybe that should be "OpenGFX director's edition", "refactored OpenGFX", or perhaps "OpenGFX extra zoom" or "OpenGFX 32-bit". Or some combination of all of them. OpenGFX2 is derived from OpenGFX, but extensively redrawn or revised from my original 32-bit sources. Almost all sprites have been updated or revised. It features far better organisation of sprites, extensive use of automated composite sprite generation (using Python of dubious quality) and is drawn and coded with extra zoom levels and 32-bit in mind.
 
+OpenGFX2 is a totally separate graphics set to zBase. zBase is my old and outdated attempt to kick-start a high definition base set using 3D graphics - I think OpenGFX2 is a better style and a better set overall.
+
+## Current Status
+
+`OpenGFX2 Classic` is complete and ready to use. There might be bugs though, please post any you find on Github.
+
+`OpenGFX2 High Def` isn't complete, but can be used. The landscape (grass, water, trees) and infrastructure (road, rail, bridges) are mostly complete, but the vehicles and houses are generally not. Please post any bugs to Github, except for missing 4x zoom sprites - I know which are missing!
+
 ## Quick start
 
 ### In-game content downloader / BaNaNaS
