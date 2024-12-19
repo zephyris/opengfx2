@@ -20,7 +20,7 @@ STR_PARAM_GRIDLINE_VALUE_DEFAULT      :僅地面網格線 （預設）
 STR_PARAM_GRIDLINE_VALUE_NOGRIDLINE   :沒有網格線
 STR_PARAM_GRIDLINE_VALUE_WATERGRID    :地面和水面網格線
 
-STR_PARAM_LOGO_NAME                   :標誌風格
+STR_PARAM_LOGO_NAME                   :標誌款式
 STR_PARAM_LOGO_DESC                   :標題畫面的 OpenTTD 標誌款式。
 STR_PARAM_LOGO_VALUE_DEFAULT          :預設
 STR_PARAM_LOGO_VALUE_UNDERGROUND      :英國地下鐵款式
