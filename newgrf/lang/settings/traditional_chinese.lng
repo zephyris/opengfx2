@@ -18,7 +18,7 @@ STR_PARAM_GRIDLINE_NAME               :地形網格線
 STR_PARAM_GRIDLINE_DESC               :是否在地面和水域方塊的邊緣顯示網格線。
 STR_PARAM_GRIDLINE_VALUE_DEFAULT      :僅地面網格線 （預設）
 STR_PARAM_GRIDLINE_VALUE_NOGRIDLINE   :沒有網格線
-STR_PARAM_GRIDLINE_VALUE_WATERGRID    :地面和水面網格線
+STR_PARAM_GRIDLINE_VALUE_WATERGRID    :地面和水域網格線
 
 STR_PARAM_LOGO_NAME                   :標誌款式
 STR_PARAM_LOGO_DESC                   :標題畫面的 OpenTTD 標誌款式。
