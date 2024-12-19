@@ -1,5 +1,5 @@
 ##grflangid 0x0c
-STR_GENERAL_DESC        :OpenGFX2+ 景觀。根據 GNU 通用公共授權第 2 版的授權下自由使用。
+STR_GENERAL_DESC        :OpenGFX2+ 景觀。根據 GNU 通用公共授權第 2 版的許可下自由使用。
 
 STR_GRF_NAME            :OpenGFX2+ 景觀
 STR_GRF_DESCRIPTION     :{ORANGE}OpenGFX+ 景觀。在 OpenGFX2 的景觀款式。 {BLACK}{} 作者： Zephyris ，建基於 OpenGFX 團隊之上 {}{BLACK} 受權： {SILVER}GPL v2+{}{BLACK} 網站： {SILVER}https://github.com/zephyris/OpenGFX2
