@@ -21,8 +21,8 @@ STR_PARAM_CURSOR_NAME                 :滑鼠遊標
 STR_PARAM_CURSOR_DESC                 :滑鼠遊標或指標的款式和顏色。
 STR_PARAM_CURSOR_VALUE_DEFAULT        :經典款式，黃色（預設）
 STR_PARAM_CURSOR_VALUE_CLASSIC_GRAY   :經典款式，灰色
-STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW :OpenGFX 風格，黃色
-STR_PARAM_CURSOR_VALUE_WIN_WHITE      :視窗風格，白色
+STR_PARAM_CURSOR_VALUE_OPENGFX_YELLOW :OpenGFX 款式，黃色
+STR_PARAM_CURSOR_VALUE_WIN_WHITE      :視窗款式，白色
 
 STR_PARAM_GRIDLINE_NAME               :地形網格線
 STR_PARAM_GRIDLINE_DESC               :是否在地面和水域方塊的邊緣顯示網格線。
