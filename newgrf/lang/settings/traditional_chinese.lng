@@ -5,7 +5,7 @@ STR_GRF_NAME            :OpenGFX2 設定
 STR_GRF_DESCRIPTION     :{ORANGE}OpenGFX2 設定。更改 OpenGFX2 額外 GRF 使用的參數，修改以允許設定基本集額外 GRF 參數。 {BLACK}{} 作者： Zephyris ，建基於 OpenGFX 團隊之上 {}{BLACK} 受權： {SILVER}GPL v2+{}{BLACK} 網站： {SILVER}https://github.com/zephyris/OpenGFX2
 STR_GRF_URL             :https://github.com/zephyris/opengfx2
 
-STR_WARN_SETTINGSGRF_NOTRECOMMENDED   :OpenGFX2 內的 NewGRF 設定不建議使用於 OpenTTD 14.0 及更高版本。建議設定為預設參數！
+STR_WARN_SETTINGSGRF_NOTRECOMMENDED   :OpenTTD 14.0 及更高版本不推薦使用 OpenGFX2 設置 NewGRF 。建議設定為預設參數！
 
 STR_PARAM_CURSOR_NAME                 :滑鼠遊標
 STR_PARAM_CURSOR_DESC                 :滑鼠遊標或指標的款式和顏色。
