@@ -15,6 +15,7 @@
 #include "nml/extra/extra-signals.pnml"
 #include "nml/extra/extra-sloped-tracks.pnml"
 #include "nml/extra/extra-tram-tracks.pnml"
+#include "nml/extra/extra-road-waypoints.pnml"
 
 // OpenTTD-specific additional sprite sets
 #include "nml/extra/extra-openttd-airport.pnml"

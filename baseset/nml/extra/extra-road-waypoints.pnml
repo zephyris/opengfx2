@@ -1,0 +1,5 @@
+// Road waypoints
+replacenew road_waypoints(ROAD_WAYPOINTS, "../graphics/stations/general/64/pygen/roadwaypoint_8bpp.png", 0) { template_road_waypoint(0, 0, 1) }
+#32 alternative_sprites(road_waypoints, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/roadwaypoint_rm32bpp.png", "../graphics/stations/general/64/pygen/roadwaypoint_8bpp.png") { template_road_waypoint(0, 0, 1) }
+#ez alternative_sprites(road_waypoints, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/stations/general/256/pygen/roadwaypoint_8bpp.png") { template_road_waypoint(0, 0, 4) }
+#ez #32 alternative_sprites(road_waypoints, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/stations/general/256/pygen/roadwaypoint_rm32bpp.png", "../graphics/stations/general/256/pygen/roadwaypoint_8bpp.png") { template_road_waypoint(0, 0, 4) }

@@ -446,12 +446,22 @@ template template_rail_station_platformsonly(x, y, z) {
 	template_house_1x1_addoffs(130, 195, z, 64, -22, -11)
 }
 
-// Infrastructure buildings: Rail waypoints
+// Infrastructure buildings
+//Rail waypoints
 template template_rail_waypoint(x, y, z) {
 	template_house_1x1_addoffs(  0,   0, z, 64,   0,   0)
 	template_house_1x1_addoffs( 65,   0, z, 64, -22, -11)
 	template_house_1x1_addoffs(  0,  65, z, 64,   0,   0)
 	template_house_1x1_addoffs( 65,  65, z, 64,  22, -11)
+}
+
+// Road waypoints
+template template_road_waypoint(x, y, z) {
+	template_house_1x1_addoffs( 65,  65, z, 64,  26, -13)
+	template_house_1x1_addoffs(  0,  65, z, 64,   0,   0)
+	template_house_1x1_addoffs(  0,   0, z, 64,   0,   0)
+	template_house_1x1_addoffs( 65,   0, z, 64, -26, -13)
+	
 }
 
 //Template: Tunnels
