@@ -1,5 +1,5 @@
 //0-1 cursor and sleepy cursor
 base_graphics spr0(   0, "../graphics/cursors/1/pygen/default_8bpp.png") {
     template_cursor_matrix(0, 0, 1)
-    template_cursor_matrix(1, 0, 1)
+    template_cursor_matrix_addoffs(1, 0, 1, -15, -12)
 }

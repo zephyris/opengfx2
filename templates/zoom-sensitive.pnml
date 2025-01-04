@@ -109,6 +109,9 @@ template template_animation_frame(w, h, ox, oy, f, z) {
 template template_cursor_matrix(xindex, yindex, z) {
 	template_sprite_matrix(36, 36, 0, 0, xindex, yindex, z)
 }
+template template_cursor_matrix_addoffs(xindex, yindex, z, ox, oy) {
+	template_sprite_matrix(36, 36, ox, oy, xindex, yindex, z)
+}
 
 // Templates for handling general sprite sheets with 0px borders
 template template_sprite_borderlessmatrix(w, h, ox, oy, xindex, yindex, z) {
@@ -461,7 +464,6 @@ template template_road_waypoint(x, y, z) {
 	template_house_1x1_addoffs(  0,  65, z, 64,   0,   0)
 	template_house_1x1_addoffs(  0,   0, z, 64,   0,   0)
 	template_house_1x1_addoffs( 65,   0, z, 64, -26, -13)
-	
 }
 
 //Template: Tunnels

@@ -1,6 +1,6 @@
 template template_spr0(z) {
     template_cursor_matrix(0, 0, z) // normal
-    template_cursor_matrix(1, 0, z) // sleepy
+    template_cursor_matrix_addoffs(1, 0, z, -15, -12) // sleepy
 }
 template template_spr696(z) {
     template_cursor_matrix(0, 2, z) // raise land: 1/3
