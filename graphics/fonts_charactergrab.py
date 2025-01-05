@@ -45,7 +45,7 @@ fonts = [
     "ascent": 14,
     "descent": 4,
     "space": 6,
-    "yoffs": -4,
+    "yoffs": 0,
     "ydrawoffs": 2
   },
   {
