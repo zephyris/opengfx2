@@ -28,8 +28,8 @@ switch (FEAT_OBJECTS, SELF, switch_simple_snow, [
 switch (FEAT_OBJECTS, SELF, procedure_object_lighthouse, [
     STORE_TEMP(GROUNDSPRITE_CLEARED + 19 * 2, 0),
     STORE_TEMP(2602, 1),
-    STORE_TEMP(0, 2),
-    STORE_TEMP(0, 3),
+    STORE_TEMP(4, 2),
+    STORE_TEMP(4, 3),
     STORE_TEMP(0, 4)
 ]) {
     0;
@@ -74,8 +74,8 @@ item (FEAT_OBJECTS, object_lighthouse, 100) {
 switch (FEAT_OBJECTS, SELF, procedure_object_transmitter, [
     STORE_TEMP(GROUNDSPRITE_CLEARED + 19 * 2, 0),
     STORE_TEMP(2601, 1),
-    STORE_TEMP(0, 2),
-    STORE_TEMP(0, 3),
+    STORE_TEMP(8, 2),
+    STORE_TEMP(8, 3),
     STORE_TEMP(0, 4)
 ]) {
     0;
