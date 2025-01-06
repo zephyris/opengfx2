@@ -131,6 +131,10 @@ charsets = [
   },
 ]
 
+# character codes which should be maximally cropped
+# hack: custom character range X (window close) icon should be maximally cropped
+cropcodes = [58029]
+
 defaultmaxwidthfactor = 2 # max glyph width, as a factor of font size
 outputpadding = 8
 outputcolumns = 32
@@ -243,7 +247,11 @@ for charset in charsets:
               y = floor(index / outputcolumns) * (outputpadding + font["ascent"] + font["descent"]) + outputpadding
               sprites.append({"sprite": sprite, "w": w, "h": h, "x": x, "y": y})
               if printnml:
-                nml.write("    [" + str(x) + "*z, "+str(y) + "*z, " + str(w) + "*z, " + str(h) + "*z, 0," + str(font["yoffs"]) + "*z, NOCROP] // " + str(code) + "\n")
+                if code in cropcodes:
+                  # hack: custom character range X (window close) icon should be maximally cropped
+                  nml.write("    [" + str(x) + "*z, "+str(y) + "*z, " + str(w) + "*z, " + str(h) + "*z, 0," + str(font["yoffs"]) + "*z] // " + str(code) + " \n")
+                else:
+                  nml.write("    [" + str(x) + "*z, "+str(y) + "*z, " + str(w) + "*z, " + str(h) + "*z, 0," + str(font["yoffs"]) + "*z, NOCROP] // " + str(code) + "\n")
             if printnml:
               nml.write("}\n\n")
               if charset["name"] == "base":
