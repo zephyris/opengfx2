@@ -1,5 +1,29 @@
 # OpenGFX2 Changelog
 
+## v0.6
+Base set:
+* 1x and 4x road waypoint graphics.
+* Better 4x rail and monorail alignment on tiles.
+* 4x zoom tunnels.
+* 4x zoom bridges.
+* 4x zoom block, path and pre-signals.
+* Prototype/first 4x zoom road and rail station graphics.
+* 4x zoom logo.
+* Improved 4x temperate tree detail.
+* Traditional and simplified Chinese translations.
+* Various bugfixes, including:
+* Fixed 1526 house miscoded as a ground sprite.
+* Fixed miscoded multiplayer icons.
+* Fixed large sprite font alignment.
+* Minor sprite and GUI element alignment tweaks.
+* Fixed one way road alignment errors.
+* Fixed farm fence alignment.
+* Fixed incorrect SW dead end tram track sprite.
+* Fixed incorrect transparent blue for copper ore wagon.
+
+NewGRFs:
+* Fixed lighthouse and transmitter alignment in object NewGRF.
+
 ## v0.5
 Base set:
 * All GUI icons at 1x and 2x zoom, with some at 4x.

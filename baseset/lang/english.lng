@@ -6,7 +6,7 @@ STR_GRF_DESCRIPTION     :{ORANGE}OpenGFX2 Base Graphics Set{BLACK}{}By Zephyris,
 STR_GRF_URL             :https://github.com/zephyris/opengfx2
 
 # notranslate starts
-STR_OBG_DESCRIPTION_VERSION           :[OpenGFX2 0.5]
+STR_OBG_DESCRIPTION_VERSION           :[OpenGFX2 0.6]
 # notranslate ends
 
 STR_OBG_DESCRIPTION_MAIN              :OpenGFX2, a pixel art style base graphics set for OpenTTD,
