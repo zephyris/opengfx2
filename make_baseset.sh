@@ -21,7 +21,7 @@ fi
 
 function encode() {
   echo $1 $2
-  python3 ../templates/nml_preprocessor.py $1 $2
+  python3 ../templates/nml_preprocessor.py $1.pnml $2
   if [ -f $1_$2.grf ]; then
     rm $1_$2.grf
   fi
