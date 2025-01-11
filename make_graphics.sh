@@ -11,6 +11,5 @@ bash process_bridges.sh
 bash process_stations.sh
 bash process_selectors.sh
 bash process_trees.sh
-bash process_effects.sh
 bash process_vehicles.sh
 cd ..
