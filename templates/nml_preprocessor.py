@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 Loads a pnml file and:
 Populates with information from #import lines.
