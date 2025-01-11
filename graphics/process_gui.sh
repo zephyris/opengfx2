@@ -78,23 +78,3 @@ custom_dither.py
 cd ../..
 
 cd ..
-
-cd icons
-
-cd 1
-custom_dither.py
-cd ..
-
-cd 2
-custom_dither.py
-cd ..
-
-cd 4
-custom_dither.py
-cd ..
-
-cd climates
-custom_dither.py
-cd ..
-
-cd ..

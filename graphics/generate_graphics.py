@@ -53,3 +53,15 @@ for scale in [1, 4]:
             print("Failed to generate "+mode+" at scale "+str(scale))
     custom_dither_directory(os.path.join(base_path, "bridges", str(scale * 64)))
     custom_dither_directory(os.path.join(base_path, "bridges", str(scale * 64), "pygen"))
+
+# selectors
+for scale in [0.25, 0.5, 1, 2, 4]:
+    custom_dither_directory(os.path.join(base_path, "selectors", str(scale * 64)))
+
+# vehicles
+for scale in [1, 4]:
+    custom_dither_directory(os.path.join(base_path, "vehicles", str(scale * 64)))
+
+# icons
+for scale in [1, 2, 4, "climates"]:
+    custom_dither_directory(os.path.join(base_path, "icons", str(scale)))
