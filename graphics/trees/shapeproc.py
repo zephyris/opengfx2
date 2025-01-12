@@ -112,9 +112,11 @@ def tree_shapeproc(base_path, scale, snow=False, verbose=True):
     trunkshift = suffices[suffix]["trunkshift"] # trunk index darkening shift
     rearleafrem = suffices[suffix]["rearleafrem"]
     frontleafrem = suffices[suffix]["frontleafrem"]
-    for input_file in glob.glob("*"+suffix):
-      outfile = os.path.join(base_path, "pygen", input_file[:-len(suffix)]+"_"+suffices[suffix]["name"]+namesuffix+"32bpp.png")
+    for input_file in glob.glob(os.path.join(base_path, "*"+suffix)):
+      input_name = os.path.basename(input_file)
+      outfile = os.path.join(base_path, "pygen", input_name[:-len(suffix)]+"_"+suffices[suffix]["name"]+namesuffix+"32bpp.png")
       if check_update_needed([input_file], outfile):
+        print("Processing", input_file)
         with Image.open(input_file) as image:
           # Open shape image
           width, height = image.size
@@ -239,6 +241,8 @@ def tree_shapeproc(base_path, scale, snow=False, verbose=True):
               draw.rectangle((((w + 1) * outcolumn) * scale, ((h + 1) * column) * scale, ((w + 1) * outcolumn) * scale + (w + 2) * scale - 1, ((h + 1) * column) * scale + (h + 2) * scale - 1), fill=None, outline=(255, 255, 255), width=scale)
           # Save the image
           image_out.save(outfile, "PNG")
+      else:
+        print("No update needed for", outfile)
 
 if __name__ == "__main__":
   snow = False
