@@ -4,7 +4,7 @@
 # eg. /my/install/of/openttd/
 
 bash make_graphics.sh
-python3 graphics/make_graphics.py
+python3 graphics/generate_graphics.py
 
 if [ ! -z "$1" ]; then
   bash make_newgrfs.sh "$1/newgrf/"
