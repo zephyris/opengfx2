@@ -50,6 +50,7 @@ for scale in [1, 2, 4]:
             print("Failed to generate "+mode+" water gridlines at scale "+str(scale))
     custom_dither_directory(os.path.join(base_path, "terrain", str(scale * 64)))
     custom_dither_directory(os.path.join(base_path, "terrain", str(scale * 64), "pygen"))
+
 # foundations
 from identical_regions import identical_regions
 modes = ["temperate", "arctic", "tropical", "toyland"]
@@ -57,10 +58,10 @@ for scale in [1, 4]:
     custom_dither_directory(os.path.join(base_path, "foundations_"+str(scale * 64)))
     for mode in modes:
         try:
-            identical_regions(os.path.join(base_path, "foundations_"+mode), os.path.join(base_path, "foundations_idmap.png"))
+            identical_regions(os.path.join(base_path, "foundations", str(scale * 64), "foundations_"+mode), os.path.join(base_path, "foundations", str(scale *64), "foundations_idmap.png"))
         except:
             print("Failed to identical region mask "+mode+" foundations at scale "+str(scale))
-
+exit()
 # trees
 from trees.shapeproc import tree_shapeproc
 snowy = ["false", "true"]
