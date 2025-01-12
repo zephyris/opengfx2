@@ -61,7 +61,7 @@ for scale in [1, 4]:
             identical_regions(os.path.join(base_path, "foundations", str(scale * 64), "foundations_"+mode), os.path.join(base_path, "foundations", str(scale *64), "foundations_idmap.png"))
         except:
             print("Failed to identical region mask "+mode+" foundations at scale "+str(scale))
-exit()
+
 # trees
 from trees.shapeproc import tree_shapeproc
 snowy = ["false", "true"]
