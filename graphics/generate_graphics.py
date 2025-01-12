@@ -42,6 +42,18 @@ for scale in [1, 4]:
         except:
             print("Failed to identical region mask "+mode+" foundations at scale "+str(scale))
 
+# trees
+from trees.shapeproc import tree_shapeproc
+snowy = ["false", "true"]
+for scale in [1, 4]:
+    for snow in snowy:
+        try:
+            tree_shapeproc(scale, snow, os.path.join(base_path, "trees", str(scale * 64)))
+        except:
+            print("Failed to generate trees at scale "+str(scale)+" with snow "+snow)
+    custom_dither_directory(os.path.join(base_path, "trees", str(scale * 64)))
+    custom_dither_directory(os.path.join(base_path, "trees", str(scale * 64), "pygen"))
+
 # infrastructure
 # roads and rail
 from infrastructure.roadrail_terrainoverlay import infrastructure_roadrail_terrainoverlay
