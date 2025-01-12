@@ -7,6 +7,41 @@ base_path = os.path.dirname(__file__)
 for scale in [1, 4]:
     custom_dither_directory(os.path.join(base_path, "effects", str(scale * 64)))
 
+# terrain
+# ground tiles
+from terrain.gridoverlay import terrain_gridoverlay
+from terrain.shoreoverlay import terrain_shoreoverlay
+shore_modes = ["normal", "toyland"]
+from terrain.watergridoverlay import terrain_watergridoverlay
+watergrid_modes = ["water", "shore", "watertoyland", "shoretoyland"]
+for scale in [1, 2, 4]:
+    try:
+        terrain_gridoverlay(scale, os.path.join(base_path, "terrain", str(scale * 64)))
+    except:
+        print("Failed to generate ground gridlines at scale "+str(scale))
+    for mode in shore_modes:
+        try:
+            terrain_shoreoverlay(scale, mode, os.path.join(base_path, "terrain", str(scale * 64)))
+        except:
+            print("Failed to generate "+mode+" shore at scale "+str(scale))
+    for mode in watergrid_modes:
+        try:
+            terrain_watergridoverlay(scale, mode, os.path.join(base_path, "terrain", str(scale * 64)))
+        except:
+            print("Failed to generate "+mode+" water gridlines at scale "+str(scale))
+    custom_dither_directory(os.path.join(base_path, "terrain", str(scale * 64)))
+    custom_dither_directory(os.path.join(base_path, "terrain", str(scale * 64), "pygen"))
+# foundations
+from identical_regions import identical_regions
+modes = ["temperate", "arctic", "tropical", "toyland"]
+for scale in [1, 4]:
+    custom_dither_directory(os.path.join(base_path, "foundations_"+str(scale * 64)))
+    for mode in modes:
+        try:
+            identical_regions(os.path.join(base_path, "foundations_"+mode), os.path.join(base_path, "foundations_idmap.png"))
+        except:
+            print("Failed to identical region mask "+mode+" foundations at scale "+str(scale))
+
 # infrastructure
 # roads and rail
 from infrastructure.roadrail_terrainoverlay import infrastructure_roadrail_terrainoverlay
