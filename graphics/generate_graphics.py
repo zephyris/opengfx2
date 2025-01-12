@@ -1,7 +1,26 @@
 import os
 from custom_dither import custom_dither_directory
+from strict_convert import strict_convert_directory
 
 base_path = os.path.dirname(__file__)
+
+# fonts
+from fonts.charactergrab import fonts_charactergrab
+fonts_charactergrab(os.path.join(base_path, "fonts"))
+for scale in [1, 2, 4]:
+    strict_convert_directory(os.path.join(base_path, "fonts", str(scale)))
+    strict_convert_directory(os.path.join(base_path, "fonts", str(scale), "pygen"))
+
+# icons
+for scale in [1, 2, 4, "climates"]:
+    custom_dither_directory(os.path.join(base_path, "icons", str(scale)))
+
+# cursors
+from cursors.cursoroverlay import cursors_cursoroverlay
+for scale in [1, 2]:
+    cursors_cursoroverlay(os.path.join(base_path, "cursors", str(scale)), scale)
+    custom_dither_directory(os.path.join(base_path, "gui", str(scale)))
+    custom_dither_directory(os.path.join(base_path, "gui", str(scale), "pygen"))
 
 # effects
 for scale in [1, 4]:
@@ -108,7 +127,3 @@ for scale in [0.25, 0.5, 1, 2, 4]:
 # vehicles
 for scale in [1, 4]:
     custom_dither_directory(os.path.join(base_path, "vehicles", str(scale * 64)))
-
-# icons
-for scale in [1, 2, 4, "climates"]:
-    custom_dither_directory(os.path.join(base_path, "icons", str(scale)))
