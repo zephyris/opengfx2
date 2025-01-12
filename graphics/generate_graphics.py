@@ -64,11 +64,11 @@ for scale in [1, 4]:
 
 # trees
 from trees.shapeproc import tree_shapeproc
-snowy = ["false", "true"]
+snowy = [False, True]
 for scale in [1, 4]:
     for snow in snowy:
         try:
-            tree_shapeproc(scale, snow, os.path.join(base_path, "trees", str(scale * 64)))
+            tree_shapeproc(os.path.join(base_path, "trees", str(scale * 64)), scale, snow)
         except:
             print("Failed to generate trees at scale "+str(scale)+" with snow "+snow)
     custom_dither_directory(os.path.join(base_path, "trees", str(scale * 64)))
