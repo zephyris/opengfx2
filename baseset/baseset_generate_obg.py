@@ -30,7 +30,9 @@ def generate_obg(base_path, type_string):
     update_required = True
   
   # check if the script has been modified since the last time the nml was generated
-  if os.path.getmtime(__file__) > os.path.getmtime(obg_path):
+  if not os.path.exists(obg_path):
+    update_required = True
+  elif os.path.getmtime(__file__) > os.path.getmtime(obg_path):
     update_required = True
 
   # language ids
@@ -130,8 +132,9 @@ def generate_obg(base_path, type_string):
   lngfiles = glob.glob(os.path.join(base_path, "lang", "*.lng"))
   lngs = {}
   for lngfile in lngfiles:
-    if os.path.getmtime(lngfile) > os.path.getmtime(obg_path):
-      update_required = True
+    if not update_required:
+      if os.path.getmtime(lngfile) > os.path.getmtime(obg_path):
+        update_required = True
     with open(lngfile, "r") as f:
       lines = f.read().splitlines()
       langid = lines[0][len("##grflangid "):]
@@ -173,8 +176,9 @@ def generate_obg(base_path, type_string):
 
   # check if any of the files corresponding md5 files have been modified since the last time the obg was generated
   for file in files:
-    if os.path.getmtime(os.path.join(base_path, file["name"] + ".md5")) > os.path.getmtime(obg_path):
-      update_required = True
+    if not update_required:
+      if os.path.getmtime(os.path.join(base_path, file["name"] + ".md5")) > os.path.getmtime(obg_path):
+        update_required = True
 
   # write the obg file
   if not update_required:
