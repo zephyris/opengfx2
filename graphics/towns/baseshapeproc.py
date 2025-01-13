@@ -45,10 +45,14 @@ def buildings_baseshapeproc(scale, climate, snow, base_path, verbose=True):
   print(base_path)
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
-  snowname = ""
+  namesuffix = ""
   if snow:
     print("Using snow! (or desert)")
-    snowname = "snow_"
+    namesuffix = "snow_"
+
+  # make toyland sprites in parallel
+  if climate == "toyland":
+    namesuffix += "toyland_"
 
   # OpenTTD DOS palette, RGB values
   palette_r = openttd_palette["r"]
@@ -218,8 +222,11 @@ def buildings_baseshapeproc(scale, climate, snow, base_path, verbose=True):
     normal_overlay_name = input_file[:-len(suffix)]+"_base_overlaynormal.png"
     alpha_overlay_name = input_file[:-len(suffix)]+"_base_overlayalpha.png"
     shading_overlay_name = input_file[:-len(suffix)]+"_base_overlayshading.png"
-    image_unshaded_name = os.path.join(base_path, "pygen", input_name[:-len(suffix)]+"_"+snowname+"base_palmask.png")
-    image_shaded_name = os.path.join(base_path, "pygen", input_name[:-len(suffix)]+"_"+snowname+"base_32bpp.png")
+    climatename = ""
+    if climate == "toyland":
+      climatename = "toyland_"
+    image_unshaded_name = os.path.join(base_path, "pygen", input_name[:-len(suffix)]+"_"+namesuffix+"base_palmask.png")
+    image_shaded_name = os.path.join(base_path, "pygen", input_name[:-len(suffix)]+"_"+namesuffix+"base_32bpp.png")
     if check_update_needed([input_file, normal_overlay_name, alpha_overlay_name, shading_overlay_name] + glob.glob("../../textures/*.png"), image_shaded_name):
       with Image.open(input_file) as image:
         # Open shape image
@@ -341,7 +348,7 @@ def buildings_baseshapeproc(scale, climate, snow, base_path, verbose=True):
 
 if __name__ == "__main__":
   snow = False
-  if sys.argv[2].lower() == "true":
+  if sys.argv[3].lower() == "true":
     snow = True
   if len(sys.argv) < 3:
     buildings_baseshapeproc(sys.argv[1], sys.argv[2], snow, ".")

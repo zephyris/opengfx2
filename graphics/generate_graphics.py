@@ -3,7 +3,7 @@ from custom_dither import custom_dither_directory
 from strict_convert import strict_convert_directory
 
 base_path = os.path.dirname(__file__)
-"""
+
 # fonts
 from fonts.charactergrab import fonts_charactergrab
 fonts_charactergrab(os.path.join(base_path, "fonts"))
@@ -235,7 +235,7 @@ for climate in climates:
     for scale in [1, 4]:
         custom_dither_directory(os.path.join(base_path, "towns", climate, str(scale * 64)))
         custom_dither_directory(os.path.join(base_path, "towns", climate, str(scale * 64), "pygen"))
-"""
+
 # industries
 # buildings
 from identical_regions import identical_regions
@@ -361,3 +361,111 @@ for climate in climates:
 for scale in [1, 4]:
     identical_regions(os.path.join(base_path, "industries", "temperate", str(scale * 64), "pygen", "coalmine"), os.path.join(base_path, "industries", "temperate", str(scale * 64), "coalmine_idmap.png"))
     identical_regions(os.path.join(base_path, "industries", "tropical", str(scale * 64), "pygen", "copperoremine"), os.path.join(base_path, "industries", "tropical", str(scale * 64), "copperoremine_idmap.png"))
+
+# stations
+from stations.tunnels_infrastructureoverlay import stations_tunnels_infrastructureoverlay
+from towns.shapeproc import buildings_shapeproc
+from towns.baseshapeproc import buildings_baseshapeproc
+for scale in [1, 4]:
+    try:
+        buildings_shapeproc(scale, "temperate", False, os.path.join(base_path, "stations", "general", str(scale * 64),))
+        buildings_shapeproc(scale, "temperate", True, os.path.join(base_path, "stations", "general", str(scale * 64),))
+        buildings_shapeproc(scale, "toyland", False, os.path.join(base_path, "stations", "general", str(scale * 64),))
+    except:
+        print("Failed to generate buildings at scale "+str(scale))
+    try:
+        buildings_baseshapeproc(scale, "temperate", False, os.path.join(base_path, "stations", "general", str(scale * 64)))
+        buildings_baseshapeproc(scale, "toyland", False, os.path.join(base_path, "stations", "general", str(scale * 64)))
+    except:
+        print("Failed to generate base buildings at scale "+str(scale))
+# special handling
+from towns.base_flatten import buildings_base_flatten
+from mask_regions import mask_regions
+from mask_tiles import mask_tiles
+## general
+# currently handles scales independently - can be replaced with a scale in [1, 4] loop once all source sprites exist
+### scale 1
+scale = 1
+current_path = os.path.join(base_path, "stations", "general", str(scale * 64))
+#### flatten
+flatten_list = ["heliport", "oldairport_multitile", "oldairport_multitile_toyland"]
+for name in flatten_list:
+    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+#### region mask
+region_list = {
+    # mask regions of depots (ie. back wall from rest of building)
+    "raildepots": "raildepots_regionmask.png",
+    "raildepots_toyland": "raildepots_regionmask.png",
+    "monoraildepots": "monoraildepots_regionmask.png",
+    "monoraildepots_toyland": "monoraildepots_regionmask.png",
+    "maglevdepots": "maglevdepots_regionmask.png",
+    "maglevdepots_toyland": "maglevdepots_regionmask.png",
+    "roaddepots": "roaddepots_regionmask.png",
+    "roaddepots_toyland": "roaddepots_regionmask.png",
+    "tramdepots": "tramdepots_regionmask.png",
+    "tramdepots_toyland": "tramdepots_regionmask.png",
+    "shipdepots": "shipdepots_regionmask.png",
+    "shipdepots_toyland": "shipdepots_regionmask.png",
+    "modernairdepots": "modernairdepots_regionmask.png",
+    "modernairdepots_toyland": "modernairdepots_regionmask.png",
+    "oldairdepots": "oldairdepots_regionmask.png",
+    "oldairdepots_toyland": "oldairdepots_regionmask.png",
+    # mask regions of tunnels (ie. back wall and roadway from rest of tunnel/sloped tile)
+    "railtunnels": "railtunnels_regionmask.png",
+    "railtunnels_snow": "railtunnels_regionmask.png",
+    "monorailtunnels": "monorailtunnels_regionmask.png",
+    "monorailtunnels_snow": "monorailtunnels_regionmask.png",
+    "maglevtunnels": "maglevtunnels_regionmask.png",
+    "maglevtunnels_snow": "maglevtunnels_regionmask.png",
+    "roadtunnels": "roadtunnels_regionmask.png",
+    "roadtunnels_snow": "roadtunnels_regionmask.png",
+    "nonetunnels": "nonetunnels_regionmask.png",
+    "nonetunnels_snow": "nonetunnels_regionmask.png"
+}
+for name, mask in region_list.items():
+    mask_regions(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+#### overlay tunnels onto terrain sprites
+infrastructure_list = ["road", "road_toyland", "rail", "rail_toyland", "terrain"]
+for infrastructure in infrastructure_list:
+    stations_tunnels_infrastructureoverlay(scale, infrastructure, os.path.join(base_path, "stations", "general", str(scale * 64)))
+#### tile mask
+tile_list = {
+    "oldairport_multitile": "oldairport_multitile_tilemask.png",
+    "oldairport_multitile_combo": "oldairport_multitile_tilemask.png",
+    "oldairport_multitile_toyland": "oldairport_multitile_tilemask.png",
+    "oldairport_multitile_toyland_combo": "oldairport_multitile_tilemask.png"
+}
+for name, mask in tile_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+### scale 4
+scale = 4
+current_path = os.path.join(base_path, "stations", "general", str(scale * 64))
+#### region mask
+region_list = {
+    # mask regions of depots (ie. back wall from rest of building)
+    "raildepots": "raildepots_regionmask.png",
+    "raildepots_toyland": "raildepots_regionmask.png",
+    "roaddepots": "roaddepots_regionmask.png",
+    "roaddepots_toyland": "roaddepots_regionmask.png",
+    # mask regions of tunnels (ie. back wall and roadway from rest of tunnel/sloped tile)
+    "railtunnels": "railtunnels_regionmask.png",
+    "railtunnels_snow": "railtunnels_regionmask.png",
+    "monorailtunnels": "monorailtunnels_regionmask.png",
+    "monorailtunnels_snow": "monorailtunnels_regionmask.png",
+    "maglevtunnels": "maglevtunnels_regionmask.png",
+    "maglevtunnels_snow": "maglevtunnels_regionmask.png",
+    "roadtunnels": "roadtunnels_regionmask.png",
+    "roadtunnels_snow": "roadtunnels_regionmask.png",
+    "nonetunnels": "nonetunnels_regionmask.png",
+    "nonetunnels_snow": "nonetunnels_regionmask.png"
+}
+for name, mask in region_list.items():
+    mask_regions(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+#### overlay tunnels onto terrain sprites
+infrastructure_list = ["road", "road_toyland", "rail", "rail_toyland", "terrain"]
+for infrastructure in infrastructure_list:
+    stations_tunnels_infrastructureoverlay(scale, infrastructure, os.path.join(base_path, "stations", "general", str(scale * 64)))
+# dither everything
+for scale in [1, 4]:
+    custom_dither_directory(os.path.join(base_path, "stations", "general", str(scale * 64)))
+    custom_dither_directory(os.path.join(base_path, "stations", "general", str(scale * 64), "pygen"))

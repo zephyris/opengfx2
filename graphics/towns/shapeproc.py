@@ -46,13 +46,12 @@ def buildings_shapeproc(scale, climate, snow, base_path, verbose=True):
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
   if os.path.isdir("pygen") == False: os.mkdir("pygen")
 
-  snowname = ""
+  namesuffix = ""
   if snow:
     print("Using snow! (or desert)")
-    snowname = "snow_"
+    namesuffix = "snow_"
 
   # make toyland sprites in parallel
-  namesuffix = ""
   if climate == "toyland":
     namesuffix += "toyland_"
 

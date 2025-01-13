@@ -5,7 +5,7 @@ import os, sys
 
 from tools import openttd_palettise, check_update_needed
 
-def mask_regions(base_name, region_mask_path, verbose=True):
+def mask_regions(base_name, region_mask_path, scale, verbose=True):
   base_path = os.path.dirname(base_name)
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
@@ -25,7 +25,6 @@ def mask_regions(base_name, region_mask_path, verbose=True):
       # 8-bit indexed or grayscale image, each value indicates a region
       # Must be sequentially numbered, indices 1..255 represent subtiles, 0 indicates background
       region_mask = openttd_palettise(Image.open(region_mask_path))
-      scale = int(sys.argv[3])
       tile_size = source_image.width - scale * 2
 
       # Process source_image in rows of region_mask height (plus scale px border)
@@ -78,4 +77,4 @@ def mask_regions(base_name, region_mask_path, verbose=True):
       output_image.save(out_path)
 
 if __name__ == "__main__":
-  mask_regions(sys.argv[1], sys.argv[2])
+  mask_regions(sys.argv[1], sys.argv[2], int(sys.argv[3]))
