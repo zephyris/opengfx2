@@ -1,4 +1,4 @@
-import os
+import os, shutil
 from custom_dither import custom_dither_directory
 from strict_convert import strict_convert_directory
 
@@ -128,3 +128,110 @@ for scale in [0.25, 0.5, 1, 2, 4]:
 # vehicles
 for scale in [1, 4]:
     custom_dither_directory(os.path.join(base_path, "vehicles", str(scale * 64)))
+
+# towns
+# street furniture
+for scale in [1, 4]:
+    custom_dither_directory(os.path.join(base_path, "towns", "streetfurniture", str(scale * 64)))
+# buildings
+from towns.shapeproc import buildings_shapeproc
+from towns.baseshapeproc import buildings_baseshapeproc
+climates = ["temperate", "tropical", "arctic", "toyland"]
+for climate in climates:
+    snowy = [False]
+    if climate == "arctic":
+        snowy = [False, True]
+    for scale in [1, 4]:
+        for snow in snowy:
+            try:
+                buildings_shapeproc(scale, climate, snow, os.path.join(base_path, "towns", climate, str(scale * 64)))
+            except:
+                print("Failed to generate buildings at scale "+str(scale)+" with snow "+str(snow))
+            try:
+                buildings_baseshapeproc(scale, climate, snow, os.path.join(base_path, "towns", climate, str(scale * 64)))
+            except:
+                print("Failed to generate base buildings at scale "+str(scale)+" with snow "+str(snow))
+# special handling
+# currently handles scales independently - can be replaced with a scale in [1, 4] loop once all source sprites exist
+from towns.base_flatten import buildings_base_flatten
+from mask_tiles import mask_tiles
+## temperate
+### scale 1
+scale = 1
+current_path = os.path.join(base_path, "towns", "temperate", str(scale * 64))
+#### flatten
+flatten_list = ["bungalow", "2x2_mallandstadia", "hqs"]
+for name in flatten_list:
+    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+#### tile mask
+mask_list = {
+    "2x1_hotel": "2x1_hotel_tilemask.png",
+    "2x2_mallandstadia": "2x2_mallandstadia_tilemask.png",
+    "2x2_mallandstadia_base": "2x2_mallandstadia_tilemask.png",
+    "2x2_mallandstadia_combo": "2x2_mallandstadia_base_tilemask.png",
+    "hqs_combo": "hqs_tilemask.png"
+}
+for name, mask in mask_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+### scale 4
+scale = 4
+current_path = os.path.join(base_path, "towns", "temperate", str(scale * 64))
+mask_tiles(os.path.join(current_path, "pygen", "2x1_hotel"), os.path.join(current_path, "2x1_hotel_tilemask.png"), scale)
+## tropical
+### scale 1
+scale = 1
+current_path = os.path.join(base_path, "towns", "tropical", str(scale * 64))
+#### manual copy
+shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_32bpp.png"), os.path.join(current_path, "pygen"))
+shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_palmask.png"), os.path.join(current_path, "pygen"))
+#### flatten
+flatten_list = ["churches", "houses", "flats", "1x2_tallofficeblock", "shantyhouses", "tallofficeblock", "hqs"]
+for name in flatten_list:
+    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+#### tile mask
+mask_list = {
+    "1x2_tallofficeblock": "1x2_tallofficeblock_tilemask.png",
+    "hqs": os.path.join(base_path, "towns", "temperate", str(scale * 64), "hqs_tilemask.png")
+}
+for name, mask in mask_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+## arctic
+### scale 1
+scale = 1
+current_path = os.path.join(base_path, "towns", "arctic", str(scale * 64))
+#### manual copy
+shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_32bpp.png"), os.path.join(current_path, "pygen"))
+shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_palmask.png"), os.path.join(current_path, "pygen"))
+#### flatten
+flatten_list = ["shopsandoffices", "tallofficeblock", "church", "2x1_hotel", "2x1_hotel_snow", "hqs"]
+for name in flatten_list:
+    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+#### tile mask
+mask_list = {
+    "1x2_tallofficeblock": "1x2_tallofficeblock_tilemask.png",
+    "1x2_tallofficeblock_snow": "1x2_tallofficeblock_tilemask.png",
+    "1x2_tallofficeblock_base": "1x2_tallofficeblock_tilemask.png",
+    "2x1_hotel_combo": "2x1_hotel_tilemask.png",
+    "2x1_hotel_snow_combo": "2x1_hotel_tilemask.png",
+    "hqs_combo": os.path.join(base_path, "towns", "temperate", str(scale * 64), "hqs_tilemask.png")
+}
+for name, mask in mask_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+## toyland
+### scale 1
+scale = 1
+current_path = os.path.join(base_path, "towns", "toyland", str(scale * 64))
+#### manual copy
+shutil.copy(os.path.join(base_path, current_path, "2x1_boot_32bpp.png"), os.path.join(current_path, "pygen"))
+#### tile mask
+mask_list = {
+    "2x1_boot": "2x1_boot_tilemask.png",
+    "hqs_toyland": "hqs_tilemask.png"
+}
+for name, mask in mask_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+# dither everyting
+for climate in climates:
+    for scale in [1, 4]:
+        custom_dither_directory(os.path.join(base_path, "towns", climate, str(scale * 64)))
+        custom_dither_directory(os.path.join(base_path, "towns", climate, str(scale * 64), "pygen"))
