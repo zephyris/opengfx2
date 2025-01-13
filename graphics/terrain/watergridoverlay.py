@@ -56,13 +56,13 @@ def terrain_watergridoverlay(scale, mode, base_path=".", verbose=True):
   print("Running in scale "+str(scale)+" (tile size "+str(tile_size)+")")
   for terrain_key in terrain_list:
     print("  "+terrain_key)
-    terrain_image_path = terrain_list[terrain_key]
+    terrain_image_path = os.path.join(base_path, terrain_list[terrain_key])
     output_grid_path = os.path.join(base_path, "pygen", terrain_key+"_gridline_32bpp.png")
     if mode != "shore" and mode != "shoretoyland":
-      palmask_path = palmask_paths[terrain_key]
+      palmask_path = os.path.join(base_path, palmask_paths[terrain_key])
     output_gridpalmask_path = os.path.join(base_path, "pygen", terrain_key+"_gridline_palmask.png")
     if check_update_needed([terrain_image_path, palmask_path, gridline_overlay_path], output_grid_path):
-      terrain_image = Image.open(terrain_list[terrain_key]).convert("RGB")
+      terrain_image = Image.open(terrain_image_path).convert("RGB")
       palmask_image = Image.open(palmask_path).convert("RGB")
       target_w, target_h = terrain_image.size
       target_image = terrain_image.crop((0, 0, target_w, target_h)).convert("RGB")

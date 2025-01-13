@@ -37,12 +37,12 @@ def terrain_shoreoverlay(scale, mode, base_path=".", verbose=True):
   print("Running in scale "+str(scale)+" (tile size "+str(tile_size)+")")
   for terrain_key in terrain_list:
     print("  "+terrain_key)
-    terrain_image_path = terrain_list[terrain_key]
-    shoreline_shading_path = "shorelines_overlayshading.png"
+    terrain_image_path = os.path.join(base_path, terrain_list[terrain_key])
+    shoreline_shading_path = os.path.join(base_path, "shorelines_overlayshading.png")
     output_main_path = os.path.join(base_path, "pygen", terrain_key+"_shoretiles_palmask.png")
     output_palmask_path = os.path.join(base_path, "pygen", terrain_key+"_shoretiles_32bpp.png")
     if check_update_needed([terrain_image_path, shoreline_overlay_path, shoreline_shading_path], output_main_path):
-      terrain_image = Image.open(terrain_list[terrain_key]).convert("RGB")
+      terrain_image = Image.open(terrain_image_path).convert("RGB")
       shore_image = Image.open(shoreline_overlay_path)
       shore_image = openttd_palettise(shore_image)
       width, height = shore_image.size

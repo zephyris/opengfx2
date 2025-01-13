@@ -53,12 +53,12 @@ def terrain_gridoverlay(scale, base_path=".", verbose=True):
     if terrain_key == "farm_groundtiles":
       repeat_y += 1 # hacked, because of off by one pixel error in 'stacking' 64px field sprites
     print("  "+terrain_key)
-    terrain_image_path = terrain_list[terrain_key]
-    gridline_overlay_path = "groundtiles_gridlines.png"
+    terrain_image_path = os.path.join(base_path, terrain_list[terrain_key])
+    gridline_overlay_path = os.path.join(base_path, "groundtiles_gridlines.png")
     output_grid_path = os.path.join(base_path, "pygen", terrain_key+"_gridline_32bpp.png")
     output_nogrid_path = os.path.join(base_path, "pygen", terrain_key+"_nogridline_32bpp.png")
     if check_update_needed([terrain_image_path, gridline_overlay_path], output_grid_path):
-      terrain_image = Image.open(terrain_list[terrain_key]).convert("RGB")
+      terrain_image = Image.open(terrain_image_path).convert("RGB")
       # Smooth/dither top edges
       if "toyland" not in terrain_key and do_dithering == True:
         terrain_image_smooth = terrain_image.copy()
