@@ -162,7 +162,7 @@ current_path = os.path.join(base_path, "towns", "temperate", str(scale * 64))
 #### flatten
 flatten_list = ["bungalow", "2x2_mallandstadia", "hqs"]
 for name in flatten_list:
-    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+    buildings_base_flatten(os.path.join(current_path, name), scale)
 #### tile mask
 mask_list = {
     "2x1_hotel": "2x1_hotel_tilemask.png",
@@ -187,7 +187,7 @@ shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pyge
 #### flatten
 flatten_list = ["churches", "houses", "flats", "1x2_tallofficeblock", "shantyhouses", "tallofficeblock", "hqs"]
 for name in flatten_list:
-    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+    buildings_base_flatten(os.path.join(current_path, name), scale)
 #### tile mask
 mask_list = {
     "1x2_tallofficeblock": "1x2_tallofficeblock_tilemask.png",
@@ -205,7 +205,7 @@ shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pyge
 #### flatten
 flatten_list = ["shopsandoffices", "tallofficeblock", "church", "2x1_hotel", "2x1_hotel_snow", "hqs"]
 for name in flatten_list:
-    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+    buildings_base_flatten(os.path.join(current_path, name), scale)
 #### tile mask
 mask_list = {
     "1x2_tallofficeblock": "1x2_tallofficeblock_tilemask.png",
@@ -268,7 +268,7 @@ current_path = os.path.join(base_path, "industries", "temperate", str(scale * 64
 #### flatten
 flatten_list = ["steelmill", "factory", "ironoremine"]
 for name in flatten_list:
-    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+    buildings_base_flatten(os.path.join(current_path, name), scale)
 #### tile mask
 mask_list = {
     "steelmill_combo": "steelmill_tilemask.png",
@@ -300,7 +300,7 @@ current_path = os.path.join(base_path, "industries", "arctic", str(scale * 64))
 #### flatten
 flatten_list = ["foodprocessingplant", "papermill", "printingworks", "goldmine"]
 for name in flatten_list:
-    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+    buildings_base_flatten(os.path.join(current_path, name), scale)
 #### tile mask
 mask_list = {
     "bank": "bank_tilemask.png",
@@ -319,7 +319,7 @@ current_path = os.path.join(base_path, "industries", "tropical", str(scale * 64)
 #### flatten
 flatten_list = ["diamondmine", "lumbermill"]
 for name in flatten_list:
-    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+    buildings_base_flatten(os.path.join(current_path, name), scale)
 #### tile mask
 mask_list = {
     "diamondmine_combo": "diamondmine_tilemask.png",
@@ -390,7 +390,7 @@ current_path = os.path.join(base_path, "stations", "general", str(scale * 64))
 #### flatten
 flatten_list = ["heliport", "oldairport_multitile", "oldairport_multitile_toyland"]
 for name in flatten_list:
-    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+    buildings_base_flatten(os.path.join(current_path, name), scale)
 #### region mask
 region_list = {
     # mask regions of depots (ie. back wall from rest of building)
