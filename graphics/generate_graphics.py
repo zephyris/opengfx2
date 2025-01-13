@@ -3,7 +3,7 @@ from custom_dither import custom_dither_directory
 from strict_convert import strict_convert_directory
 
 base_path = os.path.dirname(__file__)
-
+"""
 # fonts
 from fonts.charactergrab import fonts_charactergrab
 fonts_charactergrab(os.path.join(base_path, "fonts"))
@@ -235,3 +235,129 @@ for climate in climates:
     for scale in [1, 4]:
         custom_dither_directory(os.path.join(base_path, "towns", climate, str(scale * 64)))
         custom_dither_directory(os.path.join(base_path, "towns", climate, str(scale * 64), "pygen"))
+"""
+# industries
+# buildings
+from identical_regions import identical_regions
+from towns.shapeproc import buildings_shapeproc
+from towns.baseshapeproc import buildings_baseshapeproc
+climates = ["temperate", "tropical", "arctic", "toyland"]
+for climate in climates:
+    for scale in [1, 4]:
+        snow = False
+        try:
+            buildings_shapeproc(scale, climate, snow, os.path.join(base_path, "industries", climate, str(scale * 64)))
+        except:
+            print("Failed to generate buildings at scale "+str(scale)+" with snow "+str(snow))
+        try:
+            if climate == "tropical":
+                # exception for topical, where all industries with groundtiles are on desert
+                buildings_baseshapeproc(scale, "tropicaldesert", snow, os.path.join(base_path, "industries", climate, str(scale * 64)))
+            else:
+                buildings_baseshapeproc(scale, climate, snow, os.path.join(base_path, "industries", climate, str(scale * 64)))
+        except:
+            print("Failed to generate base buildings at scale "+str(scale)+" with snow "+str(snow))
+# special handling
+from towns.base_flatten import buildings_base_flatten
+from mask_tiles import mask_tiles
+# currently handles scales independently - can be replaced with a scale in [1, 4] loop once all source sprites exist
+## temperate
+### scale 1
+scale = 1
+current_path = os.path.join(base_path, "industries", "temperate", str(scale * 64))
+#### flatten
+flatten_list = ["steelmill", "factory", "ironoremine"]
+for name in flatten_list:
+    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+#### tile mask
+mask_list = {
+    "steelmill_combo": "steelmill_tilemask.png",
+    "factory_combo": "factory_tilemask.png",
+    "coalmine_base": "coalmine_base_tilemask.png",
+    "farm": "farm_tilemask.png",
+    "farm_base": "farm_tilemask.png",
+    "bank": "bank_tilemask.png",
+    "bank_base": "bank_tilemask.png",
+    "ironoremine_combo": "ironoremine_tilemask.png",
+    "oilrig": "oilrig_tilemask.png"
+}
+for name, mask in mask_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+### scale 4
+scale = 4
+current_path = os.path.join(base_path, "industries", "temperate", str(scale * 64))
+#### tile mask
+mask_list = {
+    "bank": "bank_tilemask.png",
+    "bank_base": "bank_tilemask.png",
+}
+for name, mask in mask_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+## arctic
+### scale 1
+scale = 1
+current_path = os.path.join(base_path, "industries", "arctic", str(scale * 64))
+#### flatten
+flatten_list = ["foodprocessingplant", "papermill", "printingworks", "goldmine"]
+for name in flatten_list:
+    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+#### tile mask
+mask_list = {
+    "bank": "bank_tilemask.png",
+    "bank_base": "bank_tilemask.png",
+    "farm": "farm_tilemask.png",
+    "farm_base": "farm_tilemask.png",
+    "printingworks_combo": "printingworks_tilemask.png",
+    "goldmine_combo": "goldmine_tilemask.png"
+}
+for name, mask in mask_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+## tropical
+### scale 1
+scale = 1
+current_path = os.path.join(base_path, "industries", "tropical", str(scale * 64))
+#### flatten
+flatten_list = ["diamondmine", "lumbermill"]
+for name in flatten_list:
+    buildings_base_flatten(os.path.join(current_path, "pygen", name), scale)
+#### tile mask
+mask_list = {
+    "diamondmine_combo": "diamondmine_tilemask.png",
+    "lumbermill_combo": "lumbermill_tilemask.png"
+}
+for name, mask in mask_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+## toyland
+### scale 1
+scale = 1
+current_path = os.path.join(base_path, "industries", "toyland", str(scale * 64))
+#### manual copy
+copy_list = ["fizzy_drink_factory_32bpp.png", "fizzy_drink_factory_palmask.png", "toy_shop_32bpp.png", "toy_factory_32bpp.png", "toy_factory_constr_32bpp.png", "sweet_factory_32bpp.png", "toffee_quarry_32bpp.png", "bubble_generator_32bpp.png", "bubble_generator_palmask.png", "sugar_mine_stand_32bpp.png", "sugar_mine_stockpile_32bpp.png"]
+for name in copy_list:
+    shutil.copy(os.path.join(current_path, name), os.path.join(current_path, "pygen"))
+#### tile mask
+mask_list = {
+    "fizzy_drink_factory": "fizzy_drink_factory_tilemask.png",
+    "toy_shop": "toy_shop_tilemask.png",
+    "toy_factory": "toy_factory_tilemask.png",
+    "toy_factory_constr": "toy_factory_constr_tilemask.png",
+    "sweet_factory": "toy_shop_tilemask.png",
+    "toffee_quarry": "toffee_quarry_tilemask.png",
+    "bubble_generator": "bubble_generator_tilemask.png",
+    "sugar_mine_stand": "sugar_mine_stand_tilemask.png",
+    "sugar_mine_stockpile": "sugar_mine_stockpile_tilemask.png"
+}
+for name, mask in mask_list.items():
+    mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
+# dither everyting
+for climate in climates:
+    for scale in [1, 4]:
+        custom_dither_directory(os.path.join(base_path, "industries", climate, str(scale * 64)))
+        if climate == "temperate":
+            if os.path.exists(os.path.join(base_path, "industries", climate, str(scale * 64), "pygen", "bank_palmask.png")):
+                os.remove(os.path.join(base_path, "industries", climate, str(scale * 64), "pygen", "bank_palmask.png")) # remove bank palmask to allow patina roof effects
+        custom_dither_directory(os.path.join(base_path, "industries", climate, str(scale * 64), "pygen"))
+# identical regions
+for scale in [1, 4]:
+    identical_regions(os.path.join(base_path, "industries", "temperate", str(scale * 64), "pygen", "coalmine"), os.path.join(base_path, "industries", "temperate", str(scale * 64), "coalmine_idmap.png"))
+    identical_regions(os.path.join(base_path, "industries", "tropical", str(scale * 64), "pygen", "copperoremine"), os.path.join(base_path, "industries", "tropical", str(scale * 64), "copperoremine_idmap.png"))
