@@ -86,38 +86,38 @@ def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose
   for terrain_key in terrain_list:
     for infrastructure_key in infrastructure_list:
       print(" "+terrain_key)
-      # Make image containing arranged terrain backgrounds
-      terrain_image_path = os.path.join(base_path, "..", "..", "terrain", str(tile_size), terrain_list[terrain_key])
-      terrain_image = Image.open(terrain_image_path)
-      target_image = Image.new("RGBA", (output_width, output_height), (255, 255, 255, 255))
-      for i in range(len(tile_positions)):
-        target_image = paste_to(terrain_image, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image, i * (tile_size // scale + 1) + 1, 1, scale)
-      for i in range(rows):
-        target_image = paste_to(target_image, 0, 1, output_width, row_height, target_image, 0, i * row_height + 1, scale)
-      # Make a plmask image from terrain background palmask images, if they exists
-      terrain_palmask_path = os.path.join(base_path, "..", "..", "terrain", str(tile_size), terrain_list[terrain_key][:-len("_32bpp.png")]+"_palmask.png")
-      if os.path.isfile(terrain_palmask_path):
-        terrain_image_palmask = openttd_palettise(Image.open(terrain_palmask_path))
-        for i in range(len(tile_positions)):
-          target_image_palmask = paste_to(terrain_image_palmask, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image_palmask,i * (tile_size // scale + 1) + 1, 1, scale)
-        for i in range(rows):
-          target_image_palmask = paste_to(target_image_palmask, 0, 0, output_width, row_height, target_image_palmask, 0, i * row_height, scale)
-      else:
-        target_image_palmask = openttd_palettise(Image.new("RGB", target_image.size, (0, 0, 255)))
-      target_image_palmask = target_image_palmask.convert("RGBA")
-      # Overlay each infrastructure set
-      print("  "+infrastructure_key)
-      # Select infrastructure variant to use
-      infrastructure_name = infrastructure_list[infrastructure_key]
-      if "shores" in terrain_key:
-        infrastructure_name = infrastructure_name + "_sealevel"
       # Check files for changes
+      terrain_image_path = os.path.join(base_path, "..", "..", "terrain", str(tile_size), terrain_list[terrain_key])
+      terrain_palmask_path = os.path.join(base_path, "..", "..", "terrain", str(tile_size), terrain_list[terrain_key][:-len("_32bpp.png")]+"_palmask.png")
       infrastructure_alpha_path = os.path.join(base_path, infrastructure_name+"_overlayalpha.png")
       infrastructure_normal_path = os.path.join(base_path, infrastructure_name+"_overlaynormal.png")
       infrastructure_shading_path = os.path.join(base_path, infrastructure_name+"_overlayshading.png")
       output_normal_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_32bpp.png")
       output_palmask_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_palmask.png")
-      if check_update_needed([terrain_image_path, infrastructure_alpha_path, infrastructure_normal_path, infrastructure_shading_path], output_normal_path):
+      if check_update_needed([terrain_image_path, terrain_palmask_path, infrastructure_alpha_path, infrastructure_normal_path, infrastructure_shading_path], output_normal_path):
+        # Make image containing arranged terrain backgrounds
+        terrain_image = Image.open(terrain_image_path)
+        target_image = Image.new("RGBA", (output_width, output_height), (255, 255, 255, 255))
+        for i in range(len(tile_positions)):
+          target_image = paste_to(terrain_image, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image, i * (tile_size // scale + 1) + 1, 1, scale)
+        for i in range(rows):
+          target_image = paste_to(target_image, 0, 1, output_width, row_height, target_image, 0, i * row_height + 1, scale)
+        # Make a plmask image from terrain background palmask images, if they exists
+        if os.path.isfile(terrain_palmask_path):
+          terrain_image_palmask = openttd_palettise(Image.open(terrain_palmask_path))
+          for i in range(len(tile_positions)):
+            target_image_palmask = paste_to(terrain_image_palmask, tile_positions[i][0], tile_positions[i][1], tile_positions[i][2], tile_positions[i][3], target_image_palmask,i * (tile_size // scale + 1) + 1, 1, scale)
+          for i in range(rows):
+            target_image_palmask = paste_to(target_image_palmask, 0, 0, output_width, row_height, target_image_palmask, 0, i * row_height, scale)
+        else:
+          target_image_palmask = openttd_palettise(Image.new("RGB", target_image.size, (0, 0, 255)))
+        target_image_palmask = target_image_palmask.convert("RGBA")
+        # Overlay each infrastructure set
+        print("  "+infrastructure_key)
+        # Select infrastructure variant to use
+        infrastructure_name = infrastructure_list[infrastructure_key]
+        if "shores" in terrain_key:
+          infrastructure_name = infrastructure_name + "_sealevel"
         # Open overlay_alpha and make cropped target to its target size
         infrastructure_alpha = Image.open(infrastructure_alpha_path).convert("RGBA")
         overlay_w, overlay_h = infrastructure_alpha.size
