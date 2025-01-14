@@ -39,20 +39,11 @@ shore_modes = ["normal", "toyland"]
 from terrain.watergridoverlay import terrain_watergridoverlay
 watergrid_modes = ["water", "shore", "watertoyland", "shoretoyland"]
 for scale in [1, 2, 4]:
-    try:
-        terrain_gridoverlay(scale, os.path.join(base_path, "terrain", str(scale * 64)))
-    except:
-        print("Failed to generate ground gridlines at scale "+str(scale))
+    terrain_gridoverlay(scale, os.path.join(base_path, "terrain", str(scale * 64)))
     for mode in shore_modes:
-        try:
-            terrain_shoreoverlay(scale, mode, os.path.join(base_path, "terrain", str(scale * 64)))
-        except:
-            print("Failed to generate "+mode+" shore at scale "+str(scale))
+        terrain_shoreoverlay(scale, mode, os.path.join(base_path, "terrain", str(scale * 64)))
     for mode in watergrid_modes:
-        try:
-            terrain_watergridoverlay(scale, mode, os.path.join(base_path, "terrain", str(scale * 64)))
-        except:
-            print("Failed to generate "+mode+" water gridlines at scale "+str(scale))
+        terrain_watergridoverlay(scale, mode, os.path.join(base_path, "terrain", str(scale * 64)))
     custom_dither_directory(os.path.join(base_path, "terrain", str(scale * 64)))
     custom_dither_directory(os.path.join(base_path, "terrain", str(scale * 64), "pygen"))
 
@@ -62,20 +53,14 @@ modes = ["temperate", "arctic", "tropical", "toyland"]
 for scale in [1, 4]:
     custom_dither_directory(os.path.join(base_path, "foundations_"+str(scale * 64)))
     for mode in modes:
-        try:
-            identical_regions(os.path.join(base_path, "foundations", str(scale * 64), "foundations_"+mode), os.path.join(base_path, "foundations", str(scale *64), "foundations_idmap.png"))
-        except:
-            print("Failed to identical region mask "+mode+" foundations at scale "+str(scale))
+        identical_regions(os.path.join(base_path, "foundations", str(scale * 64), "foundations_"+mode), os.path.join(base_path, "foundations", str(scale *64), "foundations_idmap.png"))
 
 # trees
 from trees.shapeproc import tree_shapeproc
 snowy = [False, True]
 for scale in [1, 4]:
     for snow in snowy:
-        try:
-            tree_shapeproc(os.path.join(base_path, "trees", str(scale * 64)), scale, snow)
-        except:
-            print("Failed to generate trees at scale "+str(scale)+" with snow "+snow)
+        tree_shapeproc(os.path.join(base_path, "trees", str(scale * 64)), scale, snow)
     custom_dither_directory(os.path.join(base_path, "trees", str(scale * 64)))
     custom_dither_directory(os.path.join(base_path, "trees", str(scale * 64), "pygen"))
 
@@ -85,26 +70,17 @@ from infrastructure.roadrail_terrainoverlay import infrastructure_roadrail_terra
 modes = ["rail", "road", "road_noline", "road_town", "airport_modern", "rail_toyland", "road_toyland", "road_town_toyland"]
 for scale in [1, 2, 4]:
     for mode in modes:
-        try:
-            infrastructure_roadrail_terrainoverlay(scale, mode, os.path.join(base_path, "infrastructure", str(scale * 64)))
-        except:
-            print("Failed to generate "+mode+" at scale "+str(scale))
+        infrastructure_roadrail_terrainoverlay(scale, mode, os.path.join(base_path, "infrastructure", str(scale * 64)))
 # level crossings
 from infrastructure.levelcrossing_infrastructureoverlay import infrastructure_levelcrossing_infrastructureoverlay
 for scale in [1, 2, 4]:
-    try:
-        infrastructure_levelcrossing_infrastructureoverlay(scale, os.path.join(base_path, "infrastructure", str(scale * 64)))
-    except:
-        print("Failed to generate level crossings at scale "+str(scale))
+    infrastructure_levelcrossing_infrastructureoverlay(scale, os.path.join(base_path, "infrastructure", str(scale * 64)))
 # rivers and canals
 from infrastructure.canalriver_terrainoverlay import intrastructure_canalriver_terrainoverlay
 modes = ["canal", "river"]
 for scale in [1, 2, 4]:
     for mode in modes:
-        try:
-            intrastructure_canalriver_terrainoverlay(scale, mode, os.path.join(base_path, "infrastructure", str(scale * 64)))
-        except:
-            print("Failed to generate "+mode+" at scale "+str(scale))
+        intrastructure_canalriver_terrainoverlay(scale, mode, os.path.join(base_path, "infrastructure", str(scale * 64)))
 # infrastructure custom dither
 for scale in [1, 2, 4]:
     custom_dither_directory(os.path.join(base_path, "infrastructure", str(scale * 64)))
@@ -119,10 +95,7 @@ from bridges.bridge_infrastructureoverlay import infrastructure_bridge_infrastru
 modes = ["bridges", "railramps", "roadramps", "bridges_toyland", "railramps_toyland", "roadramps_toyland"]
 for scale in [1, 4]:
     for mode in modes:
-        try:
-            infrastructure_bridge_infrastructureoverlay(scale, mode, os.path.join(base_path, "bridges", str(scale * 64)))
-        except:
-            print("Failed to generate "+mode+" at scale "+str(scale))
+        infrastructure_bridge_infrastructureoverlay(scale, mode, os.path.join(base_path, "bridges", str(scale * 64)))
     custom_dither_directory(os.path.join(base_path, "bridges", str(scale * 64)))
     custom_dither_directory(os.path.join(base_path, "bridges", str(scale * 64), "pygen"))
 
@@ -148,14 +121,8 @@ for climate in climates:
         snowy = [False, True]
     for scale in [1, 4]:
         for snow in snowy:
-            try:
-                buildings_shapeproc(scale, climate, snow, os.path.join(base_path, "towns", climate, str(scale * 64)))
-            except:
-                print("Failed to generate buildings at scale "+str(scale)+" with snow "+str(snow))
-            try:
-                buildings_baseshapeproc(scale, climate, snow, os.path.join(base_path, "towns", climate, str(scale * 64)))
-            except:
-                print("Failed to generate base buildings at scale "+str(scale)+" with snow "+str(snow))
+            buildings_shapeproc(scale, climate, snow, os.path.join(base_path, "towns", climate, str(scale * 64)))
+            buildings_baseshapeproc(scale, climate, snow, os.path.join(base_path, "towns", climate, str(scale * 64)))
 # special handling
 # currently handles scales independently - can be replaced with a scale in [1, 4] loop once all source sprites exist
 from towns.base_flatten import buildings_base_flatten
@@ -250,18 +217,12 @@ climates = ["temperate", "tropical", "arctic", "toyland"]
 for climate in climates:
     for scale in [1, 4]:
         snow = False
-        try:
-            buildings_shapeproc(scale, climate, snow, os.path.join(base_path, "industries", climate, str(scale * 64)))
-        except:
-            print("Failed to generate buildings at scale "+str(scale)+" with snow "+str(snow))
-        try:
-            if climate == "tropical":
-                # exception for topical, where all industries with groundtiles are on desert
-                buildings_baseshapeproc(scale, "tropicaldesert", snow, os.path.join(base_path, "industries", climate, str(scale * 64)))
-            else:
-                buildings_baseshapeproc(scale, climate, snow, os.path.join(base_path, "industries", climate, str(scale * 64)))
-        except:
-            print("Failed to generate base buildings at scale "+str(scale)+" with snow "+str(snow))
+        buildings_shapeproc(scale, climate, snow, os.path.join(base_path, "industries", climate, str(scale * 64)))
+        if climate == "tropical":
+            # exception for topical, where all industries with groundtiles are on desert
+            buildings_baseshapeproc(scale, "tropicaldesert", snow, os.path.join(base_path, "industries", climate, str(scale * 64)))
+        else:
+            buildings_baseshapeproc(scale, climate, snow, os.path.join(base_path, "industries", climate, str(scale * 64)))
 # special handling
 from towns.base_flatten import buildings_base_flatten
 from mask_tiles import mask_tiles
@@ -372,17 +333,11 @@ from stations.tunnels_infrastructureoverlay import stations_tunnels_infrastructu
 from towns.shapeproc import buildings_shapeproc
 from towns.baseshapeproc import buildings_baseshapeproc
 for scale in [1, 4]:
-    try:
-        buildings_shapeproc(scale, "temperate", False, os.path.join(base_path, "stations", "general", str(scale * 64),))
-        buildings_shapeproc(scale, "temperate", True, os.path.join(base_path, "stations", "general", str(scale * 64),))
-        buildings_shapeproc(scale, "toyland", False, os.path.join(base_path, "stations", "general", str(scale * 64),))
-    except:
-        print("Failed to generate buildings at scale "+str(scale))
-    try:
-        buildings_baseshapeproc(scale, "temperate", False, os.path.join(base_path, "stations", "general", str(scale * 64)))
-        buildings_baseshapeproc(scale, "toyland", False, os.path.join(base_path, "stations", "general", str(scale * 64)))
-    except:
-        print("Failed to generate base buildings at scale "+str(scale))
+    buildings_shapeproc(scale, "temperate", False, os.path.join(base_path, "stations", "general", str(scale * 64),))
+    buildings_shapeproc(scale, "temperate", True, os.path.join(base_path, "stations", "general", str(scale * 64),))
+    buildings_shapeproc(scale, "toyland", False, os.path.join(base_path, "stations", "general", str(scale * 64),))
+    buildings_baseshapeproc(scale, "temperate", False, os.path.join(base_path, "stations", "general", str(scale * 64)))
+    buildings_baseshapeproc(scale, "toyland", False, os.path.join(base_path, "stations", "general", str(scale * 64)))
 # special handling
 from towns.base_flatten import buildings_base_flatten
 from mask_regions import mask_regions
