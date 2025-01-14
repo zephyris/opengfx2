@@ -3,7 +3,7 @@
 from PIL import Image
 import os, sys
 
-from tools import check_update_needed, blend_overlay, paste_to
+from tools import check_update_needed, blend_overlay, paste_to, openttd_palettise
 
 def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose=True):
   print(base_path)
@@ -112,9 +112,9 @@ def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose
       if "shores" in terrain_key:
         infrastructure_name = infrastructure_name + "_sealevel"
       # Check files for changes
-      infrastructure_alpha_path = infrastructure_name+"_overlayalpha.png"
-      infrastructure_normal_path = infrastructure_name+"_overlaynormal.png"
-      infrastructure_shading_path = infrastructure_name+"_overlayshading.png"
+      infrastructure_alpha_path = os.path.join(base_path, infrastructure_name+"_overlayalpha.png")
+      infrastructure_normal_path = os.path.join(base_path, infrastructure_name+"_overlaynormal.png")
+      infrastructure_shading_path = os.path.join(base_path, infrastructure_name+"_overlayshading.png")
       output_normal_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_32bpp.png")
       output_palmask_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_palmask.png")
       if check_update_needed([terrain_image_path, infrastructure_alpha_path, infrastructure_normal_path, infrastructure_shading_path], output_normal_path):
