@@ -43,6 +43,7 @@ from tools import openttd_palettise, check_update_needed
 
 def buildings_shapeproc(scale, climate, snow, base_path, verbose=True):
   print(base_path)
+  if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
   if os.path.isdir("pygen") == False: os.mkdir("pygen")
 

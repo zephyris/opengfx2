@@ -7,6 +7,7 @@ from tools import check_update_needed, alpha_to, paste_to
 
 def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", verbose=True):
   print(base_path)
+  if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
   tile_size = scale * 64

@@ -8,6 +8,8 @@ from tools import check_update_needed
 def fonts_charactergrab(base_path):
   scales = [1, 2, 4]
   
+  if os.path.isdir(os.path.join(base_path)) == False:
+    os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False:
     os.mkdir(os.path.join(base_path, "pygen"))
   for scale in scales:
@@ -195,7 +197,6 @@ def fonts_charactergrab(base_path):
 
   for charset in charsets:
     print("", charset["name"], "charset")
-    print(os.path.join(base_path, charset["path"]))
     if check_update_needed([os.path.join(base_path, fonts[0]["path"]), os.path.join(base_path, fonts[1]["path"]), os.path.join(base_path, fonts[2]["path"])], os.path.join(base_path, charset["path"])):
       nml = open(os.path.join(base_path, charset["path"]), "w")
       for font in fonts:

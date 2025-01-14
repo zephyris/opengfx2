@@ -33,6 +33,7 @@ from tools import check_update_needed, openttd_palette, openttd_palettise, blue_
 
 def tree_shapeproc(base_path, scale, snow=False, verbose=True):
   print(base_path)
+  if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
   namesuffix = ""

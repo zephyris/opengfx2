@@ -7,6 +7,7 @@ from tools import openttd_palettise, palette_image, openttd_palette_image, check
 
 def terrain_shoreoverlay(scale, mode, base_path=".", verbose=True):
   print(base_path)
+  if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
   tile_size = scale * 64
