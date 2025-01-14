@@ -86,6 +86,10 @@ def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose
   for terrain_key in terrain_list:
     for infrastructure_key in infrastructure_list:
       print(" "+terrain_key)
+      # Select infrastructure variant to use
+      infrastructure_name = infrastructure_list[infrastructure_key]
+      if "shores" in terrain_key:
+        infrastructure_name = infrastructure_name + "_sealevel"
       # Check files for changes
       terrain_image_path = os.path.join(base_path, "..", "..", "terrain", str(tile_size), terrain_list[terrain_key])
       terrain_palmask_path = os.path.join(base_path, "..", "..", "terrain", str(tile_size), terrain_list[terrain_key][:-len("_32bpp.png")]+"_palmask.png")
@@ -114,10 +118,6 @@ def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose
         target_image_palmask = target_image_palmask.convert("RGBA")
         # Overlay each infrastructure set
         print("  "+infrastructure_key)
-        # Select infrastructure variant to use
-        infrastructure_name = infrastructure_list[infrastructure_key]
-        if "shores" in terrain_key:
-          infrastructure_name = infrastructure_name + "_sealevel"
         # Open overlay_alpha and make cropped target to its target size
         infrastructure_alpha = Image.open(infrastructure_alpha_path).convert("RGBA")
         overlay_w, overlay_h = infrastructure_alpha.size
