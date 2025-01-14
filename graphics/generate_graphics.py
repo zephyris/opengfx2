@@ -4,6 +4,11 @@ from strict_convert import strict_convert_directory
 
 base_path = os.path.dirname(__file__)
 
+def copy_if_changed(source_path, target_directory):
+    target_path = os.path.join(target_directory, os.path.basename(source_path))
+    if not os.path.exists(target_path) or os.path.getmtime(source_path) > os.path.getmtime(target_path):
+        shutil.copy(source_path, target_path)
+
 # fonts
 from fonts.charactergrab import fonts_charactergrab
 fonts_charactergrab(os.path.join(base_path, "fonts"))
@@ -182,8 +187,8 @@ mask_tiles(os.path.join(current_path, "pygen", "2x1_hotel"), os.path.join(curren
 scale = 1
 current_path = os.path.join(base_path, "towns", "tropical", str(scale * 64))
 #### manual copy
-shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_32bpp.png"), os.path.join(current_path, "pygen"))
-shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_palmask.png"), os.path.join(current_path, "pygen"))
+copy_if_changed(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_32bpp.png"), os.path.join(current_path, "pygen"))
+copy_if_changed(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_palmask.png"), os.path.join(current_path, "pygen"))
 #### flatten
 flatten_list = ["churches", "houses", "flats", "1x2_tallofficeblock", "shantyhouses", "tallofficeblock", "hqs"]
 for name in flatten_list:
@@ -200,8 +205,8 @@ for name, mask in mask_list.items():
 scale = 1
 current_path = os.path.join(base_path, "towns", "arctic", str(scale * 64))
 #### manual copy
-shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_32bpp.png"), os.path.join(current_path, "pygen"))
-shutil.copy(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_palmask.png"), os.path.join(current_path, "pygen"))
+copy_if_changed(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_32bpp.png"), os.path.join(current_path, "pygen"))
+copy_if_changed(os.path.join(base_path, "towns", "temperate", str(scale * 64), "pygen", "hqs_palmask.png"), os.path.join(current_path, "pygen"))
 #### flatten
 flatten_list = ["shopsandoffices", "tallofficeblock", "church", "2x1_hotel", "2x1_hotel_snow", "hqs"]
 for name in flatten_list:
@@ -222,7 +227,7 @@ for name, mask in mask_list.items():
 scale = 1
 current_path = os.path.join(base_path, "towns", "toyland", str(scale * 64))
 #### manual copy
-shutil.copy(os.path.join(base_path, current_path, "2x1_boot_32bpp.png"), os.path.join(current_path, "pygen"))
+copy_if_changed(os.path.join(base_path, current_path, "2x1_boot_32bpp.png"), os.path.join(current_path, "pygen"))
 #### tile mask
 mask_list = {
     "2x1_boot": "2x1_boot_tilemask.png",
@@ -334,7 +339,7 @@ current_path = os.path.join(base_path, "industries", "toyland", str(scale * 64))
 #### manual copy
 copy_list = ["fizzy_drink_factory_32bpp.png", "fizzy_drink_factory_palmask.png", "toy_shop_32bpp.png", "toy_factory_32bpp.png", "toy_factory_constr_32bpp.png", "sweet_factory_32bpp.png", "toffee_quarry_32bpp.png", "bubble_generator_32bpp.png", "bubble_generator_palmask.png", "sugar_mine_stand_32bpp.png", "sugar_mine_stockpile_32bpp.png"]
 for name in copy_list:
-    shutil.copy(os.path.join(current_path, name), os.path.join(current_path, "pygen"))
+    copy_if_changed(os.path.join(current_path, name), os.path.join(current_path, "pygen"))
 #### tile mask
 mask_list = {
     "fizzy_drink_factory": "fizzy_drink_factory_tilemask.png",
