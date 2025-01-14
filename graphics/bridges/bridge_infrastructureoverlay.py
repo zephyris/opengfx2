@@ -130,8 +130,8 @@ def infrastructure_bridge_infrastructureoverlay(scale, mode, base_path=".", verb
     for infrastructure_key in infrastructure_list:
       print("  "+infrastructure_key)
       # input image paths
-      bridge_image_path = bridge_list[bridge_key]
-      bridgemask_image_path = bridgemask
+      bridge_image_path = os.path.join(base_path, bridge_list[bridge_key])
+      bridgemask_image_path = os.path.join(base_path, bridgemask)
       infrastructure_image_path = os.path.join(base_path, "..", "..", "infrastructure", str(tile_size), "pygen", infrastructure_list[infrastructure_key])
       bridge_palmask_path = bridge_list[bridge_key][:-len("_32bpp.png")]+"_palmask.png"
       image_output_path = os.path.join(base_path, "pygen", bridge_key+"_"+infrastructure_key+"_32bpp.png")
