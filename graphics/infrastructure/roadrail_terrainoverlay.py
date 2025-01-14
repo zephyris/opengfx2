@@ -222,7 +222,7 @@ def infrastructure_roadrail_terrainoverlay(scale, mode, base_path=".", verbose=T
     # Make a palmask image from infrastructure background palmask images, if it exists, othwise pure blue
     terrain_palmask_path = os.path.join(base_path, "..", "..", "terrain", str(tile_size), terrain_list[terrain_key][:len("_32bpp.png")]+"_palmask.png")
     if os.path.isfile(terrain_palmask_path):
-      terrain_image_palmask = Image.open()
+      terrain_image_palmask = Image.open(terrain_palmask_path)
       target_image_palmask = Image.new("P", (output_width, output_height), 255)
       target_image_palmask.putpalette(palimg.getpalette())
       for i in range(len(tile_positions)):
@@ -231,10 +231,10 @@ def infrastructure_roadrail_terrainoverlay(scale, mode, base_path=".", verbose=T
         target_image_palmask = Image.new("RGBA", (output_width, output_height), (0, 0, 255, 255))
     for infrastructure_key in infrastructure_list:
       # Check if update needed
-      name_overlayalpha = infrastructure_list[infrastructure_key]+"_overlayalpha.png"
-      name_overlayalpha2 = infrastructure_list[infrastructure_key]+"_overlayalpha2.png"
-      name_overlayshading = infrastructure_list[infrastructure_key]+"_overlayshading.png"
-      name_overlaynormal = infrastructure_list[infrastructure_key]+"_overlaynormal.png"
+      name_overlayalpha = os.path.join(base_path, infrastructure_list[infrastructure_key]+"_overlayalpha.png")
+      name_overlayalpha2 = os.path.join(base_path, infrastructure_list[infrastructure_key]+"_overlayalpha2.png")
+      name_overlayshading = os.path.join(base_path, infrastructure_list[infrastructure_key]+"_overlayshading.png")
+      name_overlaynormal = os.path.join(base_path, infrastructure_list[infrastructure_key]+"_overlaynormal.png")
       output_normal_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_32bpp.png")
       output_palmask_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_palmask.png")
       if check_update_needed([terrain_image_path, name_overlayalpha, name_overlayalpha2, name_overlayshading, name_overlaynormal], output_normal_path):
