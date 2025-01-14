@@ -190,8 +190,8 @@ for name in flatten_list:
     buildings_base_flatten(os.path.join(current_path, name), scale)
 #### tile mask
 mask_list = {
-    "1x2_tallofficeblock": "1x2_tallofficeblock_tilemask.png",
-    "hqs": os.path.join(base_path, "towns", "temperate", str(scale * 64), "hqs_tilemask.png")
+    "1x2_tallofficeblock_combo": "1x2_tallofficeblock_tilemask.png",
+    "hqs_combo": os.path.join(base_path, "towns", "temperate", str(scale * 64), "hqs_tilemask.png")
 }
 for name, mask in mask_list.items():
     mask_tiles(os.path.join(current_path, "pygen", name), os.path.join(current_path, mask), scale)
