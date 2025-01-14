@@ -60,7 +60,10 @@ def terrain_watergridoverlay(scale, mode, base_path=".", verbose=True):
     output_grid_path = os.path.join(base_path, "pygen", terrain_key+"_gridline_32bpp.png")
     if mode != "shore" and mode != "shoretoyland":
       palmask_path = os.path.join(base_path, palmask_paths[terrain_key])
+    else:
+      palmask_path = os.path.join(base_path, palmask_path)
     output_gridpalmask_path = os.path.join(base_path, "pygen", terrain_key+"_gridline_palmask.png")
+    gridline_overlay_path = os.path.join(base_path, gridline_overlay_path)
     if check_update_needed([terrain_image_path, palmask_path, gridline_overlay_path], output_grid_path):
       terrain_image = Image.open(terrain_image_path).convert("RGB")
       palmask_image = Image.open(palmask_path).convert("RGB")

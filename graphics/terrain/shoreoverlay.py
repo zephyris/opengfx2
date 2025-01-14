@@ -41,6 +41,7 @@ def terrain_shoreoverlay(scale, mode, base_path=".", verbose=True):
     shoreline_shading_path = os.path.join(base_path, "shorelines_overlayshading.png")
     output_main_path = os.path.join(base_path, "pygen", terrain_key+"_shoretiles_palmask.png")
     output_palmask_path = os.path.join(base_path, "pygen", terrain_key+"_shoretiles_32bpp.png")
+    shoreline_overlay_path = os.path.join(base_path, shoreline_overlay_path)
     if check_update_needed([terrain_image_path, shoreline_overlay_path, shoreline_shading_path], output_main_path):
       terrain_image = Image.open(terrain_image_path).convert("RGB")
       shore_image = Image.open(shoreline_overlay_path)
