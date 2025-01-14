@@ -42,10 +42,15 @@ from tools import openttd_palettise, check_update_needed
 
 
 def buildings_shapeproc(scale, climate, snow, base_path, verbose=True):
-  print(base_path)
+  print("Building", base_path)
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
   if os.path.isdir("pygen") == False: os.mkdir("pygen")
+
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
 
   namesuffix = ""
   if snow:
@@ -220,7 +225,8 @@ def buildings_shapeproc(scale, climate, snow, base_path, verbose=True):
     toyland_overlay_name = input_file[:-len(suffix)]+"_toylandoverlaynormal.png"
     image_shaded_name = os.path.join(base_path, "pygen", input_name[:-len(suffix)]+"_"+namesuffix+"32bpp.png")
     image_unshaded_name = os.path.join(base_path, "pygen", input_name[:-len(suffix)]+"_"+namesuffix+"palmask.png")
-    if check_update_needed([input_file, shading_overlay_name, normal_overlay_name, toyland_overlay_name] + glob.glob(os.path.join(base_path, "../../textures/*.png")), image_shaded_name):
+    if check_self_update(image_shaded_name) or check_update_needed([input_file, shading_overlay_name, normal_overlay_name, toyland_overlay_name] + glob.glob(os.path.join(base_path, "../../textures/*.png")), image_shaded_name):
+      print("  ", "Generating", os.path.basename(image_shaded_name))
       with Image.open(input_file) as image:
         # Open shape image
         width, height = image.size
@@ -333,6 +339,8 @@ def buildings_shapeproc(scale, climate, snow, base_path, verbose=True):
           image_32bit = overlay_texture(image_32bit, image_shape, Image.open(toyland_overlay_name), range(256), 255/255, "normal")
         # Save shaded image
         image_32bit.save(image_shaded_name, "PNG")
+    else:
+      print("  ", "Skipping", os.path.basename(image_shaded_name))
 
 if __name__ == "__main__":
   snow = False

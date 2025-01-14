@@ -6,9 +6,14 @@ import os, sys
 from tools import check_update_needed, blue_to, paste_to
 
 def terrain_watergridoverlay(scale, mode, base_path=".", verbose=True):
-  print(base_path)
+  print("Water grid", base_path)
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
+
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
 
   tile_size = scale * 64
 
@@ -65,7 +70,8 @@ def terrain_watergridoverlay(scale, mode, base_path=".", verbose=True):
       palmask_path = os.path.join(base_path, palmask_path)
     output_gridpalmask_path = os.path.join(base_path, "pygen", terrain_key+"_gridline_palmask.png")
     gridline_overlay_path = os.path.join(base_path, gridline_overlay_path)
-    if check_update_needed([terrain_image_path, palmask_path, gridline_overlay_path], output_grid_path):
+    if check_self_update(output_grid_path) or check_update_needed([terrain_image_path, palmask_path, gridline_overlay_path], output_grid_path):
+      print("  ", "Generating", os.path.basename(output_grid_path))
       terrain_image = Image.open(terrain_image_path).convert("RGB")
       palmask_image = Image.open(palmask_path).convert("RGB")
       target_w, target_h = terrain_image.size
@@ -83,6 +89,8 @@ def terrain_watergridoverlay(scale, mode, base_path=".", verbose=True):
       # Save
       target_image.save(output_grid_path)
       target_palmask_image.save(output_gridpalmask_path)
+    else:
+      print("  ", "Skipping", os.path.basename(output_grid_path))
 
 if __name__ == "__main__":
   if len(sys.argv) < 3:

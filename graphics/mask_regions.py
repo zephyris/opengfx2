@@ -9,6 +9,11 @@ def mask_regions(base_name, region_mask_path, scale, verbose=True):
   base_path = os.path.dirname(base_name)
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
+
   # splits [base_name]_32bpp and [base_name]_palmask images into tiles using mapping in [region_mask_path] image
   # for example, splitting back wall from depot sprites or splitting far side from tunnel sprites
 
@@ -20,7 +25,7 @@ def mask_regions(base_name, region_mask_path, scale, verbose=True):
     # check if update needed
     source_path = base_name + source_suffices[image_index]
     out_path = base_name+"_regions"+source_suffices[image_index]
-    if check_update_needed([source_path, region_mask_path], out_path):
+    if check_self_update(out_path) or check_update_needed([source_path, region_mask_path], out_path):
       source_image = Image.open(source_path).convert("RGB")
       # 8-bit indexed or grayscale image, each value indicates a region
       # Must be sequentially numbered, indices 1..255 represent subtiles, 0 indicates background

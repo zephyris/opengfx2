@@ -8,6 +8,7 @@ from tools import check_update_needed
 def fonts_charactergrab(base_path):
   scales = [1, 2, 4]
   
+  print("Font sprites", base_path)
   if os.path.isdir(os.path.join(base_path)) == False:
     os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False:
@@ -17,6 +18,11 @@ def fonts_charactergrab(base_path):
       os.mkdir(os.path.join(base_path, str(scale)))
     if os.path.isdir(os.path.join(base_path, str(scale), "pygen")) == False:
       os.mkdir(os.path.join(base_path, str(scale), "pygen"))
+
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
 
   fonts = [
     {
@@ -197,7 +203,8 @@ def fonts_charactergrab(base_path):
 
   for charset in charsets:
     print("", charset["name"], "charset")
-    if check_update_needed([os.path.join(base_path, fonts[0]["path"]), os.path.join(base_path, fonts[1]["path"]), os.path.join(base_path, fonts[2]["path"])], os.path.join(base_path, charset["path"])):
+    if check_self_update(os.path.join(base_path, charset["path"])) or check_update_needed([os.path.join(base_path, fonts[0]["path"]), os.path.join(base_path, fonts[1]["path"]), os.path.join(base_path, fonts[2]["path"])], os.path.join(base_path, charset["path"])):
+      print("  ", "Generating", charset["path"])
       nml = open(os.path.join(base_path, charset["path"]), "w")
       for font in fonts:
         # skip non-baseset fonts for base charset
@@ -282,6 +289,8 @@ def fonts_charactergrab(base_path):
               image.paste(sprite["sprite"], (sprite["x"] * scale, sprite["y"] * scale), sprite["sprite"])
             image.save(outpath)
       nml.close()
+    else:
+      print("  ", "Skipped", charset["path"])
 
 if __name__ == "__main__":
   fonts_charactergrab(".")

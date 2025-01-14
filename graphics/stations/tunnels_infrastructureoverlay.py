@@ -6,9 +6,14 @@ import os, sys
 from tools import check_update_needed, blend_overlay, paste_to, alpha_to, blue_to, colour_to, blue_to_alpha
 
 def stations_tunnels_infrastructureoverlay(scale, mode, base_path=".", verbose=True):
-  print(base_path)
+  print("Tunnels", base_path)
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
+
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
 
   tile_size = scale * 64
 
@@ -124,7 +129,8 @@ def stations_tunnels_infrastructureoverlay(scale, mode, base_path=".", verbose=T
       name_overlayshading = infrastructure_list[infrastructure_key]+"tunnels_regions_overlayshading.png"
       output_normal_path = os.path.join(base_path, "pygen", "tunnels_"+infrastructure_key+"_"+terrain_key+"_32bpp.png")
       # Check if update needed
-      if check_update_needed([terrain_image_path, infrastructure_image_path, name_overlay, name_overlayshading], output_normal_path):
+      if os.path.getmtime(__file__) > os.path.getmtime(output_normal_path) or check_update_needed([terrain_image_path, infrastructure_image_path, name_overlay, name_overlayshading], output_normal_path):
+        print("  ", "Generating", os.path.basename(output_normal_path))
         # Make image containing arranged infrastructure on and slope backgrounds
         terrain_image = Image.open(terrain_image_path)
         infrastructure_image = blue_to_alpha(Image.open(infrastructure_image_path))
@@ -146,6 +152,8 @@ def stations_tunnels_infrastructureoverlay(scale, mode, base_path=".", verbose=T
             target_image = blend_overlay(target_image, overlay_image, 1.0)
           # Save 32bpp image
           target_image.save(output_normal_path)
+      else:
+        print("  ", "Skipped", os.path.basename(output_normal_path))
 
 if __name__ == "__main__":
   if len(sys.argv) < 3:

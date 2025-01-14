@@ -6,9 +6,14 @@ import os, sys
 from tools import check_update_needed, alpha_to, paste_to
 
 def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", verbose=True):
-  print(base_path)
+  print("Level crossing", base_path)
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
+
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
 
   tile_size = scale * 64
 
@@ -70,7 +75,8 @@ def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", ver
       overlay_normal_path = os.path.join(base_path, "levelcrossing_overlaynormal.png")
       output_normal_path = os.path.join(base_path, "pygen", "levelcrossing_road_"+infrastructure_key+"_"+terrain_key+"_32bpp.png")
       output_palmask_path = os.path.join(base_path, "pygen", "levelcrossing_road_"+infrastructure_key+"_"+terrain_key+"_palmask.png")
-      if check_update_needed([terrain_image_path, road_image_path, overlay_alpha_path, overlay_normal_path], output_normal_path):
+      if check_self_update(output_normal_path) or check_update_needed([terrain_image_path, road_image_path, overlay_alpha_path, overlay_normal_path], output_normal_path):
+        print("  ", "Generating", os.path.basename(output_normal_path))
         # Make image containing arranged rail background tiles
         terrain_image = Image.open(terrain_image_path).convert("RGBA")
         target_image = Image.new("RGBA", (output_width, output_height))
@@ -93,6 +99,8 @@ def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", ver
         blank_palmask = Image.new("RGBA", (output_width, output_height), (0, 0, 255))
         infrastructure_normal = Image.alpha_composite(blank_palmask, infrastructure_normal)
         infrastructure_normal.save(output_palmask_path)
+      else:
+        print("  ", "Skipped", os.path.basename(output_normal_path))
 
 if __name__ == "__main__":
   if len(sys.argv) < 3:

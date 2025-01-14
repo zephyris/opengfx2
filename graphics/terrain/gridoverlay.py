@@ -6,9 +6,14 @@ import os, sys
 from tools import check_update_needed, blend_overlay, blendmode_overlay, paste_to
 
 def terrain_gridoverlay(scale, base_path=".", verbose=True):
-  print(base_path)
+  print("Terrain grids", base_path)
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
+
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
 
   tile_size = scale * 64
 
@@ -58,7 +63,8 @@ def terrain_gridoverlay(scale, base_path=".", verbose=True):
     gridline_overlay_path = os.path.join(base_path, "groundtiles_gridlines.png")
     output_grid_path = os.path.join(base_path, "pygen", terrain_key+"_gridline_32bpp.png")
     output_nogrid_path = os.path.join(base_path, "pygen", terrain_key+"_nogridline_32bpp.png")
-    if check_update_needed([terrain_image_path, gridline_overlay_path], output_grid_path):
+    if check_self_update(output_grid_path) or check_update_needed([terrain_image_path, gridline_overlay_path], output_grid_path):
+      print("  ", "Generating", os.path.basename(output_grid_path))
       terrain_image = Image.open(terrain_image_path).convert("RGB")
       # Smooth/dither top edges
       if "toyland" not in terrain_key and do_dithering == True:
@@ -85,6 +91,8 @@ def terrain_gridoverlay(scale, base_path=".", verbose=True):
       target_image = blendmode_overlay(target_image, gridline_overlay, gridline_opacity, "normal")
       # Save
       target_image.save(output_grid_path)
+    else:
+      print("  ", "Skipped", os.path.basename(output_grid_path))
 
 if __name__ == "__main__":
   if len(sys.argv) < 2:

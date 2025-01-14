@@ -6,9 +6,14 @@ import os, sys
 from tools import check_update_needed, blend_overlay, paste_to, openttd_palettise
 
 def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose=True):
-  print(base_path)
+  print("Canal/River", base_path)
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
+
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
 
   tile_size = scale * 64
 
@@ -99,7 +104,8 @@ def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose
       infrastructure_shading_path = os.path.join(base_path, infrastructure_name+"_overlayshading.png")
       output_normal_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_32bpp.png")
       output_palmask_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_palmask.png")
-      if check_update_needed([terrain_image_path, terrain_palmask_path, infrastructure_alpha_path, infrastructure_normal_path, infrastructure_shading_path], output_normal_path):
+      if check_self_update(output_normal_path) or check_update_needed([terrain_image_path, terrain_palmask_path, infrastructure_alpha_path, infrastructure_normal_path, infrastructure_shading_path], output_normal_path):
+        print("  Generating", os.path.basename(output_normal_path))
         # Make image containing arranged terrain backgrounds
         terrain_image = Image.open(terrain_image_path)
         target_image = Image.new("RGBA", (output_width, output_height), (255, 255, 255, 255))
@@ -140,6 +146,8 @@ def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose
         target_image_palmask_crop = Image.alpha_composite(target_image_palmask_crop, infrastructure_normal)
         target_image_palmask_crop = openttd_palettise(target_image_palmask_crop)
         target_image_palmask_crop.save(output_palmask_path)
+      else:
+        print("  Skipped", os.path.basename(output_normal_path))
 
 if __name__ == "__main__":
   if len(sys.argv) < 3:

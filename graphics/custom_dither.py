@@ -38,8 +38,8 @@ def make_8bpp(src, pal, dither_factor):
   colors_action = openttd_palette_animated
   # Special colours, do not propagate errors through these indices
   colors_special = openttd_palette_generalmask
-  # 'Normal' palette entries is everything not in the other sets
-  colors_normal = [x for x in range(256) if x not in colors_action and x not in colors_special]
+  # 'Normal' palette entries, everything expect action colours
+  colors_normal = [x for x in range(256) if x not in colors_action]
 
   # Palette colour sets
   # Color set start indices
@@ -310,10 +310,15 @@ def custom_dither_directory(input_directory, suffix="_32bpp.png", verbose=True):
     custom_dither_file(input_file, suffix=suffix, verbose=verbose)
 
 def custom_dither_file(input_file, suffix="_32bpp.png", verbose=True):
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
+  
   name = input_file[:-len(suffix)]
-  if verbose == True:
-    print("Dithering file", name)
-  if check_update_needed([input_file, name+"_palmask.png"], name+"_8bpp.png") or check_update_needed([input_file, name+"_palmask.png"], name+"_bt32bpp.png") or check_update_needed([input_file, name+"_palmask.png"], name+"_rm32bpp.png") or os.path.getmtime(__file__) > os.path.getmtime(name+"_8bpp.png"):
+  if check_update_needed([input_file, name+"_palmask.png"], name+"_8bpp.png") or check_update_needed([input_file, name+"_palmask.png"], name+"_bt32bpp.png") or check_update_needed([input_file, name+"_palmask.png"], name+"_rm32bpp.png") or check_self_update(name+"_8bpp.png"):
+    if verbose == True:
+      print("  ", "Converting", os.path.basename(input_file))
     with Image.open(input_file) as image:
       width, height = image.size
       if os.path.isfile(name+"_palmask.png"):
@@ -325,6 +330,9 @@ def custom_dither_file(input_file, suffix="_32bpp.png", verbose=True):
       image_8bpp.save(name+"_8bpp.png", "PNG")
       image_bt32bpp.save(name+"_bt32bpp.png", "PNG")
       image_rm32bpp.save(name+"_rm32bpp.png", "PNG")
+  else:
+    if verbose == True:
+      print("  ", "Skipping", os.path.basename(input_file))
 
 if __name__ == '__main__':
   if len(sys.argv) < 2:

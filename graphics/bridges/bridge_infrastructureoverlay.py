@@ -10,6 +10,11 @@ def infrastructure_bridge_infrastructureoverlay(scale, mode, base_path=".", verb
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
+
   tile_size = scale * 64
 
   if mode == "bridges" or mode == "bridges_toyland":
@@ -138,7 +143,8 @@ def infrastructure_bridge_infrastructureoverlay(scale, mode, base_path=".", verb
       image_output_path = os.path.join(base_path, "pygen", bridge_key+"_"+infrastructure_key+"_32bpp.png")
       palmask_output_path = os.path.join(base_path, "pygen", bridge_key+"_"+infrastructure_key+"_palmask.png")
       # main image
-      if check_update_needed([bridge_image_path, bridgemask_image_path, infrastructure_image_path], image_output_path):
+      if check_self_update(image_output_path) or check_update_needed([bridge_image_path, bridgemask_image_path, infrastructure_image_path], image_output_path):
+        print("  ", "Generating", os.path.basename(image_output_path))
         # if update is needed
         # Open bridge image
         bridge_image = Image.open(bridge_image_path)
@@ -159,14 +165,19 @@ def infrastructure_bridge_infrastructureoverlay(scale, mode, base_path=".", verb
           target_image = overlay_bluetransp(target_image, bridge_image)
         # Save 32bpp image
         target_image.save(image_output_path)
+      else:
+        print("  ", "Skipped", os.path.basename(image_output_path))
       # palmask image
-      if check_update_needed([bridge_palmask_path], palmask_output_path):
+      if check_self_update(palmask_output_path) or check_update_needed([bridge_palmask_path], palmask_output_path):
+        print("  ", "Generating", os.path.basename(palmask_output_path))
         # if update is needed
         # Load palmask image, if it exists
         if os.path.isfile(bridge_palmask_path):
           bridge_image_palmask = Image.open(bridge_palmask_path)
           bridge_image_palmask = openttd_palettise(bridge_image_palmask)
           bridge_image_palmask.save(palmask_output_path)
+        else:
+          print("  ", "Skipping", os.path.basename(palmask_output_path))
 
 if __name__ == "__main__":
   if len(sys.argv) < 3:

@@ -6,9 +6,14 @@ import os, sys
 from tools import openttd_palettise, palette_image, openttd_palette_image, check_update_needed, blend_overlay
 
 def terrain_shoreoverlay(scale, mode, base_path=".", verbose=True):
-  print(base_path)
+  print("Shores", base_path)
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
+
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
 
   tile_size = scale * 64
 
@@ -43,7 +48,8 @@ def terrain_shoreoverlay(scale, mode, base_path=".", verbose=True):
     output_main_path = os.path.join(base_path, "pygen", terrain_key+"_shoretiles_palmask.png")
     output_palmask_path = os.path.join(base_path, "pygen", terrain_key+"_shoretiles_32bpp.png")
     shoreline_overlay_path = os.path.join(base_path, shoreline_overlay_path)
-    if check_update_needed([terrain_image_path, shoreline_overlay_path, shoreline_shading_path], output_main_path):
+    if check_self_update(output_main_path) or check_update_needed([terrain_image_path, shoreline_overlay_path, shoreline_shading_path], output_main_path):
+      print("  ", "Generating", os.path.basename(output_main_path))
       terrain_image = Image.open(terrain_image_path).convert("RGB")
       shore_image = Image.open(shoreline_overlay_path)
       shore_image = openttd_palettise(shore_image)
@@ -67,6 +73,8 @@ def terrain_shoreoverlay(scale, mode, base_path=".", verbose=True):
       target_image.paste(shore_image, (0, 0), shore_mask)
       # Save
       target_image.save(os.path.join(base_path, "pygen", terrain_key+"_shoretiles_32bpp.png"))
+    else:
+      print("  ", "Skipping", os.path.basename(output_main_path))
 
 if __name__ == "__main__":
   if len(sys.argv) < 3:
