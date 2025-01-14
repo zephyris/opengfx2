@@ -5,7 +5,7 @@ import os, sys
 
 from tools import check_update_needed, alpha_to, paste_to
 
-def infrastructure_levelcrossing_infrastructureoverlay(scale, mode, base_path=".", verbose=True):
+def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", verbose=True):
   print(base_path)
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
@@ -59,13 +59,14 @@ def infrastructure_levelcrossing_infrastructureoverlay(scale, mode, base_path=".
       print("  "+infrastructure_key)
       # Check if update needed
       terrain_image_path = os.path.join(base_path, "pygen", infrastructure_list[infrastructure_key]+"_"+terrain_list[terrain_key]+"_32bpp.png")
-      road_image_path = "road_overlayalpha.png"
+      road_image_path = os.path.join(base_path, "road_overlayalpha.png")
       if "toyland" in terrain_key:
-        road_image_path = "road_toyland_overlayalpha.png"
-      overlay_alpha_path = infrastructure_list[infrastructure_key]+"_levelcrossing_overlayalpha.png"
+        road_image_path = os.path.join(base_path, "road_toyland_overlayalpha.png")
       if "toyland" in terrain_key:
-        overlay_alpha_path = "toyland_" + overlay_alpha_path
-      overlay_normal_path = "levelcrossing_overlaynormal.png"
+        overlay_alpha_path = os.path.join(base_path, "toyland_" + infrastructure_list[infrastructure_key]+"_levelcrossing_overlayalpha.png")
+      else:
+        overlay_alpha_path = os.path.join(base_path, infrastructure_list[infrastructure_key]+"_levelcrossing_overlayalpha.png")
+      overlay_normal_path = os.path.join(base_path, "levelcrossing_overlaynormal.png")
       output_normal_path = os.path.join(base_path, "pygen", "levelcrossing_road_"+infrastructure_key+"_"+terrain_key+"_32bpp.png")
       output_palmask_path = os.path.join(base_path, "pygen", "levelcrossing_road_"+infrastructure_key+"_"+terrain_key+"_palmask.png")
       if check_update_needed([terrain_image_path, road_image_path, overlay_alpha_path, overlay_normal_path], output_normal_path):
