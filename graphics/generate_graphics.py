@@ -19,8 +19,8 @@ for scale in [1, 2, 4, "climates"]:
 from cursors.cursoroverlay import cursors_cursoroverlay
 for scale in [1, 2]:
     cursors_cursoroverlay(os.path.join(base_path, "cursors", str(scale)), scale)
-    custom_dither_directory(os.path.join(base_path, "gui", str(scale)))
-    custom_dither_directory(os.path.join(base_path, "gui", str(scale), "pygen"))
+    custom_dither_directory(os.path.join(base_path, "cursors", str(scale)))
+    custom_dither_directory(os.path.join(base_path, "cursors", str(scale), "pygen"))
 
 # effects
 for scale in [1, 4]:
