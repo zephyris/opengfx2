@@ -205,7 +205,7 @@ def fonts_charactergrab(base_path):
     print("", charset["name"], "charset")
     if check_self_update(os.path.join(base_path, charset["path"])) or check_update_needed([os.path.join(base_path, fonts[0]["path"]), os.path.join(base_path, fonts[1]["path"]), os.path.join(base_path, fonts[2]["path"])], os.path.join(base_path, charset["path"])):
       print("  ", "Generating", charset["path"])
-      nml = open(os.path.join(base_path, charset["path"]), "w")
+      nml = open(os.path.join(base_path, charset["path"]+".tmp"), "w")
       for font in fonts:
         # skip non-baseset fonts for base charset
         if charset["name"] != "base" or font["base"]:
@@ -289,6 +289,8 @@ def fonts_charactergrab(base_path):
               image.paste(sprite["sprite"], (sprite["x"] * scale, sprite["y"] * scale), sprite["sprite"])
             image.save(outpath)
       nml.close()
+      # rename temp file to final file, to prevent partial output
+      os.rename(os.path.join(base_path, charset["path"]+".tmp"), os.path.join(base_path, charset["path"]))
     else:
       print("  ", "Skipped", charset["path"])
 
