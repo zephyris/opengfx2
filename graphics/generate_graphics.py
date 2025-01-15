@@ -51,7 +51,7 @@ for scale in [1, 2, 4]:
 from identical_regions import identical_regions
 modes = ["temperate", "arctic", "tropical", "toyland"]
 for scale in [1, 4]:
-    custom_dither_directory(os.path.join(base_path, "foundations_"+str(scale * 64)))
+    custom_dither_directory(os.path.join(base_path, "foundations", str(scale * 64)))
     for mode in modes:
         identical_regions(os.path.join(base_path, "foundations", str(scale * 64), "foundations_"+mode), os.path.join(base_path, "foundations", str(scale *64), "foundations_idmap.png"))
 
