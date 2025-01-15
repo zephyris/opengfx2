@@ -341,7 +341,6 @@ def buildings_baseshapeproc(scale, climate, snow, base_path, verbose=True):
         # Add manual overlays, if the files exist
         # Overlay overlay_alpha, if it exists
         if os.path.isfile(alpha_overlay_name):
-          print(alpha_overlay_name)
           image_32bit = image_32bit.convert("RGBA")
           image_32bit = Image.alpha_composite(image_32bit, Image.open(alpha_overlay_name).convert("RGBA"))
         # Shading/overlay mode overlay

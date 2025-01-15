@@ -218,7 +218,7 @@ def buildings_shapeproc(scale, climate, snow, base_path, verbose=True):
     if (input_file.endswith("_base_shape.png")):
       continue
     input_name = os.path.basename(input_file)
-    print("%s in scale %d mode" % (input_file, scale))
+    print(" %s in scale %d mode" % (os.path.basename(input_file), scale))
     # check for input file changes
     shading_overlay_name = input_file[:-len(suffix)]+"_overlayshading.png"
     normal_overlay_name = input_file[:-len(suffix)]+"_overlaynormal.png"
