@@ -252,17 +252,14 @@ def infrastructure_roadrail_terrainoverlay(scale, mode, base_path=".", verbose=T
         if os.path.isfile(name_overlayalpha):
           infrastructure_image = Image.open(name_overlayalpha).convert("RGBA")
           infrastructure_image = infrastructure_image.crop((0, 0, target_image_width, target_image_height))
-          print(infrastructure_image.size)
           output_image = Image.alpha_composite(output_image, infrastructure_image)
         # Overlay additional overlay, if it exists
         if os.path.isfile(name_overlayalpha2):
-          print(name_overlayalpha2)
           infrastructure_image = Image.open(name_overlayalpha2).convert("RGBA")
           infrastructure_image = infrastructure_image.crop((0, 0, target_image_width, target_image_height))
           output_image = Image.alpha_composite(output_image, infrastructure_image)
         # Overlay overlayshading, if it exists
         if os.path.isfile(name_overlayshading):
-          print(name_overlayshading)
           infrastructure_image = Image.open(name_overlayshading).convert("RGBA")
           infrastructure_image = infrastructure_image.crop((0, 0, target_image_width, target_image_height))
           output_image = blend_overlay(output_image, infrastructure_image, 192/255)

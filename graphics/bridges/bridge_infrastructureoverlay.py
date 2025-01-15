@@ -176,8 +176,8 @@ def infrastructure_bridge_infrastructureoverlay(scale, mode, base_path=".", verb
           bridge_image_palmask = Image.open(bridge_palmask_path)
           bridge_image_palmask = openttd_palettise(bridge_image_palmask)
           bridge_image_palmask.save(palmask_output_path)
-        else:
-          print("  ", "Skipping", os.path.basename(palmask_output_path))
+      else:
+        print("  ", "Skipping", os.path.basename(palmask_output_path))
 
 if __name__ == "__main__":
   if len(sys.argv) < 3:

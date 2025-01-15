@@ -142,12 +142,10 @@ def stations_tunnels_infrastructureoverlay(scale, mode, base_path=".", verbose=T
           # Overlay each infrastructure set11
           print("  "+infrastructure_key)
           # Overlay overlay_alpha
-          print(name_overlay)
           overlay_image = Image.open(name_overlay).convert("RGBA")
           target_image = colour_to(overlay_image, 0, 0, output_width, output_height, target_image, 0, 0, scale, 252, 0, 255) # Warning magenta (255, 0, 255) gets change to 252, 0, 255 by building_shapeproc
           # Overlay overlayshading, if it exists
           if os.path.isfile(name_overlayshading):
-            print(name_overlayshading)
             overlay_image = Image.open(name_overlayshading).convert("RGBA")
             target_image = blend_overlay(target_image, overlay_image, 1.0)
           # Save 32bpp image

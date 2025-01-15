@@ -137,7 +137,6 @@ def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose
         target_image_crop = Image.alpha_composite(target_image_crop, infrastructure_normal)
         # Overlay overlayshading
         if os.path.isfile(infrastructure_shading_path):
-          print(infrastructure_shading_path)
           infrastructure_shading = Image.open(infrastructure_shading_path).convert("RGBA")
           target_image_crop = blend_overlay(target_image_crop, infrastructure_shading, 192/255)
         # Save 32bpp

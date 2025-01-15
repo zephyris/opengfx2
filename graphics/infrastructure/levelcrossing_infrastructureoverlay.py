@@ -87,11 +87,9 @@ def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", ver
         for i in range(len(road_tile_positions)):
           target_image = alpha_to(road_image, road_tile_positions[i][0], road_tile_positions[i][1], road_tile_positions[i][2], road_tile_positions[i][3], target_image, i * (tile_size // scale + 1) + 1, 1, scale)
         # Overlay overlayalpha
-        print(overlay_alpha_path)
         infrastructure_alpha = Image.open(overlay_alpha_path).convert("RGBA")
         target_image = Image.alpha_composite(target_image, infrastructure_alpha)
         # Overlay crossing lights
-        print(overlay_normal_path)
         infrastructure_normal = Image.open(overlay_normal_path).convert("RGBA")
         target_image = Image.alpha_composite(target_image, infrastructure_normal)
         target_image.save(output_normal_path)
