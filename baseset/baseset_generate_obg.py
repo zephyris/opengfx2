@@ -152,6 +152,7 @@ def generate_obg(base_path, type_string):
     namesuffix = typelong
 
   # define unique short (4 character) names
+  # lower case og, f vs. F for 8bpp vs. 32bpp, x vs X for normal vs. extra zoom
   namelookup = {"8": "ogfx", "8ez": "ogfX", "32": "ogFx", "32ez": "ogFX"}
 
   def pad(string, length, character=" ", pad_left=True):
@@ -174,10 +175,22 @@ def generate_obg(base_path, type_string):
     {"type": "extra", "name": "ogfx2e_extra_" + typeshort}
   ]
 
+  # check for all input files existing
+  all_found = True
+  for file in files:
+    if not os.path.exists(os.path.join(base_path, file["name"] + ".grf")) or not os.path.exists(os.path.join(base_path, file["name"] + ".md5")):
+      print("File " + file["name"] + ".grf not found.")
+      all_found = False
+  if not all_found:
+    # crash and burn
+    sys.exit("Not all files found.")
+
   # check if any of the files corresponding md5 files have been modified since the last time the obg was generated
   for file in files:
     if not update_required:
       if os.path.getmtime(os.path.join(base_path, file["name"] + ".md5")) > os.path.getmtime(obg_path):
+        update_required = True
+      if os.path.getmtime(os.path.join(base_path, file["name"] + ".grf")) > os.path.getmtime(obg_path):
         update_required = True
 
   # write the obg file
@@ -186,7 +199,7 @@ def generate_obg(base_path, type_string):
     return
   with open(obg_path, "w") as obg:
     obg.write("[metadata]" + "\n")
-    pad_length = 12
+    pad_length = 18
     obg.write(pad("name", pad_length, pad_left=False) + "= OpenGFX2 " + namesuffix + "\n")
     obg.write(pad("shortname", pad_length, pad_left=False) + "= " + namelookup[typeshort] + "\n")
     obg.write(pad("version", pad_length, pad_left=False) + "= 6" + "\n")
@@ -209,7 +222,7 @@ def generate_obg(base_path, type_string):
     obg.write("\n")
     obg.write("[files]" + "\n")
     for file in files:
-      obg.write(pad(file["type"], 12, pad_left=False) + "= " + file["name"] + ".grf" + "\n")
+      obg.write(pad(file["type"], 9, pad_left=False) + "= " + file["name"] + ".grf" + "\n")
     obg.write("\n")
     obg.write("[md5s]" + "\n")
     for file in files:
@@ -218,7 +231,7 @@ def generate_obg(base_path, type_string):
       else:
         with open(os.path.join(base_path, file["name"] + ".md5"), "r") as md5_file:
           md5 = md5_file.read()
-      obg.write(pad(file["name"] + ".grf", 26, pad_left=False) + "= " + md5)
+      obg.write(pad(file["name"] + ".grf", 23, pad_left=False) + "= " + md5)
     obg.write("\n")
     obg.write("[origin]" + "\n")
     obg.write("default = Available from the in-game content download system (BaNaNaS) or https://github.com/zephyris/opengfx2/")
