@@ -316,7 +316,7 @@ def custom_dither_file(input_file, suffix="_32bpp.png", verbose=True):
     return False
   
   name = input_file[:-len(suffix)]
-  if check_update_needed([input_file, name+"_palmask.png"], name+"_8bpp.png") or check_update_needed([input_file, name+"_palmask.png"], name+"_bt32bpp.png") or check_update_needed([input_file, name+"_palmask.png"], name+"_rm32bpp.png") or check_self_update(name+"_8bpp.png"):
+  if check_update_needed([input_file, name+"_palmask.png"], name+"_8bpp.png") or check_self_update(name+"_8bpp.png"):
     if verbose == True:
       print("  ", "Converting", os.path.basename(input_file))
     with Image.open(input_file) as image:
