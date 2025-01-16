@@ -10,7 +10,6 @@ from tools import openttd_palettise, check_update_needed
 # makes marked rectangular regions of a sprite sheet identical, one mask image for all _output_ images for a base name
 # for example, preventing dither jitter in animation series, or making near-identical regions identical in ground tiles and similar
 def identical_regions(base_path, mask_path):
-  print(base_path, mask_path)
   suffices = ["_8bpp.png", "_bt32bpp.png", "_rm32bpp.png", "_palmask.png"]
 
   def check_self_update(output_path):
@@ -24,7 +23,7 @@ def identical_regions(base_path, mask_path):
     out_path = base_path + "_idmap" + suffix
     if os.path.isfile(source_path):
       if check_self_update(out_path) or check_update_needed([source_path, mask_path], out_path):
-        print("Processing for", out_path)
+        print("  ", "Generating", os.path.basename(out_path))
         source_image = Image.open(source_path)
         # 8-bit indexed or grayscale image, each value indicates a rectangular region
         # Must be sequentially numbered, indices 1..255 represent regions to make identical, 0 indicates background
@@ -51,7 +50,7 @@ def identical_regions(base_path, mask_path):
         # save modified source_image as output
         source_image.save(out_path)
       else:
-        print("No update needed for", out_path)
+        print("  ", "Skipping", os.path.basename(out_path))
 
 if __name__ == "__main__":
   identical_regions(sys.argv[1], sys.argv[2])

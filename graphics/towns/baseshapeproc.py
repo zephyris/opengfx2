@@ -223,7 +223,7 @@ def buildings_baseshapeproc(scale, climate, snow, base_path, verbose=True):
   index_woodwork = [115, 116, 117]
   for input_file in glob.glob(os.path.join(base_path, "*"+suffix)):
     input_name = os.path.basename(input_file)
-    print("%s in scale %d mode" % (input_file, scale))
+    print(" %s in scale %d mode" % (input_name, scale))
     # check for input file changes
     normal_overlay_name = input_file[:-len(suffix)]+"_base_overlaynormal.png"
     alpha_overlay_name = input_file[:-len(suffix)]+"_base_overlayalpha.png"
