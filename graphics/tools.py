@@ -96,7 +96,7 @@ def openttd_palettise(source):
         target.putpixel((x, y), index)
   return target
 
-def check_update_needed(input_file_list, output_file):
+def check_update_needed(input_file_list, output_file, verbose=False):
   """
   Check whether an output file needs updating, based on date modified and a list of files used to generate the output file.
 
@@ -115,7 +115,8 @@ def check_update_needed(input_file_list, output_file):
         # at least one input is newer than output, needs update
         return True
   # otherwise all up-to-date
-  print("  Skipped, output exists and is up-to-date")
+  if verbose:
+    print("  Skipped, output exists and is up-to-date")
   return False
 
 def color_to_alpha(input, r, g, b):

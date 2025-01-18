@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
-# BUG! Totally broken... Why does openttd_palettise behave weird?
+# Bug: Why does tools openttd_palettise behave weird?
 
 from PIL import Image
 import glob, os, sys
 
 from tools import openttd_palette, check_update_needed
 
-def strict_palettise(source):
+def strict_convert(source):
   """
   Convert an image to an 8-bit palette image with the OpenTTD Windows palette. Converts non-matching pixels to index zero, does not do dithering.
   :param source: Input image, will be treated as RGB.
@@ -39,13 +39,27 @@ def strict_palettise(source):
         target.putpixel((x, y), 0)
   return target
 
-suffix = "_32bpp.png";
-print("Converting to 8-bit")
-for input_file in glob.glob("*"+suffix):
-  name = input_file[:-len(suffix)]
-  if check_update_needed([name+"_32bpp.png"], name+"_8bpp.png"):
-    print(" "+name)
-    with Image.open(input_file) as image:
-      name = input_file[:-len(suffix)]
-      image_8bpp = strict_palettise(image);
-      image_8bpp.save(name+"_8bpp.png", "PNG")
+def strict_convert_directory(base_path):
+  def check_self_update(output_path):
+    if not os.path.exists(output_path): return True
+    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
+    return False
+  
+  suffix = "_32bpp.png";
+  print("Converting to 8-bit")
+  for input_file in glob.glob(os.path.join(base_path, "*"+suffix)):
+    name = input_file[:-len(suffix)]
+    if check_update_needed([name+"_32bpp.png"], name+"_8bpp.png") or check_self_update(name+"_8bpp.png"):
+      print("  ", "Converting", os.path.basename(input_file))
+      with Image.open(input_file) as image:
+        name = input_file[:-len(suffix)]
+        image_8bpp = strict_convert(image);
+        image_8bpp.save(os.path.join(base_path, name+"_8bpp.png"), "PNG")
+    else:
+      print("  ", "Skipping", os.path.basename(input_file))
+
+if __name__ == '__main__':
+  if len(sys.argv) < 2:
+    strict_convert_directory(".")
+  else:
+    strict_convert_directory(sys.argv[1])

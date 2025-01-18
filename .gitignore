@@ -22,3 +22,6 @@ previews/
 
 # blender backups
 *.blend1
+
+# temporary files for pip
+*.tmp
