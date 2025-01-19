@@ -121,7 +121,7 @@ def stations_tunnels_infrastructureoverlay(scale, mode, base_path=".", verbose=T
         name_overlay = os.path.join(base_path, "pygen", infrastructure_key+"tunnels_snow_regions_32bpp.png")
       else:
         name_overlay = os.path.join(base_path, "pygen", infrastructure_key+"tunnels_regions_32bpp.png")
-      name_overlayshading = infrastructure_list[infrastructure_key]+"tunnels_regions_overlayshading.png"
+      name_overlayshading = os.path.join(base_path, infrastructure_list[infrastructure_key]+"tunnels_regions_overlayshading.png")
       output_normal_path = os.path.join(base_path, "pygen", "tunnels_"+infrastructure_key+"_"+terrain_key+"_32bpp.png")
       # Check if update needed
       if check_update_needed([__file__, terrain_image_path, infrastructure_image_path, name_overlay, name_overlayshading], output_normal_path):
@@ -134,8 +134,6 @@ def stations_tunnels_infrastructureoverlay(scale, mode, base_path=".", verbose=T
           target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 0 * (64 + 1) + 1, i * (64 + 1) + (64 - terrain_tile_positions[i][3] + terrain_tile_voffs[i]), scale)
           target_image = paste_to(terrain_image, terrain_tile_positions[i][0], terrain_tile_positions[i][1], terrain_tile_positions[i][2], terrain_tile_positions[i][3], target_image, 1 * (64 + 1) + 1, i * (64+ 1) + (64 - terrain_tile_positions[i][3] + terrain_tile_voffs[i]), scale)
           target_image = alpha_to(infrastructure_image, infrastructure_tile_positions[i][0], infrastructure_tile_positions[i][1], infrastructure_tile_positions[i][2], infrastructure_tile_positions[i][3], target_image, 1 * (64 + 1) + 1, i * (64 + 1) + (64 - infrastructure_tile_positions[i][3] + infra_tile_voffs[i]), scale)
-          # Overlay each infrastructure set11
-          print("  "+infrastructure_key)
           # Overlay overlay_alpha
           overlay_image = Image.open(name_overlay).convert("RGBA")
           target_image = colour_to(overlay_image, 0, 0, output_width, output_height, target_image, 0, 0, scale, 252, 0, 255) # Warning magenta (255, 0, 255) gets change to 252, 0, 255 by building_shapeproc
