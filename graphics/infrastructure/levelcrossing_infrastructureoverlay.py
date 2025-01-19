@@ -10,11 +10,6 @@ def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", ver
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   tile_size = scale * 64
 
   # Road tiles to use
@@ -46,7 +41,13 @@ def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", ver
     "temperate_grass": "temperate_grass",
     "toyland_grass": "toyland_grass",
     "concrete": "general_concrete",
-    "toyland_concrete": "toyland_concrete"
+    "toyland_concrete": "toyland_concrete",
+    "arctic_grass_nogridline": "arctic_grass_nogridline",
+    "arctic_snow_nogridline": "arctic_grass_nogridline",
+    "tropical_grass_nogridline": "tropical_grass_nogridline",
+    "tropical_desert_nogridline": "tropical_desert_nogridline",
+    "temperate_grass_nogridline": "temperate_grass_nogridline",
+    "toyland_grass_nogridline": "toyland_grass_nogridline",
   }
 
   # Output image properties
@@ -75,7 +76,7 @@ def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", ver
       overlay_normal_path = os.path.join(base_path, "levelcrossing_overlaynormal.png")
       output_normal_path = os.path.join(base_path, "pygen", "levelcrossing_road_"+infrastructure_key+"_"+terrain_key+"_32bpp.png")
       output_palmask_path = os.path.join(base_path, "pygen", "levelcrossing_road_"+infrastructure_key+"_"+terrain_key+"_palmask.png")
-      if check_self_update(output_normal_path) or check_update_needed([terrain_image_path, road_image_path, overlay_alpha_path, overlay_normal_path], output_normal_path):
+      if check_update_needed([__file__, terrain_image_path, road_image_path, overlay_alpha_path, overlay_normal_path], output_normal_path):
         print("  ", "Generating", os.path.basename(output_normal_path))
         # Make image containing arranged rail background tiles
         terrain_image = Image.open(terrain_image_path).convert("RGBA")
