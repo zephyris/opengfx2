@@ -36,11 +36,6 @@ def tree_shapeproc(base_path, scale, snow=False, verbose=True):
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   namesuffix = ""
   if snow:
     print("Using snow!")
@@ -121,7 +116,7 @@ def tree_shapeproc(base_path, scale, snow=False, verbose=True):
     for input_file in glob.glob(os.path.join(base_path, "*"+suffix)):
       input_name = os.path.basename(input_file)
       outfile = os.path.join(base_path, "pygen", input_name[:-len(suffix)]+"_"+suffices[suffix]["name"]+namesuffix+"32bpp.png")
-      if check_self_update(outfile) or check_update_needed([input_file], outfile):
+      if check_update_needed([__file__, input_file], outfile):
         print("  ", "Generating", os.path.basename(outfile))
         with Image.open(input_file) as image:
           # Open shape image

@@ -10,11 +10,6 @@ def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   tile_size = scale * 64
 
   # Remapping of tile positions
@@ -104,7 +99,7 @@ def intrastructure_canalriver_terrainoverlay(scale, mode, base_path=".", verbose
       infrastructure_shading_path = os.path.join(base_path, infrastructure_name+"_overlayshading.png")
       output_normal_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_32bpp.png")
       output_palmask_path = os.path.join(base_path, "pygen", infrastructure_key+"_"+terrain_key+"_palmask.png")
-      if check_self_update(output_normal_path) or check_update_needed([terrain_image_path, terrain_palmask_path, infrastructure_alpha_path, infrastructure_normal_path, infrastructure_shading_path], output_normal_path):
+      if check_update_needed([__file__, terrain_image_path, terrain_palmask_path, infrastructure_alpha_path, infrastructure_normal_path, infrastructure_shading_path], output_normal_path):
         print("  Generating", os.path.basename(output_normal_path))
         # Make image containing arranged terrain backgrounds
         terrain_image = Image.open(terrain_image_path)

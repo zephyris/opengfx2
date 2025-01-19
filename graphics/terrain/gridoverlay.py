@@ -10,11 +10,6 @@ def terrain_gridoverlay(scale, base_path=".", verbose=True):
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   tile_size = scale * 64
 
   # Terrain sprites to use
@@ -63,7 +58,7 @@ def terrain_gridoverlay(scale, base_path=".", verbose=True):
     gridline_overlay_path = os.path.join(base_path, "groundtiles_gridlines.png")
     output_grid_path = os.path.join(base_path, "pygen", terrain_key+"_gridline_32bpp.png")
     output_nogrid_path = os.path.join(base_path, "pygen", terrain_key+"_nogridline_32bpp.png")
-    if check_self_update(output_grid_path) or check_update_needed([terrain_image_path, gridline_overlay_path], output_grid_path):
+    if check_update_needed([__file__, terrain_image_path, gridline_overlay_path], output_grid_path):
       print("  ", "Generating", os.path.basename(output_grid_path))
       terrain_image = Image.open(terrain_image_path).convert("RGB")
       # Smooth/dither top edges

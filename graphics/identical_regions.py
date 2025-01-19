@@ -12,17 +12,12 @@ from tools import openttd_palettise, check_update_needed
 def identical_regions(base_path, mask_path):
   suffices = ["_8bpp.png", "_bt32bpp.png", "_rm32bpp.png", "_palmask.png"]
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   # check if update needed
   for suffix in suffices:
     source_path = base_path + suffix
     out_path = base_path + "_idmap" + suffix
     if os.path.isfile(source_path):
-      if check_self_update(out_path) or check_update_needed([source_path, mask_path], out_path):
+      if check_update_needed([__file__, source_path, mask_path], out_path):
         print("  ", "Generating", os.path.basename(out_path))
         source_image = Image.open(source_path)
         # 8-bit indexed or grayscale image, each value indicates a rectangular region

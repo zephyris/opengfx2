@@ -10,11 +10,6 @@ def stations_tunnels_infrastructureoverlay(scale, mode, base_path=".", verbose=T
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   tile_size = scale * 64
 
   if mode == "rail":
@@ -129,7 +124,7 @@ def stations_tunnels_infrastructureoverlay(scale, mode, base_path=".", verbose=T
       name_overlayshading = infrastructure_list[infrastructure_key]+"tunnels_regions_overlayshading.png"
       output_normal_path = os.path.join(base_path, "pygen", "tunnels_"+infrastructure_key+"_"+terrain_key+"_32bpp.png")
       # Check if update needed
-      if os.path.getmtime(__file__) > os.path.getmtime(output_normal_path) or check_update_needed([terrain_image_path, infrastructure_image_path, name_overlay, name_overlayshading], output_normal_path):
+      if check_update_needed([__file__, terrain_image_path, infrastructure_image_path, name_overlay, name_overlayshading], output_normal_path):
         print("  ", "Generating", os.path.basename(output_normal_path))
         # Make image containing arranged infrastructure on and slope backgrounds
         terrain_image = Image.open(terrain_image_path)

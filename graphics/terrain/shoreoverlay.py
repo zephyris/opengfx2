@@ -10,11 +10,6 @@ def terrain_shoreoverlay(scale, mode, base_path=".", verbose=True):
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   tile_size = scale * 64
 
   if mode == "normal":
@@ -48,7 +43,7 @@ def terrain_shoreoverlay(scale, mode, base_path=".", verbose=True):
     output_main_path = os.path.join(base_path, "pygen", terrain_key+"_shoretiles_palmask.png")
     output_palmask_path = os.path.join(base_path, "pygen", terrain_key+"_shoretiles_32bpp.png")
     shoreline_overlay_path = os.path.join(base_path, shoreline_overlay_path)
-    if check_self_update(output_main_path) or check_update_needed([terrain_image_path, shoreline_overlay_path, shoreline_shading_path], output_main_path):
+    if check_update_needed([__file__, terrain_image_path, shoreline_overlay_path, shoreline_shading_path], output_main_path):
       print("  ", "Generating", os.path.basename(output_main_path))
       terrain_image = Image.open(terrain_image_path).convert("RGB")
       shore_image = Image.open(shoreline_overlay_path)

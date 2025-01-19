@@ -10,11 +10,6 @@ def infrastructure_bridge_infrastructureoverlay(scale, mode, base_path=".", verb
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   tile_size = scale * 64
 
   if mode == "bridges" or mode == "bridges_toyland":
@@ -143,7 +138,7 @@ def infrastructure_bridge_infrastructureoverlay(scale, mode, base_path=".", verb
       image_output_path = os.path.join(base_path, "pygen", bridge_key+"_"+infrastructure_key+"_32bpp.png")
       palmask_output_path = os.path.join(base_path, "pygen", bridge_key+"_"+infrastructure_key+"_palmask.png")
       # main image
-      if check_self_update(image_output_path) or check_update_needed([bridge_image_path, bridgemask_image_path, infrastructure_image_path], image_output_path):
+      if check_update_needed([__file__, bridge_image_path, bridgemask_image_path, infrastructure_image_path], image_output_path):
         print("  ", "Generating", os.path.basename(image_output_path))
         # if update is needed
         # Open bridge image

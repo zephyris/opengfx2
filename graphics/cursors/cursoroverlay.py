@@ -10,11 +10,6 @@ def cursors_cursoroverlay(base_path, scale, verbose=True):
   if os.path.isdir(os.path.join(base_path)) == False: os.mkdir(os.path.join(base_path))
   if os.path.isdir(os.path.join(base_path, "pygen")) == False: os.mkdir(os.path.join(base_path, "pygen"))
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   tile_width = 36
   tile_height = 36
   icon_width = 20
@@ -146,7 +141,7 @@ def cursors_cursoroverlay(base_path, scale, verbose=True):
     icon_base_palmask = icon_images_base+"_palmask.png"
     output_name = os.path.join(base_path, "pygen", cursor_key+"_32bpp.png")
     output_name_palmask = os.path.join(base_path, "pygen", cursor_key+"_palmask.png")
-    if check_self_update(output_name) or check_update_needed([cursor_cursor, cursor_icon, cursor_wait, icon_base, icon_base_palmask], output_name):
+    if check_update_needed([__file__, cursor_cursor, cursor_icon, cursor_wait, icon_base, icon_base_palmask], output_name):
       print("  Generating", os.path.basename(output_name))
       # determine size of output image
       max_x = 0

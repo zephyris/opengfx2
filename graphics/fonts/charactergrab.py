@@ -19,11 +19,6 @@ def fonts_charactergrab(base_path):
     if os.path.isdir(os.path.join(base_path, str(scale), "pygen")) == False:
       os.mkdir(os.path.join(base_path, str(scale), "pygen"))
 
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-
   fonts = [
     {
       "name": "medium", # human readable name
@@ -203,7 +198,7 @@ def fonts_charactergrab(base_path):
 
   for charset in charsets:
     print("", charset["name"], "charset")
-    if check_self_update(os.path.join(base_path, charset["path"])) or check_update_needed([os.path.join(base_path, fonts[0]["path"]), os.path.join(base_path, fonts[1]["path"]), os.path.join(base_path, fonts[2]["path"])], os.path.join(base_path, charset["path"])):
+    if check_update_needed([__file__, os.path.join(base_path, fonts[0]["path"]), os.path.join(base_path, fonts[1]["path"]), os.path.join(base_path, fonts[2]["path"])], os.path.join(base_path, charset["path"])):
       print("  ", "Generating", charset["path"])
       nml = open(os.path.join(base_path, charset["path"]+".tmp"), "w")
       for font in fonts:
