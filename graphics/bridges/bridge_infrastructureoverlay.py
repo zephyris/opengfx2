@@ -163,7 +163,7 @@ def infrastructure_bridge_infrastructureoverlay(scale, mode, base_path=".", verb
       else:
         print("  ", "Skipped", os.path.basename(image_output_path))
       # palmask image
-      if check_self_update(palmask_output_path) or check_update_needed([bridge_palmask_path], palmask_output_path):
+      if check_update_needed([__file__, bridge_palmask_path], palmask_output_path):
         print("  ", "Generating", os.path.basename(palmask_output_path))
         # if update is needed
         # Load palmask image, if it exists
