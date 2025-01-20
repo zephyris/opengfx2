@@ -35,7 +35,7 @@ def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", ver
   # Terrain types to use
   terrain_list = {
     "arctic_grass": "arctic_grass",
-    "arctic_snow": "arctic_grass",
+    "arctic_snow": "arctic_snow",
     "tropical_grass": "tropical_grass",
     "tropical_desert": "tropical_desert",
     "temperate_grass": "temperate_grass",
@@ -43,7 +43,7 @@ def infrastructure_levelcrossing_infrastructureoverlay(scale, base_path=".", ver
     "concrete": "general_concrete",
     "toyland_concrete": "toyland_concrete",
     "arctic_grass_nogridline": "arctic_grass_nogridline",
-    "arctic_snow_nogridline": "arctic_grass_nogridline",
+    "arctic_snow_nogridline": "arctic_snow_nogridline",
     "tropical_grass_nogridline": "tropical_grass_nogridline",
     "tropical_desert_nogridline": "tropical_desert_nogridline",
     "temperate_grass_nogridline": "temperate_grass_nogridline",
