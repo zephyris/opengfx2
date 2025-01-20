@@ -111,7 +111,9 @@ def infrastructure_roadrail_terrainoverlay(scale, mode, base_path=".", verbose=T
         "arctic_grass_nogridline": os.path.join("pygen", "arctic_groundtiles_nogridline_32bpp.png"),
         "arctic_snow_nogridline": os.path.join("pygen", "arctic_groundtiles_snow_nogridline_32bpp.png"),
         "temperate_grass_nogridline": os.path.join("pygen", "temperate_groundtiles_nogridline_32bpp.png"),
-        "general_bridge": "general_bridgetiles_32bpp.png"
+        "arctic_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
+        "arctic_desert_nogridline": os.path.join("pygen", "tropical_groundtiles_desert_nogridline_32bpp.png"),
+        "general_bridge": "general_bridgetiles_32bpp.png",
       }
     if mode == "road_noline":
       # Infrastructure sprites to use
@@ -123,7 +125,9 @@ def infrastructure_roadrail_terrainoverlay(scale, mode, base_path=".", verbose=T
         "tropical_grass": os.path.join("pygen", "tropical_groundtiles_gridline_32bpp.png"),
         "tropical_desert": os.path.join("pygen", "tropical_groundtiles_desert_gridline_32bpp.png"),
         "tropical_grass_nogridline": os.path.join("pygen", "tropical_groundtiles_nogridline_32bpp.png"),
-        "tropical_desert_nogridline": os.path.join("pygen", "tropical_groundtiles_desert_nogridline_32bpp.png")
+        "tropical_desert_nogridline": os.path.join("pygen", "tropical_groundtiles_desert_nogridline_32bpp.png"),
+        "tropical_snow": os.path.join("pygen", "arctic_groundtiles_snow_gridline_32bpp.png"),
+        "tropical_snow_nogridline": os.path.join("pygen", "arctic_groundtiles_snow_nogridline_32bpp.png"),
       }
     if mode == "road_toyland":
       # Infrastructure sprites to use

@@ -204,6 +204,14 @@ if (param_gridlines==0 || param_gridlines==2) {
             #32 alternative_sprites(grid_temperate_spr4512d, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/temperate_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 1) }
             //#32 #ez alternative_sprites(grid_temperate_spr4512d, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/temperate_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 2) }
             #32 #ez alternative_sprites(grid_temperate_spr4512d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/temperate_groundtiles_deserttransition_gridline_bt32bpp.png") { template_groundtiles(0, 0, 4) }
+
+            //1351-1369 road snowy terrain
+            replace grid_arctic_spr1351(1351, "../graphics/infrastructure/64/pygen/road_arctic_snow_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
+            //#ez alternative_sprites(grid_arctic_spr1351, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/road_arctic_snow_nogridline_8bpp.png") { template_roadtiles(0, 0, 2) }
+            #ez alternative_sprites(grid_arctic_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_arctic_snow_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
+            #32 alternative_sprites(grid_arctic_spr1351, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_arctic_snow_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 1) }
+            //#32 #ez alternative_sprites(grid_arctic_spr1351, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/road_arctic_snow_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 2) }
+            #32 #ez alternative_sprites(grid_arctic_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_arctic_snow_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 4) }
         }
     }
 
@@ -720,6 +728,25 @@ if (param_gridlines==0 || param_gridlines==2) {
         #ez alternative_sprites(grid_toyland_spr1394, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_toyland_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
         #32 alternative_sprites(grid_toyland_spr1394, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_toyland_grass_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_toyland_grass_8bpp.png") { template_railcrossing(0, 0, 1) }
         #32 #ez alternative_sprites(grid_toyland_spr1394, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_toyland_grass_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_toyland_grass_8bpp.png") { template_railcrossing(0, 0, 4) }
+    }
+
+    // Road markings/no road markings for snow/desert road //
+    if (climate==CLIMATE_ARCTIC && param_grass_arctic==2) {
+        // Tropical (lack of) road markings on snow //
+        //1351-1369 road snowy terrain
+        replace arctic_markings_spr1351(1351, "../graphics/infrastructure/64/pygen/road_tropical_snow_8bpp.png") { template_roadtiles(0, 0, 1) }
+        #ez alternative_sprites(arctic_markings_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_tropical_snow_8bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(arctic_markings_spr1351, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_tropical_snow_bt32bpp.png") { template_roadtiles(0, 0, 1) }
+        #32 #ez alternative_sprites(arctic_markings_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_tropical_snow_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+    }
+
+    if ((climate==CLIMATE_TROPICAL && param_grass_tropical==0) || (climate==CLIMATE_TROPICAL && param_grass_tropical==1)) {
+        // Temperate/Arctic road markings on desert //
+        //1351-1369 road desert terrain
+        replace tropical_markings_spr1351(1351, "../graphics/infrastructure/64/pygen/road_arctic_desert_8bpp.png") { template_roadtiles(0, 0, 1) }
+        #ez alternative_sprites(tropical_markings_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_arctic_desert_8bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(tropical_markings_spr1351, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_arctic_desert_bt32bpp.png") { template_roadtiles(0, 0, 1) }
+        #32 #ez alternative_sprites(tropical_markings_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_arctic_desert_bt32bpp.png") { template_roadtiles(0, 0, 4) }
     }
 }
 
@@ -1577,20 +1604,20 @@ if (param_gridlines==1) {
 
         //Level crossings
         //1378-1381 level crossing rail snowy terrain
-        replace nogrid_temperate_spr1378(1378, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
-        #ez alternative_sprites(nogrid_temperate_spr1378, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
-        #32 alternative_sprites(nogrid_temperate_spr1378, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
-        #32 #ez alternative_sprites(nogrid_temperate_spr1378, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
+        replace nogrid_arctic_spr1378(1378, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
+        #ez alternative_sprites(nogrid_arctic_spr1378, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr1378, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_rail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr1378, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_rail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
         //1390-1393 level crossing monorail snowy terrain
-        replace nogrid_temperate_spr1390(1390, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
-        #ez alternative_sprites(nogrid_temperate_spr1390, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
-        #32 alternative_sprites(nogrid_temperate_spr1390, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
-        #32 #ez alternative_sprites(nogrid_temperate_spr1390, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
+        replace nogrid_arctic_spr1390(1390, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
+        #ez alternative_sprites(nogrid_arctic_spr1390, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr1390, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr1390, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_monorail_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
         //1402-1405 level crossing maglev snowy terrain
-        replace nogrid_temperate_spr1402(1402, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
-        #ez alternative_sprites(nogrid_temperate_spr1402, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
-        #32 alternative_sprites(nogrid_temperate_spr1402, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
-        #32 #ez alternative_sprites(nogrid_temperate_spr1402, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
+        replace nogrid_arctic_spr1402(1402, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
+        #ez alternative_sprites(nogrid_arctic_spr1402, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
+        #32 alternative_sprites(nogrid_arctic_spr1402, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
+        #32 #ez alternative_sprites(nogrid_arctic_spr1402, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_arctic_snow_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
     }
 
     // Tropical desert //
@@ -1674,6 +1701,25 @@ if (param_gridlines==1) {
         #ez alternative_sprites(nogrid_tropical_spr1402, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_tropical_desert_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
         #32 alternative_sprites(nogrid_tropical_spr1402, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_tropical_desert_nogridline_rm32bpp.png", "../graphics/infrastructure/64/pygen/levelcrossing_road_maglev_tropical_desert_nogridline_8bpp.png") { template_railcrossing(0, 0, 1) }
         #32 #ez alternative_sprites(nogrid_tropical_spr1402, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_tropical_desert_nogridline_rm32bpp.png", "../graphics/infrastructure/256/pygen/levelcrossing_road_maglev_tropical_desert_nogridline_8bpp.png") { template_railcrossing(0, 0, 4) }
+    }
+
+    // Road markings/no road markings for snow/desert road //
+    if (climate==CLIMATE_ARCTIC && param_grass_arctic==2) {
+        // Tropical (lack of) road markings on snow //
+        //1351-1369 road snowy terrain
+        replace nogridline_arctic_markings_spr1351(1351, "../graphics/infrastructure/64/pygen/road_tropical_snow_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
+        #ez alternative_sprites(nogridline_arctic_markings_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_tropical_snow_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(nogridline_arctic_markings_spr1351, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_tropical_snow_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 1) }
+        #32 #ez alternative_sprites(nogridline_arctic_markings_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_tropical_snow_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 4) }
+    }
+
+    if ((climate==CLIMATE_TROPICAL && param_grass_tropical==0) || (climate==CLIMATE_TROPICAL && param_grass_tropical==1)) {
+        // Temperate/Arctic road markings on desert //
+        //1351-1369 road desert terrain
+        replace nogridline_tropical_markings_spr1351(1351, "../graphics/infrastructure/64/pygen/road_arctic_desert_nogridline_8bpp.png") { template_roadtiles(0, 0, 1) }
+        #ez alternative_sprites(nogridline_tropical_markings_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/road_arctic_desert_nogridline_8bpp.png") { template_roadtiles(0, 0, 4) }
+        #32 alternative_sprites(nogridline_tropical_markings_spr1351, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/road_arctic_desert_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 1) }
+        #32 #ez alternative_sprites(nogridline_tropical_markings_spr1351, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/road_arctic_desert_nogridline_bt32bpp.png") { template_roadtiles(0, 0, 4) }
     }
 }
 
