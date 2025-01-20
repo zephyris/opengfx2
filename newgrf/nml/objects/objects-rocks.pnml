@@ -14,7 +14,7 @@ spriteset (object_rock_overlay_coasts, "../graphics/terrain/64/general_rockoverl
 #32 alternative_sprites(object_rock_overlay_coasts, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/general_rockoverlay_coasts_alt_rm32bpp.png", "../graphics/terrain/64/general_rockoverlay_coasts_alt_8bpp.png") { template_groundtiles(0, 0, 1) }
 #32 #ez alternative_sprites(object_rock_overlay_coasts, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/general_rockoverlay_coasts_alt_rm32bpp.png", "../graphics/terrain/256/general_rockoverlay_coasts_alt_8bpp.png") { template_groundtiles(0, 0, 4) }
 
-recolour_rocks = reserve_sprites(4);
+recolour_rocks = reserve_sprites(5);
 
 replace(recolour_rocks) {
     // identity
@@ -132,7 +132,7 @@ switch (FEAT_OBJECTS, SELF, procedure_ground_tile_base_index, [
 }
 
 
-// translate slope index of ground tile to cost tile
+// translate slope index of ground tile to coast tile
 switch (FEAT_OBJECTS, SELF, procedure_slope_to_coast_index, [
     LOAD_TEMP(0)
 ]) {
