@@ -40,7 +40,7 @@ baseset/opengfx2_%.obg: baseset/ogfx2c_arctic_%.grf baseset/ogfx2e_extra_%.grf b
 
 # GRF and MD5 for baseset
 .PRECIOUS: baseset/%.grf baseset/%.md5
-baseset/%.grf: baseset/%.nml graphics baseset/lang/*.lng
+baseset/%.grf: baseset/%.nml graphics_4 baseset/lang/*.lng
 	cd baseset && nmlc -p DOS --quiet -c $(notdir $<) --md5 $(basename $(notdir $<)).md5
 
 #baseset/%.md5: baseset/%.nml graphics
@@ -81,7 +81,7 @@ newgrf: newgrf/ogfx2_landscape.grf newgrf/ogfx2_objects.grf newgrf/ogfx2_setting
 
 # GRF for NewGRFs
 .PRECIOUS: newgrf/ogfx2_%.grf
-newgrf/ogfx2_%.grf: newgrf/ogfx2_%.nml graphics newgrf/lang/$(word 2, $(subst _, ,$(basename $(notdir $@))))/*.lng
+newgrf/ogfx2_%.grf: newgrf/ogfx2_%.nml graphics_4 newgrf/lang/%/*.lng
 	$(eval TMP=$(word 2, $(subst _, ,$(basename $(notdir $@)))))
 	cd newgrf && nmlc -p DOS --quiet -c -l lang/$(TMP) $(notdir $<)
 
@@ -99,14 +99,19 @@ dependencies.tmp:
 
 # FORCE as generate_graphics.py will check what updates are necessary
 .PHONY: graphics
-graphics: graphics/fonts/openttd-ttf dependencies.tmp FORCE
-	cd graphics/fonts/openttd-ttf && git pull
-	python3 graphics/generate_graphics.py
+graphics: graphics_4.tmp
+
+.PHONY: graphics_4
+graphics_4: graphics_4.tmp
 
 .PHONY: graphics_1
-graphics_1: graphics/fonts/openttd-ttf install_dependencies.tmp FORCE
+graphics_1: graphics_1.tmp
+
+.PRECIOUS: graphics_%.tmp
+graphics_%.tmp: graphics/fonts/openttd-ttf dependencies.tmp FORCE
 	cd graphics/fonts/openttd-ttf && git pull
-	python3 graphics/generate_graphics.py 1
+	$(eval TMP=$(word 2, $(subst _, ,$(basename $(notdir $@)))))
+	python3 graphics/generate_graphics.py $(TMP)
 
 # Get font git dependencies
 graphics/fonts/openttd-ttf:
