@@ -14,7 +14,7 @@ spriteset (object_rock_overlay_coasts, "../graphics/terrain/64/general_rockoverl
 #32 alternative_sprites(object_rock_overlay_coasts, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/general_rockoverlay_coasts_alt_rm32bpp.png", "../graphics/terrain/64/general_rockoverlay_coasts_alt_8bpp.png") { template_groundtiles(0, 0, 1) }
 #32 #ez alternative_sprites(object_rock_overlay_coasts, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/general_rockoverlay_coasts_alt_rm32bpp.png", "../graphics/terrain/256/general_rockoverlay_coasts_alt_8bpp.png") { template_groundtiles(0, 0, 4) }
 
-recolour_rocks = reserve_sprites(5);
+recolour_rocks = reserve_sprites(6);
 
 replace(recolour_rocks) {
     // identity
@@ -41,6 +41,20 @@ replace(recolour_rocks) {
         0x01..0x04: 0x46;
         0x05: 0x47;
         0x06..0x0F: 0x70..0x79;
+    }
+    // yellow
+    recolour_sprite {
+        0x01: 0x69;
+        0x02: 0x69;
+        0x03: 0x20;
+        0x04: 0x35;
+        0x05: 0x6B;
+        0x06: 0x36;
+        0x07..0x0A: 0x37..0x3A;
+        0x0B: 0x25;
+        0x0C: 0x3B;
+        0x0D..0x0E: 0x26..0x27;
+        0x0F: 0x45;
     }
 }
 
@@ -184,6 +198,11 @@ switch (FEAT_OBJECTS, SELF, switch_object_rock_object5, [
 ]) {
     switch_object_rock_slopes;
 }
+switch (FEAT_OBJECTS, SELF, switch_object_rock_object6, [
+        STORE_TEMP(5, 4)
+]) {
+    switch_object_rock_slopes;
+}
 
 // bypass switches and use flat default ground, set recolour -> 4
 switch (FEAT_OBJECTS, SELF, switch_object_rock_purchase1, [
@@ -218,6 +237,13 @@ switch (FEAT_OBJECTS, SELF, switch_object_rock_purchase5, [
         STORE_TEMP(0, 0),
         STORE_TEMP(GROUNDSPRITE_NORMAL, 1),
         STORE_TEMP(4, 4)
+]) {
+    object_rock_tiles_general;
+}
+switch (FEAT_OBJECTS, SELF, switch_object_rock_purchase6, [
+        STORE_TEMP(0, 0),
+        STORE_TEMP(GROUNDSPRITE_NORMAL, 1),
+        STORE_TEMP(5, 4)
 ]) {
     object_rock_tiles_general;
 }
@@ -339,5 +365,29 @@ item (FEAT_OBJECTS, object_rocks_brown2, 14) {
         additional_text: string(STR_OBJECT_ROCKS_BUY);
         tile_check: CB_RESULT_LOCATION_ALLOW;
         default: switch_object_rock_object5;
+    }
+}
+
+item (FEAT_OBJECTS, object_rocks_yellow, 15) {
+    property {
+        class: "ROCK";
+        classname: string(STR_CLASS_ROCK);
+        name: string(STR_OBJECT_ROCKS_YELLOW);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 4;
+        remove_cost_multiplier: 4;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ON_WATER, OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+        height: 0;
+        num_views: 1;
+    }
+    graphics {
+        purchase: switch_object_rock_purchase6;
+        autoslope: return(CB_RESULT_AUTOSLOPE);
+        additional_text: string(STR_OBJECT_ROCKS_BUY);
+        tile_check: CB_RESULT_LOCATION_ALLOW;
+        default: switch_object_rock_object6;
     }
 }

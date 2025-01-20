@@ -11,6 +11,7 @@ STR_OBJECT_ROCKS_BLACK  :Black rocks
 STR_OBJECT_ROCKS_DARKGRAY:Dark gray rocks
 STR_OBJECT_ROCKS_BROWN1 :Red-brown rocks
 STR_OBJECT_ROCKS_BROWN2 :Brown rocks
+STR_OBJECT_ROCKS_YELLOW :Yellow rocks
 STR_OBJECT_ROCKS_BUY    :Rocky terrain tile. Can be built on land, coasts or sea. Slope and snow-aware.
 
 STR_CLASS_FLD_          :Fields
