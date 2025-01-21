@@ -302,25 +302,16 @@ def make_32bpp_remainder(src8bit, src32bit):
       out32bit.putpixel((x, y), (deltav, deltav, deltav, alpha))
   return out32bit
 
-def custom_dither_directory(input_directory, suffix="_32bpp.png", verbose=True):
-  if verbose == True:
-    print("Dithering directory", input_directory)
-  for input_file in glob.glob(os.path.join(input_directory, "*"+suffix)):
-    # Only process images lacking a *_8bpp output _or_ modified more recently than the *_8bpp output
-    custom_dither_file(input_file, suffix=suffix, verbose=verbose)
-
 def custom_dither_file(input_file, suffix="_32bpp.png", verbose=True):
-  def check_self_update(output_path):
-    if not os.path.exists(output_path): return True
-    if os.path.getmtime(__file__) > os.path.getmtime(output_path): return True
-    return False
-  
+  """
+  Dither a single image file, outputting 8bpp images.
+  Only process images lacking a *_8bpp output _or_ sources/dependencies more recently than the *_8bpp output
+  """
   name = input_file[:-len(suffix)]
-  if check_update_needed([input_file, name+"_palmask.png"], name+"_8bpp.png") or check_self_update(name+"_8bpp.png"):
+  if check_update_needed([__file__, input_file, name+"_palmask.png"], name+"_8bpp.png"):
     if verbose == True:
       print("  ", "Converting", os.path.basename(input_file))
     with Image.open(input_file) as image:
-      width, height = image.size
       if os.path.isfile(name+"_palmask.png"):
         palmask = Image.open(name+"_palmask.png")
       else:
@@ -333,6 +324,15 @@ def custom_dither_file(input_file, suffix="_32bpp.png", verbose=True):
   else:
     if verbose == True:
       print("  ", "Skipping", os.path.basename(input_file))
+
+def custom_dither_directory(input_directory, suffix="_32bpp.png", verbose=True):
+  """
+  Dither all images in a directory with a given suffix, outputting 8bpp images.
+  """
+  if verbose == True:
+    print("Dithering directory", input_directory)
+  for input_file in glob.glob(os.path.join(input_directory, "*"+suffix)):
+    custom_dither_file(input_file, suffix=suffix, verbose=verbose)
 
 if __name__ == '__main__':
   if len(sys.argv) < 2:
