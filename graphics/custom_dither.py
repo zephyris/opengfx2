@@ -4,25 +4,14 @@ from PIL import Image
 import skimage, numpy
 import glob, os, sys
 
-from tools import openttd_palettise, check_update_needed, openttd_palette, openttd_palette_animated, openttd_palette_generalmask, openttd_color_set_start, openttd_color_set_length
+from tools import openttd_palettise, check_update_needed, openttd_palette, openttd_palette_animated, openttd_palette_generalmask, openttd_color_set_start, openttd_color_set_length, openttd_palette_image, palette_image
 
 # Primary conversion function
 # dither_factor is the additional multiplicative factor on error diffusion, use between 0 and 1
 # src and pal are the image to dither and an image defining palette restrictions
 def make_8bpp(src, pal):
   # Setup palette image, used for applying palette quickly
-  def palette_image(r, g, b):
-    palette = []
-    for i in range(len(r)):
-      palette.append(r[i])
-      palette.append(g[i])
-      palette.append(b[i])
-    palimage = Image.new('P', (256, 1))
-    for x in range(256):
-      palimage.putpixel((x, 0), x)
-    palimage.putpalette(palette)
-    return palimage
-  palimage=palette_image(openttd_palette["r"], openttd_palette["g"], openttd_palette["b"])
+  palimage=openttd_palette_image()
 
   if pal is None:
     pal = Image.new("P", (src.size), 0)
