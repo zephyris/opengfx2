@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from PIL import Image
+import skimage, numpy
 import glob, os, sys
 
 from tools import openttd_palettise, check_update_needed, openttd_palette, openttd_palette_animated, openttd_palette_generalmask
@@ -188,6 +189,24 @@ def make_8bpp(src, pal, dither_factor=1):
   # Return result
   return dithered
 
+def find_sprites(src32bit):
+  """
+  Find sprites within a 32bpp spritesheet. Assumes sprite background is (255, 255, 255). Identifies sprites as bounding rectangles of non-(255, 255, 255) areas.
+  Returns a list of (x, y, x+w, y+h) bounds per sprite.
+  """
+  # Handle input image as numpy array, working in RGB
+  src32bit = numpy.array(src32bit.convert("RGB").split())
+  # Mask pure white regions to black, everything else to white
+  mask = numpy.where((src32bit[0] == 255) & (src32bit[1] == 255) & (src32bit[2] == 255), 0, 255).astype(numpy.uint8)
+  # use skimage to find the objects (sprites)
+  lab = skimage.measure.label(mask)
+  table = skimage.measure.regionprops_table(lab, mask, properties=("bbox", "area_bbox"))
+  # parse and return (swapped x and y in skimage)
+  sprites = []
+  for i in range(len(table["bbox-0"])):
+    sprites.append([table["bbox-1"][i], table["bbox-0"][i], table["bbox-3"][i], table["bbox-2"][i]])
+  return sprites
+
 def make_output_parallel_handler(input=input):
   """
   Worker function for make_output_parallel
@@ -247,28 +266,6 @@ def make_output(image, palmask):
   image_bt32bpp = make_bluewhite_transp(image)
   image_rm32bpp = make_32bpp_remainder(image_8bpp, image_bt32bpp)
   return image_8bpp, image_bt32bpp, image_rm32bpp
-
-def find_sprites(src):
-  """
-  Find sprites within a 32bpp spritesheet. Assumes sprite background is (255, 255, 255). Identifies sprites as bounding rectangles of non-(255, 255, 255) areas.
-  Returns a list of (x, y, x+w, y+h) bounds per sprite.
-  """
-  import numpy, skimage
-  w, h = src.size
-  r, g, b = src.convert("RGB").split()
-  # make numpy image with (255, 255, 255)->0 else 1
-  tmp = numpy.asarray(r).astype("int32") + numpy.asarray(g) + numpy.asarray(b)
-  tmp[tmp != 255 * 3] = 0
-  tmp[tmp == 255 * 3] = 255
-  tmp = 255 - tmp
-  # use skimage to find the objects (sprites)
-  lab = skimage.measure.label(tmp)
-  table = skimage.measure.regionprops_table(lab, tmp, properties=("bbox", "area_bbox"))
-  # parse and return (swapped x and y in skimage)
-  sprites = []
-  for i in range(len(table["bbox-0"])):
-    sprites.append([table["bbox-1"][i], table["bbox-0"][i], table["bbox-3"][i], table["bbox-2"][i]])
-  return sprites
 
 def make_bluewhite_transp(src):
   # Make sure src is RGB
