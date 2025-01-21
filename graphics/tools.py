@@ -27,6 +27,12 @@ Palette indices of special colours
 openttd_palette_animated = [227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,245,246,247,248,249,250,251,252,253,254,254]
 openttd_palette_generalmask = [0,255]
 
+"""
+Palette indices of the starts of colour sets and their set lengths
+"""
+openttd_color_set_start = [1, 16, 24, 32, 40, 50, 53, 60, 70, 80, 88, 96, 104, 112, 122, 128, 136, 144, 154, 162, 170, 178, 192, 198, 206]
+openttd_color_set_length = [15, 8, 8, 8, 10, 3, 7, 10, 10, 8, 8, 8, 8, 10, 6, 8, 8, 10, 8, 8, 8, 14, 6, 8, 4]
+
 def palette_image(r, g, b):
   """
   Make a minimal image containing palette values
