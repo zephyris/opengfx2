@@ -8,7 +8,7 @@ from tools import openttd_palettise, check_update_needed, openttd_palette, opent
 # Primary conversion function
 # dither_factor is the additional multiplicative factor on error diffusion, use between 0 and 1
 # src and pal are the image to dither and an image defining palette restrictions
-def make_8bpp(src, pal, dither_factor):
+def make_8bpp(src, pal, dither_factor=1):
   # Define the working palette
   palette_r = openttd_palette["r"]
   palette_g = openttd_palette["g"]
@@ -189,24 +189,24 @@ def make_8bpp(src, pal, dither_factor):
   return dithered
 
 def make_output_parallel_handler(input=input):
-  # input is: image, palmask, dither factor, x, y
+  # input is: image, palmask, x, y
   image_8bpp = make_8bpp(input[0], input[1], input[2])
   image_bt32bpp = make_bluewhite_transp(input[0])
   image_rm32bpp = make_32bpp_remainder(image_8bpp, image_bt32bpp)
-  return [image_8bpp, image_bt32bpp, image_rm32bpp, input[3], input[4]]
+  return [image_8bpp, image_bt32bpp, image_rm32bpp, input[2], input[3]]
 
-def make_output_parallel(image, palmask, factor):
+def make_output_parallel(image, palmask):
   import concurrent, multiprocessing
   from tqdm.auto import tqdm
   sprites = find_sprites(image)
   #setup worklist by cropping sprites from input image
   worklist = []
   for i in range(len(sprites)):
-    # each entry is: image, palmask, dither factor, x, y
+    # each entry is: image, palmask, x, y
     if palmask is not None:
-      worklist.append([image.crop((sprites[i][0], sprites[i][1], sprites[i][2], sprites[i][3])), palmask.crop((sprites[i][0], sprites[i][1], sprites[i][2], sprites[i][3])), factor, sprites[i][0], sprites[i][1]])
+      worklist.append([image.crop((sprites[i][0], sprites[i][1], sprites[i][2], sprites[i][3])), palmask.crop((sprites[i][0], sprites[i][1], sprites[i][2], sprites[i][3])), sprites[i][0], sprites[i][1]])
     else:
-      worklist.append([image.crop((sprites[i][0], sprites[i][1], sprites[i][2], sprites[i][3])), None, factor, sprites[i][0], sprites[i][1]])
+      worklist.append([image.crop((sprites[i][0], sprites[i][1], sprites[i][2], sprites[i][3])), None, sprites[i][0], sprites[i][1]])
   #setup workers based on multiprocess mode
   multiprocess_mode = "process" # process seems to give easily the highest performance
   workers = multiprocessing.cpu_count()
@@ -235,8 +235,8 @@ def make_output_parallel(image, palmask, factor):
     image_rm32bpp.paste(results[i][2], (results[i][3], results[i][4]))
   return image_8bpp, image_bt32bpp, image_rm32bpp
 
-def make_output(image, palmask, factor):
-  image_8bpp = make_8bpp(image, palmask, 1);
+def make_output(image, palmask):
+  image_8bpp = make_8bpp(image, palmask);
   image_bt32bpp = make_bluewhite_transp(image)
   image_rm32bpp = make_32bpp_remainder(image_8bpp, image_bt32bpp)
   return image_8bpp, image_bt32bpp, image_rm32bpp
@@ -325,8 +325,8 @@ def custom_dither_file(input_file, suffix="_32bpp.png", verbose=True):
         palmask = Image.open(name+"_palmask.png")
       else:
         palmask = None
-      image_8bpp, image_bt32bpp, image_rm32bpp = make_output_parallel(image, palmask, 1)
-      #image_8bpp, image_bt32bpp, image_rm32bpp = make_output(image, palmask, 1)
+      image_8bpp, image_bt32bpp, image_rm32bpp = make_output_parallel(image, palmask)
+      #image_8bpp, image_bt32bpp, image_rm32bpp = make_output(image, palmask)
       image_8bpp.save(name+"_8bpp.png", "PNG")
       image_bt32bpp.save(name+"_bt32bpp.png", "PNG")
       image_rm32bpp.save(name+"_rm32bpp.png", "PNG")
