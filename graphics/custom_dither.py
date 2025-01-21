@@ -189,6 +189,32 @@ def make_8bpp(src, pal, dither_factor=1):
   # Return result
   return dithered
 
+def make_white_transp(src32bit):
+  """
+  Uses pure blue pixels from a 32bit image as an alpha mask, making a 32bpp image with blue pixels as transparent.
+  """
+  # Handle input image as numpy array, working in RGB
+  src32bit = numpy.array(src32bit.convert("RGB").split())
+  # Alpha mask from where 32bit image is (0, 0, 255) blue
+  out32bitalpha = numpy.where((src32bit[0] == 0) & (src32bit[1] == 0) & (src32bit[2] == 255), 0, 255).astype(numpy.uint8)
+  # Make RGBA composite
+  return Image.merge("RGBA", (Image.fromarray(src32bit[0]), Image.fromarray(src32bit[1]), Image.fromarray(src32bit[2]), Image.fromarray(out32bitalpha)))
+
+def make_32bpp_remainder(src8bit, src32bit):
+  """
+  Uses a input 32bit image and its 8bit pallete conversion to make 32bpp (but grayscale) map of brightness remainder.
+  Makes an output 32bit image which, when used with the input 8bit image as a mask, inherits hue/sat from 8bit but brightness from input 32bpp.
+  """
+  # Handle input images as numpy arrays, working in RGB
+  src8bit = numpy.array(src8bit.convert("RGB").split())
+  src32bit = numpy.array(src32bit.convert("RGB").split())
+  # Alpha mask from where 8bit image is (0, 0, 255) blue
+  out32bitalpha = numpy.where((src8bit[0] == 0) & (src8bit[1] == 0) & (src8bit[2] == 255), 0, 255).astype(numpy.uint8)
+  # Brightness remainder from value of 32bit image minus value of 8bit image
+  out32bitvalue = (numpy.max(src32bit, axis=0) - numpy.max(src8bit, axis=0) + 128).astype(numpy.uint8)
+  # Combine brightness remainder with alpha mask for output
+  return Image.merge("RGBA", (Image.fromarray(out32bitvalue), Image.fromarray(out32bitvalue), Image.fromarray(out32bitvalue), Image.fromarray(out32bitalpha)))
+
 def find_sprites(src32bit):
   """
   Find sprites within a 32bpp spritesheet. Assumes sprite background is (255, 255, 255). Identifies sprites as bounding rectangles of non-(255, 255, 255) areas.
@@ -213,7 +239,7 @@ def make_output_parallel_handler(input=input):
   """
   # input is: image, palmask, dither factor, x, y
   image_8bpp = make_8bpp(input[0], input[1])
-  image_bt32bpp = make_bluewhite_transp(input[0])
+  image_bt32bpp = make_white_transp(input[0])
   image_rm32bpp = make_32bpp_remainder(image_8bpp, image_bt32bpp)
   return [image_8bpp, image_bt32bpp, image_rm32bpp, input[2], input[3]]
 
@@ -263,48 +289,9 @@ def make_output(image, palmask):
   Dither a 32bpp image, outputting 8bpp images.
   """
   image_8bpp = make_8bpp(image, palmask);
-  image_bt32bpp = make_bluewhite_transp(image)
+  image_bt32bpp = make_white_transp(image)
   image_rm32bpp = make_32bpp_remainder(image_8bpp, image_bt32bpp)
   return image_8bpp, image_bt32bpp, image_rm32bpp
-
-def make_bluewhite_transp(src):
-  # Make sure src is RGB
-  src = src.convert("RGB")
-  # Find pixels in src exactly matching pure blue and make an alpha channel from this mask
-  width, height = src.size
-  a = Image.new("L", (width, height), 255)
-  for x in range(width):
-    for y in range(height):
-      pr, pg, pb = src.getpixel((x, y))
-      if 0 == pr and 0 == pg and 255 == pb:
-        a.putpixel((x, y), 0)
-  # Make RGBA composite
-  r, g, b = src.split()
-  return Image.merge("RGBA", (r, g, b, a))
-
-def make_32bpp_remainder(src8bit, src32bit):
-  """
-  Uses a input 32bit image and its 8bit pallete conversion to make 32bpp (but grayscale) map of brightness remainder.
-  Makes an output 32bit image which, when used with the input 8bit image as a mask, inherits hue/sat from 8bit but brightness from input 32bpp.
-  Preserves alpha channel from 32bit image.
-  """
-  def v(r, g, b):
-    return max(r, g, b)
-
-  src8bit = src8bit.convert("RGBA")
-  src32bit = src32bit.convert("RGBA")
-  out32bit = src32bit.copy()
-  width, height = src32bit.size
-  for x in range(width):
-    for y in range(height):
-      pr8, pg8, pb8, pa8 = src8bit.getpixel((x, y))
-      pr32, pg32, pb32, pa32 = src32bit.getpixel((x, y))
-      deltav = v(pr32, pg32, pb32) - v(pr8, pg8, pb8) + 128
-      alpha = 255
-      if pr8 == 0 and pg8 == 0 and pb8 == 255:
-        alpha = 0
-      out32bit.putpixel((x, y), (deltav, deltav, deltav, alpha))
-  return out32bit
 
 def custom_dither_file(input_file, suffix="_32bpp.png", verbose=True):
   """
