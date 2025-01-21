@@ -4,16 +4,12 @@ from PIL import Image
 import skimage, numpy
 import glob, os, sys
 
-from tools import openttd_palettise, check_update_needed, openttd_palette, openttd_palette_animated, openttd_palette_generalmask
+from tools import openttd_palettise, check_update_needed, openttd_palette, openttd_palette_animated, openttd_palette_generalmask, openttd_color_set_start, openttd_color_set_length
 
 # Primary conversion function
 # dither_factor is the additional multiplicative factor on error diffusion, use between 0 and 1
 # src and pal are the image to dither and an image defining palette restrictions
 def make_8bpp(src, pal):
-  # Define the working palette
-  palette_r = openttd_palette["r"]
-  palette_g = openttd_palette["g"]
-  palette_b = openttd_palette["b"]
   # Setup palette image, used for applying palette quickly
   def palette_image(r, g, b):
     palette = []
@@ -26,27 +22,14 @@ def make_8bpp(src, pal):
       palimage.putpixel((x, 0), x)
     palimage.putpalette(palette)
     return palimage
-  palimage=palette_image(palette_r, palette_g, palette_b)
+  palimage=palette_image(openttd_palette["r"], openttd_palette["g"], openttd_palette["b"])
 
   if pal is None:
     pal = Image.new("P", (src.size), 0)
     pal.putpalette(palimage.getpalette())
 
-  # Setup palette dict for quick lookup
-
-  # Define special palette index sets
-  # Action colours (animated palette indices)
-  colors_action = openttd_palette_animated
-  # Special colours, do not propagate errors through these indices
-  colors_special = openttd_palette_generalmask
   # 'Normal' palette entries, everything expect action colours
-  colors_normal = [x for x in range(256) if x not in colors_action]
-
-  # Palette colour sets
-  # Color set start indices
-  color_set_start = [1, 16, 24, 32, 40, 50, 53, 60, 70, 80, 88, 96, 104, 112, 122, 128, 136, 144, 154, 162, 170, 178, 192, 198, 206]
-  # Color set length
-  color_set_length = [15, 8, 8, 8, 10, 3, 7, 10, 10, 8, 8, 8, 8, 10, 6, 8, 8, 10, 8, 8, 8, 14, 6, 8, 4]
+  colors_normal = [x for x in range(256) if x not in openttd_palette_animated]
 
   width, height = src.size
   # Start by making sure the images are the correct mode
@@ -57,7 +40,7 @@ def make_8bpp(src, pal):
 
   # Dither function
   # Do dithering in RGB space
-  # Do not dither (propagate pixel value errors) to indices in colors_action or colors_special
+  # Do not dither (propagate pixel value errors) to indices in openttd_palette_animated or openttd_palette_generalmask
   # If pal pixel index is in one of the color sets, restrict dithering to only indices in that set
   def make_dithered(src, pal, dither_factor=1, max_error_propagation=16, dither_mode="sierra_lite"):
     # Find colour groups in pal image and make an image recording the color set per pixel
@@ -67,7 +50,7 @@ def make_8bpp(src, pal):
       dist = 255 * 255 * 255
       index = 0
       for i in colors_normal:
-        cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
+        cd = (pr - openttd_palette["r"][i]) * (pr - openttd_palette["r"][i]) + (pg - openttd_palette["g"][i]) * (pg - openttd_palette["g"][i]) + (pb - openttd_palette["b"][i]) * (pb - openttd_palette["b"][i])
         if cd < dist:
           dist = cd
           index = i
@@ -76,33 +59,33 @@ def make_8bpp(src, pal):
     def most_similar_in_color_set(pr, pg, pb, color_set):
       dist = 255 * 255 * 255
       index = 0
-      start_index = color_set_start[color_set]
-      end_index = start_index + color_set_length[color_set]
+      start_index = openttd_color_set_start[color_set]
+      end_index = start_index + openttd_color_set_length[color_set]
       for i in range(start_index, end_index):
-        cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
+        cd = (pr - openttd_palette["r"][i]) * (pr - openttd_palette["r"][i]) + (pg - openttd_palette["g"][i]) * (pg - openttd_palette["g"][i]) + (pb - openttd_palette["b"][i]) * (pb - openttd_palette["b"][i])
         if cd < dist:
           dist = cd
           index = i
       return index
 
     v = [255] * 256
-    for i in range(len(color_set_start)):
-      for j in range(color_set_length[i]):
-        v[color_set_start[i] + j] = i
+    for i in range(len(openttd_color_set_start)):
+      for j in range(openttd_color_set_length[i]):
+        v[openttd_color_set_start[i] + j] = i
     sets_palimg = palette_image(v, v, v)
     sets = pal.copy()
     sets.putpalette(sets_palimg.getpalette())
     sets = sets.convert("L")
     
-    # Find pixels in src exactly matching colors_special and make an image with this mask
+    # Find pixels in src exactly matching openttd_palette_generalmask and make an image with this mask
     # Do not propagate pixel value errors through donotdither pixels with value 255
     width, height = src.size
     donotdither = Image.new("L", (width, height), 0)
     for x in range(width):
       for y in range(height):
         pr, pg, pb = src.getpixel((x, y))
-        for i in range(len(colors_special)):
-          if palette_r[colors_special[i]] == pr and palette_g[colors_special[i]] == pg and palette_b[colors_special[i]] == pb:
+        for i in range(len(openttd_palette_generalmask)):
+          if openttd_palette["r"][openttd_palette_generalmask[i]] == pr and openttd_palette["g"][openttd_palette_generalmask[i]] == pg and openttd_palette["b"][openttd_palette_generalmask[i]] == pb:
             donotdither.putpixel((x, y), 255)
             break
     
@@ -147,9 +130,9 @@ def make_8bpp(src, pal):
             res.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
           # Diffuse errors according to the dithering matrix
           error = [0, 0, 0]
-          error[0] = pr - palette_r[res.getpixel((x, y))]
-          error[1] = pg - palette_g[res.getpixel((x, y))]
-          error[2] = pb - palette_b[res.getpixel((x, y))]
+          error[0] = pr - openttd_palette["r"][res.getpixel((x, y))]
+          error[1] = pg - openttd_palette["g"][res.getpixel((x, y))]
+          error[2] = pb - openttd_palette["b"][res.getpixel((x, y))]
           # Do error propagation
           for b in range(len(da)):
             for a in range(len(da[0])):
@@ -174,11 +157,11 @@ def make_8bpp(src, pal):
   # Dithers in HSV space, restricting colour sets when specified in pal
   dithered = make_dithered(src, pal)
   
-  # Overlay pixels in pal exactly matching indices in colors_action over dithered image
+  # Overlay pixels in pal exactly matching indices in openttd_palette_animated over dithered image
   # Mask from indices
   v = [0] * 255
-  for i in range(len(colors_action)):
-    v[colors_action[i]] = 255
+  for i in range(len(openttd_palette_animated)):
+    v[openttd_palette_animated[i]] = 255
   mask_palimg = palette_image(v, v, v)
   mask = pal.copy()
   mask.putpalette(mask_palimg.getpalette())
