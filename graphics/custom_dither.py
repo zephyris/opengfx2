@@ -9,30 +9,29 @@ from tools import openttd_palettise, check_update_needed, openttd_palette, opent
 # Primary conversion function
 # dither_factor is the additional multiplicative factor on error diffusion, use between 0 and 1
 # src and pal are the image to dither and an image defining palette restrictions
-def make_8bpp(src, pal):
+def make_8bpp(src32bpp, palmask):
   # Setup palette image, used for applying palette quickly
   palimage=openttd_palette_image()
 
-  if pal is None:
-    pal = Image.new("P", (src.size), 0)
-    pal.putpalette(palimage.getpalette())
+  if palmask is None:
+    palmask = Image.new("P", (src32bpp.size), 0)
+    palmask.putpalette(palimage.getpalette())
 
   # 'Normal' palette entries, everything expect action colours
   colors_normal = [x for x in range(256) if x not in openttd_palette_animated]
 
-  width, height = src.size
   # Start by making sure the images are the correct mode
   # Source must be RGB (no alpha)
-  src = src.convert("RGB")
+  src32bpp = src32bpp.convert("RGB")
   # Palette must be 8-bit with OpenTTD palette
-  pal = openttd_palettise(pal)
+  palmask = openttd_palettise(palmask)
 
   # Dither function
   # Do dithering in RGB space
   # Do not dither (propagate pixel value errors) to indices in openttd_palette_animated or openttd_palette_generalmask
-  # If pal pixel index is in one of the color sets, restrict dithering to only indices in that set
-  def make_dithered(src, pal, dither_factor=1, max_error_propagation=16, dither_mode="sierra_lite"):
-    # Find colour groups in pal image and make an image recording the color set per pixel
+  # If palmask pixel index is in one of the color sets, restrict dithering to only indices in that set
+  def make_dithered(src32bpp, palmask, dither_factor=1, max_error_propagation=16, dither_mode="sierra_lite"):
+    # Find colour groups in palmask image and make an image recording the color set per pixel
     # If sets pixel is not 255 then dithering is restricted to indices in color_set[pixel value]
 
     def most_similar_in_palette(pr, pg, pb):
@@ -62,17 +61,17 @@ def make_8bpp(src, pal):
       for j in range(openttd_color_set_length[i]):
         v[openttd_color_set_start[i] + j] = i
     sets_palimg = palette_image(v, v, v)
-    sets = pal.copy()
+    sets = palmask.copy()
     sets.putpalette(sets_palimg.getpalette())
     sets = sets.convert("L")
     
-    # Find pixels in src exactly matching openttd_palette_generalmask and make an image with this mask
+    # Find pixels in src32bpp exactly matching openttd_palette_generalmask and make an image with this mask
     # Do not propagate pixel value errors through donotdither pixels with value 255
-    width, height = src.size
+    width, height = src32bpp.size
     donotdither = Image.new("L", (width, height), 0)
     for x in range(width):
       for y in range(height):
-        pr, pg, pb = src.getpixel((x, y))
+        pr, pg, pb = src32bpp.getpixel((x, y))
         for i in range(len(openttd_palette_generalmask)):
           if openttd_palette["r"][openttd_palette_generalmask[i]] == pr and openttd_palette["g"][openttd_palette_generalmask[i]] == pg and openttd_palette["b"][openttd_palette_generalmask[i]] == pb:
             donotdither.putpixel((x, y), 255)
@@ -100,28 +99,27 @@ def make_8bpp(src, pal):
       ]
     
     # Do dithering
-    # TODO?: Change to dithering in HSV space, with error propogation factors of h, s, v = 0, 0.8, 1.0
-    res = Image.new("P", (src.size))
-    res.putpalette(palimage.getpalette())
+    res8bpp = Image.new("P", (src32bpp.size))
+    res8bpp.putpalette(palimage.getpalette())
     for y in range(height):
       for x in range(width):
-        pr, pg, pb = src.getpixel((x, y))
+        pr, pg, pb = src32bpp.getpixel((x, y))
         if donotdither.getpixel((x, y)) == 255:
           # Do not dither this pixel, just set nearest value
-          res.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
+          res8bpp.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
         else:
           # Dither this pixel
           if sets.getpixel((x, y)) != 255:
             # Dither this pixel within a color set
-            res.putpixel((x, y), most_similar_in_color_set(pr, pg, pb, sets.getpixel((x, y))))
+            res8bpp.putpixel((x, y), most_similar_in_color_set(pr, pg, pb, sets.getpixel((x, y))))
           else:
             # Dither this pixel to any color
-            res.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
+            res8bpp.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
           # Diffuse errors according to the dithering matrix
           error = [0, 0, 0]
-          error[0] = pr - openttd_palette["r"][res.getpixel((x, y))]
-          error[1] = pg - openttd_palette["g"][res.getpixel((x, y))]
-          error[2] = pb - openttd_palette["b"][res.getpixel((x, y))]
+          error[0] = pr - openttd_palette["r"][res8bpp.getpixel((x, y))]
+          error[1] = pg - openttd_palette["g"][res8bpp.getpixel((x, y))]
+          error[2] = pb - openttd_palette["b"][res8bpp.getpixel((x, y))]
           # Do error propagation
           for b in range(len(da)):
             for a in range(len(da[0])):
@@ -131,32 +129,32 @@ def make_8bpp(src, pal):
                 if donotdither.getpixel((x, y)) != 255:
                   # Do not propagate errors through pixels identified as donotdither
                   # Alter pixel value to propagate errors
-                  pcr, pcg, pcb = src.getpixel((x + a - dox, y + b - doy))
+                  pcr, pcg, pcb = src32bpp.getpixel((x + a - dox, y + b - doy))
                   pcr = int(pcr + error[0] * dither_factor * da[b][a] / df)
                   pcg = int(pcg + error[1] * dither_factor * da[b][a] / df)
                   pcb = int(pcb + error[2] * dither_factor * da[b][a] / df)
-                  src.putpixel((x + a - dox, y + b - doy), (pcr, pcg, pcb))
+                  src32bpp.putpixel((x + a - dox, y + b - doy), (pcr, pcg, pcb))
                   # Clamp propagated error to a maximum of 16 per channel
                   error = [min(error[0], max_error_propagation), min(error[1], max_error_propagation), min(error[2], max_error_propagation)]
 
     # Return result
-    return res
+    return res8bpp
   
-  # Convert src to 8-bit with OpenTTD palette using custom dithering
-  # Dithers in HSV space, restricting colour sets when specified in pal
-  dithered = make_dithered(src, pal)
+  # Convert src32bpp to 8-bit with OpenTTD palette using custom dithering
+  # Dithers in HSV space, restricting colour sets when specified in palmask
+  dithered = make_dithered(src32bpp, palmask)
   
-  # Overlay pixels in pal exactly matching indices in openttd_palette_animated over dithered image
+  # Overlay pixels in palmask exactly matching indices in openttd_palette_animated over dithered image
   # Mask from indices
   v = [0] * 255
   for i in range(len(openttd_palette_animated)):
     v[openttd_palette_animated[i]] = 255
   mask_palimg = palette_image(v, v, v)
-  mask = pal.copy()
+  mask = palmask.copy()
   mask.putpalette(mask_palimg.getpalette())
   mask = mask.convert("L")
   # Paste using mask
-  dithered.paste(pal, (0, 0), mask)
+  dithered.paste(palmask, (0, 0), mask)
   
   # Return result
   return dithered
