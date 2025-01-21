@@ -236,6 +236,9 @@ def make_output_parallel(image, palmask):
   return image_8bpp, image_bt32bpp, image_rm32bpp
 
 def make_output(image, palmask):
+  """
+  Dither a 32bpp image, outputting 8bpp images.
+  """
   image_8bpp = make_8bpp(image, palmask);
   image_bt32bpp = make_bluewhite_transp(image)
   image_rm32bpp = make_32bpp_remainder(image_8bpp, image_bt32bpp)
