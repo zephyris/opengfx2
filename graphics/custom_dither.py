@@ -189,13 +189,20 @@ def make_8bpp(src, pal, dither_factor=1):
   return dithered
 
 def make_output_parallel_handler(input=input):
-  # input is: image, palmask, x, y
-  image_8bpp = make_8bpp(input[0], input[1], input[2])
+  """
+  Worker function for make_output_parallel
+  """
+  # input is: image, palmask, dither factor, x, y
+  image_8bpp = make_8bpp(input[0], input[1])
   image_bt32bpp = make_bluewhite_transp(input[0])
   image_rm32bpp = make_32bpp_remainder(image_8bpp, image_bt32bpp)
   return [image_8bpp, image_bt32bpp, image_rm32bpp, input[2], input[3]]
 
 def make_output_parallel(image, palmask):
+  """
+  Dither a 32bpp image, outputting 8bpp images.
+  Uses multiprocessing to parallelize the dithering process of sprites within the spritesheet.
+  """
   import concurrent, multiprocessing
   from tqdm.auto import tqdm
   sprites = find_sprites(image)
@@ -211,14 +218,11 @@ def make_output_parallel(image, palmask):
   multiprocess_mode = "process" # process seems to give easily the highest performance
   workers = multiprocessing.cpu_count()
   if multiprocess_mode is None:
-    # run in a single thread, still use the ThreadPoolExecutor since that's equivalent
     Executor = concurrent.futures.ThreadPoolExecutor
     workers = 1
   elif multiprocess_mode == "process":
-    # setup executor as a process pool
     Executor = concurrent.futures.ProcessPoolExecutor
   elif multiprocess_mode == "thread":
-    # setup executor as a thread pool
     Executor = concurrent.futures.ThreadPoolExecutor
   #process
   with Executor(workers) as executor:
