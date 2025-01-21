@@ -9,7 +9,7 @@ from tools import openttd_palettise, check_update_needed, openttd_palette, opent
 # Primary conversion function
 # dither_factor is the additional multiplicative factor on error diffusion, use between 0 and 1
 # src and pal are the image to dither and an image defining palette restrictions
-def make_8bpp(src, pal, dither_factor=1):
+def make_8bpp(src, pal):
   # Define the working palette
   palette_r = openttd_palette["r"]
   palette_g = openttd_palette["g"]
@@ -55,35 +55,35 @@ def make_8bpp(src, pal, dither_factor=1):
   # Palette must be 8-bit with OpenTTD palette
   pal = openttd_palettise(pal)
 
-  def most_similar_in_palette(pr, pg, pb):
-    dist = 255 * 255 * 255
-    index = 0
-    for i in colors_normal:
-      cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
-      if cd < dist:
-        dist = cd
-        index = i
-    return index
-
-  def most_similar_in_color_set(pr, pg, pb, color_set):
-    dist = 255 * 255 * 255
-    index = 0
-    start_index = color_set_start[color_set]
-    end_index = start_index + color_set_length[color_set]
-    for i in range(start_index, end_index):
-      cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
-      if cd < dist:
-        dist = cd
-        index = i
-    return index
-
   # Dither function
   # Do dithering in RGB space
   # Do not dither (propagate pixel value errors) to indices in colors_action or colors_special
   # If pal pixel index is in one of the color sets, restrict dithering to only indices in that set
-  def make_dithered(src, pal, dither_factor):
+  def make_dithered(src, pal, dither_factor=1, max_error_propagation=16, dither_mode="sierra_lite"):
     # Find colour groups in pal image and make an image recording the color set per pixel
     # If sets pixel is not 255 then dithering is restricted to indices in color_set[pixel value]
+
+    def most_similar_in_palette(pr, pg, pb):
+      dist = 255 * 255 * 255
+      index = 0
+      for i in colors_normal:
+        cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
+        if cd < dist:
+          dist = cd
+          index = i
+      return index
+
+    def most_similar_in_color_set(pr, pg, pb, color_set):
+      dist = 255 * 255 * 255
+      index = 0
+      start_index = color_set_start[color_set]
+      end_index = start_index + color_set_length[color_set]
+      for i in range(start_index, end_index):
+        cd = (pr - palette_r[i]) * (pr - palette_r[i]) + (pg - palette_g[i]) * (pg - palette_g[i]) + (pb - palette_b[i]) * (pb - palette_b[i])
+        if cd < dist:
+          dist = cd
+          index = i
+      return index
 
     v = [255] * 256
     for i in range(len(color_set_start)):
@@ -107,24 +107,25 @@ def make_8bpp(src, pal, dither_factor=1):
             break
     
     # Dither settings
-    # Sierra http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
-    #dox = 2
-    #doy = 0
-    #df = 32
-    #da = [
-    #  [-1, -1, -1,  5,  3],
-    #  [ 2,  4,  5,  4,  2],
-    #  [ 0,  2,  3,  2,  0]
-    #]
-    
-    # Sierra lite http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
-    dox = 1
-    doy = 0
-    df = 4
-    da = [
-      [-1, -1,  2],
-      [ 1,  1,  0]
-    ]
+    if dither_mode == "sierra":
+      # Sierra http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
+      dox = 2
+      doy = 0
+      df = 32
+      da = [
+        [-1, -1, -1,  5,  3],
+        [ 2,  4,  5,  4,  2],
+        [ 0,  2,  3,  2,  0]
+      ]
+    elif dither_mode == "sierra_lite":
+      # Sierra lite http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/
+      dox = 1
+      doy = 0
+      df = 4
+      da = [
+        [-1, -1,  2],
+        [ 1,  1,  0]
+      ]
     
     # Do dithering
     # TODO?: Change to dithering in HSV space, with error propogation factors of h, s, v = 0, 0.8, 1.0
@@ -164,15 +165,14 @@ def make_8bpp(src, pal, dither_factor=1):
                   pcb = int(pcb + error[2] * dither_factor * da[b][a] / df)
                   src.putpixel((x + a - dox, y + b - doy), (pcr, pcg, pcb))
                   # Clamp propagated error to a maximum of 16 per channel
-                  maxerror = 16
-                  error = [min(error[0], maxerror), min(error[1], maxerror), min(error[2], maxerror)]
+                  error = [min(error[0], max_error_propagation), min(error[1], max_error_propagation), min(error[2], max_error_propagation)]
 
     # Return result
     return res
   
   # Convert src to 8-bit with OpenTTD palette using custom dithering
   # Dithers in HSV space, restricting colour sets when specified in pal
-  dithered = make_dithered(src, pal, dither_factor)
+  dithered = make_dithered(src, pal)
   
   # Overlay pixels in pal exactly matching indices in colors_action over dithered image
   # Mask from indices
