@@ -104,7 +104,10 @@ def make_8bpp(src32bpp, palmask):
     for y in range(height):
       for x in range(width):
         pr, pg, pb = src32bpp.getpixel((x, y))
-        if donotdither.getpixel((x, y)) == 255:
+        if pr == 0 and pg == 0 and pb == 255:
+          # Fast processing of pure blue pixels
+          res8bpp.putpixel((x, y), 0)
+        elif donotdither.getpixel((x, y)) == 255:
           # Do not dither this pixel, just set nearest value
           res8bpp.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
         else:
