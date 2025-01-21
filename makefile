@@ -40,7 +40,7 @@ baseset/opengfx2_%.obg: baseset/ogfx2c_arctic_%.grf baseset/ogfx2e_extra_%.grf b
 
 # GRF and MD5 for baseset
 .PRECIOUS: baseset/%.grf baseset/%.md5
-baseset/%.grf: baseset/%.nml graphics_4 baseset/lang/*.lng
+baseset/%.grf: baseset/%.nml graphics_4.tmp baseset/lang/*.lng
 	cd baseset && nmlc -p DOS --quiet -c $(notdir $<) --md5 $(basename $(notdir $<)).md5
 
 #baseset/%.md5: baseset/%.nml graphics
@@ -81,7 +81,7 @@ newgrf: newgrf/ogfx2_landscape.grf newgrf/ogfx2_objects.grf newgrf/ogfx2_setting
 
 # GRF for NewGRFs
 .PRECIOUS: newgrf/ogfx2_%.grf
-newgrf/ogfx2_%.grf: newgrf/ogfx2_%.nml graphics_4 newgrf/lang/%/*.lng
+newgrf/ogfx2_%.grf: newgrf/ogfx2_%.nml graphics_4.tmp newgrf/lang/%/*.lng
 	$(eval TMP=$(word 2, $(subst _, ,$(basename $(notdir $@)))))
 	cd newgrf && nmlc -p DOS --quiet -c -l lang/$(TMP) $(notdir $<)
 
