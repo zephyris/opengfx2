@@ -92,10 +92,15 @@ newgrf/ogfx2_%.nml: newgrf/ogfx2_%.pnml templates/nml_preprocessor.py FORCE
 
 # Graphics
 # Python generation of all graphics from PNG sources
+dependencies: dependencies.tmp
+
 .PRECIOUS: dependencies.tmp
 dependencies.tmp:
 	python3 install_dependencies.py
 	python3 -m pip freeze > dependencies.tmp
+
+clean_dependencies:
+	rm -f dependencies.tmp
 
 # FORCE as generate_graphics.py will check what updates are necessary
 .PHONY: graphics
@@ -108,7 +113,7 @@ graphics_4: graphics_4.tmp
 graphics_1: graphics_1.tmp
 
 .PRECIOUS: graphics_%.tmp
-graphics_%.tmp: graphics/fonts/openttd-ttf dependencies.tmp FORCE
+graphics_%.tmp: graphics/fonts/openttd-ttf FORCE
 	cd graphics/fonts/openttd-ttf && git pull
 	$(eval TMP=$(word 2, $(subst _, ,$(basename $(notdir $@)))))
 	python3 graphics/generate_graphics.py $(TMP)
@@ -136,7 +141,6 @@ clean_newgrf:
 # Clean graphics
 .PHONY: clean_graphics
 clean_graphics:
-	rm -f dependencies.tmp
 	rm -f graphics*.tmp
 	find graphics -type d -name "pygen" -exec rm -rf {} +
 	find graphics -type f -name "*_8bpp.png" -exec rm {} +
