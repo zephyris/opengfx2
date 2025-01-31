@@ -219,5 +219,5 @@ template template_manager_faces(z) {
 
 //805-989 faces
 base_graphics spr805( 805, "../graphics/icons/1/manager_faces_8bpp.png") { template_manager_faces(1) }
-#32 alternative_sprites (spr805, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/icons/1/manager_faces_cbt32bpp.png") { template_manager_faces(1) }
-#32 #ez alternative_sprites (spr805, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/icons/2/manager_faces_cbt32bpp.png") { template_manager_faces(2) }
+#32 alternative_sprites (spr805, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/icons/1/manager_faces_cbt32bpp.png", "../graphics/icons/1/manager_faces_cpalmask.png") { template_manager_faces(1) }
+#32 #ez alternative_sprites (spr805, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/icons/2/manager_faces_cbt32bpp.png", "../graphics/icons/2/manager_faces_cpalmask.png") { template_manager_faces(2) }
