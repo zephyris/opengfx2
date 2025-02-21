@@ -1,21 +1,21 @@
 //601-753 road vehicles (only generation)
 base_graphics spr601(601, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 0, 1) } // Ploddyphut bus
-base_graphics spr609(609, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 1, 1) } // Sugar truck unloaded
-base_graphics spr617(617, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 1, 1) } // Sugar truck loaded
-base_graphics spr625(625, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 2, 1) } // cola truck unloaded
-base_graphics spr633(633, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 2, 1) } // cola truck loaded
+base_graphics spr609(609, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 2, 1) } // Sugar truck unloaded
+base_graphics spr617(617, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 2, 1) } // Sugar truck loaded
+base_graphics spr625(625, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 6, 1) } // cola truck unloaded
+base_graphics spr633(633, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 6, 1) } // cola truck loaded
 base_graphics spr641(641, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 3, 1) } // cotton candy truck unloaded
 base_graphics spr649(649, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 3, 1) } // cotton candy truck loaded
 base_graphics spr657(657, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 4, 1) } // toffee truck unloaded
 base_graphics spr665(665, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 4, 1) } // toffee truck loaded
-base_graphics spr673(673, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 5, 1) } // toy truck
-base_graphics spr681(681, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 6, 1) } // mail truck
-base_graphics spr689(689, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 7, 1) } // sweets truck
-base_graphics spr697(697, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 8, 1) } // battery truck unloaded
-base_graphics spr705(705, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 8, 1) } // battery truck loaded
-base_graphics spr713(713, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 9, 1) } // fizzy drinks truck unloaded
-base_graphics spr721(721, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 9, 1) } // fizzy drinks truck loaded
-base_graphics spr729(729, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 10, 1) } // plastics truck unloaded
-base_graphics spr737(737, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 10, 1) } // plastics truck loaded
-base_graphics spr745(745, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 11, 1) } // bubble truck unloaded
-base_graphics spr753(753, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 11, 1) } // bubble truck loaded
+base_graphics spr673(673, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 7, 1) } // toy truck
+base_graphics spr681(681, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 1, 1) } // mail truck
+base_graphics spr689(689, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 8, 1) } // sweets truck
+base_graphics spr697(697, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 9, 1) } // battery truck unloaded
+base_graphics spr705(705, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 9, 1) } // battery truck loaded
+base_graphics spr713(713, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 10, 1) } // fizzy drinks truck unloaded
+base_graphics spr721(721, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 10, 1) } // fizzy drinks truck loaded
+base_graphics spr729(729, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 11, 1) } // plastics truck unloaded
+base_graphics spr737(737, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 11, 1) } // plastics truck loaded
+base_graphics spr745(745, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(0, 5, 1) } // bubble truck unloaded
+base_graphics spr753(753, "../graphics/vehicles/64/road_toyland_8bpp.png") { template_vehicle_road_8view(1, 5, 1) } // bubble truck loaded
