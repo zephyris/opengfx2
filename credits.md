@@ -9,6 +9,7 @@ With contributions by:
 | ----------------- | --------------------- |
 | MasterOktagon     | N/A                   |
 | J-PIE-314         | N/A                   |
+| SosMakaroni       | N/A                   |
 
 OpenGFX was created by the following people (in reverse alphabetical order):
 
