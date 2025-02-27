@@ -1,0 +1,267 @@
+switch (FEAT_ROADVEHS, SELF, switch_tram_articulation_vfx, position_in_articulated_veh) {
+    0: visual_effect(VISUAL_EFFECT_ELECTRIC, 0);
+    return visual_effect(VISUAL_EFFECT_DISABLE, 0);
+}
+
+//gen1
+spriteset (spriteset_tram_gen1_pos0, "../graphics/vehicles/64/tram_passenger_8bpp.png") {
+    template_vehicle_road_8view(0, 0, 1)
+}
+
+spritegroup spritegroup_tram_gen1_pos0 {
+    loaded: [spriteset_tram_gen1_pos0];
+    loading: [spriteset_tram_gen1_pos0];
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_tram_gen1_articulation, extra_callback_info1) {
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_ROADVEHS, item_tram_gen1) {
+    property {
+        name: string(STR_TRAM_NAME_GEN1);
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1948,01,01);
+        model_life: 40;
+        // default retire_early
+        vehicle_life: 15;
+        reliability_decay: 20;
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        default_cargo_type: PASS;
+        loading_speed: 5;
+        cost_factor: 120;
+        running_cost_factor: 100;
+        // default cargo_age_period
+
+        sprite_id: SPRITE_ID_NEW_ROADVEH;
+        speed: 40 km/h;
+        misc_flags: bitmask(ROADVEH_FLAG_TRAM);
+        refit_cost: 0;
+        running_cost_base: RUNNING_COST_ROADVEH;
+        power: 82 hp;
+        weight: 21 ton;
+        /* tractive_effort_coefficient and air_drag_coefficient is left at default */
+        cargo_capacity: 26;
+        sound_effect: 0xFF;
+        visual_effect: visual_effect(VISUAL_EFFECT_ELECTRIC, 0);
+        length: 8;
+    }
+
+    graphics {
+        visual_effect: switch_tram_articulation_vfx;
+        articulated_part: switch_tram_gen1_articulation;
+        default: spritegroup_tram_gen1_pos0;
+    }
+}
+
+//gen2
+spriteset (spriteset_tram_gen2_pos0, "../graphics/vehicles/64/tram_passenger_8bpp.png") {
+    template_vehicle_road_8view(0, 1, 1)
+}
+spriteset (spriteset_tram_gen2_pos1, "../graphics/vehicles/64/tram_passenger_8bpp.png") {
+    template_vehicle_road_8view(2, 1, 1)
+}
+
+spritegroup spritegroup_tram_gen2_pos0 {
+    loaded: [spriteset_tram_gen2_pos0];
+    loading: [spriteset_tram_gen2_pos0];
+}
+spritegroup spritegroup_tram_gen2_pos1 {
+    loaded: [spriteset_tram_gen2_pos1];
+    loading: [spriteset_tram_gen2_pos1];
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_tram_gen2_graphics, position_in_articulated_veh % 2) {
+    0: return spritegroup_tram_gen2_pos0;
+    1: return spritegroup_tram_gen2_pos1;
+    return spritegroup_tram_gen2_pos0;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_tram_gen2_articulation, extra_callback_info1) {
+    0..1: return item_tram_gen2;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_ROADVEHS, item_tram_gen2) {
+    property {
+        name: string(STR_TRAM_NAME_GEN2);
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1978,01,01);
+        model_life: 40;
+        // default retire_early
+        vehicle_life: 15;
+        reliability_decay: 20;
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        default_cargo_type: PASS;
+        loading_speed: 7;
+        cost_factor: 190;
+        running_cost_factor: 190;
+        // default cargo_age_period
+
+        sprite_id: SPRITE_ID_NEW_ROADVEH;
+        speed: 40 km/h;
+        misc_flags: bitmask(ROADVEH_FLAG_TRAM);
+        refit_cost: 0;
+        running_cost_base: RUNNING_COST_ROADVEH;
+        power: 120 hp;
+        weight: 34 ton;
+        /* tractive_effort_coefficient and air_drag_coefficient is left at default */
+        cargo_capacity: 28;
+        sound_effect: 0xFF;
+        visual_effect: visual_effect(VISUAL_EFFECT_ELECTRIC, 0);
+        length: 8;
+    }
+
+    graphics {
+        visual_effect: switch_tram_articulation_vfx;
+        articulated_part: switch_tram_gen2_articulation;
+        default: switch_tram_gen2_graphics;
+    }
+}
+
+// gen3
+spriteset (spriteset_tram_gen3_pos0, "../graphics/vehicles/64/tram_passenger_8bpp.png") {
+    template_vehicle_road_8view(0, 2, 1)
+}
+spriteset (spriteset_tram_gen3_pos1, "../graphics/vehicles/64/tram_passenger_8bpp.png") {
+    template_vehicle_road_8view(1, 2, 1)
+}
+spriteset (spriteset_tram_gen3_pos2, "../graphics/vehicles/64/tram_passenger_8bpp.png") {
+    template_vehicle_road_8view(2, 2, 1)
+}
+
+spritegroup spritegroup_tram_gen3_pos0 {
+    loaded: [spriteset_tram_gen3_pos0];
+    loading: [spriteset_tram_gen3_pos0];
+}
+spritegroup spritegroup_tram_gen3_pos1 {
+    loaded: [spriteset_tram_gen3_pos1];
+    loading: [spriteset_tram_gen3_pos1];
+}
+spritegroup spritegroup_tram_gen3_pos2 {
+    loaded: [spriteset_tram_gen3_pos2];
+    loading: [spriteset_tram_gen3_pos2];
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_tram_gen3_graphics, position_in_articulated_veh % 3) {
+    0: return spritegroup_tram_gen3_pos0;
+    1: return spritegroup_tram_gen3_pos1;
+    2: return spritegroup_tram_gen3_pos2;
+    return spritegroup_tram_gen3_pos0;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_tram_gen3_articulation, extra_callback_info1) {
+    0..2: return item_tram_gen3;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_ROADVEHS, item_tram_gen3) {
+    property {
+        name: string(STR_TRAM_NAME_GEN3);
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1996,01,01);
+        model_life: 40;
+        // default retire_early
+        vehicle_life: 19;
+        reliability_decay: 20;
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        default_cargo_type: PASS;
+        loading_speed: 8;
+        cost_factor: 230;
+        running_cost_factor: 230;
+        // default cargo_age_period
+
+        sprite_id: SPRITE_ID_NEW_ROADVEH;
+        speed: 40 km/h;
+        misc_flags: bitmask(ROADVEH_FLAG_TRAM);
+        refit_cost: 0;
+        running_cost_base: RUNNING_COST_ROADVEH;
+        power: 160 hp;
+        weight: 46 ton;
+        /* tractive_effort_coefficient and air_drag_coefficient is left at default */
+        cargo_capacity: 30;
+        sound_effect: 0xFF;
+        visual_effect: visual_effect(VISUAL_EFFECT_ELECTRIC, 0);
+        length: 8;
+    }
+
+    graphics {
+        visual_effect: switch_tram_articulation_vfx;
+        articulated_part: switch_tram_gen3_articulation;
+        default: switch_tram_gen3_graphics;
+    }
+}
+
+
+// gen4
+spriteset (spriteset_tram_gen4_pos0, "../graphics/vehicles/64/tram_passenger_8bpp.png") {
+    template_vehicle_road_8view(0, 3, 1)
+}
+spriteset (spriteset_tram_gen4_pos1, "../graphics/vehicles/64/tram_passenger_8bpp.png") {
+    template_vehicle_road_8view(1, 3, 1)
+}
+spriteset (spriteset_tram_gen4_pos2, "../graphics/vehicles/64/tram_passenger_8bpp.png") {
+    template_vehicle_road_8view(2, 3, 1)
+}
+
+spritegroup spritegroup_tram_gen4_pos0 {
+    loaded: [spriteset_tram_gen4_pos0];
+    loading: [spriteset_tram_gen4_pos0];
+}
+spritegroup spritegroup_tram_gen4_pos1 {
+    loaded: [spriteset_tram_gen4_pos1];
+    loading: [spriteset_tram_gen4_pos1];
+}
+spritegroup spritegroup_tram_gen4_pos2 {
+    loaded: [spriteset_tram_gen4_pos2];
+    loading: [spriteset_tram_gen4_pos2];
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_tram_gen4_graphics, position_in_articulated_veh % 4) {
+    0: return spritegroup_tram_gen4_pos0;
+    1..2: return spritegroup_tram_gen4_pos1;
+    3: return spritegroup_tram_gen4_pos2;
+    return spritegroup_tram_gen4_pos0;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_tram_gen4_articulation, extra_callback_info1) {
+    0..3: return item_tram_gen4;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_ROADVEHS, item_tram_gen4) {
+    property {
+        name: string(STR_TRAM_NAME_GEN4);
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(2021,01,01);
+        model_life: 40;
+        // default retire_early
+        vehicle_life: 22;
+        reliability_decay: 20;
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        default_cargo_type: PASS;
+        loading_speed: 10;
+        cost_factor: 255;
+        running_cost_factor: 255;
+        // default cargo_age_period
+
+        sprite_id: SPRITE_ID_NEW_ROADVEH;
+        speed: 40 km/h;
+        misc_flags: bitmask(ROADVEH_FLAG_TRAM);
+        refit_cost: 0;
+        running_cost_base: RUNNING_COST_ROADVEH;
+        power: 203 hp;
+        weight: 54 ton;
+        /* tractive_effort_coefficient and air_drag_coefficient is left at default */
+        cargo_capacity: 34;
+        sound_effect: 0xFF;
+        visual_effect: visual_effect(VISUAL_EFFECT_ELECTRIC, 0);
+        length: 8;
+    }
+
+    graphics {
+        visual_effect: switch_tram_articulation_vfx;
+        articulated_part: switch_tram_gen4_articulation;
+        default: switch_tram_gen4_graphics;
+    }
+}

@@ -1,0 +1,24 @@
+grf {
+	grfid: "OGZ\6";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	url:  string(STR_GRF_URL);
+	version: 6;
+	min_compatible_version: version_openttd(1, 3, 0);
+}
+
+if (ttd_platform == PLATFORM_OPENTTD) {
+	if (openttd_version < version_openttd(1, 3, 0)) {
+		error(FATAL, REQUIRES_OPENTTD, "1.3.0");
+	}
+}
+
+if (ttd_platform != PLATFORM_OPENTTD) {
+	error(FATAL, REQUIRES_OPENTTD, "1.3.0");
+}
+
+cargotable {PASS}
+
+tramtypetable {ELRL}
+
+train_width_32_px = 0;

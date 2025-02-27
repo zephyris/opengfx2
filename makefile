@@ -77,7 +77,7 @@ baseset/%_32ez.nml: baseset/%.pnml templates/nml_preprocessor.py FORCE
 
 # NewGRFs
 .PNONY: newgrf
-newgrf: newgrf/ogfx2_landscape.grf newgrf/ogfx2_objects.grf newgrf/ogfx2_settings.grf newgrf/ogfx2_stations.grf newgrf/ogfx2_trees.grf
+newgrf: newgrf/ogfx2_landscape.grf newgrf/ogfx2_objects.grf newgrf/ogfx2_settings.grf newgrf/ogfx2_stations.grf newgrf/ogfx2_trees.grf newgrf/ogfx2_trams.grf
 
 # GRF for NewGRFs
 .PRECIOUS: newgrf/ogfx2_%.grf

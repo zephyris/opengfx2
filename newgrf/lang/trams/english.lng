@@ -1,0 +1,11 @@
+##grflangid 0x01
+STR_GENERAL_DESC        :OpenGFX2+ Trams. Freely available under the terms of the GNU General Public License version 2.
+
+STR_GRF_NAME            :OpenGFX2+ Trams
+STR_GRF_DESCRIPTION     :{ORANGE}OpenGFX+ Trams. Trams in the OpenGFX2 style.{BLACK}{}By Zephyris, standing on the shoulders of the OpenGFX team{}{BLACK}License: {SILVER}GPL v2+{}{BLACK}Website: {SILVER}https://github.com/zephyris/OpenGFX2
+STR_GRF_URL             :https://github.com/zephyris/opengfx2
+
+STR_TRAM_NAME_GEN1      :Tram1
+STR_TRAM_NAME_GEN2      :Tram2
+STR_TRAM_NAME_GEN3      :Tram3
+STR_TRAM_NAME_GEN4      :Tram4
