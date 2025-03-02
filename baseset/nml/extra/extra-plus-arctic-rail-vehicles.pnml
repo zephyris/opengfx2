@@ -1,12 +1,13 @@
 // Arctic-specific cargo appearance variants, rail
 // rail
-replace arctic_spr2733(2733, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) } // temperate rail passenger wagon (full + empty)
-replace arctic_spr2737(2737, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 1, 1) } // temperate rail coal wagon (empty)
-replace arctic_spr2741(2741, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 2, 1) } // temperate rail mail wagon (full + empty)
-replace arctic_spr2753(2753, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 5, 1) } // temperate rail goods wagon (full + empty)
-replace arctic_spr2769(2769, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 9, 1) } // temperate rail steel/paper wagon (empty)
-replace arctic_spr2781(2781, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(1, 1, 1) } // temperate rail coal wagon (full)
-replace arctic_spr2801(2801, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(2, 9, 1) } // arctic rail paper wagon (full)
+replace arctic_spr2733(2733, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) } // rail passenger wagon (full + empty)
+replace arctic_spr2737(2737, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 1, 1) } // rail coal wagon (empty)
+replace arctic_spr2741(2741, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 2, 1) } // rail mail wagon (full + empty)
+replace arctic_spr2753(2753, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 5, 1) } // rail goods wagon (full + empty)
+replace arctic_spr2769(2769, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 9, 1) } // rail steel/paper wagon (empty)
+replace arctic_spr2777(2777, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 11, 1) } // rail valuables wagon (full + empty)
+replace arctic_spr2781(2781, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(1, 1, 1) } // rail coal wagon (full)
+replace arctic_spr2801(2801, "../graphics/vehicles/64/rail_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(2, 9, 1) } // rail paper wagon (full)
 
 // monolev
 replace arctic_spr2833(2833, "../graphics/vehicles/64/monolev_wagons_arctic_8bpp.png") { template_vehicle_rail_4view(0, 1, 1) } // monorail coal (empty)

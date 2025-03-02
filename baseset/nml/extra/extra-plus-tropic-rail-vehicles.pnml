@@ -1,16 +1,16 @@
 // Tropical-specific cargo appearance variants, rail
 // rail
-replace tropical_spr2733(2733, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) } // temperate rail passenger wagon (full + empty)
-replace tropical_spr2741(2741, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 2, 1) } // temperate rail mail wagon (full + empty)
-replace tropical_spr2745(2745, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 3, 1) } // temperate rail oil wagon (full + empty)
-replace tropical_spr2753(2753, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 5, 1) } // temperate rail goods wagon (full + empty)
+replace tropical_spr2733(2733, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 0, 1) } // rail passenger wagon (full + empty)
+replace tropical_spr2741(2741, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 2, 1) } // rail mail wagon (full + empty)
+replace tropical_spr2745(2745, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 3, 1) } // rail oil wagon (full + empty)
+replace tropical_spr2753(2753, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 5, 1) } // rail goods wagon (full + empty)
 replace tropical_spr2757(2757, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 6, 1) } // arctic rail food wagon (full + empty)
-replace tropical_spr2761(2761, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 7, 1) } // temperate rail grain wagon (empty)
-replace tropical_spr2765(2765, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 8, 1) } // temperate rail wood wagon (empty)
-replace tropical_spr2773(2773, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 10, 1) } // temperate rail iron/coer ore wagon (empty)
-replace tropical_spr2777(2777, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 11, 1) } // temperate rail valuables wagon (full + empty)
-replace tropical_spr2785(2785, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(1, 7, 1) } // temperate rail grain wagon (full)
-replace tropical_spr2789(2789, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(1, 8, 1) } // temperate rail wood wagon (full)
+replace tropical_spr2761(2761, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 7, 1) } // rail grain wagon (empty)
+replace tropical_spr2765(2765, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 8, 1) } // rail wood wagon (empty)
+replace tropical_spr2773(2773, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 10, 1) } // rail iron/copper ore wagon (empty)
+replace tropical_spr2777(2777, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(0, 11, 1) } // rail valuables wagon (full + empty)
+replace tropical_spr2785(2785, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(1, 7, 1) } // rail grain wagon (full)
+replace tropical_spr2789(2789, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(1, 8, 1) } // rail wood wagon (full)
 replace tropical_spr2805(2805, "../graphics/vehicles/64/rail_wagons_tropical_8bpp.png") { template_vehicle_rail_4view(2, 10, 1) } // tropical rail copper ore wagon (full)
 
 // monolev
