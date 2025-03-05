@@ -8,5 +8,8 @@
 #include "../baseset/nml/extra/extra-plus-rivers.pnml"
 #include "../baseset/nml/extra/extra-rail-tunnels.pnml"
 
+//Landscape-related Action5 features
+#include "../baseset/nml/extra/extra-overlay-rocks.pnml"
+
 //Standard gridlined replacements, extends baseset extra for complete landscape replacement
 #include "nml/landscape/landscape_standard-gridline.pnml"
