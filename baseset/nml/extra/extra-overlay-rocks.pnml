@@ -1,0 +1,12 @@
+// Overlay rocks for snowy rocks
+template template_overlay_rocks(z) {
+    template_groundtiles(0, 0, z)
+    template_groundtiles(0, 48, z)
+    template_groundtiles(0, 96, z)
+    template_groundtiles(0, 144, z)
+    template_groundtiles(0, 192, z)
+}
+replacenew overlay_rocks(OVERLAY_ROCKS, "../graphics/terrain/64/general_rockoverlay_alt_snowtransition_8bpp.png", 0) { template_overlay_rocks(1) }
+#ez alternative_sprites(overlay_rocks, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/general_rockoverlay_alt_snowtransition_8bpp.png") { template_overlay_rocks(4) }
+#32 alternative_sprites(overlay_rocks, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/general_rockoverlay_alt_snowtransition_bt32bpp.png") { template_overlay_rocks(1) }
+#32 #ez alternative_sprites(overlay_rocks, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/general_rockoverlay_alt_snowtransition_bt32bpp.png") { template_overlay_rocks(4) }
