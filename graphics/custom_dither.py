@@ -3,6 +3,7 @@
 from PIL import Image
 import skimage, numpy
 import glob, os, sys
+import random
 
 from tools import openttd_palettise, check_update_needed, openttd_palette, openttd_palette_animated, openttd_palette_generalmask, openttd_color_set_start, openttd_color_set_length, openttd_palette_image, palette_image
 
@@ -21,8 +22,8 @@ def make_8bpp(src32bpp, palmask):
   colors_normal = [x for x in range(256) if x not in openttd_palette_animated]
 
   # Start by making sure the images are the correct mode
-  # Source must be RGB (no alpha)
-  src32bpp = src32bpp.convert("RGB")
+  # Source must be RGBA
+  src32bpp = src32bpp.convert("RGBA")
   # Palette must be 8-bit with OpenTTD palette
   palmask = openttd_palettise(palmask)
 
@@ -71,7 +72,7 @@ def make_8bpp(src32bpp, palmask):
     donotdither = Image.new("L", (width, height), 0)
     for x in range(width):
       for y in range(height):
-        pr, pg, pb = src32bpp.getpixel((x, y))
+        pr, pg, pb, pa = src32bpp.getpixel((x, y))
         for i in range(len(openttd_palette_generalmask)):
           if openttd_palette["r"][openttd_palette_generalmask[i]] == pr and openttd_palette["g"][openttd_palette_generalmask[i]] == pg and openttd_palette["b"][openttd_palette_generalmask[i]] == pb:
             donotdither.putpixel((x, y), 255)
@@ -97,51 +98,113 @@ def make_8bpp(src32bpp, palmask):
         [-1, -1,  2],
         [ 1,  1,  0]
       ]
-    
-    # Do dithering
-    res8bpp = Image.new("P", (src32bpp.size))
-    res8bpp.putpalette(palimage.getpalette())
-    for y in range(height):
-      for x in range(width):
-        pr, pg, pb = src32bpp.getpixel((x, y))
-        if pr == 0 and pg == 0 and pb == 255:
-          # Fast processing of pure blue pixels
-          res8bpp.putpixel((x, y), 0)
-        elif donotdither.getpixel((x, y)) == 255:
-          # Do not dither this pixel, just set nearest value
-          res8bpp.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
-        else:
-          # Dither this pixel
-          if sets.getpixel((x, y)) != 255:
-            # Dither this pixel within a color set
-            res8bpp.putpixel((x, y), most_similar_in_color_set(pr, pg, pb, sets.getpixel((x, y))))
-          else:
-            # Dither this pixel to any color
-            res8bpp.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
-          # Diffuse errors according to the dithering matrix
-          error = [0, 0, 0]
-          error[0] = pr - openttd_palette["r"][res8bpp.getpixel((x, y))]
-          error[1] = pg - openttd_palette["g"][res8bpp.getpixel((x, y))]
-          error[2] = pb - openttd_palette["b"][res8bpp.getpixel((x, y))]
-          # Do error propagation
-          for b in range(len(da)):
-            for a in range(len(da[0])):
-              # For each x and y offset a and b in dither array
-              if da[b][a] != -1 and x + a < width - 1 and y + b < height - 1:
-                # If a valid dither value and within image bounds
-                if donotdither.getpixel((x, y)) != 255:
-                  # Do not propagate errors through pixels identified as donotdither
-                  # Alter pixel value to propagate errors
-                  pcr, pcg, pcb = src32bpp.getpixel((x + a - dox, y + b - doy))
-                  pcr = int(pcr + error[0] * dither_factor * da[b][a] / df)
-                  pcg = int(pcg + error[1] * dither_factor * da[b][a] / df)
-                  pcb = int(pcb + error[2] * dither_factor * da[b][a] / df)
-                  src32bpp.putpixel((x + a - dox, y + b - doy), (pcr, pcg, pcb))
-                  # Clamp propagated error to a maximum of 16 per channel
-                  error = [min(error[0], max_error_propagation), min(error[1], max_error_propagation), min(error[2], max_error_propagation)]
 
-    # Return result
-    return res8bpp
+    def do_dithering_noalpha():
+      # Dither, without trying to do anything clever with alpha
+      res8bpp = Image.new("P", (src32bpp.size))
+      res8bpp.putpalette(palimage.getpalette())
+      for y in range(height):
+        for x in range(width):
+          pr, pg, pb = src32bpp.getpixel((x, y))
+          if pr == 0 and pg == 0 and pb == 255:
+            # Fast processing of pure blue pixels
+            res8bpp.putpixel((x, y), 0)
+          elif donotdither.getpixel((x, y)) == 255:
+            # Do not dither this pixel, just set nearest value
+            res8bpp.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
+          else:
+            # Dither this pixel
+            if sets.getpixel((x, y)) != 255:
+              # Dither this pixel within a color set
+              res8bpp.putpixel((x, y), most_similar_in_color_set(pr, pg, pb, sets.getpixel((x, y))))
+            else:
+              # Dither this pixel to any color
+              res8bpp.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
+            # Diffuse errors according to the dithering matrix
+            error = [0, 0, 0]
+            error[0] = pr - openttd_palette["r"][res8bpp.getpixel((x, y))]
+            error[1] = pg - openttd_palette["g"][res8bpp.getpixel((x, y))]
+            error[2] = pb - openttd_palette["b"][res8bpp.getpixel((x, y))]
+            # Do error propagation
+            for b in range(len(da)):
+              for a in range(len(da[0])):
+                # For each x and y offset a and b in dither array
+                if da[b][a] != -1 and x + a < width - 1 and y + b < height - 1:
+                  # If a valid dither value and within image bounds
+                  if donotdither.getpixel((x, y)) != 255:
+                    # Do not propagate errors through pixels identified as donotdither
+                    # Alter pixel value to propagate errors
+                    pcr, pcg, pcb = src32bpp.getpixel((x + a - dox, y + b - doy))
+                    pcr = int(pcr + error[0] * dither_factor * da[b][a] / df)
+                    pcg = int(pcg + error[1] * dither_factor * da[b][a] / df)
+                    pcb = int(pcb + error[2] * dither_factor * da[b][a] / df)
+                    src32bpp.putpixel((x + a - dox, y + b - doy), (pcr, pcg, pcb))
+                    # Clamp propagated error to a maximum of 16 per channel
+                    error = [min(error[0], max_error_propagation), min(error[1], max_error_propagation), min(error[2], max_error_propagation)]
+      # Return result
+      return res8bpp
+    
+    def do_dithering_alpha():
+      # Dither, converting alpha to dithered transparent blue
+      res8bpp = Image.new("P", (src32bpp.size))
+      res8bpp.putpalette(palimage.getpalette())
+      for y in range(height):
+        for x in range(width):
+          pr, pg, pb, pa = src32bpp.getpixel((x, y))
+          if pa == 0 or (pr == 0 and pg == 0 and pb == 255):
+            # Fast processing of pure transparent and pure blue pixels
+            res8bpp.putpixel((x, y), 0)
+          elif donotdither.getpixel((x, y)) == 255:
+            # Do not dither this pixel, just set nearest value, randomised based on alpha
+            if pa / 255 < 0.5:
+              res8bpp.putpixel((x, y), 0)
+            else:
+              res8bpp.putpixel((x, y), most_similar_in_palette(pr, pg, pb))
+          else:
+            # Dither this pixel
+            if sets.getpixel((x, y)) != 255:
+              # Dither this pixel within a color set
+              outindex = most_similar_in_color_set(pr, pg, pb, sets.getpixel((x, y)))
+            else:
+              # Dither this pixel to any color
+              outindex = most_similar_in_palette(pr, pg, pb)
+            # Diffuse errors according to the dithering matrix
+            if pa / 255 > 0.5:
+              res8bpp.putpixel((x, y), outindex)
+              error = [0, 0, 0, 0]
+              error[0] = pr - openttd_palette["r"][res8bpp.getpixel((x, y))]
+              error[1] = pg - openttd_palette["g"][res8bpp.getpixel((x, y))]
+              error[2] = pb - openttd_palette["b"][res8bpp.getpixel((x, y))]
+              error[3] = pa - 255
+            else:
+              res8bpp.putpixel((x, y), 0)
+              error = [0, 0, 0, pa]
+            # Do error propagation
+            for b in range(len(da)):
+              for a in range(len(da[0])):
+                # For each x and y offset a and b in dither array
+                if da[b][a] != -1 and x + a < width - 1 and y + b < height - 1:
+                  # If a valid dither value and within image bounds
+                  if donotdither.getpixel((x, y)) != 255:
+                    # Do not propagate errors through pixels identified as donotdither
+                    # Alter pixel value to propagate errors
+                    pcr, pcg, pcb, pca = src32bpp.getpixel((x + a - dox, y + b - doy))
+                    pcr = int(pcr + error[0] * dither_factor * da[b][a] / df)
+                    pcg = int(pcg + error[1] * dither_factor * da[b][a] / df)
+                    pcb = int(pcb + error[2] * dither_factor * da[b][a] / df)
+                    pca = int(pca + error[3] * dither_factor * da[b][a] / df)
+                    src32bpp.putpixel((x + a - dox, y + b - doy), (pcr, pcg, pcb, pca))
+                    # Clamp propagated error to a maximum of 16 per channel
+                    error = [min(error[0], max_error_propagation), min(error[1], max_error_propagation), min(error[2], max_error_propagation), min(error[3], max_error_propagation)]
+      # Return result
+      return res8bpp
+    
+    # Check if there is an alpha channel
+    if has_alpha(src32bpp):
+      return do_dithering_alpha()
+    else:
+      src32bpp = src32bpp.convert("RGB")
+      return do_dithering_noalpha()
   
   # Convert src32bpp to 8-bit with OpenTTD palette using custom dithering
   # Dithers in HSV space, restricting colour sets when specified in palmask
@@ -166,6 +229,10 @@ def make_white_transp(src32bit):
   """
   Uses pure blue pixels from a 32bit image as an alpha mask, making a 32bpp image with blue pixels as transparent.
   """
+  if has_alpha(src32bit):
+    # If input image already has an alpha channel, just use that
+    return src32bit
+  # Otherwise, make an alpha channel using magic blue pixels for transparency
   # Handle input image as numpy array, working in RGB
   src32bit = numpy.array(src32bit.convert("RGB").split())
   # Alpha mask from where 32bit image is (0, 0, 255) blue
@@ -205,6 +272,14 @@ def find_sprites(src32bit):
   for i in range(len(table["bbox-0"])):
     sprites.append([table["bbox-1"][i], table["bbox-0"][i], table["bbox-3"][i], table["bbox-2"][i]])
   return sprites
+
+def has_alpha(src32bit):
+  """
+  Check if a 32bpp image has an alpha channel.
+  """
+  r, g, b, a = src32bit.convert("RGBA").split()
+  a = numpy.array(a)
+  return a.min() != 255
 
 def make_output_parallel_handler(input=input):
   """
