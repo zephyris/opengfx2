@@ -1199,12 +1199,12 @@ template template_waterfeature_slopes_coasts(x, y, z) {
 
 //Template: water docks
 template template_docks(x, y, z) {
-	template_house_1x1_addoffs( 0, 195, z, 64, -7, -4)
-	template_house_1x1_addoffs( 0,   0, z, 64,  7, -4)
-	template_house_1x1_addoffs( 0,  65, z, 64, -7, -4)
-	template_house_1x1_addoffs( 0, 130, z, 64,  7, -4)
-	template_house_1x1_addoffs(65,  65, z, 64, -7, -4)
-	template_house_1x1_addoffs(65,   0, z, 64,  7, -4)
+	template_house_1x1_addoffs( 0, 195, z, 64, -8, -4)
+	template_house_1x1_addoffs( 0,   0, z, 64,  8, -4)
+	template_house_1x1_addoffs( 0,  65, z, 64, -8, -4)
+	template_house_1x1_addoffs( 0, 130, z, 64,  8, -4)
+	template_house_1x1_addoffs(65,  65, z, 64, -8, -4)
+	template_house_1x1_addoffs(65,   0, z, 64,  8, -4)
 }
 
 //Template: water locks
