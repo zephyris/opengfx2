@@ -31,5 +31,5 @@ base_graphics spr2724(2724, "../graphics/cursors/1/pygen/default_8bpp.png") {
 }
 
 //2727-2732 docks
-base_graphics spr2727(2727, "../graphics/stations/general/64/pygen/docksandlocks_8bpp.png") { template_docks(0, 0, 1) }
-#32 alternative_sprites(spr2727, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/docksandlocks_bt32bpp.png") { template_docks(0, 0, 1) }
+base_graphics spr2727(2727, "../graphics/stations/general/64/pygen/docksandlocks_sealevel_8bpp.png") { template_docks(0, 0, 1) }
+#32 alternative_sprites(spr2727, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/docksandlocks_sealevel_rm32bpp.png", "../graphics/stations/general/64/pygen/docksandlocks_sealevel_8bpp.png") { template_docks(0, 0, 1) }
