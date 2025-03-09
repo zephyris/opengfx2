@@ -1,5 +1,44 @@
 # OpenGFX2 Changelog
 
+## v0.7
+* Redrawn 1x zoom train, monorail and maglev wagons.
+* Redrawn 1x zoom lorries, including climate-specific variants.
+* Redrawn 1x zoom busses.
+* Redrawn 1x zoom monorail and maglev engines.
+* Style-unified 1x zoom rail engines.
+* Refined 1x zoom boat graphics.
+* Improved 1x zoom company colour visibility on hovercraft.
+* Refined rock contrast and brightness, 1x and 4x zoom.
+* Support for (snowy) rock overlays, 1x and 4x zoom.
+* Improved contrast and tiling of 1x zoom rail.
+* Fixed missing pixels from 1x and 4z zoom autorail selectors.
+* Detail and company colour for 1x zoom docks.
+* Improved 1x zoom maglev station roof.
+* 2x zoom 8bpp manager faces.
+* Select refined manager face features.
+* Improved 8bpp conversion of manager faces.
+* Fix manager face feature alignments.
+* Fix broken manager face recolouring.
+* Fix missing manager face woman's hairstyle.
+* Brighter 1x zoom oil wells to stand out from terrain.
+* Refined 1x zoom toyland industry sprites.
+* Add shinyness to 1x zoom toyland trees.
+* Add 1x and 2x zoom toyland cola cargo icon.
+* Add 2x zoom sleepy cursor.
+* Add 1x and 4x zoom gridlineless level crossing variants.
+* Add 1x and 4x zoom climate grass switch-sensitive level crossings.
+* Make road markings consistent when switching climates.
+* Improved 1x and 4x zoom rail tunnel portals.
+* Fix 4x zoom one-way roads.
+* Fix stray white bar on 4x zoom plantations.
+* Refactor graphics generation pipeline to use `make`.
+* Check whether graphics requiring update from script changes.
+* Fix missing 210 5-entry pallete series.
+
+NewGRFs:
+* OpenGFX2+ Trams, 4 generations of generic trams at 1x zoom.
+* Fix rock recolouring and add yellow rocks in object NewGRF.
+
 ## v0.6
 Base set:
 * 1x and 4x road waypoint graphics.

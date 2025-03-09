@@ -202,7 +202,7 @@ def generate_obg(base_path, type_string):
     pad_length = 18
     obg.write(pad("name", pad_length, pad_left=False) + "= OpenGFX2 " + namesuffix + "\n")
     obg.write(pad("shortname", pad_length, pad_left=False) + "= " + namelookup[typeshort] + "\n")
-    obg.write(pad("version", pad_length, pad_left=False) + "= 6" + "\n")
+    obg.write(pad("version", pad_length, pad_left=False) + "= 7" + "\n")
     obg.write(pad("palette", pad_length, pad_left=False) + "= DOS" + "\n")
     obg.write(pad("blitter", pad_length, pad_left=False) + "= "+str(blitter)+"bpp" + "\n")
     # write all non-default languages with translations available
