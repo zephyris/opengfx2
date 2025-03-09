@@ -253,25 +253,35 @@ base_graphics spr1519(1519, "../graphics/towns/temperate/64/pygen/flats_base_8bp
 base_graphics spr1520(1520, "../graphics/towns/temperate/64/pygen/flats_base_8bpp.png") { template_house_1x1(65, 75, 1, 74) }
 #32 alternative_sprites(spr1520, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_base_bt32bpp.png") { template_house_1x1(65, 75, 1, 74) }
 base_graphics spr1521(1521, "../graphics/towns/temperate/64/pygen/flats_8bpp.png") { template_house_1x1(65, 75, 1, 74) }
+#ez alternative_sprites(spr1521, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(65, 75, 4, 74) }
 #32 alternative_sprites(spr1521, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_bt32bpp.png") { template_house_1x1(65, 75, 1, 74) }
+#32 #ez alternative_sprites(spr1521, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(65, 75, 4, 74) }
 base_graphics spr1522(1522, "../graphics/towns/temperate/64/pygen/flats_base_8bpp.png") { template_house_1x1(65, 0, 1, 74) }
 #32 alternative_sprites(spr1522, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_base_bt32bpp.png") { template_house_1x1(65, 0, 1, 74) }
 base_graphics spr1523(1523, "../graphics/towns/temperate/64/pygen/flats_8bpp.png") { template_house_1x1(65, 0, 1, 74) }
+#ez alternative_sprites(spr1523, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(65, 0, 4, 74) }
 #32 alternative_sprites(spr1523, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_bt32bpp.png") { template_house_1x1(65, 0, 1, 74) }
+#32 #ez alternative_sprites(spr1523, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(65, 0, 4, 74) }
 
 // 1524-1529 small flats
 base_graphics spr1524(1524, "../graphics/towns/temperate/64/pygen/flats_base_8bpp.png") { template_house_1x1(130, 150, 1, 74) }
 #32 alternative_sprites(spr1524, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_base_bt32bpp.png") { template_house_1x1(130, 150, 1, 74) }
 base_graphics spr1525(1525, "../graphics/towns/temperate/64/pygen/flats_8bpp.png") { template_house_1x1(130, 150, 1, 74) }
+#ez alternative_sprites(spr1525, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(130, 150, 4, 74) }
 #32 alternative_sprites(spr1525, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_bt32bpp.png") { template_house_1x1(130, 150, 1, 74) }
+#32 #ez alternative_sprites(spr1525, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(130, 150, 4, 74) }
 base_graphics spr1526(1526, "../graphics/towns/temperate/64/pygen/flats_base_8bpp.png") { template_house_1x1(130, 75, 1, 74) }
 #32 alternative_sprites(spr1526, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_base_bt32bpp.png") { template_house_1x1(130, 75, 1, 74) }
 base_graphics spr1527(1527, "../graphics/towns/temperate/64/pygen/flats_8bpp.png") { template_house_1x1(130, 75, 1, 74) }
+#ez alternative_sprites(spr1527, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(130, 75, 4, 74) }
 #32 alternative_sprites(spr1527, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_bt32bpp.png") { template_house_1x1(130, 75, 1, 74) }
+#32 #ez alternative_sprites(spr1527, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(130, 75, 4, 74) }
 base_graphics spr1528(1528, "../graphics/towns/temperate/64/pygen/flats_base_8bpp.png") { template_house_1x1(130, 0, 1, 74) }
 #32 alternative_sprites(spr1528, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_base_bt32bpp.png") { template_house_1x1(130, 0, 1, 74) }
 base_graphics spr1529(1529, "../graphics/towns/temperate/64/pygen/flats_8bpp.png") { template_house_1x1(130, 0, 1, 74) }
+#ez alternative_sprites(spr1529, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(130, 0, 4, 74) }
 #32 alternative_sprites(spr1529, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_bt32bpp.png") { template_house_1x1(130, 0, 1, 74) }
+#32 #ez alternative_sprites(spr1529, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_house_1x1(130, 0, 4, 74) }
 
 // 1530-1535 office block
 base_graphics spr1530(1530, "../graphics/towns/temperate/64/pygen/tallofficeblock_base_8bpp.png") { template_house_1x1(195,248, 1,123) }

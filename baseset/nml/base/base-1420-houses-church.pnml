@@ -38,7 +38,9 @@ template template_spr1430(z) {
 	template_house_1x1(0,  0, z, 74)
 }
 base_graphics spr1430(1430, "../graphics/towns/temperate/64/pygen/flats_8bpp.png") { template_spr1430(1) }
+#ez alternative_sprites(spr1430, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/flats_8bpp.png") { template_spr1430(4) }
 #32 alternative_sprites(spr1430, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_bt32bpp.png") { template_spr1430(1) }
+#32 #ez alternative_sprites(spr1430, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/flats_bt32bpp.png") { template_spr1430(4) }
 base_graphics spr1433(1433, "../graphics/towns/temperate/64/pygen/flats_base_8bpp.png") { template_house_1x1(0,	0, 1, 74) } // (Ground tile)
 #32 alternative_sprites(spr1433, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/flats_base_bt32bpp.png") { template_house_1x1(0, 0, 1, 74) }
 
