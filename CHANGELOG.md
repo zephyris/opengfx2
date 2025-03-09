@@ -1,6 +1,7 @@
 # OpenGFX2 Changelog
 
 ## v0.7
+Base set:
 * Redrawn 1x zoom train, monorail and maglev wagons.
 * Redrawn 1x zoom lorries, including climate-specific variants.
 * Redrawn 1x zoom busses.
