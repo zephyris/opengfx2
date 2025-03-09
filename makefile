@@ -23,9 +23,9 @@ baseset_32ez: baseset/opengfx2_32ez.tar
 baseset/opengfx2_%.tar: baseset/opengfx2_%.obg README.md LICENSE CHANGELOG.md baseset/ogfx2c_arctic_%.grf baseset/ogfx2e_extra_%.grf baseset/ogfx2h_tropical_%.grf baseset/ogfx2i_logos_%.grf baseset/ogfx2t_toyland_%.grf baseset/ogfx21_base_%.grf baseset/ogfx2c_arctic_%.md5 baseset/ogfx2e_extra_%.md5 baseset/ogfx2h_tropical_%.md5 baseset/ogfx2i_logos_%.md5 baseset/ogfx2t_toyland_%.md5 baseset/ogfx21_base_%.md5
 	$(eval TMP=$(word 2, $(subst _, ,$(basename $(notdir $@)))))
 	mkdir -p baseset/opengfx2_$(TMP)
-	cp README.md baseset/opengfx2_$(TMP)/opengfx2_$(TMP)_readme.txt
-	cp LICENSE baseset/opengfx2_$(TMP)/opengfx2_$(TMP)_license.txt
-	cp CHANGELOG.md baseset/opengfx2_$(TMP)/opengfx2_$(TMP)_changelog.txt
+	cp README.md baseset/opengfx2_$(TMP)/readme.txt
+	cp LICENSE baseset/opengfx2_$(TMP)/license.txt
+	cp CHANGELOG.md baseset/opengfx2_$(TMP)/changelog.txt
 	cp baseset/*_$(TMP).grf baseset/opengfx2_$(TMP)/
 	cp baseset/opengfx2_$(TMP).obg baseset/opengfx2_$(TMP)/
 	tar -cf baseset/opengfx2_$(TMP).tar baseset/opengfx2_$(TMP)/
@@ -77,7 +77,7 @@ baseset/%_32ez.nml: baseset/%.pnml templates/nml_preprocessor.py FORCE
 
 # NewGRFs
 .PNONY: newgrf
-newgrf: newgrf/ogfx2_landscape.grf newgrf/ogfx2_objects.grf newgrf/ogfx2_settings.grf newgrf/ogfx2_stations.grf newgrf/ogfx2_trees.grf newgrf/ogfx2_trams.grf
+newgrf: newgrf/ogfx2_landscape.grf newgrf/ogfx2_objects.grf newgrf/ogfx2_settings.grf newgrf/ogfx2_stations.grf newgrf/ogfx2_trees.grf newgrf/ogfx2_trams.grf newgrf/ogfx2_trains.grf
 
 # GRF for NewGRFs
 .PRECIOUS: newgrf/ogfx2_%.grf
