@@ -28,7 +28,7 @@ baseset/opengfx2_%.tar: baseset/opengfx2_%.obg README.md LICENSE CHANGELOG.md ba
 	cp CHANGELOG.md baseset/opengfx2_$(TMP)/changelog.txt
 	cp baseset/*_$(TMP).grf baseset/opengfx2_$(TMP)/
 	cp baseset/opengfx2_$(TMP).obg baseset/opengfx2_$(TMP)/
-	tar -cf baseset/opengfx2_$(TMP).tar baseset/opengfx2_$(TMP)/
+	cd baseset && tar -cf opengfx2_$(TMP).tar opengfx2_$(TMP)/
 	rm -r baseset/opengfx2_$(TMP)
 
 # OBG for baseset
