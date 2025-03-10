@@ -1,41 +1,51 @@
+// openttd title screen logo temperate easter egg
+template template_spr4836_temperatealt(z) {
+    [   5*z,  63*z,  37*z,  50*z, -10*z,   0*z] // larger T
+    [  49*z,   2*z,  29*z,  50*z, -10*z,   0*z] // R
+    [  94*z,   2*z,  29*z,  50*z, -10*z,   0*z] // A
+    [ 141*z,   2*z,  31*z,  50*z, -10*z,   0*z] // N
+    [ 190*z,   2*z,  23*z,  50*z, -10*z,   0*z] // S
+    [ 229*z,   2*z,  26*z,  50*z, -10*z,   0*z] // P
+    [  57*z,  63*z,  52*z,  50*z, -10*z,   0*z] // larger O
+    [ 321*z,   2*z,  33*z,  50*z, -10*z,   0*z] // Y
+    [ 370*z,   2*z,  29*z,  50*z, -10*z,   0*z] // C
+}
+template ottd_gui12_temperatealt(z) {
+    [ 415*z,   2*z,  23*z,  50*z, -10*z,   0*z] // E
+    [ 127*z,  63*z,  43*z,  50*z, -10*z,   0*z] // larger D
+}
 if (param_logos==1) {
-    // openttd title screen logo temperate easter egg
     // logos 43-51 title screen characters
-    replace spr4836_temperatealt(4836, "../graphics/icons/1/title_letters_underground_8bpp.png") {
-        [   5,  63,  37,  50, -10,   0] // larger T
-        [  49,   2,  29,  50, -10,   0] // R
-        [  94,   2,  29,  50, -10,   0] // A
-        [ 141,   2,  31,  50, -10,   0] // N
-        [ 190,   2,  23,  50, -10,   0] // S
-        [ 229,   2,  26,  50, -10,   0] // P
-        [  57,  63,  52,  50, -10,   0] // larger O
-        [ 321,   2,  33,  50, -10,   0] // Y
-        [ 370,   2,  29,  50, -10,   0] // C
-    }
-
-    replacenew ottd_gui12_temperatealt(OTTD_GUI, "../graphics/icons/1/title_letters_underground_8bpp.png", 12) {
-        [ 415,   2,  23,  50, -10,   0] // E
-        [ 127,  63,  43,  50, -10,   0] // larger D
-    }
+    replace spr4836_temperatealt(4836, "../graphics/icons/1/title_letters_underground_8bpp.png") {template_spr4836_temperatealt(1)}
+    //alternative_sprites (spr4836_temperatealt, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_underground_8bpp.png") {template_spr4836_temperatealt(2)}
+    //alternative_sprites (spr4836_temperatealt, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_underground_8bpp.png") {template_spr4836_temperatealt(4)}
+    replacenew ottd_gui12_temperatealt(OTTD_GUI, "../graphics/icons/1/title_letters_underground_8bpp.png", 12) {ottd_gui12_temperatealt(1)}
+    //alternative_sprites (ottd_gui12_temperatealt, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_underground_8bpp.png") {template ottd_gui12_temperatealt(2)}
+    //alternative_sprites (ottd_gui12_temperatealt, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_underground_8bpp.png") {template ottd_gui12_temperatealt(4)}
 }
 
+// openttd title screen logo arctic easter egg
+template template_spr4836_arcticalt(z) {
+    [   4*z,  63*z,  67*z,  57*z, -10*z,   0*z] // larger T
+    [  68*z,   2*z,  54*z,  57*z, -10*z,   0*z] // R
+    [ 142*z,   2*z,  51*z,  57*z, -10*z,   0*z] // A
+    [ 210*z,   2*z,  54*z,  57*z, -10*z,   0*z] // N
+    [ 281*z,   2*z,  54*z,  57*z, -10*z,   0*z] // S
+    [ 346*z,   2*z,  61*z,  57*z, -10*z,   0*z] // P
+    [ 273*z,  63*z, 126*z,  57*z, -10*z,   0*z] // larger O
+    [ 497*z,   2*z,  51*z,  57*z, -10*z,   0*z] // Y
+    [ 567*z,   2*z,  50*z,  57*z, -10*z,   0*z] // C
+}
+template ottd_gui12_arcticalt(z) {
+    [ 636*z,   2*z,  52*z,  57*z, -10*z,   0*z] // E
+    [ 188*z,  63*z,  71*z,  57*z, -10*z,   0*z] // larger D
+}
 if (param_logos==2) {
-    // openttd title screen logo arctic easter egg
     // logos 43-51 title screen characters
-    replace spr4836_arcticalt(4836, "../graphics/icons/1/title_letters_cabriolet_8bpp.png") {
-        [   4,  63,  67,  57, -10,   0] // larger T
-        [  68,   2,  54,  57, -10,   0] // R
-        [ 142,   2,  51,  57, -10,   0] // A
-        [ 210,   2,  54,  57, -10,   0] // N
-        [ 281,   2,  54,  57, -10,   0] // S
-        [ 346,   2,  61,  57, -10,   0] // P
-        [ 273,  63, 126,  57, -10,   0] // larger O
-        [ 497,   2,  51,  57, -10,   0] // Y
-        [ 567,   2,  50,  57, -10,   0] // C
-    }
-
-    replacenew ottd_gui12_arcticalt(OTTD_GUI, "../graphics/icons/1/title_letters_cabriolet_8bpp.png", 12) {
-        [ 636,   2,  52,  57, -10,   0] // E
-        [ 188,  63,  71,  57, -10,   0] // larger D
-    }
+    replace spr4836_arcticalt(4836, "../graphics/icons/1/title_letters_cabriolet_8bpp.png") {template_spr4836_arcticalt(1)}
+    alternative_sprites (spr4836_arcticalt, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_cabriolet_8bpp.png") {template_spr4836_arcticalt(2)}
+    alternative_sprites (spr4836_arcticalt, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_cabriolet_8bpp.png") {template_spr4836_arcticalt(4)}
+    replacenew ottd_gui12_arcticalt(OTTD_GUI, "../graphics/icons/1/title_letters_cabriolet_8bpp.png", 12) {ottd_gui12_arcticalt(1)}
+    alternative_sprites (ottd_gui12_arcticalt, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_cabriolet_8bpp.png") {ottd_gui12_arcticalt(2)}
+    alternative_sprites (ottd_gui12_arcticalt, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_cabriolet_8bpp.png") {ottd_gui12_arcticalt(4)}
 }
