@@ -20,12 +20,21 @@ def all_files_under(path):
         for filename in filenames:
             yield os.path.join(cur_path, filename)
 
-# check last modification against modification of a temp file written at the end of processing
+# check last modification against a temp file written at the end of processing
 touchfile_path = os.path.join("graphics_"+str(max_scale)+".tmp")
 if os.path.exists(touchfile_path):
     latest_file = max(all_files_under(base_path), key=os.path.getmtime)
+    file_count = sum(1 for _ in all_files_under(base_path))
+    print("Total files:", file_count)
     print("Most recently modified:", latest_file)
-    if os.path.getmtime(latest_file) < os.path.getmtime(touchfile_path) and os.path.getmtime(__file__) < os.path.getmtime(touchfile_path):
+    # number of files seen in the previous part
+    old_file_count = open(touchfile_path, "r").read()
+    if old_file_count == "":
+        old_file_count = 0
+    else:
+        old_file_count = int()
+    # check if any files modified or file number changed since last run
+    if os.path.getmtime(latest_file) < os.path.getmtime(touchfile_path) and os.path.getmtime(__file__) < os.path.getmtime(touchfile_path) and file_count == old_file_count:
         print("Skipping all processing, output up-to-date")
         exit()
     else:
@@ -475,4 +484,4 @@ for scale in scale_range([1, 4]):
 
 # write file as timestamp of finish time
 with open(touchfile_path, "w") as touchfile:
-    touchfile.write("")
+    touchfile.write(str(sum(1 for _ in all_files_under(base_path))))
