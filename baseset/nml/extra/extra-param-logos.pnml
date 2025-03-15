@@ -1,27 +1,27 @@
 // openttd title screen logo temperate easter egg
 template template_spr4836_temperatealt(z) {
-    [   5*z,  63*z,  37*z,  50*z, -10*z,   0*z] // larger T
-    [  49*z,   2*z,  29*z,  50*z, -10*z,   0*z] // R
-    [  94*z,   2*z,  29*z,  50*z, -10*z,   0*z] // A
-    [ 141*z,   2*z,  31*z,  50*z, -10*z,   0*z] // N
-    [ 190*z,   2*z,  23*z,  50*z, -10*z,   0*z] // S
-    [ 229*z,   2*z,  26*z,  50*z, -10*z,   0*z] // P
-    [  57*z,  63*z,  52*z,  50*z, -10*z,   0*z] // larger O
-    [ 321*z,   2*z,  33*z,  50*z, -10*z,   0*z] // Y
-    [ 370*z,   2*z,  29*z,  50*z, -10*z,   0*z] // C
+    [   4*z,  56*z,  38*z,  49*z, -10*z,   0*z] // larger T
+    [  48*z,   2*z,  38*z,  49*z, -10*z,   0*z] // R
+    [  92*z,   2*z,  38*z,  49*z, -10*z,   0*z] // A
+    [ 136*z,   2*z,  38*z,  49*z, -10*z,   0*z] // N
+    [ 180*z,   2*z,  38*z,  49*z, -10*z,   0*z] // S
+    [ 224*z,   2*z,  38*z,  49*z, -10*z,   0*z] // P
+    [  93*z,  56*z,  96*z,  49*z, -10*z,   0*z] // larger O
+    [ 312*z,   2*z,  38*z,  49*z, -10*z,   0*z] // Y
+    [ 356*z,   2*z,  38*z,  49*z, -10*z,   0*z] // C
 }
 template ottd_gui12_temperatealt(z) {
-    [ 415*z,   2*z,  23*z,  50*z, -10*z,   0*z] // E
-    [ 127*z,  63*z,  43*z,  50*z, -10*z,   0*z] // larger D
+    [ 400*z,   2*z,  38*z,  49*z, -10*z,   0*z] // E
+    [  48*z,  56*z,  39*z,  49*z, -10*z,   0*z] // larger D
 }
 if (param_logos==1) {
     // logos 43-51 title screen characters
     replace spr4836_temperatealt(4836, "../graphics/icons/1/title_letters_underground_8bpp.png") {template_spr4836_temperatealt(1)}
-    //alternative_sprites (spr4836_temperatealt, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_underground_8bpp.png") {template_spr4836_temperatealt(2)}
-    //alternative_sprites (spr4836_temperatealt, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_underground_8bpp.png") {template_spr4836_temperatealt(4)}
+    alternative_sprites (spr4836_temperatealt, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_underground_8bpp.png") {template_spr4836_temperatealt(2)}
+    alternative_sprites (spr4836_temperatealt, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_underground_8bpp.png") {template_spr4836_temperatealt(4)}
     replacenew ottd_gui12_temperatealt(OTTD_GUI, "../graphics/icons/1/title_letters_underground_8bpp.png", 12) {ottd_gui12_temperatealt(1)}
-    //alternative_sprites (ottd_gui12_temperatealt, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_underground_8bpp.png") {template ottd_gui12_temperatealt(2)}
-    //alternative_sprites (ottd_gui12_temperatealt, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_underground_8bpp.png") {template ottd_gui12_temperatealt(4)}
+    alternative_sprites (ottd_gui12_temperatealt, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/icons/2/title_letters_underground_8bpp.png") {ottd_gui12_temperatealt(2)}
+    alternative_sprites (ottd_gui12_temperatealt, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/icons/4/title_letters_underground_8bpp.png") {ottd_gui12_temperatealt(4)}
 }
 
 // openttd title screen logo arctic easter egg
