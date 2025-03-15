@@ -2,8 +2,6 @@
 //These sprites are provided but canal sprites are never used. Canals completely superseeded by extra-plus-locks and extra-plus-canals
 //CANALS 0-3 water slopes
 replacenew canals_spr0(CANALS, "../graphics/terrain/64/universal_watertiles_8bpp.png", 0) { template_waterslopes_slopesonly(80, 0, 1) }
-//#ez alternative_sprites(canals_spr0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_waterslopes_slopesonly(80, 0, 2) }
-//#ez alternative_sprites(canals_spr0, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/universal_watertiles_cbt32bpp.png", "../graphics/terrain/128/universal_watertiles_8bpp.png") { template_waterslopes_slopesonly(80, 0, 2) }
 #ez alternative_sprites(canals_spr0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_waterslopes_slopesonly(80, 0, 4) }
 #ez alternative_sprites(canals_spr0, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/universal_watertiles_cbt32bpp.png", "../graphics/terrain/256/universal_watertiles_8bpp.png") { template_waterslopes_slopesonly(80, 0, 4) }
 //CANALS 4-27 sea level locks
@@ -14,10 +12,8 @@ replacenew canals_spr28(CANALS, "../graphics/stations/general/64/pygen/docksandl
 #32 alternative_sprites(canals_spr28, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/stations/general/64/pygen/docksandlocks_rm32bpp.png", "../graphics/stations/general/64/pygen/docksandlocks_8bpp.png") { template_locks(0, 0, 1) }
 //CANALS 52-63 canal banks
 replacenew canals_spr53(CANALS, "../graphics/infrastructure/64/pygen/canal_general_concrete_8bpp.png", 52) { template_waterfeature_flat(0, 0, 1) }
-//#ez alternative_sprites(canals_spr53, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/canal_temperate_grass_8bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #ez alternative_sprites(canals_spr53, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/canal_temperate_grass_8bpp.png") { template_waterfeature_flat(0, 0, 4) }
 #32 alternative_sprites(canals_spr53, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/infrastructure/64/pygen/canal_temperate_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 1) }
-//#32 #ez alternative_sprites(canals_spr53, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/infrastructure/128/pygen/canal_temperate_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 2) }
 #32 #ez alternative_sprites(canals_spr53, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/infrastructure/256/pygen/canal_temperate_grass_bt32bpp.png") { template_waterfeature_flat(0, 0, 4) }
 
 //CANALS 64 icons

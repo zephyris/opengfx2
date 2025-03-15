@@ -25,8 +25,6 @@ template template_spr4126(z) {
 	template_groundtiles(0, 392, z)
 }
 base_graphics spr4126(4126, "../graphics/terrain/64/pygen/farm_groundtiles_gridline_8bpp.png") { template_spr4126(1) }
-//#ez alternative_sprites(spr4126, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/farm_groundtiles_gridline_8bpp.png") { template_spr4126(2) }
 #ez alternative_sprites(spr4126, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/farm_groundtiles_gridline_8bpp.png") { template_spr4126(4) }
 #32 alternative_sprites(spr4126, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/farm_groundtiles_gridline_bt32bpp.png") { template_spr4126(1) }
-//#32 #ez alternative_sprites(spr4126, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/farm_groundtiles_gridline_bt32bpp.png") { template_spr4126(2) }
 #32 #ez alternative_sprites(spr4126, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/farm_groundtiles_gridline_bt32bpp.png") { template_spr4126(4) }

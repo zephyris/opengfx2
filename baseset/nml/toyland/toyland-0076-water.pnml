@@ -1,15 +1,12 @@
 // Water and shore tiles
 //76 flat water tile
 base_graphics spr76(76, "../graphics/terrain/64/toyland_watertile_8bpp.png") { template_flattile_single(0, 0, 1) }
-//#ez alternative_sprites(spr76, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/universal_watertile_8bpp.png") { template_flattile_single(0, 0, 2) }
 #ez alternative_sprites(spr76, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/universal_watertile_8bpp.png") { template_flattile_single(0, 0, 4) }
 
 //77-84 shore tiles
 base_graphics spr77(77, "../graphics/terrain/64/pygen/toyland_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
-//#ez alternative_sprites(spr77, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/terrain/128/pygen/toyland_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
 #ez alternative_sprites(spr77, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/terrain/256/pygen/toyland_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
 #32 alternative_sprites(spr77, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/terrain/64/pygen/toyland_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/64/pygen/toyland_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 1) }
-//#32 #ez alternative_sprites(spr77, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "../graphics/terrain/128/pygen/toyland_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/128/pygen/toyland_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 2) }
 #32 #ez alternative_sprites(spr77, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/terrain/256/pygen/toyland_grass_gridline_shoretiles_rm32bpp.png", "../graphics/terrain/256/pygen/toyland_grass_gridline_shoretiles_8bpp.png") { template_watertiles_base(0, 0, 4) }
 
 //85 unused buoy

@@ -1,31 +1,25 @@
 //174-205 rail overlay
 base_graphics spr174(174, "../graphics/infrastructure/64/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 1) }
-//#ez alternative_sprites(spr174, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 2) }
 #ez alternative_sprites(spr174, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/rail_bits_masked_8bpp.png") { template_railoverlay_base(0, 0, 4) }
 
 //180-205 rail tiles
 base_graphics spr180(180, "../graphics/infrastructure/64/pygen/rail_toyland_grass_8bpp.png") { template_railtiles(0, 0, 1) }
-//#ez alternative_sprites(spr180, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/rail_toyland_grass_8bpp.png") { template_railtiles(0, 0, 2) }
 #ez alternative_sprites(spr180, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/rail_toyland_grass_8bpp.png") { template_railtiles(0, 0, 4) }
 
 //206-237 monorail overlay
 base_graphics spr206(206, "../graphics/infrastructure/64/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
-//#ez alternative_sprites(spr206, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 2) }
 #ez alternative_sprites(spr206, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/monorail_bits_8bpp.png") { template_railoverlay_base(0, 0, 4) }
 
 //212-237 monorail tiles
 base_graphics spr213(212, "../graphics/infrastructure/64/pygen/monorail_toyland_grass_8bpp.png") { template_railtiles(0, 0, 1) }
-//#ez alternative_sprites(spr213, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/monorail_toyland_grass_8bpp.png") { template_railtiles(0, 0, 2) }
 #ez alternative_sprites(spr213, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/monorail_toyland_grass_8bpp.png") { template_railtiles(0, 0, 4) }
 
 //238-243 maglev overlay
 base_graphics spr238(238, "../graphics/infrastructure/64/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 1) }
-//#ez alternative_sprites(spr238, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 2) }
 #ez alternative_sprites(spr238, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/maglev_bits_8bpp.png") { template_railoverlay_base(0, 0, 4) }
 
 //224-269 maglev
 base_graphics spr244( 244, "../graphics/infrastructure/64/pygen/maglev_toyland_grass_8bpp.png") { template_railtiles(0, 0, 1) }
-//#ez alternative_sprites(spr244, ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "../graphics/infrastructure/128/pygen/maglev_toyland_grass_8bpp.png") { template_railtiles(0, 0, 2) }
 #ez alternative_sprites(spr244, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/infrastructure/256/pygen/maglev_toyland_grass_8bpp.png") { template_railtiles(0, 0, 4) }
 
 //270 company statue
