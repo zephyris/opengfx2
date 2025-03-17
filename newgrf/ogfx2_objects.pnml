@@ -1,6 +1,9 @@
 #include "nml/objects/objects-header.pnml"
 #include "../templates/zoom-sensitive.pnml"
 
+#include "nml/objects/objects-lava.pnml"
+
+
 #include "nml/objects/objects-rocks.pnml"
 #include "nml/objects/objects-fields.pnml"
 #include "nml/objects/objects-forests.pnml"

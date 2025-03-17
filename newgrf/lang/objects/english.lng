@@ -32,3 +32,7 @@ STR_OBJECT_LIGHTHOUSE   :Lightbouse
 STR_OBJECT_TRANSMITTER  :Transmitter
 STR_OBJECT_SUBSTATION   :Substation
 STR_OBJECT_GASOMETER    :Gasometer
+
+STR_CLASS_LAVA          :Lava
+STR_OBJECT_LAVA         :Lava
+STR_OBJECT_LAVA_BUY     :Lava terrain tile. Can be built on land, coasts or sea. Slope and snow-aware.

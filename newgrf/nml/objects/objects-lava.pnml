@@ -1,0 +1,40 @@
+//Lava
+
+spriteset (object_lava_ground, "../graphics/terrain/64/general_lava_8bpp.png") {
+    template_flattile_single(0, 0, 1)
+}
+
+// Single flat tile lava object
+spritelayout object_lava_tiles {
+    ground {
+        sprite: object_lava_ground(0);
+    }
+}
+
+switch (FEAT_OBJECTS, SELF, switch_object_lava_purchase, [
+]) {
+    object_lava_tiles;
+}
+
+item (FEAT_OBJECTS, object_lava, 60) {
+    property {
+        class: "LAVA";
+        classname: string(STR_CLASS_LAVA);
+        name: string(STR_OBJECT_LAVA);
+        climates_available: ALL_CLIMATES;
+        size: [1, 1];
+        build_cost_multiplier: 0;
+        remove_cost_multiplier: 255;
+        introduction_date: 0x00000000;
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask(OBJ_FLAG_NO_FOUNDATIONS, OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+        height: 0;
+        num_views: 1;
+    }
+    graphics {
+        //purchase: switch_object_lava_purchase;
+        //additional_text: string(STR_OBJECT_LAVA_BUY);
+        //tile_check: CB_RESULT_LOCATION_ALLOW;
+        default: object_lava_tiles;
+    }
+}
