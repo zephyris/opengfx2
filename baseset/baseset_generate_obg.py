@@ -140,11 +140,11 @@ def generate_obg(base_path, type_string):
       langid = lines[0][len("##grflangid "):]
       lngs[langid] = {x.split(":")[0].strip(): x.split(":")[1].strip() if ":" in x else None for x in lines[1:]}
 
-  # catch specific variant cases, release cases (8, 32ez), for string lookup
+  # catch specific variant cases, release cases (8, 8ez), for string lookup
   if typeshort == "8":
     descriptionstrid = "STR_OBG_DESCRIPTION_VARIANT_CLASSIC"
     namesuffix = "Classic"
-  elif typeshort == "32ez":
+  elif typeshort == "8ez":
     descriptionstrid = "STR_OBG_DESCRIPTION_VARIANT_HIGHDEF"
     namesuffix = "High Def"
   else:

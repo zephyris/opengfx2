@@ -7,12 +7,12 @@ all: baseset baseset_highdef newgrf
 .PHONY: baseset
 baseset: baseset/opengfx2_8.tar
 
-# "High Def" 32bpp 4x zoom baseset
+# "High Def" 8bpp 4x zoom baseset
 .PHONY: baseset_highdef
-baseset_highdef: baseset/opengfx2_32ez.tar
+baseset_highdef: baseset/opengfx2_8ez.tar
 
 # All baseset variants
-.PHONY: baseset_32 baseset_8ez
+.PHONY: baseset_8 baseset_32 baseset_8ez baseset_32ez
 baseset_8: baseset/opengfx2_8.tar
 baseset_32: baseset/opengfx2_32.tar
 baseset_8ez: baseset/opengfx2_8ez.tar
