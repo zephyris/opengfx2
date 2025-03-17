@@ -7,3 +7,5 @@ base_graphics spr2601(2601, "../graphics/stations/general/64/pygen/modernairport
 template template_spr2602(z) { template_house_1x1_addoffs(  0,  0, z, 123, 0, -9) }
 base_graphics spr2602(2602, "../graphics/towns/temperate/64/pygen/lighthouse_8bpp.png") { template_spr2602(1) }
 #32 alternative_sprites (spr2602, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "../graphics/towns/temperate/64/pygen/lighthouse_rm32bpp.png", "../graphics/towns/temperate/64/pygen/lighthouse_8bpp.png") { template_spr2602(1) }
+#ez alternative_sprites (spr2602, ZOOM_LEVEL_IN_4X, BIT_DEPTH_8BPP, "../graphics/towns/temperate/256/pygen/lighthouse_8bpp.png") { template_spr2602(4) }
+#ez #32 alternative_sprites (spr2602, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "../graphics/towns/temperate/256/pygen/lighthouse_rm32bpp.png", "../graphics/towns/temperate/256/pygen/lighthouse_8bpp.png") { template_spr2602(4) }
